@@ -2407,7 +2407,7 @@ def _dump_state(player, game_map, demons):
     
     # FULL FLOOR MAP (78x22) — complete dungeon layout
     lines.append("## FULL MAP (78x22)")
-    lines.append("  @=you #=wall .=floor +=gate 0-9=zone boundary")
+    lines.append("  @=you #=wall .=floor +=gate >=stairs 0-9=zone boundary")
     lines.append("  !" + "-" * 78 + "!")
     for my in range(game_map.height):
         row = []
@@ -2422,6 +2422,8 @@ def _dump_state(player, game_map, demons):
                 else: row.append('!')
             elif (mx, my) in game_map.gate_tiles:
                 row.append('+')
+            elif game_map.stairs_down and (mx, my) == game_map.stairs_down:
+                row.append('>')
             elif game_map.is_passable(mx, my):
                 zone_here = game_map.get_zone_at(mx, my)
                 if zone_here is not None and zone_here != player.zone:
@@ -2436,7 +2438,7 @@ def _dump_state(player, game_map, demons):
     
     # EXPLORED MAP (78x22) — only tiles the player has ever seen
     lines.append("## EXPLORED MAP (78x22)")
-    lines.append("  @=you #=wall .=floor +=gate ?=unexplored 0-9=zone boundary")
+    lines.append("  @=you #=wall .=floor +=gate >=stairs ?=unexplored 0-9=zone boundary")
     lines.append(f"  Explored: {len(game_map.explored)}/{sum(1 for y in range(game_map.height) for x in range(game_map.width) if game_map.is_passable(x,y) or game_map.tiles[y][x]=='+')} passable tiles")
     lines.append("  !" + "-" * 78 + "!")
     for my in range(game_map.height):
@@ -2448,6 +2450,8 @@ def _dump_state(player, game_map, demons):
                 row.append('?')
             elif (mx, my) in game_map.gate_tiles:
                 row.append('+')
+            elif game_map.stairs_down and (mx, my) == game_map.stairs_down:
+                row.append('>')
             elif game_map.is_passable(mx, my):
                 zone_here = game_map.get_zone_at(mx, my)
                 if zone_here is not None and zone_here != player.zone:
@@ -2466,7 +2470,7 @@ def _dump_state(player, game_map, demons):
     vis_eff = max(2, vis_base - (3 if hyp>=100 else 2 if hyp>=80 else 1 if hyp>=50 else 0))
     lines.append("## VISIBLE MAP (78x22)")
     lines.append(f"  Zone LOS base: {vis_base} | Effective: {vis_eff} | Hyp: {hyp:.0f}%")
-    lines.append("  @=you ?=not in LOS .=floor +=gate 0-9=zone boundary")
+    lines.append("  @=you ?=not in LOS .=floor +=gate >=stairs 0-9=zone boundary")
     lines.append("  !" + "-" * 78 + "!")
     for my in range(game_map.height):
         row = []
@@ -2477,6 +2481,8 @@ def _dump_state(player, game_map, demons):
                 row.append('@')
             elif (mx, my) in game_map.gate_tiles:
                 row.append('+')
+            elif game_map.stairs_down and (mx, my) == game_map.stairs_down:
+                row.append('>')
             elif game_map.is_passable(mx, my):
                 zone_here = game_map.get_zone_at(mx, my)
                 if zone_here is not None and zone_here != player.zone:
