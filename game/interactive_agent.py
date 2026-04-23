@@ -246,12 +246,11 @@ def run_interactive(player_name="agent", max_turns=800, verbose=True):
             return ('s' if dy > 0 else 'w')
     
     def _stair_direction(state):
-        """Walk toward stairs '>' visible on the map."""
+        """Walk one step toward stairs '>' visible on the explored map."""
         rows = state.get('map_rows', [])
         if not rows or 'x' not in state:
             return None
         px, py = state['x'], state['y']
-        # Search full map for '>' tiles
         stairs = []
         for ry, row in enumerate(rows):
             for rx, ch in enumerate(row):
@@ -259,13 +258,14 @@ def run_interactive(player_name="agent", max_turns=800, verbose=True):
                     stairs.append((rx, ry))
         if not stairs:
             return None
-        # Nearest stairs
+        # Nearest stairs by Manhattan distance
         sx, sy = min(stairs, key=lambda s: abs(s[0]-px) + abs(s[1]-py))
         dx, dy = sx - px, sy - py
+        # Return single keypress toward stairs (re-evaluate next turn)
         if abs(dx) >= abs(dy):
-            return ('d' if dx > 0 else 'a') * min(abs(dx), 8)
+            return 'd' if dx > 0 else 'a'
         else:
-            return ('s' if dy > 0 else 'w') * min(abs(dy), 8)
+            return 's' if dy > 0 else 'w'
     
     def _adjacent_stair(state):
         """Check if stairs are adjacent — step onto them."""
