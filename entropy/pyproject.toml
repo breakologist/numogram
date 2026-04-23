@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "numogram-entropy"
+version = "0.1.0"
+description = "Hardware entropy digested through numogram traversal. Physical noise → zone paths → structured entropy."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Software Development :: Libraries",
+]
+
+[project.optional-dependencies]
+qr-sampler = ["qr-sampler>=0.1.0"]
+dev = ["pytest>=7.0"]
+
+[project.entry-points."qr_sampler.entropy_sources"]
+numogram = "numogram_entropy.source:NumogramEntropySource"
+
+[project.scripts]
+numogram-entropy = "numogram_entropy.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
