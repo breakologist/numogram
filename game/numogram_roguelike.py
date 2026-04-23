@@ -820,64 +820,118 @@ class DungeonMap:
         self.passable_set = set()
         self.explored = set()  # (x,y) tiles the player has ever seen
         self.visible = set()   # (x,y) tiles currently in LOS
+        self._tree_edges = []  # (parent_room, child_room) tuples
         self.generate()
 
     def generate(self):
-        # Floor-specific configuration
+        """Tree-based dungeon generation (Brogue method).
+
+        Phase 1: Accretion — each new room attaches to an existing room.
+        Phase 2: Carve rooms and connect tree edges (single corridor each).
+        Phase 3: Add loops (extra corridors) after tree is built.
+        Phase 4: Apply terrain, hyperstition mods, place stairs in deepest leaf.
+        """
         cfg = FLOOR_CONFIG.get(self.floor, FLOOR_CONFIG[1])
         self.floor_zone = cfg["zone"]
         self.floor_name = cfg["name"]
         self.floor_config = cfg
-        
+        self._tree_edges = []
+
         max_rooms = cfg["max_rooms"]
-        attempts = 0
-        while len(self.rooms) < max_rooms and attempts < 200:
-            attempts += 1
-            w = self.rng.randint(cfg["min_w"], cfg["max_w"])
-            h = self.rng.randint(cfg["min_h"], cfg["max_h"])
-            x = self.rng.randint(1, self.width - w - 1)
-            y = self.rng.randint(1, self.height - h - 1)
-            room = Room(x, y, w, h)
-            if not any(room.intersects(r) for r in self.rooms):
-                self.rooms.append(room)
-        
+        min_w, max_w = cfg["min_w"], cfg["max_w"]
+        min_h, max_h = cfg["min_h"], cfg["max_h"]
+
+        # Phase 1: Room accretion as a tree
+        # First room near center
+        first = Room(
+            self.rng.randint(self.width // 3, 2 * self.width // 3),
+            self.rng.randint(self.height // 3, 2 * self.height // 3),
+            self.rng.randint(min_w, max_w),
+            self.rng.randint(min_h, max_h),
+        )
+        self.rooms.append(first)
+
+        while len(self.rooms) < max_rooms:
+            parent = self.rng.choice(self.rooms)
+            w = self.rng.randint(min_w, max_w)
+            h = self.rng.randint(min_h, max_h)
+
+            # Try 4 directions adjacent to parent with padding
+            offsets = [
+                (parent.x + parent.w + 1, parent.y),           # right
+                (parent.x - w - 1, parent.y),                   # left
+                (parent.x, parent.y + parent.h + 1),            # down
+                (parent.x, parent.y - h - 1),                   # up
+            ]
+            self.rng.shuffle(offsets)
+
+            placed = False
+            for ox, oy in offsets:
+                room = Room(ox, oy, w, h)
+                if 1 <= room.x and room.x + room.w < self.width - 1 and \
+                   1 <= room.y and room.y + room.h < self.height - 1:
+                    if not any(room.intersects(r) for r in self.rooms):
+                        self.rooms.append(room)
+                        self._tree_edges.append((parent, room))
+                        placed = True
+                        break
+            if not placed:
+                # Fallback: try random placement if accretion fails
+                attempts = 0
+                while attempts < 50 and len(self.rooms) < max_rooms:
+                    attempts += 1
+                    w = self.rng.randint(min_w, max_w)
+                    h = self.rng.randint(min_h, max_h)
+                    x = self.rng.randint(1, self.width - w - 1)
+                    y = self.rng.randint(1, self.height - h - 1)
+                    room = Room(x, y, w, h)
+                    if not any(room.intersects(r) for r in self.rooms):
+                        self.rooms.append(room)
+                        # Attach to nearest existing room as parent
+                        nearest = min(self.rooms[:-1],
+                                      key=lambda r: abs(r.cx - room.cx) + abs(r.cy - room.cy))
+                        self._tree_edges.append((nearest, room))
+                        break
+
         # Zone assignment: primary zone + syzygy neighbor
         primary_zone = cfg["zone"]
         syzygy_zone = 9 - primary_zone
         for i, room in enumerate(self.rooms):
             if i == 0:
-                zone = primary_zone  # First room always primary
+                zone = primary_zone
             elif i == len(self.rooms) - 1:
-                zone = syzygy_zone  # Stairs room is syzygy partner
+                zone = syzygy_zone
             elif self.rng.random() < 0.7:
-                zone = primary_zone  # 70% primary
+                zone = primary_zone
             else:
-                zone = syzygy_zone  # 30% syzygy
+                zone = syzygy_zone
             self._carve_room(room, zone)
-        
-        for i in range(len(self.rooms) - 1):
-            self._connect(self.rooms[i], self.rooms[i + 1])
-        
-        # Corridor style: branch and echo get extra connections
+
+        # Phase 2: Connect tree edges (single corridor per parent-child)
+        for parent, child in self._tree_edges:
+            self._connect(parent, child)
+
+        # Phase 3: Add loops after tree is built
+        self._add_loops(num_loops=max(1, len(self.rooms) // 4))
+
+        # Corridor style extras (applied after loops)
         if cfg["corridor"] in ("branch", "echo"):
             self._add_syzygy_corridors()
         if cfg["corridor"] in ("wide", "spiral"):
             self._widen_currents()
         if cfg["corridor"] == "grid":
-            # Extra cross-corridors for grid layout
             for i in range(len(self.rooms) - 2):
                 if self.rng.random() < 0.5:
                     self._connect(self.rooms[i], self.rooms[i + 2])
         if cfg["corridor"] == "spiral":
-            # Extra connections to create loops
             if len(self.rooms) > 3:
                 self._connect(self.rooms[-1], self.rooms[1])
-        
+
         # Terrain placement
         if cfg["terrain"]:
             self._apply_terrain(cfg["terrain"])
-        
-        # Hyperstition-based modifications (existing)
+
+        # Hyperstition-based modifications
         if self.hyperstition >= 15 and cfg["corridor"] not in ("branch", "echo"):
             self._add_syzygy_corridors()
         if self.hyperstition >= 30 and cfg["corridor"] not in ("wide", "spiral"):
@@ -888,8 +942,83 @@ class DungeonMap:
             self._manifest_gates()
         if self.hyperstition >= 85:
             self._warp_plex_pockets()
-        self._place_stairs()
+
+        self._place_stairs_tree()
         self._rebuild_passable()
+
+    def _add_loops(self, num_loops=3):
+        """Add extra connections after the tree is built to create loops."""
+        edge_pairs = set()
+        for p, c in self._tree_edges:
+            edge_pairs.add((id(p), id(c)))
+            edge_pairs.add((id(c), id(p)))
+        added = 0
+        attempts = 0
+        while added < num_loops and attempts < num_loops * 20:
+            attempts += 1
+            r1 = self.rng.choice(self.rooms)
+            r2 = self.rng.choice(self.rooms)
+            if r1 is not r2 and (id(r1), id(r2)) not in edge_pairs:
+                self._connect(r1, r2)
+                edge_pairs.add((id(r1), id(r2)))
+                edge_pairs.add((id(r2), id(r1)))
+                added += 1
+
+    def _place_stairs_tree(self):
+        """Place stairs down in the deepest leaf of the tree (DFS from root)."""
+        if not self.rooms:
+            return
+
+        # Build children adjacency from tree edges
+        children = {}
+        for parent, child in self._tree_edges:
+            children.setdefault(id(parent), []).append(child)
+
+        # DFS to find deepest leaf
+        deepest, max_depth = self.rooms[0], 0
+        stack = [(self.rooms[0], 0)]
+        visited = set()
+        while stack:
+            room, depth = stack.pop()
+            room_id = id(room)
+            if room_id in visited:
+                continue
+            visited.add(room_id)
+            if depth > max_depth:
+                max_depth, deepest = depth, room
+            for child in children.get(room_id, []):
+                stack.append((child, depth + 1))
+
+        # Fallback: if tree_edges empty (single room or fallback placement),
+        # use last room
+        if not self._tree_edges and len(self.rooms) > 1:
+            deepest = self.rooms[-1]
+
+        # Place stairs with 3-level fallback
+        # Level 1: center of deepest room
+        sx, sy = deepest.cx, deepest.cy
+        if 0 < sx < self.width - 1 and 0 < sy < self.height - 1:
+            if self.tiles[sy][sx] != '+':
+                self.tiles[sy][sx] = '>'
+                self.stairs_down = (sx, sy)
+                return
+
+        # Level 2: any passable tile in the deepest room
+        for y in range(deepest.y + 1, deepest.y + deepest.h - 1):
+            for x in range(deepest.x + 1, deepest.x + deepest.w - 1):
+                if 0 < x < self.width - 1 and 0 < y < self.height - 1:
+                    if self.tiles[y][x] == '.' or self.tiles[y][x] == '+':
+                        self.tiles[y][x] = '>'
+                        self.stairs_down = (x, y)
+                        return
+
+        # Level 3: any passable tile on the floor
+        for y in range(self.height - 1, 0, -1):
+            for x in range(self.width - 1, 0, -1):
+                if self.tiles[y][x] != '#':
+                    self.tiles[y][x] = '>'
+                    self.stairs_down = (x, y)
+                    return
 
     def _carve_room(self, room, zone):
         for y in range(room.y, room.y + room.h):
