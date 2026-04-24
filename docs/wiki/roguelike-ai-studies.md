@@ -32,7 +32,7 @@ Each game section has four layers:
 **Design:** Everything interacts with everything. Polymorph a cockatrice corpse into a egg and throw it. Read a scroll of genocide while confused. Elbereth on the floor. Sokoban. The Quest. The Astral Plane. 30+ years of emergent interactions discovered by players. Bones files (your dead character's ghost and inventory persist in future runs). Conducts (self-imposed challenges: pacifist, atheist, foodless, weaponless).
 **Numogram:** NetHack's interaction graph is C(n,2) for all its objects. Every pair of items/entities can potentially interact. This is the complete demon graph — NetHack is a 45-demon system where the demons are item interactions. The conducts are syzygy constraints — pacifist (no kills = traversal-only), atheist (no divine = no Warp access), foodless (no Sink consumption).
 **Agent:** NetHack has the most mature AI ecosystem of any roguelike. The NetHack Learning Workshop (NLE) provides a Python interface. Key insight: NetHack agents fail because they can't read the encyclopedia — the 30 years of emergent interactions are *tribal knowledge*, not encoded in rules. The agent must discover or be told that cockatrices petrify. Our state dump approach (reading the map, parsing zone/demon/gate data) is analogous to NLE's `obs` dict.
-**Links:** `[[numogame-cult-tetralogue]]` (conducts), `[[headless-curses-analysis]]`
+**Links:** `[[numogame-cult-tetralogue]]` (conducts), ``headless-curses-analysis``
 
 ---
 
@@ -56,7 +56,7 @@ Each game section has four layers:
 **Design:** The original "modern" roguelike. The town level. Squelch (auto-ignore junk items). The diving vs clearing debate (go deep fast or clear every level?). Monster memory (the game remembers what you've learned about each monster type across all runs). The infinite dungeon. The Ironman challenge.
 **Numogram:** Angband's infinite depth is the extended gate sequence — Gt-55, Gt-66, Gt-78... each depth level opens a world one zone larger. The town is Zone-0 (safe, commercial, the origin you return to). The Ironman challenge is the pacifist run's opposite — no return to town, no shopping, pure descent. Both are Kennedy outcomes: removing one option (return/safety) makes another strategy (dive/caution) inevitable.
 **Agent:** The Angband Borg (mentioned in `[[numogame-state-of-the-game]]`) is the most famous roguelike AI. Key architectural insight: it reads `grid_data`, not the rendered screen. This is exactly our state dump approach — the agent reads structured data (position, zone, HP, nearby gates/demons) rather than parsing the ASCII art. The Borg's decision tree: rest if damaged, use items if beneficial, attack if safe, explore if nothing else. Same hierarchy as our `decide()` function.
-**Links:** `[[numogame-state-of-the-game]]`, `[[headless-curses-analysis]]`
+**Links:** `[[numogame-state-of-the-game]]`, ``headless-curses-analysis``
 
 ---
 

@@ -71,7 +71,7 @@ sources: [i-ching-tai-hsuan-comparison.md]
 - [[tai-hsuan-ching-demons]] — 81×81 = 6561 two‑tetragram castings → 45 demons
 - [[em-state-analysis]] — The third line state (Man/Em) → Zone 5
 - [[hardware-entropy]] — I Ching casting from hardware jitter (`iching(seed_bytes)`)
-- [[numogram-oracle]] — Divination pipeline; could be extended to `--taixuan` mode
+- `numogram-oracle` — Divination pipeline; could be extended to `--taixuan` mode
 - [[pandemonium-matrix]] — The 45 demons that receive all oracle mappings
 
 ---

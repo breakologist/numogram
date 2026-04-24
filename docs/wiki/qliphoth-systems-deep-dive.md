@@ -264,6 +264,6 @@ Zone particles defined as phoneme fragments (eiaoung, gl, dt, zx, skr, ktt, tch,
 - [[alphanumeric-qabbala]] — AQ cipher system
 - [[quasiphonic-particles]] — Sound system per zone
 - [[gates-and-plexing]] — Gate construction and cumulation
-- [[numogram-llm-wiki]] — Wiki index
+- `numogram-llm-wiki` — Wiki index
 - https://qliphoth.systems — Live site
 - https://github.com/lumpenspace/ccru — Source code

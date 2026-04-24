@@ -210,7 +210,7 @@ The numogram **synthesises** both:
 - [[tai-hsuan-ching]] — T'ai Hsuan overview, 81 tetragrams, zone distribution
 - [[tai-hsuan-ching-demons]] — Two‑tetragram → demon pipeline (6561 readings)
 - [[em-state-analysis]] — Zone 5 as the Hinge; em line as ternary mediator
-- [[numogram-calculator]] — Digital root syzygy arithmetic used by both systems
+- `numogram-calculator` — Digital root syzygy arithmetic used by both systems
 - [[numogram-oracle-litprog]] — Oracle uses `--iching` flag; could be extended to `--taixuan`
 - [[entropy-modules-litprog]] — Hardware → I Ching hexagram pipeline exists; T'ai Hsuan variant imaginable
 - [[pandemonium-matrix]] — The 45 demons that both hexagrams and tetragrams map onto

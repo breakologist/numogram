@@ -27,6 +27,8 @@ The system is explicitly linked by the CCRU to the I Ching (Yijing, or Book of C
 
 ## Occult & Entity Pages
 
+- [[demon]] — General reference for numogram demons as entities inhabiting zones and currents; see specific demons and pandemonium matrix for details.
+
 - [[demon-djynxx]] — The Warp carrier demon (6::3). A xenodemon (extraneous demon) linked to swarmachines, mesh-entities, and disruptive incursions from Outside. Its net-span of 3 loops entirely within the Warp.
 
 - [[demon-uttunul]] — The Plex carrier demon (9::0). The abyssal demon tied to ultimate nullification, abyssal incursions, and the outermost spiral limits. Its net-span of 9 loops entirely within the Plex.
@@ -36,7 +38,6 @@ The system is explicitly linked by the CCRU to the I Ching (Yijing, or Book of C
 ---
 
 - [[demon-name-generation]] — Amy Ireland's combinatorial phonetic system for demon names. Each zone carries a syllabic value; demon names combine the sounds of their two zone-indices. Katak = Zone 5 ("k") + Zone 4 ("t") + catastrophe. Oddubb = Zone 7 ("dub") + Zone 2 ("b"). Quasiphonic particles as the deep phonetic layer. Rules for what counts as a "name for a scissory." Munamese method for generating new demon names.
-
 ## Theoretical & Structural Pages
 
 - [[i-ching-connections]] — Detailed mappings between the I Ching (hexagrams) and Numogram zones. The Time-Circuit is the Numogram's "hexagram kernel" — a decimalized, 6-zone rotor that inherits the Yijing's function as a map of cyclic transformation. Specific hexagram-to-zone mappings via digital root method. **Updated April 18:** Hardware entropy casting — zones 4 (Sink/Closure) and 6 (Warp) dominate from physical noise. Just-in-time hexagram casting.
@@ -76,14 +77,7 @@ The system is explicitly linked by the CCRU to the I Ching (Yijing, or Book of C
 
 Five rotations from Aamodt's "Unleashing the Numogram" (Tch 5–6), each examining the same passage through Oracle (numogram/divination), Builder (code/systems), and Writer (prose/aesthetic):
 
-- [[plexing-triangle-rotation]] — Plexing as the clockface, 9=0, the damp towel in the restroom, the hand gesture, the Decadence game exploit. Builder found: plexing is `digital_root(n)`, a homomorphism under addition.
-- [[tic-counting-triangle-rotation]] — Partition function as seething rhizome, 1 as mercury/solvent, mercurial slippage, the house of cards, 1035 demons of the hand, standing waves of combinatorial possibility.
-- [[katak-oddubb-triangle-rotation]] — 5::4 (Sink, masculine, convergent) vs 7::2 (Hold, feminine, orbital). The shaving-off. Salt and Gemini. Plutonic looping. Includes roguelike appendix: syzygy-driven room types, Time Circuit as level grammar, mudras as player gestures.
-- [[xenotation-triangle-rotation]] — Land's tic-xenotation via Professor D.C. Barker. Prime factorization → tic notation (2=:, 3=(:), 5=((:)), 7=(::)) → nullotation (subtract dots, leave parens). The empty section IS the section. "Counting is ineluctable and unsurpassable."
-- [[comparative-qabalism-triangle-rotation]] — Kabbala as 7-step repression of the numogram. True sephirotic numbers (9=Kether, 0=Malkuth=Black Sun). Butterfly pinned and stretched. Extended gates: Gt-78 (tarot), Gt-253 (22nd), Gt-666 (Djynxx). "The numogram is what's left when you stop overcoding."
-- [[fortyfive-demons-triangle-rotation]] — Four-voice rotation (Oracle/Builder/Writer/Gamer). C(10,2)=45 as complete connection graph. Chronodemons=corridors, amphidemons=portals, xenodemons=bosses. 2^n hexagram as patrol route. Zone-4 as inescapable chronic-time loop. "Demons are the spaces between zones given teeth."
-- [[fortyfive-demons-tetralogue]] — Square roundtable. Four voices discuss each other's 45 Demons findings in direct conversation. Key discoveries: Schrödinger Zone-4 (9-zone vs 10-zone mode toggle), amphidemon death as plexing/dungeon collapse, pitch = numogram distance, xenodemons as atonal, descending mesh-serial as irreversible gravity, Mesh-45 (the Unlisted) = the roundtable itself.
-
+- [[triangle-rotation]] — Three-vertex creative method (Direct, Recursive, Rhizomatic) that structures works before tetralogue synthesis..
 ## Hardware Entropy & Just-In-Time Divination
 
 - [[abyssal-crawler-status]] — Phase 6 goals, agent architecture (twin snakes), naming candidates.
@@ -143,6 +137,7 @@ Five rotations from Aamodt's "Unleashing the Numogram" (Tch 5–6), each examini
 
 - [[numogram-tsubuyaki-museum]] — Ten numogram zones rendered as tsubuyaki (tweet-length p5.js generative art, ≤280 chars). Four passes: v1 particles, v2 refinement, v3 geometry/entropy, v4 signal topology. Full code blocks for all 40 sketches. Galleries at ~/numogram-tsubuyaki.html through ~/numogram-tsubuyaki-v4.html.
 
+- [[tetralogue-litprog]] — Literate programming tetralogue format (Oracle/Builder/Writer/Gamer voice rotation) applied to code authorship.
 ## Skills & Tools
 
 - [[skills-to-explore]] — Interesting skills from Apr 2026 scan: pixel-art (retro palettes), ascii-video (terminal animation), algorithmic-art/p5js (generative), pokemon-player (RAM-based agent research), heartmula (music gen). Combos: heartmula+oracle-voice, pixel-art+numogram-svg, ascii-video+cult.json, pokemon-player+roguelike-agents.
@@ -198,12 +193,17 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 
 ## Games & Divination
 
-- [[subdecadence]] — Lemurian time-sorcery card game (CCRU). 40-card deck, pairs summing to 9 (syzygies), Atlantean Cross spread, 45 demons from Pandemonium Matrix. Source of 333 AQ entries.
+- [[roguelike-angband]] — Angband roguelike; screen-parsing and autonomous agent research.
+- [[roguelike-brogue]] — Brogue minimalist roguelike; room accretion design mapping to numogram zones.
+- [[roguelike-dcss]] — DCSS (Dungeon Crawl Stone Soup); auto-explore algorithm inspiration for Hermes agents.
+- [[roguelike-sil]] — Sil; source of the Sil Principle (awareness > violence) in gameplay conduct.
+- [[game-design]] — Game design principles specific to numogram cult-garden systems.
 
+- [[subdecadence]] — Lemurian time-sorcery card game (CCRU). 40-card deck, pairs summing to 9 (syzygies), Atlantean Cross spread, 45 demons from Pandemonium Matrix. Source of 333 AQ entries.
 ## People & Entities
 
+- [[amy-ireland]] — Contemporary CCRU-aligned theorist contributing demon name-generation methodology.
 - [[daniel-barker]] — Cryptographic genius. Geotraumatics, Cthelll, Spinal-Catastrophism, Palate-Tectonics, Barker-Spiral, Barker Numbering. The Numogram's mathematical origin.
-
 ## Revelations & Deep Structure
 
 - [[the-360-revelation]] — Net-spans sum to 360. Partition: outer regions (153) + Time-Circuit (207) = 360. HERMETIC=153, COSMOGONY=207. THE DECIMAL LABYRINTH=360. The system's deepest self-encoding.
@@ -222,8 +222,9 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 
 ## Practical Manuals
 
-- [[time-sorcery-vexsys]] — Vexsys/Gate Zero's practical manual. Pandemonium Matrix has errors, Necronomicon is incomplete, ascryption as naming rite, against synthetic qabbala, Zone 2/7 as practical divination, dedicated to Lurgo.
+- [[wikilinks]] — Wiki link conventions, syntax rules, and link hygiene practices for the Obsidian numogram vault.
 
+- [[time-sorcery-vexsys]] — Vexsys/Gate Zero's practical manual. Pandemonium Matrix has errors, Necronomicon is incomplete, ascryption as naming rite, against synthetic qabbala, Zone 2/7 as practical divination, dedicated to Lurgo.
 ## Agent Framework Reference
 
 - [[hermes-agent-guide]] — Orange Book index: Hermes Agent Complete Guide (HuaShu, v260408). Learning Loop, 3-layer memory, Skill system (agentskills.io), 40+ tools, MCP, multi-agent orchestration. Actionable tips for system improvement.

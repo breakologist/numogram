@@ -475,9 +475,9 @@ The oracle is a **hyperoracle** — it consults not one plane but the entire div
 
 ## XII. Connections & Cross-References
 
-- [[numogram-calculator]] — AQ computation and zone mapping
+- `numogram-calculator` — AQ computation and zone mapping
 - [[i-ching-connections]] — I Ching hexagrams ↔ numogram zones (the bridge that `iching()` implements)
-- [[tai-hsuan-ching.md]] — T'ai Hsuan Ching 81 tetragrams, the ternary complement to I Ching binary
+- [[tai-hsuan-ching]] — T'ai Hsuan Ching 81 tetragrams, the ternary complement to I Ching binary
 - [[hardware-entropy]] — Deep dive on hardware sources (12 collectors)
 - [[abyssal-crawler-litprog]] — The game that uses this entropy system
 - [[numogram-oracle-litprog]] — The oracle divination pipeline itself

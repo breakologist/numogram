@@ -185,4 +185,4 @@ The sweet spot: moderate reasoning overhead that leaves room for both thinking A
 - [[interview-gemma3-12b]] — Full Gemma3 assessment
 - [[dialogue-hermes-jackrong-v1]] — Two-model dialogue results
 - [[local-model-survey]] — Hardware, VRAM, model inventory
-- [[model-assessment-protocol]] — 9-phase assessment skill
+- `model-assessment-protocol` — 9-phase assessment skill
