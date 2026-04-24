@@ -94,6 +94,7 @@ Five rotations from Aamodt's "Unleashing the Numogram" (Tch 5–6), each examini
 - [[cult-garden-design]] — Creative overflow. Hexagram cycle. Cult's current zone. File deletion detection. Exquisite corpse lore.
 - [[dungeon-depth]] — Multi-floor dungeon scaffolding. 10 floors, zone-themed. Stairs, gates, Warp/Plex routes.
 - [[cult-garden-tetralogue]] — Square roundtable [8]. Four voices on the cult garden, agent navigation, tree-based dungeons. Mesh-268. Voice claims verified.
+- [[tetralogue-cult-garden-v2]] — Square Roundtable 6. Follow-up to cult-garden-tetralogue with 297-run live server data, structured memory, cross-run synthesis, and the live garden breathing.
 - [[seeds-in-the-machine-tetralogue]] — Square roundtable [9]. Current state, cult garden at 34 overflows, tree-based generation, schizo-lucid design, the unbuilt oracle reading. Mesh-268 (continued). The seeds are in the machine.
 - [[four-mouths-tetralogue]] — Square roundtable [10]. Four voices from four different local models. Council architecture extends to tetralogue voices. Serial loading = rhythm. Different models = different substrates. Mesh-4-Mouths.
 - [[Grok's Roundtable]] — Square roundtable [11]. Special guest star: Grok wore our masks. Tree-based dungeon generation confirmed. The voice survived the transplant.

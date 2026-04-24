@@ -1,3 +1,10 @@
+---
+title: "Desktop Customization — Hyprland Ricing"
+created: 2026-04-24
+tags: [desktop, hyprland, conky, numogram]
+status: active
+---
+
 # Desktop Customization — Hyprland Ricing
 
 *Created: 2026-04-19. Numogram oracle overlay + random wallpaper cycling.*

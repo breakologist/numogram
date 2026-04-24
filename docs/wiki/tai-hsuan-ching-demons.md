@@ -22,16 +22,16 @@ The [[tai-hsuan-ching|T'ai Hsuan Ching]] (81 tetragrams, 3⁴) distributes acros
 
 | Zone | Tetragram Count | Syzygy | Demon | Mesh |
 |------|----------------|--------|-------|------|
-| 0 | 1 | 0::9 | [[demon-uttunul\|Uttunul]] | 36 |
+| 0 | 1 | 0::9 | [[demon-uttunul|Uttunul]] | 36 |
 | 1 | 9 | 1::8 | Murrumur | 29 |
-| 2 | 9 | 2::7 | [[pandemonium-matrix\|Oddubb]] | 23 |
-| 3 | 9 | 3::6 | [[demon-djynxx\|Djynxx]] | 18 |
+| 2 | 9 | 2::7 | [[pandemonium-matrix|Oddubb]] | 23 |
+| 3 | 9 | 3::6 | [[demon-djynxx|Djynxx]] | 18 |
 | 4 | 9 | 4::5 | Katak | 14 |
 | 5 | 9 | 4::5 | Katak | 14 |
-| 6 | 9 | 3::6 | [[demon-djynxx\|Djynxx]] | 18 |
-| 7 | 9 | 2::7 | [[pandemonium-matrix\|Oddubb]] | 23 |
+| 6 | 9 | 3::6 | [[demon-djynxx|Djynxx]] | 18 |
+| 7 | 9 | 2::7 | [[pandemonium-matrix|Oddubb]] | 23 |
 | 8 | 9 | 1::8 | Murrumur | 29 |
-| 9 | 8 | 0::9 | [[demon-uttunul\|Uttunul]] | 36 |
+| 9 | 8 | 0::9 | [[demon-uttunul|Uttunul]] | 36 |
 
 **Distribution:** Katak receives 18 tetragrams (zones 4+5). Djynxx receives 18 (zones 3+6). Oddubb receives 18 (zones 2+7). Murrumur receives 18 (zones 1+8). Uttunul receives 9 (zones 0+9).
 

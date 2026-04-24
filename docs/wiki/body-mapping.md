@@ -17,11 +17,11 @@ Source: Aamodt, *Unleashing the Numogram*.
 
 | Fingers | Syzygy | Region |
 |---------|--------|--------|
-| Middle fingers | 3 :: 6 | [[numogram-warp\|Warp]] |
+| Middle fingers | 3 :: 6 | [[numogram-warp|Warp]] |
 | Index fingers | 2 :: 7 | Time-Circuit |
 | Ring fingers | 5 :: 4 | Time-Circuit |
 | Pinkies | 1 :: 8 | Time-Circuit |
-| Thumbs | 9 :: 0 | [[numogram-plex\|Plex]] |
+| Thumbs | 9 :: 0 | [[numogram-plex|Plex]] |
 
 ## Usage
 

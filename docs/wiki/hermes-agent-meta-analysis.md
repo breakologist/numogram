@@ -1,3 +1,10 @@
+---
+title: "Hermes Agent — Usage Meta-Analysis"
+created: 2026-04-24
+tags: [hermes-agent, meta, analysis, local-model]
+status: active
+---
+
 # Hermes Agent — Usage Meta-Analysis
 
 *Created: 2026-04-17*

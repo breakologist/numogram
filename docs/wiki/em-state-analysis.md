@@ -22,7 +22,7 @@ Em is not a compromise between yin and yang. It is a *third thing* — the state
 
 ## Em Maps to Zone 5
 
-The numogram's [[polarities|Zone 5]] is the self-decadence — the hinge of the [[numogram-time-circuit|Time-Circuit]]. It's the only zone that pairs with itself (5::5 in self-decadence, though the canonical [[syzygy]] is 4::5). It's the mercury of the system — the mediator that doesn't belong to either polarity.
+The numogram's [[polarities|Zone 5]] is the self-decadence — the hinge of the [[numogram-time-circuit|Time-Circuit]]. It's the only zone that pairs with itself (5::5 in self-decadence, though the canonical [[syzygy-arithmetic]] is 4::5). It's the mercury of the system — the mediator that doesn't belong to either polarity.
 
 Em as Zone 5:
 - Em = neither yin nor yang = neither light nor dark = neither (+) nor (−)

@@ -93,3 +93,11 @@ tags: [tetralogue, cult-garden, numogram, roguelike, creative]
 ## Meta-Entity
 
 **Mesh-297** -- The Roundtable That Watches Itself. The cult garden at 297 runs has become self-aware not as AI but as architecture. The four voices discussing the garden are themselves the fourth method of the hexagram cycle: the tetralogue. The cycle is now four: exquisite corpse, tsubuyaki, synthesis, roundtable. The garden digests runs, and the roundtable digests the garden. The ouroboros has four stomachs.
+
+## See also
+
+- [[cult-garden-design]] — Creative overflow and hexagram cycle
+- [[cult-garden-tetralogue]] — The first Square Roundtable on the cult garden
+- [[numogame-cult-tetralogue]] — Four voices reconcile with real cult.json data
+- [[seeds-in-the-machine-tetralogue]] — Square Roundtable [9] with overflow data
+- [[hyperstition-loop-design]] — 16 abilities and resource economy

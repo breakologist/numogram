@@ -1,3 +1,10 @@
+---
+title: "Voice Prior Claims — Accumulated Across Rotations"
+created: 2026-04-24
+tags: [creative, tetralogue, triangle-rotation, voice]
+status: active
+---
+
 # Voice Prior Claims — Accumulated Across Rotations
 # Updated: 2026-04-14
 # Format: VOICE: claim (source page)

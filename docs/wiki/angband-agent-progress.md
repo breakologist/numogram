@@ -1,3 +1,10 @@
+---
+title: "Angband Agent Progress Log"
+created: 2026-04-24
+tags: [roguelike, angband, agent, progress, development]
+status: active
+---
+
 # Angband Agent Progress Log
 
 *Last updated: 2026-04-17 (v3 — sidebar fix verified)*

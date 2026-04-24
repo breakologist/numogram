@@ -20,7 +20,7 @@ Full review of 102 wiki files. Structural analysis, content gaps, thematic conne
 ### Broken Links (22 total, 19 fixed)
 - `angband-agent-progress.md` → `[[angband-agent-skill]]` (fixed → `[[angband-agent]]`)
 - `angband-ladder-analysis.md` → `[[angband-agent-skill]]` (fixed → `[[angband-agent]]`)
-- `body-mapping.md` → `[[numogram-warp\]]` and `[[numogram-plex\]]` (trailing backslashes, fixed)
+- `body-mapping.md` → `[[numogram-warp]]` and `[[numogram-plex]]` (trailing backslashes, fixed)
 - `hardware-entropy.md` → `[[entropy-sources]]` and `[[numogram-oracle]]` (skills, not wiki pages — acceptable but noted)
 - `qliphoth-systems-deep-dive.md` → `[[numogram-llm-wiki]]` (skill, not wiki page — acceptable)
 - `roguelike-ai-studies.md` → 12 game-specific pages (placeholders, never created)

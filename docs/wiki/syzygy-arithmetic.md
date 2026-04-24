@@ -12,7 +12,7 @@ sources: [brogue-design-principles.md, katak-oddubb-triangle-rotation.md]
 
 ## The Discovery
 
-When two [[syzygy]] pairs are cross-added, the results generate the remaining syzygy pairs. The [[numogram]] currents are not independent — they are arithmetic consequences of each other.
+When two [[syzygy-arithmetic]] pairs are cross-added, the results generate the remaining syzygy pairs. The [[numogram]] currents are not independent — they are arithmetic consequences of each other.
 
 ## Cross-Addition Rules
 

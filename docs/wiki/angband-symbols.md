@@ -1,3 +1,10 @@
+---
+title: "Angband Map Symbols & Commands Reference"
+created: 2026-04-24
+tags: [roguelike, angband, reference]
+status: active
+---
+
 # Angband Map Symbols & Commands Reference
 
 > Source: Angband 4.2.5 gamedata/terrain.txt, gamedata/monster_base.txt, docs/dungeon.rst

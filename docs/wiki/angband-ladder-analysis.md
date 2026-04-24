@@ -1,3 +1,10 @@
+---
+title: "Angband Ladder Analysis — Human Play Data"
+created: 2026-04-24
+tags: [roguelike, angband, data-analysis, ladder]
+status: active
+---
+
 # Angband Ladder Analysis — Human Play Data
 
 *Scraped from angband.live/ladder on 2026-04-17*

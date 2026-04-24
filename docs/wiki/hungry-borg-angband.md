@@ -1,3 +1,10 @@
+---
+title: "The Hungry Borg — Angband Agent"
+created: 2026-04-24
+tags: [roguelike, angband, agent, borg, hungry-borg]
+status: active
+---
+
 # The Hungry Borg — Angband Agent
 
 *Recursive Consumption: The Borg eats the dungeon, and the dungeon eats the Borg.*
