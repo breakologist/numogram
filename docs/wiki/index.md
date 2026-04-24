@@ -198,6 +198,8 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 - [[roguelike-dcss]] — DCSS (Dungeon Crawl Stone Soup); auto-explore algorithm inspiration for Hermes agents.
 - [[roguelike-sil]] — Sil; source of the Sil Principle (awareness > violence) in gameplay conduct.
 - [[game-design]] — Game design principles specific to numogram cult-garden systems.
+  - [[cult-garden/lore]] — Cult garden lore and narrative background
+  - [[cult-garden/readings]] — Cult garden reading material collection
 
 - [[subdecadence]] — Lemurian time-sorcery card game (CCRU). 40-card deck, pairs summing to 9 (syzygies), Atlantean Cross spread, 45 demons from Pandemonium Matrix. Source of 333 AQ entries.
 ## People & Entities

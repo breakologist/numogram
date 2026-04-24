@@ -26,6 +26,8 @@ Triangle Rotation is a three-perspective creative methodology used to deepen and
 3. Fuse into unified text (tetralogue synthesis)
 
 ## See also
+- [[subdecadence]] — Subdecadence card game using triangle-rotation
+- [[fiveness-tetralogue]] — Fiveness tetralogue application
 - [[triangle-rotation-writing]]
 - [[voice-prior-claims]]
 - [[tetralogue-litprog]]

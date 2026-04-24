@@ -75,3 +75,6 @@ source: Session discussion of C(10)=45 SVG infographics, pentagram geometry, and
 ## See also
 
 - [[triangle-rotation]] — Triangle Rotation method
+
+- [[subdecadence]] — Subdecadence card game (fiveness concept)
+- [[fiveness]] — Fiveness concept page
