@@ -309,7 +309,7 @@ function normalizeCult(raw){
 }
 
 async function loadCult(){
-  let res = await fetch('./numogame/cult.json',{cache:'no-store'});
+  let res = await fetch('./cult.json',{cache:'no-store'});
   let raw = await res.json();
   CULT = normalizeCult(raw);
 }

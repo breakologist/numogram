@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Cult Garden Server -- Serves the live garden HTML and cult.json
-from /home/etym/ on localhost:8765.
+Cult Garden Server — Serves the live garden HTML and cult.json
+from the game/ directory on localhost:4545.
 
 Usage:
-    python3 serve-garden.py
-    # Then open http://localhost:8765/cult-garden-live.html
+    python3 game/serve-garden.py
+    # Then open http://localhost:4545/cult-garden-live.html
 """
 import http.server
 import socketserver
@@ -13,7 +13,7 @@ import os
 import sys
 
 PORT = 4545
-ROOT = "/home/etym"
+ROOT = os.path.dirname(os.path.abspath(__file__))
 
 class CultHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):

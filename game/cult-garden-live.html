@@ -337,7 +337,7 @@ async function loadCult(){
   bar.textContent = 'fetching...';
   bar.className = 'status-bar';
   try {
-    let res = await fetch('./numogame/cult.json', {cache:'no-store'});
+    let res = await fetch('./cult.json', {cache:'no-store'});
     if(!res.ok) throw new Error('HTTP '+res.status);
     let raw = await res.json();
     CULT = normalizeCult(raw);
@@ -364,9 +364,9 @@ function showError(msg){
     (isFile
       ? 'You opened this file directly (<code>file://</code>).<br>' +
         'The browser blocks fetch() for local files.<br><br>' +
-        '<code>cd /home/etym && python3 serve-garden.py</code><br>' +
+        '<code>python3 game/serve-garden.py</code><br>' +
         'Then open <code>http://localhost:4545/cult-garden-live.html</code>'
-      : 'Error: ' + msg + '<br><br>Make sure <code>./numogame/cult.json</code> exists relative to this HTML.');
+      : 'Error: ' + msg + '<br><br>Make sure <code>./cult.json</code> exists in the same directory as this HTML.');
 }
 
 // =====================================================================
