@@ -1,7 +1,7 @@
 ---
 title: "Jackrong Interview — Qwen3.5-9B-Claude-4.6-Opus-Reasoning-Distilled-v2"
 created: 2026-04-21
-tags: [local-model, interview, jackrong, reasoning-distilled, qwen3.5]
+tags: ["interview", "local-model", "reasoning-distilled"]
 model: Jackrong/Qwen3.5-9B-Claude-4.6-Opus-Reasoning-Distilled-v2-GGUF:Q5_K_M
 quantization: Q5_K_M
 size: 6.9GB
@@ -10,6 +10,7 @@ context: 64000
 max_tokens: 8000
 temperature: 0.7
 ---
+
 
 # Jackrong Interview — Structured Assessment
 

@@ -2,8 +2,9 @@
 title: "The Hyperstition Loop — Building, Spending, and the Corrosive Constant"
 created: 2026-04-18
 last_updated: 2026-04-18
-tags: [numogram, roguelike, design, hyperstition, schizo-lucid, dungeon-depth]
+tags: ["design", "dungeon-depth", "hyperstition", "numogram", "roguelike", "schizo-lucid"]
 ---
+
 
 # The Hyperstition Loop
 

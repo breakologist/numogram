@@ -1,9 +1,10 @@
 ---
 title: "Wiki Audit — April 21, 2026"
-tags: [wiki-audit, structural]
+tags: ["structural", "wiki-audit"]
 created: 2026-04-21
 status: active
 ---
+
 
 # Wiki Audit — April 21, 2026
 

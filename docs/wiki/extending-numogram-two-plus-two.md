@@ -1,11 +1,12 @@
 ---
-tags: [numogram, extending-numogram, alternate-bases, roguelike, procedural-generation, extended-gates]
+tags: ["alternate-bases", "extending-numogram", "gate", "numogram", "procedural-generation", "roguelike"]
 zone: 0-9
 gate: extended
 source: "Unleashing the Numogram, Aamodt, Tch 7 (lines 1378-1424) + Appendix B (lines 1478-1510)"
 method: two-plus-two-builder-gamer-lead
 created: 2026-04-24
 ---
+
 
 # Extending the Numogram — 2+2 Format
 

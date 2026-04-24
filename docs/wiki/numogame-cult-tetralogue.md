@@ -1,10 +1,11 @@
 ---
-tags: [numogram, roguelike, cult-json, tetralogue, game-analysis, reconciliation]
+tags: ["game-analysis", "numogram", "roguelike", "tetralogue"]
 zone: 0-9
 source: "cult.json (29 runs) + numogram_roguelike.py changes"
 method: tetralogue-roundtable
 created: 2026-04-24
 ---
+
 
 # The Cult Record — Four Voices Reconcile
 

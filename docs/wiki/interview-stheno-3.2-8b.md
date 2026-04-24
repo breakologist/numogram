@@ -1,6 +1,6 @@
 ---
 title: "Interview — Stheno-3.2-8B (Llama 3 Creative Writer)"
-tags: [local-model, interview, creative]
+tags: ["creative", "interview", "local-model"]
 created: 2026-04-21
 model: Lewdiculous/L3-8B-Stheno-v3.2-GGUF-IQ-Imatrix:L3-8B-Stheno-v3.2-Q4_K_M-imat
 quantization: Q4_K_M
@@ -11,6 +11,7 @@ context: 32000
 max_tokens: 2000
 temperature: 0.7
 ---
+
 
 # Stheno-3.2-8B — Assessment
 

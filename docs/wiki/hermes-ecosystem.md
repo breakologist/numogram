@@ -4,8 +4,9 @@ created: 2026-04-11
 source: https://hermes-ecosystem.vercel.app/
 github: https://github.com/ksimback/hermes-ecosystem
 status: indexed
-tags: [hermes, ecosystem]
+tags: ["ecosystem", "hermes"]
 ---
+
 
 # Hermes Ecosystem Atlas
 

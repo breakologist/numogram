@@ -1,12 +1,13 @@
 ---
 title: Brogue
-tags: ["roguelike", "game", "procedural-generation"]
+tags: ["game", "procedural-generation", "roguelike"]
 created: 2026-04-24
 ---
 
+
 ---
 title: Brogue
-tags: [roguelike, game, procedural-generation]
+tags: ["roguelike", "game", "procedural-generation"]
 created: 2026-04-24
 ---
 

@@ -2,8 +2,9 @@
 title: Session Log — Hardware Entropy & Numogram Entropy Plugin
 created: 2026-04-18
 last_updated: 2026-04-18
-tags: [session-log, entropy, iching]
+tags: ["entropy", "i-ching", "session-log"]
 ---
+
 
 # Session Log — 2026-04-18
 

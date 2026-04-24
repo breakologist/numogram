@@ -1,12 +1,13 @@
 ---
 title: T'ai Hsuan Ching
-tags: ["iching", "taoist", "divination", "numogram"]
+tags: ["divination", "i-ching", "numogram", "taoist"]
 created: 2026-04-24
 ---
 
+
 ---
 title: T'ai Hsuan Ching
-tags: [iching, taoist, divination, numogram]
+tags: ["iching", "taoist", "divination", "numogram"]
 created: 2026-04-24
 ---
 

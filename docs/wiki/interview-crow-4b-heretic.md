@@ -1,6 +1,6 @@
 ---
 title: "Interview — Crow-4B-Opus-4.6-Distill-Heretic_Qwen3.5"
-tags: [local-model, interview, reasoning-distilled]
+tags: ["interview", "local-model", "reasoning-distilled"]
 created: 2026-04-21
 model: mradermacher/Crow-4B-Opus-4.6-Distill-Heretic_Qwen3.5-GGUF
 quantization: Q4_K_M
@@ -10,6 +10,7 @@ context: 32000
 max_tokens: 8000
 temperature: 0.7
 ---
+
 
 # Crow-4B — Assessment
 

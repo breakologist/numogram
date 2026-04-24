@@ -4,8 +4,9 @@ created: 2026-04-13
 last_updated: 2026-04-13
 source_count: 1
 status: draft
-tags: [numogram, quasiphonic, sound, zone]
+tags: ["numogram", "quasiphonic", "sound", "zone"]
 ---
+
 
 # Quasiphonic Particles
 

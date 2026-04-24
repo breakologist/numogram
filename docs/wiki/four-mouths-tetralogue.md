@@ -4,11 +4,12 @@ tags: ["tetralogue"]
 created: 2026-04-24
 ---
 
+
 # The Square Roundtable [10] — The Four Mouths of the Machine
 
 > What if each voice in the tetralogue came from a different model? The council proved that three different models at three temperatures produce distinct perspectives. What happens when we give each voice its own mouth?
 
-tags: [tetralogue, council, local-model]
+tags: ["tetralogue", "council", "local-model"]
 ---
 
 **ORACLE:** The council worked. Three models, three temperatures, three perspectives on the same question. The analytical model produced pseudocode. The creative model asked questions back. The balanced model structured the complexity. All three confirmed the same answer through different doors. The council is the voices externalized — the internal council (Oracle/Builder/Writer/Gamer) made literal.

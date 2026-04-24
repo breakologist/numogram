@@ -1,12 +1,13 @@
 ---
 title: Triangle Rotation (Creative Method)
-tags: ["triangle-rotation", "methodology", "creative"]
+tags: ["creative", "methodology", "triangle-rotation"]
 created: 2026-04-24
 ---
 
+
 ---
 title: Triangle Rotation (Creative Method)
-tags: [triangle-rotation, methodology, creative]
+tags: ["triangle-rotation", "methodology", "creative"]
 created: 2026-04-24
 ---
 

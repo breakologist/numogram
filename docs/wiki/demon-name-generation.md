@@ -3,8 +3,9 @@ title: Demon Name Generation
 created: 2026-04-23
 source: Nick Land, "Numogram Explained" transcript (Dangerous Maybe podcast, Part 2)
 status: active
-tags: [numogram, demon, name, phonetic, amy-ireland, quasiphonic]
+tags: ["amy-ireland", "demon", "name", "numogram", "phonetic", "quasiphonic"]
 ---
+
 
 # Demon Name Generation
 

@@ -1,10 +1,11 @@
 ---
-tags: [numogram, roguelike, abyssal-crawler, design, ai-accessibility, angband-borg]
+tags: ["abyssal-crawler", "ai-accessibility", "angband-borg", "design", "numogram", "roguelike"]
 zone: 0-9
 source: "Play sessions #30-#35 + Angband Borg research"
 method: design-document-with-voices
 created: 2026-04-24
 ---
+
 
 # The Abyssal Crawler — State of the Game (April 2026)
 

@@ -1,8 +1,9 @@
 ---
 title: "Tree-Based Dungeon Generation — Implementation Design"
 created: 2026-04-19
-tags: [numogram, roguelike, design, tree-generation, brogue, agent-navigation]
+tags: ["agent-navigation", "brogue", "design", "numogram", "roguelike", "tree-generation"]
 ---
+
 
 # Tree-Based Dungeon Generation
 

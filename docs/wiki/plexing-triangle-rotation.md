@@ -5,8 +5,9 @@ last_updated: 2026-04-14
 source: "Unleashing the Numogram (Aamodt)"
 method: triangle-rotation
 status: reviewed
-tags: [numogram, triangle-rotation, plexing]
+tags: ["numogram", "plexing", "triangle-rotation"]
 ---
+
 
 # Plexing — Three Rotations
 

@@ -1,10 +1,11 @@
 ---
-tags: [numogram, qliphoth, visualization, AQ, tetractys, code, react, geometry, ciphers]
+tags: ["aq", "cipher", "code", "geometry", "numogram", "qliphoth", "tetractys", "visualization"]
 zone: 3
 syzygy: djynxx
 source: "qliphoth.systems — Numogram interactive visualization, Gematria toolkit, Component library, GitHub: lumpenspace/ccru"
 created: 2026-04-24
 ---
+
 
 # QLIPHOTH Systems — Deep Dive
 

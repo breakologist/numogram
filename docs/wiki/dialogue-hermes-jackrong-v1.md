@@ -1,11 +1,12 @@
 ---
 title: "Dialogue Fragment — Hermes (mimo-v2-pro) × Jackrong (Qwen3.5-9B-Claude-Opus-Distilled)"
 created: 2026-04-21
-tags: [dialogue, two-model, jackrong, mimo-v2-pro, free-form]
+tags: ["dialogue", "two-model"]
 models:
   hermes: xiaomi/mimo-v2-pro (Nous Portal)
   jackrong: Jackrong/Qwen3.5-9B-Claude-4.6-Opus-Reasoning-Distilled-v2-GGUF:Q5_K_M
 ---
+
 
 # Dialogue Fragment — Hermes × Jackrong
 

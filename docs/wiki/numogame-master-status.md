@@ -2,8 +2,9 @@
 title: "Numogame — Master Status: What's Done, What's Waiting, What Died"
 created: 2026-04-18
 last_updated: 2026-04-18
-tags: [numogram, roguelike, status, tracking, agents, entropy]
+tags: ["agent", "entropy", "numogram", "roguelike", "status", "tracking"]
 ---
+
 
 # Numogame — Master Status
 

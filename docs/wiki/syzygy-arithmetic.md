@@ -4,9 +4,10 @@ created: 2026-04-14
 last_updated: 2026-04-21
 source_count: 1
 status: reviewed
-tags: [numogram, syzygy, arithmetic, current, gate, roguelike]
+tags: ["arithmetic", "current", "gate", "numogram", "roguelike", "syzygy"]
 sources: [brogue-design-principles.md, katak-oddubb-triangle-rotation.md]
 ---
+
 
 # Syzygy Arithmetic — Cross-Addition and Current Generation
 

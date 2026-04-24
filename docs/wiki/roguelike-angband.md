@@ -1,12 +1,13 @@
 ---
 title: Angband
-tags: ["roguelike", "game"]
+tags: ["game", "roguelike"]
 created: 2026-04-24
 ---
 
+
 ---
 title: Angband
-tags: [roguelike, game]
+tags: ["roguelike", "game"]
 created: 2026-04-24
 ---
 

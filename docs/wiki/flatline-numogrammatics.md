@@ -4,8 +4,9 @@ created: 2026-04-11
 source: /root/.hermes/obsidian/hermetic/raw/L.Patch - Flatline Numogrammatics.md
 author: Lillian Patch
 status: indexed
-tags: [numogram, CCRU, theory, hyperstition]
+tags: ["ccru", "hyperstition", "numogram", "theory"]
 ---
+
 
 # Flatline Numogrammatics
 

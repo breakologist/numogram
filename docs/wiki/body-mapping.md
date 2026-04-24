@@ -4,8 +4,9 @@ created: 2026-04-13
 last_updated: 2026-04-13
 source_count: 1
 status: draft
-tags: [numogram, zone, body-mapping]
+tags: ["body-mapping", "numogram", "zone"]
 ---
+
 
 # Body Mapping — The Hands Are the Numogram
 

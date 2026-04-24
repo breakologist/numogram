@@ -1,9 +1,10 @@
 ---
 title: "Idea: Local Model Dialogue — mimo-v2-pro vs Qwen3.5-9B-Claude-4.6-Opus-Distilled"
 created: 2026-04-20
-tags: [idea, dialogue, local-model, qwen, mimo-v2-pro, distillation]
+tags: ["dialogue", "idea", "local-model"]
 status: noted-for-later
 ---
+
 
 # Idea: Local Model Dialogue
 

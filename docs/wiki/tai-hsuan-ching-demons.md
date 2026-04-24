@@ -4,9 +4,10 @@ created: 2026-04-21
 last_updated: 2026-04-22
 source_count: 2
 status: draft
-tags: [numogram, I-ching, t'ai-hsuan-ching, tetragram, demon, pandemonium, oracle, ternary]
+tags: ["i-ching", "demon", "numogram", "oracle", "pandemonium", "tai-hsuan-ching", "ternary", "tetragram"]
 sources: [tai-hsuan-ching.md, hexagram-demon-mapping.md, pandemonium-matrix.md]
 ---
+
 
 # T'ai Hsuan Ching × Demons: The Tetragram Casting Pipeline
 

@@ -4,13 +4,14 @@ tags: ["triangle-rotation"]
 created: 2026-04-24
 ---
 
+
 # The Orphan Drift Triangle — Five Demons, Three Voices
 
 Source: Aamodt, *Unleashing the Numogram*, 0(rphan) d(rift>) tables (lines 253–391)
 
 Five demons. Ten aspects each. Three perspectives rotate through the material.
 
-tags: [numogram, triangle-rotation, demon, CCRU]
+tags: ["numogram", "triangle-rotation", "demon", "ccru"]
 ---
 
 ## The Demons (Quick Reference)

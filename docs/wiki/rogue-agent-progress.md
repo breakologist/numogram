@@ -1,8 +1,9 @@
 ---
-tags: [roguelike, rogue, agent, tmux, screen-parser, interest-model, corridor-entity, threshold]
+tags: ["agent", "corridor", "interest-model", "roguelike", "screen-parser", "threshold", "tmux"]
 created: 2026-04-15
 source: "Rogue agent development — 8 versions, 8 commits, crossing thresholds"
 ---
+
 
 # The Hungry Borg in Rogue — Crossing Thresholds
 

@@ -1,8 +1,9 @@
 ---
 title: C(10)=45 and Fiveness — The Self-Decadence of Zone 5
 created: 2026-04-20
-tags: [numogram, combinatorics, C(10)=45, syzygy, decadence, pentagram, zone-5, svg, infographic]
+tags: ["c(10)=45", "combinatorics", "decadence", "infographic", "numogram", "pentagram", "svg", "syzygy", "zone-5"]
 ---
+
 
 # C(10)=45 and Fiveness
 

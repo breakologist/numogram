@@ -1,11 +1,12 @@
 ---
-tags: [numogram, ouroboros, spiral, roguelike, procedural-generation, cumulation, plexing]
+tags: ["cumulation", "numogram", "ouroboros", "plexing", "procedural-generation", "roguelike", "spiral"]
 zone: 0-9
 syzygy: uttunul (the 0/9 fold)
 source: "Unleashing the Numogram, Aamodt, Tch 4 (lines 870-883) + spiral mechanics (lines 690-710, 890-999, 1361, 2588+)"
 method: two-plus-two-builder-gamer-lead
 created: 2026-04-24
 ---
+
 
 # Ouroboros, the Universal Spiral — 2+2 Format
 

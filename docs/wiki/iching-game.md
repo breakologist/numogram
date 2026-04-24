@@ -1,9 +1,10 @@
 ---
 title: "I Ching Game — The Third Divination System"
 created: 2026-04-20
-tags: [numogram, I-ching, hexagram, oracle, game, casting, entropy, pandemonium, octadence]
+tags: ["i-ching", "casting", "entropy", "game", "hexagram", "numogram", "oracle", "pandemonium"]
 status: designed, not implemented
 ---
+
 
 # I Ching Game: The Third Divination System
 

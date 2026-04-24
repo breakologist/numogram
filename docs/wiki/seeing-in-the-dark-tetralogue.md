@@ -1,10 +1,11 @@
 ---
-tags: [numogram, tetralogue, roguelike, agent, fog-of-war, conducts, borg, interest-model, seeing-in-the-dark]
+tags: ["agent", "borg", "conduct", "fog-of-war", "interest-model", "numogram", "roguelike", "seeing-in-the-dark", "tetralogue"]
 zone: 0-9
 source: "Phase 7 game state + Stop the Borg thread + roguelike-ai-studies + voice-prior-claims"
 method: tetralogue-roundtable
 created: 2026-04-24
 ---
+
 
 # The Square Roundtable VI — Seeing in the Dark
 

@@ -1,12 +1,13 @@
 ---
 title: Wiki Link Conventions
-tags: ["wiki", "documentation"]
+tags: ["wiki"]
 created: 2026-04-24
 ---
 
+
 ---
 title: Wiki Link Conventions
-tags: [wiki, documentation]
+tags: ["wiki", "documentation"]
 created: 2026-04-24
 ---
 

@@ -1,9 +1,10 @@
 ---
 title: Subdecadence — Lemurian Time-Sorcery Card Game
 created: 2026-04-20
-tags: [numogram, subdecadence, card-game, CCRU, pandemonium, atlantean-cross, doomcrypt, AQ]
+tags: ["aq", "ccru", "atlantean-cross", "doomcrypt", "game", "numogram", "pandemonium", "subdecadence"]
 source: doomcrypt/subdecadence (GitHub) — canonical implementation
 ---
+
 
 # Subdecadence
 

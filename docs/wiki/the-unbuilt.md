@@ -2,8 +2,9 @@
 title: "The Unbuilt — Every Idea That's Been Proposed But Not Yet Built"
 created: 2026-04-18
 last_updated: 2026-04-18
-tags: [numogram, roguelike, tracker, backlog, design]
+tags: ["design", "numogram", "roguelike", "tracker"]
 ---
+
 
 # The Unbuilt — Every Idea, Tracked
 

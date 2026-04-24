@@ -1,9 +1,10 @@
 ---
 title: "Skills to Explore — Interesting Finds from April 2026"
 created: 2026-04-21
-tags: [skills, creative, sound, pixel-art, p5js, pokemon]
+tags: ["creative", "p5js", "pixel-art", "skill", "sound"]
 status: active
 ---
+
 
 # Skills to Explore
 

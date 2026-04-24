@@ -3,9 +3,10 @@ title: "AQ Calculators — A Tetralogue Litprog"
 created: 2026-04-21
 last_updated: 2026-04-21
 sources: [aq_calculator.py, aq_calculator_v2.py, aq_calculator_enhanced.py]
-tags: [numogram, AQ, litprog, tetralogue, code-review, qabbala]
+tags: ["aq", "code-review", "litprog", "numogram", "qabbala", "tetralogue"]
 voices: [oracle, builder, writer, gamer]
 ---
+
 
 # AQ Calculators — A Tetralogue Litprog
 

@@ -1,10 +1,11 @@
 ---
-tags: [tetralogue, 2+2, roguelike, agent, stuck-problem, threshold, navigation, rogue]
+tags: ["agent", "navigation", "roguelike", "stuck-problem", "tetralogue", "threshold"]
 zone: 4
 source: "Rogue agent v5 testing — 8 runs, always stuck after 20-50 turns"
 method: 2+2-builder-gamer-lead
 created: 2026-04-24
 ---
+
 
 # The Square Roundtable VII — The Threshold Problem
 

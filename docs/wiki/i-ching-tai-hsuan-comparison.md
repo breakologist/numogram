@@ -4,7 +4,7 @@ created: 2026-04-22
 last_updated: 2026-04-22
 source_count: 6
 status: draft
-tags: [numogram, I-ching, tai-hsuan-ching, ternary, binary, san-cai, oracle, comparison, divination]
+tags: ["i-ching", "binary", "comparison", "divination", "numogram", "oracle", "tai-hsuan-ching", "ternary", "wu-xing"]
 sources:
   - tai-hsuan-ching.md
   - i-ching-connections.md
@@ -13,6 +13,7 @@ sources:
   - entropy-modules-litprog
   - hardware-entropy.md
 ---
+
 
 # I Ching × T'ai Hsuan Ching — Comparative Oracle Structures
 

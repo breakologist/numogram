@@ -4,9 +4,10 @@ created: 2026-04-22
 last_updated: 2026-04-22
 source_count: 1
 status: draft
-tags: [numogram, visualization, html, quasiphonic, triangular-gates, aq-dictionary]
+tags: ["aq-dictionary", "html", "numogram", "quasiphonic", "triangular-gate", "visualization"]
 sources: [numogram-visualizer-v6-full.html]
 ---
+
 
 # Numogram Visualizer v6 — Full Merge (Quasiphonic + Triangular Gates + Complete Context)
 

@@ -4,8 +4,9 @@ created: 2026-04-08
 last_updated: 2026-04-08
 source_count: 3
 status: draft
-tags: [CCRU, Barker, geotraumatics, theory]
+tags: ["barker", "ccru", "geotraumatics", "theory"]
 ---
+
 
 # Daniel Charles Barker
 

@@ -2,8 +2,9 @@
 title: "Dungeon Depth — Zone-Themed Floor Generation"
 created: 2026-04-19
 last_updated: 2026-04-19
-tags: [numogram, roguelike, design, dungeon, zone-theme, floors]
+tags: ["design", "dungeon", "numogram", "roguelike", "zone-theme"]
 ---
+
 
 # Zone-Themed Floor Generation
 

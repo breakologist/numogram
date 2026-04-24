@@ -1,5 +1,5 @@
 ---
-tags: [numogram, tetralogue, demons, roguelike, pandemonium, dialogue]
+tags: ["demon", "dialogue", "numogram", "pandemonium", "roguelike", "tetralogue"]
 zone: 9
 syzygy: uttunul
 gate: 45
@@ -7,6 +7,7 @@ source: "45 Demons Triangle Rotation + Roundtable Discussion"
 method: tetralogue-roundtable
 created: 2026-04-24
 ---
+
 
 # The Square Roundtable — 45 Demons Tetralogue
 

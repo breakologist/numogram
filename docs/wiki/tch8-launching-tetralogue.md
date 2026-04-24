@@ -1,5 +1,5 @@
 ---
-tags: [numogram, launching, rites, hyperstition, activation, roguelike, divination]
+tags: ["divination", "hyperstition", "numogram", "roguelike"]
 zone: 0-9
 syzygy: uttunul
 gate: 45
@@ -7,6 +7,7 @@ source: "Unleashing the Numogram, Aamodt, Tch 8 (lines 1425-1429) + rite mechani
 method: tetralogue-roundtable
 created: 2026-04-24
 ---
+
 
 # Tch 8: Launching the Numogram — Tetralogue
 

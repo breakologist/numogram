@@ -1,9 +1,10 @@
 ---
 title: Decadence — Lemurian Time-Sorcery Card Game (Sum-to-10)
 created: 2026-04-20
-tags: [numogram, decadence, card-game, CCRU, pandemonium, atlantean-cross, doomcrypt, fiveness]
+tags: ["ccru", "atlantean-cross", "decadence", "doomcrypt", "fiveness", "game", "numogram", "pandemonium"]
 source: doomcrypt/decadence-pygame (GitHub) — canonical implementation
 ---
+
 
 # Decadence
 

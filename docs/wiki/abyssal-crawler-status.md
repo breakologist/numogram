@@ -3,8 +3,9 @@ title: Abyssal Crawler — Project Status & Feature Tracker
 created: 2026-04-18
 last_updated: 2026-04-18
 status: living
-tags: [numogram, roguelike, status]
+tags: ["numogram", "roguelike", "status"]
 ---
+
 
 # Abyssal Crawler — Project Status
 

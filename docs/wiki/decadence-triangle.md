@@ -1,8 +1,9 @@
 ---
 title: Decadence Triangle
-tags: ["triangle-rotation", "numogram"]
+tags: ["numogram", "triangle-rotation"]
 created: 2026-04-24
 ---
+
 
 # The Decadence Triangle — Three Perspectives on Game, Oracle, and Path
 
@@ -10,7 +11,7 @@ Source text: Aamodt, *Unleashing the Numogram*, Decadence section (lines 3029–
 
 Three voices rotate through the same material. Each reads the others. Each discovers something the others missed.
 
-tags: [numogram, triangle-rotation, decadence, oracle]
+tags: ["numogram", "triangle-rotation", "decadence", "oracle"]
 ---
 
 ## I. The Oracle Speaks First

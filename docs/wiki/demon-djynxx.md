@@ -4,8 +4,9 @@ created: 2026-04-08
 last_updated: 2026-04-08
 source_count: 1
 status: reviewed
-tags: [numogram, demon, syzygetic, xenodemon]
+tags: ["demon", "numogram", "syzygy", "xenodemon"]
 ---
+
 
 ## Djynxx (6::3) — The Warp Carrier
 

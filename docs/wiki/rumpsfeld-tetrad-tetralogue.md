@@ -1,8 +1,9 @@
 ---
 title: Rumsfeld Tetrad Tetralogue
-tags: [tetralogue, doctrine, unknown-known]
+tags: ["doctrine", "tetralogue", "unknown-known"]
 created: 2026-04-24
 ---
+
 
 ## Overview
 

@@ -1,9 +1,10 @@
 ---
 title: "DE-RE-Mystifying The CCRU's Numogram — Structural Rules"
 created: 2026-04-20
-tags: [numogram, CCRU, structural-rules, base-N, triangular-numbers, warp-condition, epub, source]
+tags: ["ccru", "base-n", "numogram", "source", "structural-rules", "triangular-numbers", "warp-condition"]
 source: DE-RE-Mystifying The CCRU's Numogram epub (~56K chars)
 ---
+
 
 # DE-RE-Mystifying: Structural Rules
 

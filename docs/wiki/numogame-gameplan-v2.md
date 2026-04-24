@@ -1,10 +1,11 @@
 ---
-tags: [numogram, roguelike, abyssal-crawler, progress, learning-agent, gameplan]
+tags: ["abyssal-crawler", "agent", "gameplan", "numogram", "progress", "roguelike"]
 zone: 0-9
 source: "Session April 15 2026 — 98 runs, demos, headless mode, interactive agent"
 method: design-document
 created: 2026-04-24
 ---
+
 
 # The Abyssal Crawler — Gameplan Update (April 15, 2026)
 

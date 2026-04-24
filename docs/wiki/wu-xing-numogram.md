@@ -1,8 +1,9 @@
 ---
 title: "Wu Xing × Numogram: The Five Elements of the Decimal Labyrinth"
 created: 2026-04-20
-tags: [numogram, wu-xing, five-elements, syzygy, I-ching, pentagram, chinese-metaphysics]
+tags: ["i-ching", "chinese-metaphysics", "numogram", "pentagram", "syzygy", "wu-xing"]
 ---
+
 
 # Wu Xing × Numogram: The Five Elements of the Decimal Labyrinth
 

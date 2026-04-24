@@ -1,9 +1,10 @@
 ---
 title: "Local Model Survey & Dialogue Plan"
 created: 2026-04-21
-tags: [local-model, llama.cpp, ollama, dialogue, hardware, RTX-3060]
+tags: ["rtx-3060", "dialogue", "hardware", "local-model"]
 status: active
 ---
+
 
 # Local Model Survey & Dialogue Plan
 

@@ -1,8 +1,9 @@
 ---
-tags: [roguelike, ai-agent, design-patterns, numogram, ludic-analysis, study-hub]
+tags: ["ai-agent", "design-patterns", "game-analysis", "numogram", "roguelike"]
 created: 2026-04-15
 status: active
 ---
+
 
 # Roguelike Studies — Design, Code, and AI
 

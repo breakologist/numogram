@@ -3,9 +3,10 @@ title: "Numogram Oracle — A Tetralogue Litprog"
 created: 2026-04-21
 last_updated: 2026-04-21
 sources: [oracle.py, visualizer.html, philosophies.md, SKILL.md]
-tags: [numogram, oracle, litprog, tetralogue, divination, quasiphonic, algorithmic-art]
+tags: ["algorithmic-art", "divination", "litprog", "numogram", "oracle", "quasiphonic", "tetralogue"]
 voices: [oracle, builder, writer, gamer]
 ---
+
 
 # Numogram Oracle — A Tetralogue Litprog
 

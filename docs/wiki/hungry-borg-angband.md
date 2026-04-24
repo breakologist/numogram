@@ -1,9 +1,10 @@
 ---
 title: "The Hungry Borg — Angband Agent"
 created: 2026-04-24
-tags: [roguelike, angband, agent, borg, hungry-borg]
+tags: ["agent", "angband", "borg", "hungry-borg", "roguelike"]
 status: active
 ---
+
 
 # The Hungry Borg — Angband Agent
 

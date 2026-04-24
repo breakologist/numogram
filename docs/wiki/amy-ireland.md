@@ -1,12 +1,13 @@
 ---
 title: Amy Ireland
-tags: ["ccru", "person", "theorist"]
+tags: ["ccru", "person"]
 created: 2026-04-24
 ---
 
+
 ---
 title: Amy Ireland
-tags: [ccru, person, theorist]
+tags: ["ccru", "person", "theorist"]
 created: 2026-04-24
 ---
 

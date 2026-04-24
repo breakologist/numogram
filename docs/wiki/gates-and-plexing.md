@@ -4,8 +4,9 @@ created: 2026-04-13
 last_updated: 2026-04-13
 source_count: 1
 status: draft
-tags: [numogram, gate, plexing, arithmetic]
+tags: ["arithmetic", "gate", "numogram", "plexing"]
 ---
+
 
 # Gates and Plexing
 

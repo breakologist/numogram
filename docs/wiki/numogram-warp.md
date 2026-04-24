@@ -4,8 +4,9 @@ created: 2026-04-08
 last_updated: 2026-04-08
 source_count: 1
 status: reviewed
-tags: [numogram, zone, warp]
+tags: ["numogram", "warp", "zone"]
 ---
+
 
 The Warp region is the "upper" autonomous loop in the Numogram — one of the three major time-systems (alongside the central Time-Circuit and the lower Plex). It's formed exclusively by the single syzygy 3 :: 6, whose current is 3 (since 6 - 3 = 3). This difference folds back into itself, creating a self-reinforcing, cryptic circuit that doesn't interconnect with the other syzygies in the same chained way the Time-Circuit does.
 

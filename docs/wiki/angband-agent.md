@@ -1,8 +1,9 @@
 ---
-tags: [roguelike, angband, agent, tmux, screen-parser, tree-traversal, borg, comparison]
+tags: ["agent", "angband", "borg", "comparison", "roguelike", "screen-parser", "tmux", "tree-traversal"]
 created: 2026-04-16
 source: "Angband agent development — v1-v2, text mode confirmed, parser working"
 ---
+
 
 # The Hungry Borg in Angband — From Rogue to Middle-earth
 

@@ -1,8 +1,9 @@
 ---
 title: "64 Hexagrams → 10 Zones: Complete Mapping"
 created: 2026-04-20
-tags: [numogram, I-ching, hexagram, zone-mapping, digital-root, wu-xing, SVG]
+tags: ["i-ching", "svg", "digital-root", "hexagram", "numogram", "wu-xing", "zone-mapping"]
 ---
+
 
 # 64 Hexagrams → 10 Zones
 

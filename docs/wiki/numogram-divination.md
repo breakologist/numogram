@@ -4,8 +4,9 @@ created: 2026-04-13
 last_updated: 2026-04-22
 source_count: 1
 status: draft
-tags: [numogram, divination, oracle]
+tags: ["divination", "numogram", "oracle"]
 ---
+
 
 # Numogram Divination
 

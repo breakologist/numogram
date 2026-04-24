@@ -1,9 +1,10 @@
 ---
-tags: [numogram, roguelike, demons, player-character, design-notes, pandemonium-matrix]
+tags: ["demon", "design", "numogram", "pandemonium-matrix", "player-character", "roguelike"]
 zone: 0-9
 source: "Unleashing the Numogram.md, aq-demon-mappings.md, numogame-cult-tetralogue.md"
 created: 2026-04-24
 ---
+
 
 # Demon & Player Refinement — Design Notes
 

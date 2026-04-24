@@ -1,9 +1,10 @@
 ---
 title: "Angband Agent — Display & ANSI Color Notes"
 created: 2026-04-24
-tags: [roguelike, angband, agent, screen-parser, tmux]
+tags: ["agent", "angband", "roguelike", "screen-parser", "tmux"]
 status: active
 ---
+
 
 # Angband Agent — Display & ANSI Color Notes
 

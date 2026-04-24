@@ -1,12 +1,13 @@
 ---
 title: Demon (Numogram Entity)
-tags: ["numogram", "pandemonium", "demon"]
+tags: ["demon", "numogram", "pandemonium"]
 created: 2026-04-24
 ---
 
+
 ---
 title: Demon (Numogram Entity)
-tags: [numogram, pandemonium, demon]
+tags: ["numogram", "pandemonium", "demon"]
 created: 2026-04-24
 ---
 

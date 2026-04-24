@@ -4,8 +4,9 @@ created: 2026-04-08
 last_updated: 2026-04-08
 source_count: 1
 status: draft
-tags: [numogram, time-sorcery, Vexsys, CCRU]
+tags: ["ccru", "vexsys", "numogram", "time-sorcery"]
 ---
+
 
 # Time Sorcery — Vexsys / Gate Zero
 

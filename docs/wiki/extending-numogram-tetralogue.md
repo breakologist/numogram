@@ -1,5 +1,5 @@
 ---
-tags: [numogram, tetralogue, extended-gates, alternate-bases, roguelike, worlds]
+tags: ["alternate-bases", "gate", "numogram", "roguelike", "tetralogue"]
 zone: 3
 syzygy: djynxx
 gate: 55
@@ -7,6 +7,7 @@ source: "Unleashing the Numogram, Aamodt, Tch 7: Extending the Numogram (lines 1
 method: tetralogue-roundtable
 created: 2026-04-24
 ---
+
 
 # The Square Roundtable II — Worlds Within Worlds
 

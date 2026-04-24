@@ -4,8 +4,9 @@ created: 2026-04-08
 last_updated: 2026-04-08
 source_count: 1
 status: draft
-tags: [CCRU, Land, time-sorcery, theory]
+tags: ["ccru", "land", "theory", "time-sorcery"]
 ---
+
 
 # Nick Land's Theory of Time
 

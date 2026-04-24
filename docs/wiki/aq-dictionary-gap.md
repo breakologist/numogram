@@ -1,9 +1,10 @@
 ---
 title: "AQ Dictionary Gap Analysis"
 created: 2026-04-24
-tags: [AQ, qabbala, dictionary]
+tags: ["aq", "dictionary", "qabbala"]
 status: active
 ---
+
 
 # AQ Dictionary Gap Analysis
 

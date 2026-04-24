@@ -2,8 +2,9 @@
 title: "The Schizo-Lucid State — Design Document"
 created: 2026-04-18
 last_updated: 2026-04-18
-tags: [numogram, roguelike, design, hyperstition, schizo-lucid, the-outside]
+tags: ["design", "hyperstition", "numogram", "roguelike", "schizo-lucid", "the-outside"]
 ---
+
 
 # The Schizo-Lucid State — Design Document
 

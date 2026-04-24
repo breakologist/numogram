@@ -2,8 +2,9 @@
 title: "The Cult Garden — Creative Overflow System"
 created: 2026-04-18
 last_updated: 2026-04-24
-tags: [numogram, roguelike, design, cult, creative, entropy, conduct, mega-artifact]
+tags: ["conduct", "creative", "cult", "design", "entropy", "numogram", "roguelike"]
 ---
+
 
 # The Cult Garden
 

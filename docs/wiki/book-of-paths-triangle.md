@@ -1,8 +1,9 @@
 ---
 title: Book of Paths Triangle Rotation
-tags: ["triangle-rotation", "creative"]
+tags: ["creative", "triangle-rotation"]
 created: 2026-04-24
 ---
+
 
 # The Book of Paths Triangle — 84 Levels, Three Voices
 
@@ -10,7 +11,7 @@ Source: Aamodt, *Unleashing the Numogram*, Book of Paths (lines 3143–3820) and
 
 84 paths. Each is a name, a direction, a method, tests, and an outcome. The Horowitz letter says 84 bronze tablets were removed from the Shu excavation. The number is not a coincidence. It is the same text.
 
-tags: [numogram, triangle-rotation, book-of-paths]
+tags: ["numogram", "triangle-rotation", "book-of-paths"]
 ---
 
 ## The Structure

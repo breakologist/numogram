@@ -3,9 +3,10 @@ title: "Abyssal Crawler — A Tetralogue Litprog"
 created: 2026-04-21
 last_updated: 2026-04-21
 source: numogram_roguelike.py (3454 lines)
-tags: [numogram, roguelike, litprog, tetralogue, code-review]
+tags: ["code-review", "litprog", "numogram", "roguelike", "tetralogue"]
 voices: [oracle, builder, writer, gamer]
 ---
+
 
 # Abyssal Crawler — A Tetralogue Litprog
 

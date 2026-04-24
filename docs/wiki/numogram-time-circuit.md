@@ -4,8 +4,9 @@ created: 2026-04-08
 last_updated: 2026-04-08
 source_count: 1
 status: reviewed
-tags: [numogram, zone, time-circuit]
+tags: ["numogram", "time-circuit", "zone"]
 ---
+
 
 The Time-Circuit is the central, inner rotor of the entire Numogram — the primary "time-machine" where most everyday temporal reality (and Lemurian sorcery) actually happens. CCRU describe it in their own words like this:
 

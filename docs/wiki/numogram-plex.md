@@ -4,8 +4,9 @@ created: 2026-04-08
 last_updated: 2026-04-08
 source_count: 1
 status: reviewed
-tags: [numogram, zone, plex]
+tags: ["numogram", "plex", "zone"]
 ---
+
 
 The Plex region is the "lower" autonomous loop in the Numogram — the third of the three major time-systems (alongside the central Time-Circuit and the upper Warp). It is formed exclusively by the syzygy 0 :: 9, whose current is 9 (since 9 - 0 = 9, or in modular terms, the difference folds back to reinforce the boundary).
 

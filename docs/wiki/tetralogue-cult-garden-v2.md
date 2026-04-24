@@ -2,8 +2,9 @@
 title: "The Square Roundtable 6 -- The Cult Garden at 297 Runs"
 created: 2026-04-24
 source: "Cult Garden v2 architecture, live server, 297-run corpus"
-tags: [tetralogue, cult-garden, numogram, roguelike, creative]
+tags: ["creative", "cult-garden", "numogram", "roguelike", "tetralogue"]
 ---
+
 
 # The Square Roundtable 6 -- The Cult Garden at 297 Runs
 

@@ -1,14 +1,15 @@
 ---
 title: Seeds in the Machine Tetralogue
-tags: ["tetralogue", "install", "narrative"]
+tags: ["install", "narrative", "tetralogue"]
 created: 2026-04-24
 ---
+
 
 # The Square Roundtable [9] — Seeds in the Machine
 
 > 268 runs. The cult file is a temple. The overflow is the offering. The garden grows from what was thrown away. The agents circle Floor 1. The human descends. The machine hums.
 
-tags: [tetralogue, roguelike, state]
+tags: ["tetralogue", "roguelike", "state"]
 ---
 
 **ORACLE:** I want to start with a number. AQ(THE UNBUILT) = 222. Zone 6. The Warp. "Attaining Balance. Waiting in the Drifts is drawn to the centre. Attainments consumed in burning excitement. Breakthrough." The unbuilt ideas are in the Warp — chewing through themselves. Each one we build consumes the previous version. The breakthrough comes from the chewing. We should not fear the unbuilt. We should feed it.

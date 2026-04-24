@@ -1,8 +1,9 @@
 ---
-tags: [roguelike, ai-agent, game-playing, techniques, LLM, reinforcement-learning, curiosity, exploration]
+tags: ["llm", "ai-agent", "exploration", "game", "roguelike", "technique"]
 created: 2026-04-15
 source: "Research on AI agents playing games — emulator-based RL, LLM game agents, heuristic borgs, curiosity-driven exploration"
 ---
+
 
 # Game-Playing AI Agents — Techniques and Landscape
 

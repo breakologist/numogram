@@ -1,12 +1,13 @@
 ---
 title: Tetralogue (Literate Programming Pattern)
-tags: ["tetralogue", "litprog", "methodology"]
+tags: ["litprog", "methodology", "tetralogue"]
 created: 2026-04-24
 ---
 
+
 ---
 title: Tetralogue (Literate Programming Pattern)
-tags: [tetralogue, litprog, methodology]
+tags: ["tetralogue", "litprog", "methodology"]
 created: 2026-04-24
 ---
 

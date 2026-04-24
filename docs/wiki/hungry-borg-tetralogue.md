@@ -1,11 +1,12 @@
 ---
-tags: [hungry-borg, angband, numogram, roguelike, tetralogue, recursive-consumption, agent-comparison]
+tags: ["agent-comparison", "angband", "hungry-borg", "numogram", "recursive-consumption", "roguelike", "tetralogue"]
 zone: 0-9
 source: "angband_agent.py + numogram_roguelike.py + cult.json + angband_memory.json"
 method: tetralogue-roundtable
 date: 2026-04-16
 created: 2026-04-24
 ---
+
 
 # The State of Things — Recursive Consumption and the Two Borgs
 

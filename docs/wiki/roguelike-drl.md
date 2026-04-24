@@ -1,9 +1,10 @@
 ---
 
 title: DRL (Desktop Realms)
-tags: [roguelike, game]
+tags: ["game", "roguelike"]
 created: 2026-04-24
 ---
+
 
 
 ## Overview

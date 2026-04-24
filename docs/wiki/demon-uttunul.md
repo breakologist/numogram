@@ -4,8 +4,9 @@ created: 2026-04-08
 last_updated: 2026-04-08
 source_count: 1
 status: reviewed
-tags: [numogram, demon, syzygetic]
+tags: ["demon", "numogram", "syzygy"]
 ---
+
 
 ## Uttunul (9::0) — The Plex Carrier
 

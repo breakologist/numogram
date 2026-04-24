@@ -1,10 +1,11 @@
 ---
 title: "The Square Roundtable #16 — Fiveness: The Self-Decadence of Zone 5"
 created: 2026-04-20
-tags: [numogram, combinatorics, C(10)=45, syzygy, decadence, pentagram, zone-5, tetralogue, fiveness]
+tags: ["c(10)=45", "combinatorics", "decadence", "fiveness", "numogram", "pentagram", "syzygy", "tetralogue", "zone-5"]
 method: tetralogue-roundtable
 source: Session discussion of C(10)=45 SVG infographics, pentagram geometry, and Zone 5 as the only self-decadence
 ---
+
 
 # The Square Roundtable #16 — Fiveness: The Self-Decadence of Zone 5
 

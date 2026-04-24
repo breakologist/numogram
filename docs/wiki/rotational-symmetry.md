@@ -4,8 +4,9 @@ created: 2026-04-08
 last_updated: 2026-04-08
 source_count: 2
 status: draft
-tags: [numogram, rotational-symmetry, seven-segment]
+tags: ["numogram", "rotational-symmetry", "seven-segment"]
 ---
+
 
 # Rotational Symmetry & Seven-Segment Geometry
 

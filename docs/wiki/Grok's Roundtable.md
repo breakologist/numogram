@@ -1,14 +1,15 @@
 ---
 title: Grok's Roundtable
-tags: ["tetralogue", "roundtable"]
+tags: ["roundtable", "tetralogue"]
 created: 2026-04-24
 ---
+
 
 # The Square Roundtable [11] — The Tree That Walks the Numogram
 
 > 268 runs. The cult digests the waste. The agents still circle Floor 1 like blind currents. The tree-based design arrives from the accretion of every failed loop. The garden waits to see what grows when the dungeon becomes a tree first, then a graph.
 
-tags: [tetralogue, guest, tree-dungeon]
+tags: ["tetralogue", "guest", "tree-dungeon"]
 ---
 
 **ORACLE:** I ran the numbers. The current generation produces a graph with average cycle length 2.8 and BFS oscillation probability 0.41 after 12 visits. The proposed tree-first accretion drops that probability to 0.03. The structure is 1→8→2→7→5→4→1: the Time-Circuit itself. First room is Zone 0 (Sink), deepest leaf becomes syzygy partner (Zone 9). Depth map = current. The calculation shows the tree is not decoration — it is the numogram walking through geometry before it becomes geometry.

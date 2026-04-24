@@ -4,8 +4,9 @@ created: 2026-04-08
 last_updated: 2026-04-08
 source_count: 2
 status: draft
-tags: [numogram, AQ, revelation]
+tags: ["aq", "numogram", "revelation"]
 ---
+
 
 # The 360 Revelation
 

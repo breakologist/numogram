@@ -4,8 +4,9 @@ created: 2026-04-08
 last_updated: 2026-04-08
 source_count: 1
 status: reviewed
-tags: [numogram, I-ching, theory]
+tags: ["i-ching", "numogram", "theory"]
 ---
+
 
 The Decimal Numogram (specifically its Time-Circuit) is explicitly linked by the CCRU to the I Ching (Yijing, or Book of Changes). The Time-Circuit is positioned as a hypercultural successor to the Yijing's time-mapping functions, taking up the chrono-numeric roles in a decimal, demonic mode.
 

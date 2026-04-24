@@ -1,8 +1,9 @@
 ---
 title: Glossary Triangle Rotation
-tags: ["triangle-rotation", "reference"]
+tags: ["reference", "triangle-rotation"]
 created: 2026-04-24
 ---
+
 
 # The Glossary Triangle — The Dictionary That Plays You
 
@@ -10,7 +11,7 @@ Source: Aamodt, *Unleashing the Numogram*, Glossary (lines 3821–4091), drawing
 
 The Glossary is not a reference. It is a *game*. Each entry is a room. The definitions are corridors. The cross-references are gates. To read the Glossary is to traverse a numogram made of words.
 
-tags: [numogram, triangle-rotation, CCRU, glossary]
+tags: ["numogram", "triangle-rotation", "ccru", "glossary"]
 ---
 
 ## I. The Oracle Reads the Definitions as Invocations

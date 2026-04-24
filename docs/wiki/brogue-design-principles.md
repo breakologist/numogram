@@ -4,8 +4,9 @@ created: 2026-04-08
 last_updated: 2026-04-14
 source_count: 3
 status: draft
-tags: [numogram, game-design, procedural-generation, roguelike]
+tags: ["game-design", "numogram", "procedural-generation", "roguelike"]
 ---
+
 
 # Brogue Design Principles
 

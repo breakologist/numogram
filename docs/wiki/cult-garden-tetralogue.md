@@ -1,14 +1,15 @@
 ---
 title: Cult Garden Tetralogue
-tags: ["cult-garden", "tetralogue", "game-design"]
+tags: ["cult-garden", "game-design", "tetralogue"]
 created: 2026-04-24
 ---
+
 
 # The Square Roundtable [8] — The Garden From the Waste
 
 > 268 runs. The cult file digests and excretes. The agents circle Floor 1. The human descends. The exquisite corpse speaks from what was thrown away.
 
-tags: [tetralogue, roguelike, cult-garden]
+tags: ["tetralogue", "roguelike", "cult-garden"]
 ---
 
 **ORACLE:** I ran the numbers. The cult's current zone is 5 — Hold, the central ruler of the Time-Circuit. But it started at 7 and passed through 2, 6, and 9 on the way. The cult is migrating through the numogram as the runs accumulate. It's not staying anywhere. That's not a cult — that's a current. The cult IS the current.

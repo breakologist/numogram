@@ -4,9 +4,10 @@ tags: ["game-design", "numogram"]
 created: 2026-04-24
 ---
 
+
 ---
 title: Game Design (Numogram Context)
-tags: [game-design, numogram]
+tags: ["game-design", "numogram"]
 created: 2026-04-24
 ---
 

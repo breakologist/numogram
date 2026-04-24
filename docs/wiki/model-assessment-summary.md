@@ -3,8 +3,9 @@ title: "Model Assessment Summary — Optimal Settings & Council Architecture"
 created: 2026-04-21
 last_updated: 2026-04-21
 status: active
-tags: [local-model, council, model-assessment, architecture]
+tags: ["architecture", "council", "local-model", "model-assessment"]
 ---
+
 
 # Model Assessment Summary
 

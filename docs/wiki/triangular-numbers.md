@@ -4,8 +4,9 @@ created: 2026-04-08
 last_updated: 2026-04-08
 source_count: 1
 status: reviewed
-tags: [numogram, triangular, arithmetic]
+tags: ["arithmetic", "numogram", "triangular"]
 ---
+
 
 Triangular numbers exhibit intriguing behavior when viewed through the lens of the Decimal Numogram. While the canonical CCRU texts (declab.htm, Pandemonium Matrix) do not explicitly map triangular numbers to zones, currents, or gates in a rigid table, several deep structural resonances and explicit hints emerge across the system, fan extensions, and related discussions.
 

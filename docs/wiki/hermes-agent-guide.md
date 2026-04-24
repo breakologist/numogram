@@ -5,8 +5,9 @@ source: /root/.hermes/obsidian/hermetic/raw/Hermes-Agent-The-Complete-Guide-v260
 version: v260408 (PDF) / v0.7.0 (Hermes Agent)
 author: HuaShu (花叔)
 status: indexed
-tags: [hermes, agent, guide]
+tags: ["agent", "guide", "hermes"]
 ---
+
 
 # Hermes Agent — The Complete Guide
 

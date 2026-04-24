@@ -1,10 +1,11 @@
 ---
-tags: [numogram, roguelike, abyssal-crawler, tetralogue, game-analysis]
+tags: ["abyssal-crawler", "game-analysis", "numogram", "roguelike", "tetralogue"]
 zone: 0-9
 source: "numogram_roguelike.py (Phase 5a) — three simulated runs"
 method: tetralogue-roundtable
 created: 2026-04-24
 ---
+
 
 # The Abyssal Crawler — Four Voices Play
 

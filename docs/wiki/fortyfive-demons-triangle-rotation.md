@@ -1,5 +1,5 @@
 ---
-tags: [numogram, triangle-rotation, demons, roguelike, pandemonium]
+tags: ["demon", "numogram", "pandemonium", "roguelike", "triangle-rotation"]
 zone: 0-9
 syzygy: uttunul
 gate: 45
@@ -7,6 +7,7 @@ source: "Unleashing the Numogram, Aamodt, lines 1097-1272"
 method: four-voice-triangle-rotation
 created: 2026-04-24
 ---
+
 
 # The 45 Demons — Four-Voice Triangle Rotation
 

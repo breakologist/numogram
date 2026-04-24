@@ -1,9 +1,10 @@
 ---
 title: "Desktop Customization — Hyprland Ricing"
 created: 2026-04-24
-tags: [desktop, hyprland, conky, numogram]
+tags: ["conky", "desktop", "hyprland", "numogram"]
 status: active
 ---
+
 
 # Desktop Customization — Hyprland Ricing
 

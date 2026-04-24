@@ -4,8 +4,9 @@ created: 2026-04-18
 last_updated: 2026-04-18
 source_count: 3
 status: active
-tags: [numogram, entropy, hardware]
+tags: ["entropy", "hardware", "numogram"]
 ---
+
 
 # Hardware Entropy Sources
 

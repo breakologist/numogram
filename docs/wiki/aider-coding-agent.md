@@ -3,9 +3,10 @@ title: "Aider — AI Coding Agent & Possible Integration"
 created: 2026-04-21
 last_updated: 2026-04-21
 status: draft
-tags: [coding, agent, aider, roguelike, local-model, tool]
+tags: ["agent", "code", "local-model", "roguelike", "tool"]
 sources: [aider.chat, web research April 2026]
 ---
+
 
 # Aider — AI Coding Agent & Possible Integration
 

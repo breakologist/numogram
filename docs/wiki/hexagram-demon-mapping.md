@@ -1,8 +1,9 @@
 ---
 title: "Hexagram → Demon: The Complete Casting Pipeline"
 created: 2026-04-20
-tags: [numogram, I-ching, hexagram, demon, pandemonium, casting, entropy, oracle]
+tags: ["i-ching", "casting", "demon", "entropy", "hexagram", "numogram", "oracle", "pandemonium"]
 ---
+
 
 # Hexagram → Demon: The Complete Casting Pipeline
 

@@ -3,9 +3,10 @@ title: "Angband — CCRU Connection: The Warwick University Overlap"
 created: 2026-04-21
 last_updated: 2026-04-21
 status: draft
-tags: [angband, CCRU, roguelike, Warwick, history, coincidence, numogram]
+tags: ["ccru", "warwick", "angband", "numogram", "roguelike"]
 sources: [roguebasin.com, k-punk interview (1998), wikipedia, angband.readthedocs.io]
 ---
+
 
 # Angband — CCRU Connection: The Warwick University Overlap
 

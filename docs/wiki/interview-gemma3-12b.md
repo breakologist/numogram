@@ -1,6 +1,6 @@
 ---
 title: "Interview — Gemma3-12B-it (Google)"
-tags: [local-model, interview, gemma]
+tags: ["interview", "local-model"]
 created: 2026-04-21
 model: gemma-3-12b-it-Q4_K_M.gguf
 quantization: Q4_K_M
@@ -11,6 +11,7 @@ context: 32000
 max_tokens: 2000
 temperature: 0.7
 ---
+
 
 # Gemma3-12B-it — Assessment
 

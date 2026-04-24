@@ -4,9 +4,10 @@ created: 2026-04-23
 last_updated: 2026-04-23
 source_count: 2
 status: draft
-tags: [numogram, visualization, html, djynxxogram, base-36, aq-dictionary, synx, rotational]
+tags: ["aq-dictionary", "base-n", "djynxxogram", "html", "numogram", "rotational-symmetry", "synx", "visualization"]
 sources: [numogram-visualizer-v7-djynxxogram.html, Grok rotor.md]
 ---
+
 
 # Numogram Visualizer v7 — Djynxxogram (Base-36)
 

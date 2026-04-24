@@ -4,9 +4,10 @@ created: 2026-04-21
 last_updated: 2026-04-21
 source_count: 3
 status: draft
-tags: [numogram, t'ai-hsuan-ching, tetragram, em, zone-5, polarity, ternary, mediator]
+tags: ["em", "numogram", "polarity", "tai-hsuan-ching", "ternary", "tetragram", "zone-5"]
 sources: [tai-hsuan-ching.md, tai-hsuan-ching-demons.md, polarities.md, katak-oddubb-triangle-rotation.md]
 ---
+
 
 # The Em State — The Third Line, the Hinge, the Missing Mediator
 

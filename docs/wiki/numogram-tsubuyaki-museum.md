@@ -4,8 +4,9 @@ created: 2026-04-14
 last_updated: 2026-04-23
 source_count: 4
 status: reviewed
-tags: [numogram, creative, generative-art, tsubuyaki, p5js, signal-topology]
+tags: ["creative", "generative-art", "numogram", "p5js", "signal-topology", "tsubuyaki"]
 ---
+
 
 # The Decimal Labyrinth — つぶやき NUMOGRAM
 

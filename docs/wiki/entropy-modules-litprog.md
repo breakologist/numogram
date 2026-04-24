@@ -4,7 +4,7 @@ created: 2026-04-22
 last_updated: 2026-04-22
 source_count: 5
 status: draft
-tags: [numogram, entropy, litprog, tetralogue, convergence, digestion, hardware, oracle]
+tags: ["digestion", "entropy", "hardware", "litprog", "numogram", "oracle", "tetralogue"]
 voices: [oracle, builder, writer, gamer]
 sources:
   - numogame/numogram_entropy_convergence.py
@@ -13,6 +13,7 @@ sources:
   - numogram-entropy/src/numogram_entropy/source.py
   - .hermes/skills/numogram-oracle/oracle.py
 ---
+
 
 # Entropy Modules — A Tetralogue Litprog
 

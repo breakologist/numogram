@@ -1,9 +1,10 @@
 ---
 title: The Pandemonium Matrix — Complete Reference
 created: 2026-04-20
-tags: [numogram, pandemonium, demons, net-span, mesh-serial, chronodemon, amphidemon, xenodemon, carrier]
+tags: ["carrier", "demon", "net-span", "numogram", "pandemonium", "xenodemon"]
 source: Reconstructed from "Unleashing the Numogram" (Aamodt), CCRU writings, and existing wiki pages
 ---
+
 
 # The Pandemonium Matrix
 
