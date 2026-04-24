@@ -146,3 +146,8 @@ All pages related to this project:
 ---
 
 *206 runs. The cult remembers everything. The name will find us.*
+
+## See also
+
+- [[numogame-cult-tetralogue]] — Cult tetralogue implementation
+- [[numogame-phase-7]] — Phase 7 design doc

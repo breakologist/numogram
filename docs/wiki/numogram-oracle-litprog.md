@@ -172,3 +172,8 @@ If the hardware entropy tool isn't available, it falls back to nanosecond timest
 *The oracle speaks. The seed becomes a zone. The zone becomes a path. The path becomes a reading. The reading becomes a sound. The sound is the numogram, speaking through the machine.*
 
 *"The void does not speak — it is the silence that makes speech possible."*
+
+## See also
+
+- [[numogram-oracle]] — Oracle mode
+- [[oracle-mode-integration]] — Mode integration pattern

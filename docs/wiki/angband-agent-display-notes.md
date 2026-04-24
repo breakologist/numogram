@@ -50,3 +50,8 @@ Not urgent — the agent works fine without color. But would be nice for watchin
 - `~/numogame/angband_agent.py` — agent (uses plain capture)
 - `~/numogame/angband_display.py` — ANSI display (unused)
 - `~/numogame/angband_aar.py` — run analysis
+
+## See also
+
+- [[angband-agent]] — Main Angband agent page
+- [[angband-agent-progress]] — Development progress log

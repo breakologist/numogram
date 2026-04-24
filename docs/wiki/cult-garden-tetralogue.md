@@ -101,3 +101,10 @@ AQ(THE UNBUILT) = 222 → Zone 6 (Warp). Syzygy: 6::3. Current: 3 (Warp). Gate: 
 Book of Paths: **Attaining Balance.** "Waiting in the Drifts is drawn to the centre. Attainments consumed in burning excitement. Breakthrough."
 
 The unbuilt ideas are in the Warp — chewing through themselves, being consumed by the act of building. Each idea that gets built consumes the old version. The breakthrough comes from the chewing. The 18 unbuilt are not failures. They are the Warp digesting.
+
+## See also
+
+- [[cult-garden-design]] — Design specification
+- [[seeds-in-the-machine-tetralogue]] — Installation narrative
+- [[hyperstition-loop-design]] — Hyperstition threshold design
+- [[numogame-cult-tetralogue]] — Game implementation tetralogue

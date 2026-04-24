@@ -164,3 +164,8 @@ Both models in conversation, minimal prompting. Let them riff. The reasoning_con
 - The local model WOULD know our work when running as hermes-agent main model (SOUL.md, MEMORY.md, wiki injected)
 - mimo-v2-pro trial ends April 22, 2026 — transitions to paid Nous Portal rates after
 - The reasoning_content field is unique to distilled reasoning models — can be captured as creative material
+
+## See also
+
+- [[local-model-testing]] — Model testing framework
+- [[numogram-council]] — Model council system

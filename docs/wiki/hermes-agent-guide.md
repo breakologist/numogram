@@ -167,3 +167,10 @@ Five-step closed loop: **Curate Memory → Create Skill → Skill Self-Improveme
 - Periodic memory audit/prune cycle
 - Skill versioning (track evolution history)
 - Explicit "forgetting" for outdated patterns
+
+## See also
+
+- [[angband-agent]] — Autonomous Angband-playing agent integration
+- [[roguelike-screen-zones]] — Screen zone parsing for terminal roguelikes
+- [[headless-curses-play]] — Headless curses game automation approaches
+- [[local-model-survey]] — Local LLM options for agent reasoning

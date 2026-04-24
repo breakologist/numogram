@@ -100,3 +100,8 @@ The v2 is the most focused — just AQ and triangular numbers. The enhanced vers
 *Three calculators. One cipher. The math survived the machine. The machine didn't survive the math.*
 
 *"Counting is ineluctable and unsurpassable." — Barker*
+
+## See also
+
+- [[aq-cipher-reference]] — AQ cipher values
+- [[numogram-calculator]] — Calculator skill

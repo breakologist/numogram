@@ -90,3 +90,8 @@ Tic-counting has no sound. It has a texture. It's the feeling of mercury in your
 |---------|-------------|-----------|--------------|--------------|
 | Spiral Engine | The two currents (Warp outward, Plex inward) as opposite rotational operations on the same number field; cumulation as phase-layering; plexing as lossy compression; tic-counting as decomposition into branching partitions | The game loop as generate → explore → compress → decompose → generate; irreversible cycles; death as plexing; the dungeon as nesting-doll onion-skins; the Barker spiral as literal geometric trace | The three operations run simultaneously, not sequentially; the sequential model is itself a plexing (lossy projection) of the actual process; the dungeon is never in a stable state | The acoustic textures of each operation: cumulation as peeling, plexing as coiling telephone cord, tic-counting as mercury buzzing |
 | Comparative Geometries | Tree of Life as side-view projection; Yggdrasil as axis mundi (vertical spiral axis); flower of life as 2D shadow; torus as 3D spiral (Warp and Plex as orthogonal geodesics); telic field theory as intentionality of the spiral | Side-scrolling roguelike for Tree; nine zones as nine worlds; dungeon mapped to flower of life (no center, every room is a center); torus as dual-spiral roguelike topology; win condition as completed cycle | (See above — structural finding spans both sections) | (See above — sensory finding spans both sections) |
+
+## See also
+
+- [[extending-numogram-tetralogue]] — Extending tetralogue
+- [[two-plus-two-decomposition]] — Two-plus-two theory

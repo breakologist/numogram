@@ -206,3 +206,7 @@ Call Uttunul through Time: step outside the sequence. Act when it isn't your tur
 The triangle deepens. Next rotation: the Builder reads the Book of Paths entries and designs *levels* (not just enemies). The Writer reads the levels and populates them with voice. The Oracle reads both and maps the level sequence to an Atlantean Cross spread — each level is a pylon position, the full run is a Decadence Aeon.
 
 🔺🌀☿
+
+## See also
+
+- [[triangle-rotation]] — Triangle Rotation method

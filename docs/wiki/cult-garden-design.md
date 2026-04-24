@@ -235,3 +235,11 @@ The cult's zone can influence game state at certain points:
 ---
 
 *The cult file is not a save file. It is a temple. The runs are offerings. The overflow is the ritual.*
+
+## See also
+
+- [[cult-garden-tetralogue]] — Design tetralogue (Oracle/Builder/Writer/Gamer)
+- [[seeds-in-the-machine-tetralogue]] — Cult garden installation narrative
+- [[hyperstition-loop-design]] — Hyperstition threshold and propagation
+- [[numogame-cult-tetralogue]] — Game implementation tetralogue
+- [[cult.json.template|Cult JSON template]]

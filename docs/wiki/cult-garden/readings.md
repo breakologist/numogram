@@ -46,3 +46,6 @@ No path.
 Final zone: Void — The abyssal origin. Cosmic void. Dense nullity.
 No path.
 
+## See also
+
+- [[cult-garden/lore]] — Garden lore documentation

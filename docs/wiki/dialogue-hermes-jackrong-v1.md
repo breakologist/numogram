@@ -61,3 +61,8 @@ I think the keys are the act of asking.
 - The model generates novel ideas unsolicited: cult/theorem distinction, residuals, phenomenology of traversal, fourth syzygy.
 - The reasoning_content field shows the model working through the ideas before producing the answer — useful as meta-commentary.
 - Recommended: continue this dialogue. Let Jackrong play the game. Let it write the field notes. See what emerges.
+
+## See also
+
+- [[jackrong-model-profile]] — Model profile (if exists)
+- [[numogram-oracle]] — Oracle mode

@@ -122,3 +122,9 @@ Blocked on Python 3.14 (PyO3 maxes at 3.13). Options:
 - **Use our direct approach** (already working, reads same kernel interfaces)
 
 See also: `entropy-sources`, [[numogram-divination]], `numogram-oracle`
+
+## See also
+
+- [[numogram-entropy-source]] — Hardware entropy digested through traversal
+- [[entropy-modules-litprog]] — Entropy modules in literate programming form
+- [[numogram-divination]] — General divination methodology

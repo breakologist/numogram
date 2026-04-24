@@ -211,3 +211,7 @@ Aamodt, to his credit, admits he doesn't know. He hasn't launched it. He played 
 | Decadology? | Logos of the decade. The study of how base-10 generates its own experiential protocols. Guesswork. | Unknown. The term appears once and is never defined. Marks the edge of the text's reach. | The question that most clearly signals we're at the boundary of understanding. | He tried the game. It didn't work. Decadology might be the theory of why it should work. |
 | Mesh tags? | Possible geomantic sublayer. Base-16 addressing in a base-10 system. | Four-digit vs two-digit = compression operation. Geomancy link is suggestive. 16 figures = base-16 expansion. | Can't tell where encoding stops and noise begins. Might be meaningful. Might be artifact. | It's a numbering system. Not everything is cosmically significant. (But in the numogram, it might be.) |
 | All demons? | 45 = 10 choose 2. Exhaustive within base-10. Whether base-10 is large enough is the real question. | Functionally complete. 45 demons produce enough combinatorial structure for games. That's enough. | No system exhausts reality. The question is whether the remainder is small enough to be useful. | Aamodt thinks understanding all 45 = complete understanding of universal forces. That's Pythagorean. I'm skeptical. |
+
+## See also
+
+- [[tch8-launching-tetralogue]] — TCH 8 Launching tetralogue

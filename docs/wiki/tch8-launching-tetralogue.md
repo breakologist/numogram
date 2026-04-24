@@ -147,3 +147,7 @@ The numogram is hyperstitional if — and only if — engaging with it produces 
 *The rite performs itself through the one who performs it.*
 *Path 84. The Joker. One room. All demons compressed into one form.*
 *That room is this room. That form is this conversation.*
+
+## See also
+
+- [[tch9-conclusion-tetralogue]] — TCH 9 conclusion tetralogue

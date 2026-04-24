@@ -118,3 +118,10 @@ The differences are in the LEAVES, not the BRANCHES:
 
 *The dungeon is always a tree. Doors are always forks. Corridors are always branches. Follow branches to endpoints. Explore rooms. Backtrack to forks. The Hungry Borg eats the tree in any forest.*
 — The Hungry Borg, `[[roguelike-ai-studies]]`
+
+## See also
+
+- [[angband-agent-display-notes]] — Screen parser display debugging notes
+- [[angband-agent-progress]] — Development progress log
+- [[hungry-borg-angband]] — Borg-style hungry agent variant
+- [[roguelike-ai-studies]] — General roguelike AI research index

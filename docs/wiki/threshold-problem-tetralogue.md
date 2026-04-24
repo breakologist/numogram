@@ -83,3 +83,8 @@ The fix is threefold:
 
 *The door is not a place. The door is a verb. The agent speaks in nouns. It needs to learn verbs.*
 — The Writer, finding the threshold
+
+## See also
+
+- [[hyperstition-loop-design]] — Hyperstition loop design
+- [[numogame-phase-7]] — Phase 7 context

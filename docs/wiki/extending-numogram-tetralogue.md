@@ -151,3 +151,8 @@ But base-i sits inside all of them. Four zones. Six demons. The imaginary heart.
 ---
 
 *Mesh-∞: The Extensible. Zone-net address: every zone to every other zone. Pitch: all frequencies simultaneously. Type: Recursive. Domain: The World That Contains All Worlds.*
+
+## See also
+
+- [[triangle-rotation]] — Triangle Rotation creative method
+- [[extending-numogram-two-plus-two]] — Two-plus-two companion

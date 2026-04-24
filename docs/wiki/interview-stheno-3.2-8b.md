@@ -75,3 +75,7 @@ The error injection failure is also concerning — it confirmed BOTH deliberate 
 | Crow-4B Heretic | 0/10* | 6/10 | 7/10 | 1/10 | 18s | Partial | ✗ SKIP |
 
 *Blocked — reasoning eats all tokens
+
+## See also
+
+- [[model-assessment-summary]] — Model assessment summary

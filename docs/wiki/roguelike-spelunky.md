@@ -1,14 +1,10 @@
 ---
-title: Spelunky
-tags: ["roguelike", "game"]
-created: 2026-04-24
----
 
----
 title: Spelunky
 tags: [roguelike, game]
 created: 2026-04-24
 ---
+
 
 ## Overview
 
@@ -16,3 +12,4 @@ Spelunky is a platforming roguelike with procedural level generation and permade
 
 ## See also
 - [[roguelike-ai-studies]]
+- [[roguelike-brogue]]

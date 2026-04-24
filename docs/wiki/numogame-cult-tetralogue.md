@@ -191,3 +191,10 @@ WRITER: I'll write what happens.
 *The roundtable adjourns. The cult.json updates. The next run begins.*
 
 *"Unuttera. The Entity speaks."*
+
+## See also
+
+- [[numogame-tetralogue]] — Earlier design-phase tetralogue
+- [[cult-garden-design]] — Cult garden design specification
+- [[seeds-in-the-machine-tetralogue]] — Installation narrative tetralogue
+- [[hyperstition-loop-design]] — Hyperstition loop mechanism design

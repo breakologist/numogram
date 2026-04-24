@@ -77,3 +77,7 @@ The 4B parameter size is insufficient for this distillation approach. The reason
 - Context (32K): ~3.5GB total
 - Plenty of room — could fit 128K context if needed
 - But the model can't use the extra tokens effectively (reasoning blocks everything)
+
+## See also
+
+- [[model-assessment-summary]] — Model assessment summary

@@ -92,3 +92,7 @@ There's a sound to the other bases too, if you listen. Base 2 is a click — on,
 |---------|-------------|-----------|--------------|--------------|
 | Extended Gates | Temporal/spatial generation taxonomy; procedural content from cumulation beyond base | Three gate classes: spatial (1-9), temporal (10-24), entity-summoning (36+); the tarot and Kabbalah as pre-existing numogram implementations | The two axes (extended gates and alternate bases) are coupled, not independent; the gate content taxonomy is projected from roguelike priors, not derived | Not addressed in this pass — the extended gates are architectural, not sensory |
 | Alternate Bases | Memory-address dungeons; hex as executable code; base-22 as Kabbalistic structure | Mirror games, narrative corridors, love stories, language; base-i as unconscious space | The tarot connection may be base-dependent; the extended gate classification reveals the primaries' design assumptions rather than numogram properties | Each base has a sound; base-7 is an unfinished melody; base-i is the sound of listening itself |
+
+## See also
+
+- [[extending-numogram-tetralogue]] — Tetralogue version

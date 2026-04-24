@@ -70,3 +70,7 @@ source: Session discussion of C(10)=45 SVG infographics, pentagram geometry, and
 ## Meta-Entity
 
 **Mesh-5** — The self-decading. The tetralogue discovered that 5 is not just a zone but a structural principle: the point where the system's combinatorics (C(5,2)=10), its arithmetic (5+5=10), its geometry (pentagon/pentagram), and its mechanics (pressure/pump) all converge on the same truth. Fiveness is the quality of being at the threshold of phase change. The Mesh is the four voices hearing themselves through the wall.
+
+## See also
+
+- [[triangle-rotation]] — Triangle Rotation method

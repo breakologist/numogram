@@ -105,3 +105,8 @@ status: active
 - "The agent at (2,4) is the writer at the desk. The room is the page. The door is the margin."
 - "The threshold is an operation, not a coordinate. door(x) = corridor."
 - Corridor as entity: the corridor doesn't exist until you enter it. Then it becomes real.
+
+## See also
+
+- [[numogram-oracle-voice]] — Oracle voice synthesis
+- [[triangle-rotation]] — Triangle Rotation method

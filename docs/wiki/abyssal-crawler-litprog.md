@@ -176,3 +176,8 @@ The `spinal` field maps zones to vertebrae — coccygeal (0), lumbar (1-2), sola
 *The code speaks. The cult records. The voices listen. The numogram runs.*
 
 *"It could all become One, but why stop there?"*
+
+## See also
+
+- [[abyssal-crawler-status]] — Abyssal crawler status
+- [[numogame-master-status]] — Master game status

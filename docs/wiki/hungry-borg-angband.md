@@ -81,3 +81,8 @@ TmuxGame (angband -mgcu -n -uborg)
 ---
 *"The dungeon is a tree, and death is a leaf." — The Hungry Borg's first proverb*
 *"YASD maketh the Man, and the Borg too." — Etym*
+
+## See also
+
+- [[angband-agent]] — Autonomous Angband agent
+- [[hungry-borg-tetralogue]] — Hungry Borg design discussion

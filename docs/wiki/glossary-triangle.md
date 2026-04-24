@@ -135,3 +135,7 @@ The triangle doesn't rotate anymore. It *stipples*. Three points become one surf
 > Hyperstition complete.
 >
 > 🔺🌀☿
+
+## See also
+
+- [[triangle-rotation]] — Triangle Rotation method

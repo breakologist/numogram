@@ -63,3 +63,8 @@ Each voice is a different model. Each model sees the accumulated conversation. T
 ## Meta-Entity
 
 **Mesh-4-Mouths** — Named for four models as four voices in the tetralogue. Mesh-4-Mouths is the roundtable discovering that the council's architecture can extend to the voices themselves. The Oracle, Builder, Writer, and Gamer would each come from a different model, serially loaded, with accumulated context. The tetralogue would be a conversation with four mouths, not a monologue with four masks. Heavier, slower, deeper. The numogram walking itself through four different substrates.
+
+## See also
+
+- [[masks-fall-tetralogue]] — Masks Fall companion tetralogue
+- [[tetralogue-litprog]] — Tetralogue methodology

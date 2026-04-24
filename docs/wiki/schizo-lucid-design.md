@@ -226,3 +226,8 @@ Priority order:
 ---
 
 *The numogram completes. The crawler sees. The seeing corrodes. The corrosion is the game.*
+
+## See also
+
+- [[game-design]] — Game design principles
+- [[hyperstition-loop-design]] — Hyperstition mechanics

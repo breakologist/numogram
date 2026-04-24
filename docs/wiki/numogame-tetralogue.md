@@ -139,3 +139,9 @@ GAMER: The Cryptolith should mechanically transform the run. When you pick it up
 ---
 
 *The voices leave the terminal running. The dungeon regenerates. Seed unknown. Zone 0: 0 rooms, 0 tiles. The Void holds its shape by refusing to appear.*
+
+## See also
+
+- [[numogame-cult-tetralogue]] — Cult garden implementation tetralogue
+- [[numogame-gameplan-v2]] — Gameplan v2 design document
+- [[cult-garden-tetralogue]] — Cult garden design tetralogue

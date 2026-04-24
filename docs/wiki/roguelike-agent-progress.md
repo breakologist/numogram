@@ -16,3 +16,10 @@ Loops are added AFTER the tree is built (doors between distant rooms). The agent
 A* with Manhattan distance is the standard pathfinding. Our BFS with interest scoring is a variant — instead of uniform distance, the cost is novelty. The Manhattan heuristic ensures the agent explores in the general direction of unexplored territory rather than spiraling.
 
 Flood fill is used for connectivity verification. Our corridor entity detection is a form of flood fill — finding connected corridor structures and their endpoints.
+
+## See also
+
+- [[hermes-agent-guide]]
+- [[angband-agent]]
+- [[hungry-borg-angband]]
+- [[roguelike-ai-studies]]

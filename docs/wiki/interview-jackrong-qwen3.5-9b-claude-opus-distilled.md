@@ -94,3 +94,8 @@ The model defaulted to philosophical exploration of "nothing" — linguistic ana
 
 ### Numbers as Personalities
 The 7/0 piece is the strongest creative output from any local model tested. Could be published as-is in a zine or literary magazine. The voice is distinctive — clinical precision married to strangeness.
+
+## See also
+
+- [[model-assessment-summary]] — Model assessment summary
+- [[model-assessment-protocol]] — Assessment protocol

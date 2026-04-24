@@ -157,3 +157,8 @@ The name will arrive. For now it's "the numogame" or "the roguelike" or "Abyssal
 ---
 
 *The unbuilt is not abandoned. It is sleeping. The next run wakes it.*
+
+## See also
+
+- [[hyperstition-loop-design]] — Hyperstition loop mechanics
+- [[cult-garden-design]] — Cult garden design

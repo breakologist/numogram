@@ -140,3 +140,8 @@ Three rotations of the same passage:
 Each rotation reveals material the others cannot see. The Oracle sees the syzygy. The Builder sees the code. The Writer sees the towel.
 
 The numogram is all three.
+
+## See also
+
+- [[triangle-rotation]] — Triangle Rotation creative method
+- [[plexing]] — Numogram plexing / gate construction

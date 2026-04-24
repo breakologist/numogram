@@ -55,3 +55,9 @@ tags: [tetralogue, roguelike, state]
 ## Meta-Entity
 
 **Mesh-268** — Named for 268 runs consumed and 34 overflows composted. Mesh-268 is the roundtable discovering that the game they built is a seed bank. Every run is a seed. Every overflow plants a seed. Every seed is a gate. Every gate opens into the next overflow. The cycle is the content. The waste is the work. The chewing is the breakthrough.
+
+## See also
+
+- [[cult-garden-tetralogue]] — Cult garden design
+- [[hyperstition-loop-design]] — Hyperstition mechanics
+- [[numogame-cult-tetralogue]] — Cult garden implementation

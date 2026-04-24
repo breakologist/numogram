@@ -183,3 +183,8 @@ That's what the mercury does. It doesn't dissolve the number into chaos. It diss
 - **Writer**: Mercury is not a metaphor. The slippage is a felt experience. The house of cards is precarious. 1,035 demons live in your fingertips. The seething is not noise — it is every harmonic mode active at once, the number at maximum resonance, standing waves of combinatorial possibility.
 
 The seething never stops. The tics are always there, always ready to rearrange. The number is never just itself. It is always also every other way it could be.
+
+## See also
+
+- [[triangle-rotation]] — Triangle Rotation method
+- [[sil-principle]] — Sil principle in gameplay

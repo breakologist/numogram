@@ -136,3 +136,8 @@ Floor 1 (The Void) should have no demon spawns. The `no_demons` flag in FLOOR_CO
 6. LOS bonus — floor-specific vision radius
 7. No-demon flag — Floor 1 has no spawns
 8. Cryptolith placement — Floor 5 (The Ruin)
+
+## See also
+
+- [[tree-dungeon-generation]] — Tree dungeon generation
+- [[roguelike-brogue]] — Brogue design principles

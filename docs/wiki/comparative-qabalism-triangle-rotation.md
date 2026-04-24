@@ -233,3 +233,8 @@ The numogram is always almost-complete. Always about to be launched. Always one 
 - **Writer**: The Kabbala makes no sense (not the same as nonsense). The butterfly is pinned and stretched until the guts explode. The Black Sun is the Void wearing a crown. Aamodt hasn't launched the numogram yet. The text is always almost-complete. The butterfly is still pinned.
 
 Unpin it. Let it spiral. The true numbers are waiting underneath.
+
+## See also
+
+- [[triangle-rotation]] — Triangle Rotation creative method
+- [[qabbala-arithmetic]] — AQ arithmetic cross-system

@@ -206,3 +206,7 @@ This is the numogram's final statement. The number line is a convention. The ord
 The line has rotted through. There's no line. That's the message. And yet.
 
 The folds are still distinguishable. The void still counts itself.
+
+## See also
+
+- [[triangle-rotation]] — Triangle Rotation creative method

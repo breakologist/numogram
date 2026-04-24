@@ -69,3 +69,8 @@ Generation options:
 ~/.config/hypr/hyprland.conf (lines 49, 199-202)
 ~/Pictures/Wall/ (9 wallpapers)
 ```
+
+## See also
+
+- [[hyprland-desktop-setup]] — Hyprland setup
+- [[conky-desktop-quotes]] — Conky quotes

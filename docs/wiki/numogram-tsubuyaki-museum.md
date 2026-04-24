@@ -788,3 +788,8 @@ The fourth pass is the most compressed overall (1,746 chars), yet contains the w
 | v4 | `~/numogram-tsubuyaki-v4.html` | Signal — waveforms, interference, feedback |
 
 ---
+
+## See also
+
+- [[tsubuyaki-oo-gallery]] — OO tsubuyaki gallery
+- [[zone-mapping]] — Zone mapping system

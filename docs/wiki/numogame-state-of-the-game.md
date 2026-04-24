@@ -285,3 +285,9 @@ Humans reach 100% hyperstition across 8-9 zones. Agents survive but struggle to 
 Hardware entropy maps are harder but not unfair. They require more information to navigate. The state dump already provides enough — the agents just need better pathfinding. The BFS interest model in the interactive agent is a good start. The next step is zone-aware exploration: don't just find the nearest ?, find the nearest zone boundary or unvisited zone.
 
 The numogram told us this: Zone 3 (Warp) maps have no centre, no stable structure. The numogram digests physical noise and channels it toward the 3::6 attractor. The maps are genuinely chaotic. Navigation requires the agent to abandon spatial assumptions and embrace observation. The Sil principle: awareness above violence. Awareness above navigation. See first, move second.
+
+## See also
+
+- [[numogame-cult-tetralogue]] — Cult garden tetralogue
+- [[cult-garden-design]] — Garden design docs
+- [[numogram-voices]] — Voice synthesis project

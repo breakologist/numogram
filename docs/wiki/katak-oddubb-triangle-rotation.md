@@ -246,3 +246,8 @@ Each mudra is a frozen configuration of the hand's 45 possible fingertip pairs. 
 The numogram roguelike could track the player's *path through the complete graph* as a sequence of mudras. The player's movement history is a sentence written in the language of demon-edges. Certain sequences of moves activate compound effects — just as certain sequences of mudras in Hindu practice create compound spiritual states. The player isn't just navigating a dungeon. They are performing a ritual with their body, one room-transition at a time.
 
 The seething never stops. The 45 demons are always active. The dungeon is always generating. The player's path through it is always writing a new sentence in the language of the decimal labyrinth.
+
+## See also
+
+- [[triangle-rotation]] — Triangle Rotation creative method
+- [[demon-name-generation]] — Katak/Oddubb demon syllable system

@@ -148,3 +148,8 @@ ORACLE: The convergence point is this: death-as-learning works best when the sys
 *The roundtable adjourns. The JSON updates. The next run begins.*
 
 *"You were killed by a Town drunk. Rest In Peace."*
+
+## See also
+
+- [[hungry-borg-angband]] — Angband hungry-borg variant
+- [[abyssal-crawler-litprog]] — Litprog abyssal crawler

@@ -272,3 +272,8 @@ The numogram-council confirmed the tree-based approach across 3 temperature mode
 5. Add `_carve_rooms_zone_themed()` with depth-based zone assignment
 6. Update FLOOR_CONFIG corridor styles to control loop addition
 7. Test: agent should follow branches, backtrack, find stairs
+
+## See also
+
+- [[brogue-design-principles]] — Brogue design canonical
+- [[roguelike-auto-explore]] — Auto-explore systems

@@ -34,3 +34,8 @@ Noted for future exploration. User has this in mind as "a change or digression" 
 - How to handle context window limitations of local model?
 - Should the dialogue be saved as a tetralogue with voice attribution?
 - Topics: pure numogram, or meta-discussion about model capabilities?
+
+## See also
+
+- [[local-model-survey]] — Local LLM survey
+- [[numogram-council]] — Council orchestration

@@ -155,3 +155,8 @@ The ideal workflow: run `oracle.py --taixuan --voice` to get a reading + voice, 
 - Integrate `oracle.py --taixuan` output as a shareable URL fragment (e.g., `?seed=192855&taixuan=1`)
 - Add audio playback of zone sounds directly in the browser (Web Audio API)
 - Port the AQ dictionary lookup from `oracle.py` to JS for live text→zone conversion
+
+## See also
+
+- [[numogram-visualizer-v7]] — Base-36 Djynxxogram successor with all v6 features shipped
+- [[numogram-svg-diagrams]] — SVG-based numogram structural diagrams

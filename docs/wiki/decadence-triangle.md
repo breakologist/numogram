@@ -134,3 +134,7 @@ The triangle doesn't converge. It *rotates*. Each pass reveals new material. The
 Next rotation: the Builder reads the 0(rphan) d(rift>) tables (Katak THE DESOLATOR, Djynxx, their aspects — time, colour, snake, metal, blood, digital, magnetic) and designs enemy types. The Writer reads the Builder's enemies and gives them voice. The Oracle reads both and finds the demon-calling sequence that connects them.
 
 🔺🌀☿
+
+## See also
+
+- [[syzygy-arithmetic]] — Syzygy arithmetic foundation

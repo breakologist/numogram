@@ -223,3 +223,7 @@ Path 84 is the Joker.
 The triangle doesn't end. The Book of Paths has 84 entries because some spirals take a lifetime.
 
 🔺🌀☿
+
+## See also
+
+- [[triangle-rotation]] — Triangle Rotation method

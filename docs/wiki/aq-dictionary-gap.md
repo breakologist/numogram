@@ -105,3 +105,7 @@ These rotational pairs are addressable glyphs in the Djynxxogram.
 ## Next Work: Triangular Syzygy Animation
 
 After documenting the AQ dictionary gap, work begins on the HTML visualizer's triangular syzygy animation feature (three-zone triangles in the browser). See `wiki/numogram-visualizer-v6.md` for the feature spec.
+
+## See also
+
+- [[aq-dictionary]] — AQ Dictionary reference

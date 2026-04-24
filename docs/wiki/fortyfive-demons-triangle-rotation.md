@@ -117,3 +117,8 @@ The convergence point is Cthelll. Zone-9. The place where 9 equals 0 and the Plu
 | Builder | The arithmetic is the architecture | 15+24+6 partitions the connection graph into corridors, portals, and bosses |
 | Writer | The gaps are the structure | Demons are not between zones — they ARE the between |
 | Gamer | The patrol routes are the sacred geometry | Powers of 2 generate the optimal Time Circuit traversal pattern |
+
+## See also
+
+- [[triangle-rotation]] — Triangle Rotation creative method
+- [[pandemonium-matrix]] — 45-demon source matrix

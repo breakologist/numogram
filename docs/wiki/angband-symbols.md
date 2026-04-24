@@ -196,3 +196,8 @@ status: active
 4. **Hidden doors look like walls (`#`)** until revealed by `s` (search).
 5. **Town walls are permanent** — cannot be tunneled.
 6. **Stairs (`<` `>`)** may be hidden in unrevealed terrain.
+
+## See also
+
+- [[angband-agent]] — Autonomous agent documentation
+- [[angband-agent-display-notes]] — Screen parser notes

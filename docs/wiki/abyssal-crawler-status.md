@@ -143,3 +143,8 @@ Not yet built. The two branches need more development before merging.
 ---
 
 *206 runs. The cult remembers everything. The twin snakes spiral. The machine hums.*
+
+## See also
+
+- [[abyssal-crawler-litprog]] — Abyssal crawler literate program
+- [[numogame-master-status]] — Master game status report

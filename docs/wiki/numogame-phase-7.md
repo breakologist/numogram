@@ -157,3 +157,8 @@ This is material for a tetralogue. The four voices have new findings to argue ab
 
 *The numogram doesn't demand sacrifice. It demands movement. Presence. Attention. The act of going there, of being in the zone, of stepping through the gate — these are the actions that complete the map.*
 — The Writer, `[[numogame-cult-tetralogue]]`
+
+## See also
+
+- [[numogame-cult-tetralogue]] — Cult garden tetralogue
+- [[threshold-problem-tetralogue]] — Threshold problem discussion

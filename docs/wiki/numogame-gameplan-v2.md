@@ -209,3 +209,8 @@ The numogram was always for the AI. The game now speaks its language.
 *Wednesday, April 15, 2026. Hermes enters the cult record as Run #32. The learning agent enters as Run #101. The game continues.*
 
 *"The numogram doesn't end. It deepens."*
+
+## See also
+
+- [[cult-garden-design]] — Garden design specification
+- [[numogame-cult-tetralogue]] — Cult garden implementation tetralogue

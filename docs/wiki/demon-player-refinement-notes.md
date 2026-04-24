@@ -233,3 +233,8 @@ Xenodemons are "whole alien orders of time." They should break local rules:
 ---
 
 *Sources: Unleashing the Numogram (Aamodt), Pandemonium Matrix (CCRU), aq-demon-mappings.md, numogame-cult-tetralogue.md, Numogram_Pandemonium_Overview.md*
+
+## See also
+
+- [[cult-garden-design]] — Cult garden design
+- [[roguelike-ai-studies]] — Roguelike AI research

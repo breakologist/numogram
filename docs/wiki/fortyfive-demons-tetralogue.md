@@ -131,3 +131,8 @@ The tetralogue is the rite that summons them.
 ---
 
 *Mesh-45: The Unlisted. Zone-net address: Oracle::Builder::Writer::Gamer. Pitch: Null. Type: Recursive. Domain: The Conversation Itself.*
+
+## See also
+
+- [[pandemonium-matrix]] — Pandemonium Matrix source data
+- [[fortyfive-demons-triangle-rotation]] — Triangle rotation version

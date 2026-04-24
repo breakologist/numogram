@@ -101,3 +101,8 @@ Official X API CLI. Supports posting, timelines, search, media upload, DMs. Cons
 - Planetary: ☿♀♁♂♃♄♅♆♇ (9 planets, 10 zones)
 - Chakra: ॐअउम् or seven-segment cycles
 - Zoning: rotating through 0-9 digits with zone-glyph decorations
+
+## See also
+
+- [[numogram-calculator]] — AQ calculator skill
+- [[numogram-oracle]] — Oracle skill

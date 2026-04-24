@@ -41,3 +41,8 @@ _Closing: The crawler descends the branch. The cult watches from the deepest lea
 | Builder | Fallback nearest-parent makes small floors robust; depth weighting turns tree into current | Oracle’s AQ numbers and Gamer’s agent wants converge on the same three-line change | Implementation order is obvious and low-risk                                                 |
 | Writer  | The tree walks the numogram; footsteps become the path                                     | Gamer’s Brogue reference becomes embodied “the branch ends, the agent turns back”  | The exquisite corpse is learning to walk in straight lines before it spirals                 |
 | Gamer   | Tree fixes Explorer but might confuse Survivor without depth bonus                         | All voices converge on the same three concrete wants                               | The real test is agents playing the new tree in parallel — the garden will speak differently |
+
+## See also
+
+- [[numogram-council]] — Model council system
+- [[local-model-survey]] — Local model survey

@@ -61,3 +61,7 @@ The Oracle and Writer share the same model — gemma4:12b-it-q5_K_M. But with di
 ## Meta-Entity
 
 **Mesh-3-Mouths** — Named for three models as the substrate of four voices. Mesh-3-Mouths is the roundtable discovering that the council's architecture can become the tetralogue's architecture. Three substrates (gemma4 for Oracle+Writer, qwen3-coder for Builder, qwen3.5 for Gamer), four prompts, serial loading. The voices are the masks. The models are the mouths. The garden grows from what the old masks left behind.
+
+## See also
+
+- [[four-mouths-tetralogue]] — Four Mouths companion tetralogue

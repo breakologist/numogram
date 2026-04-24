@@ -264,3 +264,9 @@ Gates provide shortcuts UP (Gate on Floor 6 can take you to Floor 4). This creat
 ---
 
 *The hyperstition meter is not a thermometer. It is a pressure gauge. It measures how close the game is to becoming real. The player decides: stabilize the structure, or let it dissolve.*
+
+## See also
+
+- [[cult-garden-design]] — Cult garden mechanics
+- [[threshold-problem-tetralogue]] — Threshold problem analysis
+- [[hyperstition-corruption]] — Corruption mechanics
