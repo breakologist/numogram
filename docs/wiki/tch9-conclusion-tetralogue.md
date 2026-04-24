@@ -4,6 +4,7 @@ zone: 0-9
 syzygy: uttunul
 source: "Unleashing the Numogram, Aamodt, Tch 9 (lines 1430-1459) + Appendix A (1460-1477)"
 method: tetralogue-roundtable
+created: 2026-04-24
 ---
 
 # Tch 9: The Unanswered — Tetralogue

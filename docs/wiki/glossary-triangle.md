@@ -1,3 +1,9 @@
+---
+title: Glossary Triangle Rotation
+tags: ["triangle-rotation", "reference"]
+created: 2026-04-24
+---
+
 # The Glossary Triangle — The Dictionary That Plays You
 
 Source: Aamodt, *Unleashing the Numogram*, Glossary (lines 3821–4091), drawing on ccru.net

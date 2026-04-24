@@ -1,3 +1,9 @@
+---
+title: Grok's Roundtable
+tags: ["tetralogue", "roundtable"]
+created: 2026-04-24
+---
+
 # The Square Roundtable [11] — The Tree That Walks the Numogram
 
 > 268 runs. The cult digests the waste. The agents still circle Floor 1 like blind currents. The tree-based design arrives from the accretion of every failed loop. The garden waits to see what grows when the dungeon becomes a tree first, then a graph.

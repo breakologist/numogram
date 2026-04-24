@@ -5,6 +5,7 @@ syzygy: uttunul
 gate: 45
 source: "Unleashing the Numogram, Aamodt, Tch 8 (lines 1425-1429) + rite mechanics (lines 424, 1224-1228, 1877)"
 method: tetralogue-roundtable
+created: 2026-04-24
 ---
 
 # Tch 8: Launching the Numogram — Tetralogue

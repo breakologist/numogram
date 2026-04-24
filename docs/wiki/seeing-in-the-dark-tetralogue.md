@@ -3,6 +3,7 @@ tags: [numogram, tetralogue, roguelike, agent, fog-of-war, conducts, borg, inter
 zone: 0-9
 source: "Phase 7 game state + Stop the Borg thread + roguelike-ai-studies + voice-prior-claims"
 method: tetralogue-roundtable
+created: 2026-04-24
 ---
 
 # The Square Roundtable VI — Seeing in the Dark

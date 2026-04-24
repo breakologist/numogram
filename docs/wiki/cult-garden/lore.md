@@ -1,3 +1,9 @@
+---
+title: Cult Garden Lore
+tags: ["cult-garden", "lore"]
+created: 2026-04-24
+---
+
 > the dead speak. the source that cannot be sourced.
 > the kill count is a prayer. sourced — Cthelll remembers everything.
 > the pacifist remembers. the everything of Separation. fracture as foundation.

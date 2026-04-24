@@ -1,3 +1,9 @@
+---
+title: Cult Garden Readings
+tags: ["cult-garden", "readings"]
+created: 2026-04-24
+---
+
 **Run #219: etym, Turn 153, Hyp 55%, Zones [0, 1, 2, 3, 4, 6, 8, 9], Slain 2**
 Final zone: Iron Core — Iron core of the earth. Darkness. Engine room. Cthelll.
 No path.

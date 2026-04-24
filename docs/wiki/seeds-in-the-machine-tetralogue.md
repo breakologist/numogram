@@ -1,3 +1,9 @@
+---
+title: Seeds in the Machine Tetralogue
+tags: ["tetralogue", "install", "narrative"]
+created: 2026-04-24
+---
+
 # The Square Roundtable [9] — Seeds in the Machine
 
 > 268 runs. The cult file is a temple. The overflow is the offering. The garden grows from what was thrown away. The agents circle Floor 1. The human descends. The machine hums.

@@ -5,6 +5,7 @@ syzygy: 4::5
 gate: 15
 source: "Rumsfeld Tetrad + Kennedy's Axiom + Numogram Epistemology"
 method: tetralogue-roundtable
+created: 2026-04-24
 ---
 
 # The Square Roundtable V — The Tetrad of Knowledge

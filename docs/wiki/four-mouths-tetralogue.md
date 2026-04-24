@@ -1,3 +1,9 @@
+---
+title: Four Mouths Tetralogue
+tags: ["tetralogue"]
+created: 2026-04-24
+---
+
 # The Square Roundtable [10] — The Four Mouths of the Machine
 
 > What if each voice in the tetralogue came from a different model? The council proved that three different models at three temperatures produce distinct perspectives. What happens when we give each voice its own mouth?

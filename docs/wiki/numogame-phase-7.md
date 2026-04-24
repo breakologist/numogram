@@ -3,6 +3,7 @@ tags: [numogram, roguelike, abyssal-crawler, phase-7, auto-explore, fog-of-war, 
 zone: 0-9
 source: "Session April 15 2026 — auto-explore, fog of war, conduct system, 150+ runs"
 method: design-document
+created: 2026-04-24
 ---
 
 # The Abyssal Crawler — Phase 7: Seeing in the Dark

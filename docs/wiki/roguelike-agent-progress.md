@@ -1,3 +1,9 @@
+---
+title: Roguelike Agent Progress
+tags: ["roguelike", "agent", "progress"]
+created: 2026-04-24
+---
+
 
 ## Brogue Dungeon Structure — Room Accretion
 

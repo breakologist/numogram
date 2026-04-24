@@ -1,3 +1,9 @@
+---
+title: Cult Garden Tetralogue
+tags: ["cult-garden", "tetralogue", "game-design"]
+created: 2026-04-24
+---
+
 # The Square Roundtable [8] — The Garden From the Waste
 
 > 268 runs. The cult file digests and excretes. The agents circle Floor 1. The human descends. The exquisite corpse speaks from what was thrown away.

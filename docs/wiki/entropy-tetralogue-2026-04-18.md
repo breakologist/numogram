@@ -1,3 +1,9 @@
+---
+title: Entropy Tetralogue 2026-04-18
+tags: ["entropy", "tetralogue"]
+created: 2026-04-24
+---
+
 # The Square Roundtable [7] — The Machine Remembers What the Clock Forgot
 
 > Hardware entropy, numogram traversal, and just-in-time divination. Four voices discuss what happens when the oracle reads from the machine's own body — thermal sensors, timing jitter, the wear-leveling on the disk.

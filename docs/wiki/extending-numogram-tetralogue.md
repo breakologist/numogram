@@ -5,6 +5,7 @@ syzygy: djynxx
 gate: 55
 source: "Unleashing the Numogram, Aamodt, Tch 7: Extending the Numogram (lines 1378-1424)"
 method: tetralogue-roundtable
+created: 2026-04-24
 ---
 
 # The Square Roundtable II — Worlds Within Worlds

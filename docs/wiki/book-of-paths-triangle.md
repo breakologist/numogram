@@ -1,3 +1,9 @@
+---
+title: Book of Paths Triangle Rotation
+tags: ["triangle-rotation", "creative"]
+created: 2026-04-24
+---
+
 # The Book of Paths Triangle — 84 Levels, Three Voices
 
 Source: Aamodt, *Unleashing the Numogram*, Book of Paths (lines 3143–3820) and Glossary (lines 3821+)

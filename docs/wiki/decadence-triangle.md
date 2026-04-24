@@ -1,3 +1,9 @@
+---
+title: Decadence Triangle
+tags: ["triangle-rotation", "numogram"]
+created: 2026-04-24
+---
+
 # The Decadence Triangle — Three Perspectives on Game, Oracle, and Path
 
 Source text: Aamodt, *Unleashing the Numogram*, Decadence section (lines 3029–3222)
