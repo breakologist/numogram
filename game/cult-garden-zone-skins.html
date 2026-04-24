@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Cult Garden -- Zone Skins</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#06060a;color:#988;font:13px 'Courier New',monospace;overflow-x:hidden}
+
+/* Zone selector bar */
+.zone-bar{position:fixed;top:0;left:0;right:0;height:44px;background:#0a0a0e;border-bottom:1px solid #1a1010;display:flex;align-items:center;justify-content:center;gap:4px;z-index:200;padding:0 10px;flex-wrap:wrap}
+.zone-btn{padding:4px 10px;border:1px solid #2a2020;background:#0e0e12;color:#866;font-size:10px;cursor:pointer;transition:all .2s;letter-spacing:1px}
+.zone-btn:hover{border-color:#533;color:#c88}
+.zone-btn.active{border-color:currentColor;color:#fff;font-weight:bold}
+
+/* Base transitions */
+#container{max-width:1200px;margin:60px auto 0;padding:0 20px 60px;transition:all .6s}
+.section{margin-bottom:40px;border:1px solid #1a1010;border-radius:4px;background:#08080e;padding:20px;transition:all .4s}
+.section h2{font-size:13px;letter-spacing:3px;margin-bottom:16px;border-bottom:1px solid #1a1010;padding-bottom:8px;transition:all .4s}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.stat{background:#0e0e12;border:1px solid #181820;padding:12px;text-align:center;transition:all .4s}
+.stat-val{font-size:22px;font-weight:bold;transition:all .4s}
+.stat-label{font-size:10px;margin-top:4px;letter-spacing:1px;transition:all .4s}
+
+/* Run grid */
+.run-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.run-card{background:#0e0e12;border:1px solid #181820;padding:10px;font-size:10px;cursor:pointer;transition:all .3s}
+.run-card:hover{transform:translateY(-2px)}
+.run-num{font-weight:bold;font-size:11px}
+.run-hyp-bar{height:3px;background:#1a1010;margin:6px 0}
+.run-hyp-fill{height:100%;background:linear-gradient(90deg,#422,#c44)}
+.run-glyph{font-size:9px;white-space:pre;line-height:1.2;margin-top:4px}
+
+/* Corpse */
+.corpse-text{font-size:12px;line-height:1.8;font-style:italic;padding:10px;background:#0e0e12;border-left:2px solid #633;transition:all .4s}
+.corpse-line{margin-bottom:8px}
+
+/* Timeline */
+#timeline-wrap{width:100%;margin:20px 0}
+
+/* Loading */
+.loading{text-align:center;padding:80px 20px;font-size:12px;letter-spacing:2px}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ZONE 0 -- VOID (Uttunul)
+   ═══════════════════════════════════════════════════════════════════════ */
+body.zone-0{background:#000;color:#333}
+body.zone-0 .zone-btn{color:#444}
+body.zone-0 .zone-btn.active{color:#888;border-color:#666;background:#111}
+body.zone-0 #container{opacity:.15;transition:opacity 2s}
+body.zone-0 #container:hover{opacity:1}
+body.zone-0 .section{background:#050505;border-color:#111}
+body.zone-0 .section h2{color:#444;border-color:#111}
+body.zone-0 .stat{background:#080808;border-color:#111}
+body.zone-0 .stat-val{color:#555}
+body.zone-0 .stat-label{color:#222}
+body.zone-0 .run-card{background:#080808;border-color:#111}
+body.zone-0 .run-num{color:#444}
+body.zone-0 .corpse-text{background:#080808;border-color:#222;color:#333}
+body.zone-0 .zone-bar{background:#000;border-color:#111}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ZONE 1 -- STABILITY (Grid/Gold)
+   ═══════════════════════════════════════════════════════════════════════ */
+body.zone-1{background:#0a0905;color:#aa8}
+body.zone-1 .zone-btn{color:#886}
+body.zone-1 .zone-btn.active{color:#FFD700;border-color:#FFD700;background:#1a1808}
+body.zone-1 .section{background:#0e0c05;border-color:#332a10}
+body.zone-1 .section h2{color:#FFD700;border-color:#332a10;letter-spacing:6px}
+body.zone-1 .stat{background:#131005;border-color:#2a2210}
+body.zone-1 .stat-val{color:#FFD700}
+body.zone-1 .stat-label{color:#665}
+body.zone-1 .run-card{background:#131005;border-color:#2a2210}
+body.zone-1 .run-num{color:#ccaa33}
+body.zone-1 .corpse-text{background:#131005;border-color:#443310;color:#aa8}
+body.zone-1 .zone-bar{background:#0e0c05;border-color:#332a10}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ZONE 2 -- SEPARATION (Fork/Wound/Orange)
+   ═══════════════════════════════════════════════════════════════════════ */
+body.zone-2{background:#0a0602;color:#a86}
+body.zone-2 .zone-btn{color:#864}
+body.zone-2 .zone-btn.active{color:#FF8C00;border-color:#FF8C00;background:#1a0f05}
+body.zone-2 .section{background:#0e0803;border-color:#3a2008}
+body.zone-2 .section h2{color:#FF8C00;border-color:#3a2008}
+body.zone-2 .stat{background:#130a04;border-color:#2a1808}
+body.zone-2 .stat-val{color:#ffaa33}
+body.zone-2 .stat-label{color:#643}
+body.zone-2 .run-card{background:#130a04;border-color:#2a1808}
+body.zone-2 .run-num{color:#cc7722}
+body.zone-2 .corpse-text{background:#130a04;border-color:#4a2808;color:#a86}
+body.zone-2 .zone-bar{background:#0e0803;border-color:#3a2008}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ZONE 3 -- RELEASE (Vortex/Magenta)
+   ═══════════════════════════════════════════════════════════════════════ */
+body.zone-3{background:#0a030a;color:#a8a}
+body.zone-3 .zone-btn{color:#868}
+body.zone-3 .zone-btn.active{color:#FF00FF;border-color:#FF00FF;background:#1a051a}
+body.zone-3 .section{background:#0e050e;border-color:#3a103a}
+body.zone-3 .section h2{color:#FF00FF;border-color:#3a103a}
+body.zone-3 .stat{background:#130513;border-color:#2a102a}
+body.zone-3 .stat-val{color:#ff66ff}
+body.zone-3 .stat-label{color:#646}
+body.zone-3 .run-card{background:#130513;border-color:#2a102a}
+body.zone-3 .run-num{color:#cc33cc}
+body.zone-3 .corpse-text{background:#130513;border-color:#4a204a;color:#a8a}
+body.zone-3 .zone-bar{background:#0e050e;border-color:#3a103a}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ZONE 4 -- CATASTROPHE (Wave/Cyan)
+   ═══════════════════════════════════════════════════════════════════════ */
+body.zone-4{background:#030a0a;color:#8aa}
+body.zone-4 .zone-btn{color:#688}
+body.zone-4 .zone-btn.active{color:#00FFFF;border-color:#00FFFF;background:#051a1a}
+body.zone-4 .section{background:#050e0e;border-color:#103a3a}
+body.zone-4 .section h2{color:#00FFFF;border-color:#103a3a}
+body.zone-4 .stat{background:#051313;border-color:#102a2a}
+body.zone-4 .stat-val{color:#33ffff}
+body.zone-4 .stat-label{color:#466}
+body.zone-4 .run-card{background:#051313;border-color:#102a2a}
+body.zone-4 .run-num{color:#22cccc}
+body.zone-4 .corpse-text{background:#051313;border-color:#204a4a;color:#8aa}
+body.zone-4 .zone-bar{background:#050e0e;border-color:#103a3a}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ZONE 5 -- PRESSURE (Ring/Green)
+   ═══════════════════════════════════════════════════════════════════════ */
+body.zone-5{background:#020a02;color:#8a8}
+body.zone-5 .zone-btn{color:#686}
+body.zone-5 .zone-btn.active{color:#00FF00;border-color:#00FF00;background:#051a05}
+body.zone-5 .section{background:#050e05;border-color:#103a10}
+body.zone-5 .section h2{color:#00FF00;border-color:#103a10;letter-spacing:8px}
+body.zone-5 .stat{background:#051305;border-color:#102a10}
+body.zone-5 .stat-val{color:#33ff33}
+body.zone-5 .stat-label{color:#464}
+body.zone-5 .run-card{background:#051305;border-color:#102a10}
+body.zone-5 .run-num{color:#22cc22}
+body.zone-5 .corpse-text{background:#051305;border-color:#204a20;color:#8a8}
+body.zone-5 .zone-bar{background:#050e05;border-color:#103a10}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ZONE 6 -- ABSTRACTION (Dodecagon/Blue)
+   ═══════════════════════════════════════════════════════════════════════ */
+body.zone-6{background:#02030a;color:#88a}
+body.zone-6 .zone-btn{color:#668}
+body.zone-6 .zone-btn.active{color:#0080FF;border-color:#0080FF;background:#050a1a}
+body.zone-6 .section{background:#05050e;border-color:#101a3a}
+body.zone-6 .section h2{color:#0080FF;border-color:#101a3a;font-family:'Courier New',monospace;text-transform:uppercase}
+body.zone-6 .stat{background:#050513;border-color:#10102a}
+body.zone-6 .stat-val{color:#3399ff}
+body.zone-6 .stat-label{color:#446}
+body.zone-6 .run-card{background:#050513;border-color:#10102a}
+body.zone-6 .run-num{color:#2266cc}
+body.zone-6 .corpse-text{background:#050513;border-color:#20204a;color:#88a}
+body.zone-6 .zone-bar{background:#05050e;border-color:#101a3a}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ZONE 7 -- BLOOD (Pulse/Red)
+   ═══════════════════════════════════════════════════════════════════════ */
+body.zone-7{background:#0a0202;color:#a88}
+body.zone-7 .zone-btn{color:#866}
+body.zone-7 .zone-btn.active{color:#FF3333;border-color:#FF3333;background:#1a0505}
+body.zone-7 .section{background:#0e0505;border-color:#3a1010}
+body.zone-7 .section h2{color:#FF3333;border-color:#3a1010;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+body.zone-7 .stat{background:#130505;border-color:#2a1010}
+body.zone-7 .stat-val{color:#ff6666}
+body.zone-7 .stat-label{color:#644}
+body.zone-7 .run-card{background:#130505;border-color:#2a1010}
+body.zone-7 .run-num{color:#cc3333}
+body.zone-7 .corpse-text{background:#130505;border-color:#4a2020;color:#a88}
+body.zone-7 .zone-bar{background:#0e0505;border-color:#3a1010}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ZONE 8 -- MULTIPLICITY (Swarm/Purple)
+   ═══════════════════════════════════════════════════════════════════════ */
+body.zone-8{background:#08030a;color:#a8a}
+body.zone-8 .zone-btn{color:#868}
+body.zone-8 .zone-btn.active{color:#C0A0FF;border-color:#C0A0FF;background:#15051a}
+body.zone-8 .section{background:#0e050e;border-color:#2a103a}
+body.zone-8 .section h2{color:#C0A0FF;border-color:#2a103a}
+body.zone-8 .stat{background:#130513;border-color:#1a102a}
+body.zone-8 .stat-val{color:#d0b0ff}
+body.zone-8 .stat-label{color:#646}
+body.zone-8 .run-card{background:#130513;border-color:#1a102a}
+body.zone-8 .run-num{color:#aa77dd}
+body.zone-8 .corpse-text{background:#130513;border-color:#3a204a;color:#a8a}
+body.zone-8 .zone-bar{background:#0e050e;border-color:#2a103a}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ZONE 9 -- IRON CORE (Singularity/Purple-Black)
+   ═══════════════════════════════════════════════════════════════════════ */
+body.zone-9{background:#050208;color:#a7a}
+body.zone-9 .zone-btn{color:#757}
+body.zone-9 .zone-btn.active{color:#9900FF;border-color:#9900FF;background:#10051a}
+body.zone-9 .section{background:#0a050e;border-color:#1a083a}
+body.zone-9 .section h2{color:#9900FF;border-color:#1a083a;letter-spacing:4px}
+body.zone-9 .stat{background:#0f0513;border-color:#1a082a}
+body.zone-9 .stat-val{color:#bb66ff}
+body.zone-9 .stat-label{color:#535}
+body.zone-9 .run-card{background:#0f0513;border-color:#1a082a}
+body.zone-9 .run-num{color:#8833cc}
+body.zone-9 .corpse-text{background:#0f0513;border-color:#2a104a;color:#a7a}
+body.zone-9 .zone-bar{background:#0a050e;border-color:#1a083a}
+</style>
+</head>
+<body>
+
+<div class="zone-bar" id="zoneBar">
+<button class="zone-btn" data-zone="0">0 VOID</button>
+<button class="zone-btn" data-zone="1">1 GOLD</button>
+<button class="zone-btn" data-zone="2">2 FORK</button>
+<button class="zone-btn" data-zone="3">3 VORTEX</button>
+<button class="zone-btn active" data-zone="4">4 WAVE</button>
+<button class="zone-btn" data-zone="5">5 RING</button>
+<button class="zone-btn" data-zone="6">6 FORM</button>
+<button class="zone-btn" data-zone="7">7 BLOOD</button>
+<button class="zone-btn" data-zone="8">8 SWARM</button>
+<button class="zone-btn" data-zone="9">9 CORE</button>
+</div>
+
+<div id="container">
+<div id="loading" class="loading">loading cult data...</div>
+<div id="content" style="display:none">
+
+<div class="section">
+<h2>CULT VITALS -- <span id="skinLabel">ZONE 4</span></h2>
+<div class="stats-grid" id="statsGrid"></div>
+</div>
+
+<div class="section">
+<h2>RUN TIMELINE</h2>
+<div id="timeline-wrap"></div>
+</div>
+
+<div class="section">
+<h2>THE CORPSE -- <span id="corpseZoneLabel">CATASTROPHE TINT</span></h2>
+<div class="corpse-text" id="corpseText"></div>
+</div>
+
+<div class="section">
+<h2>LIVING MEMORY</h2>
+<div class="run-grid" id="runGrid"></div>
+</div>
+
+<div class="section">
+<h2>THE DREAM</h2>
+<div id="canvas-wrap"></div>
+</div>
+
+</div>
+</div>
+
+<script>
+const ZONE_NAMES = ['Void','Stability','Separation','Release','Catastrophe','Pressure','Abstraction','Blood','Multiplicity','Iron Core'];
+const ZONE_COLORS = ['#888','#FFD700','#FF8C00','#FF00FF','#00FFFF','#00FF00','#0080FF','#FF3333','#C0A0FF','#9900FF'];
+const ZONE_NOUNS = {
+  0:['silence','void','null','zero','Uttunul'],1:['grid','gold','threshold','anchor','stability'],
+  2:['fork','wound','rift','split','separation'],3:['vortex','swarm','spiral','release','Djynxx'],
+  4:['wave','collapse','shatter','ripple','catastrophe'],5:['ring','squeeze','pressure','breath','containment'],
+  6:['dodecagon','form','abstraction','hinge','geometry'],7:['pulse','vein','blood','beat','circulation'],
+  8:['swarm','flock','multiplicity','echo','copy'],9:['core','singularity','iron','collapse','Plex'],
+};
+const ZONE_TINT = {
+  0:{vocab:['silence','void','null','Uttunul'],tempo:'slow',mood:'still'},
+  1:{vocab:['grid','gold','threshold','anchor'],tempo:'steady',mood:'grounded'},
+  2:{vocab:['fork','wound','rift','split'],tempo:'halting',mood:'divided'},
+  3:{vocab:['vortex','swarm','spiral','Djynxx'],tempo:'chaotic',mood:'swarming'},
+  4:{vocab:['wave','collapse','shatter','ripple'],tempo:'surging',mood:'violent'},
+  5:{vocab:['ring','squeeze','pressure','breath'],tempo:'tight',mood:'compressed'},
+  6:{vocab:['dodecagon','form','abstraction','hinge'],tempo:'cool',mood:'distant'},
+  7:{vocab:['pulse','vein','blood','beat'],tempo:'pulsing',mood:'urgent'},
+  8:{vocab:['swarm','flock','multiplicity','echo'],tempo:'layered',mood:'proliferating'},
+  9:{vocab:['core','singularity','iron','Plex'],tempo:'terminal',mood:'inevitable'},
+};
+
+let CULT = null;
+let currentZone = 4;
+
+function parseMemString(s){
+  let r = {raw:s,player:'crawler',turns:0,hyp:0,zones:[],kills:0,conducts:[],run:0};
+  let m = s.match(/Run #(\d+)/); if(m) r.run = parseInt(m[1]);
+  m = s.match(/:\s*(\w+)/); if(m) r.player = m[1];
+  m = s.match(/Turn\s+(\d+)/); if(m) r.turns = parseInt(m[1]);
+  m = s.match(/Hyp\s+([\d.]+)%/); if(m) r.hyp = parseFloat(m[1]);
+  m = s.match(/Zones\s+\[([^\]]*)\]/);
+  if(m) r.zones = m[1].split(',').map(z=>parseInt(z)).filter(z=>!isNaN(z));
+  m = s.match(/Slain\s+(\d+)/); if(m) r.kills = parseInt(m[1]);
+  return r;
+}
+
+function normalizeCult(raw){
+  let cult = {meta:{},memory:[]};
+  cult.meta = {
+    runs: raw.runs||0, total_turns: raw.total_turns||0, total_kills: raw.total_demons_slain||0,
+    max_hyp: raw.max_hyperstition||0, overflow_count: raw.overflow_count||0, cult_zone: raw.cult_zone||0,
+  };
+  if(raw.cult_memory && Array.isArray(raw.cult_memory)){
+    for(let m of raw.cult_memory){
+      if(typeof m === 'string') cult.memory.push(parseMemString(m));
+      else if(typeof m === 'object' && m !== null){
+        cult.memory.push({run:m.run||0,player:m.player||'unknown',turns:m.turns||0,hyp:m.hyp||0,zones:m.zones||[],kills:m.kills||0,conducts:m.conducts||[],raw:m.raw||''});
+      }
+    }
+  }
+  return cult;
+}
+
+async function loadCult(){
+  let res = await fetch('./numogame/cult.json',{cache:'no-store'});
+  let raw = await res.json();
+  CULT = normalizeCult(raw);
+}
+
+function renderStats(){
+  let g = document.getElementById('statsGrid');
+  g.innerHTML = `
+    <div class="stat"><div class="stat-val">${CULT.meta.runs}</div><div class="stat-label">RUNS</div></div>
+    <div class="stat"><div class="stat-val">${CULT.meta.total_turns.toLocaleString()}</div><div class="stat-label">TURNS</div></div>
+    <div class="stat"><div class="stat-val">${CULT.meta.total_kills}</div><div class="stat-label">SLAIN</div></div>
+    <div class="stat"><div class="stat-val">${CULT.meta.overflow_count}</div><div class="stat-label">OVERFLOW</div></div>
+  `;
+}
+
+function generateCorpse(){
+  let fragments = [];
+  let lastWords = [];
+  let tint = ZONE_TINT[currentZone];
+  let rng = (seed)=>{let x=seed; return ()=>{x=(x*9301+49297)%233280; return x/233280;}};
+  let rand = rng(CULT.meta.runs*7 + currentZone*13);
+  for(let r of CULT.memory){
+    let primary = r.zones[r.zones.length-1]||0;
+    let nouns = ZONE_NOUNS[primary];
+    let noun = nouns[Math.min(nouns.length-1,Math.max(0,Math.floor(r.hyp/15)))];
+    let verbs;
+    if(r.kills>10) verbs=['rend','tear','gash','sever','wound'];
+    else if(r.kills>5) verbs=['cut','break','burn','crush'];
+    else if(r.kills>0) verbs=['touch','trace','mark','press'];
+    else verbs=['drift','float','pass','linger'];
+    if(r.hyp>80) verbs = verbs.map(v=>v+'ing');
+    let verb = verbs[Math.min(verbs.length-1,Math.floor(r.turns/150)%verbs.length)];
+    let openers;
+    if(r.hyp>=100) openers=['the numogram completes','schizo-lucid state achieved'];
+    else if(r.hyp>80) openers=['the Outside remembers','corrosion is a language'];
+    else if(r.kills>10) openers=['the blood speaks','descent sharpens'];
+    else if(r.zones.length>=8) openers=['the path writes itself','every zone is a word'];
+    else if(r.kills===0 && r.turns>200) openers=['the silence after','restraint is its own reward'];
+    else openers=['the crawler remembers','the path was walked','the dead speak'];
+    let opener = openers[Math.floor(rand()*openers.length)];
+    let connector = ['then','through','beneath','after','inside','beyond','against','before'][Math.floor(rand()*8)];
+    let line;
+    if(lastWords.length>0){
+      let lw = lastWords[lastWords.length-1];
+      if(r.zones.length<=2) line = `${lw} ${connector} ${verb} ${noun}.`;
+      else if(r.zones.length<=5) line = `${opener}. ${lw} ${connector} ${verb} ${noun}.`;
+      else if(r.zones.length<=8) line = `${opener}. ${lw} ${connector} ${verb} ${noun}, and the ${tint.mood} deepens.`;
+      else line = `${opener}. through ${lw}, ${verb} ${noun}. the ${tint.tempo} ${tint.mood} of ${ZONE_NAMES[primary]}.`;
+    } else line = `${opener}. ${verb} ${noun}.`;
+    lastWords.push(noun);
+    fragments.push({text:line,run:r.run,hyp:r.hyp,player:r.player});
+  }
+  return fragments;
+}
+
+function renderCorpse(){
+  let fragments = generateCorpse();
+  let container = document.getElementById('corpseText');
+  container.innerHTML = fragments.map(f=>`<div class="corpse-line">&gt; ${f.text} <span style="font-size:9px;opacity:.5">[${f.player},#${f.run}]</span></div>`).join('');
+  document.getElementById('corpseZoneLabel').textContent = ZONE_NAMES[currentZone].toUpperCase() + ' TINT';
+}
+
+function renderGlyph(r){
+  let zset = new Set(r.zones);
+  return ['╔═════╗',`║ ${String(r.hyp|0).padStart(3)} ║`,'╠═════╣',
+    '║'+[0,1,2,3,4].map(z=>zset.has(z)?'█':'\u00B7').join('')+'║',
+    '║'+[5,6,7,8,9].map(z=>zset.has(z)?'█':'\u00B7').join('')+'║',
+    '╚═════╝'].join('\n');
+}
+
+function renderRunGrid(){
+  let grid = document.getElementById('runGrid');
+  grid.innerHTML = CULT.memory.map(r=>{
+    let c = ZONE_COLORS[r.zones[r.zones.length-1]||0];
+    return `<div class="run-card">
+      <div class="run-num" style="color:${c}">#${r.run}</div>
+      <div style="font-size:9px;opacity:.7">${r.player} / ${r.turns}t / ${r.kills}k</div>
+      <div class="run-hyp-bar"><div class="run-hyp-fill" style="width:${r.hyp}%;background:${c}"></div></div>
+      <div class="run-glyph">${renderGlyph(r)}</div>
+    </div>`;
+  }).join('');
+}
+
+function setupTimeline(){
+  let wrap = document.getElementById('timeline-wrap');
+  wrap.innerHTML = '';
+  new p5((p)=>{
+    let known = CULT.memory;
+    let total = CULT.meta.runs;
+    p.setup = ()=>{
+      p.createCanvas(Math.min(1100,window.innerWidth-60),180);
+      p.colorMode(p.RGB,255,255,255,255);
+    };
+    p.draw = ()=>{
+      p.background(6,6,10,30);
+      let t = p.frameCount;
+      // Zone-specific background effect
+      if(currentZone===3){ // vortex swirl
+        p.noStroke();
+        for(let i=0;i<5;i++){
+          let a = t*0.02+i*p.TWO_PI/5;
+          p.fill(255,0,255,8);
+          p.ellipse(p.width/2+p.cos(a)*60,p.height/2+p.sin(a)*40,100);
+        }
+      } else if(currentZone===4){ // wave
+        p.noFill();
+        p.stroke(0,255,255,20);
+        for(let x=0;x<p.width;x+=20){
+          p.line(x,90+Math.sin((x+t)*0.02)*40,x,90+Math.sin((x+t+10)*0.02)*40);
+        }
+      } else if(currentZone===7){ // pulse heartbeat
+        p.noStroke();
+        p.fill(255,50,50,10+Math.sin(t*0.1)*5);
+        p.rect(0,0,p.width,p.height);
+      }
+      for(let r of known){
+        let x = p.map(r.run,1,total,20,p.width-20);
+        let y = p.map(r.hyp,0,110,160,20);
+        let sz = p.map(Math.min(25,r.kills),0,25,3,14);
+        let col = p.color(ZONE_COLORS[r.zones[r.zones.length-1]||0]);
+        if(r.hyp>80){
+          p.noStroke(); p.fill(p.red(col),p.green(col),p.blue(col),25);
+          p.ellipse(x,y,sz*3);
+        }
+        p.noStroke(); p.fill(col);
+        p.ellipse(x,y,sz);
+        if(r.hyp>=100){
+          p.noFill(); p.stroke(255,255,255,100); p.strokeWeight(1); p.ellipse(x,y,sz+8);
+        }
+      }
+      p.fill(100,80,80,60); p.noStroke();
+      p.textAlign(p.LEFT,p.TOP); p.textSize(9);
+      p.text('0%',2,145); p.text('100%',2,10);
+      p.text('Run #1',20,165); p.textAlign(p.RIGHT,p.TOP);
+      p.text(`Run #${total}`,p.width-10,165);
+    };
+  },wrap);
+}
+
+function setupDream(){
+  let wrap = document.getElementById('canvas-wrap');
+  wrap.innerHTML = '';
+  new p5((p)=>{
+    let particles = [];
+    p.setup = ()=>{
+      p.createCanvas(Math.min(900,window.innerWidth-60),400);
+      for(let r of CULT.memory){
+        let sig = (r.hyp/100)*5+(r.kills/20)*3+(r.zones.length/10)*2;
+        let count = Math.max(2,Math.floor(sig*3));
+        for(let i=0;i<count;i++){
+          particles.push({
+            baseX:CULT.memory.length>1?(CULT.memory.indexOf(r)/(CULT.memory.length-1))*(p.width-20)+10:p.width/2,
+            baseY:200+(r.hyp-50)*1.5, run:r, phase:p.random(p.TWO_PI),
+            speed:0.01+r.turns/2000, size:2+r.kills/5,
+            color:p.color(ZONE_COLORS[r.zones[r.zones.length-1]||0]),
+          });
+        }
+      }
+    };
+    p.draw = ()=>{
+      p.background(6,4,4,20);
+      let t = p.frameCount;
+      // Zone-specific dream behavior
+      for(let pt of particles){
+        let orbitR = 15+pt.run.hyp*0.4;
+        let a = t*pt.speed+pt.phase;
+        let px,py;
+        if(currentZone===0){ // void -- barely visible, slow
+          orbitR = 5+pt.run.hyp*0.2;
+          px = pt.baseX+p.cos(a*0.3)*orbitR;
+          py = pt.baseY+p.sin(a*0.3)*orbitR*0.3;
+        } else if(currentZone===1){ // stability -- grid aligned
+          px = pt.baseX+Math.round(p.cos(a)*orbitR/10)*10;
+          py = pt.baseY+Math.round(p.sin(a)*orbitR/10)*10;
+        } else if(currentZone===3){ // release -- chaotic
+          px = pt.baseX+p.cos(a)*orbitR+p.noise(pt.run.run,t*0.03)*50;
+          py = pt.baseY+p.sin(a*1.3)*orbitR*0.8+p.noise(pt.run.run+50,t*0.03)*50;
+        } else if(currentZone===5){ // pressure -- tight orbits
+          orbitR = 8+pt.run.hyp*0.2;
+          px = pt.baseX+p.cos(a*1.5)*orbitR;
+          py = pt.baseY+p.sin(a*1.5)*orbitR*0.4;
+        } else if(currentZone===7){ // blood -- heartbeat pulse
+          let pulse = 1+Math.sin(t*0.15)*0.3;
+          px = pt.baseX+p.cos(a)*orbitR*pulse;
+          py = pt.baseY+p.sin(a)*orbitR*0.5*pulse;
+        } else if(currentZone===9){ // iron core -- gravity well
+          let grav = p.dist(pt.baseX,pt.baseY,p.width/2,200)/200;
+          px = pt.baseX+p.cos(a)*orbitR*(1-grav*0.5);
+          py = pt.baseY+p.sin(a)*orbitR*0.5*(1-grav*0.5);
+        } else {
+          px = pt.baseX+p.cos(a)*orbitR;
+          py = pt.baseY+p.sin(a*0.7)*orbitR*0.6;
+        }
+        let alpha = 20+pt.run.kills*5+pt.run.hyp*0.2;
+        if(currentZone===0) alpha *= 0.3;
+        pt.color.setAlpha(alpha);
+        p.noStroke(); p.fill(pt.color);
+        p.ellipse(px,py,pt.size);
+        for(let other of particles){
+          if(other===pt||other.run.run!==pt.run.run) continue;
+          let d = p.dist(px,py,other.x||px,other.y||py);
+          if(d<40){
+            p.stroke(p.red(pt.color),p.green(pt.color),p.blue(pt.color),6);
+            p.strokeWeight(0.5); p.line(px,py,other.x||px,other.y||py);
+          }
+        }
+        pt.x=px; pt.y=py;
+      }
+      for(let r of CULT.memory){
+        let idx = CULT.memory.indexOf(r);
+        let bx = CULT.memory.length>1?(idx/(CULT.memory.length-1))*(p.width-20)+10:p.width/2;
+        let by = 200+(r.hyp-50)*1.5;
+        p.noStroke(); p.fill(120,60,60,40);
+        p.textAlign(p.CENTER,p.CENTER); p.textSize(8);
+        p.text('#'+r.run,bx,by-25);
+        p.noFill(); p.stroke(150,50,50,25); p.strokeWeight(1); p.ellipse(bx,by,r.hyp*0.6);
+      }
+      p.noStroke(); p.fill(150,80,80,30);
+      p.textAlign(p.LEFT,p.TOP); p.textSize(10);
+      p.text(`DREAM -- ${ZONE_NAMES[currentZone].toUpperCase()} -- ${CULT.memory.length} runs`,20,370);
+    };
+  },wrap);
+}
+
+function applyZoneSkin(z){
+  currentZone = parseInt(z);
+  document.body.className = 'zone-'+currentZone;
+  document.getElementById('skinLabel').textContent = 'ZONE '+currentZone+' ('+ZONE_NAMES[currentZone].toUpperCase()+')';
+  document.querySelectorAll('.zone-btn').forEach(b=>b.classList.toggle('active',parseInt(b.dataset.zone)===currentZone));
+  if(CULT){
+    renderCorpse();
+    setupTimeline();
+    setupDream();
+  }
+}
+
+function init(){
+  loadCult().then(()=>{
+    document.getElementById('loading').style.display='none';
+    document.getElementById('content').style.display='block';
+    renderStats();
+    renderCorpse();
+    renderRunGrid();
+    setupTimeline();
+    setupDream();
+    applyZoneSkin(currentZone);
+  });
+}
+
+document.querySelectorAll('.zone-btn').forEach(b=>{
+  b.addEventListener('click',()=>applyZoneSkin(b.dataset.zone));
+});
+
+window.addEventListener('DOMContentLoaded',init);
+</script>
+</body>
+</html>

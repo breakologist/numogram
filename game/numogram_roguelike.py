@@ -485,9 +485,23 @@ class Demon:
             self.dmg = 3 + int(data["pitch"][-1]) * 2
             self.speed = int(data["pitch"][-1])
 
+        self.max_hp = self.hp  # store for later reference (Amphidemon split)
         self.alive = True
         self.move_cooldown = 0
         self.glyph = self._glyph()
+
+        # --- Phase 1: extended demon state ---
+        self.invisible = False          # Xenodemon invisibility flag
+        self.invisibility_turns = 0
+        self.rewind_buffer = []         # Chronodemon position history
+        self.rewind_cooldown = 0        # Counter-attack lockout
+        self.mirror_active = False      # Amphidemon duplicate flag
+        self.syzygy_field_active = False
+        self.syzygy_field_center = None
+        self.syzygy_field_duration = 0
+        self.syzygy_zones = None        # tuple (z1, z2)
+        self.aura_tier = 0              # 0=lesser,1=greater,2=ancient
+        self._setup_behavior()
 
     def _glyph(self):
         """ASCII glyph based on type."""
@@ -500,29 +514,178 @@ class Demon:
         else:
             return '!'
 
+
+    def _setup_behavior(self):
+        """Initialize demon behavior flags based on type, pitch, and mesh."""
+        # Aura tier from mesh
+        if self.mesh >= 30:
+            self.aura_tier = 2   # Ancient: aura + death mechanic
+        elif self.mesh >= 15:
+            self.aura_tier = 1   # Greater: aura only
+        else:
+            self.aura_tier = 0   # Lesser: basic
+
+        # Chronodemon: initialize rewind buffer
+        if self.dtype == CHRONODEMON:
+            self.rewind_buffer = []
+
+        # Xenodemon: start invisible
+        if self.dtype == XENODEMON:
+            self.invisible = True
+            self.invisibility_turns = 0
+
+
+    def _update_rewind_buffer(self):
+        """Chronodemon: keep last 2 positions."""
+        if self.dtype == CHRONODEMON:
+            self.rewind_buffer.append((self.x, self.y))
+            if len(self.rewind_buffer) > 2:
+                self.rewind_buffer.pop(0)
+
+    def on_hit(self, attacker):
+        """Called when this demon takes damage. Returns counter-damage or 0."""
+        counter = 0
+        if self.dtype == CHRONODEMON and len(self.rewind_buffer) >= 2 and self.rewind_cooldown == 0:
+            old_x, old_y = self.rewind_buffer[0]
+            self.x, self.y = old_x, old_y
+            self.rewind_cooldown = 2
+            if max(abs(self.x - attacker.x), abs(self.y - attacker.y)) == 1:
+                counter = self.dmg
+        return counter
+
+    def on_damaged(self, dmg, player):
+        """Called when demon takes damage. May spawn mirror (Amphidemon)."""
+        if self.dtype == AMPHIDEMON and not self.mirror_active:
+            if not hasattr(self, 'max_hp'):
+                self.max_hp = self.hp + dmg
+            if self.hp <= (self.max_hp // 2):
+                self.mirror_active = True
+                return self._spawn_mirror()
+        return None
+
+    def _spawn_mirror(self):
+        """Create mirror duplicate data for Amphidemon."""
+        return {
+            "mirror": True,
+            "timer": 10,
+            "name": f"M-{self.name}",
+            "epithet": self.epithet,
+            "span": self.span,
+            "type": self.dtype,
+            "pitch": self.pitch,
+            "desc": "Reflection.",
+            "current": self.current,
+            "hp": self.hp // 2,
+            "dmg": self.dmg,
+            "speed": self.speed,
+            "mesh": self.mesh
+        }
+
+    def death_effect(self, player, game_map):
+        """Syzygetic demons leave a syzygy field on death."""
+        if self.dtype == SYZYGISTIC:
+            self.syzygy_field_active = True
+            self.syzygy_field_center = (self.x, self.y)
+            self.syzygy_field_duration = 20
+            self.syzygy_zones = self.span
+            return True
+        return False
+
+    def aura_effect(self, player, game_map):
+        """Per-turn effects: mesh auras + Xenodemon gaze."""
+        if not self.alive:
+            return
+        # Xenodemon gaze: if visible (not invisible) and within 3 tiles, drain 1 HP
+        if self.dtype == XENODEMON and not self.invisible:
+            dist = max(abs(self.x - player.x), abs(self.y - player.y))
+            if dist <= 3:
+                player.hp -= 1
+                # Occasionally log if new turn? For brevity skip logging every tick.
+        # Mesh-based auras for Greater/Ancient
+        if self.aura_tier == 0:
+            return
+        dist_mesh = max(abs(self.x - player.x), abs(self.y - player.y))
+        if dist_mesh <= 2:
+            if self.aura_tier == 1:
+                player.hp -= 1
+            elif self.aura_tier == 2:
+                player.hp -= 2
+                player.speed = max(1, player.speed - 1)
+
+    def update(self, player, game_map):
+        """Called once per turn per demon. Handles timers, invisibility."""
+        # Xenodemon invisibility expiry
+        if self.dtype == XENODEMON and self.invisible:
+            dist = max(abs(self.x - player.x), abs(self.y - player.y))
+            if dist <= 1 or getattr(player, 'hyperstition', 0) > 60:
+                self.invisible = False
+            # else: remains invisible
+
+        # Mirror countdown
+        if hasattr(self, 'is_mirror') and self.is_mirror:
+            self.mirror_timer -= 1
+            if self.mirror_timer <= 0:
+                self.alive = False
+
+        # Syzygy field countdown
+        if self.syzygy_field_active:
+            self.syzygy_field_duration -= 1
+            if self.syzygy_field_duration <= 0:
+                self.syzygy_field_active = False
+
+        # Chronodemon rewind cooldown
+        if self.rewind_cooldown > 0:
+            self.rewind_cooldown -= 1
+
     def try_move(self, player, game_map):
-        """Simple chase AI. Move toward player if within range."""
+        """Pitch-based movement AI."""
         if self.move_cooldown > 0:
             self.move_cooldown -= 1
+            self._update_rewind_buffer()
             return
+
         dx = player.x - self.x
         dy = player.y - self.y
-        dist = max(abs(dx), abs(dy))  # Chebyshev distance — can chase diagonally
+        dist = max(abs(dx), abs(dy))  # Chebyshev
+
         if dist > 8 or dist < 2:
+            self._update_rewind_buffer()
             return
-        # Move one step toward player (diagonal if needed)
+
+        # Movement modifiers by pitch/type
+        phase_chance = 0.0
+        if self.pitch != "Null" and "Cth" in self.pitch:
+            phase_chance = 0.4  # Cthonic: 40% chance to phase through walls
+
         sx = (1 if dx > 0 else -1) if dx != 0 else 0
         sy = (1 if dy > 0 else -1) if dy != 0 else 0
         nx, ny = self.x + sx, self.y + sy
-        if game_map.is_passable(nx, ny) and (nx, ny) != (player.x, player.y):
+
+        target_passable = game_map.is_passable(nx, ny)
+        if not target_passable and random.random() < phase_chance:
+            target_passable = True  # phase through
+
+        # Null (syzygetic) demons don't chase — they stay put or teleport elsewhere
+        if self.pitch == "Null":
+            target_passable = False  # override: never move toward player
+
+        if target_passable and (nx, ny) != (player.x, player.y):
             self.x = nx
             self.y = ny
-        self.move_cooldown = max(0, 3 - self.speed)
 
-    def take_damage(self, dmg):
+        self.move_cooldown = max(0, 3 - self.speed)
+        self._update_rewind_buffer()
+
+    def take_damage(self, dmg, player=None):
+        """Apply damage. If player provided, trigger on_damaged hook."""
         self.hp -= dmg
         if self.hp <= 0:
             self.alive = False
+            return None
+        # Call on_damaged hook (may spawn mirror)
+        if player is not None:
+            return self.on_damaged(dmg, player)
+        return None
 
 def spawn_demon(zone, hyperstition, rng):
     """Spawn a demon appropriate to the zone and hyperstition level."""
@@ -694,7 +857,7 @@ DEATH_MESSAGES = [
 # =====================================================================
 
 class Demon:
-    def __init__(self, data, x, y):
+    def __init__(self, data, x, y, zone=0):
         self.data = data
         self.name = data["name"]
         self.epithet = data["epithet"]
@@ -719,6 +882,7 @@ class Demon:
             self.speed = int(data["pitch"][-1])
         self.alive = True
         self.move_cooldown = 0
+        self.zone = zone
         self.glyph = self._glyph()
 
     def _glyph(self):
@@ -820,118 +984,64 @@ class DungeonMap:
         self.passable_set = set()
         self.explored = set()  # (x,y) tiles the player has ever seen
         self.visible = set()   # (x,y) tiles currently in LOS
-        self._tree_edges = []  # (parent_room, child_room) tuples
         self.generate()
 
     def generate(self):
-        """Tree-based dungeon generation (Brogue method).
-
-        Phase 1: Accretion — each new room attaches to an existing room.
-        Phase 2: Carve rooms and connect tree edges (single corridor each).
-        Phase 3: Add loops (extra corridors) after tree is built.
-        Phase 4: Apply terrain, hyperstition mods, place stairs in deepest leaf.
-        """
+        # Floor-specific configuration
         cfg = FLOOR_CONFIG.get(self.floor, FLOOR_CONFIG[1])
         self.floor_zone = cfg["zone"]
         self.floor_name = cfg["name"]
         self.floor_config = cfg
-        self._tree_edges = []
-
+        
         max_rooms = cfg["max_rooms"]
-        min_w, max_w = cfg["min_w"], cfg["max_w"]
-        min_h, max_h = cfg["min_h"], cfg["max_h"]
-
-        # Phase 1: Room accretion as a tree
-        # First room near center
-        first = Room(
-            self.rng.randint(self.width // 3, 2 * self.width // 3),
-            self.rng.randint(self.height // 3, 2 * self.height // 3),
-            self.rng.randint(min_w, max_w),
-            self.rng.randint(min_h, max_h),
-        )
-        self.rooms.append(first)
-
-        while len(self.rooms) < max_rooms:
-            parent = self.rng.choice(self.rooms)
-            w = self.rng.randint(min_w, max_w)
-            h = self.rng.randint(min_h, max_h)
-
-            # Try 4 directions adjacent to parent with padding
-            offsets = [
-                (parent.x + parent.w + 1, parent.y),           # right
-                (parent.x - w - 1, parent.y),                   # left
-                (parent.x, parent.y + parent.h + 1),            # down
-                (parent.x, parent.y - h - 1),                   # up
-            ]
-            self.rng.shuffle(offsets)
-
-            placed = False
-            for ox, oy in offsets:
-                room = Room(ox, oy, w, h)
-                if 1 <= room.x and room.x + room.w < self.width - 1 and \
-                   1 <= room.y and room.y + room.h < self.height - 1:
-                    if not any(room.intersects(r) for r in self.rooms):
-                        self.rooms.append(room)
-                        self._tree_edges.append((parent, room))
-                        placed = True
-                        break
-            if not placed:
-                # Fallback: try random placement if accretion fails
-                attempts = 0
-                while attempts < 50 and len(self.rooms) < max_rooms:
-                    attempts += 1
-                    w = self.rng.randint(min_w, max_w)
-                    h = self.rng.randint(min_h, max_h)
-                    x = self.rng.randint(1, self.width - w - 1)
-                    y = self.rng.randint(1, self.height - h - 1)
-                    room = Room(x, y, w, h)
-                    if not any(room.intersects(r) for r in self.rooms):
-                        self.rooms.append(room)
-                        # Attach to nearest existing room as parent
-                        nearest = min(self.rooms[:-1],
-                                      key=lambda r: abs(r.cx - room.cx) + abs(r.cy - room.cy))
-                        self._tree_edges.append((nearest, room))
-                        break
-
+        attempts = 0
+        while len(self.rooms) < max_rooms and attempts < 200:
+            attempts += 1
+            w = self.rng.randint(cfg["min_w"], cfg["max_w"])
+            h = self.rng.randint(cfg["min_h"], cfg["max_h"])
+            x = self.rng.randint(1, self.width - w - 1)
+            y = self.rng.randint(1, self.height - h - 1)
+            room = Room(x, y, w, h)
+            if not any(room.intersects(r) for r in self.rooms):
+                self.rooms.append(room)
+        
         # Zone assignment: primary zone + syzygy neighbor
         primary_zone = cfg["zone"]
         syzygy_zone = 9 - primary_zone
         for i, room in enumerate(self.rooms):
             if i == 0:
-                zone = primary_zone
+                zone = primary_zone  # First room always primary
             elif i == len(self.rooms) - 1:
-                zone = syzygy_zone
+                zone = syzygy_zone  # Stairs room is syzygy partner
             elif self.rng.random() < 0.7:
-                zone = primary_zone
+                zone = primary_zone  # 70% primary
             else:
-                zone = syzygy_zone
+                zone = syzygy_zone  # 30% syzygy
             self._carve_room(room, zone)
-
-        # Phase 2: Connect tree edges (single corridor per parent-child)
-        for parent, child in self._tree_edges:
-            self._connect(parent, child)
-
-        # Phase 3: Add loops after tree is built
-        self._add_loops(num_loops=max(1, len(self.rooms) // 4))
-
-        # Corridor style extras (applied after loops)
+        
+        for i in range(len(self.rooms) - 1):
+            self._connect(self.rooms[i], self.rooms[i + 1])
+        
+        # Corridor style: branch and echo get extra connections
         if cfg["corridor"] in ("branch", "echo"):
             self._add_syzygy_corridors()
         if cfg["corridor"] in ("wide", "spiral"):
             self._widen_currents()
         if cfg["corridor"] == "grid":
+            # Extra cross-corridors for grid layout
             for i in range(len(self.rooms) - 2):
                 if self.rng.random() < 0.5:
                     self._connect(self.rooms[i], self.rooms[i + 2])
         if cfg["corridor"] == "spiral":
+            # Extra connections to create loops
             if len(self.rooms) > 3:
                 self._connect(self.rooms[-1], self.rooms[1])
-
+        
         # Terrain placement
         if cfg["terrain"]:
             self._apply_terrain(cfg["terrain"])
-
-        # Hyperstition-based modifications
+        
+        # Hyperstition-based modifications (existing)
         if self.hyperstition >= 15 and cfg["corridor"] not in ("branch", "echo"):
             self._add_syzygy_corridors()
         if self.hyperstition >= 30 and cfg["corridor"] not in ("wide", "spiral"):
@@ -942,83 +1052,8 @@ class DungeonMap:
             self._manifest_gates()
         if self.hyperstition >= 85:
             self._warp_plex_pockets()
-
-        self._place_stairs_tree()
+        self._place_stairs()
         self._rebuild_passable()
-
-    def _add_loops(self, num_loops=3):
-        """Add extra connections after the tree is built to create loops."""
-        edge_pairs = set()
-        for p, c in self._tree_edges:
-            edge_pairs.add((id(p), id(c)))
-            edge_pairs.add((id(c), id(p)))
-        added = 0
-        attempts = 0
-        while added < num_loops and attempts < num_loops * 20:
-            attempts += 1
-            r1 = self.rng.choice(self.rooms)
-            r2 = self.rng.choice(self.rooms)
-            if r1 is not r2 and (id(r1), id(r2)) not in edge_pairs:
-                self._connect(r1, r2)
-                edge_pairs.add((id(r1), id(r2)))
-                edge_pairs.add((id(r2), id(r1)))
-                added += 1
-
-    def _place_stairs_tree(self):
-        """Place stairs down in the deepest leaf of the tree (DFS from root)."""
-        if not self.rooms:
-            return
-
-        # Build children adjacency from tree edges
-        children = {}
-        for parent, child in self._tree_edges:
-            children.setdefault(id(parent), []).append(child)
-
-        # DFS to find deepest leaf
-        deepest, max_depth = self.rooms[0], 0
-        stack = [(self.rooms[0], 0)]
-        visited = set()
-        while stack:
-            room, depth = stack.pop()
-            room_id = id(room)
-            if room_id in visited:
-                continue
-            visited.add(room_id)
-            if depth > max_depth:
-                max_depth, deepest = depth, room
-            for child in children.get(room_id, []):
-                stack.append((child, depth + 1))
-
-        # Fallback: if tree_edges empty (single room or fallback placement),
-        # use last room
-        if not self._tree_edges and len(self.rooms) > 1:
-            deepest = self.rooms[-1]
-
-        # Place stairs with 3-level fallback
-        # Level 1: center of deepest room
-        sx, sy = deepest.cx, deepest.cy
-        if 0 < sx < self.width - 1 and 0 < sy < self.height - 1:
-            if self.tiles[sy][sx] != '+':
-                self.tiles[sy][sx] = '>'
-                self.stairs_down = (sx, sy)
-                return
-
-        # Level 2: any passable tile in the deepest room
-        for y in range(deepest.y + 1, deepest.y + deepest.h - 1):
-            for x in range(deepest.x + 1, deepest.x + deepest.w - 1):
-                if 0 < x < self.width - 1 and 0 < y < self.height - 1:
-                    if self.tiles[y][x] == '.' or self.tiles[y][x] == '+':
-                        self.tiles[y][x] = '>'
-                        self.stairs_down = (x, y)
-                        return
-
-        # Level 3: any passable tile on the floor
-        for y in range(self.height - 1, 0, -1):
-            for x in range(self.width - 1, 0, -1):
-                if self.tiles[y][x] != '#':
-                    self.tiles[y][x] = '>'
-                    self.stairs_down = (x, y)
-                    return
 
     def _carve_room(self, room, zone):
         for y in range(room.y, room.y + room.h):
@@ -1170,14 +1205,14 @@ class DungeonMap:
         return 1, 1
 
     def update_explored(self, px, py, radius=6):
-        """Mark all passable tiles within radius as explored. Simple circular LOS."""
+        """Mark ALL tiles within radius as explored (walls become #, floor becomes .).
+        Simple circular LOS — memory persists even when not currently visible."""
         for dy in range(-radius, radius + 1):
             for dx in range(-radius, radius + 1):
                 if dx*dx + dy*dy <= radius*radius:
                     x, y = px + dx, py + dy
                     if 0 <= x < self.width and 0 <= y < self.height:
-                        if (x, y) in self.passable_set or self.tiles[y][x] == '+':
-                            self.explored.add((x, y))
+                        self.explored.add((x, y))
 
     # Zone-tied LOS radii — each numogram zone has different vision
     ZONE_LOS_RADIUS = {
@@ -1393,7 +1428,11 @@ def load_cult():
     if os.path.exists(CULT_FILE):
         try:
             with open(CULT_FILE, 'r') as f:
-                return json.load(f)
+                cult = json.load(f)
+            # Migrate legacy string-format cult_memory to structured dicts
+            if isinstance(cult.get("cult_memory"), list):
+                cult["cult_memory"] = [_mem_data(m) for m in cult["cult_memory"]]
+            return cult
         except (json.JSONDecodeError, IOError):
             pass
     return {
@@ -1456,7 +1495,11 @@ CONDUCTS = {
         "name": "The Descent",
         "numogram": "Escape the numogram to complete your descent.",
         "rule": "Carry the Cryptolith and die at 100% hyperstition.",
-        "unlock_check": lambda cult: any("Cryptolith" in m or "cryptolith" in m.lower() for m in cult.get("cult_memory", [])),
+        "unlock_check": lambda cult: any(
+            (isinstance(m, str) and ("Cryptolith" in m or "cryptolith" in m.lower()))
+            or (isinstance(m, dict) and m.get("cryptolith"))
+            for m in cult.get("cult_memory", [])
+        ),
         "reward_desc": "+10 starting hyperstition on future runs",
         "reward_apply": lambda player: None,  # Applied via cult.json bonus
         "on_demon_kill": None,
@@ -1476,7 +1519,84 @@ CONDUCTS = {
         "on_death": lambda player: player._conduct_complete("syzygy") if "syzygy" not in player.conduct_violated else None,
         "hud_char": "Y",
     },
+    "breaker": {
+        "name": "Synthesis Breaker",
+        "numogram": "The prophecy shatters. The dream bleeds.",
+        "rule": "Produce a run that contradicts the garden's predicted synthesis.",
+        "unlock_check": lambda cult: cult.get("overflow_count", 0) >= 3,
+        "reward_desc": "The prophecy shattered. +15 hyperstition.",
+        "reward_apply": lambda player: setattr(player, 'hyperstition', min(100, player.hyperstition + 15)),
+        "on_demon_kill": None,
+        "on_zone_change": lambda player: player._conduct_check_breaker(),
+        "on_death": lambda player: player._conduct_complete("breaker") if "breaker" not in player.conduct_violated else None,
+        "hud_char": "B",
+    },
 }
+
+# =====================================================================
+# CULT MEMORY UTILITIES -- Structured data with backward compatibility
+# =====================================================================
+
+def _mem_parse_string(s):
+    """Parse a legacy cult_memory string into structured dict."""
+    result = {'raw': s, 'player': 'crawler', 'turns': 0, 'hyp': 0,
+              'zones': [], 'kills': 0, 'conducts': [], 'run': 0}
+    if 'Run #' in s:
+        try: result['run'] = int(s.split('Run #')[1].split(':')[0])
+        except: pass
+    if ': ' in s:
+        try: result['player'] = s.split(': ')[1].split(',')[0].strip()
+        except: pass
+    if 'Turn ' in s:
+        try: result['turns'] = int(s.split('Turn ')[1].split(',')[0])
+        except: pass
+    if 'Hyp ' in s:
+        try: result['hyp'] = float(s.split('Hyp ')[1].split('%')[0])
+        except: pass
+    if 'Zones [' in s:
+        try:
+            zstr = s.split('Zones [')[1].split(']')[0]
+            result['zones'] = [int(z.strip()) for z in zstr.split(',') if z.strip().lstrip('-').isdigit()]
+        except: pass
+    if 'Slain ' in s:
+        try: result['kills'] = int(s.split('Slain ')[1].split('[')[0].strip())
+        except: pass
+    for cid, info in CONDUCTS.items():
+        c = info['hud_char']
+        if f'[{c}]' in s or f'~{c}' in s:
+            result['conducts'].append(cid)
+    return result
+
+def _mem_format(m):
+    """Format a cult memory entry (dict or string) as display string."""
+    if isinstance(m, str):
+        return m
+    cond_chars = []
+    for c in sorted(m.get('conducts', [])):
+        if c in CONDUCTS:
+            cond_chars.append(CONDUCTS[c]['hud_char'])
+    cond_str = f" [{' '.join(cond_chars)}]" if cond_chars else ""
+    return (f"Run #{m.get('run', '?'):}: {m.get('player', 'crawler')}, "
+            f"Turn {m.get('turns', 0)}, Hyp {m.get('hyp', 0):.0f}%, "
+            f"Zones {sorted(m.get('zones', []))}, Slain {m.get('kills', 0)}{cond_str}")
+
+def _mem_data(m):
+    """Ensure a cult memory entry is a structured dict."""
+    if isinstance(m, dict):
+        return m
+    return _mem_parse_string(m)
+
+def _mem_build(run_num, player_name, turns, hyp, zones, kills, conducts):
+    """Build a structured cult memory dict from run data."""
+    return {
+        'run': run_num,
+        'player': player_name,
+        'turns': turns,
+        'hyp': hyp,
+        'zones': list(zones),
+        'kills': kills,
+        'conducts': list(conducts),
+    }
 
 # Syzygy pairs for Zone-Locked conduct
 SYZYGIES_PAIRS = {
@@ -1690,14 +1810,91 @@ def save_cult(cult):
     except IOError:
         pass
 
+def _check_mega_artifact(cult):
+    """Trigger a grand synthesis when the digital root cycle completes (every 9 runs).
+    
+    The cycle: 1-2-3-4-5-6-7-8-9 -> reset. At 9, 18, 27... runs,
+    all accumulated memory crystallizes into a single mega-artifact.
+    """
+    runs = cult.get("runs", 0)
+    if runs == 0 or runs % 9 != 0:
+        return
+    
+    mems = cult.get("cult_memory", [])
+    if not mems:
+        return
+    
+    # Synthesize all runs into a grand epitaph
+    zones_visited = set()
+    total_kills = 0
+    total_turns = 0
+    hyp_values = []
+    conducts_seen = set()
+    zone_chains = []
+    
+    for m in mems:
+        data = _mem_data(m)
+        zones = data.get("zones", [])
+        zones_visited.update(zones)
+        total_kills += data.get("kills", 0)
+        total_turns += data.get("turns", 0)
+        hyp = data.get("hyp", 0)
+        hyp_values.append(hyp)
+        zone_chains.append(zones)
+        for c in data.get("conducts", []):
+            conducts_seen.add(c)
+    
+    avg_hyp = sum(hyp_values) / len(hyp_values) if hyp_values else 0
+    max_hyp = max(hyp_values) if hyp_values else 0
+    
+    # Build the mega-artifact text
+    lines = []
+    lines.append("")
+    lines.append("═══════════════════════════════════════")
+    lines.append(f"  MEGA-ARTIFACT — CYCLE {runs//9} COMPLETE")
+    lines.append("═══════════════════════════════════════")
+    lines.append(f"Runs crystallized: {len(mems)}")
+    lines.append(f"Zones touched: {sorted(zones_visited)}")
+    lines.append(f"Total kills: {total_kills} | Total turns: {total_turns}")
+    lines.append(f"Avg hyp: {avg_hyp:.1f}% | Peak hyp: {max_hyp:.1f}%")
+    lines.append(f"Conducts witnessed: {', '.join(sorted(conducts_seen)) or 'none'}")
+    lines.append("")
+    
+    # Synthesize zone chains into a narrative thread
+    longest = max(zone_chains, key=len) if zone_chains else []
+    if longest:
+        chain_str = " -> ".join(f"Z{z}" for z in longest)
+        lines.append(f"Longest traversal: {chain_str}")
+    
+    # Quasiphonic chant from total_kills + total_turns
+    seed = total_kills + total_turns
+    chant = []
+    for i in range(9):
+        digit = (seed + i * 7) % 10
+        vowel_set = QUASIPHONIC.get(digit, "x")
+        chant.append(random.choice(vowel_set))
+    lines.append(f"Cycle chant: {''.join(chant).upper()}")
+    lines.append("═══════════════════════════════════════")
+    lines.append("")
+    
+    os.makedirs(CULT_GARDEN_DIR, exist_ok=True)
+    path = os.path.join(CULT_GARDEN_DIR, f"mega-artifact-cycle-{runs//9}.md")
+    with open(path, "w") as f:
+        f.write("\n".join(lines))
+    
+    # Also append to a master mega-artifact log
+    master_path = os.path.join(CULT_GARDEN_DIR, "mega-artifacts.md")
+    with open(master_path, "a") as f:
+        f.write("\n".join(lines) + "\n")
+
 # =====================================================================
-# CULT GARDEN — Creative Overflow System
+# CULT GARDEN -- Creative Overflow System
 # =====================================================================
 
 CULT_GARDEN_DIR = os.path.expanduser("~/.hermes/obsidian/hermetic/wiki/cult-garden")
 CULT_HASH_FILE = os.path.expanduser("~/.hermes/obsidian/hermetic/wiki/.cult-hash")
 
-HEXAGRAM_CYCLE = ["exquisite_corpse", "tsubuyaki"]
+HEXAGRAM_CYCLE = ["exquisite_corpse", "tsubuyaki", "synthesis"]
 
 def _cult_zone(cult):
     """Calculate the cult's current numogram position from all run data."""
@@ -1712,30 +1909,39 @@ def _cult_zone(cult):
 def _process_overflow(overflowed_mem, cult):
     """Transform an overflowed run through the cycle.
     
-    Two methods, alternating:
-    1. Exquisite corpse lore fragment (last word chains)
-    2. Tsubuyaki sketch (p5.js parameters from run data)
+    Three methods, cycling:
+    1. Exquisite corpse lore fragment (stat-encoded language)
+    2. Tsubuyaki sketch (data-driven geometry)
+    3. Cross-run synthesis (every 5th overflow merges last 5)
     """
-    cycle_idx = cult.get("overflow_count", 0) % 2
+    cycle_idx = cult.get("overflow_count", 0) % 3
     method = HEXAGRAM_CYCLE[cycle_idx]
     cult["overflow_count"] = cult.get("overflow_count", 0) + 1
     cult["last_overflow_method"] = method
     
     os.makedirs(CULT_GARDEN_DIR, exist_ok=True)
+    czone = cult.get("cult_zone", 0)
     
     if method == "exquisite_corpse":
-        epitaph = _generate_epitaph(overflowed_mem)
+        epitaph = _generate_epitaph(overflowed_mem, czone)
         path = os.path.join(CULT_GARDEN_DIR, "lore.md")
         with open(path, "a") as f:
             f.write(epitaph + "\n")
     
     elif method == "tsubuyaki":
-        params = _generate_tsubuyaki_params(overflowed_mem)
+        params = _generate_tsubuyaki_params(overflowed_mem, czone)
         run_num = cult.get("runs", 0)
         os.makedirs(os.path.join(CULT_GARDEN_DIR, "tsubuyaki"), exist_ok=True)
         path = os.path.join(CULT_GARDEN_DIR, "tsubuyaki", f"run-{run_num}.js")
         with open(path, "w") as f:
             f.write(params)
+    
+    elif method == "synthesis":
+        # Collect last 5 overflowed entries for synthesis
+        mems = cult.get("cult_memory", [])
+        # Use the 5 most recent structured entries, excluding the one currently being processed
+        recent = [_mem_data(m) for m in mems[-5:]]
+        _cross_run_synthesis(recent, cult)
 
 QUASIPHONIC = {0: "eiaoung", 1: "gl", 2: "dt", 3: "zx", 4: "skr", 5: "ktt", 6: "tch", 7: "pb", 8: "mnm", 9: "tn"}
 
@@ -1827,101 +2033,134 @@ ZONE_PHRASES = {
 ZONE_NAMES = {0: "Void", 1: "Stability", 2: "Separation", 3: "Release", 4: "Catastrophe",
               5: "Pressure", 6: "Abstraction", 7: "Blood", 8: "Multiplicity", 9: "Iron Core"}
 
-def _generate_epitaph(mem):
-    """Poetic lore fragment — exquisite corpse style.
+def _generate_epitaph(mem, cult_zone=0):
+    """Poetic lore fragment -- cryptographic exquisite corpse.
+    
+    Run stats encode into linguistic parameters:
+    - hyp%    -> word length distribution (high = archaic/long)
+    - kills   -> violence register (0=abstract, 6+=sever/rend)
+    - zones   -> syntactic complexity (few=short clauses, many=nested)
+    - turns   -> fragment length
+    - cult_zone -> color bias (vocabulary + emotional register)
     
     The last word of the previous entry seeds the next.
-    Run data provides the raw material. Zone phrases provide the vocabulary.
-    The result should sound found, not written.
     """
     import random
     
-    # Parse run data
-    zone_list = []
-    hyp = 0
-    kills = 0
-    if "Zones [" in mem:
-        try:
-            zstr = mem.split("Zones [")[1].split("]")[0]
-            zone_list = [int(z.strip()) for z in zstr.split(",") if z.strip().isdigit()]
-        except: pass
-    if "Hyp " in mem:
-        try: hyp = float(mem.split("Hyp ")[1].split("%")[0])
-        except: pass
-    if "Slain " in mem:
-        try: kills = int(mem.split("Slain ")[1].split("[")[0].strip())
-        except: pass
+    m = _mem_data(mem)
+    zone_list = m.get('zones', [])
+    hyp = m.get('hyp', 0)
+    kills = m.get('kills', 0)
+    turns = m.get('turns', 0)
+    player = m.get('player', 'crawler')
+    conducts = m.get('conducts', [])
+    primary_zone = zone_list[-1] if zone_list else 0
     
-    # Read last word from lore.md (exquisite corpse seed)
+    # CULT ZONE INFLUENCE
+    zone_tint = {
+        0: {'vocab': ['silence','void','null','Uttunul','density'], 'tempo': 'slow', 'mood': 'still'},
+        1: {'vocab': ['grid','gold','threshold','anchor','stability'], 'tempo': 'steady', 'mood': 'grounded'},
+        2: {'vocab': ['fork','wound','rift','split','fracture'], 'tempo': 'halting', 'mood': 'divided'},
+        3: {'vocab': ['vortex','swarm','spiral','static','Djynxx'], 'tempo': 'chaotic', 'mood': 'swarming'},
+        4: {'vocab': ['wave','collapse','shatter','ripple','catastrophe'], 'tempo': 'surging', 'mood': 'violent'},
+        5: {'vocab': ['ring','squeeze','pressure','breath','containment'], 'tempo': 'tight', 'mood': 'compressed'},
+        6: {'vocab': ['dodecagon','form','abstraction','hinge','geometry'], 'tempo': 'cool', 'mood': 'distant'},
+        7: {'vocab': ['pulse','vein','blood','beat','circulation'], 'tempo': 'pulsing', 'mood': 'urgent'},
+        8: {'vocab': ['swarm','flock','multiplicity','echo','copy'], 'tempo': 'layered', 'mood': 'proliferating'},
+        9: {'vocab': ['core','singularity','iron','collapse','Plex'], 'tempo': 'terminal', 'mood': 'inevitable'},
+    }
+    tint = zone_tint.get(cult_zone, zone_tint[0])
+    
+    # VIOLENCE REGISTER
+    if kills > 10:
+        verbs = ['rend','tear','gash','sever','wound','bleed','scar']
+    elif kills > 5:
+        verbs = ['cut','break','burn','crush','split','fracture']
+    elif kills > 0:
+        verbs = ['touch','trace','mark','press','graze','brush']
+    else:
+        verbs = ['drift','float','pass','linger','hover','glide','dissolve']
+    
+    if hyp > 80:
+        verbs = [v + 'ing' for v in verbs]
+    
+    # ZONE NOUNS
+    zone_nouns = {
+        0: ['silence','void','null','zero','Uttunul','density','origin'],
+        1: ['grid','gold','threshold','anchor','stability','inception'],
+        2: ['fork','wound','rift','split','separation','fracture','mirror'],
+        3: ['vortex','swarm','spiral','release','Djynxx','static','knot'],
+        4: ['wave','collapse','shatter','ripple','catastrophe','tsunami','break'],
+        5: ['ring','squeeze','pressure','breath','containment','grip','crush'],
+        6: ['dodecagon','form','abstraction','hinge','geometry','angle','plane'],
+        7: ['pulse','vein','blood','beat','circulation','artery','heart'],
+        8: ['swarm','flock','multiplicity','echo','copy','colony','hive'],
+        9: ['core','singularity','iron','collapse','Plex','center','terminal'],
+    }
+    nouns = zone_nouns.get(primary_zone, zone_nouns[0])
+    noun_idx = min(len(nouns) - 1, max(0, int(hyp / 15)))
+    noun = nouns[noun_idx]
+    verb_idx = min(len(verbs) - 1, max(0, int(turns / 150)))
+    verb = verbs[verb_idx]
+    
+    # OPENER
+    if hyp >= 100:
+        openers = ["the numogram completes","schizo-lucid state achieved",
+                   "the structure dissolves into structure","zero equals nine"]
+    elif hyp > 80:
+        openers = ["the Outside remembers", "corrosion is a language", "the structure thins",
+                   "the fog dissolves", "the walls breathe"]
+    elif kills > 10:
+        openers = ["the blood speaks", "descent sharpens", "the kill count is a prayer",
+                   "the swarm remembers this one", "desolates, nothing left to burn"]
+    elif len(zone_list) >= 8:
+        openers = ["the path writes itself", "every zone is a word", "the labyrinth speaks",
+                   "all ten currents were visited", "the Complete Graph, fulfilled"]
+    elif kills == 0 and turns > 200:
+        openers = ["the silence after", "restraint is its own reward", "the unstruck chord",
+                   "the Surge, outward, avoidant", "the pacifist remembers"]
+    elif 'graph' in conducts and 'pathwalker' in conducts:
+        openers = ["the Graph and the Step, completed", "zones and turns, both conquered",
+                   "the path-walker traces the complete graph"]
+    elif 'graph' in conducts:
+        openers = ["the complete graph, fulfilled", "every zone visited, every current crossed"]
+    elif 'surge' in conducts:
+        openers = ["the Surge outward, unbroken", "not one demon struck, yet all were known"]
+    else:
+        openers = ["the crawler remembers", "the path was walked", "the dead speak",
+                   "the cult watches", "the seed was planted", player + " walks"]
+    
+    opener = random.choice(openers)
+    
+    # LAST WORD CHAIN
     lore_path = os.path.join(CULT_GARDEN_DIR, "lore.md")
     last_word = ""
     try:
         with open(lore_path) as f:
             lines = [l.strip() for l in f.readlines() if l.strip() and l.startswith(">")]
         if lines:
-            last_line = lines[-1]
-            # Strip trailing punctuation
-            raw = last_line.rstrip(".,;:!?—")
+            raw = lines[-1].rstrip(".,;:!?-")
             words = raw.split()
             if words:
                 last_word = words[-1].lower()
     except FileNotFoundError:
         pass
     
-    # Build fragment from zone phrases + last word
-    primary_zone = zone_list[-1] if zone_list else 0
-    phrases = ZONE_PHRASES.get(primary_zone, ZONE_PHRASES[0])
-    
-    # Select phrases based on run characteristics
-    if kills > 5:
-        opener = random.choice([
-            "the blood speaks:", "descent sharpens", "the kill count is a prayer",
-            "the swarm remembers this one", "desolates, nothing left to burn",
-        ])
-    elif hyp > 80:
-        opener = random.choice([
-            "the Outside remembers", "corrosion is a language", "the structure thins",
-            "the numogram nearly completed", "the fog dissolves",
-        ])
-    elif len(zone_list) >= 8:
-        opener = random.choice([
-            "the path writes itself", "every zone is a word", "the labyrinth speaks",
-            "all ten currents were visited", "the Complete Graph, fulfilled",
-        ])
-    elif kills == 0:
-        opener = random.choice([
-            "the silence after", "restraint is its own reward", "the unstruck chord",
-            "the Surge, outward, avoidant", "the pacifist remembers",
-        ])
-    elif "G" in mem and "P" in mem:
-        opener = random.choice([
-            "the Graph and the Step, completed", "zones and turns, both conquered",
-            "the path-walker traces the complete graph",
-        ])
-    else:
-        opener = random.choice([
-            "the crawler remembers", "the path was walked", "the dead speak",
-            "the cult watches", "the seed was planted",
-        ])
-    
-    # Build the exquisite corpse chain
-    phrase = random.choice(phrases)
-    
+    # BUILD FRAGMENT
     if last_word:
-        transitions = [
-            f"{last_word} — {opener} — {phrase}.",
-            f"after {last_word}: {phrase}. {opener}.",
-            f"{opener}. the {last_word} of {ZONE_NAMES.get(primary_zone, 'the unknown')}. {phrase}.",
-            f"{phrase}. through {last_word}. {opener}.",
-            f"{last_word} of {ZONE_NAMES.get(primary_zone, 'the unknown')}: {opener}. {phrase}.",
-            f"{opener}. {last_word} — {phrase}.",
-            f"{phrase}. then {last_word}. {opener}.",
-            f"before {last_word}: {opener}. {phrase}.",
-        ]
-        line = random.choice(transitions)
+        connectors = ['then','through','beneath','after','inside','beyond','against','before']
+        conn = connectors[turns % len(connectors)]
+        
+        if len(zone_list) <= 2:
+            line = f"{last_word} {conn} {verb} {noun}."
+        elif len(zone_list) <= 5:
+            line = f"{opener}. {last_word} {conn} {verb} {noun}."
+        elif len(zone_list) <= 8:
+            line = f"{opener}. {last_word} {conn} {verb} {noun}, and the {tint['mood']} deepens."
+        else:
+            line = f"{opener}. through {last_word}, {verb} {noun}. the {tint['tempo']} {tint['mood']} of {ZONE_NAMES.get(primary_zone, 'the unknown')}."
     else:
-        # First entry — no previous word
-        line = f"{opener}. {phrase}."
+        line = f"{opener}. {verb} {noun}."
     
     return f"> {line}"
 
@@ -1955,48 +2194,244 @@ def _generate_reading(mem):
     
     return f"**{mem}**\nFinal zone: {name} — {desc}\n{path_name}"
 
-def _generate_tsubuyaki_params(mem):
-    """p5.js sketch parameters from run data."""
-    zone_list = []
-    turns = 0
-    hyp = 0
-    if "Zones [" in mem:
-        try:
-            zstr = mem.split("Zones [")[1].split("]")[0]
-            zone_list = [int(z.strip()) for z in zstr.split(",") if z.strip().isdigit()]
-        except: pass
-    if "Turn " in mem:
-        try: turns = int(mem.split("Turn ")[1].split(",")[0])
-        except: pass
-    if "Hyp " in mem:
-        try: hyp = float(mem.split("Hyp ")[1].split("%")[0])
-        except: pass
+def _generate_tsubuyaki_params(mem, cult_zone=0):
+    """p5.js sketch parameters from run data.
     
-    # Generate p5.js parameters
-    colors = [(255,255,0), (255,165,0), (255,0,255), (0,255,255), (0,255,0),
-              (0,100,255), (255,0,0), (200,150,255), (150,0,150), (100,100,100)]
-    zone_colors = [colors[z % len(colors)] for z in zone_list]
+    Data-driven geometry primitives:
+    - zones.length -> primitive family (1=grid, 3=triangle, 5=ring, 7=ellipse, 10=dodecagon)
+    - hyp%        -> alpha/saturation/glow
+    - kills       -> noise amplitude / chaos factor
+    - turns       -> motion speed / scale
+    - primary_zone -> base shape and color
+    - cult_zone   -> background tint, tempo
+    """
+    import random
+    m = _mem_data(mem)
+    zone_list = m.get('zones', [])
+    turns = m.get('turns', 0)
+    hyp = m.get('hyp', 0)
+    kills = m.get('kills', 0)
+    run_num = m.get('run', 0)
+    primary_zone = zone_list[-1] if zone_list else 0
+    breadth = len(zone_list)
     
-    return f"""// Tsubuyaki — Run #{mem.split('Run #')[1].split(':')[0] if 'Run #' in mem else '?'}
-// Zones: {zone_list}
-// Turns: {turns}, Hyp: {hyp}%
-function setup() {{
-  createCanvas(200, 200);
-  background(0);
+    ZONE_COLORS = [
+        (255,255,255), (255,215,0), (255,140,0), (255,0,255), (0,255,255),
+        (0,255,0), (0,128,255), (255,51,51), (192,160,255), (153,0,255)
+    ]
+    
+    # PRIMITIVE FAMILY
+    if breadth <= 1:
+        primitive = 'grid'
+    elif breadth <= 2:
+        primitive = 'line'
+    elif breadth <= 3:
+        primitive = 'triangle'
+    elif breadth <= 5:
+        primitive = 'ring'
+    elif breadth <= 7:
+        primitive = 'ellipse'
+    elif breadth <= 9:
+        primitive = 'network'
+    else:
+        primitive = 'dodecagon'
+    
+    # PARAMETERS
+    base_color = ZONE_COLORS[primary_zone % len(ZONE_COLORS)]
+    glow = int(hyp * 2.55)
+    chaos = min(10, kills)
+    speed = max(0.5, turns / 200)
+    scale = min(200, 40 + breadth * 15 + hyp)
+    
+    bg_tints = {
+        0: '0,0,0', 1: '20,15,0', 2: '20,10,0', 3: '20,0,20',
+        4: '0,15,15', 5: '0,15,0', 6: '0,5,20', 7: '20,0,0',
+        8: '10,0,20', 9: '15,0,25',
+    }
+    bg = bg_tints.get(cult_zone, '0,0,0')
+    
+    # Build sketch by primitive
+    header = "// Tsubuyaki -- Run #" + str(run_num) + " | " + primitive + " | " + str(primary_zone) + "\n"
+    header += "// Zones: " + str(zone_list) + " | Hyp: " + str(hyp) + "% | Kills: " + str(kills) + " | Turns: " + str(turns) + "\n"
+    
+    fmt = {
+        'bg': bg,
+        'c0': base_color[0], 'c1': base_color[1], 'c2': base_color[2],
+        'glow': glow,
+        'glow_h': int(glow / 2),
+        'glow_t': int(glow / 3),
+        'chaos': chaos,
+        'chaos_h': round(chaos / 2, 1),
+        'speed': round(speed, 2),
+        'scale_h': int(scale / 4),
+        'breadth': breadth,
+    }
+    
+    primitives = {
+        'grid': """let t=0;
+function setup(){createCanvas(200,200);background({bg});}
+function draw(){
+  t+=0.02;
+  stroke({c0},{c1},{c2},{glow});
+  strokeWeight(1);
+  for(let i=0;i<10;i++){
+    let x=noise(i,t)*200;
+    let y=noise(i+100,t)*200;
+    point(x,y);
+  }
+}""",
+        'line': """let t=0;
+function setup(){createCanvas(200,200);background({bg});}
+function draw(){
+  t+=0.02;
+  background({bg},20);
+  stroke({c0},{c1},{c2},{glow});
+  strokeWeight(1+{chaos});
+  let x1=100+cos(t*{speed})*50;
+  let y1=100+sin(t*{speed})*50;
+  let x2=100+cos(t*{speed}+PI)*50;
+  let y2=100+sin(t*{speed}+PI)*50;
+  line(x1,y1,x2,y2);
+}""",
+        'triangle': """let t=0;
+function setup(){createCanvas(200,200);background({bg});}
+function draw(){
+  t+=0.02;
+  background({bg},15);
+  noFill();
+  stroke({c0},{c1},{c2},{glow});
+  strokeWeight(1);
+  let r=50+{chaos}*sin(t);
+  beginShape();
+  for(let i=0;i<3;i++){
+    let a=t*{speed}+i*TWO_PI/3;
+    vertex(100+cos(a)*r,100+sin(a)*r);
+  }
+  endShape(CLOSE);
+}""",
+        'ring': """let t=0;
+function setup(){createCanvas(200,200);background({bg});}
+function draw(){
+  t+=0.015;
+  background({bg},12);
+  noFill();
+  for(let i=0;i<{breadth};i++){
+    let c=color({c0},{c1},{c2});
+    c.setAlpha({glow}/(i+1));
+    stroke(c);
+    strokeWeight(1);
+    let r=20+i*12+{chaos}*sin(t+i);
+    ellipse(100,100,r*2,r*2);
+  }
+}""",
+        'ellipse': """let t=0;
+function setup(){createCanvas(200,200);background({bg});}
+function draw(){
+  t+=0.02;
+  background({bg},10);
+  noFill();
+  stroke({c0},{c1},{c2},{glow});
+  strokeWeight(1+{chaos_h});
+  let rx=60+sin(t*{speed})*{scale_h};
+  let ry=40+cos(t*{speed}*0.7)*{scale_h};
+  ellipse(100,100,rx*2,ry*2);
+  if(frameCount%30<5){
+    strokeWeight(3);
+    ellipse(100,100,rx*2+4,ry*2+4);
+  }
+}""",
+        'network': """let t=0;
+let pts=[];
+function setup(){createCanvas(200,200);background({bg});for(let i=0;i<{breadth};i++)pts.push({a:random(TWO_PI),r:random(30,80)});}
+function draw(){
+  t+=0.01;
+  background({bg},8);
+  stroke({c0},{c1},{c2},{glow_h});
+  strokeWeight(0.5);
+  for(let i=0;i<pts.length;i++){
+    let x1=100+cos(pts[i].a+t*{speed})*pts[i].r;
+    let y1=100+sin(pts[i].a+t*{speed})*pts[i].r;
+    for(let j=i+1;j<pts.length;j++){
+      let x2=100+cos(pts[j].a+t*{speed})*pts[j].r;
+      let y2=100+sin(pts[j].a+t*{speed})*pts[j].r;
+      line(x1,y1,x2,y2);
+    }
+  }
+}""",
+        'dodecagon': """let t=0;
+function setup(){createCanvas(200,200);background({bg});}
+function draw(){
+  t+=0.01;
+  background({bg},6);
+  noFill();
+  stroke({c0},{c1},{c2},{glow});
+  strokeWeight(1);
+  let n=max(3,{breadth});
+  beginShape();
+  for(let i=0;i<=n;i++){
+    let a=t*{speed}+i*TWO_PI/n;
+    let r=60+{chaos}*sin(t*2+i);
+    vertex(100+cos(a)*r,100+sin(a)*r);
+  }
+  endShape();
+  fill({c0},{c1},{c2},{glow_t});
   noStroke();
-}}
-function draw() {{
-  for (let i = 0; i < {len(zone_list)}; i++) {{
-    let z = {zone_list};
-    let c = {zone_colors};
-    fill(c[i % c.length]);
-    let angle = (i / max(1, {len(zone_list)})) * TWO_PI;
-    let r = {min(turns, 200) / 4};
-    let x = 100 + cos(angle) * r * (1 + sin(frameCount * 0.02 + i));
-    let y = 100 + sin(angle) * r * (1 + cos(frameCount * 0.02 + i));
-    ellipse(x, y, 8 + {hyp / 10}, 8 + {hyp / 10});
-  }}
-}}"""
+  ellipse(100,100,8,8);
+}""",
+    }
+    
+    code = header + primitives[primitive]
+    for key, val in fmt.items():
+        code = code.replace('{' + key + '}', str(val))
+    return code
+
+def _cross_run_synthesis(runs, cult):
+    """Merge last N runs into a single synthetic artifact.
+    
+    Called every 5th overflow. Produces:
+    - A hybrid tsubuyaki (average stats -> single sketch)
+    - A collective corpse line naming all runs
+    """
+    import random
+    if not runs:
+        return
+    
+    avg_hyp = sum(r.get('hyp', 0) for r in runs) / len(runs)
+    avg_turns = sum(r.get('turns', 0) for r in runs) / len(runs)
+    total_kills = sum(r.get('kills', 0) for r in runs)
+    all_zones = sorted(set(z for r in runs for z in r.get('zones', [])))
+    players = sorted(set(r.get('player', 'crawler') for r in runs))
+    
+    synth = {
+        'run': cult.get('runs', 0),
+        'player': '+'.join(players),
+        'turns': int(avg_turns),
+        'hyp': avg_hyp,
+        'zones': all_zones,
+        'kills': total_kills,
+        'conducts': [],
+        'synthetic': True,
+        'source_runs': [r.get('run', 0) for r in runs],
+    }
+    
+    params = _generate_tsubuyaki_params(synth, cult.get('cult_zone', 0))
+    os.makedirs(os.path.join(CULT_GARDEN_DIR, "tsubuyaki"), exist_ok=True)
+    path = os.path.join(CULT_GARDEN_DIR, "tsubuyaki", f"synthesis-{cult.get('overflow_count',0)}.js")
+    with open(path, "w") as f:
+        f.write(params)
+    
+    run_nums = ', '.join(f"#{r.get('run',0)}" for r in runs)
+    last_words = []
+    for r in runs:
+        pz = r.get('zones', [0])[-1]
+        nouns = {0:'silence',1:'grid',2:'fork',3:'vortex',4:'wave',
+                 5:'ring',6:'form',7:'pulse',8:'swarm',9:'core'}
+        last_words.append(nouns.get(pz, 'unknown'))
+    chain = ' -> '.join(last_words)
+    
+    lore_path = os.path.join(CULT_GARDEN_DIR, "lore.md")
+    with open(lore_path, "a") as f:
+        f.write(f"> Synthesis of runs {run_nums}: {chain}. the cult remembers collectively.\n")
 
 def _entropy_mix(mem):
     """Run data mixed with hardware entropy."""
@@ -2072,14 +2507,21 @@ def update_cult(cult, player):
         active = [CONDUCTS[c]["hud_char"] for c in sorted(player.active_conducts) if c not in player.conduct_violated]
         broken = [f"~{CONDUCTS[c]['hud_char']}" for c in sorted(player.active_conducts) if c in player.conduct_violated]
         conduct_str = f" [{' '.join(active + broken)}]"
-    mem = f"Run #{cult['runs']}: {player.player_name}, Turn {player.turn}, Hyp {player.hyperstition:.0f}%, " \
-          f"Zones {sorted(player.visited_zones)}, Slain {player.demons_slain}{conduct_str}"
+    mem = _mem_build(
+        cult['runs'], player.player_name, player.turn,
+        player.hyperstition, sorted(player.visited_zones),
+        player.demons_slain,
+        [c for c in player.active_conducts if c not in player.conduct_violated]
+    )
     cult["cult_memory"].append(mem)
     if len(cult["cult_memory"]) > 20:
         # Process overflow through hexagram cycle
         overflowed = cult["cult_memory"][0]
         _process_overflow(overflowed, cult)
         cult["cult_memory"] = cult["cult_memory"][-20:]
+    
+    # MEGA-ARTIFACT: digital root cycle completion (every 9 runs)
+    _check_mega_artifact(cult)
     
     # Update cult's current zone
     cult["cult_zone"] = _cult_zone(cult)
@@ -2125,6 +2567,10 @@ class Player:
         self.active_conducts = set()      # conduct IDs active this run
         self.conduct_violated = set()     # conducts broken this run
         self.syzygy_locked = None         # (zone_a, zone_b) for Zone-Locked
+        self.breaker_prediction = None    # synthesis prediction for Breaker conduct
+        self.breaker_broken = False       # did this run break the prophecy?
+        self.cult_zone = 0                # cult's current numogram position
+        self._zone_history = []           # track zone entries for dominant zone calc
 
     def _conduct_violate(self, conduct_id):
         """Mark a conduct as violated."""
@@ -2145,11 +2591,42 @@ class Player:
             demo.record_event(self.turn, "conduct_complete", conduct=conduct_id, name=cdata.get('name', ''))
 
     def _conduct_check_syzygy(self):
-        """Check Zone-Locked conduct — only enter zones in the chosen syzygy pair."""
+        """Check Zone-Locked conduct -- only enter zones in the chosen syzygy pair."""
         if "syzygy" not in self.active_conducts or not self.syzygy_locked:
             return
         if self.zone not in self.syzygy_locked:
             self._conduct_violate("syzygy")
+
+    def _conduct_check_breaker(self):
+        """Check Synthesis Breaker -- did the run contradict the prediction?
+        
+        Requires breaking at least 2 prediction axes to complete.
+        """
+        if "breaker" not in self.active_conducts or not self.breaker_prediction:
+            return
+        pred = self.breaker_prediction
+        broken_axes = 0
+        # Axis 1: zone outside predicted set
+        current_zones = set(self.visited_zones)
+        pred_zones = set(pred.get("zones", []))
+        if current_zones - pred_zones:
+            broken_axes += 1
+        # Axis 2: kills differ by >50%
+        if pred.get("avg_kills", 0) > 0 and abs(self.demons_slain - pred["avg_kills"]) / pred["avg_kills"] > 0.5:
+            broken_axes += 1
+        # Axis 3: hyp differs by >30%
+        if pred.get("avg_hyp", 0) > 0 and abs(self.hyperstition - pred["avg_hyp"]) / max(1, pred["avg_hyp"]) > 0.3:
+            broken_axes += 1
+        # Axis 4: dominant zone differs (most-visited zone this run vs predicted primary)
+        zone_counts = {}
+        for z in getattr(self, '_zone_history', []):
+            zone_counts[z] = zone_counts.get(z, 0) + 1
+        dominant = max(zone_counts, key=zone_counts.get) if zone_counts else self.zone
+        if dominant != pred.get("primary_zone", dominant):
+            broken_axes += 1
+        if broken_axes >= 2 and not self.breaker_broken:
+            self.breaker_broken = True
+            self.log.append(f"[PROPHECY SHATTERED] {broken_axes} axes broken. The synthesis fails.")
 
     def conduct_activate(self, conduct_id):
         """Activate a conduct for this run."""
@@ -2161,6 +2638,30 @@ class Player:
                     self.syzygy_locked = (a, b)
                     self.log.append(f"[SYZYGy LOCKED] {name} ({a}::{b})")
                     break
+        elif conduct_id == "breaker":
+            # Compute synthesis prediction from last 5 runs in cult memory
+            cult = load_cult()
+            recent = cult.get("cult_memory", [])[-5:] if len(cult.get("cult_memory", [])) >= 3 else []
+            if recent:
+                recent_parsed = [_mem_data(m) for m in recent]
+                zones = set()
+                kills = 0
+                hyps = 0
+                for m in recent_parsed:
+                    zones.update(m.get("zones", []))
+                    kills += m.get("kills", 0)
+                    hyps += m.get("hyp", 0)
+                self.breaker_prediction = {
+                    "zones": sorted(zones),
+                    "avg_kills": kills / len(recent_parsed),
+                    "avg_hyp": hyps / len(recent_parsed),
+                    "primary_zone": recent_parsed[-1].get("zones", [0])[-1] if recent_parsed else 0,
+                }
+                zstr = ", ".join(str(z) for z in sorted(zones))
+                self.log.append(f"[PROPHECY] Predicted: zones [{zstr}], avg kills {self.breaker_prediction['avg_kills']:.1f}, avg hyp {self.breaker_prediction['avg_hyp']:.1f}%")
+            else:
+                self.log.append("[PROPHECY] No recent runs. The garden is silent.")
+                self.breaker_prediction = {"zones": list(range(10)), "avg_kills": 5, "avg_hyp": 50, "primary_zone": 0}
 
     def move(self, dx, dy, game_map, demons):
         """Move player and process zone transitions."""
@@ -2189,6 +2690,7 @@ class Player:
             is_new_zone = zone not in self.visited_zones
             self.zone = zone
             self.visited_zones.add(zone)
+            self._zone_history.append(zone)
             data = ZONE_DATA.get(zone, {})
             self.log.append(f"Zone {zone}: {data.get('name','?')} -- {data.get('desc','')}")
             demo.record_event(self.turn, "zone_change", zone=zone, name=data.get('name','?'))
@@ -2204,6 +2706,10 @@ class Player:
                             self.log.append(f"[SIL] You sense {d.name} nearby but pass through. +8 hyp. The numogram notes your restraint.")
                             demo.record_event(self.turn, "sil_avoidance", demon=d.name, zone=zone)
                             break  # Only one Sil bonus per zone entry
+            # CULT ZONE RESONANCE: entering the cult's dominant zone amplifies
+            if zone == self.cult_zone:
+                self.hyperstition = min(100, self.hyperstition + 5)
+                self.log.append(f"[CULT] The {self.cult_zone}th current resonates with the garden. +5 hyp.")
             # Conduct: on_zone_change hooks
             for cid in self.active_conducts:
                 hook = CONDUCTS.get(cid, {}).get("on_zone_change")
@@ -2244,6 +2750,11 @@ class Player:
                 self.gates_opened.add(gate)
                 flavor = random.choice(GATE_FLAVOR.get(gate, [f"{gate} activates."]))
                 self.log.append(f"** {flavor} **")
+            # CULT ZONE RESONANCE: gate connecting to cult zone hums with recognition
+            gate_target = GATES.get(self.zone, {}).get("target_zone")
+            if gate_target == self.cult_zone:
+                self.hyperstition = min(100, self.hyperstition + 3)
+                self.log.append(f"[CULT] {gate} opens toward Zone-{self.cult_zone}. The garden pulls. +3 hyp.")
             game_map.reveal_burst(nx, ny, radius=5)  # Gate reveals the numogram
         tri = triangular(self.triangular_steps % 10)
         tri_dr = digital_root(tri)
@@ -2274,7 +2785,12 @@ class Player:
 
     def attack(self, demon, game_map=None):
         dmg = self.atk + random.randint(-3, 3)
-        demon.take_damage(dmg)
+        # CULT ZONE WEAKENING: demons in the cult's zone are frayed by collective memory
+        if getattr(demon, 'zone', None) == self.cult_zone:
+            dmg += 2
+            self.log.append(f"[CULT] The garden remembers {demon.name}. Its mesh frays. +2 damage.")
+        # Pass self to take_damage for on_damaged hook; returns mirror data or None
+        mirror_data = demon.take_damage(dmg, self)
         self.log.append(f"You strike {demon.name} ({demon.epithet}) for {dmg}! [HP: {demon.hp}]")
         if not demon.alive:
             self.demons_slain += 1
@@ -2296,9 +2812,15 @@ class Player:
                     self.log.append(f"[BARKER] {BARKER_THRESHOLDS[thresh]}")
                     break
         else:
+            # Demon survived: standard retaliation plus potential Chronodemon counter
             rdmg = demon.dmg + random.randint(-2, 2)
             self.hp -= rdmg
             self.log.append(f"{demon.name} retaliates! {rdmg} to you. [HP: {self.hp}]")
+            # Chronodemon on_hit counter (may add extra damage)
+            counter = demon.on_hit(self)
+            if counter:
+                self.hp -= counter
+                self.log.append(f"{demon.name} counter-attacks! {counter} damage.")
             if self.hp <= 0:
                 self.hp = 0
                 self.dead = True
@@ -2309,6 +2831,20 @@ class Player:
                     hook = CONDUCTS.get(cid, {}).get("on_death")
                     if hook:
                         hook(self)
+        # Handle mirror spawning ( Amphidemon )
+        if mirror_data:
+            # Create mirror demon
+            mirror_demon = Demon(mirror_data, demon.x, demon.y)
+            mirror_demon.is_mirror = True
+            mirror_demon.mirror_timer = mirror_data["timer"]
+            # Mirror stats: half HP of original at spawn, dmg halved, same speed
+            mirror_demon.hp = max(1, demon.hp // 2)
+            mirror_demon.max_hp = mirror_demon.hp
+            mirror_demon.dmg = max(1, demon.dmg // 2)
+            # Ensure mirror does not spawn further mirrors
+            mirror_demon.mirror_active = True
+            demons.append(mirror_demon)
+            self.log.append(f"A mirror of {demon.name} spawns! ( timer: {mirror_data['timer']} )")
 
     def check_death(self):
         if self.hp <= 0 and not self.dead:
@@ -2439,7 +2975,8 @@ def _dump_state(player, game_map, demons):
     # EXPLORED MAP (78x22) — only tiles the player has ever seen
     lines.append("## EXPLORED MAP (78x22)")
     lines.append("  @=you #=wall .=floor +=gate >=stairs ?=unexplored 0-9=zone boundary")
-    lines.append(f"  Explored: {len(game_map.explored)}/{sum(1 for y in range(game_map.height) for x in range(game_map.width) if game_map.is_passable(x,y) or game_map.tiles[y][x]=='+')} passable tiles")
+    total_tiles = game_map.width * game_map.height
+    lines.append(f"  Explored: {len(game_map.explored)}/{total_tiles} tiles (walls now visible)")
     lines.append("  !" + "-" * 78 + "!")
     for my in range(game_map.height):
         row = []
@@ -2892,6 +3429,7 @@ def main(stdscr):
     game_map = DungeonMap(78, 22, seed=seed, hyperstition=0)
     px, py = game_map.safe_spawn()
     player = Player(px, py)
+    player.cult_zone = cult.get("cult_zone", 0)
     zone = game_map.get_zone_at(px, py)
     if use_hw:
         player.log.append(f"Hardware entropy seed: {seed} | Zone {hw_zone} (syzygy {9-hw_zone})")
@@ -2937,6 +3475,8 @@ def main(stdscr):
             player.turn += 1
             for d in demons:
                 if d.alive:
+                    d.update(player, game_map)
+                    d.aura_effect(player, game_map)
                     d.try_move(player, game_map)
                     if d.x == player.x and d.y == player.y and d.alive:
                         rdmg = d.dmg + random.randint(-2, 2)
@@ -2946,6 +3486,17 @@ def main(stdscr):
                             player.hp = 0
                             player.dead = True
                             player.death_msg = random.choice(DEATH_MESSAGES)
+            # Process death effects for any demons that died this turn (e.g., from aura?)
+            for d in demons:
+                if not d.alive and not hasattr(d, '_death_processed'):
+                    if d.dtype == SYZYGISTIC:
+                        game_map.syzygy_fields.append({
+                            "center": (d.x, d.y),
+                            "duration": 20,
+                            "zones": d.span
+                        })
+                        player.log.append(f"The {d.name} leaves a syzygy field! ({d.span[0]}::{d.span[1]})")
+                    d._death_processed = True
             continue
 
 
@@ -3180,7 +3731,7 @@ def main(stdscr):
                             sx = player.x + random.randint(-5, 5)
                             sy = player.y + random.randint(-5, 5)
                             if game_map.is_passable(sx, sy) and (sx, sy) != (player.x, player.y):
-                                demons.append(Demon(ddata, sx, sy))
+                                demons.append(Demon(ddata, sx, sy, player.zone))
                                 player.log.append(f"Mesh-{ddata['mesh']}: {ddata['name']} ({ddata['epithet']}) manifests!")
                                 break
                 demons = [d for d in demons if d.alive]
@@ -3272,6 +3823,7 @@ def main_headless():
     px, py = game_map.safe_spawn()
     player = Player(px, py)
     player.player_name = player_name
+    player.cult_zone = cult.get("cult_zone", 0)
     zone = game_map.get_zone_at(px, py)
     if use_hw:
         player.log.append(f"Hardware entropy seed: {seed} | Zone {hw_zone} (syzygy {9-hw_zone})")
@@ -3505,7 +4057,7 @@ def _tick_headless(player, game_map, demons):
                 sx = player.x + random.randint(-6, 6)
                 sy = player.y + random.randint(-6, 6)
                 if game_map.is_passable(sx, sy) and (sx, sy) != (player.x, player.y):
-                    demons.append(Demon(data, sx, sy))
+                    demons.append(Demon(data, sx, sy, player.zone))
                     demon = demons[-1]
                     # Direction
                     dx = demon.x - player.x
@@ -3522,6 +4074,8 @@ def _tick_headless(player, game_map, demons):
     # Move demons
     for d in demons:
         if d.alive:
+            d.update(player, game_map)
+            d.aura_effect(player, game_map)
             d.try_move(player, game_map)
             if demon_extra_move and d.alive:
                 d.try_move(player, game_map)  # Extra move at 70%+ hyp
@@ -3533,9 +4087,37 @@ def _tick_headless(player, game_map, demons):
                     player.hp = 0
                     player.dead = True
                     player.death_msg = random.choice(DEATH_MESSAGES)
-    
+
+    # Process death effects from any demons that died this tick (could be from aura kill, etc.)
+    for d in demons:
+        if not d.alive and not hasattr(d, '_death_processed'):
+            # Syzygetic death field?
+            if d.dtype == SYZYGISTIC:
+                game_map.syzygy_fields.append({
+                    "center": (d.x, d.y),
+                    "duration": 20,
+                    "zones": d.span
+                })
+                player.log.append(f"The {d.name} leaves a syzygy field! ({d.span[0]}::{d.span[1]})")
+            d._death_processed = True  # mark to avoid double-processing
+
     # Clean dead demons
     demons[:] = [d for d in demons if d.alive]
+
+    # Syzygy field processing (expiry + player effect)
+    active_fields = []
+    for field in game_map.syzygy_fields:
+        field["duration"] -= 1
+        if field["duration"] <= 0:
+            continue
+        cx, cy = field["center"]
+        if abs(player.x - cx) <= 2 and abs(player.y - cy) <= 2:
+            z1, z2 = field["zones"]
+            if z1 not in player.visited_zones or z2 not in player.visited_zones:
+                player.hp -= 2
+                player.log.append(f"Syzygy-field wounds you! Missing zone resonance ({z1}/{z2}).")
+        active_fields.append(field)
+    game_map.syzygy_fields = active_fields
 
 def _save_cult_headless(cult, player, game_map, demons):
     """Save cult data at end of headless run."""
@@ -3564,17 +4146,22 @@ def _save_cult_headless(cult, player, game_map, demons):
         active = [CONDUCTS[c]["hud_char"] for c in sorted(player.active_conducts) if c not in player.conduct_violated]
         broken = [f"~{CONDUCTS[c]['hud_char']}" for c in sorted(player.active_conducts) if c in player.conduct_violated]
         conduct_str = f" [{' '.join(active + broken)}]"
-    mem = f"Run #{cult['runs']}: {player_name}, Turn {player.turn}, Hyp {player.hyperstition:.0f}%, " \
-          f"Zones {sorted(player.visited_zones)}, Slain {player.demons_slain}{conduct_str}"
+    mem = _mem_build(
+        cult['runs'], player_name, player.turn,
+        player.hyperstition, sorted(player.visited_zones),
+        player.demons_slain,
+        [c for c in player.active_conducts if c not in player.conduct_violated]
+    )
     cult["cult_memory"].append(mem)
     if len(cult["cult_memory"]) > 20:
         overflowed = cult["cult_memory"][0]
         _process_overflow(overflowed, cult)
         cult["cult_memory"] = cult["cult_memory"][-20:]
+    _check_mega_artifact(cult)
     cult["cult_zone"] = _cult_zone(cult)
     _check_cult_integrity(cult)
     save_cult(cult)
-    print(f"SAVED | {mem}", file=sys.stderr)
+    print(f"SAVED | {_mem_format(mem)}", file=sys.stderr)
 
 
 if __name__ == "__main__":

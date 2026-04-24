@@ -46,6 +46,7 @@ def run_interactive(player_name="agent", max_turns=800, verbose=True):
     
     def parse_state():
         """Read /tmp/numogame_state.txt."""
+        import re
         try:
             with open("/tmp/numogame_state.txt") as f:
                 text = f.read()
@@ -67,20 +68,43 @@ def run_interactive(player_name="agent", max_turns=800, verbose=True):
         # Parse EXPLORED MAP
         if '## EXPLORED MAP' in text:
             map_source = text.split('## EXPLORED MAP')[1]
-            s['map_rows'] = [l.strip()[1:-1] for l in map_source.split('\n')
-                            if l.strip().startswith('!') and len(l.strip()) > 10]
+            # Stop at next section header
+            next_header = re.search(r'\n## [A-Z]', map_source)
+            if next_header:
+                map_source = map_source[:next_header.start()]
+            s['map_rows'] = []
+            for line in map_source.split('\n'):
+                line = line.strip()
+                if line.startswith('!') and len(line) > 10:
+                    inner = line[1:-1]
+                    if set(inner) == {'-'}:
+                        continue
+                    s['map_rows'].append(inner)
         
-        # Parse FULL MAP for known-unknowns (gates, zone boundaries)
+        # Parse FULL MAP for perfect pathfinding when stuck
         if '## FULL MAP' in text:
             map_section = text.split('## FULL MAP')[1]
+            # Stop at next section header (## followed by space and uppercase)
+            next_header = re.search(r'\n## [A-Z]', map_section)
+            if next_header:
+                map_section = map_section[:next_header.start()]
+            full_rows = []
+            map_y = 0
             for y, line in enumerate(map_section.split('\n')):
                 line = line.strip()
                 if line.startswith('!') and len(line) > 10:
+                    # Skip top and bottom border rows (dashes only)
+                    inner = line[1:-1]
+                    if set(inner) == {'-'}:
+                        continue
+                    full_rows.append(inner)
                     for x, ch in enumerate(line):
                         if ch == '+':
-                            known_gates.add((x-1, y-2))
+                            known_gates.add((x-1, map_y))
                         elif ch in '0123456789':
-                            known_zones.add((x-1, y-2))
+                            known_zones.add((x-1, map_y))
+                    map_y += 1
+            s['full_map_rows'] = full_rows
         
         # Gates from known memory (even if not currently visible)
         s['gates'] = list(known_gates)
@@ -118,6 +142,20 @@ def run_interactive(player_name="agent", max_turns=800, verbose=True):
         
         if tile == '?':
             base = 5.0
+            # Heuristic: if surrounded by 3+ walls, it's probably a wall tile
+            wall_count = 0
+            for ddx, ddy in [(1,0), (-1,0), (0,1), (0,-1)]:
+                nx, ny = tx + ddx, ty + ddy
+                if 0 <= nx < len(rows[0]) and 0 <= ny < len(rows):
+                    if rows[ny][nx] == '#':
+                        wall_count += 1
+            if wall_count >= 3:
+                return -999  # Almost certainly a wall
+            
+            # Favor tiles farther from center (push toward map edges / stairs)
+            dist_from_start = abs(tx - 39) + abs(ty - 11)
+            base += min(dist_from_start * 0.2, 10.0)
+            
             # Cross-run curiosity: agent knows gates exist from past runs
             if _has_seen_gates_ever:
                 base += 3.0  # "Gates are real. This mystery might hide one."
@@ -149,77 +187,67 @@ def run_interactive(player_name="agent", max_turns=800, verbose=True):
         return 0.0
     
     def find_most_interesting_target(state):
-        """BFS through explored tiles to find the most interesting reachable ? tile.
+        """Find next exploration target using FULL MAP BFS.
         
-        Returns (target_x, target_y) or None.
-        """
-        rows = state.get('map_rows', [])
-        if not rows or 'x' not in state:
+        The explored map tells us what's unknown ('?').
+        The full map tells us what's actually passable.
+        Together they give perfect pathfinding to nearest unexplored."""
+        explored_rows = state.get('map_rows', [])
+        full_rows = state.get('full_map_rows', [])
+        if not explored_rows or not full_rows or 'x' not in state:
             return None
         
         px, py = state['x'], state['y']
         
-        queue = deque([(px, py)])
-        visited_bfs = {(px, py)}
-        parent = {}
+        # First: check adjacent unexplored on explored map
+        for dx, dy, ch in [(1,0,'d'), (-1,0,'a'), (0,1,'s'), (0,-1,'w')]:
+            nx, ny = px + dx, py + dy
+            if 0 <= ny < len(explored_rows) and 0 <= nx < len(explored_rows[ny]):
+                if explored_rows[ny][nx] == '?' and ch not in failed_dirs.get((px,py), set()):
+                    # Verify it's actually passable on full map
+                    if 0 <= ny < len(full_rows) and 0 <= nx < len(full_rows[ny]):
+                        if full_rows[ny][nx] in '.>+0123456789':
+                            return ch
         
-        best_target = None
-        best_interest = -1
+        # BFS on full map to nearest '?' in explored map
+        queue = deque([(px, py)])
+        visited = {(px, py)}
+        parent = {}
         
         while queue:
             cx, cy = queue.popleft()
-            for dx, dy in [(1,0), (-1,0), (0,1), (0,-1)]:
+            for dx, dy, ch in [(1,0,'d'), (-1,0,'a'), (0,1,'s'), (0,-1,'w')]:
                 nx, ny = cx + dx, cy + dy
-                if (nx, ny) in visited_bfs:
+                if (nx, ny) in visited:
                     continue
-                if not (0 <= nx < 78 and 0 <= ny < len(rows)):
-                    continue
-                if ny >= len(rows) or nx >= len(rows[ny]):
+                if not (0 <= nx < len(full_rows[0]) and 0 <= ny < len(full_rows)):
                     continue
                 
-                tile = rows[ny][nx]
-                if tile == '#':
+                ftile = full_rows[ny][nx] if nx < len(full_rows[ny]) else '#'
+                if ftile not in '.>+0123456789':
                     continue
                 
-                if tile == '?':
-                    interest = tile_interest(nx, ny, rows, state)
-                    if interest > best_interest:
-                        best_target = (nx, ny)
-                        best_interest = interest
-                        parent[(nx, ny)] = (cx, cy)
-                    elif best_target is None:
-                        best_target = (nx, ny)
-                        parent[(nx, ny)] = (cx, cy)
-                elif tile == '>':
-                    # Stairs — always target, high priority
-                    interest = tile_interest(nx, ny, rows, state)
-                    if interest > best_interest:
-                        best_target = (nx, ny)
-                        best_interest = interest
-                        parent[(nx, ny)] = (cx, cy)
-                elif tile in '.0123456789+~!%*':
-                    visited_bfs.add((nx, ny))
-                    parent[(nx, ny)] = (cx, cy)
-                    queue.append((nx, ny))
+                visited.add((nx, ny))
+                parent[(nx, ny)] = (cx, cy, ch)
+                
+                # Check if this tile is unexplored OR stairs
+                if 0 <= ny < len(explored_rows) and 0 <= nx < len(explored_rows[ny]):
+                    etile = explored_rows[ny][nx]
+                    if etile == '?' or etile == '>':
+                        # Backtrace to first step from player
+                        current = (nx, ny)
+                        first_step = None
+                        while current in parent:
+                            px2, py2, step = parent[current]
+                            if px2 == px and py2 == py:
+                                first_step = step
+                                break
+                            current = (px2, py2)
+                        if first_step and first_step not in failed_dirs.get((px,py), set()):
+                            return first_step
+                
+                queue.append((nx, ny))
         
-        if not best_target:
-            return None
-        
-        # Blacklist unreachable targets
-        _blacklist.add(best_target)
-        if len(_blacklist) > 200:
-            _blacklist.clear()
-        
-        # Backtrace to first step
-        current = best_target
-        while current != (px, py) and current in parent:
-            prev = parent[current]
-            if prev == (px, py):
-                dx, dy = current[0] - px, current[1] - py
-                move_map = {(1,0): 'd', (-1,0): 'a', (0,1): 's', (0,-1): 'w',
-                            (1,1): 'n', (-1,1): 'b', (1,-1): 'u', (-1,-1): 'y'}
-                return move_map.get((dx, dy), '')
-            current = prev
         return None
     
     def flee_direction(demon_info):
@@ -279,16 +307,72 @@ def run_interactive(player_name="agent", max_turns=800, verbose=True):
                 if rows[ny][nx] == '>':
                     return ch
         return None
-    def _corridor_fallback(state):
-        """Find best corridor direction from explored map. From learning agent."""
+    def _nuclear_bfs_to_unexplored(state, full_rows, px, py):
+        """BFS on full map to find nearest tile that is unexplored in explored map.
+        Returns single keypress direction toward it, or None."""
+        explored_rows = state.get('map_rows', [])
+        if not explored_rows or not full_rows:
+            return None
+        
+        # Get directions already proven to fail from current position
+        current_pos = (px, py)
+        local_fails = failed_dirs.get(current_pos, set())
+        
+        queue = deque([(px, py)])
+        visited = {(px, py)}
+        parent = {}
+        
+        while queue:
+            cx, cy = queue.popleft()
+            for dx, dy, ch in [(1,0,'d'), (-1,0,'a'), (0,1,'s'), (0,-1,'w')]:
+                nx, ny = cx + dx, cy + dy
+                if (nx, ny) in visited:
+                    continue
+                if not (0 <= nx < len(full_rows[0]) and 0 <= ny < len(full_rows)):
+                    continue
+                
+                # Full map tells us what's passable
+                ftile = full_rows[ny][nx] if nx < len(full_rows[ny]) else '#'
+                if ftile not in '.>+0123456789':
+                    continue
+                
+                visited.add((nx, ny))
+                parent[(nx, ny)] = (cx, cy, ch)
+                
+                # Check if this tile is unexplored in the explored map
+                if 0 <= ny < len(explored_rows) and 0 <= nx < len(explored_rows[ny]):
+                    etile = explored_rows[ny][nx]
+                    if etile == '?':
+                        # Found unexplored! Backtrace to first step
+                        current = (nx, ny)
+                        first_step = None
+                        while current in parent:
+                            px2, py2, step = parent[current]
+                            if px2 == px and py2 == py:
+                                first_step = step
+                                break
+                            current = (px2, py2)
+                        # Don't return a first step we know fails
+                        if first_step and first_step not in local_fails:
+                            return first_step
+                        # If first step fails, keep searching for another path
+                
+                queue.append((nx, ny))
+        
+        return None
+    
+    def _corridor_fallback(state, avoid_dir=None):
+        """Find best corridor direction from explored map. Optionally avoid one direction."""
         rows = state.get('map_rows', [])
         if not rows or 'x' not in state:
             return random.choice(['d', 'a', 's', 'w'])
         px, py = state['x'], state['y']
         best_dir = None
         best_score = -1
-        for dx, dy, ch in [(1,0,'d'), (-1,0,'a'), (0,1,'s'), (0,-1,'w'),
-                            (1,1,'n'), (-1,1,'b'), (1,-1,'u'), (-1,-1,'y')]:
+        dirs = [(1,0,'d'), (-1,0,'a'), (0,1,'s'), (0,-1,'w')]
+        for dx, dy, ch in dirs:
+            if avoid_dir and ch == avoid_dir:
+                continue
             score = 0
             unknown_count = 0
             for dist in range(1, 10):
@@ -303,9 +387,9 @@ def run_interactive(player_name="agent", max_turns=800, verbose=True):
                             if tile == '+':
                                 score += 5
                             if tile == '>':
-                                score += 10  # Stairs — highest priority
+                                score += 10
                         elif tile == '?':
-                            score += 2  # Unknown tiles are attractive
+                            score += 2
                             unknown_count += 1
                         else:
                             break
@@ -313,12 +397,20 @@ def run_interactive(player_name="agent", max_turns=800, verbose=True):
                         break
                 else:
                     break
-            # Bonus for directions with more unknown tiles (push toward edge)
             score += unknown_count * 2
             if score > best_score:
                 best_score = score
                 best_dir = ch
         return best_dir or random.choice(['d', 'a', 's', 'w'])
+    # Track stuck state and failed directions
+    last_pos = None
+    stuck_count = 0
+    last_move_dir = None
+    failed_dirs = {}  # (x,y) -> set of directions that failed from this position
+    wall_map = set()  # (x,y) tiles we've proven are walls by failed movement
+    escape_mode = 0   # turns remaining in escape mode (random walk after being stuck)
+    recent_positions = deque(maxlen=20)  # For oscillation detection
+    
     proc.stdin.write('p\n')
     proc.stdin.flush()
     time.sleep(0.1)
@@ -327,11 +419,104 @@ def run_interactive(player_name="agent", max_turns=800, verbose=True):
     while turn_count < max_turns and state:
         hp_pct = state.get('hp', 0) / max(state.get('max_hp', 1), 1)
         
+        # Detect if we're stuck (same position as last turn)
+        current_pos = (state.get('x', 0), state.get('y', 0))
+        recent_positions.append(current_pos)
+        
+        # Oscillation detection: check if we're bouncing between same positions
+        oscillating = False
+        if len(recent_positions) >= 10:
+            # Check if the last 10 positions form a short cycle (2-4 unique positions)
+            unique_recent = set(list(recent_positions)[-10:])
+            if len(unique_recent) <= 3:
+                oscillating = True
+        
+        if last_pos == current_pos or oscillating:
+            if oscillating and last_pos != current_pos:
+                stuck_count += 1  # Treat oscillation as being stuck
+            elif last_pos == current_pos:
+                stuck_count += 1
+            if last_move_dir:
+                failed_dirs.setdefault(current_pos, set()).add(last_move_dir)
+                dir_map = {'d': (1,0), 'a': (-1,0), 's': (0,1), 'w': (0,-1)}
+                if last_move_dir in dir_map:
+                    dx, dy = dir_map[last_move_dir]
+                    wall_map.add((current_pos[0] + dx, current_pos[1] + dy))
+        else:
+            stuck_count = 0
+            last_move_dir = None
+        last_pos = current_pos
+        
+        # Decrement escape mode
+        if escape_mode > 0:
+            escape_mode -= 1
+        
         # === DECISION HIERARCHY ===
         move = ''
         
+        # 0. ESCAPE MODE: if stuck for 3+ turns, break out using least-visited gradient
+        if escape_mode > 0 or stuck_count >= 3:
+            if stuck_count >= 3:
+                escape_mode = 10
+            local_fails = failed_dirs.get(current_pos, set())
+            options = [d for d in ['d', 'a', 's', 'w'] if d not in local_fails]
+            
+            # DEAD END ESCAPE: if oscillating in a tiny loop or fully blocked,
+            # use the FULL MAP to BFS toward the nearest unexplored tile.
+            # The full map has complete wall/floor info — no more guessing.
+            if stuck_count >= 5 or len(options) <= 1:
+                full_rows = state.get('full_map_rows', [])
+                px, py = state.get('x', 0), state.get('y', 0)
+                
+                # If oscillating (stuck building up while moving), skip local
+                # adjacent check — it just finds the other end of the oscillation.
+                # Go straight to nuclear BFS for global path to unexplored.
+                if stuck_count >= 10:
+                    move = _nuclear_bfs_to_unexplored(state, full_rows, px, py)
+                    if move:
+                        last_move_dir = move
+                    else:
+                        move = random.choice(['d', 'a', 's', 'w'])
+                        last_move_dir = move
+                else:
+                    best_dir = None
+                    best_dist = float('inf')
+                    
+                    # Try each direction: use full map to see if it's floor
+                    for dx, dy, ch in [(1,0,'d'), (-1,0,'a'), (0,1,'s'), (0,-1,'w')]:
+                        if ch in local_fails:
+                            continue  # Skip proven-failed directions
+                        nx, ny = px + dx, py + dy
+                        if 0 <= ny < len(full_rows) and 0 <= nx < len(full_rows[ny]):
+                            tile = full_rows[ny][nx]
+                            # On full map: . = floor, > = stairs, + = gate, 0-9 = zone
+                            if tile in '.>+0123456789':
+                                v = visit_count.get((nx, ny), 0)
+                                dist = v  # least visited = best
+                                if dist < best_dist:
+                                    best_dist = dist
+                                    best_dir = ch
+                    
+                    if best_dir:
+                        move = best_dir
+                        last_move_dir = best_dir
+                    else:
+                        # True nuclear option: BFS on full map to nearest unexplored
+                        # tile in the explored map, then take first step
+                        move = _nuclear_bfs_to_unexplored(state, full_rows, px, py)
+                        if move:
+                            last_move_dir = move
+                        else:
+                            move = random.choice(['d', 'a', 's', 'w'])
+                            last_move_dir = move
+            elif options:
+                move = random.choice(options)
+                last_move_dir = move
+            else:
+                move = random.choice(['d', 'a', 's', 'w'])
+                last_move_dir = move
         # 1. SURVIVE: flee from demons at low HP
-        if hp_pct < 0.25 and state.get('nearby_demons'):
+        elif hp_pct < 0.25 and state.get('nearby_demons'):
             move = flee_direction(state['nearby_demons'][0]) * 3
         
         # 2. FIGHT: attack adjacent demon if healthy
@@ -347,41 +532,76 @@ def run_interactive(player_name="agent", max_turns=800, verbose=True):
             else:
                 step = find_most_interesting_target(state)
                 if step:
-                    # Anti-oscillation: if current tile visited many times, try corridor
-                    pos = (state.get('x', 0), state.get('y', 0))
-                    visits = visit_count.get(pos, 0)
-                    if visits > 4:
-                        cf = _corridor_fallback(state)
-                        if cf:
+                    # Avoid directions known to fail from this position
+                    local_fails = failed_dirs.get(current_pos, set())
+                    if step in local_fails:
+                        # Try corridor fallback avoiding failed directions
+                        cf = _corridor_fallback(state, avoid_dir=step)
+                        if cf and cf not in local_fails:
                             move = cf
+                            last_move_dir = cf
                         else:
-                            move = step
+                            # Try any direction not failed
+                            for d in ['d', 'a', 's', 'w']:
+                                if d not in local_fails:
+                                    move = d
+                                    last_move_dir = d
+                                    break
+                            if not move:
+                                # ALL directions failed — use nuclear BFS
+                                full_rows = state.get('full_map_rows', [])
+                                px, py = state.get('x', 0), state.get('y', 0)
+                                move = _nuclear_bfs_to_unexplored(state, full_rows, px, py)
+                                if move:
+                                    last_move_dir = move
+                                else:
+                                    # Truly trapped — random
+                                    move = random.choice(['d', 'a', 's', 'w'])
+                                    last_move_dir = move
                     else:
                         move = step
+                        last_move_dir = step
                 else:
-                    # Fully explored — check for stairs first, then gates, then corridor
-                    sd = _stair_direction(state)
-                    if sd:
-                        move = sd
+                    # No local targets — use nuclear BFS on full map to find
+                    # nearest unexplored territory. This is the key to traversing
+                    # large tree dungeons where unexplored areas are far away.
+                    full_rows = state.get('full_map_rows', [])
+                    px, py = state.get('x', 0), state.get('y', 0)
+                    move = _nuclear_bfs_to_unexplored(state, full_rows, px, py)
+                    if move:
+                        last_move_dir = move
                     else:
-                        gd = gate_direction(state)
-                        if gd:
-                            move = gd
-                        else:
-                            # Corridor-based fallback (from learning agent)
-                            move = _corridor_fallback(state)
+                        # Truly everything explored — random walk
+                        escape_mode = 20
+                        local_fails = failed_dirs.get(current_pos, set())
+                        options = [d for d in ['d', 'a', 's', 'w'] if d not in local_fails]
+                        if not options:
+                            options = ['d', 'a', 's', 'w']
+                        move = random.choice(options)
+                        last_move_dir = move
         
-        # Send move
-        for ch in move:
-            proc.stdin.write(ch)
+        # Send move (headless reads one command per line, takes first char)
+        if move:
+            if turn_count % 20 == 0 or stuck_count > 0:
+                local_fails = failed_dirs.get(current_pos, set())
+                print(f"  [DEBUG T:{turn_count}] move='{move[0]}' pos={current_pos} "
+                      f"stuck={stuck_count} fails={local_fails} "
+                      f"blacklist={len(_blacklist)}", file=sys.stderr)
+            proc.stdin.write(move[0] + '\n')
             proc.stdin.flush()
-            time.sleep(0.02)
+            time.sleep(0.1)
             turn_count += 1
-        
-        # Dump state (must include \n — headless reads line-by-line)
+        else:
+            # Debug: log when move is empty
+            local_fails = failed_dirs.get(current_pos, set())
+            print(f"  [DEBUG T:{turn_count}] EMPTY MOVE — pos={current_pos} "
+                  f"stuck={stuck_count} fails={local_fails} "
+                  f"blacklist={len(_blacklist)}", file=sys.stderr)
+
+        # Dump state
         proc.stdin.write('p\n')
         proc.stdin.flush()
-        time.sleep(0.05)
+        time.sleep(0.15)
         
         state = parse_state()
         if state and verbose and turn_count % 20 == 0:
