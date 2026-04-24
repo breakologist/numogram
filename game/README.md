@@ -100,6 +100,27 @@ Screen-scraping agent for Angband (a different roguelike). Included for referenc
 
 ---
 
+
+
+### Launchers
+
+Two convenience scripts are provided to start the server and open the browser automatically:
+
+- **`launch-garden.sh`** (bash): starts `python3 -m http.server` on port 4545, opens browser with xdg-open/open, and foregrounds the server process. Requires `lsof` for port checking (standard on Linux).
+  ```bash
+  ./game/launch-garden.sh          # default port 4545
+  ./game/launch-garden.sh 8080     # custom port
+  ```
+
+- **`garden.py`** (Python): portable cross-platform launcher using `webbrowser` module. No external dependencies beyond Python standard library.
+  ```bash
+  python3 game/garden.py
+  python3 game/garden.py 8080
+  ```
+
+Both scripts serve the `game/` directory and open `cult-garden-live.html` by default.
+
+
 ## Data Files
 
 - `cult.json` — **gitignored** player state (see above)
