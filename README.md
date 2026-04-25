@@ -32,7 +32,7 @@ Additional artifacts in `game/`:
 
 ### Documentation (`docs/`)
 
-- **`wiki/`** — complete Obsidian wiki (124 markdown pages). Triangle rotations, tetralogues, model assessments, I Ching/T'ai Hsuan bridges, roguelike design notes, demon lore, gate arithmetic, and operational logs.
+- **`wiki/`** — complete Obsidian wiki (**141 markdown pages**). Triangle rotations, tetralogues, model assessments, I Ching/T'ai Hsuan bridges, roguelike design notes, demon lore, gate arithmetic, operational logs, and cult-garden fiction. Wiki health metrics: 197 canonical tags, 21 core authority pages (≥10 inbound), zero medium-value orphans, avg link degree 5.53/5.53. See `WIKI-HEALTH-REPORT.md` for full audit.
 - **`aq-dictionary.md`** — Alphanumeric Qabbala cipher values (letter/number → AQ value)
 - **`hermes.md`** — seed architecture doc (Karpathy LLM-Wiki pattern, adapted for numogram work)
 - **`numogram-source.txt`** — core CCRU Decimal Numogram source (389-line canonical specification)
@@ -65,6 +65,17 @@ python game/numogram_roguelike.py --hw-entropy  # hardware seed
 python game/numogram_roguelike.py --headless    # agent mode (state dump to stdout)
 ```
 
+### Cult Garden (Overflow Visualizer)
+
+```bash
+cd game
+python3 serve-garden.py           # starts server on http://localhost:4545
+# Then open:
+#   http://localhost:4545/cult-garden-live.html        — live run view
+#   http://localhost:4545/cult-garden-zone-skins.html  — zone-themed skins
+```
+Player-specific `cult.json` lives in `game/`; a template (`cult.json.template`) is provided. Personal save files are **not** committed to the repo.
+
 ### Entropy Plugin
 ```bash
 cd entropy
@@ -79,6 +90,18 @@ Open `visualizer/numogram-visualizer-v7.html` in any browser. Features:
 - Strobogrammatic gate detection (palindromic/rotational)
 - Quasiphonic particle labels (zone-aligned phonemes)
 - Djynxxogram Base-36 full toggle variant (v7-djynxxogram)
+
+## Repository Status
+
+The wiki has completed a full structural audit (April 2026):
+
+- **141 pages**, 197 normalized tags, average link degree 5.53/5.53
+- **Zero medium-value orphans** — all pages with ≥3 inbound now have ≥2 outbound
+- **21 core authority hub pages** (≥10 inbound links each)
+- **Content hygiene pass** — 6 of 8 prose AI-ism patterns eliminated; 4 marginal hits remain in literary contexts
+- Full metrics and methodology: see `docs/WIKI-HEALTH-REPORT.md`
+
+Tag taxonomy follows singular/hyphen/lowercase conventions. Broken-link remediation prioritized navigational pages; intentional placeholders (root-section stubs) remain as red links pending content.
 
 ## Design Philosophy
 
