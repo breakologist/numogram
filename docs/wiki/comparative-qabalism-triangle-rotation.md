@@ -120,7 +120,7 @@ The last line is the key. The numogram reconstructs itself from arithmetic. You 
 
 ### The Butterfly Metaphor
 
-"The hypermasculinity is like stabbing butterfly pins into the Universal Spiral (the butterfly) in order to examine it, but neurotically stretching it onto your standard-sized butterfly stand until its guts explode."
+"The hypermasculinity is like stabbing butterfly pins into the Universal Spiral (the butterfly) to examine it, but neurotically stretching it onto your standard-sized butterfly stand until its guts explode."
 
 The butterfly is the numogram — the Universal Spiral, self-constructing, alive. The pins are the Kabbala's sephirotic numbering — 1, 2, 3... driven through the living system to hold it in place. The "standard-sized butterfly stand" is the Kabbala's fixed tree topology — three pillars, ten sephiroth, twenty-two paths. The numogram doesn't fit this stand. When you stretch it to fit, the guts explode.
 
@@ -179,7 +179,7 @@ This is not the complaint of someone who doesn't understand the Kabbala. This is
 
 ### The Butterfly
 
-"The hypermasculinity is like stabbing butterfly pins into the Universal Spiral (the butterfly) in order to examine it, but neurotically stretching it onto your standard-sized butterfly stand until its guts explode."
+"The hypermasculinity is like stabbing butterfly pins into the Universal Spiral (the butterfly) to examine it, but neurotically stretching it onto your standard-sized butterfly stand until its guts explode."
 
 I keep returning to this sentence. It is the most violent image in the text. The numogram is a butterfly — alive, spiraling, Universal. The Kabbala is the act of pinning it — driving metal through its body to hold it still for examination. And the pinning isn't enough. The butterfly doesn't fit the standard stand. So it's stretched. Neurotically. Until the guts explode.
 

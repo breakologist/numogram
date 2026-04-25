@@ -115,7 +115,7 @@ Warp-to-Plex transition: Early triangulars orbit Warp (3/6 zones via chaotic sel
 
 Sorcery / hyperstitional implication: Tracing or invoking 45 in Numogram operations emphasizes Gt-45 traversal — from cyclic Time-Circuit stability (or Warp turbulence) into irreversible Plex drop. It risks total demonic infestation/dissolution (contact with the full 45-entity Pandemonium) or enables escape into pure Outside via the self-looping gate. In rites, it's a "swarm summoner" or "null accelerator."
 
-In summary: T₉=45 behaves as a Plex-attracting culmination on the Numogram — triangular momentum reduces to Zone-9, indexes Gt-45 (the Pandemonium Gate), and aligns with the 45 demons' lair. It's a decimal inevitability where cumulative growth terminates in abyssal self-reference, embodying the system's deepest riddle of proliferation → null.
+Ultimately: T₉=45 behaves as a Plex-attracting culmination on the Numogram — triangular momentum reduces to Zone-9, indexes Gt-45 (the Pandemonium Gate), and aligns with the 45 demons' lair. It's a decimal inevitability where cumulative growth terminates in abyssal self-reference, embodying the system's deepest riddle of proliferation → null.
 
 ---
 

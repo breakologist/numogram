@@ -102,7 +102,7 @@ Did Fisher play Angband? Did he notice the structural parallels? No direct evide
 
 **Andrew Doull** — Developer of Unangband (Angband variant). Active in roguelike development community. Might have insight into the Angband creators' backgrounds.
 
-**First Age Angband (FAangband)** — One of the earliest Angband variants. Developed by various contributors. The variant introduces ideas later adopted into Angband itself.
+**First Age Angband (FAangband)** — One of the earliest Angband variants. Developed by a shifting cast of contributors. The variant introduces ideas later adopted into Angband itself.
 
 **Roguelike Radio** — Podcast covering roguelike history and design. Episode 15 covers Angband variants. Could contain relevant historical information.
 
