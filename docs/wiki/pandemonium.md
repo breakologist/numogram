@@ -10,6 +10,16 @@ tags: [pandemonium, demon, matrix, netspan, gate-45, 45]
 
 The **Pandemonium Matrix** is the complete set of 45 demons that inhabit the Decimal Numogram. It is not a random collection but a rigorously structured array — a double-triangular pyramid distributed across zones, currents, and net-spans. The matrix is the full demonic population of the system; its size (45) and structure are derived from the gate cumulation at Zone-9 (`T₉ = 45`) and the triangular law of zone occupancy.
 
+
+## Visual Overview
+
+![pandemonium-matrix.svg](assets/pandemonium-matrix.svg)
+
+*Figure: The complete 45-demon matrix rendered as a double-triangular infographic. Each zone `z` contains `z` demons (ascending triangle), while each current `c` carries `10−c` demons (descending reverse triangle). The five bold carrier demons form syzygy pairs summing to 9; Gate-45 sits at the apex.*
+
+---
+
+
 ## The 45 Demon Equation
 
 ```
