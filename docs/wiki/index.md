@@ -230,6 +230,7 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 - [[the-360-revelation]] — Net-spans sum to 360. Partition: outer regions (153) + Time-Circuit (207) = 360. HERMETIC=153, COSMOGONY=207. THE DECIMAL LABYRINTH=360. The system's deepest self-encoding.
 
 ## Theory & Philosophy
+- [[one-two-many-land-numbering]] — Land numbering practices: machinic code, Cantor/Gödel excess, computer qabbalism, nullotation, QWERTY lock-in
 
 - [[unleashing-the-numogram-source]] — Aamodt source catalog: 250 KB book, 28 derived wiki pages, gap inventory
 
