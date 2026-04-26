@@ -287,3 +287,7 @@ The CCRU mentions the T'ai Hsuan Ching (Tai Xuan Jing, Book of the Great Dark) �
 - Numogram: 10 zones (decimal, 2×5)
 
 The T'ai Hsuan Ching represents the "triadic" alternative to the I Ching's binary — and its ternary basis (powers of 3) maps directly to the Warp (zones 3, 6) and Plex (zone 9 = 3×3). The "triadic residues" of the T'ai Hsuan Ching echo the Numogram's exclusion of multiples of 3 from the Time-Circuit.
+
+## See also
+
+- [[decimal-numogram-reference]] — Comprehensive system mechanics reference

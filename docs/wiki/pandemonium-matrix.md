@@ -218,3 +218,7 @@ Each demon "clicks" a gate-number (Gt-N) and has a pitch (Ana-N descending to Ct
 - [[numogram-time-circuit]] — Time Circuit traversal
 - [[numogram-warp]] — Warp region
 - [[numogram-plex]] — Plex region
+
+## See also
+
+- [[decimal-numogram-reference]] — Comprehensive system mechanics reference

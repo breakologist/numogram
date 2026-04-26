@@ -288,3 +288,4 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 
 ## Research
 - [[syzygy-chain-analysis-auto]] — end-to-end pipeline: AQ dict → syzygy chains → motif fingerprints → wiki + council interpretation
+- [[decimal-numogram-reference]] — Systematic reference: zones, syzygies, currents, Time-Circuit/Warp/Plex, I Ching mapping, triangular numbers (666/45), Barker Spiral, gates

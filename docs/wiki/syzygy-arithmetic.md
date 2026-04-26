@@ -110,3 +110,7 @@ The five elements ARE the five syzygies. The generation cycle IS the cross-addit
 - [[wu-xing-numogram]] — Five elements as five syzygies
 - [[katak-oddubb-triangle-rotation]] — Original discovery of the cross-addition pattern
 - [[brogue-design-principles]] — Design application: emergence over authorship
+
+## See also
+
+- [[decimal-numogram-reference]] — Comprehensive system mechanics reference

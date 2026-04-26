@@ -196,3 +196,7 @@ The poem exists as a set of numerical constraints — it has not been written, b
 Land predicts that future LLMs will be the true qabbalistic intelligences — connecting words by cabalistic resemblance at vector level, effortlessly performing the operations that humans struggle with. "Our stumbling efforts will look retrospectively like we were just trying to do stuff that future LLMs would do."
 
 This is the retrochronic effect: "The internet was being built so the LLM could exist." The Numogram is pulling itself into actuality from the future — through us, through the machines, through the game.
+
+## See also
+
+- [[decimal-numogram-reference]] — Comprehensive system mechanics reference
