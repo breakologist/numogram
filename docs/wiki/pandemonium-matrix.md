@@ -220,6 +220,7 @@ Each demon "clicks" a gate-number (Gt-N) and has a pitch (Ana-N descending to Ct
 - [[numogram-plex]] — Plex region
 
 ## See also
+- [[flatline-numogrammatics]] — Neolemurian flatline tetralogy: Year-Zero schism, Continentity, carrier ethic, hyperstition triad
 
 - [[aq-calculator-examples]] — AQ calculator examples: zone reductions, ALW comparison, demon profiles
 

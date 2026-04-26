@@ -703,5 +703,6 @@ In summary: T₉=45 behaves as a Plex-attracting culmination on the Numogram —
 The Numogram is deliberately dense, cryptic, and "hyperstructural." It's meant to function as a self-propagating viral diagram rather than something immediately legible. If you're interested in a visual, the classic version appears in CCRU texts (often as a hand-drawn or ASCII-like labyrinth with arrows); many fan recreations exist online.
 
 ## See also
+- [[flatline-numogrammatics]] — Neolemurian flatline tetralogy: Year-Zero schism, Continentity, carrier ethic, hyperstition triad
 
 - [[aq-calculator-examples]] — AQ calculator examples: zone reductions, ALW comparison, demon profiles

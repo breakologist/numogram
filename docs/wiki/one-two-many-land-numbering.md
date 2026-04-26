@@ -154,3 +154,7 @@ exposing the contingency of order while accelerating toward the Outside.
 - `[[hyperstition-loop-design]]` — Hyperstition as self-fulfilling number-codes
 - `[[pandemonium-matrix]]` — Demonic enumeration as numbering practice
 - `[[numogram-calculator]]` — Zone mapping via digital reduction (Land's numerical decoding)
+
+## See also
+
+- [[flatline-numogrammatics]] — Neolemurian flatline tetralogy: Year-Zero schism, Continentity, carrier ethic, hyperstition triad

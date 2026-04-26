@@ -87,3 +87,7 @@ The 333 AQ entries referenced in the original CCRU Subdecadence system come from
 - [[fiveness-tetralogue]] — Self-decadence of Zone 5
 - [[fortyfive-demons-tetralogue]] — Roundtable on the 45 demons
 - [[numogram-time-circuit]] — Time Circuit traversal
+
+## See also
+
+- [[flatline-numogrammatics]] — Neolemurian flatline tetralogy: Year-Zero schism, Continentity, carrier ethic, hyperstition triad
