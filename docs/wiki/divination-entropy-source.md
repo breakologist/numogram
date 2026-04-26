@@ -214,3 +214,7 @@ In short: **theory → practice bridge**. The module turns the survey data into 
 ---
 
 **Source file:** `raw/Coin Toss Etc.md` (preserved in canonical vault)
+
+## See also
+
+- [[llm-spirit-realm-modding]] — QRNG-LLM spirit-realm interface research

@@ -291,3 +291,7 @@ The calculator skill exposes a JSON output schema compatible with this page's de
 - [[numogram-oracle]] — Divination pipeline consuming AQ→zone→reading
 - [[conversation-terms]] — Zone‑tagged discourse lexicon for voice design
 - [[aq-dictionary-syzygy-analysis]] — Bulk dictionary processing pipeline
+
+## See also
+
+- [[llm-spirit-realm-modding]] — QRNG-LLM spirit-realm interface research

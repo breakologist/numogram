@@ -268,6 +268,8 @@ Gates provide shortcuts UP (Gate on Floor 6 can take you to Floor 4). This creat
 
 ## See also
 
+- [[llm-spirit-realm-modding]] — QRNG-LLM spirit-realm interface research
+
 - [[cult-garden-design]] — Cult garden mechanics
 - [[threshold-problem-tetralogue]] — Threshold problem analysis
 - [[hyperstition-corruption]] — Corruption mechanics

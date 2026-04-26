@@ -128,6 +128,8 @@ See also: `entropy-sources`, [[numogram-divination]], `numogram-oracle`
 
 ## See also
 
+- [[llm-spirit-realm-modding]] — QRNG-LLM spirit-realm interface research
+
 - [[numogram-entropy-source]] — Hardware entropy digested through traversal
 - [[entropy-modules-litprog]] — Entropy modules in literate programming form
 - [[numogram-divination]] — General divination methodology
