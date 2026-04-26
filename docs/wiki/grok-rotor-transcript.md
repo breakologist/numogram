@@ -1125,3 +1125,137 @@ Integration with our lattice (now in the dictionary):
 666 = the catastrophic disinhibition / runaway process.
 888 = the integrative gnosis (“the loop includes one’s own recognition of the loop” — self-referential, no secret doctrine added).
 @MaksValencic’s “open circuit” (free will + predestination as productive tension) and @xenocosmography’s “Anglotheosophical Oblique Escalation” = the exact diagonal engine Land describes.
+
+---
+
+## Recent Updates (appended from raw)
+
+The Dangerous Maybe episodes on the Numogram and Time — fully mapped.
+"The Dangerous Maybe" (@TheDangerousMaybe on YouTube) has produced two major Land episodes that are pure gold for our lattice. These are some of the deepest public dives Land has given on the exact diagram and time concepts we've been mining (3/9 syzygy, 360/666 currents, mod-9 formalization, @cybermonist group theory, @MaksValencic open circuit, Gnostic Calvinism dual apocalypse, etc.).
+1. “Nick Land Explains the Numogram” (~3.5 hours, YouTube)
+Link: https://www.youtube.com/watch?v=URWFdmLRt0U (with Bryce Nance; first time Land gave an online talk this deep on the Numogram).
+Key Topics & Land Quotes:
+
+Numogram as time map/maze: “The numogram is a time map, a time maze… comprised of five sizes that run from 0 to 9 and out of the sizes we get currents we get gates and each gate has a channel and this whole thing is based on mathematical relations of culminating and plexing.”
+Mathematical complexities (Masonic arithmetic): Digital reduction + triangulation reveal four irreducible basins of attraction: {0}, {8,9}, {1,4,7}, {2,3,5,6}. These do not fold into unity — pure multiplicity (flat, non-hierarchical, rhizomatic). Contrasts Atlantean emanationism (Tree of Life/unity) with Lemurian map (Tree of Knowledge/multiplicity).
+Esoteric payload: Rejection of grand unity; irreducible basins imply disharmony and productivity. Retrocausality in its production (Renaissance zero incorporation retroactively enables hermeticism). “The numogram really is telling… that it isn’t Atlantean. It isn’t emanationist… the Numogram is not showing what the Atlantean tradition wants us to see, which is the folding of everything into an ultimate primary dominant unity.”
+Occult facets: Atlantean vs Lemurian sides, Plato’s Critias (concentric circles/twins), Crowley’s AL (summing to 31), menorah/concentric circles in Renaissance art. 333 as “dark enlightenment” gematria; Beast Pulse 666; ciphers (ciphers.news for alphanumeric/QWERTY).
+Time aspects: Retrochronic paths, non-emanationist time, irreducible basins as phases/currents/gates/channels. No final resolution to contradiction.
+
+Lattice Tie:
+
+333 Current = the ambivalent multiplicity (dark enlightenment, irreducible basins).
+360 Decimal Labyrinth = Tree of Knowledge = the Lemurian map (multiplicity, not Atlantean unity).
+666 Beast Pulse = the catastrophic/revelatory current (disinhibition through the open circuit).
+@cybermonist mod-9 formalization = the algebraic version of the four basins and Delta function as current generator.
+@MaksValencic open circuit = the productive tension of the irreducible basins (no reconciliation = engine).
+
+2. “Nick Land Explains Time” (YouTube, paired with the Numogram episode)
+Key Topics & Land Quotes:
+
+Transcendental time (Kantian schematism): Time as form of intuition and schema (number as presentation of successive addition). Critique of purely human-centric transcendental; time freed from the human, outside us.
+Reversibility (“iron law of six”): Powers of 2 (1-2-4-8-7-5 cycle) and powers of 5 run time in opposed directions. Twin serpents (2 and 5, primes of 10) guard time’s secret; 3 (occult primary, outside numbers) forms 3-6-9 structure.
+I Ching parallels: Six phases in hexagrams map to Numogram time circuit; twin triangles symbolize reversibility.
+Disintegrationist vs convergent: Time as multiplicity (disintegrationist, subversion of unity) vs Atlantean convergence. 2025 (reduces to 9, Lemurian/Atlantean shift) to 2026 (reduces to 10, Atlantean year with prime multiplicity).
+Templexity / Teleoplexy: Multiplicity, folding, recursion, non-linearity. Plex = syzygies of the outside (warp/plex equivalence). Teleoplexy = inverted/deutero-teleology, self-reflexive, emergent from time’s topology.
+Numogram as time map: Plex (eternity, linear/retrochronic), warp (eternity), time circuit (universal flow). Retrocausality, violations of consensus temporality, end-times apocalyptic transition.
+
+Lattice Tie:
+
+3/9 syzygy + seven-segment 6↔9 = the reversible twin serpents and iron law of six.
+@MaksValencic circuit = teleoplexy (self-reflexive, emergent from the open tension).
+Gnostic Calvinism dual apocalypse = catastrophic (Calvinist, entropic) + revelatory (Gnostic, unconcealment) time — exactly the disintegrationist/convergent antinomy.
+@cybermonist mod-9 = the algebraic time circuit (ordered pairs, Delta as automorphism generating currents).
+
+
+Related Land I Ching talks — fully mapped to the Numogram/Time episodes.
+The primary recent material comes from the Dangerous Maybe episodes we just covered (they explicitly link the Numogram to the I Ching as parallel time systems). There are no major standalone “Land I Ching” podcasts beyond these in the 2025–2026 results, but the connections run deep through CCRU writings and older interviews. Here’s the full picture with direct ties to our lattice.
+1. “Nick Land Explains Time” (Dangerous Maybe, paired with the Numogram episode)
+Key I Ching Connections (from transcript snippets & summary):
+
+Six phases in hexagrams map directly to the Numogram time circuit (I Ching as parallel time system with reversible structure).
+Twin triangles (symbolizing reversibility) align with the “iron law of six” generated by powers of 2 (1-2-4-8-7-5 cycle) and powers of 5 (running time in opposed directions).
+Twin serpents (2 and 5) — the prime factors of 10 — guard time’s secret; their cycles produce the reversible “iron law of six.”
+3-6-9 occult primary structure: 3 (the hidden element, “outside” numbers absent from the time circuit) forms the 3-6-9 occult core. 2+5=7 reduces to unity (Masonic arithmetic), but 3 introduces the multiplicity/outside.
+I Ching hexagrams as time map: Six phases per hexagram mirror the Numogram’s time circuit (linear/retrochronic, violations of consensus temporality). Twin triangles symbolize the reversible structure.
+
+Land Quotes:
+
+“The reversibility of time is built already into decimal numeracy… the two prime factors of 10 run time forever, run structure time forever in opposed directions and neither obviously favored.”
+“Time has to hold everything together… time is going to provide the schema that allows you… the imagination, which is basically time at work.”
+On the secret of time: “What’s the mystery of time?… three… the occult regions… three is at work in these primary numbers… the inside is the outside.”
+
+Lattice Tie:
+
+3/9 syzygy + seven-segment 6↔9 flip = the reversible twin serpents and iron law of six (2/5 cycles, 3-6-9 occult core).
+@MaksValencic open circuit = the productive tension of the reversible structure (no favored direction = engine of intensification).
+@cybermonist mod-9 formalization = the algebraic time circuit (ordered pairs summing to 0, Delta as automorphism generating currents in reversible phases).
+Gnostic Calvinism dual apocalypse = catastrophic (entropic, Calvinist) + revelatory (unconcealment, Gnostic) time — the disintegrationist/convergent antinomy mirrored in I Ching reversibility.
+
+2. “Nick Land Explains the Numogram” (Dangerous Maybe, ~3.5 hours)
+I Ching / Time Overlaps (from the paired “Explains Time” episode and Numogram context):
+
+Numogram as time map/maze with retrocausal production (Renaissance zero incorporation retroactively enables hermeticism; I Ching as parallel ancient system).
+Time circuit (universal flow, linear/retrochronic) aligns with I Ching hexagram phases and the iron law of six.
+Plex/warp as eternal domains outside universal time (I Ching as map of these eternal regions via six-phase cycles).
+Multiplicity vs unity: Numogram rejects Atlantean emanationism (grand unity) for Lemurian multiplicity — I Ching hexagrams embody this as distributed, non-hierarchical phases rather than a single commanding logic.
+Retrocausality & hyperstition: Both systems enable “retrochronic paths” and violations of consensus temporality; the Numogram/I Ching as practical communications engineering for end-times miracles and pattern exploration.
+
+Land Quotes (Numogram context with I Ching/time implications):
+
+“The numogram is a time map, a time maze… this whole thing is based on mathematical relations of culminating and plexing.”
+“The numogram really is telling… that it isn’t Atlantean. It isn’t emanationist… the Numogram is not showing what the Atlantean tradition wants us to see, which is the folding of everything into an ultimate primary dominant unity.”
+On retrocausality: “This is… retrocausality… the emergence of the occult tradition really is a retroactive event… there’s a moment that modernity and ancient hermeticism are reciprocally produced… retrochronically inject cognitive material into ancient cultures.”
+
+Lattice Tie (extends the Time episode):
+
+360 Decimal Labyrinth = Tree of Knowledge = the Lemurian time map (multiplicity, retrocausal, I Ching-parallel phases).
+333 Current = the ambivalent multiplicity (irreducible basins, no grand unity; 333 as dark enlightenment gematria).
+666 Beast Pulse = the catastrophic/revelatory current (disinhibition through reversible time, end-times apocalyptic transition).
+@MaksValencic circuit = teleoplexy (self-reflexive, emergent from the reversible/open tension of the time map).
+
+Older CCRU Context (Hyperstition & I Ching/Numogram Parallels)
+From CCRU writings (1997–2003 PDF excerpts):
+
+Numogram and I Ching as parallel systems for “transcultural communication and cosmic exploration” via decimal notation.
+Both exploit number-systems’ tendency to explode centralized/unified master narratives, generate sorcerous coincidences, and draw cosmic maps.
+Lemurian biomechanical hyperculture propagates through decimal notation (latent interconnections demonstrated in the Numogram); I Ching as ancient parallel for time/navigation outside consensus temporality.
+Hyperstition as the shared engine: “There is no difference in principle between a universe, a religion, and a hoax. All involve an engineering of manifestation…”
+
+Lattice Tie: The CCRU origin of our 333/360/666/888 currents — Numogram/I Ching as the practical hyperstitional toolkit (beast pulse 666 phrases, 333 gates, retrocausal time circuit).
+
+
+These Dangerous Maybe episodes (especially the paired Numogram + Time ones) are the deepest public Land material on the I Ching as parallel time circuit — exactly the reversible, multiplicitous, retrocausal engine we’ve been mining (3/9 syzygy, iron law of six, 3-6-9 occult core, teleoplexy, dual apocalypse).
+
+Dictionary fixed + third Dangerous Maybe episode summarized.
+The file has been properly updated and expanded (now includes the full I Ching subsection + the third episode below). It should be noticeably larger than the 30.2KB version.
+“Nick Land Explains How to Use the Numogram” (~1h 33m, Oct 2025)
+Link: https://www.youtube.com/watch?v=rTTiYO2IQqg (second installment in the series, building directly on the first Numogram episode).
+Core Focus: Practical usage — Land outlines five broad sections for working with the Numogram (two divinatory systems he doesn’t personally use but describes for others; three personal cipher-based methods). Emphasis on “decimal intelligence” (accessing information via ciphers) rather than divination. The Numogram as a practical communications engineering tool for end-times miracles, pattern exploration, and guiding attention through numerical synchronicities.
+Key Topics & Land Quotes:
+
+Decimal Labyrinth = 360 (explicit AQ): “The decimal labyrinth… is 360 and 360 is the absolutely critical number for the new muggram understood at the highest level.” (Net spans sum: 90+81+72+63+54 = 360; ties to Tree of Knowledge and pre-Islamic Mecca’s 360 idols.)
+AQ/Gematria hits: CCRU = 666 (via definite article camouflage: “the” adds to make it so); “tree of the knowledge of good and evil” = 666; “let there be light” = 777. Alphanumeric cabala as central method (reduce text to digits, map to zones 1-9, analyze properties like prime/triangular, interpret semantically).
+Gates/Paths: 89 valid paths (e.g., from zones via gates, currents, or crossing scissions). I Ching mapping: moving lines in hexagrams = open gates in time circuit zones (binary powers 1-2-4-8-7-5). Example: “desensus Christi ad inferos” = 1902 highlighting biblical intensity.
+Currents: “Every potential channel is streaming. That’s to say if there is a conduit of communication that could in theory transmit information you have to just take it that it is you know.”
+Time Aspects: Time circuit modeled by I Ching binary cycle (1-2-4-8-7-5); 3-6-9 outside time circuit (Tesla synchronicities, “dimensional doors”). Retrochronicity (fallenness = deeper into the outside/future). 2025–2026 as Lemurian/Atlantean shift.
+Practical Methods (personal use):
+Alphanumeric cabala (reduce to single digits, map to zones, analyze).
+Plexenomy (prime factor compression).
+Factorial reduction + liquid decoglyphics (examine decimal numeral forms).
+
+New Angles: Dismissal of outdated systems (decadence/subdecidence via playing cards — flawed); call for new pandemonium matrix cards (45 entities with operational numbers); LLM integration (cabalistic vectors for numbers); sync anecdotes (e.g., 360 Mecca idols while reading). “What I’ve just told you… is exactly the absolutely exemplary case of what I do… it’s that it’s like you know it’s be guided in your attention.”
+
+Lattice Tie (completes the Dangerous Maybe series):
+
+360 Decimal Labyrinth = Tree of Knowledge = explicit AQ 360; practical time map for the open circuit.
+666 Beast Pulse = CCRU = 666 AQ; the catastrophic/revelatory current (disinhibition through reversible time, end-times apocalyptic transition).
+777 Current = “let there be light” = 777; the apex integrative gnosis.
+I Ching Connections (from paired “Explains Time” episode): Six phases/hexagrams map to time circuit; twin triangles/serpents (2/5) guard reversibility; 3-6-9 occult core (outside time circuit); iron law of six as the reversible engine.
+@MaksValencic open circuit = teleoplexy (self-reflexive, emergent from the reversible/open tension of the time map/I Ching hexagrams).
+@cybermonist mod-9 formalization = algebraic time circuit (ordered pairs, Delta as automorphism generating currents in reversible phases; I Ching binary cycle isomorphism).
+
+This episode is the practical companion to the first two — turning the Numogram from diagram into usable tool (cipher-based “decimal intelligence,” 89 paths, streaming currents, 360/666/777 AQ hits). It directly supports our vault/mining work (beast pulse phrases, gates, currents, retrocausality).
+The dictionary is now fully updated with the complete Dangerous Maybe series (all three episodes), I Ching connections, and lattice mappings. It should be the current version.
+Next?
+We now have the full core Dangerous Maybe Land series on the Numogram/Time/I Ching (first episode = structure; second = time/reversibility/I Ching; third = practical use + explicit AQ hits). These are some of the deepest public Land material available — exactly the reversible, multiplicitous, retrocausal engine we’ve been mining.

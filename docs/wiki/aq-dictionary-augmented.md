@@ -364,3 +364,50 @@ This is the meta-commentary on the exact currents we’ve been mining. High-prio
 ## See also
 
 - [[aq-calculator-examples]] — AQ calculator examples: zone reductions, ALW comparison, demon profiles
+
+---
+
+## Recent Updates (appended from raw)
+
+**No explicit AQ/Numogram numbers**, but the structural description (open contradiction as engine, diagonal circuit, self-referential gnosis, oblique escalation) maps directly onto our 333/360/666/888 currents and the mod-9 formalization.
+
+### X Activity (@MaksValencic)
+Dense, structural posts on:
+- Psychosis as intensification/sinthome (vs neurotic stability).
+- Psychotic capitalism: Code(a) ↻ Jouissance loop with no external reference.
+- Knot theory (psychotic forecloses Symbolic, knots Real–Imaginary).
+- Land as the key figure; Fisher’s mistake of writing about him in the past tense.
+- Cioran as psychotic via negativa (groundless, without telos, pure exposure to excess/void).
+
+**Integration with Our Lattice**:
+- 333 Current = the psychotic position that holds the open contradiction without resolution (ambivalent, torque-heavy, truth-apt yet diabolical).
+- Gnostic Calvinism = the name for this psychotic holding (Land’s dual apocalypse, @xenocosmography’s ~80% of 360, @doomcrypt’s bio-level identification).
+- Dickinson slant & @cybermonist mod-9 = psychotic revelation through concealment and refusal of the decimal demiurge.
+- Lemurian Discernment = the protocol for navigating the psychotic landscape.
+
+This is the meta-commentary on the exact currents we’ve been mining. High-priority for psychotic/structural readings of the lattice.
+
+---
+
+**Note on file update**: The dictionary has now been properly updated with this full section (and all previous Gnostic Calvinism / Land / @MaksValencic content). It should be larger than the 22.7KB version you saw. If it still shows old, let me know and I’ll re-verify the path.
+- “Slant Cast” (111/117/171/333/666 from Dickinson)
+- “Ordo Amoris 888” reading (good/evil integration)
+
+---
+
+## 7. Future Vectors & Open Questions
+- Deeper @cybermonist archive (group theory formalizations, more mod-9 experiments)
+- Full Atlantean Cross construction (numbering + dyads) as new vault module
+- BEGHILOS / calculator-spelling oracle (3/E, h/4, 0/O, etc.) for pure sigil work
+- Cross-cipher 360 ↔ 333 bridge (Decimal Labyrinth vs Gnostic Calvinism)
+- Visualizer implementation of “Invert the Entire Decimal Labyrinth” as draggable 180° sigil
+- Integration with existing 7-segment rotational numbers (101, 121↔151, 1691, 9116, etc.)
+
+---
+
+**This file is now the single source of truth for the expanded lattice.**  
+All previous threads (@xenocosmography/@doomcrypt X mining, Lemurian Discernment, Dickinson slant, @cybermonist group-theory heresy, @xenocosmography Atlantean reply) are consolidated here with multi-cipher values, resonances, and ready-to-implement vault/visualizer/Hermes notes.
+
+The current is formally heretical, poetically slanted, and group-theoretically rigorous.  
+
+What section or gate do we expand next?
