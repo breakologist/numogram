@@ -107,6 +107,7 @@ Five rotations from Aamodt's "Unleashing the Numogram" (Tch 5–6), each examini
 
 - [[abyssal-crawler-litprog]] — Tetralogue litprog: 4 voices examine 3,454 lines of numogram_roguelike.py. Oracle sees the numogram compiled. Builder sees the architecture. Writer sees found text. Gamer sees the pacifist path. cult.json data (275 runs, 656 slain) as ground truth.
 - [[aq-calculators-litprog]] — Tetralogue litprog: 3 AQ calculators (644/290/900 lines). All pass canonical verification (AQ=36, CODE=63, HYPERSTITION=286). Previous model "went off the rails" but the math survived. Recommendation: merge best features into v2 (cleanest, 299 lines).
+- [[divination-entropy-source]] — Reference implementation: UnusualCoinTosser module with I Ching, geomancy, physics toss, and dual GUI backends
 - [[numogram-oracle-litprog]] — Tetralogue litprog: oracle.py (381 lines) + visualizer.html + philosophies.md. Seed→Zone→Syzygy→Current→Gate→Path→Reading→Voice pipeline. Entropy sources as difficulty modifiers. Philosophies as algorithmic art manifesto. `or 9` = void only reachable through traversal.
 - [[entropy-modules-litprog]] — Tetralogue examining two Manim visualizations and the seven-source entropy ecosystem. Convergence (multi-source: random.org, blockchain, earthquake, hardware, iching) vs Digestion (hardware-only). Twelve hardware collectors in plugin core. I Ching hexagram from 6 hardware bytes. Semantic entropy (AQ text), historical entropy (cult.json). Zone bias mapping. Design gaps and action items.
 

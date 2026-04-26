@@ -472,6 +472,8 @@ The oracle is a **hyperoracle** — it consults not one plane but the entire div
 
 **GAMER:** From a game design perspective, this system makes the **random seed sacred**. Normally in roguelikes, the seed is hidden; the RNG is a black box. Here, the seed is *explicit, chosen, ritualized*. The player selects their seed source, sees the seed number, and knows that this number — drawn from the sky's noise, the blockchain's chain, the machine's heat, the earthquake's rumble — determines their journey. The numogram game becomes a **seed-divination roguelike** where the seed's origin is part of the challenge.
 
+
+- [[divination-entropy-source]] — See also for concrete implementation
 ---
 
 ## XII. Connections & Cross-References

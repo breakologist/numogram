@@ -109,7 +109,9 @@ python3 ~/.hermes/tools/hardware_entropy.py --bytes 6 | python3 -c "
 import sys
 data = bytes.fromhex(sys.stdin.read().strip())
 for i, b in enumerate(data):
-    line = '--- ---' if b % 2 == 0 else '-------'  # yin/yang
+    line = '--- ---' if b % 2 == 0 else '----
+- [[divination-entropy-source]] — Potential source for method="true" backend
+---'  # yin/yang
     changing = ' x' if b % 8 >= 6 else ''
     print(f'Line {i+1}: {line}{changing}')
 "

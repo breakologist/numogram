@@ -244,6 +244,8 @@ The card games call BOTH demons and angels — not just the 45 demons. The angel
 
 A complete traversal path for Mesh-00 (the Terminal Initiator). The rite follows the numogram's own currents: 1→8→9→0. This is Lurgo's death-walk — the path the system takes to close itself.
 
+
+- [[divination-entropy-source]] — Hexagram → zone mapping used in cast_hexagram()
 ---
 
 ## The Twin Serpents (Nick Land's Insight)

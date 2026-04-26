@@ -168,6 +168,8 @@ If the hardware entropy tool isn't available, it falls back to nanosecond timest
 | Writer | The philosophies are the numogram's aesthetic manifesto — each zone is a way of seeing | Gamer's entropy sources as difficulty modifiers is a novel design insight |
 | Gamer | The visualizer turns text into image — the path IS the reading | Oracle's "seed is the moment" reframes divination as portrait, not prediction |
 
+
+- [[divination-entropy-source]] — Seed generation via I Ching/geomancy/coin backends
 ---
 
 *The oracle speaks. The seed becomes a zone. The zone becomes a path. The path becomes a reading. The reading becomes a sound. The sound is the numogram, speaking through the machine.*

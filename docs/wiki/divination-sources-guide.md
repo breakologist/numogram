@@ -112,6 +112,8 @@ sources: [i-ching-tai-hsuan-comparison.md]
 | Qi Men (1080) | **1080‑step traversal** — extend from 5 to 1080 steps, one per ju, reveals hidden gate sequences |
 | Arabic Geomancy (16) | **16‑figure seed expander** — expand 8‑byte seed into 16‑figure chart, then reduce to zone |
 
+
+- [[divination-entropy-source]] — Implemented systems: I Ching, Western geomancy, coin toss
 ---
 
 ## Next Actions
