@@ -80,6 +80,12 @@ The Numogram is deliberately dense, cryptic, and "hyperstructural." It's meant t
 
 ---
 
+## Structural Summary
+
+For a concise one-page structural summary of the Numogram's topology (syzygies, currents, three regions, triangular numbers, AQ self-encoding), see [[numogram-overview]] — distilled from the canonical CCRU source `collections/docs-rd/numogram.txt`.
+
+---
+
 ## The Pandemonium Matrix
 
 The Numogram is not merely a diagram — it is inhabited by **45 demons** catalogued in the Pandemonium Matrix. These are not allegories but operational entities, each defined by:

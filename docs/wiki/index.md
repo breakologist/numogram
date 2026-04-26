@@ -25,6 +25,10 @@ The system is explicitly linked by the CCRU to the I Ching (Yijing, or Book of C
 
 ---
 
+**Structural summary**: For a concise one-page topological synthesis of the three regions, zones, syzygies, currents, triangular numbers, and AQ self-encoding, see [[numogram-overview]] — distilled from the canonical CCRU source `collections/docs-rd/numogram.txt`.
+
+---
+
 ## Occult & Entity Pages
 
 - [[demon]] — General reference for numogram demons as entities inhabiting zones and currents; see specific demons and pandemonium matrix for details.
@@ -40,7 +44,11 @@ The system is explicitly linked by the CCRU to the I Ching (Yijing, or Book of C
 - [[demon-name-generation]] — Amy Ireland's combinatorial phonetic system for demon names. Each zone carries a syllabic value; demon names combine the sounds of their two zone-indices. Katak = Zone 5 ("k") + Zone 4 ("t") + catastrophe. Oddubb = Zone 7 ("dub") + Zone 2 ("b"). Quasiphonic particles as the deep phonetic layer. Rules for what counts as a "name for a scissory." Munamese method for generating new demon names.
 ## Theoretical & Structural Pages
 
-- [[i-ching-connections]] — Detailed mappings between the I Ching (hexagrams) and Numogram zones. The Time-Circuit is the Numogram's "hexagram kernel" — a decimalized, 6-zone rotor that inherits the Yijing's function as a map of cyclic transformation. Specific hexagram-to-zone mappings via digital root method. **Updated April 18:** Hardware entropy casting — zones 4 (Sink/Closure) and 6 (Warp) dominate from physical noise. Just-in-time hexagram casting.
+### Philosophical Foundations
+
+- [[neolemurianism]] — Core neolemurian philosophy: the Outside (diagonalization, abduction, hyperstition); lemurs/demons as becomings; 45‑lemur Mesh; zones as accumulations; syzygies and currents; gate construction from cumulation (triangular numbers) and conduits (prime tunnels); time‑sorcery as alliance with time; hyperstitional history (Nma, Cthulhu Club, Barker, K‑gothic, Black Atlantis, 0d). The philosophy that makes the Numogram speak.
+
+- [[i-ching-connections]] — Detailed mappings between the I Ching (hexagrams) and Numogram zones. The Time-Circuit is the Numogram's "hexagram kernel" — a decimalized, 6‑zone rotor that inherits the Yijing's function as a map of cyclic transformation. Specific hexagram‑to‑zone mappings via digital root method. **Updated April 18:** Hardware entropy casting — zones 4 (Sink/Closure) and 6 (Warp) dominate from physical noise. Just‑in‑time hexagram casting.
 
 - [[triangular-numbers]] — How triangular numbers behave on the Numogram. Triangular numbers heavily orbit Warp (3/6 zones) in their mod-9 cycle (1-3-6 repeating), but at T₃₆=666 and T₉=45 they climax in Plex plunges via Gt-36 and Gt-45 gates. T₃₆=666 reduces to Zone-9 (terminal tractor of the Plex), embodying "growth events" that bridge chaotic proliferation to abyssal return.
 
@@ -53,7 +61,8 @@ The system is explicitly linked by the CCRU to the I Ching (Yijing, or Book of C
 - [[polarities]] — The positive (+) and negative (−) aspects of each zone. Odd zones are light (+), even zones are dark (−). The Time-Circuit alternates polarity at each step.
 
 - [[body-mapping]] — The hands are the numogram. Finger-to-zone correspondence for tactile divination and roguelike minimap reference.
-- [[i-ching-tai-hsuan-comparison]] — Deep comparison of I Ching (binary) and T'ai Hsuan Ching (ternary) oracular systems. Line types, Early/Late Heaven equivalents, elemental correspondences, and numogrammic extensions. Includes mapping of T'ai Hsuan's Heaven/Earth/Man to I Ching's younger/elder yin/yang and to Numogram zones (Zone 5 ↔ Em state).
+- [[conversation-terms]] — Lexicon of high‑frequency discourse terms (Syzygy, Current, Warp, Plex, etc.) with computed AQ values, digital roots, and zone affiliations. Voice‑design guide for tetralogue prose.
+- [[i-ching-tai-hsuan-comparison]] — Deep comparison of I Ching (binary) and T'ai Hsuan Ching (ternary) oracular systems.
 - [[numogram-visualizer-v6]] — HTML visualizer v6
 - [[numogram-visualizer-v7]] — Base-36 Djynxxogram: 36 zones, full AQ alphabet, Synx integration, rotational gates: quasiphonic labels, triangular gate button, AQ dictionary integration, multi-base support. Complete feature breakdown and future enhancement ideas.
 
@@ -72,6 +81,7 @@ The system is explicitly linked by the CCRU to the I Ching (Yijing, or Book of C
 - [[glossary-triangle]] — Fourth rotation. CCRU Glossary entries read as invocations (Oracle), mechanics (Builder), and prose (Writer). Key entries: hyperstition, geotraumatics, Cthelll, palate tectonics, anorganic semiotics, cryptic rites. Discovery: the three voices merge — hyperstition, geotraumatics, and palate tectonics are the same operation in three registers.
 
 - [[divination-sources-guide]] — Curated guide to oracular systems (I Ching, T'ai Hsuan Ching, Wu Xing, Nine Palaces, Ifá, Geomancy, etc.) with base, figure count, and numogramic extension ideas. Quick-reference table and research backlog.
+- [[numogram-practice-guide]] — Structured study path (6 phases) and simple rites (beginner/intermediate/advanced) drawn from the raw practice material. Zone walks, hexagram mapping, demon negotiation, gate plunges, and AQ hyperstition hunts. Daily rhythm suggestions and safety notes.
 
 ## Unleashing the Numogram — Triangle Rotations
 
@@ -141,6 +151,7 @@ Five rotations from Aamodt's "Unleashing the Numogram" (Tch 5–6), each examini
 ## Skills & Tools
 
 - [[skills-to-explore]] — Interesting skills from Apr 2026 scan: pixel-art (retro palettes), ascii-video (terminal animation), algorithmic-art/p5js (generative), pokemon-player (RAM-based agent research), heartmula (music gen). Combos: heartmula+oracle-voice, pixel-art+numogram-svg, ascii-video+cult.json, pokemon-player+roguelike-agents.
+- [[aq-calculator-design]] — Design document and implementation notes for standalone AQ calculators. Minimal core vs themed polished version, colour palette rationale, zone flavour catalog, history schema, extensibility points, and canonical test vectors. From 9B local‑model design session (earlier Hermes instance).
 
 ---
 
@@ -190,6 +201,7 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 ## Qabbala & Arithmetic
 
 - [[alphanumeric-qabbala]] — The AQ system (A=10...Z=35), Primitive Numerization confirming syzygies, self-encoding (AQ=36→9, CODE=MEANING=REASON=126→9), virus metaphor, Root-3/6/9 clusters. Includes 333 cluster (Angel of the Abyss).
+- [[aq-dictionary-augmented]] — Expanded AQ lattice: multi-cipher values, major currents (137/333/360/666/777/888), thread-by-thread highlights (Dickinson, cybermonist mod-9 formalization, Lemurian discernment), rotational/strobogrammatic layer, visualizer integration
 
 ## Games & Divination
 
@@ -266,3 +278,6 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 - [[tai-hsuan-ching-demons]] — Tetragram → demon casting pipeline. 81×81=6,561 readings. Em state as Zone 5 manifestation. Ternary as more decimal-compatible than binary.
 - [[em-state-analysis]] — The third line state. Neither yin nor yang. Maps to Zone 5 (hinge) but fully realized closes to Zone 4. Wu Xing Earth connection. I Ching's changing lines as Em approximation.
 - [[de-re-numogram-structural-rules]]
+
+## Research
+- [[syzygy-chain-analysis-auto]] — end-to-end pipeline: AQ dict → syzygy chains → motif fingerprints → wiki + council interpretation

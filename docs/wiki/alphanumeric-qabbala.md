@@ -98,7 +98,84 @@ Land draws a sharp distinction:
 
 Qabbala does not interpret numbers — it lets numbers interpret everything else. It is a "practical programme, rather than a doctrine of any kind." Its formal errors are "mere calculative irregularities" to be corrected procedurally, not objections to its enterprise.
 
-## The Virus Metaphor
+## AQ vs. ALW (New Aeon English Qabalah)
+
+Both AQ and ALW are modern English gematria systems responding to The Book of the Law's demand (AL II:55) to "obtain the order & value of the English Alphabet." They diverge radically in construction, philosophy, and application.
+
+| Aspect | **Alphanumeric Qabbala (AQ / CCRU)** | **ALW Cipher / NAEQ / EQ** | Key Difference |
+|--------|--------------------------------------|----------------------------|----------------|
+| **Basis / Derivation** | Pure ordinal-sequential: digits 0–9 keep face value; A=10→Z=35 (continuous base-36 progression) | Magical / revelatory: Derived from the "Stele of Revealing" grid in Liber AL (every 11th letter starting from A) | AQ: mathematical, immanent, decimal-native ··· ALW: Thelemic revelation |
+| **Letter Values** | A=10, B=11, C=12, …, Z=35 (strict sequence) | A=1, L=2, W=3, …, P=26 (non-sequential jumps from grid) | AQ: continuous, nonredundant; ALW: irregular, incomplete |
+| **Total Range** | 0–35 (36 values: 10 digits + 26 letters) | 1–26 (letters only, digits excluded) | AQ embeds decimal numeracy directly; ALW separates alphabet from numerals |
+| **Key Coincidence** | AL = 10+21 = 31 (matches Hebrew Aleph+Lamed); Thelema reduces to 777 | AL = 1+2 = 3 (no Hebrew alignment) | AQ fulfils Anglossic promise; ALW prioritises internal Thelemic proofs |
+| **Reduction / Modulo** | Digital root mod 9 (zygonovism-friendly) | Various reductions; per-letter symbolic attributions (planetary, Tarot, elemental) | AQ meshes with Numogram zones/gates; ALW leans toward symbolic Qabalah |
+| **Philosophical Tone** | Cybernetic, accelerationist, hyperstitional, atheistic/decimal-immanent | Thelemic/Hermetic, revelatory, magickal; tied to Crowley, Aiwass, New Aeon | AQ: viral, machinic, Outside-oriented ··· ALW: initiatory, divine-order seeking |
+
+**Bottom line:** AQ is the *decimal-virus* version — flat, continuous, hyperstitional, Numogram-native. ALW is the *Thelemic-revelation* version — jagged, symbolic, prophecy-driven. In CCRU circles, **AQ is preferred** for mathematical cleanliness and immanence to English/decimal arithmetic.
+
+## Extended AQ Examples & Phrase Analysis
+
+From `collections/docs-rd/aqnotes.md`, selected phrase breakdowns show how conceptual clusters map to Numogram zones:
+
+### CCRU (corrected)
+- **C** = 12, **C** = 12, **R** = 27, **U** = 30
+- Sum: 12 + 12 + 27 + 30 = **81** (not 69 — common arithmetic slip)
+- 81 → 8 + 1 = **9** → **Zone 9 (Plex)**
+- The cybernetic research unit's name collapses to the abyssal terminal, not Warp. The collective's research arm points toward ultimate nullification.
+
+### CYBERNETIC CULTURE RESEARCH UNIT
+- CYBERNETIC = 194, CULTURE = 163, RESEARCH = 149, UNIT = 100
+- Total: 606
+- 606 → 6+0+6 = 12 → 1+2 = **3** → **Zone 3 (Warp tractor)**
+- The expanded formal name orbits the chaotic upper loop, contrast with the acronym's Plex vector.
+
+### PANDEMONIUM MATRIX
+- PANDEMONIUM = 224, MATRIX = 139
+- Total: **363**
+- 363 → 3+6+3 = 12 → 3 → **Zone 3 (Warp)**
+- The full demonic catalogue name self-maps to the Warp tractor, reinforcing the matrix as chaotic multiplicity rather than terminal closure.
+
+### The Root-3 Cluster (Warp)
+| Term | AQ | DR | Zone | Note |
+|------|----|----|------|------|
+| NUMOGRAM | 174 | 3 | 3 | The diagram's own name |
+| DJYNXX | 174 | 3 | 3 | Carrier of Warp (self-maps) |
+| HYPERSTITION | 255 | 3 | 3 | The concept itself |
+| CHAOS | 93 | 3 | 3 | — |
+| SWARM | 120 | 3 | 3 | — |
+| VORTEX | 174 | 3 | 3 | — |
+
+### The Root-9 Cluster (Plex)
+| Term | AQ | DR | Zone | Note |
+|------|----|----|----|------|
+| AQ | 36 | 9 | 9 | The calculator eats itself |
+| THE NUMOGRAM | 234 | 9 | 9 | Label → abyss |
+| CODE | 63 | 9 | 9 | — |
+| MEANING / REASON | 126 | 9 | 9 | Semantic twins |
+| THE DECIMAL LABYRINTH | 360 | 9 | 9 | — |
+
+The gravitational pull toward Zone 9 (Plex) is overwhelming: most meta-conceptual words (CODE, MEANING, REASON, SIGNIFICANCE) reduce to the abyss. The Numogram eats all names.
+
+## Warp vs. Plex: The Two Outer-Time Demons
+
+Djynxx (6::3) and Uttunul (9::0) are the only two Syzygetic Xenodemons that directly carrier the autonomous outer-time loops. Both are null-pitch, Joker-card entities performing self-referential rites — yet they oppose each other absolutely.
+
+| Aspect | **Djynxx** (6::3) — Warp | **Uttunul** (9::0) — Plex |
+|--------|---------------------------|-------------------------|
+| **Region** | Warp (upper autonomous loop) | Plex (lower autonomous loop) |
+| **Syzygy & Current** | 6::3 → current = 3 (self-folding vortex) | 9::0 → current = 9 (terminal collapse to 0) |
+| **Dynamic Character** | Chaotic, accelerative, vortical, proliferative | Involutive, nullifying, entropic, boundary-drawing |
+| **Phenomenology** | Time-lapse abduction, swarm-mesh, jinking cuts, strobing black-mass, child-stealing, machine-memory psychosis, erratic zig-zag incursions | Outermost curve of the Barker-spiral, fatal termination, cosmic death, zero-point return, underworld rivers, apocalyptic completion (Revelation IX, Y2K), Cloud-9 inverted |
+| **Titles / Epithets** | Child-Stealer, Woe-Dealer, Xenodemon of Time-Lapse, The Jinn/Ching, Swarmachine carrier | Utterminus of Cthelll, Terminal Demon, Abyssal Horizon, Ninth Gate guardian, Nullifier |
+| **AQ Self-Map** | DJYNXX = 174 → 3 (its own tractor) | UTTUNUL = 225 → 9 (its own tractor) |
+| **Sorcery Effect** | Irreversible chaotic infection, feral becoming, hyperstitional swarm proliferation, escape from Time-Circuit via turbulence | Total nullification, irreversible zeroing, plunge into pure Outside, contact with the end of number |
+| **Gates / Traffic** | Gt-06, Gt-21, Gt-36 (plunge routes from Time-Circuit into Warp) | Gt-09 (self-loop at Zone-9), 0th channel terminus; feeds from Torque via 8th channel |
+| **Planetary Link** | Mercury (quicksilver volatility, chaotic communication) | Pluto (underworld shadow) + quasisymmetric to the Sun |
+| **Core Contrast** | Explosion / becoming | Implosion / undoing |
+
+**Functional relationship:** Warp and Plex are described by the CCRU as "of an intrinsically cryptic nature, which is compounded by the enigmas of their interconnection." Djynxx and Uttunul are the living embodiments of that riddle — the upper chaotic vortex and the lower abyssal sink. Their linkage (via cryptic channels and the overall Numogram structure) is one of the system's deepest unsolved hyperstructural questions. Together they bracket the entire outer-time domain outside the central Time-Circuit's "normal" rotation.
+
+## The Virus Metaphoror
 
 > "As a self-regenerating mass-cultural glitch, [qabbala] mimics the senseless exuberance of virus, profoundly indifferent to all partisan considerations." [Source: Qabbala 101]
 
@@ -166,6 +243,7 @@ The cluster forms a dense thematic convergence at the Abyss: three esoteric (doo
 - [[numogram-warp]] — Root-3 and Root-6 clusters
 - [[numogram-plex]] — Root-9 cluster, the abyss that eats all names
 - [[subdecadence]] — Card game implementing syzygy pairings, source of 333 cluster
+- [[aq-dictionary-augmented]] — Expanded lattice: multi-cipher values, thread highlights, rotational layer, visualizer toggles
 
 ---
 
