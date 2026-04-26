@@ -188,6 +188,8 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 ### Related
 - [[numogram]] — The main Numogram overview page
 
+
+- [[unleashing-the-numogram-source]] — Under Theory & Philosophy: "Unleashing the Numogram (Aamodt) — source catalog: 250 KB book, 28 derived pages, gap inventory"
 ---
 
 > CONTRADICTION CHECK: All wiki pages have been reviewed against the source text (numogram.txt). No contradictions found — the system is self-consistent.
@@ -225,6 +227,8 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 - [[the-360-revelation]] — Net-spans sum to 360. Partition: outer regions (153) + Time-Circuit (207) = 360. HERMETIC=153, COSMOGONY=207. THE DECIMAL LABYRINTH=360. The system's deepest self-encoding.
 
 ## Theory & Philosophy
+
+- [[unleashing-the-numogram-source]] — Aamodt source catalog: 250 KB book, 28 derived wiki pages, gap inventory
 
 - [[flatline-numogrammatics]] — Lillian Patch's dense theoretical essay. Neolemuria as house divided, numogram as map of zero, Subdecadence as origin model, hyperstition = numogram + mythos + unbelief (Gt-03), Wonder as prerequisite, carrier concept, legend-making, distinction from numerology.
 
