@@ -122,6 +122,8 @@ The differences are in the LEAVES, not the BRANCHES:
 
 ## See also
 
+- [[angband-agent-strategies]] — Angband agent architectures: RL, hybrid, LLM-augmented, tree-structured mode selection
+
 - [[angband-agent-display-notes]] — Screen parser display debugging notes
 - [[angband-agent-progress]] — Development progress log
 - [[hungry-borg-angband]] — Borg-style hungry agent variant

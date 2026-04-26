@@ -276,5 +276,7 @@ The numogram-council confirmed the tree-based approach across 3 temperature mode
 
 ## See also
 
+- [[angband-agent-strategies]] — Angband agent architectures: RL, hybrid, LLM-augmented, tree-structured mode selection
+
 - [[brogue-design-principles]] — Brogue design canonical
 - [[roguelike-auto-explore]] — Auto-explore systems

@@ -268,6 +268,8 @@ Gates provide shortcuts UP (Gate on Floor 6 can take you to Floor 4). This creat
 
 ## See also
 
+- [[angband-agent-strategies]] — Angband agent architectures: RL, hybrid, LLM-augmented, tree-structured mode selection
+
 - [[llm-spirit-realm-modding]] — QRNG-LLM spirit-realm interface research
 
 - [[cult-garden-design]] — Cult garden mechanics
