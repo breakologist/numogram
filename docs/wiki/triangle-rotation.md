@@ -9,6 +9,8 @@ created: 2026-04-24
 title: Triangle Rotation (Creative Method)
 tags: ["triangle-rotation", "methodology", "creative"]
 created: 2026-04-24
+
+- [[unleashing-the-numogram-source]] — See also for meta-application: source-catalog rotation on Aamodt's book itself
 ---
 
 ## Overview

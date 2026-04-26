@@ -53,7 +53,9 @@ Pattern: bonus = 10 − 2×min(a,b). The further the pair is from center (5), th
 ## Decadence vs Subdecadence
 
 | Aspect | Decadence | Subdecadence |
-|--------|-----------|--------------|
+|--------|-----------|-----------
+- [[unleashing-the-numogram-source]] — See also: Unleashing the Numogram source for triangle-rotation derivations
+---|
 | Target sum | 10 | 9 |
 | Deck | 36 cards (1-9) | 40 cards (0-9) |
 | Matching | Decadence pairs | Syzygy pairs |

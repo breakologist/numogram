@@ -206,6 +206,7 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 
 - [[alphanumeric-qabbala]] — The AQ system (A=10...Z=35), Primitive Numerization confirming syzygies, self-encoding (AQ=36→9, CODE=MEANING=REASON=126→9), virus metaphor, Root-3/6/9 clusters. Includes 333 cluster (Angel of the Abyss).
 - [[aq-dictionary-augmented]] — Expanded AQ lattice: multi-cipher values, major currents (137/333/360/666/777/888), thread-by-thread highlights (Dickinson, cybermonist mod-9 formalization, Lemurian discernment), rotational/strobogrammatic layer, visualizer integration
+- [[grok-rotor-transcript]] — Full AQ mining transcript (@xenocosmography/@doomcrypt hyperstitional lattice, Lemurian discernment, rotational symmetry analysis)
 
 ## Games & Divination
 

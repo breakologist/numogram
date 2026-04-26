@@ -109,4 +109,6 @@ After documenting the AQ dictionary gap, work begins on the HTML visualizer's tr
 
 ## See also
 
+- [[grok-rotor-transcript]] — Full AQ mining transcript (raw)
+
 - [[aq-dictionary]] — AQ Dictionary reference

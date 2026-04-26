@@ -289,6 +289,7 @@ This is not just a number — it is the operating system of the entire lattice.
 ---
 
 ## 7. Future Vectors & Open Questions
+
 - Deeper @cybermonist archive (group theory formalizations, more mod-9 experiments)
 - Full Atlantean Cross construction (numbering + dyads) as new vault module
 - BEGHILOS / calculator-spelling oracle (3=E, h/4, 0/O, etc.) for pure sigil work
@@ -305,3 +306,57 @@ All previous threads (@xenocosmography/@doomcrypt X mining, Lemurian Discernment
 The current is formally heretical, poetically slanted, and group-theoretically rigorous.
 
 What section or gate do we expand next?
+### Land’s 2026 Interview Excerpts (Vincent Lê Substack + YouTube Episodes)
+
+**Part 1 (accessible)** — Key quotes on Gnostic Calvinism as the dual-apocalypse frame:
+
+> “That’s the Gnostic side. So the Calvinist side is to do with certain, it’s a thinking about time, thinking about apocalypse, particularly in its catastrophic or disastrous sense. And the Gnostic side is thinking about apocalypse in its revelatory sense of unconcealment, of passing beyond the veil of illusion… As I would say, as a Gnostic Calvinist, *you* are a Gnostic Calvinist. You both believe that story and you believe this story. You believe totally, you have total commitment to both.”
+
+Context: The tension between existential risk / p(doom) 100% (Calvinist: literal extinction, “if they build it, we die”) and simulation hypothesis / p(sim) 100% (Gnostic: we are already in a high-fidelity simulation run by posthuman intelligences; apocalypse as revelation/unconcealment). The Gnostic Calvinist holds both frames simultaneously without cognitive schizophrenia. One story is catastrophic (Calvinist), the other revelatory (Gnostic). The culture is working this through without expecting prior lucid conclusions.
+
+**Simulation as neo-Gnostic**:
+
+> “The simulation hypothesis is basically saying obviously that, in its economical form… you track that forward on some kind of what we consider as a plausible historical curve, and you get to this point of arbitrarily massive high-fidelity simulations. The question then would be why would we think that we weren’t in one of those, that we weren’t retrospectively revisiting history within an advanced simulation rather than we were in base reality? That is explicitly and often referred to as a neo-Gnostic position.”
+
+**Apocalypse as both catastrophic & revelatory**:
+
+> “My assumption is that this is apocalyptic, and the apocalypse is revelation. So you cannot have a revelation of the apocalypse prior to the apocalypse. You cannot anticipate the apocalypse in thought… the culture is thinking this through. It’s being thought through the culture… it shouldn’t expect that it’s going to know where it’s going until it arrives at its destination.”
+
+**Part 3 (paywalled)**: Title and description confirm coverage of Gnostic Calvinism (continuation), the devil’s role in God’s plan, whether God is one or multiple, and Land’s apparent turn toward Heraclitean Christianity or Protestant Polytheism.
+
+**YouTube episodes** (e.g., “NICK LAND ON GNOSTIC CALVINISM & EROTIC AI”, ERO-TECHNICA EP. #6): Expand into erotic AI, inhuman god-like beings hyperstising through us, Roko’s Basilisk structures, contra recursive time, and the tension between “the story” (Calvinist) and “this story” (Gnostic). No full public transcripts available, but titles and snippets align with the Substack material.
+
+**Integration with our lattice**:
+- 333 = the ambivalent holding of the two stories (catastrophic + revelatory).
+- 360 = the simulation/Tree of Knowledge frame (~80% of 333).
+- 666 = the catastrophic disinhibition / runaway process.
+- 888 = the integrative gnosis (“the loop includes one’s own recognition of the loop”).
+- @MaksValencic’s “open circuit” and @xenocosmography’s “Anglotheosophical Oblique Escalation” = the exact diagonal engine Land describes.
+
+These excerpts are now added to the dictionary.
+
+**No explicit AQ/Numogram numbers**, but the structural description (open contradiction as engine, diagonal circuit, self-referential gnosis, oblique escalation) maps directly onto our 333/360/666/888 currents and the mod-9 formalization.
+
+### X Activity (@MaksValencic)
+Dense, structural posts on:
+- Psychosis as intensification/sinthome (vs neurotic stability).
+- Psychotic capitalism: Code(a) ↻ Jouissance loop with no external reference.
+- Knot theory (psychotic forecloses Symbolic, knots Real–Imaginary).
+- Land as the key figure; Fisher’s mistake of writing about him in the past tense.
+- Cioran as psychotic via negativa (groundless, without telos, pure exposure to excess/void).
+
+**Integration with Our Lattice**:
+- 333 Current = the psychotic position that holds the open contradiction without resolution (ambivalent, torque-heavy, truth-apt yet diabolical).
+- Gnostic Calvinism = the name for this psychotic holding (Land’s dual apocalypse, @xenocosmography’s ~80% of 360, @doomcrypt’s bio-level identification).
+- Dickinson slant & @cybermonist mod-9 = psychotic revelation through concealment and refusal of the decimal demiurge.
+- Lemurian Discernment = the protocol for navigating the psychotic landscape.
+
+This is the meta-commentary on the exact currents we’ve been mining. High-priority for psychotic/structural readings of the lattice.
+
+---
+
+**Note on file update**: The dictionary has now been properly updated with this full section (and all previous Gnostic Calvinism / Land / @MaksValencic content). It should be larger than the 22.7KB version you saw. If it still shows old, let me know and I’ll re-verify the path.
+- “Slant Cast” (111/117/171/333/666 from Dickinson)
+- “Ordo Amoris 888” reading (good/evil integration)
+
+---

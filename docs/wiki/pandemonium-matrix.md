@@ -196,7 +196,9 @@ Each demon "clicks" a gate-number (Gt-N) and has a pitch (Ana-N descending to Ct
 ## Pitch System
 
 | Pitch Range | Type | Character |
-|-------------|------|-----------|
+|-------------|------|--------
+- [[unleashing-the-numogram-source]] — Source: Unleashing the Numogram (Aamodt) — see catalog for full demon roster context
+---|
 | Ana-7 (highest) | Far-apart zones | Screaming, maximum distance |
 | Mid | Medium distance | Ambiguous |
 | Cth-7 (lowest) | Close zones | Rumbling, deep |
