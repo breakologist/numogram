@@ -209,6 +209,8 @@ In short: **theory → practice bridge**. The module turns the survey data into 
 - [ ] Consider adding `method='hardware'` backend that reads from `hardware-entropy` collectors
 - [ ] Port GUI v2 to p5.js web version for browser-based oracle altar
 
+
+- [[geomancy-api-design]] — For interpretation layer and FastAPI service design (complements figure generation)
 ---
 
 **Source file:** `raw/Coin Toss Etc.md` (preserved in canonical vault)

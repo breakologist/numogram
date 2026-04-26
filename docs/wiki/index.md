@@ -81,6 +81,7 @@ The system is explicitly linked by the CCRU to the I Ching (Yijing, or Book of C
 - [[glossary-triangle]] — Fourth rotation. CCRU Glossary entries read as invocations (Oracle), mechanics (Builder), and prose (Writer). Key entries: hyperstition, geotraumatics, Cthelll, palate tectonics, anorganic semiotics, cryptic rites. Discovery: the three voices merge — hyperstition, geotraumatics, and palate tectonics are the same operation in three registers.
 
 - [[divination-sources-guide]] — Curated guide to oracular systems (I Ching, T'ai Hsuan Ching, Wu Xing, Nine Palaces, Ifá, Geomancy, etc.) with base, figure count, and numogramic extension ideas. Quick-reference table and research backlog.
+- [[geomancy-api-design]] — Full FastAPI service: perfection algorithm, SVG talismans, agent hooks
 - [[numogram-practice-guide]] — Structured study path (6 phases) and simple rites (beginner/intermediate/advanced) drawn from the raw practice material. Zone walks, hexagram mapping, demon negotiation, gate plunges, and AQ hyperstition hunts. Daily rhythm suggestions and safety notes.
 
 ## Unleashing the Numogram — Triangle Rotations

@@ -114,6 +114,8 @@ sources: [i-ching-tai-hsuan-comparison.md]
 
 
 - [[divination-entropy-source]] — Implemented systems: I Ching, Western geomancy, coin toss
+
+- [[geomancy-api-design]] — See also for full API implementation with perfection algorithm
 ---
 
 ## Next Actions

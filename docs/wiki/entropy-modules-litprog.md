@@ -474,6 +474,8 @@ The oracle is a **hyperoracle** — it consults not one plane but the entire div
 
 
 - [[divination-entropy-source]] — See also for concrete implementation
+
+- [[geomancy-api-design]] — API design case study: geomancy as web service vs standalone module
 ---
 
 ## XII. Connections & Cross-References

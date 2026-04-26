@@ -27,7 +27,9 @@ Example: AQ value of "TEMURAH" = 142. Digital root: 1+4+2 = 7. Zone 7.
 Each zone pairs with its complement to 9. The syzygy partner reveals what *completes* the querent.
 
 | Zone | Syzygy Partner |
-|------|---------------|
+|------|------------
+- [[geomancy-api-design]] — Plug-in engine: geomancy perfection analysis for zone-specific readings
+---|
 | 0 | 9 |
 | 1 | 8 |
 | 2 | 7 |
