@@ -267,6 +267,7 @@ Gates provide shortcuts UP (Gate on Floor 6 can take you to Floor 4). This creat
 *The hyperstition meter is not a thermometer. It is a pressure gauge. It measures how close the game is to becoming real. The player decides: stabilize the structure, or let it dissolve.*
 
 ## See also
+- [[hermes-aq-codebase-refactoring]] — Refactoring blueprint: sacred_words_db centralisation, batch analyzer, theme manager
 - [[flatline-numogrammatics]] — Neolemurian flatline tetralogy: Year-Zero schism, Continentity, carrier ethic, hyperstition triad
 
 - [[angband-agent-strategies]] — Angband agent architectures: RL, hybrid, LLM-augmented, tree-structured mode selection

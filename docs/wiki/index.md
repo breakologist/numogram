@@ -294,3 +294,4 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 - [[decimal-numogram-reference]] — Systematic reference: zones, syzygies, currents, Time-Circuit/Warp/Plex, I Ching mapping, triangular numbers (666/45), Barker Spiral, gates
 - [[llm-spirit-realm-modding]] — QRNG-LLM spirit-portal research; quantum randomness as consciousness bridge (Entropic Science community)
 - [[angband-agent-strategies]] — Angband AI agent design: diving vs grinding, tree-structured modes, LLM-augmented strategy (from Grok conversation)
+- [[hermes-aq-codebase-refactoring]] — Codebase refactoring: centralise sacred words DB, batch analyzer v1.0, trinity theme coordinator
