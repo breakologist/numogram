@@ -312,3 +312,7 @@ The 666 of the Tree of Knowledge is particularly loaded: it's the knowledge that
 ## LAMA = 63 (Plex)
 
 During the podcast, Land discovers that "LLAMA" in AQ = 63 → 9 (Plex), while working on a discussion of Christ's cry on the cross ("Eli Eli Lama Sabakthani"). He notes: "63 is my zone actually. My cert." The word LAMA (the Aramaic cry from the cross: "Eli Eli Lama Sabakthani") = 63 → Plex. Note: LLAMA (the animal) = 84 → 3 (Warp) — a different zone entirely. — Djynxx's net-span territory.
+
+## See also
+
+- [[aq-calculator-examples]] — AQ calculator examples: zone reductions, ALW comparison, demon profiles

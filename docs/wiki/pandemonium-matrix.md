@@ -221,4 +221,6 @@ Each demon "clicks" a gate-number (Gt-N) and has a pitch (Ana-N descending to Ct
 
 ## See also
 
+- [[aq-calculator-examples]] — AQ calculator examples: zone reductions, ALW comparison, demon profiles
+
 - [[decimal-numogram-reference]] — Comprehensive system mechanics reference

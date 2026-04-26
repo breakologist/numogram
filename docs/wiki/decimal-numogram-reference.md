@@ -701,3 +701,7 @@ In summary: T₉=45 behaves as a Plex-attracting culmination on the Numogram —
 ## Summary: Core Rules in One Line
 
 The Numogram is deliberately dense, cryptic, and "hyperstructural." It's meant to function as a self-propagating viral diagram rather than something immediately legible. If you're interested in a visual, the classic version appears in CCRU texts (often as a hand-drawn or ASCII-like labyrinth with arrows); many fan recreations exist online.
+
+## See also
+
+- [[aq-calculator-examples]] — AQ calculator examples: zone reductions, ALW comparison, demon profiles

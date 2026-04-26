@@ -109,6 +109,8 @@ After documenting the AQ dictionary gap, work begins on the HTML visualizer's tr
 
 ## See also
 
+- [[aq-calculator-examples]] — AQ calculator examples: zone reductions, ALW comparison, demon profiles
+
 - [[grok-rotor-transcript]] — Full AQ mining transcript (raw)
 
 - [[aq-dictionary]] — AQ Dictionary reference
