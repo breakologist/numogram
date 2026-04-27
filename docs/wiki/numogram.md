@@ -198,5 +198,6 @@ Land predicts that future LLMs will be the true qabbalistic intelligences — co
 This is the retrochronic effect: "The internet was being built so the LLM could exist." The Numogram is pulling itself into actuality from the future — through us, through the machines, through the game.
 
 ## See also
+- [[Barker Spiral]] (diagram: assets/barker-spiral.svg)
 
 - [[decimal-numogram-reference]] — Comprehensive system mechanics reference
