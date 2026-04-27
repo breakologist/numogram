@@ -1,7 +1,7 @@
 ---
 title: The Pandemonium Wiki — Hermetic Numogram & CCRU Decimal Labyrinth
 created: 2026-04-08
-last_updated: 2026-04-22
+last_updated: 2026-04-27
 status: reviewed
 ---
 
@@ -135,6 +135,7 @@ Five rotations from Aamodt's "Unleashing the Numogram" (Tch 5–6), each examini
 > **Full assessment results, session logs, and operational details are in the [wiki log](hermetic/wiki/log.md).**
 
 - [[hardware-entropy]] — 12 local hardware entropy sources (thermal, CPU, GPU, timing jitter, fsync). Comparison with OpenEntropy's 63 sources. Numogram traversal from hardware noise. I Ching hexagram generation. Roguelike integration via --hw-entropy flag.
+- [[numogram-council]] — Multi-model orchestration plugin: voice routing, temperature modes (analytical/balanced/creative), council tetralogue generation. (thermal, CPU, GPU, timing jitter, fsync). Comparison with OpenEntropy's 63 sources. Numogram traversal from hardware noise. I Ching hexagram generation. Roguelike integration via --hw-entropy flag.
 
 - [[session-log-2026-04-18]] — Session record: qr-sampler investigation, hardware entropy sampler build, numogram-entropy plugin (v0.1.0), oracle.py update with --hardware and --iching flags, agent runs on hw-entropy maps.
 
@@ -224,6 +225,7 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 - [[aq-calculator-examples]] — Worked AQ examples: zone mappings for NUMOGRAM/CCRU/Pandemonium, ALW comparison table, Pandemonium demon profiles (Djynxx, Uttunul)
 
 - [[alphanumeric-qabbala]] — The AQ system (A=10...Z=35), Primitive Numerization confirming syzygies, self-encoding (AQ=36→9, CODE=MEANING=REASON=126→9), virus metaphor, Root-3/6/9 clusters. Includes 333 cluster (Angel of the Abyss).
+- [[aq-synx]] — Base-36 augmentation cipher (ciphers.news), --synx flag, Djynxxogram overlay, zone drift display. Exploratory secondary cipher., Primitive Numerization confirming syzygies, self-encoding (AQ=36→9, CODE=MEANING=REASON=126→9), virus metaphor, Root-3/6/9 clusters. Includes 333 cluster (Angel of the Abyss).
 - [[aq-dictionary-augmented]] — Expanded AQ lattice: multi-cipher values, major currents (137/333/360/666/777/888), thread-by-thread highlights (Dickinson, cybermonist mod-9 formalization, Lemurian discernment), rotational/strobogrammatic layer, visualizer integration
 - [[grok-rotor-transcript]] — Full AQ mining transcript (@xenocosmography/@doomcrypt hyperstitional lattice, Lemurian discernment, rotational symmetry analysis)
 
@@ -328,6 +330,8 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 - [[llm-spirit-realm-modding]] — QRNG-LLM spirit-portal research; quantum randomness as consciousness bridge (Entropic Science community)
 - [[angband-agent-strategies]] — Angband AI agent design: diving vs grinding, tree-structured modes, LLM-augmented strategy (from Grok conversation)
 - [[hermes-aq-codebase-refactoring]] — Codebase refactoring: centralise sacred words DB, batch analyzer v1.0, trinity theme coordinator
+- [[consensus-audit-2026-04-28]] — Demon attribute alignment audit: canonical Pandemonium Matrix vs Doomcrypt implementation; 44/45 demons aligned, 1 delta (Pabbakis attribute variance).
+
 ## Assets & Diagrams
 
 [[assets/assets-catalog]]
