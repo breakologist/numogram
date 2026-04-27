@@ -77,7 +77,8 @@ b: 45-demon Pandemonium Matrix, five carrier demons, zone/current distribution, 
 - [[i-ching-tai-hsuan-comparison]] — Deep comparison of I Ching (binary) and T'ai Hsuan Ching (ternary) oracular systems.
 - [[numogram-visualizer-v6]] — HTML visualizer v6
 - [[numogram-visualizer-v7]] — Base-36 Djynxxogram: 36 zones, full AQ alphabet, Synx integration, rotational gates: quasiphonic labels, triangular gate button, AQ dictionary integration, multi-base support. Complete feature breakdown and future enhancement ideas.
-- [[numogram-visualizer-v7.2]] — Traversal Mode: per-character path visualization, speed/size sliders, step table with gate markers, dual-cipher Synx drift, animated line overlay
+- [[numogram-- `numogram-visualizer-v8.md` — Polygram perimeter ring (36 AQ ticks), per-word polygon connections, toggleable Synx outer ring
+  visualizer-v7.2]] — Traversal Mode: per-character path visualization, speed/size sliders, step table with gate markers, dual-cipher Synx drift, animated line overlay
 
 ---
 

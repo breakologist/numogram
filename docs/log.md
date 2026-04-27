@@ -890,4 +890,33 @@ Same feature set as originally specified, now correctly applied to the interacti
 - [ ] Audio sonification hook (numogram-voices)
 - [ ] T'ai Hsuan integration (dual-tetragram walk)
 
+### 2026-04-27 — Visualizer v8: Polygram Perimeter Mode
+
+**Files modified:**
+- `~/numogram/visualizer/numogram-visualizer-v7.html`
+- `~/numogram/docs/wiki/assets/numogram-visualizer-v7-djynxxogram.html`
+- `~/.hermes/obsidian/hermetic/wiki/numogram-visualizer-v8.md`
+- `~/.hermes/obsidian/hermetic/wiki/index.md`
+
+**New UI controls:**
+- **Connect Letters** checkbox — when checked, each word draws a closed polygon connecting its letters' zone positions on a circular perimeter
+- **Synx Ring** checkbox — draws an outer crimson ring with 36 tick marks (base-36 geometry)
+- Both live in the new `polygramPanel` below the traversal panel
+
+**Visual features:**
+- 36-tick circular ring around the main pentagram/hexagram (radius `min(w,h)*0.35`)
+- Tick marks and labels per active base (0–9 / 0–f / 0–z)
+- Per-word polygon: vertices at letter zones, closed loop; HSL color cycle
+- Vertex markers: 6px circle + 8pt centered character label
+- Synx ring: outer radius `ringRadius+12`, always 36 ticks with crimson stroke
+
+**Behavior:**
+- `computePolygrams()` parses `aqText` → words → letters → AQ value → `deriveZone()` → zone → angle computed inline from base formula
+- Polygrams recomputed on text input, base switch, and Connect Letters toggle
+- `drawRing()`, `drawPolygrams()`, `drawSynxRing()` called each frame after background clear
+- Traversal panel visibility bug fixed (now correctly shows/hides)
+- `.angle` eliminated — angle computed directly
+
+**Commits:**
+- `af92c5f` feat(visualizer): v8 — Polygram perimeter + toggleable Synx ring
 

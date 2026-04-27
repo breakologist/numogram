@@ -113,3 +113,29 @@ In base-10, the traversal path collapses quickly (many chars share same DR). Bas
 - [[aq-synx]] — Base-36 augmentation cipher
 - [[numogram-oracle-voice]] — Physical modelling synthesis integration
 - [[rotational-symmetry]] — Strobogrammatic gate theory
+
+
+## v8 — Polygram Perimeter Mode (2026-04-28)
+
+**New features:**
+- **36-tick perimeter ring** — circular AQ cipher labels (0-9, a-z) around the diagram
+- **Connect Letters checkbox** — draws a closed polygon for each word, connecting its letters' zone positions on the ring
+- **Synx Ring toggle** — secondary outer ring (crimson) for Synx zones; drawn when enabled
+- **Vertex markers** — small circles at each letter position with character label centered
+- **Color cycling** — each word gets HSL hue `(wordIndex * 137.5) mod 360`
+- **Base handling** — ring always shows 36 tick marks; labels shown per active base
+- **Traversal fix** — panel now correctly shows/hides after checkbox toggle
+
+**Technical notes:**
+- `computePolygrams()` splits `aqText` by whitespace into words
+- Letters map via `aqCipher[ch]` → `deriveZone(val)` → zone index
+- Ring geometry uses same `zonePosition` angle formulas (inner/outer radius split for base-10 zones >4)
+- Synx ring draws outer ticks at `ringRadius+12` with constant base-36 spacing
+- Polygons recomputed on text input, base switch, and Connect Letters toggle
+- `drawRing()`, `drawPolygrams()`, `drawSynxRing()` called each frame after background clear
+
+**Known limitations:**
+- Polygons from multiple words overlap; no collision or depth sorting
+- No replay/export yet; vertex labels may overlap on short rings
+- Synx ring always base-36 geometry regardless of active base
+
