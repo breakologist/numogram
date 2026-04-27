@@ -111,6 +111,24 @@ The moment the Numogram crystallized:
 
 The Barker-Spiral emerged from the *gap* between two card games — Decadence (10-based) and Subdecadence (9-based). The difference between 10 and 9 — the infinitesimal gap where 0.999... → 1 — is the spiral's generating principle. The Numogram lives in that gap.
 
+
+### Nick Land's Account
+
+In a 2007 lecture, Nick Land elaborated on the Barker Spiral's numogrammatic significance:
+
+> "(7:48) the 1990s that we called the Barker spiral. Um and I've been been promised that this this will appear and be graphically evident to people as we speak, but I'll still try and just talk to it a little bit. Um because what is important about the Barker Spiral is the fact that it joins together two sides — uh two various attempts to compute decimal numeracy and back in the CCRU days..."
+>
+> "(8:58) one side of the Barker spiral which connects the decimal numerals to sum on each side to 10 is what we called **Atlantean** (decadence). And I'll say a little bit more about that in a second. And the other side which uh sums the decimal numerals to make nine we called **Lemurian** (subdecadence)."
+>
+> "(9:39) it's a certain attempt — a very crude... attempt to try and just get a very clear diagrammatic sense of a crisis of adoption of decimal numeracy in Europe."
+>
+> "(9:52) Atlantis and Lemuria, Al. I think that's Crowley's AL and AL is the kind of um his great cabalistic key. It's constant between Hebrew, Greek, and then the uh CCRU Anglossic Qabbala in each case it adds to 31."
+
+The Barker Spiral thus maps the **gap between decadence (10) and subdecadence (9)** — the infinitesimal crack where 0.999... → 1. The Atlantean/Lemurian twins refract the decimal crisis across two numerological planes; their Crowleyan synthesis AL = 31 maps onto the same constant that computes across every Qabbala the CCRU touched.
+
+*See also:* [[decadence]], [[subdecadence]], [[ccru-writings-1997-2003]], [[aleph-null]], [[c-theory]]
+
+
 ## The Barker-Thresholds
 
 The CCRU's intensity scale, named after Barker:
