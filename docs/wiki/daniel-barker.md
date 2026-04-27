@@ -133,6 +133,37 @@ The Barker Spiral thus maps the **gap between decadence (10) and subdecadence (9
 *See also:* [[decadence]], [[subdecadence]], [[ccru-writings-1997-2003]], [[aleph-null]], [[c-theory]]
 
 
+
+### Source Diagrams (CCRU Interview, 1998)
+
+<div class="grid" data-columns="2" style="gap: 1.5rem; margin: 1.5rem 0;">
+
+<figure style="margin: 0;">
+  <img src="assets/bs.jpg" alt="Barker Spiral — hand-drawn original (bs.jpg)" style="max-width: 100%; border: 1px solid #334155; border-radius: 6px;">
+  <figcaption style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.5rem; text-align: center;">
+    The Barker Spiral — hand-drawn original (classic bs.jpg)
+    <br><em>Digit pairs summing to 9 radiate along a vertical axis; Archimedean spiral path.</em>
+  </figcaption>
+</figure>
+
+<figure style="margin: 0;">
+  <img src="assets/nb.png" alt="Barker Spiral — enhanced/digital version (nb.png)" style="max-width: 100%; border: 1px solid #334155; border-radius: 6px;">
+  <figcaption style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.5rem; text-align: center;">
+    Barker Spiral — enhanced/digital variant (nb.png)
+    <br><em>Color-coded arcs; doubling circuit visualised; 9-sum pairs emphasized.</em>
+  </figcaption>
+</figure>
+
+</div>
+
+### Barker Spiral (Reconstructed Infographic)
+
+The following SVG diagram synthesises Land's 2007 lecture description — Atlantean (sum-to-10) left, Lemurian (sum-to-9) right, centre dot 5⊕5.
+
+![Barker Spiral diagram: Atlantean and Lemurian halves radiating from 5⊕5 centre, showing mirror symmetry and spiral tension](assets/barker-spiral.svg)
+
+The spiral arises from *Lemuro-Atlantean convergence*: the tension between 9 and 10 opens the infinitesimal gap (0.999…→1) where the numogram crystallises. Mirroring the Atlantean half produces concentric circles (Renaissance cosmogony); mirroring the Lemurian half also yields concentric circles. Only the bilateral connection produces the diplozygotic spiral.
+
 ## The Barker-Thresholds
 
 The CCRU's intensity scale, named after Barker:

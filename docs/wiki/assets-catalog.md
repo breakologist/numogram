@@ -29,7 +29,9 @@ This directory contains canonical SVG diagrams used throughout the wiki. Referen
 | `tetragram-three-states.svg` | Diagram asset — purpose TBD (add description) |
 | `triangular-matrix.svg` | Diagram asset — purpose TBD (add description) |
 | `trigram-numogram.svg` | Diagram asset — purpose TBD (add description) |
-|| `barker-spiral.svg` | Barker Spiral diagram (Atlantean sum-to-10 / Lemurian sum-to-9) |
+|| `bs.jpg` | Barker Spiral original (bs.jpg) — hand-drawn source from CCRU interview |
+|| `nb.png` | Barker Spiral original (nb.png) — hand-drawn source from CCRU interview |
+ `barker-spiral.svg` | Barker Spiral diagram (Atlantean sum-to-10 / Lemurian sum-to-9) |
  `trigram-pair-matrix.svg` | Diagram asset — purpose TBD (add description) |
 
 ## Usage notes
