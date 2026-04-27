@@ -91,6 +91,7 @@ The system is explicitly linked by the CCRU to the I Ching (Yijing, or Book of C
 Five rotations from Aamodt's "Unleashing the Numogram" (Tch 5–6), each examining the same passage through Oracle (numogram/divination), Builder (code/systems), and Writer (prose/aesthetic):
 
 - [[triangle-rotation]] — Three-vertex creative method (Direct, Recursive, Rhizomatic) that structures works before tetralogue synthesis..
+- [[tetralogue]] — Hub for the four-voice methodology (Oracle/Builder/Writer/Gamer), format variants, and cross-references to all tetralogue pages.
 ## Hardware Entropy & Just-In-Time Divination
 
 - [[abyssal-crawler-status]] — Phase 6 goals, agent architecture (twin snakes), naming candidates.
