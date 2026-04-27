@@ -134,6 +134,13 @@ function toggleSynx() {
   </div>
 </div>
 
+<div id="polygramPanel" class="hidden">
+  <div class="panel-row">
+    <label><input type="checkbox" id="polygramShow" onchange="togglePolygramShow()"> Connect Letters</label>
+    <label><input type="checkbox" id="synxRingShow" onchange="toggleSynxRing()"> Synx Ring</label>
+  </div>
+</div>
+
 <canvas id="syzygyViz" width="120" height="120"></canvas>
 <div id="quasiphonicLabel"></div>
 <div id="taiHsuanPanel">
@@ -173,6 +180,17 @@ function toggleSynx() {
 // AQ values from AQ_DICTIONARY.md integrated and verified
 
 let particles = [];
+let traversalEnabled = false;
+let polygramEnabled = false;
+let synxRingEnabled = false;
+let traversalPath = [];
+let traversalStartTime = 0;
+let traversalSpeed = 800;
+let traversalSize = 3;
+let traversalLineWidth = 2;
+let traversalPointSize = 3;
+let polygramWords = []; // array of word data: [{word, letters: [{char, zone, pos}]}]
+
 let seed = 192855;
 let zone = 0;
 let currentBase = 10;
@@ -548,6 +566,21 @@ function draw() {
   frameCount_++;
   let fade = (zone === 0) ? 4 : (zone === 8 || zone === 15) ? 2.5 : 8;
   noStroke(); fill(5,5,5,fade); rect(0,0,width,height);
+  // Polygram perimeter ring
+  const cx = width/2, cy = height/2;
+  const ringRadius = min(width, height) * 0.35;
+  if (polygramEnabled || synxRingEnabled) {
+    drawRing(cx, cy, ringRadius, currentBase);
+  }
+  if (synxRingEnabled) {
+    drawSynxRing(cx, cy, ringRadius + 12);
+  }
+  if (polygramEnabled) {
+    drawPolygrams(cx, cy, ringRadius);
+  }
+
+
+
   fieldOffset += 0.00032; let t = frameCount_ * 0.014;
 
   for (let p of particles) {
@@ -578,7 +611,7 @@ function draw() {
   }
 
   if (frameCount_ % 2 === 0) drawSyzygyViz();
-}
+
 
 function updateInfo() {
   let dr = digitalRoot(seed, currentBase);
@@ -825,8 +858,9 @@ function switchBase(newBase) {
   else {
     document.getElementById('matrixPanel').classList.remove('show');
     document.getElementById('contextBox').classList.remove('show');
+  if (polygramEnabled) computePolygrams();
   }
-}
+
 
 function updateDensity() {
   let val = parseInt(document.getElementById('densitySlider').value);
@@ -1027,8 +1061,174 @@ function toggleTraversalShow() {
     traversalStartTime = Date.now();
   }
   const panel = document.getElementById('traversalPanel');
-  if (checked) panel.classList.add('show'); else panel.classList.remove('show');
+  if (checked) {
+    panel.classList.remove('hidden');
+    panel.classList.add('show');
+  } else {
+    panel.classList.remove('show');
+    panel.classList.add('hidden');
+  }
 }
+
+
+// Polygram ring rendering
+function drawRing(centerX, centerY, radius, base, labelsOnly = false) {
+  push();
+  noFill();
+  stroke(0, 255, 255, 150);
+  strokeWeight(1);
+  ellipse(centerX, centerY, radius * 2, radius * 2);
+  // tick marks and labels
+  textAlign(CENTER, CENTER);
+  textSize(8);
+  for (let z = 0; z < base; z++) {
+    // Compute angle same as zonePosition
+    let angleDeg;
+    if (currentBase === 10) {
+      let mod5 = z % 5;
+      let offset = (z > 4) ? 36 : 0;
+      angleDeg = mod5 * 72 + offset - 90;
+    } else {
+      let spacing = 360 / currentBase;
+      angleDeg = z * spacing - 90;
+    }
+    let angle = angleDeg * Math.PI / 180;
+    const x = centerX + cos(angle) * radius;
+    const y = centerY + sin(angle) * radius;
+    // tick
+    const inner = radius - 6;
+    const px = centerX + cos(angle) * inner;
+    const py = centerY + sin(angle) * inner;
+    line(px, py, x, y);
+    // label
+    let label = z.toString(base).toUpperCase();
+    fill(0, 255, 255, 200);
+    noStroke();
+    text(label, x, y);
+  }
+  pop();
+}
+
+function togglePolygramShow() {
+  const checked = document.getElementById('polygramShow').checked;
+  polygramEnabled = checked;
+  const panel = document.getElementById('polygramPanel');
+  if (checked) {
+    panel.classList.remove('hidden');
+  } else {
+    panel.classList.add('hidden');
+    // Also turn off synx ring if it was on
+    synxRingEnabled = false;
+    document.getElementById('synxRingShow').checked = false;
+  }
+  computePolygrams();
+}
+
+function toggleSynxRing() {
+  const checked = document.getElementById('synxRingShow').checked;
+  synxRingEnabled = checked;
+}
+
+function computePolygrams() {
+  polygramWords = [];
+  const text = aqText.trim();
+  if (!text) return;
+  // Split by whitespace into words
+  const words = text.split(/\s+/);
+  for (let wi = 0; wi < words.length; wi++) {
+    const word = words[wi];
+    const letters = [];
+    for (let i = 0; i < word.length; i++) {
+      const ch = word[i].toLowerCase();
+      const val = aqCipher[ch];
+      if (val !== undefined) {
+        const zone = deriveZone(val);
+        letters.push({ char: ch, zone: zone });
+      }
+    }
+    if (letters.length > 0) {
+      polygramWords.push({ word: word, letters: letters });
+    }
+  }
+}
+
+function drawPolygrams(centerX, centerY, ringRadius) {
+  if (!polygramEnabled || polygramWords.length === 0) return;
+  for (let wi = 0; wi < polygramWords.length; wi++) {
+    const wordData = polygramWords[wi];
+    const letters = wordData.letters;
+    if (letters.length < 2) continue;
+    const hue = (wi * 137.5) % 360;
+    stroke(hue, 75, 60, 0.6);
+    strokeWeight(2);
+    noFill();
+    // Polygon edges
+    beginShape();
+    for (let i = 0; i < letters.length; i++) {
+      const z = letters[i].zone;
+      let angleDeg;
+      if (currentBase === 10) {
+        let mod5 = z % 5;
+        let offset = (z > 4) ? 36 : 0;
+        angleDeg = mod5 * 72 + offset - 90;
+      } else {
+        angleDeg = z * (360 / currentBase) - 90;
+      }
+      let angle = angleDeg * Math.PI / 180;
+      vertex(centerX + cos(angle) * ringRadius, centerY + sin(angle) * ringRadius);
+    }
+    // close to first
+    let firstZ = letters[0].zone;
+    let firstDeg = (currentBase === 10)
+      ? (firstZ % 5) * 72 + (firstZ > 4 ? 36 : 0) - 90
+      : firstZ * (360 / currentBase) - 90;
+    vertex(centerX + cos(firstDeg * Math.PI/180) * ringRadius, centerY + sin(firstDeg * Math.PI/180) * ringRadius);
+    endShape(CLOSE);
+    // Vertex markers and labels
+    for (let i = 0; i < letters.length; i++) {
+      const z = letters[i].zone;
+      let angleDeg = (currentBase === 10)
+        ? (z % 5) * 72 + (z > 4 ? 36 : 0) - 90
+        : z * (360 / currentBase) - 90;
+      let angle = angleDeg * Math.PI / 180;
+      const x = centerX + cos(angle) * ringRadius;
+      const y = centerY + sin(angle) * ringRadius;
+      fill(hue, 75, 60, 0.9);
+      noStroke();
+      ellipse(x, y, 6, 6);
+      fill(255);
+      textAlign(CENTER, CENTER);
+      textSize(8);
+      text(letters[i].char, x, y);
+    }
+  }
+}
+
+
+
+function drawSynxRing(centerX, centerY, radius) {
+  if (!synxRingEnabled) return;
+  push();
+  stroke(255, 100, 100, 120);
+  strokeWeight(1.5);
+  noFill();
+  ellipse(centerX, centerY, radius * 2, radius * 2);
+  // tick marks for all 36 positions (Synx always base-36 spacing)
+  for (let z = 0; z < 36; z++) {
+    let spacing = 360 / 36; // 10° per zone
+    let angleDeg = z * spacing - 90;
+    let angle = angleDeg * Math.PI / 180;
+    const x = centerX + cos(angle) * radius;
+    const y = centerY + sin(angle) * radius;
+    const inner = radius - 8;
+    const px = centerX + cos(angle) * inner;
+    const py = centerY + sin(angle) * inner;
+    stroke(255, 100, 100, 150);
+    line(px, py, x, y);
+  }
+  pop();
+}
+
 
 function zonePosition(z) {
   let count = cfg.zoneCount;
@@ -1138,7 +1338,10 @@ function updateAQInfo() {
   } else {
     ctx.style.display = 'none';
   }
-}
+  // Recompute polygrams if enabled
+  if (polygramEnabled) computePolygrams();
+
+
 
 function setZoneFromAQ() {
   let text = document.getElementById('aqInput').value || '';
