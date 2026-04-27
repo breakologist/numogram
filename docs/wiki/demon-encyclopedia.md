@@ -1,74 +1,55 @@
 ---
 title: Demon Encyclopedia
 created: 2026-04-28
-source: "Pandemonium Matrix (45 demons) — Unleashing the Numogram, Aamodt"
-tags: [pandemonium, demons, encyclopedia, index]
+tags: [pandemonium, index]
 ---
 
 # Demon Encyclopedia
 
-All 45 entities of the Pandemonium Matrix, indexed by Mesh number.
-
-## Chronological (by Mesh)
-
-- [[demon-ababbatok-abracadabra|Ababbatok Abracadabra]]
-- [[demon-bobobja-beelzebub|Bobobja Beelzebub]]
-- [[demon-bubbamu-bubs|Bubbamu Bubs]]
-- [[demon-djuddha-judd-dread|Djuddha Judd Dread]]
-- [[demon-djungo|Djungo]]
-- [[demon-djynxx-the-jinn|Djynxx The Jinn]]
-- [[demon-doogu-the-blob|Doogu The Blob]]
-- [[demon-duoddod|Duoddod]]
-- [[demon-ixidod-king-sid|Ixidod King Sid]]
-- [[demon-ixigool-djinn-of-the-magi|Ixigool Djinn Of The Magi]]
-- [[demon-ixix-yix|Ixix Yix]]
-- [[demon-katak|Katak]]
-- [[demon-krako-kru-karak-oa|Krako Kru Karak Oa]]
-- [[demon-kuttadid-kitty|Kuttadid Kitty]]
-- [[demon-lurgo-legba|Lurgo Legba]]
-- [[demon-minommo|Minommo]]
-- [[demon-mombbo|Mombbo]]
-- [[demon-mommoljo-mama-jo|Mommoljo Mama Jo]]
-- [[demon-mummumix-mix-up|Mummumix Mix Up]]
-- [[demon-muntuk-manitou|Muntuk Manitou]]
-- [[demon-mur-mur-murrumur|Mur Mur Murrumur]]
-- [[demon-nammamad|Nammamad]]
-- [[demon-numko-old-nuk|Numko Old Nuk]]
-- [[demon-nuttubab-nut-cracker|Nuttubab Nut Cracker]]
-- [[demon-oddubb-odba|Oddubb Odba]]
-- [[demon-pabbakis-pabz|Pabbakis Pabz]]
-- [[demon-papatakoo-pataku|Papatakoo Pataku]]
-- [[demon-puppo-the-pup|Puppo The Pup]]
-- [[demon-skarkix-sharky|Skarkix Sharky]]
-- [[demon-skoodu-li-l-scud|Skoodu Li L Scud]]
-- [[demon-sukugool-old-skug|Sukugool Old Skug]]
-- [[demon-tchakki-chuckles|Tchakki Chuckles]]
-- [[demon-tchattuk-one-eyed-jack|Tchattuk One Eyed Jack]]
-- [[demon-tchu-tchanul|Tchu Tchanul]]
-- [[demon-tikkitix-tickler|Tikkitix Tickler]]
-- [[demon-tokhatto-old-toker|Tokhatto Old Toker]]
-- [[demon-tukkamu|Tukkamu]]
-- [[demon-tukutu-killer-kate|Tukutu Killer Kate]]
-- [[demon-tutagool-yettuk|Tutagool Yettuk]]
-- [[demon-ummnu-om-amen-omen|Ummnu Om Amen Omen]]
-- [[demon-unnunddo-the-false-nun|Unnunddo The False Nun]]
-- [[demon-unnutchi-t-ai-chi|Unnutchi T Ai Chi]]
-- [[demon-ununak-nuke|Ununak Nuke]]
-- [[demon-ununuttix-tick-tock|Ununuttix Tick Tock]]
-- [[demon-uttunul|Uttunul]]
-
-## Grouped by type
-
-- **Chronodemons** (15) — time-based entities  
-- **Amphidemons** (24) — dual-nature spirits  
-- **Xenodemons** (6) — foreign/outside forces  
-
-## Grouped by current
-
-- **Time-Circuit** (Zones 0–4, 9): 35 demons
-- **Warp** (Zones 3 & 6): 17 demons
-- **Plex** (all others): 45 demons
-
-> Note: Demons span two zones via their netspan pair (except Warp self-reflexives).
+- [[demon-abbakis-abz|Abbakis Abz]]
+- [[demon-ammamad|Ammamad]]
+- [[demon-apatakoo-ataku|Apatakoo Ataku]]
+- [[demon-atak|Atak]]
+- [[demon-babbatok-bracadabra|Babbatok Bracadabra]]
+- [[demon-chakki-huckles|Chakki Huckles]]
+- [[demon-chattuk-ne-yed-ack|Chattuk Ne Yed Ack]]
+- [[demon-chu-chanul|Chu Chanul]]
+- [[demon-ddubb-dba|Ddubb Dba]]
+- [[demon-ikkitix-ickler|Ikkitix Ickler]]
+- [[demon-inommo|Inommo]]
+- [[demon-juddha-udd-read|Juddha Udd Read]]
+- [[demon-jungo|Jungo]]
+- [[demon-jynxx-he-inn|Jynxx He Inn]]
+- [[demon-karkix-harky|Karkix Harky]]
+- [[demon-koodu-i-l-cud|Koodu I L Cud]]
+- [[demon-mmnu-m-men-men|Mmnu M Men Men]]
+- [[demon-nnunddo-he-alse-un|Nnunddo He Alse Un]]
+- [[demon-nnutchi-ai-hi|Nnutchi Ai Hi]]
+- [[demon-nunak-uke|Nunak Uke]]
+- [[demon-nunuttix-ick-ock|Nunuttix Ick Ock]]
+- [[demon-obobja-eelzebub|Obobja Eelzebub]]
+- [[demon-okhatto-ld-oker|Okhatto Ld Oker]]
+- [[demon-ombbo|Ombbo]]
+- [[demon-ommoljo-ama-o|Ommoljo Ama O]]
+- [[demon-oogu-he-lob|Oogu He Lob]]
+- [[demon-rako-ru-arak-oa|Rako Ru Arak Oa]]
+- [[demon-ttunul|Ttunul]]
+- [[demon-ubbamu-ubs|Ubbamu Ubs]]
+- [[demon-ukkamu|Ukkamu]]
+- [[demon-ukugool-ld-kug|Ukugool Ld Kug]]
+- [[demon-ukutu-iller-ate|Ukutu Iller Ate]]
+- [[demon-umko-ld-uk|Umko Ld Uk]]
+- [[demon-ummumix-ix-p|Ummumix Ix P]]
+- [[demon-untuk-anitou|Untuk Anitou]]
+- [[demon-uoddod|Uoddod]]
+- [[demon-uppo-he-up|Uppo He Up]]
+- [[demon-ur-ur-urrumur|Ur Ur Urrumur]]
+- [[demon-urgo-egba|Urgo Egba]]
+- [[demon-utagool-ettuk|Utagool Ettuk]]
+- [[demon-uttadid-itty|Uttadid Itty]]
+- [[demon-uttubab-ut-racker|Uttubab Ut Racker]]
+- [[demon-xidod-ing-id|Xidod Ing Id]]
+- [[demon-xigool-jinn-of-the-agi|Xigool Jinn Of The Agi]]
+- [[demon-xix-ix|Xix Ix]]
 
 See also: [[pandemonium-matrix]], [[syzygy-arithmetic]], [[book-of-paths]].

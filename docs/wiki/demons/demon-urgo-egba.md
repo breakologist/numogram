@@ -1,0 +1,33 @@
+---
+name: Lurgo (Legba)
+mesh: 0
+type: Amphidemon of Openings
+netspan: 1::0
+current: Plex
+zone_min: 1
+zone_max: 0
+syzygy_pair: 0::36
+attrs: Terminal Initiator, Door of Doors, Spinal-voyage rites.
+created: 2026-04-28
+source: "Unleashing the Numogram — Aamodt (CCRU era)"
+tags: [demon, pandemonium, zone-1, zone-0, amphidemon-of-openings]
+---
+
+# Lurgo (Legba)
+
+> Mesh: 0 | Netspan: 1::0 | Type: Amphidemon of Openings  
+> Current: Plex | Zones: 1 → 0  
+> Syzygy partner: **Uttunul**
+
+## Essence
+*Full lore TBD from source.*
+
+**Attributes:**  
+Terminal Initiator, Door of Doors, Spinal-voyage rites.
+
+## See also
+- [[pandemonium-matrix]]
+- [[syzygy-arithmetic]]
+- [[book-of-paths]]
+- [[decadence]]
+- [[subdecadence]]
