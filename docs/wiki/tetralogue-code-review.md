@@ -18,5 +18,6 @@ The **Tetralogue Code Review** applies the four-voice framework to code analysis
 - [[aq-calculators-litprog]] — Three AQ calculators (644/290/900 lines) compared; all pass canonical tests; v2 recommended
 - [[entropy-modules-litprog]] — Two Manim visualizations + seven-source entropy ecosystem examined
 - [[numogram-oracle-litprog]] — `oracle.py` (381 lines) + visualizer + philosophies; seed→zone→syzygy→current→gate→path→reading pipeline
+- [[tetralogue-generator]] — Automated generator pipeline (can be repurposed for code-review roundtables with appropriate voice engineering)
 
 **Skill:** `tetralogue-code-review` (software-development skill) defines the methodology.

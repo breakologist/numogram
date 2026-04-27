@@ -27,3 +27,8 @@ The **Tetralogue Generator** (`numogram-tetralogue-generator`) is a meta-skill t
 - [[entropy-tetralogue-2026-04-18]] — Hardware entropy & just-in-time divination (Mesh-12)
 
 **Key feature:** Provenance-aware — can separate motif statistics by source (canonical vs external), enriching the debate with source-level fingerprinting.
+
+
+**Mesh-3 anthology (47-entry AQ + Mesh context):**
+- [[square-roundtable-anthology-2026-04-27]] — comparative table across seeds 5,7,123,369,666
+- [[square-roundtable-mesh-3-2026-04-27-seed7]], [[square-roundtable-mesh-3-2026-04-27-seed666]], [[square-roundtable-mesh-3-2026-04-27-seed123]], [[square-roundtable-mesh-3-2026-04-27-seed369]] — individual transcripts

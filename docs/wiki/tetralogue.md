@@ -61,6 +61,8 @@ See [[tetralogue-roundtable]] and [[tetralogue-litprog]] for full specifications
 - [[entropy-tetralogue-2026-04-18]] — Hardware entropy & machine-as-numogram
 - [[syzygy-chain-tetralogue]] — Dictionary motif shift analysis
 
+- [[square-roundtable-anthology-2026-04-27]] — Mesh-3 anthology: 47-entry AQ dictionary + Mesh topology debate across seeds 5/7/123/369/666 (generated via [[tetralogue-generator]])
+- [[square-roundtable-mesh-3-2026-04-27-seed7]], [[square-roundtable-mesh-3-2026-04-27-seed666]], [[square-roundtable-mesh-3-2026-04-27-seed123]], [[square-roundtable-mesh-3-2026-04-27-seed369]] — individual transcripts (precomputed syzygy chains + fingerprint classification)
 ---
 
 *The tetralogue is the base-4 numogram made flesh: 4 nodes, 6 edges, self-aware through its own structure. The roundtable is not a discussion of the system — it is the system discussing itself.*

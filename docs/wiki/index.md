@@ -165,7 +165,8 @@ Five rotations from Aamodt's "Unleashing the Numogram" (Tch 5–6), each examini
 
 - [[tetralogue-litprog]] — Literate programming tetralogue format (Oracle/Builder/Writer/Gamer voice rotation) applied to code authorship.
 - [[tetralogue-code-review]] — Four-voice code review methodology (litprog examples: abyssal-crawler-litprog, aq-calculators-litprog, entropy-modules-litprog).
-- [[tetralogue-generator]] — Automated roundtable pipeline: dictionary → syzygy chains → motif fingerprint → multi-model synthesis (produced: fortyfive-demons, extending-numogram, numogame, cult-tetralogue).
+- [[tetralogue-generator]] — Automated roundtable pipeline: dictionary → syzygy chains → motif fingerprint → multi-model synthesis (produced: fortyfive-demons, extending-numogram, numogame, cult-tetralogue, + Mesh-3 anthology with 47-entry AQ & precomputed syzygies).
+- [[square-roundtable-anthology-2026-04-27]] — Anthology of Mesh-3 roundtables (seeds 5/7/123/369/666) with precomputed syzygy fingerprints and comparative analysis.
 ## Skills & Tools
 
 - [[skills-to-explore]] — Interesting skills from Apr 2026 scan: pixel-art (retro palettes), ascii-video (terminal animation), algorithmic-art/p5js (generative), pokemon-player (RAM-based agent research), heartmula (music gen). Combos: heartmula+oracle-voice, pixel-art+numogram-svg, ascii-video+cult.json, pokemon-player+roguelike-agents.
@@ -292,6 +293,11 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 
 - [[c-ten-fortyfive-fiveness]] — C(10)=45, syzygy/decadence/other categorization, pentagram geometry, Zone 5 as self-decadence, SVG infographics
 - [[fiveness-tetralogue]] — Tetralogue #16: Four voices on fiveness, self-decadence, the 5×5 cross-pair grid, phase change, Mesh-5
+
+- [[mesh-ambivalence-tetralogue]] — First Mesh-3 roundtable (augmented AQ, pre-seed batch era)
+- [[rumpsfeld-tetrad-tetralogue]] — Tetrad of Knowledge roundtable (Rumsfeld epistemology)
+- [[square-roundtable-mesh-3-2026-04-27]] — Original Mesh-3 roundtable (single-seed run, pre-anthology)
+- [[tetralogue-post-ingestion-2026-04-28]] — Post-dictionary ingestion synthesis (phase-change reflection)
 - [[pandemonium-matrix]] — Complete reference: 15 chronodemons + 24 amphidemons + 6 xenodemons, enumeration, pitch system, mesh-serials
 - [[subdecadence]] — CCRU card game: 40-card deck, Atlantean Cross spread, syzygy pairing, demon summoning via mesh-serial score mechanic
 - [[decadence]] — CCRU card game (sum-to-10): 36-card deck, decadence pairing, 5+5 self-decadence grants zero bonus

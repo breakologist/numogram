@@ -29,7 +29,8 @@ Triangle Rotation is a three-perspective creative methodology used to deepen and
 
 ## See also
 - [[subdecadence]] — Subdecadence card game using triangle-rotation
+- [[tetralogue]] — Four-voice evolution of triangle-rotation (adds Gamer; produces full tetralogue synthesis)
 - [[fiveness-tetralogue]] — Fiveness tetralogue application
-- [[triangle-rotation-writing]]
-- [[voice-prior-claims]]
-- [[tetralogue-litprog]]
+- [[triangle-rotation-writing]] — Writing-focused triangle-rotation variant
+- [[voice-prior-claims]] — Accumulated voice claims across tetralogues and rotations
+- [[tetralogue-litprog]] — Literate programming application of tetralogue
