@@ -84,7 +84,7 @@ b: 45-demon Pandemonium Matrix, five carrier demons, zone/current distribution, 
 
 - [[numogram-divination]] — A method for reading the numogram as an oracle. Given any number (date, name AQ value, random seed), trace the path through zone → syzygy → current → gate. Includes worked example using a random.org seed.
 
-- [[decadence-triangle]] — Three-perspective rotation through the Decadence card game, the Oracle system, and The Book of Paths. Oracle, Builder, and Writer examine the same source material and annotate each other. Includes procedural generation algorithm from card deals, Book of Paths zone mappings, and the Subdecadance-as-initiation reading.
+- [[decadence-triangle]] — Three-perspective rotation through the Decadence card game, the Oracle system, and The Book of Paths. Oracle, Builder, and Writer examine the same source material and annotate each other. Includes procedural generation algorithm from card deals, Book of Paths zone mappings, and the Subdecadance-as-initiation reading. (Engages Barker Spiral geometry through three‑way rotation)
 
 - [[orphan-drift-triangle]] — Second rotation. Five demons from the 0(rphan) d(rift>) tables (Katak, Djynxx, Oddubb, Murmer, Uttunul) examined as enemy mechanics (Builder), as voices/atmosphere (Writer), and as demon-calling rites (Oracle). Full aspect-to-gameplay mapping for all 50 demon aspects. Key insight: boss encounters are summoning rituals.
 
@@ -243,13 +243,21 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 - [[subdecadence]] — Lemurian time-sorcery card game (CCRU). 40-card deck, pairs summing to 9 (syzygies), Atlantean Cross spread, 45 demons from Pandemonium Matrix. Source of 333 AQ entries.
 ## People & Entities
 
+- [[barker-spiral]] — The diplozygotic spiral from which the Numogram crystallised. Atlantean (sum-to-10) and Lemurian (sum-to-9) halves converging at the 5⊕5 origin. The mathematical origin of the whole system.
+- [[barker-spiral-reconstruction]] — Methodology: how the Barker Spiral was recovered from scattered CCRU transcripts, hand‑drawn diagrams, and numogram‑game code. (Images → SVG, rules cross‑validation, diagram synthesis).
+
+
 - [[amy-ireland]] — Contemporary CCRU-aligned theorist contributing demon name-generation methodology.
 - [[daniel-barker]] — Cryptographic genius. Geotraumatics, Cthelll, Spinal-Catastrophism, Palate-Tectonics, Barker-Spiral, Barker Numbering. The Numogram's mathematical origin.
 ## Revelations & Deep Structure
 
+- [[barker-spiral]] — The diplozygotic spiral from which the Numogram crystallised. Atlantean (sum-to-10) and Lemurian (sum-to-9) halves converging at the 5⊕5 origin. The mathematical origin of the whole system.
+
 - [[the-360-revelation]] — Net-spans sum to 360. Partition: outer regions (153) + Time-Circuit (207) = 360. HERMETIC=153, COSMOGONY=207. THE DECIMAL LABYRINTH=360. The system's deepest self-encoding.
 
 ## Theory & Philosophy
+- [[barker-spiral-mathematical-foundations]] — Formal algebraic structure: Atlantean (sum-to-10) and Lemurian (sum-to-9) complementarity operators, the 5⊕5 node, syzygy‑chain triangulation, and the digit‑pair geometry underlying gate progression.
+
 - [[one-two-many-land-numbering]] — Land numbering practices: machinic code, Cantor/Gödel excess, computer qabbalism, nullotation, QWERTY lock-in
 
 - [[unleashing-the-numogram-source]] — Aamodt source catalog: 250 KB book, 28 derived wiki pages, gap inventory

@@ -1,96 +1,70 @@
 ---
-title: Subdecadence — Lemurian Time-Sorcery Card Game
-created: 2026-04-20
-tags: ["aq", "ccru", "atlantean-cross", "doomcrypt", "game", "numogram", "pandemonium", "subdecadence"]
-source: doomcrypt/subdecadence (GitHub) — canonical implementation
+title: Subdecadence (Lemurian Game)
+created: 2026-04-27
+last_updated: 2026-04-27
+status: draft
+tags: ["subdecadence", "lemurian", "barker-spiral", "sum-to-9", "game", "numerology", "ccru", "geotraumatics"]
 ---
 
+# Subdecadence (Lemurian Side)
 
-# Subdecadence
+The Lemurian half of the [[barker-spiral]]: the occulted variation whose sum-to-9 twinings reveal the *subdecadent underworld*. In Barker's narrative, Subdecadence was the "casually mentioned" variation that unlocked the crisis.
 
-## Overview
+> "Subdecadence introduces zeroes, and nine-zero twins. It works by zygonovic numerism."
+>
+> — Daniel Charles Barker, *Barker Speaks* (CCRU interview, Autumn 1998)
 
-"Unlike Decadence (which targets sums of 10), Subdecadence pairs cards that sum to 9. It functions simultaneously as a game, a divination tool, and a system of time-sorcery."
+## Rules (Reconstructed)
 
+- Players: 2 or more
+- Equipment: Two standard decks of cards
+- Objective: Form pairs whose values sum to **9**
+- Scoring: Zero is sovereign (9 wraps to 0 via 9‐sum complementarity)
 
-The Barker Spiral maps the decimal crisis (9 vs 10) that birthed both Subdecadence and its twin Decadence; the spiral's gap is where the numogram lives. See [[Barker Spiral]].
-A 40-card deck game rooted in CCRU numogram theory. Play against the deck, pair syzygy cards, and discover which demon your final score summons.
+Each card maps to a digit (Ace = 1 through 10 = 0). Pairs sum to nine: 0+9, 1+8, 2+7, 3+6, 4+5. The twist: zero is *not* a void but a *saturated convergence* — since 9 wraps to 0 in decimal reduction, the nine‐sum becomes the zero‐sum.
 
-## The Deck
+## Lemurian Numeracy
 
-52-card deck stripped to 40 cards:
-- Aces = 1
-- 10s = 0
-- Face cards removed
-- 4 suits × 10 values (0-9)
+Subdecadence operates on **9‐sum equivalence**: x + (9 − x) = 9 ≡ 0 (mod 9). This is *zygonovoc numerism* — the art of twin pairing under the non‐decimal (decadence‐minus‐one) regime.
 
-## Atlantean Cross Spread
+```
+        0  (9 via 9+0; zero as saturated null)
+        ↓
+9 — 9+0=9 (≡0)  0 — 0+9=9 (≡0)
+        ↗           ↖
+8 — 8+1=9        1 — 1+8=9
+        ↗           ↖
+7 — 7+2=9        2 — 2+7=9
+        ↗           ↖
+6 — 6+3=9        3 — 3+6=9
+        ↘           ↙
+         4⊕5 (sums to nine; the Lemurian axis)
+```
 
-Five positions:
+The Lemurian axis is a *diagonal mirror* through the digit set. Every number acquires a complement 9 − x. This is the *geotraumatic* register: the crack in decimal coherence where traumatic memory (Cthelll, the iron core) leaks through.
 
-| Position | Name | Meaning |
-|----------|------|---------|
-| I | CENTER | Memories and Dreams |
-| II | WEST | Destructive Influences |
-| III | EAST | Creative Influences |
-| IV | NORTH | Far Future |
-| V | SOUTH | Deep Past |
+## Geotraumatic Undertow
 
-## Game Flow
+Where Decadence enforces surface symmetry (10 = return to origin), Subdecadence reveals the **9‐gap**. Nine is the last digit before wrap; it is also the point where digital reduction *fails to resolve*:
 
-1. **DEAL** — 5 cards face-up into the Atlantean Cross (Set One)
-2. **DRAW** — 5 more cards (Set Two / Hand)
-3. **PAIR** — Match hand cards to cross cards that sum to 9:
-   - 9+0, 8+1, 7+2, 6+3, 5+4
-4. **RESOLVE** — Score calculated
+> "Once numbers are no longer overcoded, and thus released from their metric function, they are freed for other things, and tend to become diagrammatic."
+>
+> "Treat the decimal numerals as a set of 9‑sum twins — zygonovize — and they map an abstract intensive wave, indifferent to magnitude. Everything efficient about digital reduction is concerned with this, since it discovers the key to decimal syzygetic complementarity: 9 = 0."
 
-## Scoring
+Subdecadence thus maps the **crypt of the decimal system**. If Decadence is the manifest order (10‐based, capitalist numeracy), Subdecadence is the latent code (9‐based, geotraumatic register). The spiral does not emerge until *both* registers are held simultaneously.
 
-| Outcome | Points |
-|---------|--------|
-| Valid pair | +difference (7+2 = +5, 9+0 = +9, 4+5 = +1) |
-| Unpaired cross card | −face value (9 unpaired = −9, 0 unpaired = −0) |
+## Cross-References
 
-- **Round score ≥ 0**: continue — draw another set of 5, add to running total
-- **Round score < 0**: game over — call the lemur whose mesh-number equals your final score
-- **Deck exhausted**: game over
+- [[barker-spiral]] — both halves together
+- [[decadence]] — Atlantean counterpart (sum-to-10)
+- [[geotraumatics]] — theory of planetary traumatic memory expressed numerically
+- [[numogram]] — the diagram that crystallises from deca + subdeca
+- [[daniel-barker]] — Barker's discovery narrative
+- [[numogram-plex]] — Zone-9 as the 9‐sum twin territory
+- [[pandemonium-matrix-45-demons]] — the 45‐demon set derives from 9–10 nodal tension
 
-## Suit-Demon Correspondence
+## Diagram
 
-| Suit | Symbol | Demon Type |
-|------|--------|------------|
-| Spades | ♠ | Mj- |
-| Hearts | ♥ | Mn+ |
-| Diamonds | ♦ | Mn- |
-| Clubs | ♣ | Mj+ |
+![Barker Spiral Lemurian half (sum-to-9)](../assets/barker-spiral.svg)
 
-## Relationship to Decadence
-
-Subdecadence pairs that sum to **9** (syzygy matching).
-Decadence pairs that sum to **10** (decadence matching).
-
-The Subdecadence game operationalizes the syzygy system. The Decadence game would operationalize the decadence system we mapped in the fiveness tetralogue. Together they practice both halves of C(10)=45.
-
-## AQ Entries
-
-The 333 AQ entries referenced in the original CCRU Subdecadence system come from the card-demon correspondence — each of the 40 cards maps to specific demons, and each demon has AQ-valued attributes. The doomcrypt implementation provides the complete 45-demon database with names, types, net-spans, and attributes.
-
-## Source
-
-- Live game: https://doomcrypt.github.io/subdecadence/
-- GitHub: https://github.com/doomcrypt/subdecadence
-- Raw data: `~/.hermes/obsidian/hermetic/raw/pandemonium-matrix-45-demons.json`
-- Governed by the great lemur Tokhatto
-
-## Related
-
-- [[pandemonium-matrix]] — Complete 45-demon reference
-- [[c-ten-fortyfive-fiveness]] — C(10)=45, syzygy/decadence structure
-- [[fiveness-tetralogue]] — Self-decadence of Zone 5
-- [[fortyfive-demons-tetralogue]] — Roundtable on the 45 demons
-- [[numogram-time-circuit]] — Time Circuit traversal
-
-## See also
-- [[Barker Spiral]] (diagram: assets/barker-spiral.svg)
-
-- [[flatline-numogrammatics]] — Neolemurian flatline tetralogy: Year-Zero schism, Continentity, carrier ethic, hyperstition triad
+*Shown: right‐hand (counter‐clockwise) Lemurian bands. The central 4⊕5 pair sums to nine; arms radiate outward through 9‐sum complementarity.*
