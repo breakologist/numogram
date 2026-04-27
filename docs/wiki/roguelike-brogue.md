@@ -181,6 +181,7 @@ Follow the generated zone sequence as a **macro-strategy guide** — e.g., "in z
 - [[gate]] — Gate-6, Gate-21, Gate-36, Gate-45 as shortcut doors (Brogue's door mechanisms)
 
 **AAR & Run Analysis**
+- [[aar-methodology]] — Canonical AAR methodology across roguelikes
 - [[numogame-state-of-the-game]] — Example AAR table (six runs, metrics, notes)
 - [[numogame-tetralogue]] — Run analysis via four voices (simulated runs, pre-reconciliation)
 - [[abyssal-crawler-litprog]] — Code-level examination (how the game implements these concepts)

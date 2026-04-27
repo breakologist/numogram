@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
+    text { font-family: 'JetBrains Mono', monospace; }
+  </style>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  <text x="30" y="30" fill="#94a3b8" font-size="10" font-weight="400">T'AI HSUAN CHING · THREE STATES</text>
+  <text x="30" y="50" fill="white" font-size="16" font-weight="700">HEAVEN · EARTH · MAN</text>
+  <text x="30" y="67" fill="#64748b" font-size="9">Yang (cyan, solid) = Heaven. Yin (dark, broken) = Earth. Em (amber, triple-dash) = Man. The mediator.</text>
+  <rect x="50" y="100" width="170" height="150" rx="6" fill="rgba(15,23,42,0.85)" stroke="#94a3b8" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="62" y="122" fill="#94a3b8" font-size="14" font-weight="700">#0</text>
+  <text x="105" y="122" fill="#94a3b8" font-size="10" font-weight="600">Qian</text>
+  <text x="62" y="138" fill="#64748b" font-size="7">Zone 0 · ternary 0000</text>
+  <rect x="70" y="155" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="140" y="155" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="205" y="162" fill="#4a4a5e" font-size="7">Yin</text>
+  <rect x="70" y="173" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="140" y="173" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="205" y="180" fill="#4a4a5e" font-size="7">Yin</text>
+  <rect x="70" y="191" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="140" y="191" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="205" y="198" fill="#4a4a5e" font-size="7">Yin</text>
+  <rect x="70" y="209" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="140" y="209" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="205" y="216" fill="#4a4a5e" font-size="7">Yin</text>
+  <text x="62" y="235" fill="#475569" font-size="7">All yin — void</text>
+  <rect x="240" y="100" width="170" height="150" rx="6" fill="rgba(15,23,42,0.85)" stroke="#a855f7" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="252" y="122" fill="#a855f7" font-size="14" font-weight="700">#27</text>
+  <text x="295" y="122" fill="#94a3b8" font-size="10" font-weight="600">Jing</text>
+  <text x="252" y="138" fill="#64748b" font-size="7">Zone 9 · ternary 0001</text>
+  <rect x="260" y="155" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="305" y="155" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="350" y="155" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <text x="395" y="162" fill="#fbbf24" font-size="7">Em</text>
+  <rect x="260" y="173" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="330" y="173" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="395" y="180" fill="#4a4a5e" font-size="7">Yin</text>
+  <rect x="260" y="191" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="330" y="191" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="395" y="198" fill="#4a4a5e" font-size="7">Yin</text>
+  <rect x="260" y="209" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="330" y="209" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="395" y="216" fill="#4a4a5e" font-size="7">Yin</text>
+  <text x="252" y="235" fill="#475569" font-size="7">1000 — first trit shift</text>
+  <rect x="430" y="100" width="170" height="150" rx="6" fill="rgba(15,23,42,0.85)" stroke="#00ffff" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="442" y="122" fill="#00ffff" font-size="14" font-weight="700">#40</text>
+  <text x="485" y="122" fill="#94a3b8" font-size="10" font-weight="600">Ji</text>
+  <text x="442" y="138" fill="#64748b" font-size="7">Zone 4 · ternary 1111</text>
+  <rect x="450" y="155" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="495" y="155" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="540" y="155" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <text x="585" y="162" fill="#fbbf24" font-size="7">Em</text>
+  <rect x="450" y="173" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="495" y="173" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="540" y="173" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <text x="585" y="180" fill="#fbbf24" font-size="7">Em</text>
+  <rect x="450" y="191" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="495" y="191" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="540" y="191" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <text x="585" y="198" fill="#fbbf24" font-size="7">Em</text>
+  <rect x="450" y="209" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="495" y="209" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="540" y="209" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <text x="585" y="216" fill="#fbbf24" font-size="7">Em</text>
+  <text x="442" y="235" fill="#475569" font-size="7">1111 — all Em — Mercury</text>
+  <rect x="620" y="100" width="170" height="150" rx="6" fill="rgba(15,23,42,0.85)" stroke="#a855f7" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="632" y="122" fill="#a855f7" font-size="14" font-weight="700">#54</text>
+  <text x="675" y="122" fill="#94a3b8" font-size="10" font-weight="600">Qi</text>
+  <text x="632" y="138" fill="#64748b" font-size="7">Zone 9 · ternary 0002</text>
+  <rect x="640" y="155" width="120" height="8" rx="2" fill="#22d3ee"/>
+  <text x="775" y="162" fill="#22d3ee" font-size="7">Yang</text>
+  <rect x="640" y="173" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="710" y="173" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="775" y="180" fill="#4a4a5e" font-size="7">Yin</text>
+  <rect x="640" y="191" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="710" y="191" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="775" y="198" fill="#4a4a5e" font-size="7">Yin</text>
+  <rect x="640" y="209" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="710" y="209" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="775" y="216" fill="#4a4a5e" font-size="7">Yin</text>
+  <text x="632" y="235" fill="#475569" font-size="7">2000 — second trit shift</text>
+  <rect x="50" y="270" width="170" height="150" rx="6" fill="rgba(15,23,42,0.85)" stroke="#c084fc" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="62" y="292" fill="#c084fc" font-size="14" font-weight="700">#80</text>
+  <text x="105" y="292" fill="#94a3b8" font-size="10" font-weight="600">Yang</text>
+  <text x="62" y="308" fill="#64748b" font-size="7">Zone 8 · ternary 2222</text>
+  <rect x="70" y="325" width="120" height="8" rx="2" fill="#22d3ee"/>
+  <text x="205" y="332" fill="#22d3ee" font-size="7">Yang</text>
+  <rect x="70" y="343" width="120" height="8" rx="2" fill="#22d3ee"/>
+  <text x="205" y="350" fill="#22d3ee" font-size="7">Yang</text>
+  <rect x="70" y="361" width="120" height="8" rx="2" fill="#22d3ee"/>
+  <text x="205" y="368" fill="#22d3ee" font-size="7">Yang</text>
+  <rect x="70" y="379" width="120" height="8" rx="2" fill="#22d3ee"/>
+  <text x="205" y="386" fill="#22d3ee" font-size="7">Yang</text>
+  <text x="62" y="405" fill="#475569" font-size="7">2222 — all yang — maximal</text>
+  <rect x="240" y="270" width="170" height="150" rx="6" fill="rgba(15,23,42,0.85)" stroke="#a855f7" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="252" y="292" fill="#a855f7" font-size="14" font-weight="700">#9</text>
+  <text x="295" y="292" fill="#94a3b8" font-size="10" font-weight="600">Liang</text>
+  <text x="252" y="308" fill="#64748b" font-size="7">Zone 9 · ternary 0010</text>
+  <rect x="260" y="325" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="330" y="325" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="395" y="332" fill="#4a4a5e" font-size="7">Yin</text>
+  <rect x="260" y="343" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="305" y="343" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="350" y="343" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <text x="395" y="350" fill="#fbbf24" font-size="7">Em</text>
+  <rect x="260" y="361" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="330" y="361" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="395" y="368" fill="#4a4a5e" font-size="7">Yin</text>
+  <rect x="260" y="379" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="330" y="379" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="395" y="386" fill="#4a4a5e" font-size="7">Yin</text>
+  <text x="252" y="405" fill="#475569" font-size="7">0100 — cycle break</text>
+  <rect x="430" y="270" width="170" height="150" rx="6" fill="rgba(15,23,42,0.85)" stroke="#00ffff" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="442" y="292" fill="#00ffff" font-size="14" font-weight="700">#13</text>
+  <text x="485" y="292" fill="#94a3b8" font-size="10" font-weight="600">Qi</text>
+  <text x="442" y="308" fill="#64748b" font-size="7">Zone 4 · ternary 1110</text>
+  <rect x="450" y="325" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="520" y="325" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="585" y="332" fill="#4a4a5e" font-size="7">Yin</text>
+  <rect x="450" y="343" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="495" y="343" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="540" y="343" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <text x="585" y="350" fill="#fbbf24" font-size="7">Em</text>
+  <rect x="450" y="361" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="495" y="361" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="540" y="361" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <text x="585" y="368" fill="#fbbf24" font-size="7">Em</text>
+  <rect x="450" y="379" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="495" y="379" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="540" y="379" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <text x="585" y="386" fill="#fbbf24" font-size="7">Em</text>
+  <text x="442" y="405" fill="#475569" font-size="7">0111 — three Em lines</text>
+  <rect x="620" y="270" width="170" height="150" rx="6" fill="rgba(15,23,42,0.85)" stroke="#a855f7" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="632" y="292" fill="#a855f7" font-size="14" font-weight="700">#36</text>
+  <text x="675" y="292" fill="#94a3b8" font-size="10" font-weight="600">Guai</text>
+  <text x="632" y="308" fill="#64748b" font-size="7">Zone 9 · ternary 0011</text>
+  <rect x="640" y="325" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="685" y="325" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="730" y="325" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <text x="775" y="332" fill="#fbbf24" font-size="7">Em</text>
+  <rect x="640" y="343" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="685" y="343" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="730" y="343" width="30" height="8" rx="2" fill="#fbbf24"/>
+  <text x="775" y="350" fill="#fbbf24" font-size="7">Em</text>
+  <rect x="640" y="361" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="710" y="361" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="775" y="368" fill="#4a4a5e" font-size="7">Yin</text>
+  <rect x="640" y="379" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <rect x="710" y="379" width="50" height="8" rx="2" fill="#4a4a5e"/>
+  <text x="775" y="386" fill="#4a4a5e" font-size="7">Yin</text>
+  <text x="632" y="405" fill="#475569" font-size="7">1100 — double Em</text>
+
+  <rect x="30" y="440" width="740" height="48" rx="6" fill="rgba(15,23,42,0.95)" stroke="#1e293b" stroke-width="1"/>
+  <text x="45" y="460" fill="#94a3b8" font-size="9" font-weight="600">THREE STATES</text>
+  <rect x="150" y="456" width="40" height="8" rx="2" fill="#22d3ee"/>
+  <text x="200" y="464" fill="#22d3ee" font-size="8">Yang — Heaven — solid</text>
+  <rect x="330" y="456" width="15" height="8" rx="2" fill="#4a4a5e" stroke="#64748b" stroke-width="0.5"/>
+  <rect x="350" y="456" width="15" height="8" rx="2" fill="#4a4a5e" stroke="#64748b" stroke-width="0.5"/>
+  <text x="375" y="464" fill="#94a3b8" font-size="8">Yin — Earth — broken</text>
+  <rect x="500" y="456" width="10" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="515" y="456" width="10" height="8" rx="2" fill="#fbbf24"/>
+  <rect x="530" y="456" width="10" height="8" rx="2" fill="#fbbf24"/>
+  <text x="550" y="464" fill="#fbbf24" font-size="8">Em — Man — triple-dash</text>
+  <text x="45" y="480" fill="#475569" font-size="7">Em = mediator between Heaven and Earth. Mercury in alchemy. Zone 5 in the numogram. The state that holds the system together.</text>
+</svg>

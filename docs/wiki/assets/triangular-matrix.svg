@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 620">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
+    text { font-family: 'JetBrains Mono', monospace; }
+  </style>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <!-- Title -->
+  <text x="30" y="30" fill="#94a3b8" font-size="10" font-weight="400">TRIANGULAR MATRIX · C(10) = 45</text>
+  <text x="30" y="50" fill="white" font-size="16" font-weight="700">ALL 45 ZONE PAIRS</text>
+  <text x="30" y="67" fill="#64748b" font-size="9">5 syzygies (cyan) · 5 decadence (amber) · 35 other (dim) · 10 diagonal (root)</text>
+
+  <!-- ═══ MATRIX ═══ -->
+  <!-- Cell size: 48x48, gap: 3 -->
+  <!-- Matrix starts at x=140, y=110 -->
+  <!-- Row labels on left, column labels on top -->
+
+  <!-- Column labels (top) -->
+  <text x="164" y="104" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">0</text>
+  <text x="215" y="104" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">1</text>
+  <text x="266" y="104" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">2</text>
+  <text x="317" y="104" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">3</text>
+  <text x="368" y="104" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">4</text>
+  <text x="419" y="104" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">5</text>
+  <text x="470" y="104" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">6</text>
+  <text x="521" y="104" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">7</text>
+  <text x="572" y="104" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">8</text>
+  <text x="623" y="104" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">9</text>
+
+  <!-- Row labels (left) -->
+  <text x="125" y="133" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">0</text>
+  <text x="125" y="184" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">1</text>
+  <text x="125" y="235" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">2</text>
+  <text x="125" y="286" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">3</text>
+  <text x="125" y="337" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">4</text>
+  <text x="125" y="388" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">5</text>
+  <text x="125" y="439" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">6</text>
+  <text x="125" y="490" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">7</text>
+  <text x="125" y="541" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">8</text>
+  <text x="125" y="592" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">9</text>
+
+  <!-- ═══ CELLS (lower triangle only) ═══ -->
+  <!-- For row r, col c (0-indexed), cell is at: x=140+c*51, y=110+r*51 -->
+  <!-- Only draw cells where c <= r -->
+
+  <!-- Row 0: col 0 (0+0=0, diagonal) -->
+  <rect x="140" y="110" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+  <text x="164" y="139" fill="#475569" font-size="11" font-weight="600" text-anchor="middle">0</text>
+
+  <!-- Row 1: col 0 (1+0=1), col 1 (1+1=2 diagonal) -->
+  <rect x="140" y="161" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+  <text x="164" y="190" fill="#475569" font-size="11" font-weight="600" text-anchor="middle">1</text>
+  <rect x="191" y="161" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+  <text x="215" y="190" fill="#475569" font-size="11" font-weight="600" text-anchor="middle">2</text>
+
+  <!-- Row 2: col 0 (2), col 1 (3), col 2 (4 diag) -->
+  <rect x="140" y="212" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+  <text x="164" y="241" fill="#475569" font-size="11" text-anchor="middle">2</text>
+  <rect x="191" y="212" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+  <text x="215" y="241" fill="#475569" font-size="11" text-anchor="middle">3</text>
+  <rect x="242" y="212" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+  <text x="266" y="241" fill="#475569" font-size="11" text-anchor="middle">4</text>
+
+  <!-- Row 3 -->
+  <rect x="140" y="263" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="164" y="292" fill="#475569" font-size="11" text-anchor="middle">3</text>
+  <rect x="191" y="263" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="215" y="292" fill="#475569" font-size="11" text-anchor="middle">4</text>
+  <rect x="242" y="263" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="266" y="292" fill="#475569" font-size="11" text-anchor="middle">5</text>
+  <rect x="293" y="263" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="317" y="292" fill="#475569" font-size="11" text-anchor="middle">6</text>
+
+  <!-- Row 4 -->
+  <rect x="140" y="314" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="164" y="343" fill="#475569" font-size="11" text-anchor="middle">4</text>
+  <rect x="191" y="314" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="215" y="343" fill="#475569" font-size="11" text-anchor="middle">5</text>
+  <rect x="242" y="314" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="266" y="343" fill="#475569" font-size="11" text-anchor="middle">6</text>
+  <rect x="293" y="314" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="317" y="343" fill="#475569" font-size="11" text-anchor="middle">7</text>
+  <rect x="344" y="314" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="368" y="343" fill="#475569" font-size="11" text-anchor="middle">8</text>
+
+  <!-- Row 5: col 0-4 (5,6,7,8,9), col 5 (10 diag) -->
+  <rect x="140" y="365" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="164" y="394" fill="#475569" font-size="11" text-anchor="middle">5</text>
+  <rect x="191" y="365" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="215" y="394" fill="#475569" font-size="11" text-anchor="middle">6</text>
+  <rect x="242" y="365" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="266" y="394" fill="#475569" font-size="11" text-anchor="middle">7</text>
+  <rect x="293" y="365" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="317" y="394" fill="#475569" font-size="11" text-anchor="middle">8</text>
+  <rect x="344" y="365" width="48" height="48" rx="3" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="368" y="394" fill="#fbbf24" font-size="11" font-weight="600" text-anchor="middle">9</text>
+  <rect x="395" y="365" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="419" y="394" fill="#475569" font-size="11" text-anchor="middle">10</text>
+
+  <!-- Row 6 -->
+  <rect x="140" y="416" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="164" y="445" fill="#475569" font-size="11" text-anchor="middle">6</text>
+  <rect x="191" y="416" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="215" y="445" fill="#475569" font-size="11" text-anchor="middle">7</text>
+  <rect x="242" y="416" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="266" y="445" fill="#475569" font-size="11" text-anchor="middle">8</text>
+  <rect x="293" y="416" width="48" height="48" rx="3" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="317" y="445" fill="#fbbf24" font-size="11" font-weight="600" text-anchor="middle">9</text>
+  <rect x="344" y="416" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="368" y="445" fill="#475569" font-size="11" text-anchor="middle">10</text>
+  <rect x="395" y="416" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="419" y="445" fill="#475569" font-size="11" text-anchor="middle">11</text>
+  <rect x="446" y="416" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="470" y="445" fill="#475569" font-size="11" text-anchor="middle">12</text>
+
+  <!-- Row 7 -->
+  <rect x="140" y="467" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="164" y="496" fill="#475569" font-size="11" text-anchor="middle">7</text>
+  <rect x="191" y="467" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="215" y="496" fill="#475569" font-size="11" text-anchor="middle">8</text>
+  <rect x="242" y="467" width="48" height="48" rx="3" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="266" y="496" fill="#fbbf24" font-size="11" font-weight="600" text-anchor="middle">9</text>
+  <rect x="293" y="467" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="317" y="496" fill="#475569" font-size="11" text-anchor="middle">10</text>
+  <rect x="344" y="467" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="368" y="496" fill="#475569" font-size="11" text-anchor="middle">11</text>
+  <rect x="395" y="467" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="419" y="496" fill="#475569" font-size="11" text-anchor="middle">12</text>
+  <rect x="446" y="467" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="470" y="496" fill="#475569" font-size="11" text-anchor="middle">13</text>
+  <rect x="497" y="467" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="521" y="496" fill="#475569" font-size="11" text-anchor="middle">14</text>
+
+  <!-- Row 8 -->
+  <rect x="140" y="518" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="164" y="547" fill="#475569" font-size="11" text-anchor="middle">8</text>
+  <rect x="191" y="518" width="48" height="48" rx="3" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/><text x="215" y="547" fill="#fbbf24" font-size="11" font-weight="600" text-anchor="middle">9</text>
+  <rect x="242" y="518" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="266" y="547" fill="#475569" font-size="11" text-anchor="middle">10</text>
+  <rect x="293" y="518" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="317" y="547" fill="#475569" font-size="11" text-anchor="middle">11</text>
+  <rect x="344" y="518" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="368" y="547" fill="#475569" font-size="11" text-anchor="middle">12</text>
+  <rect x="395" y="518" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="419" y="547" fill="#475569" font-size="11" text-anchor="middle">13</text>
+  <rect x="446" y="518" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="470" y="547" fill="#475569" font-size="11" text-anchor="middle">14</text>
+  <rect x="497" y="518" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="521" y="547" fill="#475569" font-size="11" text-anchor="middle">15</text>
+  <rect x="548" y="518" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="572" y="547" fill="#475569" font-size="11" text-anchor="middle">16</text>
+
+  <!-- Row 9 (last row — all syzygies are here) -->
+  <rect x="140" y="569" width="48" height="48" rx="3" fill="rgba(8,51,68,0.5)" stroke="#22d3ee" stroke-width="1.5"/><text x="164" y="598" fill="#22d3ee" font-size="11" font-weight="700" text-anchor="middle">9</text>
+  <rect x="191" y="569" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="215" y="598" fill="#475569" font-size="11" text-anchor="middle">10</text>
+  <rect x="242" y="569" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="266" y="598" fill="#475569" font-size="11" text-anchor="middle">11</text>
+  <rect x="293" y="569" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="317" y="598" fill="#475569" font-size="11" text-anchor="middle">12</text>
+  <rect x="344" y="569" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="368" y="598" fill="#475569" font-size="11" text-anchor="middle">13</text>
+  <rect x="395" y="569" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="419" y="598" fill="#475569" font-size="11" text-anchor="middle">14</text>
+  <rect x="446" y="569" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="470" y="598" fill="#475569" font-size="11" text-anchor="middle">15</text>
+  <rect x="497" y="569" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="521" y="598" fill="#475569" font-size="11" text-anchor="middle">16</text>
+  <rect x="548" y="569" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="572" y="598" fill="#475569" font-size="11" text-anchor="middle">17</text>
+  <rect x="599" y="569" width="48" height="48" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/><text x="623" y="598" fill="#475569" font-size="11" text-anchor="middle">18</text>
+
+  <!-- ═══ SYZYGY LABELS (bright cells) ═══ -->
+  <!-- 0::9 = 9, 1::8 = 9, 2::7 = 9, 3::6 = 9, 4::5 = 9 -->
+  <!-- These are the "9" cells that aren't diagonal -->
+  <!-- Row 5, col 4: 5+4=9 → already drawn as amber (decadence? no, 9 is syzygy) -->
+  <!-- Wait: 5+4=9 is a syzygy. Let me re-check: 5+4=9 ✓ syzygy -->
+  <!-- But I drew it as amber. Fix: it should be cyan. -->
+  <!-- Actually: 4+5=9 is syzygy. The cell at row5,col4 shows 9. It should be cyan. -->
+
+  <!-- The syzygy cells are (row, col) where row+col=9 AND row>col: -->
+  <!-- (9,0): 0::9 → row 9, col 0 → cyan -->
+  <!-- (8,1): 1::8 → row 8, col 1 → cyan -->
+  <!-- (7,2): 2::7 → row 7, col 2 → cyan -->
+  <!-- (6,3): 3::6 → row 6, col 3 → cyan -->
+  <!-- (5,4): 4::5 → row 5, col 4 → cyan -->
+
+  <!-- Fix the syzygy cells (they were drawn as dim/amber) -->
+  <rect x="344" y="365" width="48" height="48" rx="3" fill="rgba(8,51,68,0.5)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="368" y="394" fill="#22d3ee" font-size="11" font-weight="700" text-anchor="middle">9</text>
+
+  <rect x="293" y="416" width="48" height="48" rx="3" fill="rgba(8,51,68,0.5)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="317" y="445" fill="#22d3ee" font-size="11" font-weight="700" text-anchor="middle">9</text>
+
+  <rect x="242" y="467" width="48" height="48" rx="3" fill="rgba(8,51,68,0.5)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="266" y="496" fill="#22d3ee" font-size="11" font-weight="700" text-anchor="middle">9</text>
+
+  <rect x="191" y="518" width="48" height="48" rx="3" fill="rgba(8,51,68,0.5)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="215" y="547" fill="#22d3ee" font-size="11" font-weight="700" text-anchor="middle">9</text>
+
+  <!-- (9,0) already done above as cyan -->
+
+  <!-- ═══ DECADENCE PAIRS (sum to 10): 1+9, 2+8, 3+7, 4+6 ═══ -->
+  <!-- (9,1): 9+1=10 → row 9, col 1 -->
+  <rect x="191" y="569" width="48" height="48" rx="3" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/>
+  <text x="215" y="598" fill="#fbbf24" font-size="11" font-weight="600" text-anchor="middle">10</text>
+
+  <!-- (8,2): 8+2=10 → row 8, col 2 -->
+  <rect x="242" y="518" width="48" height="48" rx="3" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/>
+  <text x="266" y="547" fill="#fbbf24" font-size="11" font-weight="600" text-anchor="middle">10</text>
+
+  <!-- (7,3): 7+3=10 → row 7, col 3 -->
+  <rect x="293" y="467" width="48" height="48" rx="3" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/>
+  <text x="317" y="496" fill="#fbbf24" font-size="11" font-weight="600" text-anchor="middle">10</text>
+
+  <!-- (6,4): 6+4=10 → row 6, col 4 -->
+  <rect x="344" y="416" width="48" height="48" rx="3" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/>
+  <text x="368" y="445" fill="#fbbf24" font-size="11" font-weight="600" text-anchor="middle">10</text>
+
+  <!-- Self-decadence: 5+5=10 (row 5, col 5, diagonal) -->
+  <rect x="395" y="365" width="48" height="48" rx="3" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/>
+  <text x="419" y="394" fill="#fbbf24" font-size="11" font-weight="600" text-anchor="middle">10</text>
+
+  <!-- ═══ LEGEND ═══ -->
+  <rect x="660" y="110" width="140" height="200" rx="6" fill="rgba(15,23,42,0.95)" stroke="#1e293b" stroke-width="1"/>
+  <text x="675" y="130" fill="#94a3b8" font-size="9" font-weight="600">LEGEND</text>
+
+  <rect x="675" y="142" width="20" height="16" rx="2" fill="rgba(8,51,68,0.5)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="705" y="154" fill="#22d3ee" font-size="8">SYZYGY (sum=9)</text>
+  <text x="675" y="172" fill="#64748b" font-size="7">0::9 1::8 2::7 3::6 4::5</text>
+
+  <rect x="675" y="184" width="20" height="16" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/>
+  <text x="705" y="196" fill="#fbbf24" font-size="8">DECADENCE (sum=10)</text>
+  <text x="675" y="214" fill="#64748b" font-size="7">1↔9 2↔8 3↔7 4↔6 5+5</text>
+
+  <rect x="675" y="226" width="20" height="16" rx="2" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+  <text x="705" y="238" fill="#94a3b8" font-size="8">OTHER (35 pairs)</text>
+
+  <rect x="675" y="254" width="20" height="16" rx="2" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+  <text x="705" y="266" fill="#475569" font-size="8">DIAGONAL (root)</text>
+
+  <text x="675" y="296" fill="#475569" font-size="7">Cell value = i + j</text>
+  <text x="675" y="308" fill="#475569" font-size="7">45 cells total</text>
+
+</svg>

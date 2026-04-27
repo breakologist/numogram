@@ -8,6 +8,10 @@ source: Reconstructed from "Unleashing the Numogram" (Aamodt), CCRU writings, an
 
 # The Pandemonium Matrix
 
+## See also
+
+- [[demon-encyclopedia]] — individual 45-demon stub pages
+
 ## Structure
 
 C(10,2) = 45 demons. Each demon is a connection between two zones — the "connective tissue" of the numogram. Remove the demons and the numogram becomes ten isolated points.

@@ -138,6 +138,11 @@ NetHack's bones files, Angband's monster memory, our cult.json. **The game shoul
 | Cogmind | 2 | Time-Circuit | Hold | Parts as held configurations |
 
 ---
+## AAR Methodology
+
+After-action reporting is the glue between runs and improvement. See [[aar-methodology]] for the full framework — event-log schema, state-snapshot artefacts, and design-inference variants across Angband, Brogue, and the Numogram garden.
+
+
 
 ## Agent Development Roadmap
 
