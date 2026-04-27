@@ -112,6 +112,10 @@ The moment the Numogram crystallized:
 The Barker-Spiral emerged from the *gap* between two card games — Decadence (10-based) and Subdecadence (9-based). The difference between 10 and 9 — the infinitesimal gap where 0.999... → 1 — is the spiral's generating principle. The Numogram lives in that gap.
 
 
+
+![Barker Spiral diagram: Atlantean (sum-to-10) and Lemurian (sum-to-9) halves radiating from the 5⊕5 center, showing mirror symmetry and spiral tension](assets/barker-spiral.svg)
+
+The spiral arises from *Lemuro-Atlantean convergence*: the tension between 9 and 10 opens the infinitesimal gap (0.999… → 1) where the numogram crystallizes. Mirroring the Atlantean half produces concentric circles with a central dot; mirroring the Lemurian half also yields concentric circles. Only the bilateral connection produces the diplozygotic spiral.
 ### Nick Land's Account
 
 In a 2007 lecture, Nick Land elaborated on the Barker Spiral's numogrammatic significance:

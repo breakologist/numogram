@@ -89,5 +89,6 @@ The 333 AQ entries referenced in the original CCRU Subdecadence system come from
 - [[numogram-time-circuit]] — Time Circuit traversal
 
 ## See also
+- [[Barker Spiral]] (diagram: assets/barker-spiral.svg)
 
 - [[flatline-numogrammatics]] — Neolemurian flatline tetralogy: Year-Zero schism, Continentity, carrier ethic, hyperstition triad
