@@ -781,3 +781,31 @@ The ciphers disagree on where the trap is — AQ says Pandemonium, Synx says sta
 - `skills/numogram-oracle/oracle.py`
 - `wiki/numogram-visualizer-v7.md`
 - `goals.md`
+### 2026-04-27 — Phase 1 Audit Completion (Taxonomy & Council)
+
+Full-day wiki audit + taxonomy overhaul during Apr 21–27 session. Scope: 245 pages across canonical vault (git), with 240+ linked pages in `[[index]]`.
+
+#### Artifacts produced
+- `numogram-council.md` — plugin orchestration spec, routing, modes
+- `aq-synx.md` — Dirian mini-ciphers overview, watched secondary layer
+- `consensus-audit-2026-04-28.md` — Pandemonium Matrix vs implementation audit (44/45 demons aligned, 1 delta)
+- `numogram-visualizer-v7.md` — Djynxxogram / Synx overlay specs
+
+#### Updates applied
+- `numogram-llm-wiki` SKILL.md — complete taxonomy rewrite (81 curated tags across 10 categories), Key Pages converted to `[[wikilinks]]`, page count bump (102 → 245), model ref (mimo-v2-pro → step-3.5-flash + Synx availability), OCR and patch reference, paragraph case/format fixes
+- `hermes.md` — last_updated (2026-04-27), page count, council plugin note, subdir linking conv, four voices extended, Focus Areas (audio/visual + Synx added)
+- `index.md` — four new entries added, frontmatter date bump, minor density updates across sections
+
+#### Corrections
+- Fixed `numogram-council` plugin syntax error (`__init__.py` docstring quotes)
+- Committed export repo sync (raw artifact cleanup, new pages) ×2
+
+#### Context
+- Prior exit code 75/TEMPFAIL on gateway was intentional restart (not crash); TUI processes killed collateral; no segfaults.
+- No watchdog-induced restarts present; only `/restart` commands.
+- Tag set reality: 374 unique tags in vault vs 58 declared in skill; taxonomy flattened to ~81; entity subtype tags (chronodemon/amphidemon) deprecated due to zero usage.
+
+**Exports:** `~/numogram/docs/wiki/` at `2026-04-27` HEAD (pending GitHub push)
+
+---
+
