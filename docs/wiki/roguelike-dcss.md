@@ -1,20 +1,21 @@
 ---
-title: Dungeon Crawl Stone Soup
-tags: ["game", "roguelike"]
-created: 2026-04-24
+title: Dungeon Crawl Stone Soup — Roguelike Testbed
+created: 2026-04-27
+status: stub
+tags: ['roguelike', 'dcss', 'gods', 'species', 'complexity']
 ---
 
+# Dungeon Crawl Stone Soup — Roguelike Testbed
 
----
-title: Dungeon Crawl Stone Soup
-tags: ["roguelike", "game"]
-created: 2026-04-24
----
+Feature-rich, community-maintained roguelike with extensive species/background combinations and god systems. Tests character build decision-making and divine favour mechanics.
 
-## Overview
+## Design Pillars
 
-Dungeon Crawl Stone Soup (DCSS) is a open-source roguelike with extensive auto-explore mechanics that informed the Hermes agent's interest-driven exploration system.
+*[To be expanded with specific mechanics, agent research angles, and numogram connections.]*
 
-## See also
-- [[roguelike-auto-explore]]
-- [[roguelike-ai-studies]]
+## See Also
+
+- [[roguelike-ai-studies]] — Broader AI research across roguelikes
+- [[roguelike-brogue]] — Minimalist atmosphere engine (Brogue comparison)
+- [[roguelike-screen-agent]] — Generic screen-based agent architecture
+- `numogram-chain-fingerprint` — Classify agent runs by motif (applies to all roguelikes)

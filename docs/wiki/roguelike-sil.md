@@ -1,23 +1,21 @@
 ---
-title: Sil
-tags: ["game", "roguelike"]
-created: 2026-04-24
+title: Sil — Roguelike Testbed
+created: 2026-04-27
+status: stub
+tags: ['roguelike', 'silence', 'stealth', 'no-grind', 'audio-mechanics']
 ---
 
+# Sil — Roguelike Testbed
 
----
-title: Sil
-tags: ["roguelike", "game"]
-created: 2026-04-24
----
+Silence-based roguelike where sound radius is the primary danger mechanic. Tests stealth-first play and noise budgeting. No grinding — every action has sound cost.
 
-## Overview
+## Design Pillars
 
-Sil is a roguelike based on Tolkien's legendarium, notable for its deep, modular combat system and emphasis on awareness over violence — a key reference for the Sil principle in numogram gameplay.
+*[To be expanded with specific mechanics, agent research angles, and numogram connections.]*
 
-## Key concept
-- **Sil Principle**: Awareness should be rewarded more than violence; avoiding a demon while entering its zone is deeper engagement than fighting it.
+## See Also
 
-## See also
-- [[roguelike-ai-studies]]
-- [[sil-principle]]
+- [[roguelike-ai-studies]] — Broader AI research across roguelikes
+- [[roguelike-brogue]] — Minimalist atmosphere engine (Brogue comparison)
+- [[roguelike-screen-agent]] — Generic screen-based agent architecture
+- `numogram-chain-fingerprint` — Classify agent runs by motif (applies to all roguelikes)

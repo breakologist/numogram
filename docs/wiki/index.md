@@ -220,8 +220,8 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 
 ## Games & Divination
 
-- [[roguelike-angband]] — Angband roguelike; screen-parsing and autonomous agent research.
-- [[roguelike-brogue]] — Brogue minimalist roguelike; room accretion design mapping to numogram zones.
+- [[roguelike-angband]] — Deep dungeon crawler (100 floors); testbed for tree-traversal agents, dive vs grind macro-strategy, syzygy-chain depth planning, fingerprint-based behavior classification.
+- [[roguelike-brogue]] — Minimalist roguelike testbed: room accretion, machines, atmosphere, seed-based debugging; AAR methodology, syzygy-chain descent planning, fingerprint-based run classification.
 - [[roguelike-dcss]] — DCSS (Dungeon Crawl Stone Soup); auto-explore algorithm inspiration for Hermes agents.
 - [[roguelike-sil]] — Sil; source of the Sil Principle (awareness > violence) in gameplay conduct.
 - [[game-design]] — Game design principles specific to numogram cult-garden systems.

@@ -1,13 +1,13 @@
 ---
-title: NetHack — Roguelike Testbed
+title: Caves of Qud — Roguelike Testbed
 created: 2026-04-27
 status: stub
-tags: ['roguelike', 'nethack', 'emergence', 'canonical', 'bones-files']
+tags: ['roguelike', 'simulation', 'faction', 'mutation']
 ---
 
-# NetHack — Roguelike Testbed
+# Caves of Qud — Roguelike Testbed
 
-The classic dense roguelike with extreme emergent interactions (mimic-polymorph-wand-of-death chains). Tests canonical solution discovery and rule exploitation.
+Surreal science-fantasy roguelike with deep simulation, faction systems, and genetic mutation mechanics. Tests agent ability to handle complex interactive ecosystems.
 
 ## Design Pillars
 
