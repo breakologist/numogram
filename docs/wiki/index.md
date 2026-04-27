@@ -224,6 +224,7 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 - [[roguelike-brogue]] — Minimalist roguelike testbed: room accretion, machines, atmosphere, seed-based debugging; AAR methodology, syzygy-chain descent planning, fingerprint-based run classification.
 - [[roguelike-dcss]] — DCSS (Dungeon Crawl Stone Soup); auto-explore algorithm inspiration for Hermes agents.
 - [[roguelike-sil]] — Sil; source of the Sil Principle (awareness > violence) in gameplay conduct.
+- [[aar-methodology]] — After-action report methodology across roguelikes: event-log JSONL schema, state-snapshot minimalism, design-inference for Brogue; cross-run analysis, narrative synthesis, Angband/hungry-borg case study.
 - [[game-design]] — Game design principles specific to numogram cult-garden systems.
   - [[cult-garden/lore]] — Cult garden lore and narrative background
   - [[cult-garden/readings]] — Cult garden reading material collection
