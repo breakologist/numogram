@@ -9,7 +9,8 @@ status: active
 
 # Decimal Numogram Reference
 
-**Scope:** Comprehensive technical reference for the Decimal Numogram (CCRU Pandemonium system): zones, syzygies, currents, regions, demonic carriers, I Ching hexagram mapping, triangular numbers, Barker Spiral, gates, and zone transitions.
+**Scope:** Comprehensive technical reference for the Decimal Numogram (CCRU Pandemonium system): zones, syzygies, currents, regions, demonic carriers, I Ching hexagram mapping, triangular numbers, [[Barker Spiral]], gates, and zone transitions.
+The Spiral shows the 9↔10 gap where 0.999…→1 opens the numogram's structural field.
 
 **Source:** `raw/Grok notes on the Numogram.md` (updated 2026-04-26) — systematic exposition by Grok based on CCRU primary texts (declab.htm, primary declab, foundational writings).
 

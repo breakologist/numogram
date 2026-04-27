@@ -10,7 +10,7 @@ tags: ["numogram", "pandemonium", "zone"]
 
 The Decimal Numogram (also called the Numogram or Decimal Labyrinth) is the core diagram of the Pandemonium system developed by the CCRU (Cybernetic Culture Research Unit) in the late 1990s/early 2000s. It's a kind of occult-mathematical time-map used for "Lemurian time-sorcery," hyperstition, and demonic numerics. It is not standard mathematics but a constructed esoteric system built entirely from basic decimal (base-10) arithmetic — specifically additions that produce pairs summing to 9 and their resulting differences.
 
-**See also:** [[numogram-time-circuit]], [[numogram-warp]], [[numogram-plex]], [[i-ching-connections]], [[triangular-numbers]]
+**See also:** [[numogram-time-circuit]], [[numogram-warp]], [[numogram-plex]], [[i-ching-connections]], [[triangular-numbers]], [[Barker Spiral]]
 
 The Numogram emerges "immanently" from decimal numeracy itself — it's more discovered than invented, and supposedly latent in any culture that uses digits 0–9.
 

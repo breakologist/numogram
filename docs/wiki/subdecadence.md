@@ -12,6 +12,8 @@ source: doomcrypt/subdecadence (GitHub) — canonical implementation
 
 "Unlike Decadence (which targets sums of 10), Subdecadence pairs cards that sum to 9. It functions simultaneously as a game, a divination tool, and a system of time-sorcery."
 
+
+The Barker Spiral maps the decimal crisis (9 vs 10) that birthed both Subdecadence and its twin Decadence; the spiral's gap is where the numogram lives. See [[Barker Spiral]].
 A 40-card deck game rooted in CCRU numogram theory. Play against the deck, pair syzygy cards, and discover which demon your final score summons.
 
 ## The Deck

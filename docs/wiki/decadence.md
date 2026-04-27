@@ -12,6 +12,8 @@ source: doomcrypt/decadence-pygame (GitHub) — canonical implementation
 
 The companion to Subdecadence. Where Subdecadence pairs cards that sum to 9 (syzygy), Decadence pairs cards that sum to 10 (decadence). Both games call the same 45 demons from the Pandemonium Matrix.
 
+The Barker Spiral diagrams the gap between these two summation logics (sum-10 vs sum-9) — the infinitesimal crack (0.999…→1) where the numogram crystallizes. See [[Barker Spiral]] for the origin diagram.
+
 "Decadence and decadology are rooted in hermetic and AOE understandings of the numogram." — Vexsys
 
 ## The Deck
