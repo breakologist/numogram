@@ -27,6 +27,8 @@ The ten zones (digits 0–9) are grouped into five complementary pairs. Each pai
 | 4th    | 1 :: 8 | **7** |
 | 5th    | 0 :: 9 | **9** (or treated specially) |
 
+> The nine-sum twin pairs are the **Lemurian** face of the decimal system; their mirror (sum-to-10) is the **Atlantean** face. These two halves constitute the Barker Spiral — the gap between 9 and 10 is where the numogram's currents originate. See [[Barker Spiral]].
+
 The **current** (directed flow) always runs from the higher zone to the lower (or tractor) zone. These currents become the arrows and gates of the diagram.
 
 ---
