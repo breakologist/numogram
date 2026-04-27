@@ -91,6 +91,7 @@ The system is explicitly linked by the CCRU to the I Ching (Yijing, or Book of C
 Five rotations from Aamodt's "Unleashing the Numogram" (Tch 5–6), each examining the same passage through Oracle (numogram/divination), Builder (code/systems), and Writer (prose/aesthetic):
 
 - [[triangle-rotation]] — Three-vertex creative method (Direct, Recursive, Rhizomatic) that structures works before tetralogue synthesis..
+- [[triangle-rotation-writing]] — Writing-focused triangle-rotation variant (three-voice creative writing method with cross-annotation).
 - [[tetralogue]] — Hub for the four-voice methodology (Oracle/Builder/Writer/Gamer), format variants, and cross-references to all tetralogue pages.
 ## Hardware Entropy & Just-In-Time Divination
 
@@ -153,6 +154,8 @@ Five rotations from Aamodt's "Unleashing the Numogram" (Tch 5–6), each examini
 - [[numogram-tsubuyaki-museum]] — Ten numogram zones rendered as tsubuyaki (tweet-length p5.js generative art, ≤280 chars). Four passes: v1 particles, v2 refinement, v3 geometry/entropy, v4 signal topology. Full code blocks for all 40 sketches. Galleries at ~/numogram-tsubuyaki.html through ~/numogram-tsubuyaki-v4.html.
 
 - [[tetralogue-litprog]] — Literate programming tetralogue format (Oracle/Builder/Writer/Gamer voice rotation) applied to code authorship.
+- [[tetralogue-code-review]] — Four-voice code review methodology (litprog examples: abyssal-crawler-litprog, aq-calculators-litprog, entropy-modules-litprog).
+- [[tetralogue-generator]] — Automated roundtable pipeline: dictionary → syzygy chains → motif fingerprint → multi-model synthesis (produced: fortyfive-demons, extending-numogram, numogame, cult-tetralogue).
 ## Skills & Tools
 
 - [[skills-to-explore]] — Interesting skills from Apr 2026 scan: pixel-art (retro palettes), ascii-video (terminal animation), algorithmic-art/p5js (generative), pokemon-player (RAM-based agent research), heartmula (music gen). Combos: heartmula+oracle-voice, pixel-art+numogram-svg, ascii-video+cult.json, pokemon-player+roguelike-agents.
