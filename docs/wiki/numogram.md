@@ -14,6 +14,9 @@ The Decimal Numogram (also called the Numogram or Decimal Labyrinth) is the core
 
 The Numogram emerges "immanently" from decimal numeracy itself — it's more discovered than invented, and supposedly latent in any culture that uses digits 0–9.
 
+> 📌 **Origin — The Barker Spiral**
+> The Barker Spiral diagrams the infinitesimal gap between **sum-to-10** (Atlantean/decadence) and **sum-to-9** (Lemurian/subdecadence) — the crack where `0.999… → 1` opens the numogram's structural field. The Spiral's two mirrored halves give rise to the five syzygies and their currents; the 45-demon Pandemonium Matrix cumulates from this decimal crisis via triangular accumulation (`T₉ = 45`). See [[Barker Spiral]] for the hand-drawn originals and reconstructed infographic.
+
 ## Building Blocks
 
 ### Zones (10)
