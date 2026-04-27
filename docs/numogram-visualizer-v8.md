@@ -115,31 +115,57 @@ In base-10, the traversal path collapses quickly (many chars share same DR). Bas
 - [[rotational-symmetry]] — Strobogrammatic gate theory
 
 
-## v8 — Polygram Perimeter + Synx Ring (2026-04-28 rebuilt)
+## v8.0 — Polygram Perimeter Ring + Synx Ring + Traversal Visibility Fix
 
-**Built from clean v7.2 base; traversal visibility bug fixed.**
+**State:** Clean rebuild from v7.2 base (git commit `9b0aa60`). Prior v8 attempt corrupted due to incremental patching errors; rebuilt in single coherent pass.
 
-**Controls:**
-- **Connect Letters** — draws a closed polygon for each word on the outer ring
-- **Synx Ring** — outer ring with 36 crimson ticks (base-36 geometry)
+**New controls:**
+- **Connect Letters** checkbox — draws closed polygon for each whitespace-separated word
+- **Synx Ring** checkbox — toggles outer crimson ring with 36 ticks
 
-**Ring:**
-- 36 tick marks around `min(w,h)*0.35` radius
-- Labels per active base (0–9, 0–f, 0–z)
-- Base-10 dual-pentagon offset preserved for zones >4
+**Perimeter ring:**
+- Radius `min(width, height) × 0.35` centered
+- 36 tick marks spaced per active base (base-10: 0–9 at 72° intervals with +36° offset for zones >4; base-16: 16 ticks; base-36: 36 ticks)
+- Tick labels: digit/letter per zone, upper-case, 8pt cyan
+- Tick lines: 6px inner radius offset
 
-**Polygons:**
-- Per-word closed loops; vertex at each letter's zone
-- Color: `hsl(wordIndex * 137.5 mod 360, 75%, 60%)`
-- 6px vertex circles with centered letter label
+**Polygon connections:**
+- `computePolygrams()`: `aqText` → split by `/\s+/` → for each word: letters → `aqCipher[ch]` → `deriveZone(val)` → `{char, zone}`
+- `drawPolygrams()`: per word, compute angle per zone using inline base-specific formula, draw closed `beginShape()/endShape(CLOSE)`
+- Color: `hsl((wordIndex × 137.5) mod 360, 75%, 60%)` — 137.5° golden-angle step avoids adjacent similarity
+- Vertex: 6px circle + centered 8pt letter label
 
-**Synx Ring:**
-- Radius `ringRadius+12`, always 36 ticks at 10° spacing
-- Crimson stroke; drawn behind or independently of polygons
+**Synx outer ring:**
+- `drawSynxRing()`: radius `ringRadius + 12`, always base-36 spacing (10°), 36 tick marks
+- Stroke: `(255, 100, 100, 120)`, ticks `(255, 100, 100, 150)`
 
-**Fixes:**
-- `toggleTraversalShow` now removes hidden class; panel visible
-- All `zonePosition().angle` eliminated; angle computed inline
-- `drawRing` inner ticks corrected
-- `computePolygrams` called on text input (`updateAQInfo`) and base switch
+**Rendering order (each `draw()` frame):**
+1. Fade background `rect()`
+2. **AQ perimeter ring** (`drawRing`) — if `polygramEnabled OR synxRingEnabled`
+3. **Synx outer ring** (`drawSynxRing`) — if `synxRingEnabled`
+4. **Polygrams** (`drawPolygrams`) — if `polygramEnabled`
+5. Particle field
+6. Zone-specific effects (concentric rings)
+7. Periodic particles (zone 0)
+8. `drawSyzygyViz()` inset (every other frame)
+
+**Critical fixes:**
+- `toggleTraversalShow()` now properly removes `hidden` class; v7.2 had bug where panel never showed
+- Eliminated all `zonePosition(...).angle` property access; angle computed inline via base-specific formula
+- `drawRing()` inner ticks corrected to use computed `angle` not nonexistent `pos.angle`
+- `computePolygrams` storage simplified to `{char, zone}` (no cached angle)
+- `togglePolygramShow()` shows/hides `polygramPanel`; unchecking also clears `synxRingEnabled`
+
+**Integration hooks:**
+- `updateAQInfo()` — after text input, calls `computePolygrams()` if `polygramEnabled`
+- `switchBase()` — after base change, calls `computePolygrams()` if `polygramEnabled`
+- `draw()` — ring/polygram rendering before particle layer to sit behind foreground
+
+**Known gaps:**
+- No AQwerty ring yet (future third toggle)
+- No SVG path export or replay
+- Vertex labels may overlap on densely-connected words
+
+**Commits:**
+- `fd4e660` release: v8.0 clean rebuild, 58,503 bytes
 

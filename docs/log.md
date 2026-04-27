@@ -940,3 +940,19 @@ Same feature set as originally specified, now correctly applied to the interacti
 **Commits:**
 - `af92c5f` (broken) — will be overwritten
 
+### 2026-04-28 — Visualizer v8.0 Final (Clean Rebuild)
+
+**Status:** Rebuilt from clean v7.2 base after prior patch corruption. All features verified.
+
+**Technical:** see spec `numogram-visualizer-v8.md`.
+
+**Commits:**
+- `fd4e660` release(visualizer): v8.0 — Polygram perimeter ring, Synx ring, traversal visibility fix (58,503 bytes)
+
+**Distribution:**
+- Interactive: `~/numogram/visualizer/numogram-visualizer-v7.html`
+- Export: `~/numogram/docs/assets/numogram-visualizer-v7-djynxxogram.html`
+- Canonical raw: `~/.hermes/obsidian/hermetic/raw/numogram-visualizer-v7-djynxxogram.html`
+- Wiki spec: `numogram-visualizer-v8.md`
+- Index and log updated
+
