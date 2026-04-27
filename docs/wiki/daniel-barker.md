@@ -101,6 +101,10 @@ The insight: 9 and 0 are the same thing viewed from opposite sides. Nine is "ful
 
 ## The Barker-Spiral (Diplozygotic Spiral)
 
+See also: [[barker-spiral-reconstruction]], [[barker-spiral-mathematical-foundations]].
+
+
+
 The moment the Numogram crystallized:
 
 > "The pattern really came together with the Diplozygotic Spiral, which arrived suddenly, by chance. I was playing a game of Decadence... This game already interested me because of its numerical elegance... Digits are fingers, and they come in decimal packages of two times five. In Decadence five makes ten by doubling, or pairing with itself, scoring zero."

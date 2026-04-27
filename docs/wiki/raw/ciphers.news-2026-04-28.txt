@@ -1,1 +1,0 @@
-Calculator window.onpaint = function() { updateInterfaceColor(true); // update interface color (first run) } $(window).load(function(){ $("#loader").delay(287).fadeOut("fast"); }); --> initCalc(true); var database = loadFile('db.txt'); importFileAction(database, true); var theme = loadFile('theme/white-interface.js'); importFileAction(theme, true); -->
