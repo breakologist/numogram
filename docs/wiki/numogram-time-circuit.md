@@ -12,7 +12,9 @@ The Time-Circuit is the central, inner rotor of the entire Numogram — the prim
 
 > "The arrangement of currents divides the Maze into three basic time-systems. Firstly, the currents of the three central syzygies mutually compose a cycle, rotating in anticlockwise steps. Lemurian sorcery calls this inner loop the Time-Circuit."
 
-**See also:** [[numogram]], [[numogram-warp]], [[numogram-plex]], [[i-ching-connections]], [[demon-djynxx]], [[demon-uttunul]]
+The Barker Spiral's Lemurian half corresponds to the Time-Circuit: the sum-to-9 twin pairs that cycle through zones 1→8→2→7→5→4. The Spiral captures the 9↔10 gap from which this rotor emerges.
+
+**See also:** [[numogram]], [[numogram-warp]], [[numogram-plex]], [[i-ching-connections]], [[demon-djynxx]], [[demon-uttunul]], [[Barker Spiral]]
 
 It is the only one of the three big loops that feels "normal" or linear/cyclic to us. The other two (Warp above it and Plex below it) are outer, cryptic, and outside ordinary time.
 

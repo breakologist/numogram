@@ -18,7 +18,7 @@ The Plex region is the "lower" autonomous loop in the Numogram — the third of 
 |---------|-------|
 | **Syzygy** | 0 :: 9 (the ultimate complementary pair summing to 9; 0 is the null/void origin, 9 is the terminal/completion digit) |
 | **Current** | 9 — directed primarily toward Zone-9 as the tractor-zone (the "pull" target). The flow is self-referential: the current of 9 "folds back into (a half of) itself," creating a closed, involuted loop that doesn't chain into the other regions like the Time-Circuit currents do. |
-| **Loop behavior** | This produces an autonomous, cryptic circuit — often described as the outermost boundary or abyssal horizon of the Numogram. Zone-9 draws the "outermost curve of the Barker-spiral" (a reference to extreme ordinal limits in certain arithmetics), coinciding with termination, zero-point return, or the edge of decimal numeracy itself. Unlike the Warp's turbulent vortex, the Plex is more involutive, nullifying, or abyssal — a kind of black-mirror or event-horizon recursion. |
+| **Loop behavior** | This produces an autonomous, cryptic circuit — often described as the outermost boundary or abyssal horizon of the Numogram. Zone-9 draws the "outermost curve of the [[Barker Spiral]]" (a reference to extreme ordinal limits in certain arithmetics), coinciding with termination, zero-point return, or the edge of decimal numeracy itself. Unlike the Warp's turbulent vortex, the Plex is more involutive, nullifying, or abyssal — a kind of black-mirror or event-horizon recursion. |
 | **Directionality** | Flow emphasizes Zone-9 as tractor (pulling toward completion/death/zero), with Zone-0 as the complementary origin or "orphan" terminus. It's the most "exterior" or Outside-oriented of the loops. |
 
 ## Key Zones in Detail
@@ -30,6 +30,9 @@ The first Plex zone; the abyssal origin, void, or "orphan" point. It provides te
 The second Plex zone and tractor-zone for the 9-0 (Plex) current. Its Plex-complement is Zone-0. This syzygy is carried by the demon **Uttunul (9::0)**. Zone-9 terminates channels (e.g., the 8th from the Torque/Time-Circuit region, and the 9th Plex-internal). It draws associations with fatality, termination (last decimal digit), underworld rivers, nine lives/cats, apocalyptic completion (e.g., Revelation IX, Y2K as cyclic end), but also highest inspiration (nine muses, Cloud-9). In Lemurian Planetwork, it's astrozygonomously paired with Pluto (and quasisymmetric to the Sun).
 
 ## Occult / Functional Significance
+
+The Plex (syzygy 0::9) is the **outermost ring** of the Barker Spiral — the final 9+0 pairing that closes the sum-to-9 column. While the Spiral's inner rings trace the Time-Circuit syzygies (4::5, 3::6, 2::7, 1::8), the outermost loop reaches Zone-0 and Zone-9, marking the terminal arc of the spiral where decimal numeracy touches its abyssal boundary.
+
 
 The Plex represents outer-time abyssal boundary, zero-return, terminal involution, or the "end of number" — where decimal processes reach their modular limit and collapse back into nullity (9 ≡ 0 in digital reduction/zygonovism).
 
