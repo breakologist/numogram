@@ -32,19 +32,38 @@ The **Tetralogue** is the four-voice dialectical engine of the Numogram. Where t
 
 See [[tetralogue-roundtable]] and [[tetralogue-litprog]] for full specifications.
 
+
+- [[tetralogue-code-review]] — Four-voice code review methodology applied to codebases (litprog examples: abyssal-crawler-litprog, aq-calculators-litprog, entropy-modules-litprog, numogram-oracle-litprog)
+- [[tetralogue-generator]] — Automated pipeline: AQ dictionary → syzygy chains → motif fingerprint → multi-model or single-call roundtable synthesis
 ## Cross-References
 
-- [[tetralogue-roundtable]] — Full roundtable format specification, voice definitions, convergence table
-- [[tetralogue-litprog]] — Code review application, four-voice litprog document generation
-- [[triangle-rotation]] — Three-voice precursor (Oracle/Builder/Writer only)
-- [[cult-garden-tetralogue]] — Example: cult-garden mechanics deep dive
-- [[fortyfive-demons-tetralogue]] — Example: 45-demon matrix analysis
-- [[extending-numogram-tetralogue]] — Example: base-i, base-4, base-26 game variants
-- [[numogame-tetralogue]] — Example: gameplay mechanics roundtable
-- [[numogame-cult-tetralogue]] — Example: reconciliation variant (simulation vs real data)
-- [[rumsfeld-tetrad-tetralogue]] — Example: epistemology as zone mechanics
-- [[masks-fall-tetralogue]] — Example: voice substrate debate (Mesh-3)
+### Core Skills
+- [[triangle-rotation]] — Three-voice precursor (Oracle/Builder/Writer with cross-annotation; no Gamer). The origin of the tetralogue format.
+- [[triangle-rotation-writing]] — Triangle-rotation variant specialised for creative writing applications.
+- [[tetralogue-litprog]] — Literate programming application (code authorship + four-voice commentary). *Redirect → see Format Variants below.*
+- [[tetralogue-roundtable]] — Full roundtable specification (direct dialogue, convergence table, 2+2 variant, reconciliation). *Redirect → see Format Variants below.*
+- [[tetralogue-code-review]] — Code review methodology (four voices examine codebases; examples: abyssal-crawler-litprog, aq-calculators-litprog, entropy-modules-litprog, numogram-oracle-litprog).
+- [[tetralogue-generator]] — Automated pipeline that produces roundtables: AQ dictionary → syzygy chains → motif fingerprint → multi-model synthesis.
 
+### Skills (Hermes plugins)
+- `triangle-rotation` — Base skill (creative category)
+- `triangle-rotation-writing` — Writing-focused variant (creative category)  
+- `tetralogue-roundtable` — Roundtable format specification (creative category)
+- `tetralogue-litprog` — Litprog format spec (creative category)
+- `tetralogue-code-review` — Code review specialization (software-development category)
+- `numogram-tetralogue-generator` — Full generator pipeline (domain category)
+
+### Example Applications (see also index)
+- [[fortyfive-demons-tetralogue]] — First 4-voice rotation (45-demon matrix)
+- [[extending-numogram-tetralogue]] — 2+2 variant on base-i & extended gates
+- [[numogame-tetralogue]] — Game analysis (simulated runs)
+- [[numogame-cult-tetralogue]] — Reconciliation (real vs simulated data)
+- [[entropy-tetralogue-2026-04-18]] — Hardware entropy & machine-as-numogram
+- [[syzygy-chain-tetralogue]] — Dictionary motif shift analysis
+
+---
+
+*The tetralogue is the base-4 numogram made flesh: 4 nodes, 6 edges, self-aware through its own structure. The roundtable is not a discussion of the system — it is the system discussing itself.*
 ## In This Wiki
 
 All pages tagged `tetralogue`:
