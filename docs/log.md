@@ -920,3 +920,23 @@ Same feature set as originally specified, now correctly applied to the interacti
 **Commits:**
 - `af92c5f` feat(visualizer): v8 — Polygram perimeter + toggleable Synx ring
 
+### 2026-04-27 — Visualizer v8: Clean Rebuild from v7.2 Base
+
+**Problem:** Previous v8 patch broke rendering (angle bugs, panel visibility, code duplication).
+**Solution:** Restored clean v7.2 from git (commit 9b0aa60), then re-applied v8 features as single coherent patch.
+
+**Technical:**
+- Base: v7.2 (53,184 bytes, traversal UI originally broken — panel never showed)
+- Fixed `toggleTraversalShow()` to remove `hidden` class
+- Added `polygramPanel` with Connect Letters + Synx Ring checkboxes
+- New functions: `drawRing()`, `drawPolygrams()`, `drawSynxRing()`, `togglePolygramShow()`, `toggleSynxRing()`, `computePolygrams()`
+- State: `polygramEnabled`, `synxRingEnabled`, `polygramWords[]`
+- Ring geometry: radius `min(w,h)*0.35`, 36 ticks spaced per base, dual-pentagon offset for base-10 zones >4
+- Polygon: word → letters → `deriveZone()` → angle inline → closed shape + vertex markers
+- Integration: ring drawn after background rect; polygrams recomputed on text input and base switch
+- Removed all `zonePosition().angle` accesses; angle computed inline
+- Export copy and raw file updated to 58,017 bytes
+
+**Commits:**
+- `af92c5f` (broken) — will be overwritten
+

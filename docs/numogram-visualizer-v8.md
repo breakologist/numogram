@@ -115,27 +115,31 @@ In base-10, the traversal path collapses quickly (many chars share same DR). Bas
 - [[rotational-symmetry]] — Strobogrammatic gate theory
 
 
-## v8 — Polygram Perimeter Mode (2026-04-28)
+## v8 — Polygram Perimeter + Synx Ring (2026-04-28 rebuilt)
 
-**New features:**
-- **36-tick perimeter ring** — circular AQ cipher labels (0-9, a-z) around the diagram
-- **Connect Letters checkbox** — draws a closed polygon for each word, connecting its letters' zone positions on the ring
-- **Synx Ring toggle** — secondary outer ring (crimson) for Synx zones; drawn when enabled
-- **Vertex markers** — small circles at each letter position with character label centered
-- **Color cycling** — each word gets HSL hue `(wordIndex * 137.5) mod 360`
-- **Base handling** — ring always shows 36 tick marks; labels shown per active base
-- **Traversal fix** — panel now correctly shows/hides after checkbox toggle
+**Built from clean v7.2 base; traversal visibility bug fixed.**
 
-**Technical notes:**
-- `computePolygrams()` splits `aqText` by whitespace into words
-- Letters map via `aqCipher[ch]` → `deriveZone(val)` → zone index
-- Ring geometry uses same `zonePosition` angle formulas (inner/outer radius split for base-10 zones >4)
-- Synx ring draws outer ticks at `ringRadius+12` with constant base-36 spacing
-- Polygons recomputed on text input, base switch, and Connect Letters toggle
-- `drawRing()`, `drawPolygrams()`, `drawSynxRing()` called each frame after background clear
+**Controls:**
+- **Connect Letters** — draws a closed polygon for each word on the outer ring
+- **Synx Ring** — outer ring with 36 crimson ticks (base-36 geometry)
 
-**Known limitations:**
-- Polygons from multiple words overlap; no collision or depth sorting
-- No replay/export yet; vertex labels may overlap on short rings
-- Synx ring always base-36 geometry regardless of active base
+**Ring:**
+- 36 tick marks around `min(w,h)*0.35` radius
+- Labels per active base (0–9, 0–f, 0–z)
+- Base-10 dual-pentagon offset preserved for zones >4
+
+**Polygons:**
+- Per-word closed loops; vertex at each letter's zone
+- Color: `hsl(wordIndex * 137.5 mod 360, 75%, 60%)`
+- 6px vertex circles with centered letter label
+
+**Synx Ring:**
+- Radius `ringRadius+12`, always 36 ticks at 10° spacing
+- Crimson stroke; drawn behind or independently of polygons
+
+**Fixes:**
+- `toggleTraversalShow` now removes hidden class; panel visible
+- All `zonePosition().angle` eliminated; angle computed inline
+- `drawRing` inner ticks corrected
+- `computePolygrams` called on text input (`updateAQInfo`) and base switch
 
