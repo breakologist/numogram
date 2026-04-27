@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-7, zone-1, cyclic-chronodemon-of-relapse]
 **Attributes:**  
 After Babylon, hypersea, aquassassins.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** CHRONODEMON
+- **Current zone:** surge
+- **Pitch designation:** Cth-1
+- **Span:** [7, 1]
+- **Description:** After Babylon. Hypersea. Black-Atlantis.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

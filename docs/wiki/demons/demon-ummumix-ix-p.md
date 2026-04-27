@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-8, zone-3, amphidemon-of-insidious-fog]
 **Attributes:**  
 Ocean storms, diseases from outer-space.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Ana-2
+- **Span:** [8, 3]
+- **Description:** The Mist-Crawler. Insidious Fog. Nyarlathotep.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

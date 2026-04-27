@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-5, zone-1, cyclic-chronodemon-of-pathogenesis]
 **Attributes:**  
 Occulturation, optimal maturation, rapid deterioration.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** CHRONODEMON
+- **Current zone:** sink
+- **Pitch designation:** Cth-3
+- **Span:** [5, 1]
+- **Description:** Pathogenesis. Optimal maturation.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-2, zone-0, amphidemon-of-abstract-addiction]
 **Attributes:**  
 Duplicitous Redoubler, Pineal-regression, digital exactitude.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Ana-2
+- **Span:** [2, 0]
+- **Description:** Abstract Addiction. Pineal-regression.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

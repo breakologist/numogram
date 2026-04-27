@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-8, zone-7, cyclic-chronodemon-of-hybridity]
 **Attributes:**  
 Ophidian transmutation, surreptitious colonization.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** CHRONODEMON
+- **Current zone:** surge
+- **Pitch designation:** Cth-3
+- **Span:** [8, 7]
+- **Description:** Fishy-princess. Hybridity. Surreptitious colonization.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

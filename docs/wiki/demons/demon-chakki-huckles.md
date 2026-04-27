@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-6, zone-4, amphidemon-of-combustion]
 **Attributes:**  
 Bag of Tricks, quenching accidents, conflagrations.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Ana-1
+- **Span:** [6, 4]
+- **Description:** Bag of Tricks. Combustion.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

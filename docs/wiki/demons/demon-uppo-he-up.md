@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-7, zone-0, amphidemon-of-larval-regression]
 **Attributes:**  
 Break-Outs, dissolving into slime, chthonic swallowings.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Cth-2
+- **Span:** [7, 0]
+- **Description:** Break-Outs. Larval Regression.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

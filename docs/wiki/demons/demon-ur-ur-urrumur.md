@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-8, zone-1, syzygetic-chronodemon-of-the-deep-one
 **Attributes:**  
 Oceanic sensation, gilled-unlife.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** SYZYGISTIC
+- **Current zone:** surge
+- **Pitch designation:** Null
+- **Span:** [8, 1]
+- **Description:** The Deep Ones. Oceanic sensation.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

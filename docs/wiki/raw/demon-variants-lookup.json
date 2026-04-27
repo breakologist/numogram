@@ -1,0 +1,588 @@
+{
+  "0": {
+    "canonical_attrs": "Terminal Initiator, Door of Doors, Spinal-voyage rites.",
+    "numogame": {
+      "desc": "Terminal Initiator. The Door of Doors.",
+      "type": "AMPHIDEMON",
+      "pitch": "Ana-1",
+      "current": null,
+      "span": [
+        1,
+        0
+      ]
+    }
+  },
+  "1": {
+    "canonical_attrs": "Duplicitous Redoubler, Pineal-regression, digital exactitude.",
+    "numogame": {
+      "desc": "Abstract Addiction. Pineal-regression.",
+      "type": "AMPHIDEMON",
+      "pitch": "Ana-2",
+      "current": null,
+      "span": [
+        2,
+        0
+      ]
+    }
+  },
+  "2": {
+    "canonical_attrs": "Original-Schism, primordial breath, ambivalent capture.",
+    "numogame": {
+      "desc": "Original-Schism. Primordial breath.",
+      "type": "CHRONODEMON",
+      "pitch": "Ana-3",
+      "current": "surge",
+      "span": [
+        2,
+        1
+      ]
+    }
+  },
+  "3": {
+    "canonical_attrs": "Abductor, occult terrestrial history.",
+    "numogame": {
+      "desc": "Abductor. Cosmic Indifference.",
+      "type": "XENODEMON",
+      "pitch": "Ana-3",
+      "current": null,
+      "span": [
+        3,
+        0
+      ]
+    }
+  },
+  "4": {
+    "canonical_attrs": "Over-Ghoul, unimpeded ascent, ultimate implications.",
+    "numogame": {
+      "desc": "Over-Ghoul. Tridentity.",
+      "type": "AMPHIDEMON",
+      "pitch": "Ana-4",
+      "current": null,
+      "span": [
+        3,
+        1
+      ]
+    }
+  },
+  "5": {
+    "canonical_attrs": "Zombie-Maker, crises through excess, illusion of progress.",
+    "numogame": {
+      "desc": "The Zombie-Maker. Escape-velocity.",
+      "type": "AMPHIDEMON",
+      "pitch": "Ana-5",
+      "current": null,
+      "span": [
+        3,
+        2
+      ]
+    }
+  },
+  "6": {
+    "canonical_attrs": "Croaking Curse, subsidence, heaviness of fatality.",
+    "numogame": {
+      "desc": "The Croaking Curse. Burning-Hail.",
+      "type": "AMPHIDEMON",
+      "pitch": "Ana-4",
+      "current": null,
+      "span": [
+        4,
+        0
+      ]
+    }
+  },
+  "7": {
+    "canonical_attrs": "Sucking-Ghoul, cycle of creation/destruction, submersion.",
+    "numogame": {
+      "desc": "The Sucking-Ghoul. Deluge and implosion.",
+      "type": "CHRONODEMON",
+      "pitch": "Ana-5",
+      "current": "sink",
+      "span": [
+        4,
+        1
+      ]
+    }
+  },
+  "8": {
+    "canonical_attrs": "Fashioner, historical time, passage through the deep.",
+    "numogame": {
+      "desc": "The Fashioner. Switch-Crazes.",
+      "type": "CHRONODEMON",
+      "pitch": "Ana-6",
+      "current": "hold",
+      "span": [
+        4,
+        2
+      ]
+    }
+  },
+  "9": {
+    "canonical_attrs": "Buzz-Cutter, hermetic abbreviations, apocalyptic rapture.",
+    "numogame": {
+      "desc": "Buzz-Cutter. Anti-evolution.",
+      "type": "AMPHIDEMON",
+      "pitch": "Ana-7",
+      "current": null,
+      "span": [
+        4,
+        3
+      ]
+    }
+  },
+  "10": {
+    "canonical_attrs": "Decimal Camouflage, number as destiny, Angel of the Cards.",
+    "numogame": {
+      "desc": "Decimal Camouflage. Talismania.",
+      "type": "AMPHIDEMON",
+      "pitch": "Cth-4",
+      "current": null,
+      "span": [
+        5,
+        0
+      ]
+    }
+  },
+  "11": {
+    "canonical_attrs": "Occulturation, optimal maturation, rapid deterioration.",
+    "numogame": {
+      "desc": "Pathogenesis. Optimal maturation.",
+      "type": "CHRONODEMON",
+      "pitch": "Cth-3",
+      "current": "sink",
+      "span": [
+        5,
+        1
+      ]
+    }
+  },
+  "12": {
+    "canonical_attrs": "Ticking Machines, maintaining balance, exhaustive vigilance.",
+    "numogame": {
+      "desc": "Ticking Machines. Calendric conservatism.",
+      "type": "CHRONODEMON",
+      "pitch": "Cth-2",
+      "current": "hold",
+      "span": [
+        5,
+        2
+      ]
+    }
+  },
+  "13": {
+    "canonical_attrs": "Clicking Menaces, swirl-patterns, mysterious disappearances.",
+    "numogame": {
+      "desc": "Clicking Menaces. Vortical Delirium.",
+      "type": "AMPHIDEMON",
+      "pitch": "Cth-1",
+      "current": null,
+      "span": [
+        5,
+        3
+      ]
+    }
+  },
+  "14": {
+    "canonical_attrs": "Desolator, tail-chasing, panic and religious fervor.",
+    "numogame": {
+      "desc": "Cataclysmic Convergence. Nature red in tooth and claw.",
+      "type": "SYZYGISTIC",
+      "pitch": "Null",
+      "current": "sink",
+      "span": [
+        5,
+        4
+      ]
+    }
+  },
+  "15": {
+    "canonical_attrs": "Source of Subnothingness, cosmic deletions.",
+    "numogame": {
+      "desc": "Source of Subnothingness. Ultimate Outsideness.",
+      "type": "XENODEMON",
+      "pitch": "Cth-3",
+      "current": null,
+      "span": [
+        6,
+        0
+      ]
+    }
+  },
+  "16": {
+    "canonical_attrs": "Infiltrator, turbular fluids, surreptitious invasions.",
+    "numogame": {
+      "desc": "Subtle Involvements. Turbular fluids.",
+      "type": "AMPHIDEMON",
+      "pitch": "Cth-2",
+      "current": null,
+      "span": [
+        6,
+        1
+      ]
+    }
+  },
+  "17": {
+    "canonical_attrs": "Decentred Threat, machine-vortex, storm peripheries.",
+    "numogame": {
+      "desc": "Decentred Threat. Machine-vortex.",
+      "type": "AMPHIDEMON",
+      "pitch": "Cth-2",
+      "current": null,
+      "span": [
+        6,
+        2
+      ]
+    }
+  },
+  "18": {
+    "canonical_attrs": "Child Stealer, abstract cyclones, dust spirals.",
+    "numogame": {
+      "desc": "Child Stealer. Abstract cyclones. Nomad war-machine.",
+      "type": "SYZYGISTIC",
+      "pitch": "Null",
+      "current": "warp",
+      "span": [
+        6,
+        3
+      ]
+    }
+  },
+  "19": {
+    "canonical_attrs": "Bag of Tricks, quenching accidents, conflagrations.",
+    "numogame": {
+      "desc": "Bag of Tricks. Combustion.",
+      "type": "AMPHIDEMON",
+      "pitch": "Ana-1",
+      "current": null,
+      "span": [
+        6,
+        4
+      ]
+    }
+  },
+  "20": {
+    "canonical_attrs": "Pseudo-Basis, zero-gravity, cut-outs and UFO cover-ups.",
+    "numogame": {
+      "desc": "Pseudo-Basis. Unscreened Matrix. Zero-gravity.",
+      "type": "AMPHIDEMON",
+      "pitch": "Cth-7",
+      "current": null,
+      "span": [
+        6,
+        5
+      ]
+    }
+  },
+  "21": {
+    "canonical_attrs": "Break-Outs, dissolving into slime, chthonic swallowings.",
+    "numogame": {
+      "desc": "Break-Outs. Larval Regression.",
+      "type": "AMPHIDEMON",
+      "pitch": "Cth-2",
+      "current": null,
+      "span": [
+        7,
+        0
+      ]
+    }
+  },
+  "22": {
+    "canonical_attrs": "After Babylon, hypersea, aquassassins.",
+    "numogame": {
+      "desc": "After Babylon. Hypersea. Black-Atlantis.",
+      "type": "CHRONODEMON",
+      "pitch": "Cth-1",
+      "current": "surge",
+      "span": [
+        7,
+        1
+      ]
+    }
+  },
+  "23": {
+    "canonical_attrs": "Broken Mirror, time loops, glamour.",
+    "numogame": {
+      "desc": "Broken Mirror. Time loops, glamour and glosses.",
+      "type": "SYZYGISTIC",
+      "pitch": "Null",
+      "current": "hold",
+      "span": [
+        7,
+        2
+      ]
+    }
+  },
+  "24": {
+    "canonical_attrs": "Dabbler, batrachian mutations, cans of worms.",
+    "numogame": {
+      "desc": "Dabbler. Interference. Batrachian mutations.",
+      "type": "AMPHIDEMON",
+      "pitch": "Ana-1",
+      "current": null,
+      "span": [
+        7,
+        3
+      ]
+    },
+    "doomcrypt_attrs": "The Weaver, tangled paths, fateful decisions."
+  },
+  "25": {
+    "canonical_attrs": "Frankensteinian experimentation, purifications.",
+    "numogame": {
+      "desc": "Regenerator. Frankensteinian experimentation.",
+      "type": "CHRONODEMON",
+      "pitch": "Ana-2",
+      "current": "hold",
+      "span": [
+        7,
+        4
+      ]
+    }
+  },
+  "26": {
+    "canonical_attrs": "Ultimate success, rituals becoming nature.",
+    "numogame": {
+      "desc": "Upholder. Calendric Time. Ultimate success.",
+      "type": "CHRONODEMON",
+      "pitch": "Cth-6",
+      "current": "hold",
+      "span": [
+        7,
+        5
+      ]
+    }
+  },
+  "27": {
+    "canonical_attrs": "Strange lights in the swamp, swarmachines.",
+    "numogame": {
+      "desc": "Heavy Atmosphere. Teeming Pestilence. Swarmachines.",
+      "type": "AMPHIDEMON",
+      "pitch": "Cth-5",
+      "current": null,
+      "span": [
+        7,
+        6
+      ]
+    }
+  },
+  "28": {
+    "canonical_attrs": "Shamanic voyage, dream sorcery.",
+    "numogame": {
+      "desc": "Submergance. Shamanic voyage.",
+      "type": "AMPHIDEMON",
+      "pitch": "Cth-1",
+      "current": null,
+      "span": [
+        8,
+        0
+      ]
+    }
+  },
+  "29": {
+    "canonical_attrs": "Oceanic sensation, gilled-unlife.",
+    "numogame": {
+      "desc": "The Deep Ones. Oceanic sensation.",
+      "type": "SYZYGISTIC",
+      "pitch": "Null",
+      "current": "surge",
+      "span": [
+        8,
+        1
+      ]
+    }
+  },
+  "30": {
+    "canonical_attrs": "Voodoo in cyberspace, emergences.",
+    "numogame": {
+      "desc": "Subterranean Commerce. Voodoo in cyberspace.",
+      "type": "CHRONODEMON",
+      "pitch": "Ana-1",
+      "current": "surge",
+      "span": [
+        8,
+        2
+      ]
+    }
+  },
+  "31": {
+    "canonical_attrs": "Ocean storms, diseases from outer-space.",
+    "numogame": {
+      "desc": "The Mist-Crawler. Insidious Fog. Nyarlathotep.",
+      "type": "AMPHIDEMON",
+      "pitch": "Ana-2",
+      "current": null,
+      "span": [
+        8,
+        3
+      ]
+    }
+  },
+  "32": {
+    "canonical_attrs": "Necrospeleology, vulcanism.",
+    "numogame": {
+      "desc": "Keeper of Old Terrors. Necrospeleology.",
+      "type": "CHRONODEMON",
+      "pitch": "Ana-3",
+      "current": "sink",
+      "span": [
+        8,
+        4
+      ]
+    }
+  },
+  "33": {
+    "canonical_attrs": "Ancient rivers, cloud-vaults.",
+    "numogame": {
+      "desc": "Desert Swimmer. Arid Seabeds.",
+      "type": "CHRONODEMON",
+      "pitch": "Cth-5",
+      "current": "sink",
+      "span": [
+        8,
+        5
+      ]
+    }
+  },
+  "34": {
+    "canonical_attrs": "Cosmobacterial exogermination, extraterrestrial residues.",
+    "numogame": {
+      "desc": "Alien Mother. Xenogenesis.",
+      "type": "AMPHIDEMON",
+      "pitch": "Cth-4",
+      "current": null,
+      "span": [
+        8,
+        6
+      ]
+    }
+  },
+  "35": {
+    "canonical_attrs": "Ophidian transmutation, surreptitious colonization.",
+    "numogame": {
+      "desc": "Fishy-princess. Hybridity. Surreptitious colonization.",
+      "type": "CHRONODEMON",
+      "pitch": "Cth-3",
+      "current": "surge",
+      "span": [
+        8,
+        7
+      ]
+    }
+  },
+  "36": {
+    "canonical_attrs": "Crossing the iron-ocean, plutonics.",
+    "numogame": {
+      "desc": "Atonality. Crossing the iron-ocean. Cthelll.",
+      "type": "SYZYGISTIC",
+      "pitch": "Null",
+      "current": "plex",
+      "span": [
+        9,
+        0
+      ]
+    }
+  },
+  "37": {
+    "canonical_attrs": "The dark arts, rusting iron.",
+    "numogame": {
+      "desc": "The Tattered Ghoul. Punctuality.",
+      "type": "AMPHIDEMON",
+      "pitch": "Ana-1",
+      "current": null,
+      "span": [
+        9,
+        1
+      ]
+    }
+  },
+  "38": {
+    "canonical_attrs": "Crypt-traffic, communication-grids.",
+    "numogame": {
+      "desc": "Double-Undoing. Endless Uncasing. Crypt-traffic.",
+      "type": "AMPHIDEMON",
+      "pitch": "Ana-2",
+      "current": null,
+      "span": [
+        9,
+        2
+      ]
+    }
+  },
+  "39": {
+    "canonical_attrs": "Numerical connection through absence.",
+    "numogame": {
+      "desc": "Particle Clocks. Absolute Coincidence.",
+      "type": "XENODEMON",
+      "pitch": "Ana-3",
+      "current": null,
+      "span": [
+        9,
+        3
+      ]
+    }
+  },
+  "40": {
+    "canonical_attrs": "Secrets of the blacksmiths, subterranean impulses.",
+    "numogame": {
+      "desc": "Blind Catastrophe. Convulsions. Secrets of the blacksmiths.",
+      "type": "AMPHIDEMON",
+      "pitch": "Ana-4",
+      "current": null,
+      "span": [
+        9,
+        4
+      ]
+    }
+  },
+  "41": {
+    "canonical_attrs": "Crash-signals, barkerian scarring.",
+    "numogame": {
+      "desc": "Cosmotraumatics. Death-Strokes. Crash-signals.",
+      "type": "AMPHIDEMON",
+      "pitch": "Cth-4",
+      "current": null,
+      "span": [
+        9,
+        5
+      ]
+    }
+  },
+  "42": {
+    "canonical_attrs": "Asymmetric zygopoise, cybernetic anomalies.",
+    "numogame": {
+      "desc": "Tachyonic immobility. Coiling Outsideness.",
+      "type": "XENODEMON",
+      "pitch": "Cth-3",
+      "current": null,
+      "span": [
+        9,
+        6
+      ]
+    }
+  },
+  "43": {
+    "canonical_attrs": "Lunacies, dragon-lines.",
+    "numogame": {
+      "desc": "Mimetic Anorganism. Metaloid Unlife. Dragon-lines.",
+      "type": "AMPHIDEMON",
+      "pitch": "Cth-2",
+      "current": null,
+      "span": [
+        9,
+        7
+      ]
+    }
+  },
+  "44": {
+    "canonical_attrs": "Crust-friction, anorganic tension.",
+    "numogame": {
+      "desc": "Ultimate Inconsequence. Earth-Screams. Crust-friction.",
+      "type": "AMPHIDEMON",
+      "pitch": "Cth-1",
+      "current": null,
+      "span": [
+        9,
+        8
+      ]
+    }
+  }
+}

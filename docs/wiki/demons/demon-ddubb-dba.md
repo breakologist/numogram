@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-7, zone-2, syzygetic-chronodemon-of-swamp-labyri
 **Attributes:**  
 Broken Mirror, time loops, glamour.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** SYZYGISTIC
+- **Current zone:** hold
+- **Pitch designation:** Null
+- **Span:** [7, 2]
+- **Description:** Broken Mirror. Time loops, glamour and glosses.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-1, zone-0, amphidemon-of-openings]
 **Attributes:**  
 Terminal Initiator, Door of Doors, Spinal-voyage rites.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Ana-1
+- **Span:** [1, 0]
+- **Description:** Terminal Initiator. The Door of Doors.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

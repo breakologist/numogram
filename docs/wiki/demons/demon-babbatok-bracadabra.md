@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-7, zone-4, cyclic-chronodemon-of-suspended-decay
 **Attributes:**  
 Frankensteinian experimentation, purifications.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** CHRONODEMON
+- **Current zone:** hold
+- **Pitch designation:** Ana-2
+- **Span:** [7, 4]
+- **Description:** Regenerator. Frankensteinian experimentation.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

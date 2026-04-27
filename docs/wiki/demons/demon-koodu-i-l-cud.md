@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-4, zone-2, cyclic-chronodemon-of-switch-crazes]
 **Attributes:**  
 Fashioner, historical time, passage through the deep.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** CHRONODEMON
+- **Current zone:** hold
+- **Pitch designation:** Ana-6
+- **Span:** [4, 2]
+- **Description:** The Fashioner. Switch-Crazes.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

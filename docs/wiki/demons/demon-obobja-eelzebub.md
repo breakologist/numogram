@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-7, zone-6, amphidemon-of-teeming-pestilence]
 **Attributes:**  
 Strange lights in the swamp, swarmachines.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Cth-5
+- **Span:** [7, 6]
+- **Description:** Heavy Atmosphere. Teeming Pestilence. Swarmachines.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

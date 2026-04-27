@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-9, zone-8, amphidemon-of-earth-screams]
 **Attributes:**  
 Crust-friction, anorganic tension.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Cth-1
+- **Span:** [9, 8]
+- **Description:** Ultimate Inconsequence. Earth-Screams. Crust-friction.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-5, zone-0, amphidemon-of-talismania]
 **Attributes:**  
 Decimal Camouflage, number as destiny, Angel of the Cards.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Cth-4
+- **Span:** [5, 0]
+- **Description:** Decimal Camouflage. Talismania.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

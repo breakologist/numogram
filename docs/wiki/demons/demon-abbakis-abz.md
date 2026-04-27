@@ -25,6 +25,17 @@ tags: [demon, pandemonium, zone-7, zone-3, amphidemon-of-interference]
 **Attributes:**  
 Dabbler, batrachian mutations, cans of worms.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Ana-1
+- **Span:** [7, 3]
+- **Description:** Dabbler. Interference. Batrachian mutations.
+
+### Doomcrypt Variant
+> The Weaver, tangled paths, fateful decisions.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

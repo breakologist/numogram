@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-9, zone-4, amphidemon-of-convulsions]
 **Attributes:**  
 Secrets of the blacksmiths, subterranean impulses.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Ana-4
+- **Span:** [9, 4]
+- **Description:** Blind Catastrophe. Convulsions. Secrets of the blacksmiths.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

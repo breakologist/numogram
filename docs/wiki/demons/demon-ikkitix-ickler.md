@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-5, zone-3, amphidemon-of-vortical-delirium]
 **Attributes:**  
 Clicking Menaces, swirl-patterns, mysterious disappearances.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Cth-1
+- **Span:** [5, 3]
+- **Description:** Clicking Menaces. Vortical Delirium.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

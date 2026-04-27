@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-9, zone-2, amphidemon-of-endless-uncasing]
 **Attributes:**  
 Crypt-traffic, communication-grids.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Ana-2
+- **Span:** [9, 2]
+- **Description:** Double-Undoing. Endless Uncasing. Crypt-traffic.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

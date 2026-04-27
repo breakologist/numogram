@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-9, zone-6, chaotic-xenodemon-of-coiling-outsiden
 **Attributes:**  
 Asymmetric zygopoise, cybernetic anomalies.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** XENODEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Cth-3
+- **Span:** [9, 6]
+- **Description:** Tachyonic immobility. Coiling Outsideness.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

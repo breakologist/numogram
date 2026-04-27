@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-3, zone-0, chaotic-xenodemon-of-cosmic-indiffere
 **Attributes:**  
 Abductor, occult terrestrial history.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** XENODEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Ana-3
+- **Span:** [3, 0]
+- **Description:** Abductor. Cosmic Indifference.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

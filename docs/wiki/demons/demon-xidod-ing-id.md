@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-3, zone-2, amphidemon-of-escape-velocity]
 **Attributes:**  
 Zombie-Maker, crises through excess, illusion of progress.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Ana-5
+- **Span:** [3, 2]
+- **Description:** The Zombie-Maker. Escape-velocity.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

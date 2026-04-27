@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-9, zone-0, syzygetic-xenodemon-of-atonality]
 **Attributes:**  
 Crossing the iron-ocean, plutonics.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** SYZYGISTIC
+- **Current zone:** plex
+- **Pitch designation:** Null
+- **Span:** [9, 0]
+- **Description:** Atonality. Crossing the iron-ocean. Cthelll.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

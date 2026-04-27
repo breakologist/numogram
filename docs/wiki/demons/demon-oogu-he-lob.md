@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-2, zone-1, cyclic-chronodemon-of-splitting-water
 **Attributes:**  
 Original-Schism, primordial breath, ambivalent capture.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** CHRONODEMON
+- **Current zone:** surge
+- **Pitch designation:** Ana-3
+- **Span:** [2, 1]
+- **Description:** Original-Schism. Primordial breath.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-8, zone-0, amphidemon-of-submergance]
 **Attributes:**  
 Shamanic voyage, dream sorcery.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Cth-1
+- **Span:** [8, 0]
+- **Description:** Submergance. Shamanic voyage.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

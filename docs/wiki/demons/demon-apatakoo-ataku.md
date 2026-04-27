@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-7, zone-5, cyclic-chronodemon-of-calendric-time]
 **Attributes:**  
 Ultimate success, rituals becoming nature.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** CHRONODEMON
+- **Current zone:** hold
+- **Pitch designation:** Cth-6
+- **Span:** [7, 5]
+- **Description:** Upholder. Calendric Time. Ultimate success.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

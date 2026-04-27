@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-9, zone-1, amphidemon-of-punctuality]
 **Attributes:**  
 The dark arts, rusting iron.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Ana-1
+- **Span:** [9, 1]
+- **Description:** The Tattered Ghoul. Punctuality.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-5, zone-4, syzygetic-chronodemon-of-cataclysmic-
 **Attributes:**  
 Desolator, tail-chasing, panic and religious fervor.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** SYZYGISTIC
+- **Current zone:** sink
+- **Pitch designation:** Null
+- **Span:** [5, 4]
+- **Description:** Cataclysmic Convergence. Nature red in tooth and claw.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

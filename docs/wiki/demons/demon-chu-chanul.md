@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-6, zone-0, chaotic-xenodemon-of-ultimate-outside
 **Attributes:**  
 Source of Subnothingness, cosmic deletions.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** XENODEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Cth-3
+- **Span:** [6, 0]
+- **Description:** Source of Subnothingness. Ultimate Outsideness.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

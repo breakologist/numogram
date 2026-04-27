@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-8, zone-2, cyclic-chronodemon-of-subterranean-co
 **Attributes:**  
 Voodoo in cyberspace, emergences.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** CHRONODEMON
+- **Current zone:** surge
+- **Pitch designation:** Ana-1
+- **Span:** [8, 2]
+- **Description:** Subterranean Commerce. Voodoo in cyberspace.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-9, zone-5, amphidemon-of-death-strokes]
 **Attributes:**  
 Crash-signals, barkerian scarring.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Cth-4
+- **Span:** [9, 5]
+- **Description:** Cosmotraumatics. Death-Strokes. Crash-signals.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

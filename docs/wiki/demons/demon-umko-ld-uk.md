@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-8, zone-4, cyclic-chronodemon-of-autochthony]
 **Attributes:**  
 Necrospeleology, vulcanism.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** CHRONODEMON
+- **Current zone:** sink
+- **Pitch designation:** Ana-3
+- **Span:** [8, 4]
+- **Description:** Keeper of Old Terrors. Necrospeleology.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-3, zone-1, amphidemon-of-tridentity]
 **Attributes:**  
 Over-Ghoul, unimpeded ascent, ultimate implications.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Ana-4
+- **Span:** [3, 1]
+- **Description:** Over-Ghoul. Tridentity.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

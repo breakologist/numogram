@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-6, zone-5, amphidemon-of-unscreened-matrix]
 **Attributes:**  
 Pseudo-Basis, zero-gravity, cut-outs and UFO cover-ups.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Cth-7
+- **Span:** [6, 5]
+- **Description:** Pseudo-Basis. Unscreened Matrix. Zero-gravity.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-9, zone-7, amphidemon-of-metaloid-unlife]
 **Attributes:**  
 Lunacies, dragon-lines.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Cth-2
+- **Span:** [9, 7]
+- **Description:** Mimetic Anorganism. Metaloid Unlife. Dragon-lines.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

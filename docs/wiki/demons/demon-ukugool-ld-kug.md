@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-4, zone-1, cyclic-chronodemon-of-deluge-and-impl
 **Attributes:**  
 Sucking-Ghoul, cycle of creation/destruction, submersion.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** CHRONODEMON
+- **Current zone:** sink
+- **Pitch designation:** Ana-5
+- **Span:** [4, 1]
+- **Description:** The Sucking-Ghoul. Deluge and implosion.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

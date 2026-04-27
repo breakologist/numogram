@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-8, zone-5, cyclic-chronodemon-of-arid-seabeds]
 **Attributes:**  
 Ancient rivers, cloud-vaults.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** CHRONODEMON
+- **Current zone:** sink
+- **Pitch designation:** Cth-5
+- **Span:** [8, 5]
+- **Description:** Desert Swimmer. Arid Seabeds.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

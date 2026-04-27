@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-5, zone-2, cyclic-chronodemon-of-precarious-stat
 **Attributes:**  
 Ticking Machines, maintaining balance, exhaustive vigilance.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** CHRONODEMON
+- **Current zone:** hold
+- **Pitch designation:** Cth-2
+- **Span:** [5, 2]
+- **Description:** Ticking Machines. Calendric conservatism.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

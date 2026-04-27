@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-6, zone-3, syzygetic-xenodemon-of-time-lapse]
 **Attributes:**  
 Child Stealer, abstract cyclones, dust spirals.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** SYZYGISTIC
+- **Current zone:** warp
+- **Pitch designation:** Null
+- **Span:** [6, 3]
+- **Description:** Child Stealer. Abstract cyclones. Nomad war-machine.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

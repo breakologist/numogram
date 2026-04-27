@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-4, zone-3, amphidemon-of-anti-evolution]
 **Attributes:**  
 Buzz-Cutter, hermetic abbreviations, apocalyptic rapture.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Ana-7
+- **Span:** [4, 3]
+- **Description:** Buzz-Cutter. Anti-evolution.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

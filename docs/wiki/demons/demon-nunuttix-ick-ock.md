@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-9, zone-3, chaotic-xenodemon-of-absolute-coincid
 **Attributes:**  
 Numerical connection through absence.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** XENODEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Ana-3
+- **Span:** [9, 3]
+- **Description:** Particle Clocks. Absolute Coincidence.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

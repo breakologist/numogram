@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-6, zone-2, amphidemon-of-artificial-turbulence]
 **Attributes:**  
 Decentred Threat, machine-vortex, storm peripheries.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Cth-2
+- **Span:** [6, 2]
+- **Description:** Decentred Threat. Machine-vortex.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

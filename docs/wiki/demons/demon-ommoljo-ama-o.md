@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-8, zone-6, amphidemon-of-xenogenesis]
 **Attributes:**  
 Cosmobacterial exogermination, extraterrestrial residues.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Cth-4
+- **Span:** [8, 6]
+- **Description:** Alien Mother. Xenogenesis.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

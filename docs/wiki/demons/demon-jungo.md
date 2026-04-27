@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-6, zone-1, amphidemon-of-subtle-involvements]
 **Attributes:**  
 Infiltrator, turbular fluids, surreptitious invasions.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Cth-2
+- **Span:** [6, 1]
+- **Description:** Subtle Involvements. Turbular fluids.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]

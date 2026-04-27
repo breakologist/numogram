@@ -25,6 +25,14 @@ tags: [demon, pandemonium, zone-4, zone-0, amphidemon-of-burning-hail]
 **Attributes:**  
 Croaking Curse, subsidence, heaviness of fatality.
 
+## Variants
+### Roguelike Implementation (numogame)
+- **Type:** AMPHIDEMON
+- **Current zone:** None (static)
+- **Pitch designation:** Ana-4
+- **Span:** [4, 0]
+- **Description:** The Croaking Curse. Burning-Hail.
+
 ## See also
 - [[pandemonium-matrix]]
 - [[syzygy-arithmetic]]
