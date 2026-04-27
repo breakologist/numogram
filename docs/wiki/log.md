@@ -809,3 +809,60 @@ Full-day wiki audit + taxonomy overhaul during Apr 21–27 session. Scope: 245 p
 
 ---
 
+## 2026-04-27 — Visualizer v7.2 Traversal Mode
+
+**Scope:** [[numogram-visualizer-v7.2]] — Traversal Mode implementation + octave-harmonic zone naming
+
+### Changes
+
+- **Per-character AQ traversal** computed and stored in `traversalPath` array
+  - Each input character → AQ value → cumulative sum → digital root → zone
+  - Path drawn as animated polyline overlay on main p5 canvas
+  - Leading vertex (cyan) pulses; trailing segments fade
+- **Traversal panel** introduced (collapsible)
+  - Checkbox: *Show Path*
+  - Speed slider: 100–2000 ms per step (default 800)
+  - Size slider: 2–8 px line/vertex size (default 3)
+  - Step table: Char / Val / Sum / DR / Zone / Gate (color-coded row highlights for Gate/ROTATIONAL/STROBO)
+- **Synx synchronization**
+  - Toggling Synx overlay instantly recomputes traversal path with Synx cipher values
+  - Highlights dual-cipher drift by contrast of routes
+- **Base-aware geometry** refined via `zonePosition(z)`
+  - Base-10: dual pentagon layout (outer zones 0–4 at radius R, inner zones 5–9 at 0.48R, second pentagon rotated +36°)
+  - Base-16 & Base-36: equal angular spacing, inner ring for zones > count/2-1
+- **Octave-harmonic zone naming** for base-36 zones 10–35
+  - Names follow digital root to base-9 zone, with octave suffix (prime/second/third/fourth)
+  - Example: Zone 10 = Surge-prime, Zone 19 = Surge-second, Zone 28 = Surge-third
+- **Integration points**
+  - `updateAQInfo()`: starts traversal if checkbox checked and text present
+  - `setZoneFromAQ()`: clears traversal on base/seed change
+  - `toggleTraversalShow()`: re-enable restarts animation from current path
+  - `draw()`: calls `drawTraversalPath()` every frame
+- **Empty-input handling**: traversal hides automatically when text cleared
+
+### Files modified
+
+- `~/.hermes/obsidian/hermetic/wiki/assets/numogram-visualizer-v7-djynxxogram.html` (core implementation)
+- `~/.hermes/obsidian/hermetic/wiki/numogram-visualizer-v7.2.md` (new spec page)
+- `~/.hermes/obsidian/hermetic/wiki/index.md` (additions)
+- `~/numogram/docs/wiki/` (exported & pushed to GitHub)
+
+### Quality checks
+
+- JS brace balance: 265 open / 265 close
+- All functions defined exactly once; no duplicates
+- Traversal path cleared on base change
+- Animation restart on checkbox toggle re-enabled confirmed
+- Unit-check: simple mock (text `"CCRU"` base-10) → path length 4, progression plausible
+- Visual sanity: line connects zone centers on main canvas (no positional errors observed in inspection)
+
+### Questions / Next
+
+- Field test on actual browser (smoothness at 60fps)
+- Add tooltip on table rows to highlight line vertex on canvas
+- Path SVG export button
+- Heatmap accumulation of zone visits
+- T'ai Hsuan double-tetragram traversal overlay (81-way complexity)
+
+**Status:** deployed to export repo, pushed to origin (commit 29cc67f + 79827f8 cleanup). Awaiting browser validation.
+

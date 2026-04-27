@@ -84,15 +84,6 @@ function toggleSynx() {
   .tetra-line.man { background: linear-gradient(to right, #ffcc44 25%, transparent 25%, transparent 40%, #ffcc44 40%, #ffcc44 60%, transparent 60%, transparent 75%, #ffcc44 75%); }
   .tai-hsuan-divider { border-top: 1px solid #ffcc4433; margin: 4px 0; }
   .tai-hsuan-reading { font-size: 7px; color: #ffcc44cc; margin-top: 4px; }
-  /* Traversal Mode */
-  #traversalPanel { margin: 8px 0; padding: 10px; border: 1px solid #333; border-radius: 6px; background: #1118; }
-  #traversalPanel.hidden { display: none; }
-  .panel-row { display: flex; gap: 12px; align-items: center; margin-bottom: 8px; font: 11px/1.4 "IBM Plex Mono"; color: #ccc; }
-  #traversalTable { overflow-x: auto; }
-  #traversalTable table { border-collapse: collapse; font: 10px/1.3 "IBM Plex Mono"; }
-  #traversalTable th, #traversalTable td { padding: 3px 6px; border: 1px solid #333; text-align: right; }
-  #traversalTable th { background: #222; color: #00F5FF; }
-  #traversalTable tr:hover { background: #2222; }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
 </head>
@@ -155,15 +146,6 @@ function toggleSynx() {
   <b>Zone 5 Self-Decadence (from Aamodt + c-ten-fortyfive-fiveness.md)</b><br>
   5+5=10 • Phase change, cardiac rebound, the hinge where current hits itself and doubles back. The only zone without an external decadence partner — it reaches into itself. Golden ratio geometry, self-similar recursion. "The fifth way of saying five is the one that doesn't need a partner."
 </div>
-<div id="traversalPanel" class="hidden">
-  <div class="panel-row">
-    <label><input type="checkbox" id="traversalShow" onchange="toggleTraversalShow()"> Show Path</label>
-    <label>Speed: <input type="range" id="traversalSpeedSlider" min="100" max="2000" value="800" oninput="updateTraversalSpeed()"></label>
-    <label>Size: <input type="range" id="traversalSizeSlider" min="2" max="8" value="3" step="1" oninput="updateTraversalSize()"></label>
-  </div>
-  <div id="traversalTable"></div>
-</div>
-
 
 <div id="zoneSelector"></div>
 
@@ -194,7 +176,7 @@ const BASE_CONFIG = {
   16: {
     name: "MEMORY MAP", zoneCount: 16,
     colors: [[25,25,35],[255,170,50],[190,80,80],[0,220,255],[150,40,20],[180,160,255],[70,210,190],[255,200,150],[220,160,180],[160,80,255],[100,200,255],[255,120,180],[80,255,200],[200,80,255],[255,180,100],[40,40,60]],
-        names: ["Void","Surge","Hold","Warp","Sink","Hinge","Vortex","Blood","Rise","Plex","Surge-prime","Hold-prime","Warp-prime","Sink-prime","Hinge-prime","Vortex-prime","Blood-prime","Rise-prime","Plex-prime","Surge-second","Hold-second","Warp-second","Sink-second","Hinge-second","Vortex-second","Blood-second","Rise-second","Plex-second","Surge-third","Hold-third","Warp-third","Sink-third","Hinge-third","Vortex-third","Blood-third","Rise-third"],
+    names: ["Void","Surge","Hold","Warp","Sink","Hinge","Vortex","Blood","Rise","Plex","Echo","Fracture","Spiral","Abyss","Core","Null"],
     regions: ["plex","time","time","warp","time","time","warp","time","time","plex","memory","memory","memory","abyss","core","null"],
     demons: ["Uttunul","—","Oddubb","Djynxx","Katak","—","Djynxx","Oddubb","Murrumur","Uttunul","—","—","—","—","—","—"],
     descs: ["Abyssal Origin","Initiating Spark","Renewed Drive","Chaotic Attractor","Closure & Return","Central Ruler","Upper Source","Heavy Sink","Receptive Pause","Terminal Abyss","Echo Chamber","Fracture Point","Spiral Descent","Abyssal Sink","Iron Core","Null Pointer"],
@@ -210,16 +192,6 @@ const BASE_CONFIG = {
     syzygyPartner: (z) => 35 - z, currentName: (z) => Math.abs(z - (35 - z))
   }
 };
-
-// Traversal Mode state
-let traversalEnabled = false;
-let traversalPath = [];
-let traversalStartTime = 0;
-let traversalSpeed = 800;
-let traversalSize = 3;
-let traversalLineWidth = 2;
-let traversalPointSize = 4;
-
 let cfg = BASE_CONFIG[10];
 
 // Quasiphonic particles (from quasiphonic-particles.md)
@@ -558,7 +530,6 @@ function draw() {
       else if (zone === 7) ny = height - random(14);
       else if (zone === 9 || zone === 13) { let a=random(TWO_PI); nx=width/2+Math.cos(a)*random(width*0.28); ny=height/2+Math.sin(a)*random(width*0.28); }
       p.x = nx; p.y = ny; p.vx = p.vy = 0; p.life = 1; p.age = 0; p.maxAge = 255 + random()*355; p.phase = random(TWO_PI);
-  drawTraversalPath();
     }
   }
 
@@ -967,126 +938,6 @@ function animateTriangularSyzygy() {
 
 
 
-function computeTraversalPath(text) {
-  const raw = text.toUpperCase().replace(/[^A-Z0-9]/g, '');
-  let sum = 0;
-  let path = [];
-  for (let i = 0; i < raw.length; i++) {
-    const ch = raw[i];
-    const val = aqValue(ch, currentBase);
-    sum += val;
-    const dr = digitalRoot(sum, currentBase);
-    const zone = dr % cfg.zoneCount;
-    const partner = cfg.syzygyPartner(zone);
-    const gateNum = zone * currentBase + partner;
-    const isGate = (zone === partner) || Math.abs(zone - partner) === Math.floor(currentBase/2);
-    const isRot = currentBase === 10 && (zone === 0 || zone === 5 || zone === 9);
-    const isStrobe = base36Strob && currentBase === 36 && (zone === 5 || zone === 9 || zone === 14 || zone === 18 || zone === 23 || zone === 27 || zone === 32);
-    let gateTag = '';
-    if (isGate) gateTag = `Gt-${gateNum}`;
-    else if (isRot) gateTag = 'ROTATIONAL';
-    else if (isStrobe) gateTag = 'STROBO ★';
-    path.push({ char: ch, val, sum, dr, zone, gate: gateTag });
-  }
-  return path;
-}
-
-function startTraversal(path) {
-  traversalPath = path;
-  traversalEnabled = true;
-  traversalStartTime = Date.now();
-  buildTraversalTable(path);
-}
-
-function buildTraversalTable(path) {
-  const table = document.getElementById('traversalTable');
-  table.innerHTML = '<table><tr><th>#</th><th>Char</th><th>Val</th><th>Sum</th><th>DR</th><th>Z</th><th>Gate</th></tr>';
-  path.forEach((step, idx) => {
-    const row = document.createElement('tr');
-    row.innerHTML = `<td>${idx+1}</td><td>${step.char}</td><td style="color:#00F5FF">${step.val}</td><td>${step.sum}</td><td style="color:#00F5FF">${step.dr}</td><td style="color:#00F5FF">${step.zone}</td><td style="color:${step.gate ? '#ff3366' : '#888'}">${step.gate || '—'}</td></tr>`;
-    table.appendChild(row);
-  });
-}
-
-function updateTraversalSpeed() {
-  const slider = document.getElementById('traversalSpeedSlider');
-  traversalSpeed = parseInt(slider.value, 10);
-}
-
-function updateTraversalSize() {
-  const slider = document.getElementById('traversalSizeSlider');
-  traversalSize = parseInt(slider.value, 10);
-  traversalLineWidth = traversalSize * 0.67;
-  traversalPointSize = traversalSize;
-}
-
-function toggleTraversalShow() {
-  const checked = document.getElementById('traversalShow').checked;
-  traversalEnabled = checked;
-  if (checked && traversalPath.length > 0) {
-    traversalStartTime = Date.now();
-  }
-  const panel = document.getElementById('traversalPanel');
-  if (checked) panel.classList.add('show'); else panel.classList.remove('show');
-}
-
-function zonePosition(z) {
-  let count = cfg.zoneCount;
-  let cx = width/2, cy = height/2;
-  let baseR = min(width, height) * 0.35;
-  let r = (z > (currentBase/2 - 1)) ? baseR * 0.48 : baseR;
-  let angleDeg;
-  if (currentBase === 10) {
-    let mod5 = z % 5;
-    let offset = (z > 4) ? 36 : 0;
-    angleDeg = mod5 * 72 + offset - 90;
-  } else {
-    let spacing = 360 / currentBase;
-    angleDeg = z * spacing - 90;
-  }
-  let angle = angleDeg * Math.PI / 180;
-  return { x: cx + Math.cos(angle) * r, y: cy + Math.sin(angle) * r };
-}
-
-function drawTraversalPath() {
-  if (!traversalEnabled || traversalPath.length < 2) return;
-  let t = (Date.now() - traversalStartTime) / traversalSpeed;
-  let totalSteps = traversalPath.length;
-  let progress = Math.min(t / totalSteps, 1.0);
-  let drawCount = Math.floor(progress * totalSteps);
-  push();
-  strokeWeight(traversalLineWidth);
-  beginShape();
-  for (let i = 0; i < traversalPath.length; i++) {
-    let pt = traversalPath[i];
-    let pos = zonePosition(pt.zone);
-    if (i === 0) { stroke(100, 100, 120, 120); fill(100, 100, 120); }
-    else { stroke(60, 60, 80, 80); noFill(); }
-    vertex(pos.x, pos.y);
-  }
-  endShape();
-  if (drawCount > 0) {
-    beginShape();
-    for (let i = 0; i <= drawCount; i++) {
-      let pt = traversalPath[i];
-      let pos = zonePosition(pt.zone);
-      let alpha = (i === drawCount) ? 255 : 180;
-      let size = (i === drawCount) ? traversalPointSize * 1.5 : traversalPointSize;
-      stroke(0, 255, 255, alpha);
-      fill(0, 245, 245, alpha);
-      vertex(pos.x, pos.y);
-    }
-    endShape();
-    let head = traversalPath[drawCount];
-    let headPos = zonePosition(head.zone);
-    stroke(0, 255, 255);
-    fill(0, 245, 245, 200);
-    ellipse(headPos.x, headPos.y, traversalPointSize * 2.5);
-  }
-  pop();
-}
-
-
 function updateAQInfo() {
   let text = document.getElementById('aqInput').value || '';
   let aq = aqValue(text);
@@ -1128,12 +979,6 @@ function updateAQInfo() {
       <span style="color:#00F5FF55">${cfg.descs[z]}</span>
       ${synxHtml}
     `;
-  const traversalCheckbox = document.getElementById('traversalShow');
-  if (traversalCheckbox.checked && text.length > 0) {
-    const path = computeTraversalPath(text);
-    startTraversal(path);
-  }
-
     ctx.style.display = 'block';
   } else {
     ctx.style.display = 'none';
@@ -1147,7 +992,6 @@ function setZoneFromAQ() {
   let dr = synxEnabled ? synxDigitalRoot(val) : digitalRoot(val, currentBase);
   let z = dr % cfg.zoneCount;
   zone = z;
-  traversalEnabled = false;
   seed = val;
   document.getElementById('seedInput').value = val;
   background(5,5,5); particles = []; initParticles();
