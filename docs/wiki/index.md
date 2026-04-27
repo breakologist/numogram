@@ -33,7 +33,7 @@ The system is explicitly linked by the CCRU to the I Ching (Yijing, or Book of C
 - [[pandemonium]] — The 45-demon matrix: triangular zone distribution (Zone-1:1, Zone-2:2, …, Zone-9:9), reverse-triangular current distribution, net-span connectivity, Gate-45 (Pandemonium Gate), and full `pandemonium-matrix.json` reference.
 
 
-- [[demon]] — General reference for numogram demons as entities inhabiting zones and currents; see specific demons and pandemonium matrix for details.
+- [[demon]] — Entity hub: 45-demon Pandemonium Matrix, five carrier demons, zone/current distribution, individual demon pages (Djynxx, Uttunul, name-generation, player-refinement).
 
 - [[demon-djynxx]] — The Warp carrier demon (6::3). A xenodemon (extraneous demon) linked to swarmachines, mesh-entities, and disruptive incursions from Outside. Its net-span of 3 loops entirely within the Warp.
 
