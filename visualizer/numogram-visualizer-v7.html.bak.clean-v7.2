@@ -93,12 +93,6 @@ function toggleSynx() {
   #traversalTable th, #traversalTable td { padding: 3px 6px; border: 1px solid #333; text-align: right; }
   #traversalTable th { background: #222; color: #00F5FF; }
   #traversalTable tr:hover { background: #2222; }
-
-/* v7.2+ visibility fix — panels need explicit .show rule */
-#traversalPanel.show,
-#polygonPanel.show {
-  display: block;
-}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
 </head>
@@ -140,6 +134,13 @@ function toggleSynx() {
   </div>
 </div>
 
+<div id="polygramPanel" class="hidden">
+  <div class="panel-row">
+    <label><input type="checkbox" id="polygramShow" onchange="togglePolygramShow()"> Connect Letters</label>
+    <label><input type="checkbox" id="synxRingShow" onchange="toggleSynxRing()"> Synx Ring</label>
+  </div>
+</div>
+
 <canvas id="syzygyViz" width="120" height="120"></canvas>
 <div id="quasiphonicLabel"></div>
 <div id="taiHsuanPanel">
@@ -170,12 +171,6 @@ function toggleSynx() {
   <div id="traversalTable"></div>
 </div>
 
-<div id="polygramPanel" class="hidden">
-  <div class="panel-row">
-    <label><input type="checkbox" id="polygramShow" onchange="togglePolygramShow()"> Connect Letters</label>
-    <label><input type="checkbox" id="synxRingShow" onchange="toggleSynxRing()"> Synx Ring</label>
-  </div>
-</div>
 
 <div id="zoneSelector"></div>
 
@@ -185,9 +180,17 @@ function toggleSynx() {
 // AQ values from AQ_DICTIONARY.md integrated and verified
 
 let particles = [];
+let traversalEnabled = false;
 let polygramEnabled = false;
 let synxRingEnabled = false;
-let polygramWords = [];
+let traversalPath = [];
+let traversalStartTime = 0;
+let traversalSpeed = 800;
+let traversalSize = 3;
+let traversalLineWidth = 2;
+let traversalPointSize = 3;
+let polygramWords = []; // array of word data: [{word, letters: [{char, zone, pos}]}]
+
 let seed = 192855;
 let zone = 0;
 let currentBase = 10;
@@ -232,7 +235,7 @@ let traversalPath = [];
 let traversalStartTime = 0;
 let traversalSpeed = 800;
 let traversalSize = 3;
-let traversalLineWidth = 2;  // base, overridden by slider on input
+let traversalLineWidth = 2;
 let traversalPointSize = 4;
 
 let cfg = BASE_CONFIG[10];
@@ -563,8 +566,7 @@ function draw() {
   frameCount_++;
   let fade = (zone === 0) ? 4 : (zone === 8 || zone === 15) ? 2.5 : 8;
   noStroke(); fill(5,5,5,fade); rect(0,0,width,height);
-
-  // Polygram perimeter ring (v8)
+  // Polygram perimeter ring
   const cx = width/2, cy = height/2;
   const ringRadius = min(width, height) * 0.35;
   if (polygramEnabled || synxRingEnabled) {
@@ -576,6 +578,9 @@ function draw() {
   if (polygramEnabled) {
     drawPolygrams(cx, cy, ringRadius);
   }
+
+
+
   fieldOffset += 0.00032; let t = frameCount_ * 0.014;
 
   for (let p of particles) {
@@ -606,7 +611,7 @@ function draw() {
   }
 
   if (frameCount_ % 2 === 0) drawSyzygyViz();
-}
+
 
 function updateInfo() {
   let dr = digitalRoot(seed, currentBase);
@@ -853,9 +858,9 @@ function switchBase(newBase) {
   else {
     document.getElementById('matrixPanel').classList.remove('show');
     document.getElementById('contextBox').classList.remove('show');
-  }
   if (polygramEnabled) computePolygrams();
-}
+  }
+
 
 function updateDensity() {
   let val = parseInt(document.getElementById('densitySlider').value);
@@ -1066,23 +1071,26 @@ function toggleTraversalShow() {
 }
 
 
-// Polygram perimeter ring
-function drawRing(centerX, centerY, radius, base) {
+// Polygram ring rendering
+function drawRing(centerX, centerY, radius, base, labelsOnly = false) {
   push();
   noFill();
   stroke(0, 255, 255, 150);
   strokeWeight(1);
   ellipse(centerX, centerY, radius * 2, radius * 2);
+  // tick marks and labels
   textAlign(CENTER, CENTER);
   textSize(8);
   for (let z = 0; z < base; z++) {
+    // Compute angle same as zonePosition
     let angleDeg;
     if (currentBase === 10) {
       let mod5 = z % 5;
       let offset = (z > 4) ? 36 : 0;
       angleDeg = mod5 * 72 + offset - 90;
     } else {
-      angleDeg = z * (360 / currentBase) - 90;
+      let spacing = 360 / currentBase;
+      angleDeg = z * spacing - 90;
     }
     let angle = angleDeg * Math.PI / 180;
     const x = centerX + cos(angle) * radius;
@@ -1093,7 +1101,7 @@ function drawRing(centerX, centerY, radius, base) {
     const py = centerY + sin(angle) * inner;
     line(px, py, x, y);
     // label
-    let label = z.toString(currentBase).toUpperCase();
+    let label = z.toString(base).toUpperCase();
     fill(0, 255, 255, 200);
     noStroke();
     text(label, x, y);
@@ -1109,6 +1117,7 @@ function togglePolygramShow() {
     panel.classList.remove('hidden');
   } else {
     panel.classList.add('hidden');
+    // Also turn off synx ring if it was on
     synxRingEnabled = false;
     document.getElementById('synxRingShow').checked = false;
   }
@@ -1124,6 +1133,7 @@ function computePolygrams() {
   polygramWords = [];
   const text = aqText.trim();
   if (!text) return;
+  // Split by whitespace into words
   const words = text.split(/\s+/);
   for (let wi = 0; wi < words.length; wi++) {
     const word = words[wi];
@@ -1142,41 +1152,47 @@ function computePolygrams() {
   }
 }
 
-function drawPolygrams(cx, cy, ringRadius) {
+function drawPolygrams(centerX, centerY, ringRadius) {
   if (!polygramEnabled || polygramWords.length === 0) return;
   for (let wi = 0; wi < polygramWords.length; wi++) {
-    const wd = polygramWords[wi];
-    const letters = wd.letters;
+    const wordData = polygramWords[wi];
+    const letters = wordData.letters;
     if (letters.length < 2) continue;
     const hue = (wi * 137.5) % 360;
     stroke(hue, 75, 60, 0.6);
     strokeWeight(2);
     noFill();
+    // Polygon edges
     beginShape();
     for (let i = 0; i < letters.length; i++) {
       const z = letters[i].zone;
-      let angleDeg = (currentBase === 10)
-        ? (z % 5) * 72 + (z > 4 ? 36 : 0) - 90
-        : z * (360 / currentBase) - 90;
+      let angleDeg;
+      if (currentBase === 10) {
+        let mod5 = z % 5;
+        let offset = (z > 4) ? 36 : 0;
+        angleDeg = mod5 * 72 + offset - 90;
+      } else {
+        angleDeg = z * (360 / currentBase) - 90;
+      }
       let angle = angleDeg * Math.PI / 180;
-      vertex(cx + cos(angle) * ringRadius, cy + sin(angle) * ringRadius);
+      vertex(centerX + cos(angle) * ringRadius, centerY + sin(angle) * ringRadius);
     }
-    // close
-    let z0 = letters[0].zone;
-    let a0 = (currentBase === 10)
-      ? (z0 % 5) * 72 + (z0 > 4 ? 36 : 0) - 90
-      : z0 * (360 / currentBase) - 90;
-    vertex(cx + cos(a0 * Math.PI/180) * ringRadius, cy + sin(a0 * Math.PI/180) * ringRadius);
+    // close to first
+    let firstZ = letters[0].zone;
+    let firstDeg = (currentBase === 10)
+      ? (firstZ % 5) * 72 + (firstZ > 4 ? 36 : 0) - 90
+      : firstZ * (360 / currentBase) - 90;
+    vertex(centerX + cos(firstDeg * Math.PI/180) * ringRadius, centerY + sin(firstDeg * Math.PI/180) * ringRadius);
     endShape(CLOSE);
-    // vertices
+    // Vertex markers and labels
     for (let i = 0; i < letters.length; i++) {
       const z = letters[i].zone;
       let angleDeg = (currentBase === 10)
         ? (z % 5) * 72 + (z > 4 ? 36 : 0) - 90
         : z * (360 / currentBase) - 90;
       let angle = angleDeg * Math.PI / 180;
-      const x = cx + cos(angle) * ringRadius;
-      const y = cy + sin(angle) * ringRadius;
+      const x = centerX + cos(angle) * ringRadius;
+      const y = centerY + sin(angle) * ringRadius;
       fill(hue, 75, 60, 0.9);
       noStroke();
       ellipse(x, y, 6, 6);
@@ -1188,27 +1204,31 @@ function drawPolygrams(cx, cy, ringRadius) {
   }
 }
 
-function drawSynxRing(cx, cy, radius) {
+
+
+function drawSynxRing(centerX, centerY, radius) {
   if (!synxRingEnabled) return;
   push();
   stroke(255, 100, 100, 120);
   strokeWeight(1.5);
   noFill();
-  ellipse(cx, cy, radius * 2, radius * 2);
-  // 36 ticks (base-36 spacing always)
+  ellipse(centerX, centerY, radius * 2, radius * 2);
+  // tick marks for all 36 positions (Synx always base-36 spacing)
   for (let z = 0; z < 36; z++) {
-    let angleDeg = z * 10 - 90;  // 10° per zone
+    let spacing = 360 / 36; // 10° per zone
+    let angleDeg = z * spacing - 90;
     let angle = angleDeg * Math.PI / 180;
-    const x = cx + cos(angle) * radius;
-    const y = cy + sin(angle) * radius;
+    const x = centerX + cos(angle) * radius;
+    const y = centerY + sin(angle) * radius;
     const inner = radius - 8;
-    const px = cx + cos(angle) * inner;
-    const py = cy + sin(angle) * inner;
+    const px = centerX + cos(angle) * inner;
+    const py = centerY + sin(angle) * inner;
     stroke(255, 100, 100, 150);
     line(px, py, x, y);
   }
   pop();
 }
+
 
 function zonePosition(z) {
   let count = cfg.zoneCount;
@@ -1251,7 +1271,7 @@ function drawTraversalPath() {
       let pt = traversalPath[i];
       let pos = zonePosition(pt.zone);
       let alpha = (i === drawCount) ? 255 : 180;
-      let size = (i === drawCount) ? traversalSize * 1.5 : traversalSize;
+      let size = (i === drawCount) ? traversalPointSize * 1.5 : traversalPointSize;
       stroke(0, 255, 255, alpha);
       fill(0, 245, 245, alpha);
       vertex(pos.x, pos.y);
@@ -1261,7 +1281,7 @@ function drawTraversalPath() {
     let headPos = zonePosition(head.zone);
     stroke(0, 255, 255);
     fill(0, 245, 245, 200);
-    ellipse(headPos.x, headPos.y, traversalSize * 2.5);
+    ellipse(headPos.x, headPos.y, traversalPointSize * 2.5);
   }
   pop();
 }
@@ -1318,8 +1338,10 @@ function updateAQInfo() {
   } else {
     ctx.style.display = 'none';
   }
+  // Recompute polygrams if enabled
   if (polygramEnabled) computePolygrams();
-}
+
+
 
 function setZoneFromAQ() {
   let text = document.getElementById('aqInput').value || '';
