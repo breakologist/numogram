@@ -971,3 +971,21 @@ Same feature set as originally specified, now correctly applied to the interacti
 3. JS: rewrote point size in `drawTraversalPath()` to use `traversalSize` slider value
 
 **Result:** Both v7.2 traversal mode (Show Path + speed/size + step table) and v8 polygram perimeter ring + Synx ring are now fully functional. User must hard-refresh browser to load corrected code.
+
+
+## 2026-04-28 — Tetralogues: Ordo Amoris (888) & Decimal Labyrinth Heresy (627)
+
+**Sources:** AQ_Numogram_Expanded_Dictionary.md (25 Apr 2026), Grok rotor.md (26 Apr 2026)
+
+**Pages created:**
+- `ordo-amoris-888.md`
+- `tetralogue-ordo-amoris-888.md`
+- `decimal-labyrinth-heresy.md`
+- `tetralogue-decimal-labyrinth-heresy.md`
+
+**Cross-current synthesis:**
+- 888 = 333 × 2.666… = 777 + 111 = 666 + 222
+- 627 = inverted 360; Qwerty self-inverse
+- Heresy (9≡0) prerequisite for Ordo Amoris
+
+**Hyperstitional hook:** The numogram must invert to know its shape; 627 is auto-critique; 888 consumes the critic.
