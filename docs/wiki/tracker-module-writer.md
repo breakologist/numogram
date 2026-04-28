@@ -107,15 +107,73 @@ Notable parallels:
 
 ## Status & Roadmap
 
-- **Phase 1** ✓ valid binary M.K. writer
-- **Phase 2** ✓ zone→note, gate→effect, current→instrument, metadata embedding, skill registration (`/mod-writer`)
-- **Phase 3+** planned:
-  - Syzygy harmony (auto-generated partner-zone chords)
-  - Entropy injection (hardware RNG note variation)
-  - Pattern-length = triangular sums
-  - AQ seed embedding (gate progression constrained by AQ value)
-  - `.xm` (FastTracker II) support for more channels and effects
-  - Dedicated audio renderer skill (ffmpeg/libopenmpt → WAV → spectrogram analysis)
+| Phase | Status | Description |
+|---|---|---|
+| Phase 1 — Core writer | ✓ | M.K. binary output (4 ch, 31 samples, 64 patterns) |
+| Phase 2 — Numogram mapping | ✓ | Zone→pentatonic, Gate→effect, Current→instrument, metadata |
+| Phase 2b — Composer Bridge | ✓ | `ModComposer` API (midiutil‑style), high‑level orchestration |
+| Phase 3 — Hypersigil extensions | ✓ | Syzygy harmony, Entropy injection, Triangular lengths, AQ‑seeded gates |
+| Phase 4 — Live rendering | ☐ | MOD → WAV streaming, spectrogram analysis |
+| Phase 5 — XM support | ☐ | FastTracker II format (32 ch, fine effects) |
+| Phase 6 — MIDI export | ☐ | `mido` / `midiutil` bridge |
+| Phase 7 — Audio analysis | ☐ | Hermes listening via FFT / `librosa` |
+
+All core features (Phases 1‑3) are implemented and committed
+(hermes‑agent `94bdde4b`, skill version **0.3.0**). See `SKILL.md` for the
+complete reference.
+
+---
+
+## Advanced Features (CLI flags)
+
+| Flag | Meaning | Example |
+|---|---|---|
+| `--syzygy` | Add partner‑zone harmony on channels 1‑3 | `--syzygy` |
+| `--syzygy-channels N` | How many harmony channels (1‑3, default 3) | `--syzygy-channels 2` |
+| `--entropy RATE` | Pentatonic zone substitution rate (0‑1) | `--entropy 0.15` |
+| `--entropy-seed N` | RNG seed for reproducible entropy | `--entropy-seed 42` |
+| `--triangular` | Pattern rows = triangular `T(zone)` | `--triangular` |
+| `--aq-seed TEXT` | AQ‑seeded deterministic gate modulation | `--aq-seed CHAOS-3-6` |
+| `--rows N` | Base pattern row count (ignored if `--triangular`) | `--rows 32` |
+
+Flags combine arbitrarily; internal order:
+seed notes → syzygy harmony → entropy substitution → AQ gate shift → pattern-length.
+
+---
+
+## Composer API (Python)
+
+The `ModComposer` class provides an event‑list model similar to `mido.MIDIFile`.
+
+```python
+from numogram_audio.mod_writer.composer import ModComposer
+
+comp = ModComposer(title="Syzygy Étude")
+for r in range(16):
+    comp.add_note(zone=3, gate=6, current='A', row=r, channel=0)
+
+comp.apply_syzygy_harmony()                     # partner notes on ch1‑3
+comp.inject_entropy(rate=0.1, rng_seed=7)      # 10% zone glitches
+comp.constrain_gates_by_aq("WR-3-6")           # AQ‑modulated effects
+comp._triangular = True                         # T(3)=6 rows
+comp.write_mod("etude.mod")
+```
+
+Or one‑shot convenience:
+
+```python
+ModComposer.compose(
+    zone=3, gate=6, current='A', rows=16,
+    syzygy=True, entropy=0.1, triangular=True, aq_seed="WR-3-6",
+    output="etude.mod"
+)
+```
+
+This **composer layer** is the MIDI bridge: a clean, AI‑friendly interface that
+abstracts binary packing while retaining full numogram semantics. Future Phase
+6 may add `write_midi()` using `mido` to emit actual `.mid` files.
+
+---
 
 ## Files
 
