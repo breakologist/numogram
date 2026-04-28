@@ -71,7 +71,7 @@ The live garden visualization (`cult-garden-live.html`) supports 10 zone-specifi
 | 8 | Multiplicity | Purple swarm, echo/duplicate elements, layered opacity |
 | 9 | Iron Core | Purple-black iron, singularity gravity, decaying orbits |
 
-Showcase page: `~/cult-garden-zone-skins.html` — click through all 10 skins with live data.
+Showcase page: `assets/cult-garden-zone-skins.html` — click through all 10 skins with live data.
 
 The skin selector reads `cult_zone` from `cult.json` and auto-applies the matching theme.
 
