@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Decimal Labyrinth — WebGL</title>
+  <script>p5.disableFriendlyErrors = true;</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+  <style>
+    html, body { margin: 0; padding: 0; overflow: hidden; background: #020204; }
+    canvas { display: block; }
+    #info {
+      position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
+      color: #555; font: 11px 'Courier New', monospace; text-align: center;
+      pointer-events: none; opacity: 0.5; z-index: 10;
+    }
+    #zone-info {
+      position: fixed; top: 20px; left: 20px;
+      color: #aaa; font: 12px 'Courier New', monospace;
+      pointer-events: none; opacity: 0; transition: opacity 0.3s;
+      z-index: 10; max-width: 300px;
+      background: rgba(5,5,10,0.85); padding: 14px 18px;
+      border: 1px solid rgba(100,100,140,0.2); border-radius: 4px;
+    }
+    #zone-info.visible { opacity: 1; }
+    #zone-info .zone-title { font-size: 15px; font-weight: bold; margin-bottom: 8px; }
+    #zone-info .zone-detail { font-size: 11px; color: #888; line-height: 1.6; }
+  </style>
+</head>
+<body>
+<div id="info">click a zone · R reseed · S save · SPACE toggle circuit · D toggle debug</div>
+<div id="zone-info">
+  <div class="zone-title" id="zi-title"></div>
+  <div class="zone-detail" id="zi-detail"></div>
+</div>
+<script>
+
+// ═══════════════════════════════════════════════════════════════════════
+// CONFIGURATION
+// ═══════════════════════════════════════════════════════════════════════
+
+const CONFIG = {
+  seed: 666,
+  particleCount: 350,
+  flowSpeed: 0.35,
+  nodeRadius: 30,
+  showCircuit: true,
+  showDebug: false,
+
+  // Shader params
+  bloomStrength: 1.8,
+  bloomRadius: 4.0,
+  feedbackDecay: 0.965,
+  warpStrength: 0.04,
+  warpSpeed: 0.15,
+  bgNoiseScale: 2.5,
+  bgNoiseSpeed: 0.08,
+  gridPulseSpeed: 0.4,
+};
+
+// ═══════════════════════════════════════════════════════════════════════
+// ZONE DATA
+// ═══════════════════════════════════════════════════════════════════════
+
+const ZONES = [
+  { id: 0, name: 'Void',          region: 'plex',   mesh: '0000', spinal: 'Coccygeal' },
+  { id: 1, name: 'Stability',     region: 'torque', mesh: '0001', spinal: 'Lumbar' },
+  { id: 2, name: 'Separation',    region: 'torque', mesh: '0003', spinal: 'Lumbar' },
+  { id: 3, name: 'Release',       region: 'warp',   mesh: '0007', spinal: 'Solar' },
+  { id: 4, name: 'Catastrophe',   region: 'torque', mesh: '0100', spinal: 'Solar' },
+  { id: 5, name: 'Pressure',      region: 'torque', mesh: '0101', spinal: 'Cardiac' },
+  { id: 6, name: 'Abstraction',   region: 'warp',   mesh: '0110', spinal: 'Cardiac' },
+  { id: 7, name: 'Blood',         region: 'torque', mesh: '0111', spinal: 'Pharyngeal' },
+  { id: 8, name: 'Multiplicity',  region: 'torque', mesh: '1000', spinal: 'Cavernous' },
+  { id: 9, name: 'Iron Core',     region: 'plex',   mesh: '0511', spinal: 'Sacral' },
+];
+
+const ZONE_COLORS = [
+  [0.27, 0.27, 0.27],  // 0 void
+  [1.0,  0.84, 0.0 ],  // 1 gold
+  [1.0,  0.55, 0.0 ],  // 2 orange
+  [1.0,  0.0,  1.0 ],  // 3 magenta (warp)
+  [0.0,  1.0,  1.0 ],  // 4 cyan
+  [0.0,  1.0,  0.0 ],  // 5 green
+  [0.0,  0.5,  1.0 ],  // 6 blue (warp)
+  [1.0,  0.2,  0.2 ],  // 7 deep red
+  [0.75, 0.63, 1.0 ],  // 8 lavender
+  [0.6,  0.0,  1.0 ],  // 9 purple (iron core)
+];
+
+const SYZYGIES = [
+  { zones: [0, 9], current: 9, demon: 'Uttunul',  region: 'plex' },
+  { zones: [1, 8], current: 7, demon: 'Murrumur', region: 'torque' },
+  { zones: [2, 7], current: 5, demon: 'Oddubb',   region: 'torque' },
+  { zones: [3, 6], current: 3, demon: 'Djynxx',   region: 'warp' },
+  { zones: [4, 5], current: 1, demon: 'Katak',     region: 'torque' },
+];
+
+const TIME_CIRCUIT = [1, 8, 2, 7, 5, 4];
+
+// ═══════════════════════════════════════════════════════════════════════
+// GLSL SHADERS
+// ═══════════════════════════════════════════════════════════════════════
+
+// Background shader — living noise field with grid pulse
+const BG_VERT = `
+attribute vec3 aPosition;
+attribute vec2 aTexCoord;
+varying vec2 vUV;
+void main() {
+  vUV = aTexCoord;
+  vec4 pos = vec4(aPosition, 1.0);
+  pos.xy = pos.xy * 2.0 - 1.0;
+  gl_Position = pos;
+}`;
+
+const BG_FRAG = `
+precision mediump float;
+varying vec2 vUV;
+uniform float uTime;
+uniform float uNoiseScale;
+uniform float uNoiseSpeed;
+uniform float uGridPulse;
+uniform vec2 uResolution;
+uniform int uActiveZone;
+uniform vec3 uZoneColor;
+uniform vec2 uPlexPos;
+
+// Simplex-ish noise
+vec3 mod289(vec3 x) { return x - floor(x * (1.0/289.0)) * 289.0; }
+vec2 mod289(vec2 x) { return x - floor(x * (1.0/289.0)) * 289.0; }
+vec3 permute(vec3 x) { return mod289(((x*34.0)+1.0)*x); }
+
+float snoise(vec2 v) {
+  const vec4 C = vec4(0.211324865405187, 0.366025403784439,
+                      -0.577350269189626, 0.024390243902439);
+  vec2 i = floor(v + dot(v, C.yy));
+  vec2 x0 = v - i + dot(i, C.xx);
+  vec2 i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+  vec4 x12 = x0.xyxy + C.xxzz;
+  x12.xy -= i1;
+  i = mod289(i);
+  vec3 p = permute(permute(i.y + vec3(0.0, i1.y, 1.0)) + i.x + vec3(0.0, i1.x, 1.0));
+  vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy), dot(x12.zw,x12.zw)), 0.0);
+  m = m*m; m = m*m;
+  vec3 x = 2.0 * fract(p * C.www) - 1.0;
+  vec3 h = abs(x) - 0.5;
+  vec3 ox = floor(x + 0.5);
+  vec3 a0 = x - ox;
+  m *= 1.79284291400159 - 0.85373472095314 * (a0*a0+h*h);
+  vec3 g;
+  g.x = a0.x * x0.x + h.x * x0.y;
+  g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+  return 130.0 * dot(m, g);
+}
+
+float fbm(vec2 p, float t) {
+  float val = 0.0, amp = 0.5, freq = 1.0;
+  for (int i = 0; i < 5; i++) {
+    val += amp * snoise(p * freq + t * 0.3);
+    freq *= 2.0;
+    amp *= 0.5;
+  }
+  return val;
+}
+
+void main() {
+  vec2 uv = vUV;
+  float t = uTime * uNoiseSpeed;
+  float aspect = uResolution.x / uResolution.y;
+
+  // Plex gravity — space warps toward center
+  vec2 toPlex = uPlexPos - uv;
+  float plexDist = length(toPlex);
+  float plexPull = uNoiseScale * 0.015 / (plexDist + 0.1);
+  vec2 warpedUV = uv + toPlex * plexPull * sin(t * 0.5) * 0.5;
+
+  // Multi-octave noise
+  float n1 = fbm(warpedUV * uNoiseScale, t);
+  float n2 = fbm(warpedUV * uNoiseScale * 2.0 + 3.7, t * 1.3);
+  float n3 = fbm(warpedUV * uNoiseScale * 0.5 - 1.2, t * 0.7);
+
+  // Domain warp
+  float wx = fbm(warpedUV * uNoiseScale + vec2(n1, n2) * 0.8, t * 0.5);
+  float wy = fbm(warpedUV * uNoiseScale + vec2(n2, n3) * 0.8, t * 0.5 + 5.0);
+  float warped = fbm(warpedUV * uNoiseScale + vec2(wx, wy) * 0.6, t * 0.3);
+
+  // Background base — very dark with subtle noise texture
+  vec3 bg = vec3(0.015, 0.015, 0.025);
+  bg += vec3(warped * 0.012, warped * 0.008, warped * 0.018);
+
+  // Grid lines — pulsing
+  float gridSpacing = 0.04;
+  float gx = abs(fract(uv.x / gridSpacing - 0.5) - 0.5);
+  float gy = abs(fract(uv.y / gridSpacing - 0.5) - 0.5);
+  float grid = smoothstep(0.48, 0.5, max(gx, gy));
+  float gridPulse = sin(uTime * uGridPulse + warped * 4.0) * 0.5 + 0.5;
+  vec3 gridColor = vec3(0.04, 0.04, 0.06) * grid * gridPulse * 0.5;
+  bg += gridColor;
+
+  // Zone influence — subtle color bleed from active zone
+  if (uActiveZone >= 0) {
+    float zoneInfluence = smoothstep(0.6, 0.0, plexDist) * 0.03;
+    bg += uZoneColor * zoneInfluence * (sin(t * 2.0) * 0.3 + 0.7);
+  }
+
+  // Plex singularity glow
+  float plexGlow = exp(-plexDist * 8.0) * 0.06;
+  bg += vec3(0.8, 0.1, 0.1) * plexGlow * (sin(t * 1.5) * 0.4 + 0.6);
+
+  // Vignette
+  float vig = smoothstep(0.9, 0.3, length(uv - 0.5));
+  bg *= vig * 0.8 + 0.2;
+
+  gl_FragColor = vec4(bg, 1.0);
+}`;
+
+// Bloom extraction shader — bright pass + blur
+const BLOOM_VERT = `
+attribute vec3 aPosition;
+attribute vec2 aTexCoord;
+varying vec2 vUV;
+void main() {
+  vUV = aTexCoord;
+  gl_Position = vec4(aPosition.xy, 0.0, 1.0);
+}`;
+
+const BLOOM_FRAG = `
+precision mediump float;
+varying vec2 vUV;
+uniform sampler2D uTex;
+uniform vec2 uResolution;
+uniform float uBloomStrength;
+uniform float uBloomRadius;
+uniform int uPass; // 0=extract, 1=blurH, 2=blurV, 3=composite
+
+vec4 blur9(sampler2D image, vec2 uv, vec2 direction, float radius) {
+  vec4 color = vec4(0.0);
+  vec2 off1 = vec2(1.3846153846) * direction * radius;
+  vec2 off2 = vec2(3.2307692308) * direction * radius;
+  color += texture2D(image, uv) * 0.2270270270;
+  color += texture2D(image, uv + off1 / uResolution) * 0.3162162162;
+  color += texture2D(image, uv - off1 / uResolution) * 0.3162162162;
+  color += texture2D(image, uv + off2 / uResolution) * 0.0702702703;
+  color += texture2D(image, uv - off2 / uResolution) * 0.0702702703;
+  return color;
+}
+
+void main() {
+  vec4 col = texture2D(uTex, vUV);
+
+  if (uPass == 0) {
+    // Bright pass — extract luminous areas
+    float lum = dot(col.rgb, vec3(0.299, 0.587, 0.114));
+    float threshold = 0.08;
+    float soft = smoothstep(threshold - 0.05, threshold + 0.1, lum);
+    gl_FragColor = vec4(col.rgb * soft * uBloomStrength, col.a);
+  } else if (uPass == 1) {
+    // Horizontal blur
+    gl_FragColor = blur9(uTex, vUV, vec2(1.0, 0.0), uBloomRadius);
+  } else if (uPass == 2) {
+    // Vertical blur
+    gl_FragColor = blur9(uTex, vUV, vec2(0.0, 1.0), uBloomRadius);
+  } else {
+    // Composite
+    gl_FragColor = col;
+  }
+}`;
+
+// Feedback/composite shader — blends current frame with decayed previous
+const FEEDBACK_FRAG = `
+precision mediump float;
+varying vec2 vUV;
+uniform sampler2D uCurrent;
+uniform sampler2D uPrevious;
+uniform float uDecay;
+uniform float uTime;
+
+void main() {
+  vec4 current = texture2D(uCurrent, vUV);
+  vec4 previous = texture2D(uPrevious, vUV);
+
+  // Slight UV distortion on feedback for organic decay
+  vec2 distort = vec2(
+    sin(vUV.y * 20.0 + uTime * 0.5) * 0.0003,
+    cos(vUV.x * 20.0 + uTime * 0.5) * 0.0003
+  );
+  vec4 prevDistorted = texture2D(uPrevious, vUV + distort);
+
+  // Composite: current frame + decayed previous
+  gl_FragColor = max(current, prevDistorted * uDecay);
+}`;
+
+// ═══════════════════════════════════════════════════════════════════════
+// GLOBAL STATE
+// ═══════════════════════════════════════════════════════════════════════
+
+let nodePositions = [];
+let particles = [];
+let selectedZone = -1;
+let hoverZone = -1;
+let pulsePhase = 0;
+
+// Shader program
+let bgShader;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight, WEBGL);
+  pixelDensity(1);
+
+  randomSeed(CONFIG.seed);
+  noiseSeed(CONFIG.seed);
+
+  // Create shaders
+  bgShader = createShader(BG_VERT, BG_FRAG);
+
+  computeNodePositions();
+  initParticles();
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// NODE POSITIONING
+// ═══════════════════════════════════════════════════════════════════════
+
+function computeNodePositions() {
+  const outerR = min(width, height) * 0.30;
+  // Zone 9 + 0 at center
+  nodePositions[9] = { x: 0, y: 0 };
+  nodePositions[0] = { x: 0, y: 0 };
+  // Outer ring — arranged to minimize syzygy crossings
+  const order = [1, 4, 5, 7, 8, 2, 3, 6];
+  for (let i = 0; i < order.length; i++) {
+    const a = -HALF_PI + (i / order.length) * TWO_PI;
+    nodePositions[order[i]] = { x: cos(a) * outerR, y: sin(a) * outerR };
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// PARTICLES
+// ═══════════════════════════════════════════════════════════════════════
+
+class Particle {
+  constructor() { this.reset(); }
+  reset() {
+    const z = floor(random(10));
+    this.x = nodePositions[z].x + random(-30, 30);
+    this.y = nodePositions[z].y + random(-30, 30);
+    this.zone = z;
+    this.target = this.pickTarget(z);
+    this.speed = random(0.2, 1.0) * CONFIG.flowSpeed;
+    this.life = random(150, 500);
+    this.maxLife = this.life;
+    this.size = random(1.5, 5);
+  }
+  pickTarget(from) {
+    for (const s of SYZYGIES) {
+      if (s.zones.includes(from) && random() < 0.55) {
+        return s.zones[0] === from ? s.zones[1] : s.zones[0];
+      }
+    }
+    return random() < 0.25 ? 9 : floor(random(10));
+  }
+  update() {
+    const t = nodePositions[this.target];
+    const dx = t.x - this.x, dy = t.y - this.y;
+    const d = Math.sqrt(dx * dx + dy * dy);
+    if (d < 10) { this.zone = this.target; this.target = this.pickTarget(this.zone); }
+    const ns = 0.003;
+    const na = noise(this.x * ns, this.y * ns, frameCount * 0.002) * TWO_PI * 2;
+    this.x += (dx / max(d, 1)) * this.speed + cos(na) * 0.25;
+    this.y += (dy / max(d, 1)) * this.speed + sin(na) * 0.25;
+    this.life--;
+    if (this.life <= 0 || abs(this.x) > width || abs(this.y) > height) this.reset();
+  }
+}
+
+function initParticles() {
+  particles = [];
+  for (let i = 0; i < CONFIG.particleCount; i++) particles.push(new Particle());
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// MAIN DRAW
+// ═══════════════════════════════════════════════════════════════════════
+
+function draw() {
+  pulsePhase += 0.015;
+  const t = millis() * 0.001;
+
+  // ─── Pass 2: Background shader on main canvas ─────────────────
+  shader(bgShader);
+  bgShader.setUniform('uTime', t);
+  bgShader.setUniform('uNoiseScale', CONFIG.bgNoiseScale);
+  bgShader.setUniform('uNoiseSpeed', CONFIG.bgNoiseSpeed);
+  bgShader.setUniform('uGridPulse', CONFIG.gridPulseSpeed);
+  bgShader.setUniform('uResolution', [width, height]);
+  const az = selectedZone >= 0 ? selectedZone : -1;
+  bgShader.setUniform('uActiveZone', az);
+  bgShader.setUniform('uZoneColor', az >= 0 ? ZONE_COLORS[az] : [0, 0, 0]);
+  bgShader.setUniform('uPlexPos', [0.5, 0.5]);
+  // Full-screen quad
+  rect(-width / 2, -height / 2, width, height);
+
+  // ─── Pass 3: Draw scene directly on main canvas ───────────────
+  resetShader();
+  // Disable depth test so scene content draws on top of background
+  const gl = drawingContext;
+  gl.disable(gl.DEPTH_TEST);
+  push();
+
+  // Syzygy bonds
+  for (const s of SYZYGIES) {
+    const a = nodePositions[s.zones[0]];
+    const b = nodePositions[s.zones[1]];
+    const col = ZONE_COLORS[s.zones[0]];
+
+    const steps = 50;
+    noFill();
+    strokeWeight(1.2);
+    for (let i = 0; i < steps; i++) {
+      const u = i / steps;
+      const v = (i + 1) / steps;
+      const pulse = Math.sin(t * 2.0 + u * 6.0 + s.current) * 0.5 + 0.5;
+      const alpha = 15 + pulse * 25;
+      stroke(col[0] * 255, col[1] * 255, col[2] * 255, alpha);
+
+      const nOffX = noise(u * 3.0, t * 0.5, s.current) * 6 - 3;
+      const nOffY = noise(u * 3.0 + 100, t * 0.5, s.current) * 6 - 3;
+      const x1 = lerp(a.x, b.x, u) + nOffX;
+      const y1 = lerp(a.y, b.y, u) + nOffY;
+      const x2 = lerp(a.x, b.x, v) + nOffX;
+      const y2 = lerp(a.y, b.y, v) + nOffY;
+      line(x1, y1, x2, y2);
+    }
+
+    // Demon label
+    if (selectedZone < 0 || s.zones.includes(selectedZone)) {
+      const mx = (a.x + b.x) / 2;
+      const my = (a.y + b.y) / 2 - 14;
+      noStroke();
+      fill(col[0] * 255, col[1] * 255, col[2] * 255, 60 + 30 * Math.sin(t + s.current));
+      textAlign(CENTER, CENTER);
+      textSize(9);
+      text(s.demon, mx, my);
+    }
+  }
+
+  // Time-circuit
+  if (CONFIG.showCircuit) {
+    const phase = (t * 0.3) % 1.0;
+    for (let i = 0; i < TIME_CIRCUIT.length; i++) {
+      const ni = (i + 1) % TIME_CIRCUIT.length;
+      const a = nodePositions[TIME_CIRCUIT[i]];
+      const b = nodePositions[TIME_CIRCUIT[ni]];
+
+      stroke(255, 215, 0, 8);
+      strokeWeight(0.6);
+      line(a.x, a.y, b.x, b.y);
+
+      for (let d = 0; d < 3; d++) {
+        const dp = ((phase + d * 0.333 + i / TIME_CIRCUIT.length) % 1.0);
+        const dx = lerp(a.x, b.x, dp);
+        const dy = lerp(a.y, b.y, dp);
+        noStroke();
+        fill(255, 215, 0, 20);
+        ellipse(dx, dy, 14, 14);
+        fill(255, 215, 0, 100);
+        ellipse(dx, dy, 3, 3);
+      }
+    }
+  }
+
+  // Particles
+  noStroke();
+  for (const p of particles) {
+    p.update();
+    const col = ZONE_COLORS[p.target];
+    const alpha = map(p.life, 0, p.maxLife, 0, 0.6);
+    fill(col[0] * 255, col[1] * 255, col[2] * 255, alpha * 255);
+    ellipse(p.x, p.y, p.size, p.size);
+    fill(255, 255, 255, alpha * 120);
+    ellipse(p.x, p.y, p.size * 0.4, p.size * 0.4);
+  }
+
+  // Nodes
+  for (let i = 0; i < 10; i++) {
+    const pos = nodePositions[i];
+    const col = ZONE_COLORS[i];
+    const r = CONFIG.nodeRadius;
+    const isSelected = i === selectedZone;
+    const isHovered = i === hoverZone;
+    const cr = isSelected ? r * 1.35 : isHovered ? r * 1.15 : r;
+
+    const pulse = Math.sin(t * 1.5 + i * 0.7) * 0.15 + 0.85;
+
+    // Outer ring
+    noFill();
+    strokeWeight(isSelected ? 2.5 : isHovered ? 1.8 : 1.2);
+    stroke(col[0] * 255, col[1] * 255, col[2] * 255, 140 * pulse);
+    ellipse(pos.x, pos.y, cr * 2, cr * 2);
+
+    // Filled body
+    fill(col[0] * 255, col[1] * 255, col[2] * 255, 25 + (isSelected ? 20 : 0));
+    ellipse(pos.x, pos.y, cr * 1.8, cr * 1.8);
+
+    // Inner bright core
+    noStroke();
+    fill(col[0] * 255, col[1] * 255, col[2] * 255, 50 * pulse);
+    ellipse(pos.x, pos.y, cr * 0.6, cr * 0.6);
+
+    // Number
+    fill(255, 255, 255, isSelected ? 240 : 160);
+    textAlign(CENTER, CENTER);
+    textSize(isSelected ? 17 : 14);
+    textStyle(BOLD);
+    text(i, pos.x, pos.y - 1);
+
+    // Name
+    fill(col[0] * 255, col[1] * 255, col[2] * 255, isSelected ? 180 : 80);
+    textSize(isSelected ? 10 : 8);
+    textStyle(NORMAL);
+    text(ZONES[i].name.toUpperCase(), pos.x, pos.y + cr + 14);
+
+    // Plex concentric rings
+    if (i === 9) {
+      for (let ring = 1; ring <= 4; ring++) {
+        const rr = cr + ring * 20 + Math.sin(t * 1.2 + ring * 0.5) * 3;
+        noFill();
+        stroke(255, 30, 30, (12 - ring * 2.5) * pulse);
+        strokeWeight(0.5);
+        ellipse(pos.x, pos.y, rr * 2, rr * 2);
+      }
+    }
+  }
+
+  pop();
+  gl.enable(gl.DEPTH_TEST);
+
+  // ─── HUD ─────────────────────────────────────────────────────
+  if (CONFIG.showDebug) drawDebugHUD(t);
+  updateZoneInfo();
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// DRAWING HELPERS
+// ═══════════════════════════════════════════════════════════════════════
+
+function drawSyzygyBonds(buf, t) {
+  for (const s of SYZYGIES) {
+    const a = nodePositions[s.zones[0]];
+    const b = nodePositions[s.zones[1]];
+    const col = ZONE_COLORS[s.zones[0]];
+
+    // Animated energy stream
+    const steps = 50;
+    buf.noFill();
+    buf.strokeWeight(1.2);
+    for (let i = 0; i < steps; i++) {
+      const u = i / steps;
+      const v = (i + 1) / steps;
+      const pulse = sin(t * 2.0 + u * 6.0 + s.current) * 0.5 + 0.5;
+      const alpha = 15 + pulse * 25;
+      buf.stroke(col[0] * 255, col[1] * 255, col[2] * 255, alpha);
+
+      // Slight noise offset for organic flow
+      const nOffX = noise(u * 3.0, t * 0.5, s.current) * 6 - 3;
+      const nOffY = noise(u * 3.0 + 100, t * 0.5, s.current) * 6 - 3;
+      const x1 = lerp(a.x, b.x, u) + nOffX;
+      const y1 = lerp(a.y, b.y, u) + nOffY;
+      const x2 = lerp(a.x, b.x, v) + nOffX;
+      const y2 = lerp(a.y, b.y, v) + nOffY;
+      buf.line(x1, y1, x2, y2);
+    }
+
+    // Demon label
+    if (selectedZone < 0 || s.zones.includes(selectedZone)) {
+      const mx = (a.x + b.x) / 2;
+      const my = (a.y + b.y) / 2 - 14;
+      buf.noStroke();
+      buf.fill(col[0] * 255, col[1] * 255, col[2] * 255, 60 + 30 * sin(t + s.current));
+      buf.textAlign(CENTER, CENTER);
+      buf.textSize(9);
+      buf.textFont('Courier New');
+      buf.text(s.demon, mx, my);
+    }
+  }
+}
+
+function drawCircuit(buf, t) {
+  const phase = (t * 0.3) % 1.0;
+  for (let i = 0; i < TIME_CIRCUIT.length; i++) {
+    const ni = (i + 1) % TIME_CIRCUIT.length;
+    const a = nodePositions[TIME_CIRCUIT[i]];
+    const b = nodePositions[TIME_CIRCUIT[ni]];
+
+    // Faint connection line
+    buf.stroke(255, 215, 0, 8);
+    buf.strokeWeight(0.6);
+    buf.line(a.x, a.y, b.x, b.y);
+
+    // Traveling dots
+    for (let d = 0; d < 3; d++) {
+      const dp = ((phase + d * 0.333 + i / TIME_CIRCUIT.length) % 1.0);
+      const dx = lerp(a.x, b.x, dp);
+      const dy = lerp(a.y, b.y, dp);
+      buf.noStroke();
+      buf.fill(255, 215, 0, 20);
+      buf.ellipse(dx, dy, 14, 14);
+      buf.fill(255, 215, 0, 100);
+      buf.ellipse(dx, dy, 3, 3);
+    }
+  }
+}
+
+function drawNodes(buf, t) {
+  for (let i = 0; i < 10; i++) {
+    const pos = nodePositions[i];
+    const col = ZONE_COLORS[i];
+    const r = CONFIG.nodeRadius;
+    const isSelected = i === selectedZone;
+    const isHovered = i === hoverZone;
+    const cr = isSelected ? r * 1.35 : isHovered ? r * 1.15 : r;
+
+    // Pulsing ring
+    const pulse = sin(t * 1.5 + i * 0.7) * 0.15 + 0.85;
+
+    // Outer ring
+    buf.noFill();
+    buf.strokeWeight(isSelected ? 2.5 : isHovered ? 1.8 : 1.2);
+    buf.stroke(col[0] * 255, col[1] * 255, col[2] * 255, 140 * pulse);
+    buf.ellipse(pos.x, pos.y, cr * 2, cr * 2);
+
+    // Filled body
+    buf.fill(col[0] * 255, col[1] * 255, col[2] * 255, 25 + (isSelected ? 20 : 0));
+    buf.ellipse(pos.x, pos.y, cr * 1.8, cr * 1.8);
+
+    // Inner bright core
+    buf.noStroke();
+    buf.fill(col[0] * 255, col[1] * 255, col[2] * 255, 50 * pulse);
+    buf.ellipse(pos.x, pos.y, cr * 0.6, cr * 0.6);
+
+    // Number
+    buf.fill(255, 255, 255, isSelected ? 240 : 160);
+    buf.textAlign(CENTER, CENTER);
+    buf.textSize(isSelected ? 17 : 14);
+    buf.textFont('Courier New');
+    buf.textStyle(BOLD);
+    buf.text(i, pos.x, pos.y - 1);
+
+    // Name
+    buf.fill(col[0] * 255, col[1] * 255, col[2] * 255, isSelected ? 180 : 80);
+    buf.textSize(isSelected ? 10 : 8);
+    buf.textStyle(NORMAL);
+    buf.text(ZONES[i].name.toUpperCase(), pos.x, pos.y + cr + 14);
+
+    // Plex concentric rings
+    if (i === 9) {
+      for (let ring = 1; ring <= 4; ring++) {
+        const rr = cr + ring * 20 + sin(t * 1.2 + ring * 0.5) * 3;
+        buf.noFill();
+        buf.stroke(255, 30, 30, (12 - ring * 2.5) * pulse);
+        buf.strokeWeight(0.5);
+        buf.ellipse(pos.x, pos.y, rr * 2, rr * 2);
+      }
+    }
+  }
+}
+
+function drawDebugHUD(t) {
+  push();
+  translate(-width / 2, -height / 2);
+  resetShader();
+  noStroke();
+  fill(0, 0, 0, 180);
+  rect(10, height - 70, 220, 60, 4);
+  fill(0, 255, 100);
+  textAlign(LEFT, TOP);
+  textSize(10);
+  textFont('Courier New');
+  text(`FPS: ${frameRate().toFixed(1)}  Particles: ${CONFIG.particleCount}`, 18, height - 62);
+  text(`Seed: ${CONFIG.seed}  Zone: ${selectedZone}  Hover: ${hoverZone}`, 18, height - 46);
+  text(`Bloom: ${CONFIG.bloomStrength}  Decay: ${CONFIG.feedbackDecay}`, 18, height - 30);
+  pop();
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// INTERACTION
+// ═══════════════════════════════════════════════════════════════════════
+
+function mousePressed() {
+  // Convert mouse to scene coords
+  const mx = mouseX - width / 2;
+  const my = mouseY - height / 2;
+  let closest = -1, closestD = CONFIG.nodeRadius * 1.8;
+  for (let i = 0; i < 10; i++) {
+    const d = dist(mx, my, nodePositions[i].x, nodePositions[i].y);
+    if (d < closestD) { closestD = d; closest = i; }
+  }
+  selectedZone = (closest === selectedZone) ? -1 : closest;
+}
+
+function mouseMoved() {
+  const mx = mouseX - width / 2;
+  const my = mouseY - height / 2;
+  hoverZone = -1;
+  for (let i = 0; i < 10; i++) {
+    if (dist(mx, my, nodePositions[i].x, nodePositions[i].y) < CONFIG.nodeRadius * 1.8) {
+      hoverZone = i; break;
+    }
+  }
+}
+
+function keyPressed() {
+  if (key === 's' || key === 'S') saveCanvas('numogram-webgl', 'png');
+  if (key === 'r' || key === 'R') {
+    CONFIG.seed = floor(random(99999));
+    randomSeed(CONFIG.seed); noiseSeed(CONFIG.seed);
+    initParticles();
+  }
+  if (key === ' ') CONFIG.showCircuit = !CONFIG.showCircuit;
+  if (key === 'd' || key === 'D') CONFIG.showDebug = !CONFIG.showDebug;
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  sceneBuf = createGraphics(width, height);
+  bloomBufA = createGraphics(width, height);
+  bloomBufB = createGraphics(width, height);
+  prevFrame = createGraphics(width, height);
+  computeNodePositions();
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// HTML INFO PANEL
+// ═══════════════════════════════════════════════════════════════════════
+
+function updateZoneInfo() {
+  const el = document.getElementById('zone-info');
+  const zone = selectedZone >= 0 ? selectedZone : hoverZone;
+  if (zone < 0) { el.classList.remove('visible'); return; }
+
+  const info = ZONES[zone];
+  const col = ZONE_COLORS[zone];
+  const hex = '#' + col.map(c => Math.round(c * 255).toString(16).padStart(2, '0')).join('');
+
+  el.classList.add('visible');
+  el.style.borderColor = hex + '40';
+  document.getElementById('zi-title').innerHTML =
+    `<span style="color:${hex}">ZONE ${zone}</span> — ${info.name}`;
+  document.getElementById('zi-detail').innerHTML =
+    `Region: ${info.region}<br>Mesh: ${info.mesh}<br>Spinal: ${info.spinal}<br>` +
+    SYZYGIES.filter(s => s.zones.includes(zone)).map(s => {
+      const partner = s.zones[0] === zone ? s.zones[1] : s.zones[0];
+      const pc = ZONE_COLORS[partner];
+      const phex = '#' + pc.map(c => Math.round(c * 255).toString(16).padStart(2, '0')).join('');
+      return `Bond: <span style="color:${phex}">${partner} :: ${s.demon}</span> (Gt-${s.current * (s.current - 1) / 2})`;
+    }).join('<br>');
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 780">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
+    text { font-family: 'JetBrains Mono', 'SF Mono', 'Cascadia Code', monospace; }
+  </style>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="inherit" markerWidth="12" markerHeight="10" refX="12" refY="5" orient="auto">
+      <polygon points="0 0, 12 5, 0 10" fill="#0f172a" stroke="#94a3b8" stroke-width="1.5"/>
+    </marker>
+    <marker id="comp" markerWidth="12" markerHeight="8" refX="0" refY="4" orient="auto">
+      <polygon points="0 4, 6 0, 12 4, 6 8" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <!-- Title -->
+  <text x="30" y="35" fill="#94a3b8" font-size="10" font-weight="400">STRUCTURAL · ARCHITECTURE</text>
+  <text x="30" y="55" fill="white" font-size="16" font-weight="700">ROGUELIKE DUNGEON ENGINE</text>
+  <text x="30" y="72" fill="#64748b" font-size="9" font-weight="400">Numogram-driven · tree-based · Brogue accretion · zones as rooms</text>
+
+  <!-- ═══ LAYER 1: DUNGEON GENERATOR (top) ═══ -->
+  <rect x="30" y="95" width="840" height="145" rx="8" fill="none" stroke="#22d3ee" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="45" y="112" fill="#22d3ee" font-size="8" font-weight="600">DUNGEON GENERATION LAYER</text>
+
+  <!-- DungeonGenerator -->
+  <rect x="40" y="120" width="200" height="108" rx="6" fill="#0f172a"/>
+  <rect x="40" y="120" width="200" height="108" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="140" y="140" fill="white" font-size="11" font-weight="700" text-anchor="middle">DungeonGenerator</text>
+  <line x1="0" y1="148" x2="200" y2="148" stroke="#22d3ee" stroke-width="0.5" stroke-opacity="0.5" transform="translate(40,0)"/>
+  <text x="52" y="162" fill="#94a3b8" font-size="8">- rng: Random</text>
+  <text x="52" y="174" fill="#94a3b8" font-size="8">- entropy_src: bytes</text>
+  <text x="52" y="186" fill="#94a3b8" font-size="8">- tree_depth: int</text>
+  <line x1="0" y1="194" x2="200" y2="194" stroke="#22d3ee" stroke-width="0.5" stroke-opacity="0.5" transform="translate(40,0)"/>
+  <text x="52" y="208" fill="#94a3b8" font-size="8">+ generate(floor: int) → Map</text>
+  <text x="52" y="220" fill="#94a3b8" font-size="8">+ place_rooms(tree) → Room[]</text>
+
+  <!-- TreeBuilder -->
+  <rect x="280" y="120" width="200" height="108" rx="6" fill="#0f172a"/>
+  <rect x="280" y="120" width="200" height="108" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="380" y="140" fill="white" font-size="11" font-weight="700" text-anchor="middle">TreeBuilder</text>
+  <line x1="0" y1="148" x2="200" y2="148" stroke="#34d399" stroke-width="0.5" stroke-opacity="0.5" transform="translate(280,0)"/>
+  <text x="292" y="162" fill="#94a3b8" font-size="8">- leaf_prob: float</text>
+  <text x="292" y="174" fill="#94a3b8" font-size="8">- max_depth: int</text>
+  <text x="292" y="186" fill="#94a3b8" font-size="8">- corridor_policy: str</text>
+  <line x1="0" y1="194" x2="200" y2="194" stroke="#34d399" stroke-width="0.5" stroke-opacity="0.5" transform="translate(280,0)"/>
+  <text x="292" y="208" fill="#94a3b8" font-size="8">+ build(seed) → TreeNode</text>
+  <text x="292" y="220" fill="#94a3b8" font-size="8">+ accrete(node, room) → void</text>
+
+  <!-- ZoneMapper -->
+  <rect x="520" y="120" width="200" height="108" rx="6" fill="#0f172a"/>
+  <rect x="520" y="120" width="200" height="108" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="620" y="140" fill="white" font-size="11" font-weight="700" text-anchor="middle">ZoneMapper</text>
+  <line x1="0" y1="148" x2="200" y2="148" stroke="#a855f7" stroke-width="0.5" stroke-opacity="0.5" transform="translate(520,0)"/>
+  <text x="532" y="162" fill="#94a3b8" font-size="8">- zone_colors: int[10]</text>
+  <text x="532" y="174" fill="#94a3b8" font-size="8">- current_map: dict</text>
+  <text x="532" y="186" fill="#94a3b8" font-size="8">- syzygy_pairs: list</text>
+  <line x1="0" y1="194" x2="200" y2="194" stroke="#a855f7" stroke-width="0.5" stroke-opacity="0.5" transform="translate(520,0)"/>
+  <text x="532" y="208" fill="#94a3b8" font-size="8">+ map_rooms(zones) → void</text>
+  <text x="532" y="220" fill="#94a3b8" font-size="8">+ get_zone(x,y) → int</text>
+
+  <!-- EntropySource -->
+  <rect x="750" y="120" width="110" height="108" rx="6" fill="#0f172a"/>
+  <rect x="750" y="120" width="110" height="108" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="805" y="140" fill="white" font-size="10" font-weight="700" text-anchor="middle">EntropySrc</text>
+  <line x1="0" y1="148" x2="110" y2="148" stroke="#fbbf24" stroke-width="0.5" stroke-opacity="0.5" transform="translate(750,0)"/>
+  <text x="762" y="162" fill="#94a3b8" font-size="7">/dev/urandom</text>
+  <text x="762" y="174" fill="#94a3b8" font-size="7">hw entropy</text>
+  <text x="762" y="186" fill="#94a3b8" font-size="7">PRNG fallback</text>
+  <line x1="0" y1="194" x2="110" y2="194" stroke="#fbbf24" stroke-width="0.5" stroke-opacity="0.5" transform="translate(750,0)"/>
+  <text x="762" y="208" fill="#94a3b8" font-size="7">+ read(n) → bytes</text>
+
+  <!-- Generation layer connections -->
+  <path d="M 240 174 L 280 174" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="260" y="168" fill="#64748b" font-size="7" text-anchor="middle">uses</text>
+  <path d="M 480 174 L 520 174" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="500" y="168" fill="#64748b" font-size="7" text-anchor="middle">maps</text>
+  <path d="M 805 120 L 805 95 L 140 95 L 140 120" fill="none" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+
+  <!-- ═══ LAYER 2: MAP ENTITY (middle) ═══ -->
+  <rect x="30" y="265" width="415" height="215" rx="8" fill="none" stroke="#34d399" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="45" y="282" fill="#34d399" font-size="8" font-weight="600">MAP ENTITIES</text>
+
+  <!-- Room (3-compartment) -->
+  <rect x="40" y="290" width="190" height="180" rx="6" fill="#0f172a"/>
+  <rect x="40" y="290" width="190" height="180" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="135" y="310" fill="white" font-size="11" font-weight="700" text-anchor="middle">Room</text>
+  <line x1="40" y1="318" x2="230" y2="318" stroke="#34d399" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="52" y="332" fill="#94a3b8" font-size="8">- zone: int (0-9)</text>
+  <text x="52" y="344" fill="#94a3b8" font-size="8">- x, y, w, h: int</text>
+  <text x="52" y="356" fill="#94a3b8" font-size="8">- doors: Door[]</text>
+  <text x="52" y="368" fill="#94a3b8" font-size="8">- entities: Entity[]</text>
+  <text x="52" y="380" fill="#94a3b8" font-size="8">- visited: bool</text>
+  <text x="52" y="392" fill="#94a3b8" font-size="8">- explored: float</text>
+  <line x1="40" y1="400" x2="230" y2="400" stroke="#34d399" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="52" y="414" fill="#94a3b8" font-size="8">+ contains(x,y) → bool</text>
+  <text x="52" y="426" fill="#94a3b8" font-size="8">+ neighbors() → Room[]</text>
+  <text x="52" y="438" fill="#94a3b8" font-size="8">+ spawn(zone) → Entity[]</text>
+  <text x="52" y="450" fill="#94a3b8" font-size="8">+ gate_prob() → float</text>
+  <text x="52" y="462" fill="#94a3b8" font-size="8">+ is_pocket() → bool</text>
+
+  <!-- Corridor -->
+  <rect x="260" y="290" width="170" height="120" rx="6" fill="#0f172a"/>
+  <rect x="260" y="290" width="170" height="120" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="345" y="310" fill="white" font-size="11" font-weight="700" text-anchor="middle">Corridor</text>
+  <line x1="260" y1="318" x2="430" y2="318" stroke="#34d399" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="272" y="332" fill="#94a3b8" font-size="8">- path: (int,int)[]</text>
+  <text x="272" y="344" fill="#94a3b8" font-size="8">- current: int</text>
+  <text x="272" y="356" fill="#94a3b8" font-size="8">- width: int</text>
+  <line x1="260" y1="364" x2="430" y2="364" stroke="#34d399" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="272" y="378" fill="#94a3b8" font-size="8">+ connect(a, b) → bool</text>
+  <text x="272" y="390" fill="#94a3b8" font-size="8">+ is_blocked() → bool</text>
+  <text x="272" y="402" fill="#94a3b8" font-size="8">+ bleeds_to() → int</text>
+
+  <!-- Gate -->
+  <rect x="260" y="420" width="170" height="50" rx="6" fill="#0f172a"/>
+  <rect x="260" y="420" width="170" height="50" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="345" y="440" fill="white" font-size="11" font-weight="700" text-anchor="middle">Gate</text>
+  <line x1="260" y1="448" x2="430" y2="448" stroke="#fbbf24" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="272" y="462" fill="#94a3b8" font-size="8">- syzygy: (int, int) → target zone</text>
+
+  <!-- Room→Corridor (composition) -->
+  <path d="M 230 370 L 260 370" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="245" y="364" fill="#94a3b8" font-size="7" text-anchor="middle">1..*</text>
+
+  <!-- ═══ LAYER 3: ENTITIES (middle-right) ═══ -->
+  <rect x="470" y="265" width="400" height="215" rx="8" fill="none" stroke="#a855f7" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="485" y="282" fill="#a855f7" font-size="8" font-weight="600">ENTITIES</text>
+
+  <!-- Entity (abstract) -->
+  <rect x="480" y="290" width="170" height="80" rx="6" fill="#0f172a"/>
+  <rect x="480" y="290" width="170" height="80" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="565" y="308" fill="#94a3b8" font-size="8" font-weight="400" text-anchor="middle" font-style="italic">«abstract»</text>
+  <text x="565" y="322" fill="white" font-size="11" font-weight="700" text-anchor="middle">Entity</text>
+  <line x1="480" y1="330" x2="650" y2="330" stroke="#94a3b8" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="492" y="344" fill="#94a3b8" font-size="8">- x, y: int</text>
+  <text x="492" y="356" fill="#94a3b8" font-size="8">- hp: int</text>
+  <text x="492" y="364" fill="#94a3b8" font-size="8">- glyph: char</text>
+
+  <!-- Crawler -->
+  <rect x="480" y="385" width="170" height="85" rx="6" fill="#0f172a"/>
+  <rect x="480" y="385" width="170" height="85" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="565" y="405" fill="white" font-size="11" font-weight="700" text-anchor="middle">Crawler</text>
+  <line x1="480" y1="413" x2="650" y2="413" stroke="#22d3ee" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="492" y="426" fill="#94a3b8" font-size="8">- hyperstition: float</text>
+  <text x="492" y="438" fill="#94a3b8" font-size="8">- corruption: float</text>
+  <text x="492" y="450" fill="#94a3b8" font-size="8">- abilities: Ability[]</text>
+  <text x="492" y="462" fill="#94a3b8" font-size="8">- kills: int</text>
+
+  <!-- Entity → Crawler (inheritance) -->
+  <path d="M 565 370 L 565 385" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#inherit)"/>
+
+  <!-- Demon -->
+  <rect x="680" y="385" width="170" height="85" rx="6" fill="#0f172a"/>
+  <rect x="680" y="385" width="170" height="85" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="765" y="405" fill="white" font-size="11" font-weight="700" text-anchor="middle">Demon</text>
+  <line x1="680" y1="413" x2="850" y2="413" stroke="#fb7185" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="692" y="426" fill="#94a3b8" font-size="8">- carrier: str</text>
+  <text x="692" y="438" fill="#94a3b8" font-size="8">- syzygy: (int, int)</text>
+  <text x="692" y="450" fill="#94a3b8" font-size="8">- aggression: float</text>
+  <text x="692" y="462" fill="#94a3b8" font-size="8">- dmg: int</text>
+
+  <!-- Entity → Demon (inheritance) -->
+  <path d="M 650 330 L 680 330 L 680 385 L 765 385" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#inherit)"/>
+
+  <!-- ═══ LAYER 4: GAME STATE (bottom) ═══ -->
+  <rect x="30" y="510" width="840" height="160" rx="8" fill="none" stroke="#fb7185" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="45" y="527" fill="#fb7185" font-size="8" font-weight="600">GAME STATE</text>
+
+  <!-- GameState -->
+  <rect x="40" y="535" width="200" height="125" rx="6" fill="#0f172a"/>
+  <rect x="40" y="535" width="200" height="125" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="140" y="555" fill="white" font-size="11" font-weight="700" text-anchor="middle">GameState</text>
+  <line x1="40" y1="563" x2="240" y2="563" stroke="#22d3ee" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="52" y="577" fill="#94a3b8" font-size="8">- floor: int</text>
+  <text x="52" y="589" fill="#94a3b8" font-size="8">- turn: int</text>
+  <text x="52" y="601" fill="#94a3b8" font-size="8">- map: Map</text>
+  <text x="52" y="613" fill="#94a3b8" font-size="8">- crawler: Crawler</text>
+  <text x="52" y="625" fill="#94a3b8" font-size="8">- conduct: str</text>
+  <text x="52" y="637" fill="#94a3b8" font-size="8">- cult: CultGarden</text>
+  <text x="52" y="649" fill="#94a3b8" font-size="8">- entropy_src: EntropySrc</text>
+
+  <!-- HyperstitionSystem -->
+  <rect x="270" y="535" width="200" height="125" rx="6" fill="#0f172a"/>
+  <rect x="270" y="535" width="200" height="125" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="370" y="555" fill="white" font-size="11" font-weight="700" text-anchor="middle">HyperstitionSystem</text>
+  <line x1="270" y1="563" x2="470" y2="563" stroke="#a855f7" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="282" y="577" fill="#94a3b8" font-size="8">- value: float (0.0-1.0)</text>
+  <text x="282" y="589" fill="#94a3b8" font-size="8">- drain_rate: float</text>
+  <text x="282" y="601" fill="#94a3b8" font-size="8">- thresholds: dict</text>
+  <text x="282" y="613" fill="#94a3b8" font-size="8">  50%: hp drain</text>
+  <text x="282" y="625" fill="#94a3b8" font-size="8">  70%: demon aggro</text>
+  <text x="282" y="637" fill="#94a3b8" font-size="8">  85%: cost scaling</text>
+  <text x="282" y="649" fill="#94a3b8" font-size="8"> 100%: phase change</text>
+
+  <!-- AbilitySystem -->
+  <rect x="500" y="535" width="170" height="125" rx="6" fill="#0f172a"/>
+  <rect x="500" y="535" width="170" height="125" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="585" y="555" fill="white" font-size="11" font-weight="700" text-anchor="middle">AbilitySystem</text>
+  <line x1="500" y1="563" x2="670" y2="563" stroke="#34d399" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="512" y="577" fill="#94a3b8" font-size="8">- combo: int[5]</text>
+  <text x="512" y="589" fill="#94a3b8" font-size="8">- x+1 → x+5 tiers</text>
+  <text x="512" y="601" fill="#94a3b8" font-size="8">- costs: float</text>
+  <text x="512" y="613" fill="#94a3b8" font-size="8">  scaled by corruption</text>
+  <text x="512" y="625" fill="#94a3b8" font-size="8">+ activate(combo) → void</text>
+  <text x="512" y="637" fill="#94a3b8" font-size="8">+ scale_cost(base, corr) → float</text>
+
+  <!-- CultGarden -->
+  <rect x="700" y="535" width="160" height="125" rx="6" fill="#0f172a"/>
+  <rect x="700" y="535" width="160" height="125" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="780" y="555" fill="white" font-size="11" font-weight="700" text-anchor="middle">CultGarden</text>
+  <line x1="700" y1="563" x2="860" y2="563" stroke="#fbbf24" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="712" y="577" fill="#94a3b8" font-size="8">- memory: Lore[20]</text>
+  <text x="712" y="589" fill="#94a3b8" font-size="8">- methods: str[2]</text>
+  <text x="712" y="601" fill="#94a3b8" font-size="8">  exquisite corpse</text>
+  <text x="712" y="613" fill="#94a3b8" font-size="8">  tsubuyaki</text>
+  <text x="712" y="625" fill="#94a3b8" font-size="8">- overflow: hexagram</text>
+  <text x="712" y="637" fill="#94a3b8" font-size="8">+ ingest(run) → Lore</text>
+  <text x="712" y="649" fill="#94a3b8" font-size="8">+ overflow_cycle() → void</text>
+
+  <!-- GameState connections -->
+  <path d="M 240 597 L 270 597" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M 470 597 L 500 597" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M 670 597 L 700 597" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- ═══ Data flow arrows (top to bottom) ═══ -->
+  <path d="M 140 228 L 140 290" fill="none" stroke="#22d3ee" stroke-width="1" stroke-dasharray="4,3" stroke-opacity="0.5"/>
+  <path d="M 620 228 L 620 290" fill="none" stroke="#a855f7" stroke-width="1" stroke-dasharray="4,3" stroke-opacity="0.5"/>
+  <path d="M 140 470 L 140 535" fill="none" stroke="#22d3ee" stroke-width="1" stroke-dasharray="4,3" stroke-opacity="0.5"/>
+  <path d="M 565 470 L 565 535" fill="none" stroke="#22d3ee" stroke-width="1" stroke-dasharray="4,3" stroke-opacity="0.5"/>
+
+  <!-- ═══ LEGEND ═══ -->
+  <rect x="30" y="690" width="840" height="60" rx="8" fill="rgba(15,23,42,0.95)" stroke="#1e293b" stroke-width="1"/>
+  <text x="50" y="710" fill="#94a3b8" font-size="8" font-weight="600">LEGEND</text>
+  <line x1="120" y1="708" x2="150" y2="708" stroke="#64748b" stroke-width="1.2"/>
+  <text x="158" y="712" fill="#94a3b8" font-size="7">Association</text>
+  <path d="M 240 708 L 270 708" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#inherit)"/>
+  <text x="278" y="712" fill="#94a3b8" font-size="7">Inheritance</text>
+  <path d="M 370 708 L 400 708" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#comp)"/>
+  <text x="408" y="712" fill="#94a3b8" font-size="7">Composition</text>
+  <rect x="490" y="702" width="10" height="10" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/>
+  <text x="508" y="712" fill="#22d3ee" font-size="7">Crawler/State</text>
+  <rect x="600" y="702" width="10" height="10" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/>
+  <text x="618" y="712" fill="#34d399" font-size="7">Map/Structure</text>
+  <rect x="720" y="702" width="10" height="10" rx="2" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1"/>
+  <text x="738" y="712" fill="#fb7185" font-size="7">Combat/Threat</text>
+  <rect x="50" y="725" width="10" height="10" rx="2" fill="rgba(76,29,149,0.4)" stroke="#a855f7" stroke-width="1"/>
+  <text x="68" y="735" fill="#a855f7" font-size="7">Numogram/Zone</text>
+  <rect x="170" y="725" width="10" height="10" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/>
+  <text x="188" y="735" fill="#fbbf24" font-size="7">Entropy/Garden</text>
+  <text x="300" y="735" fill="#475569" font-size="7">Broque accretion · Sil awareness · Kennedy conservation · Tree-based generation</text>
+
+</svg>

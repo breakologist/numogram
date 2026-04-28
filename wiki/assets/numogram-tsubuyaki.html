@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Numogram Tsubuyaki</title>
+  <script>p5.disableFriendlyErrors = true;</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #08080c; color: #888; font: 13px 'Courier New', monospace; }
+    h1 { text-align: center; padding: 28px 20px 6px; color: #444; font-size: 16px; letter-spacing: 5px; }
+    .subtitle { text-align: center; color: #333; font-size: 11px; margin-bottom: 24px; letter-spacing: 2px; }
+    #gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; padding: 0 16px 40px; max-width: 1100px; margin: 0 auto; }
+    @media (max-width: 900px) { #gallery { grid-template-columns: 1fr; } }
+    .card {
+      background: #0b0b10; border: 1px solid #181820; border-radius: 5px; overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .card:hover { border-color: #333; }
+    .card-head { padding: 10px 14px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #14141a; }
+    .card-title { font-weight: bold; font-size: 13px; }
+    .card-meta { font-size: 10px; color: #444; }
+    .card-canvas { width: 100%; aspect-ratio: 1; }
+    .card-code { padding: 10px 14px; border-top: 1px solid #14141a; }
+    .card-code pre { font-size: 10.5px; color: #555; white-space: pre-wrap; word-break: break-all; line-height: 1.5; }
+    .card-note { font-size: 10px; color: #444; margin-top: 6px; line-height: 1.5; }
+    .charcount { font-size: 10px; margin-top: 4px; }
+    .ok { color: #3a6; }
+    .tight { color: #da3; }
+  </style>
+</head>
+<body>
+<h1>THE DECIMAL LABYRINTH</h1>
+<div class="subtitle">10 zones · 10 tweets · つぶやき NUMOGRAM</div>
+<div id="gallery"></div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════
+// ZONE DATA
+// ═══════════════════════════════════════════════════════════════════
+
+const ZONES = [
+  {
+    id: 0, name: "Void", region: "plex", color: [68,68,68], hex: "#444444",
+    code: `f=0;draw=_=>{f++||createCanvas(W=500,W);background(0);noStroke();for(n=0;n<50;n++){x=250+sin(n+f/1e3)*199;y=250+cos(n*.7+f/1e3)*199;fill(44,22+22*sin(n+f/50));circle(x,y,3+noise(n,f/200)*8)}}`,
+    note: "The Void. 50 points orbiting a center they never reach. Dim gray, barely visible — the absence that generates.",
+    draw(p) {
+      p.background(0); p.noStroke();
+      for (let n = 0; n < 50; n++) {
+        let x = 250 + Math.sin(n + p.frameCount / 1000) * 199;
+        let y = 250 + Math.cos(n * 0.7 + p.frameCount / 1000) * 199;
+        p.fill(44, 22 + 22 * Math.sin(n + p.frameCount / 50));
+        p.ellipse(x, y, 3 + p.noise(n, p.frameCount / 200) * 8);
+      }
+    }
+  },
+  {
+    id: 1, name: "Stability", region: "torque", color: [255,215,0], hex: "#FFD700",
+    code: `f=0;draw=_=>{f++||createCanvas(W=500,W);background(0);noStroke();for(x=25;x<W;x+=50)for(y=25;y<W;y+=50){d=noise(x/200,y/200,f/300)*9;fill(255,215,0,55);circle(x+d,y+d,3)}}`,
+    note: "Gold lattice. Points fixed to a grid, barely breathing with noise. Stillness as potential energy.",
+    draw(p) {
+      p.background(0); p.noStroke();
+      for (let x = 25; x < 500; x += 50)
+        for (let y = 25; y < 500; y += 50) {
+          let d = p.noise(x / 200, y / 200, p.frameCount / 300) * 9;
+          p.fill(255, 215, 0, 55);
+          p.ellipse(x + d, y + d, 3);
+        }
+    }
+  },
+  {
+    id: 2, name: "Separation", region: "torque", color: [255,140,0], hex: "#FF8C00",
+    code: `f=0;draw=_=>{f++||createCanvas(W=500,W);background(0,6);noStroke();for(n=0;n<300;n++){t=n/300;x=250+sin(t*PI*4+f/100)*(100+t*150);y=t*W;fill(255,140,0,25+15*sin(n+f/30));circle(x,y,3)}}`,
+    note: "Two streams sine-waving apart. Orange particles diverging from a shared origin. The fork.",
+    draw(p) {
+      p.background(0, 6); p.noStroke();
+      for (let n = 0; n < 300; n++) {
+        let t = n / 300;
+        let x = 250 + Math.sin(t * Math.PI * 4 + p.frameCount / 100) * (100 + t * 150);
+        let y = t * 500;
+        p.fill(255, 140, 0, 25 + 15 * Math.sin(n + p.frameCount / 30));
+        p.ellipse(x, y, 3);
+      }
+    }
+  },
+  {
+    id: 3, name: "Release", region: "warp", color: [255,0,255], hex: "#FF00FF",
+    code: `f=0;draw=_=>{f++||createCanvas(W=500,W);background(0,12);noStroke();for(n=0;n<400;n++){a=n/400*TAU+f/50;r=50+noise(n/30,f/200)*200;fill(255,0,255,22);circle(250+r*cos(a),250+r*sin(a),4)}}`,
+    note: "Magenta vortex. 400 particles spiraling outward through noise. Warp energy unfurling.",
+    draw(p) {
+      p.background(0, 12); p.noStroke();
+      for (let n = 0; n < 400; n++) {
+        let a = n / 400 * Math.PI * 2 + p.frameCount / 50;
+        let r = 50 + p.noise(n / 30, p.frameCount / 200) * 200;
+        p.fill(255, 0, 255, 22);
+        p.ellipse(250 + r * Math.cos(a), 250 + r * Math.sin(a), 4);
+      }
+    }
+  },
+  {
+    id: 4, name: "Catastrophe", region: "torque", color: [0,255,255], hex: "#00FFFF",
+    code: `f=0;draw=_=>{f++||createCanvas(W=500,W);background(0);noStroke();for(n=0;n<60;n++){x=n%8*65+30;y=~~(n/8)*65+30;d=noise(x/99,y/99,f/80)*40;fill(0,255,255,44);rect(x+d-5,y+d-5,10,10)}}`,
+    note: "Cyan grid losing coherence. Rectangles displaced by noise — order dissolving into pattern.",
+    draw(p) {
+      p.background(0); p.noStroke();
+      for (let n = 0; n < 60; n++) {
+        let x = n % 8 * 65 + 30;
+        let y = Math.floor(n / 8) * 65 + 30;
+        let d = p.noise(x / 99, y / 99, p.frameCount / 80) * 40;
+        p.fill(0, 255, 255, 44);
+        p.rect(x + d - 5, y + d - 5, 10, 10);
+      }
+    }
+  },
+  {
+    id: 5, name: "Pressure", region: "torque", color: [0,255,0], hex: "#00FF00",
+    code: `f=0;draw=_=>{f++||createCanvas(W=500,W);background(0,8);noStroke();for(n=0;n<250;n++){a=n/250*TAU;r=250-abs(sin(n*3+f/80))*200;fill(0,255,0,28);circle(250+r*cos(a),250+r*sin(a),4)}}`,
+    note: "Green particles compressed toward center. Pulsing in with sine-modulated radius. Squeeze.",
+    draw(p) {
+      p.background(0, 8); p.noStroke();
+      for (let n = 0; n < 250; n++) {
+        let a = n / 250 * Math.PI * 2;
+        let r = 250 - Math.abs(Math.sin(n * 3 + p.frameCount / 80)) * 200;
+        p.fill(0, 255, 0, 28);
+        p.ellipse(250 + r * Math.cos(a), 250 + r * Math.sin(a), 4);
+      }
+    }
+  },
+  {
+    id: 6, name: "Abstraction", region: "warp", color: [0,128,255], hex: "#0080FF",
+    code: `f=0;draw=_=>{f++||createCanvas(W=500,W);background(0,8);noStroke();for(n=0;n<12;n++){push();translate(250,250);rotate(n*TAU/12+f/200);fill(0,128,255,22);circle(100,0,80);pop()}}`,
+    note: "12 blue circles rotating in formation. Pure geometric form approaching the mathematical sublime.",
+    draw(p) {
+      p.background(0, 8); p.noStroke();
+      for (let n = 0; n < 12; n++) {
+        p.push();
+        p.translate(250, 250);
+        p.rotate(n * Math.PI * 2 / 12 + p.frameCount / 200);
+        p.fill(0, 128, 255, 22);
+        p.ellipse(100, 0, 80);
+        p.pop();
+      }
+    }
+  },
+  {
+    id: 7, name: "Blood", region: "torque", color: [255,51,51], hex: "#FF3333",
+    code: `f=0;draw=_=>{f++||createCanvas(W=500,W);background(0,4);noStroke();for(n=0;n<200;n++){r=90+noise(n,f/60)*160;a=n+f/90;fill(255,33,33,18);circle(250+r*cos(a)*.6,250+r*sin(a),5)}}`,
+    note: "Organic pulse. Elliptical orbits with noise — the circulatory system of the numogram.",
+    draw(p) {
+      p.background(0, 4); p.noStroke();
+      for (let n = 0; n < 200; n++) {
+        let r = 90 + p.noise(n, p.frameCount / 60) * 160;
+        let a = n + p.frameCount / 90;
+        p.fill(255, 33, 33, 18);
+        p.ellipse(250 + r * Math.cos(a) * 0.6, 250 + r * Math.sin(a), 5);
+      }
+    }
+  },
+  {
+    id: 8, name: "Multiplicity", region: "torque", color: [192,160,255], hex: "#C0A0FF",
+    code: `f=0;draw=_=>{f++||createCanvas(W=500,W);background(0,8);noStroke();for(n=0;n<80;n++){x=250+cos(n)*150+noise(n,f/200)*60;y=250+sin(n*.7)*150+noise(n+99,f/200)*60;fill(192,160,255,33);circle(x,y,4+noise(n)*5)}}`,
+    note: "80 points sharing a template, diverging through noise. Identity from repetition.",
+    draw(p) {
+      p.background(0, 8); p.noStroke();
+      for (let n = 0; n < 80; n++) {
+        let x = 250 + Math.cos(n) * 150 + p.noise(n, p.frameCount / 200) * 60;
+        let y = 250 + Math.sin(n * 0.7) * 150 + p.noise(n + 99, p.frameCount / 200) * 60;
+        p.fill(192, 160, 255, 33);
+        p.ellipse(x, y, 4 + p.noise(n) * 5);
+      }
+    }
+  },
+  {
+    id: 9, name: "Iron Core", region: "plex", color: [153,0,255], hex: "#9900FF",
+    code: `f=0;draw=_=>{f++||createCanvas(W=500,W);background(0,4);noStroke();for(n=0;n<300;n++){a=n+f/40;r=250-noise(n/50,f/100)*240;fill(153,0,255,18);circle(250+r*cos(a)*.9,250+r*sin(a)*.9,4)}}`,
+    note: "Purple spiral collapse. Everything pulled toward the center — the plex singularity folding inward.",
+    draw(p) {
+      p.background(0, 4); p.noStroke();
+      for (let n = 0; n < 300; n++) {
+        let a = n + p.frameCount / 40;
+        let r = 250 - p.noise(n / 50, p.frameCount / 100) * 240;
+        p.fill(153, 0, 255, 18);
+        p.ellipse(250 + r * Math.cos(a) * 0.9, 250 + r * Math.sin(a) * 0.9, 4);
+      }
+    }
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════════
+// GALLERY
+// ═══════════════════════════════════════════════════════════════════
+
+window.addEventListener('DOMContentLoaded', () => {
+  const gallery = document.getElementById('gallery');
+
+  ZONES.forEach((z) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    const chars = z.code.length;
+    const cls = chars <= 250 ? 'ok' : chars <= 280 ? 'tight' : 'tight';
+
+    card.innerHTML = `
+      <div class="card-head">
+        <span class="card-title" style="color:${z.hex}">ZONE ${z.id} — ${z.name.toUpperCase()}</span>
+        <span class="card-meta">${z.region}</span>
+      </div>
+      <div class="card-canvas" id="canvas-${z.id}"></div>
+      <div class="card-code">
+        <pre>${z.code}</pre>
+        <div class="charcount ${cls}">${chars}/280</div>
+        <div class="card-note">${z.note}</div>
+      </div>
+    `;
+    gallery.appendChild(card);
+
+    // Launch p5 instance
+    const container = document.getElementById(`canvas-${z.id}`);
+    const sketchFn = (p) => {
+      p.setup = () => {
+        p.createCanvas(500, 500);
+        p.pixelDensity(1);
+        p.noiseSeed(z.id * 137 + 666);
+      };
+      p.draw = () => { z.draw(p); };
+    };
+    new p5(sketchFn, container);
+  });
+});
+</script>
+</body>
+</html>
