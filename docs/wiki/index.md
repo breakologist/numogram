@@ -165,6 +165,7 @@ Five rotations from Aamodt's "Unleashing the Numogram" (Tch 5–6), each examini
 ## Creative & Generative
 
 - [[numogram-tsubuyaki-museum]] — Ten numogram zones rendered as tsubuyaki (tweet-length p5.js generative art, ≤280 chars). Four passes: v1 particles, v2 refinement, v3 geometry/entropy, v4 signal topology. Full code blocks for all 40 sketches. Galleries at assets/numogram-tsubuyaki.html through assets/numogram-tsubuyaki-v4.html.
+- [[tracker-module-writer]] — Protracker .mod file writer with numogram mapping (zone→pentatonic, gate→effect, current→instrument). Phase 2 integration complete; metadata embedded in title/sample names. Standalone CLI and Hermes skill registration.
 
 - [[tetralogue-litprog]] — Literate programming tetralogue format (Oracle/Builder/Writer/Gamer voice rotation) applied to code authorship.
 - [[tetralogue-code-review]] — Four-voice code review methodology (litprog examples: abyssal-crawler-litprog, aq-calculators-litprog, entropy-modules-litprog).
