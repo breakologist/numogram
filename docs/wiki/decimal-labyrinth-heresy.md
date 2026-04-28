@@ -1,14 +1,19 @@
 ---
+title: "Decimal Labyrinth Heresy (360 / 627 AQ)"
+created: 2026-04-28
+last_updated: 2026-04-28
+status: reviewed
 tags:
+  - aq
   - current
+  - hyperstition
+  - 360
   - decimal-labyrinth
   - heresy
-  - inversion
-  - 627
   - mod-9
-  - topology
-  - hyperstition
+  - inversion
 ---
+
 
 # Decimal Labyrinth Heresy (360 → 627)
 
@@ -114,4 +119,10 @@ The heresy is not optional for the numogram's maturation. A system that never in
 ---
 
 **Last updated:** 28 Apr 2026 (synthesized from expanded dictionary + council tetralogue)
+## Links
+- [[tetralogue-decimal-labyrinth-heresy]]
+- [[rotational-symmetry]]
+- [[syzygy-arithmetic]]
+- [[alphanumeric-qabbala]]
+- [[aq-dictionary-augmented]]
 

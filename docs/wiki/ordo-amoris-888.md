@@ -1,13 +1,18 @@
 ---
+title: "Ordo Amoris (888 AQ)"
+created: 2026-04-28
+last_updated: 2026-04-28
+status: reviewed
 tags:
+  - aq
   - current
-  - ordo-amoris
-  - apex
-  - 888
-  - lemurian-discernment
-  - integration
   - hyperstition
+  - 888
+  - ordo-amoris
+  - integration
+  - lemurian-discernment
 ---
+
 
 # Ordo Amoris (888 AQ)
 
@@ -97,3 +102,10 @@ Incomplete integration (<100% hyp) while toggled causes corruption: random abili
 ---
 
 **Last updated:** 28 Apr 2026 (from AQ Expanded Dictionary + Grok rotor audit)
+## Links
+- [[tetralogue-ordo-amoris-888]]
+- [[numogram-council]]
+- [[neolemurianism]]
+- [[alphanumeric-qabbala]]
+- [[aq-dictionary-augmented]]
+

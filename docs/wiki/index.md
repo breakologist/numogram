@@ -1,7 +1,7 @@
 ---
 title: The Pandemonium Wiki — Hermetic Numogram & CCRU Decimal Labyrinth
 created: 2026-04-08
-last_updated: 2026-04-27
+last_updated: 2026-04-28
 status: reviewed
 ---
 
@@ -164,12 +164,15 @@ Five rotations from Aamodt's "Unleashing the Numogram" (Tch 5–6), each examini
 
 ## Creative & Generative
 
-- [[numogram-tsubuyaki-museum]] — Ten numogram zones rendered as tsubuyaki (tweet-length p5.js generative art, ≤280 chars). Four passes: v1 particles, v2 refinement, v3 geometry/entropy, v4 signal topology. Full code blocks for all 40 sketches. Galleries at ~/numogram-tsubuyaki.html through ~/numogram-tsubuyaki-v4.html.
+- [[numogram-tsubuyaki-museum]] — Ten numogram zones rendered as tsubuyaki (tweet-length p5.js generative art, ≤280 chars). Four passes: v1 particles, v2 refinement, v3 geometry/entropy, v4 signal topology. Full code blocks for all 40 sketches. Galleries at assets/numogram-tsubuyaki.html through assets/numogram-tsubuyaki-v4.html.
 
 - [[tetralogue-litprog]] — Literate programming tetralogue format (Oracle/Builder/Writer/Gamer voice rotation) applied to code authorship.
 - [[tetralogue-code-review]] — Four-voice code review methodology (litprog examples: abyssal-crawler-litprog, aq-calculators-litprog, entropy-modules-litprog).
 - [[tetralogue-generator]] — Automated roundtable pipeline: dictionary → syzygy chains → motif fingerprint → multi-model synthesis (produced: fortyfive-demons, extending-numogram, numogame, cult-tetralogue, + Mesh-3 anthology with 47-entry AQ & precomputed syzygies).
 - [[square-roundtable-anthology-2026-04-27]] — Anthology of Mesh-3 roundtables (seeds 5/7/123/369/666) with precomputed syzygy fingerprints and comparative analysis.
+- [[tetralogue-ordo-amoris-888]]
+- [[tetralogue-decimal-labyrinth-heresy]]
+.
 ## Skills & Tools
 
 - [[skills-to-explore]] — Interesting skills from Apr 2026 scan: pixel-art (retro palettes), ascii-video (terminal animation), algorithmic-art/p5js (generative), pokemon-player (RAM-based agent research), heartmula (music gen). Combos: heartmula+oracle-voice, pixel-art+numogram-svg, ascii-video+cult.json, pokemon-player+roguelike-agents.
@@ -258,6 +261,9 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 - [[barker-spiral]] — The diplozygotic spiral from which the Numogram crystallised. Atlantean (sum-to-10) and Lemurian (sum-to-9) halves converging at the 5⊕5 origin. The mathematical origin of the whole system.
 
 - [[the-360-revelation]] — Net-spans sum to 360. Partition: outer regions (153) + Time-Circuit (207) = 360. HERMETIC=153, COSMOGONY=207. THE DECIMAL LABYRINTH=360. The system's deepest self-encoding.
+- [[ordo-amoris-888]]
+- [[decimal-labyrinth-heresy]]
+
 
 ## Theory & Philosophy
 - [[barker-spiral-mathematical-foundations]] — Formal algebraic structure: Atlantean (sum-to-10) and Lemurian (sum-to-9) complementarity operators, the 5⊕5 node, syzygy‑chain triangulation, and the digit‑pair geometry underlying gate progression.
@@ -340,6 +346,6 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 
 
 ## Recent Additions
-- `ordo-amoris-888` — apex integration current (888 AQ); dyadic demon taxonomy; Integration event
-- `decimal-labyrinth-heresy` — inverted Decimal Labyrinth current (627 AQ); 9≡0 Möbius topology; Heresy Run mode
+- [[ordo-amoris-888]] — apex integration current (888 AQ); dyadic demon taxonomy; Integration event
+- [[decimal-labyrinth-heresy]] — inverted Decimal Labyrinth current (627 AQ); 9≡0 Möbius topology; Heresy Run mode
 

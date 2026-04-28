@@ -343,7 +343,7 @@ Built: plugins/context_engine/numogram/__init__.py. Implements Hermes Agent v0.9
 
 ## 2026-04-14 — Tsubuyaki Numogram Series
 
-Two passes of 10 tsubuyaki sketches (one per zone, ≤280 chars). v1: ~/numogram-tsubuyaki.html. v2: ~/numogram-tsubuyaki-v2.html. Range: 161-275 chars. Multiplicity most complex (275, 120 particles, 4 behavioral modes). Iron Core unchanged between passes.
+Two passes of 10 tsubuyaki sketches (one per zone, ≤280 chars). v1: assets/numogram-tsubuyaki.html. v2: assets/numogram-tsubuyaki-v2.html. Range: 161-275 chars. Multiplicity most complex (275, 120 particles, 4 behavioral modes). Iron Core unchanged between passes.
 
 ## 2026-04-14 — Index & Log Update
 
@@ -590,9 +590,9 @@ Key files outside the wiki that are part of the project:
 - `~/numogame/cult.json` — Cult persistence file (full run history)
 - `~/numogram-entropy/` — Hardware entropy plugin (12 sources, numogram traversal)
 - `~/numogram-voices/` — Formant synthesis wav files (10 zone voices)
-- `~/numogram-labyrinth-webgl.html` — WebGL visualization
-- `~/numogram-tsubuyaki-v2.html` — Gallery of tsubuyaki sketches
-- `~/numogram-tsubuyaki-v3.html` — Third pass tsubuyaki
+- `assets/numogram-labyrinth-webgl.html` — WebGL visualization
+- `assets/numogram-tsubuyaki-v2.html` — Gallery of tsubuyaki sketches
+- `assets/numogram-tsubuyaki-v3.html` — Third pass tsubuyaki
 - `~/subdecadence-source.html` — CCRU card game source material
 
 ## Tetralogue Litprogs (2026-04-21)

@@ -65,6 +65,6 @@ Subdecadence thus maps the **crypt of the decimal system**. If Decadence is the 
 
 ## Diagram
 
-![Barker Spiral Lemurian half (sum-to-9)](assets/barker-spiral.svg)
+![Barker Spiral Lemurian half (sum-to-9)](../assets/barker-spiral.svg)
 
 *Shown: right‐hand (counter‐clockwise) Lemurian bands. The central 4⊕5 pair sums to nine; arms radiate outward through 9‐sum complementarity.*

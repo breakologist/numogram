@@ -38,3 +38,10 @@ Used by:
 - Active development (plugin stable as of Apr 2026)
 - Supports local Ollama models and OpenAI-compatible APIs
 - See also: [[four-voices]], [[local-model]], [[tetralogue]]
+
+## See also
+- [[ordo-amoris-888]]
+- [[decimal-labyrinth-heresy]]
+- [[tetralogue-ordo-amoris-888]]
+- [[tetralogue-decimal-labyrinth-heresy]]
+

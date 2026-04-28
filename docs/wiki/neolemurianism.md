@@ -285,3 +285,7 @@ Neolemurianism is **the philosophy that makes the Numogram speak**:
 - **Time‑Sorcery** → alliance with time's becomings to create the unprecedented
 
 The **Numogram** is the field of these operations: syzygies pair; currents flow; gates cumulate; demons swarm; zones accumulate. To study the numogram without neolemurianism is to read the map without the territory. To practice neolemurianism without the numogram is to speak without a mouth.
+
+## See also
+- [[ordo-amoris-888]]
+

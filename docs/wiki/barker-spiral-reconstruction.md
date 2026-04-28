@@ -94,7 +94,7 @@ These remain speculative.
 
 | File | Location | Description |
 |------|----------|-------------|
-| `bs.jpg` | `numogram/wiki/assets/bs.jpg` | Hand‑drawn original scan (low res) |
+| `bs.jpg` | `numogram/docs/assets/bs.jpg` | Hand‑drawn original scan (low res) |
 | `nb.png` | `numogram/docs/assets/nb.png` | Enhanced digital version |
 | `barker-spiral.svg` | `wiki/assets/barker-spiral.svg` | Reconstructed vector diagram (canonical) |
 | `numogram-visualizer-v6.html` | `numogram/docs/numogram-visualizer-v6.html` | First interactive diagram + mode selector |

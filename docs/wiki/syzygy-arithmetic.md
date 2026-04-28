@@ -114,3 +114,4 @@ The five elements ARE the five syzygies. The generation cycle IS the cross-addit
 ## See also
 
 - [[decimal-numogram-reference]] — Comprehensive system mechanics reference
+- [[decimal-labyrinth-heresy]]

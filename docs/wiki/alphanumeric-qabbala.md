@@ -316,3 +316,5 @@ During the podcast, Land discovers that "LLAMA" in AQ = 63 → 9 (Plex), while w
 ## See also
 
 - [[aq-calculator-examples]] — AQ calculator examples: zone reductions, ALW comparison, demon profiles
+- [[ordo-amoris-888]]
+- [[decimal-labyrinth-heresy]]

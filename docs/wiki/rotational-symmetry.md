@@ -181,3 +181,7 @@ The "cryptic enigma of interconnection" between Warp and Plex IS the 6↔9 rotat
 - [[demon-uttunul]] — carries 9::0 (Plex)
 - [[triangular-numbers]] — 36 and 360 resonance
 - [[nick-land-time-theory]] — twin serpents (2,5 are both self-symmetric)
+
+## See also
+- [[decimal-labyrinth-heresy]]
+

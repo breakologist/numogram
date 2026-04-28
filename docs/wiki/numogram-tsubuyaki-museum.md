@@ -354,7 +354,7 @@ A purple galaxy collapsing. 300 stars spiraling into a point that might not exis
 ---
 ## Fifth Pass — Object-Oriented Attunement
 
-*Gallery: `~/numogram-tsubuyaki-v5.html`*
+*Gallery: `assets/numogram-tsubuyaki-v5.html`*
 
 The fifth pass shifts from sketch-level optimization to **systemic integration**. Each zone is no longer just a closed one-liner; it becomes an *attunement object* — a stateful behavior that could connect to the game's cult system, demon pitch, or hyp statistics.
 
@@ -383,7 +383,7 @@ The Japanese word つぶやき means "muttering" — a quiet utterance, almost t
 
 ## Second Pass — Refined Sketches
 
-*Gallery: `~/numogram-tsubuyaki-v2.html`*
+*Gallery: `assets/numogram-tsubuyaki-v2.html`*
 
 The first pass established the vocabulary. The second pass varies the complexity — some zones go simpler, others go denser. The Iron Core remained unchanged between passes (appropriate for the singularity).
 
@@ -528,7 +528,7 @@ From the @SnowEsamosc collection and the numogram series above:
 
 ## Third Pass — Entropy & Geometry
 
-*Gallery: `~/numogram-tsubuyaki-v3.html`*
+*Gallery: `assets/numogram-tsubuyaki-v3.html`*
 
 The third pass changes the conceptual angle on each zone. Not more or less complex — a fundamentally different metaphor. Where v1 was particles and v2 was refinement, v3 treats each zone as a geometric operation: the Void as a single jumping pixel, the Gate as four pulsing corners, the Cut as a bisecting diagonal, the Hinge as two arcs pivoting on a center line.
 
@@ -649,7 +649,7 @@ f=0;draw=_=>{f++||createCanvas(W=500,W);background(0,6);noStroke();for(n=0;n<400
 
 ## Fourth Pass — Signal Topology
 
-*Gallery: `~/numogram-tsubuyaki-v4.html`*
+*Gallery: `assets/numogram-tsubuyaki-v4.html`*
 
 The fourth pass treats each zone as a signal phenomenon from modular synthesis. No particles. No orbits. Just voltage made visible: noise floors, DC offsets, hard sync detune, envelope bursts, wavefolding, compression, FM interference, pulse gating, additive harmonics, and feedback resonance.
 
@@ -783,10 +783,10 @@ The fourth pass is the most compressed overall (1,746 chars), yet contains the w
 
 | Version | File | Concept |
 |---------|------|---------|
-| v1 | `~/numogram-tsubuyaki.html` | Particles — orbits, grids, vortices |
-| v2 | `~/numogram-tsubuyaki-v2.html` | Refinement — lines, rings, dual vortices |
-| v3 | `~/numogram-tsubuyaki-v3.html` | Geometry — triangles, gates, spirals, cuts |
-| v4 | `~/numogram-tsubuyaki-v4.html` | Signal — waveforms, interference, feedback |
+| v1 | `assets/numogram-tsubuyaki.html` | Particles — orbits, grids, vortices |
+| v2 | `assets/numogram-tsubuyaki-v2.html` | Refinement — lines, rings, dual vortices |
+| v3 | `assets/numogram-tsubuyaki-v3.html` | Geometry — triangles, gates, spirals, cuts |
+| v4 | `assets/numogram-tsubuyaki-v4.html` | Signal — waveforms, interference, feedback |
 
 ---
 

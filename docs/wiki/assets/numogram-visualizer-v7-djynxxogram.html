@@ -84,21 +84,6 @@ function toggleSynx() {
   .tetra-line.man { background: linear-gradient(to right, #ffcc44 25%, transparent 25%, transparent 40%, #ffcc44 40%, #ffcc44 60%, transparent 60%, transparent 75%, #ffcc44 75%); }
   .tai-hsuan-divider { border-top: 1px solid #ffcc4433; margin: 4px 0; }
   .tai-hsuan-reading { font-size: 7px; color: #ffcc44cc; margin-top: 4px; }
-  /* Traversal Mode */
-  #traversalPanel { margin: 8px 0; padding: 10px; border: 1px solid #333; border-radius: 6px; background: #1118; }
-  #traversalPanel.hidden { display: none; }
-  .panel-row { display: flex; gap: 12px; align-items: center; margin-bottom: 8px; font: 11px/1.4 "IBM Plex Mono"; color: #ccc; }
-  #traversalTable { overflow-x: auto; }
-  #traversalTable table { border-collapse: collapse; font: 10px/1.3 "IBM Plex Mono"; }
-  #traversalTable th, #traversalTable td { padding: 3px 6px; border: 1px solid #333; text-align: right; }
-  #traversalTable th { background: #222; color: #00F5FF; }
-  #traversalTable tr:hover { background: #2222; }
-
-/* v7.2+ visibility fix — panels need explicit .show rule */
-#traversalPanel.show,
-#polygonPanel.show {
-  display: block;
-}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
 </head>
@@ -161,21 +146,6 @@ function toggleSynx() {
   <b>Zone 5 Self-Decadence (from Aamodt + c-ten-fortyfive-fiveness.md)</b><br>
   5+5=10 • Phase change, cardiac rebound, the hinge where current hits itself and doubles back. The only zone without an external decadence partner — it reaches into itself. Golden ratio geometry, self-similar recursion. "The fifth way of saying five is the one that doesn't need a partner."
 </div>
-<div id="traversalPanel" class="hidden">
-  <div class="panel-row">
-    <label><input type="checkbox" id="traversalShow" onchange="toggleTraversalShow()"> Show Path</label>
-    <label>Speed: <input type="range" id="traversalSpeedSlider" min="100" max="2000" value="800" oninput="updateTraversalSpeed()"></label>
-    <label>Size: <input type="range" id="traversalSizeSlider" min="2" max="8" value="3" step="1" oninput="updateTraversalSize()"></label>
-  </div>
-  <div id="traversalTable"></div>
-</div>
-
-<div id="polygramPanel" class="hidden">
-  <div class="panel-row">
-    <label><input type="checkbox" id="polygramShow" onchange="togglePolygramShow()"> Connect Letters</label>
-    <label><input type="checkbox" id="synxRingShow" onchange="toggleSynxRing()"> Synx Ring</label>
-  </div>
-</div>
 
 <div id="zoneSelector"></div>
 
@@ -185,9 +155,6 @@ function toggleSynx() {
 // AQ values from AQ_DICTIONARY.md integrated and verified
 
 let particles = [];
-let polygramEnabled = false;
-let synxRingEnabled = false;
-let polygramWords = [];
 let seed = 192855;
 let zone = 0;
 let currentBase = 10;
@@ -209,7 +176,7 @@ const BASE_CONFIG = {
   16: {
     name: "MEMORY MAP", zoneCount: 16,
     colors: [[25,25,35],[255,170,50],[190,80,80],[0,220,255],[150,40,20],[180,160,255],[70,210,190],[255,200,150],[220,160,180],[160,80,255],[100,200,255],[255,120,180],[80,255,200],[200,80,255],[255,180,100],[40,40,60]],
-        names: ["Void","Surge","Hold","Warp","Sink","Hinge","Vortex","Blood","Rise","Plex","Surge-prime","Hold-prime","Warp-prime","Sink-prime","Hinge-prime","Vortex-prime","Blood-prime","Rise-prime","Plex-prime","Surge-second","Hold-second","Warp-second","Sink-second","Hinge-second","Vortex-second","Blood-second","Rise-second","Plex-second","Surge-third","Hold-third","Warp-third","Sink-third","Hinge-third","Vortex-third","Blood-third","Rise-third"],
+    names: ["Void","Surge","Hold","Warp","Sink","Hinge","Vortex","Blood","Rise","Plex","Echo","Fracture","Spiral","Abyss","Core","Null"],
     regions: ["plex","time","time","warp","time","time","warp","time","time","plex","memory","memory","memory","abyss","core","null"],
     demons: ["Uttunul","—","Oddubb","Djynxx","Katak","—","Djynxx","Oddubb","Murrumur","Uttunul","—","—","—","—","—","—"],
     descs: ["Abyssal Origin","Initiating Spark","Renewed Drive","Chaotic Attractor","Closure & Return","Central Ruler","Upper Source","Heavy Sink","Receptive Pause","Terminal Abyss","Echo Chamber","Fracture Point","Spiral Descent","Abyssal Sink","Iron Core","Null Pointer"],
@@ -225,16 +192,6 @@ const BASE_CONFIG = {
     syzygyPartner: (z) => 35 - z, currentName: (z) => Math.abs(z - (35 - z))
   }
 };
-
-// Traversal Mode state
-let traversalEnabled = false;
-let traversalPath = [];
-let traversalStartTime = 0;
-let traversalSpeed = 800;
-let traversalSize = 3;
-let traversalLineWidth = 2;  // base, overridden by slider on input
-let traversalPointSize = 4;
-
 let cfg = BASE_CONFIG[10];
 
 // Quasiphonic particles (from quasiphonic-particles.md)
@@ -563,19 +520,6 @@ function draw() {
   frameCount_++;
   let fade = (zone === 0) ? 4 : (zone === 8 || zone === 15) ? 2.5 : 8;
   noStroke(); fill(5,5,5,fade); rect(0,0,width,height);
-
-  // Polygram perimeter ring (v8)
-  const cx = width/2, cy = height/2;
-  const ringRadius = min(width, height) * 0.35;
-  if (polygramEnabled || synxRingEnabled) {
-    drawRing(cx, cy, ringRadius, currentBase);
-  }
-  if (synxRingEnabled) {
-    drawSynxRing(cx, cy, ringRadius + 12);
-  }
-  if (polygramEnabled) {
-    drawPolygrams(cx, cy, ringRadius);
-  }
   fieldOffset += 0.00032; let t = frameCount_ * 0.014;
 
   for (let p of particles) {
@@ -586,7 +530,6 @@ function draw() {
       else if (zone === 7) ny = height - random(14);
       else if (zone === 9 || zone === 13) { let a=random(TWO_PI); nx=width/2+Math.cos(a)*random(width*0.28); ny=height/2+Math.sin(a)*random(width*0.28); }
       p.x = nx; p.y = ny; p.vx = p.vy = 0; p.life = 1; p.age = 0; p.maxAge = 255 + random()*355; p.phase = random(TWO_PI);
-  drawTraversalPath();
     }
   }
 
@@ -854,7 +797,6 @@ function switchBase(newBase) {
     document.getElementById('matrixPanel').classList.remove('show');
     document.getElementById('contextBox').classList.remove('show');
   }
-  if (polygramEnabled) computePolygrams();
 }
 
 function updateDensity() {
@@ -996,277 +938,6 @@ function animateTriangularSyzygy() {
 
 
 
-function computeTraversalPath(text) {
-  const raw = text.toUpperCase().replace(/[^A-Z0-9]/g, '');
-  let sum = 0;
-  let path = [];
-  for (let i = 0; i < raw.length; i++) {
-    const ch = raw[i];
-    const val = aqValue(ch, currentBase);
-    sum += val;
-    const dr = digitalRoot(sum, currentBase);
-    const zone = dr % cfg.zoneCount;
-    const partner = cfg.syzygyPartner(zone);
-    const gateNum = zone * currentBase + partner;
-    const isGate = (zone === partner) || Math.abs(zone - partner) === Math.floor(currentBase/2);
-    const isRot = currentBase === 10 && (zone === 0 || zone === 5 || zone === 9);
-    const isStrobe = base36Strob && currentBase === 36 && (zone === 5 || zone === 9 || zone === 14 || zone === 18 || zone === 23 || zone === 27 || zone === 32);
-    let gateTag = '';
-    if (isGate) gateTag = `Gt-${gateNum}`;
-    else if (isRot) gateTag = 'ROTATIONAL';
-    else if (isStrobe) gateTag = 'STROBO ★';
-    path.push({ char: ch, val, sum, dr, zone, gate: gateTag });
-  }
-  return path;
-}
-
-function startTraversal(path) {
-  traversalPath = path;
-  traversalEnabled = true;
-  traversalStartTime = Date.now();
-  buildTraversalTable(path);
-}
-
-function buildTraversalTable(path) {
-  const table = document.getElementById('traversalTable');
-  table.innerHTML = '<table><tr><th>#</th><th>Char</th><th>Val</th><th>Sum</th><th>DR</th><th>Z</th><th>Gate</th></tr>';
-  path.forEach((step, idx) => {
-    const row = document.createElement('tr');
-    row.innerHTML = `<td>${idx+1}</td><td>${step.char}</td><td style="color:#00F5FF">${step.val}</td><td>${step.sum}</td><td style="color:#00F5FF">${step.dr}</td><td style="color:#00F5FF">${step.zone}</td><td style="color:${step.gate ? '#ff3366' : '#888'}">${step.gate || '—'}</td></tr>`;
-    table.appendChild(row);
-  });
-}
-
-function updateTraversalSpeed() {
-  const slider = document.getElementById('traversalSpeedSlider');
-  traversalSpeed = parseInt(slider.value, 10);
-}
-
-function updateTraversalSize() {
-  const slider = document.getElementById('traversalSizeSlider');
-  traversalSize = parseInt(slider.value, 10);
-  traversalLineWidth = traversalSize * 0.67;
-  traversalPointSize = traversalSize;
-}
-
-function toggleTraversalShow() {
-  const checked = document.getElementById('traversalShow').checked;
-  traversalEnabled = checked;
-  if (checked && traversalPath.length > 0) {
-    traversalStartTime = Date.now();
-  }
-  const panel = document.getElementById('traversalPanel');
-  if (checked) {
-    panel.classList.remove('hidden');
-    panel.classList.add('show');
-  } else {
-    panel.classList.remove('show');
-    panel.classList.add('hidden');
-  }
-}
-
-
-// Polygram perimeter ring
-function drawRing(centerX, centerY, radius, base) {
-  push();
-  noFill();
-  stroke(0, 255, 255, 150);
-  strokeWeight(1);
-  ellipse(centerX, centerY, radius * 2, radius * 2);
-  textAlign(CENTER, CENTER);
-  textSize(8);
-  for (let z = 0; z < base; z++) {
-    let angleDeg;
-    if (currentBase === 10) {
-      let mod5 = z % 5;
-      let offset = (z > 4) ? 36 : 0;
-      angleDeg = mod5 * 72 + offset - 90;
-    } else {
-      angleDeg = z * (360 / currentBase) - 90;
-    }
-    let angle = angleDeg * Math.PI / 180;
-    const x = centerX + cos(angle) * radius;
-    const y = centerY + sin(angle) * radius;
-    // tick
-    const inner = radius - 6;
-    const px = centerX + cos(angle) * inner;
-    const py = centerY + sin(angle) * inner;
-    line(px, py, x, y);
-    // label
-    let label = z.toString(currentBase).toUpperCase();
-    fill(0, 255, 255, 200);
-    noStroke();
-    text(label, x, y);
-  }
-  pop();
-}
-
-function togglePolygramShow() {
-  const checked = document.getElementById('polygramShow').checked;
-  polygramEnabled = checked;
-  const panel = document.getElementById('polygramPanel');
-  if (checked) {
-    panel.classList.remove('hidden');
-  } else {
-    panel.classList.add('hidden');
-    synxRingEnabled = false;
-    document.getElementById('synxRingShow').checked = false;
-  }
-  computePolygrams();
-}
-
-function toggleSynxRing() {
-  const checked = document.getElementById('synxRingShow').checked;
-  synxRingEnabled = checked;
-}
-
-function computePolygrams() {
-  polygramWords = [];
-  const text = aqText.trim();
-  if (!text) return;
-  const words = text.split(/\s+/);
-  for (let wi = 0; wi < words.length; wi++) {
-    const word = words[wi];
-    const letters = [];
-    for (let i = 0; i < word.length; i++) {
-      const ch = word[i].toLowerCase();
-      const val = aqCipher[ch];
-      if (val !== undefined) {
-        const zone = deriveZone(val);
-        letters.push({ char: ch, zone: zone });
-      }
-    }
-    if (letters.length > 0) {
-      polygramWords.push({ word: word, letters: letters });
-    }
-  }
-}
-
-function drawPolygrams(cx, cy, ringRadius) {
-  if (!polygramEnabled || polygramWords.length === 0) return;
-  for (let wi = 0; wi < polygramWords.length; wi++) {
-    const wd = polygramWords[wi];
-    const letters = wd.letters;
-    if (letters.length < 2) continue;
-    const hue = (wi * 137.5) % 360;
-    stroke(hue, 75, 60, 0.6);
-    strokeWeight(2);
-    noFill();
-    beginShape();
-    for (let i = 0; i < letters.length; i++) {
-      const z = letters[i].zone;
-      let angleDeg = (currentBase === 10)
-        ? (z % 5) * 72 + (z > 4 ? 36 : 0) - 90
-        : z * (360 / currentBase) - 90;
-      let angle = angleDeg * Math.PI / 180;
-      vertex(cx + cos(angle) * ringRadius, cy + sin(angle) * ringRadius);
-    }
-    // close
-    let z0 = letters[0].zone;
-    let a0 = (currentBase === 10)
-      ? (z0 % 5) * 72 + (z0 > 4 ? 36 : 0) - 90
-      : z0 * (360 / currentBase) - 90;
-    vertex(cx + cos(a0 * Math.PI/180) * ringRadius, cy + sin(a0 * Math.PI/180) * ringRadius);
-    endShape(CLOSE);
-    // vertices
-    for (let i = 0; i < letters.length; i++) {
-      const z = letters[i].zone;
-      let angleDeg = (currentBase === 10)
-        ? (z % 5) * 72 + (z > 4 ? 36 : 0) - 90
-        : z * (360 / currentBase) - 90;
-      let angle = angleDeg * Math.PI / 180;
-      const x = cx + cos(angle) * ringRadius;
-      const y = cy + sin(angle) * ringRadius;
-      fill(hue, 75, 60, 0.9);
-      noStroke();
-      ellipse(x, y, 6, 6);
-      fill(255);
-      textAlign(CENTER, CENTER);
-      textSize(8);
-      text(letters[i].char, x, y);
-    }
-  }
-}
-
-function drawSynxRing(cx, cy, radius) {
-  if (!synxRingEnabled) return;
-  push();
-  stroke(255, 100, 100, 120);
-  strokeWeight(1.5);
-  noFill();
-  ellipse(cx, cy, radius * 2, radius * 2);
-  // 36 ticks (base-36 spacing always)
-  for (let z = 0; z < 36; z++) {
-    let angleDeg = z * 10 - 90;  // 10° per zone
-    let angle = angleDeg * Math.PI / 180;
-    const x = cx + cos(angle) * radius;
-    const y = cy + sin(angle) * radius;
-    const inner = radius - 8;
-    const px = cx + cos(angle) * inner;
-    const py = cy + sin(angle) * inner;
-    stroke(255, 100, 100, 150);
-    line(px, py, x, y);
-  }
-  pop();
-}
-
-function zonePosition(z) {
-  let count = cfg.zoneCount;
-  let cx = width/2, cy = height/2;
-  let baseR = min(width, height) * 0.35;
-  let r = (z > (currentBase/2 - 1)) ? baseR * 0.48 : baseR;
-  let angleDeg;
-  if (currentBase === 10) {
-    let mod5 = z % 5;
-    let offset = (z > 4) ? 36 : 0;
-    angleDeg = mod5 * 72 + offset - 90;
-  } else {
-    let spacing = 360 / currentBase;
-    angleDeg = z * spacing - 90;
-  }
-  let angle = angleDeg * Math.PI / 180;
-  return { x: cx + Math.cos(angle) * r, y: cy + Math.sin(angle) * r };
-}
-
-function drawTraversalPath() {
-  if (!traversalEnabled || traversalPath.length < 2) return;
-  let t = (Date.now() - traversalStartTime) / traversalSpeed;
-  let totalSteps = traversalPath.length;
-  let progress = Math.min(t / totalSteps, 1.0);
-  let drawCount = Math.floor(progress * totalSteps);
-  push();
-  strokeWeight(traversalLineWidth);
-  beginShape();
-  for (let i = 0; i < traversalPath.length; i++) {
-    let pt = traversalPath[i];
-    let pos = zonePosition(pt.zone);
-    if (i === 0) { stroke(100, 100, 120, 120); fill(100, 100, 120); }
-    else { stroke(60, 60, 80, 80); noFill(); }
-    vertex(pos.x, pos.y);
-  }
-  endShape();
-  if (drawCount > 0) {
-    beginShape();
-    for (let i = 0; i <= drawCount; i++) {
-      let pt = traversalPath[i];
-      let pos = zonePosition(pt.zone);
-      let alpha = (i === drawCount) ? 255 : 180;
-      let size = (i === drawCount) ? traversalSize * 1.5 : traversalSize;
-      stroke(0, 255, 255, alpha);
-      fill(0, 245, 245, alpha);
-      vertex(pos.x, pos.y);
-    }
-    endShape();
-    let head = traversalPath[drawCount];
-    let headPos = zonePosition(head.zone);
-    stroke(0, 255, 255);
-    fill(0, 245, 245, 200);
-    ellipse(headPos.x, headPos.y, traversalSize * 2.5);
-  }
-  pop();
-}
-
-
 function updateAQInfo() {
   let text = document.getElementById('aqInput').value || '';
   let aq = aqValue(text);
@@ -1308,17 +979,10 @@ function updateAQInfo() {
       <span style="color:#00F5FF55">${cfg.descs[z]}</span>
       ${synxHtml}
     `;
-  const traversalCheckbox = document.getElementById('traversalShow');
-  if (traversalCheckbox.checked && text.length > 0) {
-    const path = computeTraversalPath(text);
-    startTraversal(path);
-  }
-
     ctx.style.display = 'block';
   } else {
     ctx.style.display = 'none';
   }
-  if (polygramEnabled) computePolygrams();
 }
 
 function setZoneFromAQ() {
@@ -1328,7 +992,6 @@ function setZoneFromAQ() {
   let dr = synxEnabled ? synxDigitalRoot(val) : digitalRoot(val, currentBase);
   let z = dr % cfg.zoneCount;
   zone = z;
-  traversalEnabled = false;
   seed = val;
   document.getElementById('seedInput').value = val;
   background(5,5,5); particles = []; initParticles();

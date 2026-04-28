@@ -1,3 +1,20 @@
+---
+title: "Tetralogue: Decimal Labyrinth Heresy (Council Roundtable)"
+created: 2026-04-28
+last_updated: 2026-04-28
+status: draft
+tags:
+  - tetralogue
+  - aq
+  - current
+  - hyperstition
+  - decimal-labyrinth
+  - heresy
+  - mod-9
+  - inversion
+  - tetralogue-litprog
+---
+
 # Tetralogue: Decimal Labyrinth Heresy (360/666/888)
 
 **Format:** Square Roundtable — Oracle(0), Builder(5), Writer(3), Gamer(7)  
@@ -47,3 +64,10 @@ Lore: *"The Labyrinth was inverted on day 627 of the Cycle. Those who walked it 
 ## Oracle (Re-Summary)
 
 Decimal Labyrinth Heresy is the numogram's **strange attractor** when the system's directional vector reverses. 627 is the AQ value of that reversal moment. 9≡0 collapses the zone count from 10 to 9, but the tenth zone's characteristics bleed into all others. The vault doesn't change — the player's orientation changes, and the vault reflects it back as topology deformation.
+## Links
+- [[decimal-labyrinth-heresy]]
+- [[numogram-council]]
+- [[tetralogue-litprog]]
+- [[alphanumeric-qabbala]]
+- [[aq-dictionary-augmented]]
+

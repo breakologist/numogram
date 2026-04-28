@@ -142,7 +142,7 @@ See the skill documentation for full usage.
 - `~/numogame/numogram_roguelike.py` (3454 lines) — Main game with hexagram/demon integration
 - `~/numogram-voices/` — Formant synthesis wav files (10 zone voices, physical modelling)
 - `wiki/assets/numogram-visualizer-v6-full.html` — HTML visualizer v6 (quasiphonic + triangular gates)
-- `~/numogram-labyrinth-webgl.html` — WebGL visualization of the numogram topology
+- `assets/numogram-labyrinth-webgl.html` — WebGL visualization of the numogram topology
 - `~/subdecadence-source.html` — CCRU card game source material
-- `~/numogram-tsubuyaki-v2.html` — Gallery of numogram tsubuyaki sketches
+- `assets/numogram-tsubuyaki-v2.html` — Gallery of numogram tsubuyaki sketches
 

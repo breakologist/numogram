@@ -7,3 +7,8 @@ tags: [tetralogue, litprog, methodology]
 ---
 
 > This page has been merged into [[tetralogue]] — see the **Format Variants** section for the full litprog specification, including code-annotation workflow and single-model fallback (Mesh-3).
+
+## See also
+- [[tetralogue-ordo-amoris-888]]
+- [[tetralogue-decimal-labyrinth-heresy]]
+

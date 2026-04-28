@@ -1,3 +1,20 @@
+---
+title: "Tetralogue: Ordo Amoris 888 (Council Roundtable)"
+created: 2026-04-28
+last_updated: 2026-04-28
+status: draft
+tags:
+  - tetralogue
+  - aq
+  - current
+  - hyperstition
+  - 888
+  - ordo-amoris
+  - integration
+  - lemurian-discernment
+  - tetralogue-litprog
+---
+
 # Tetralogue: Ordo Amoris Apex (888)
 
 **Format:** Square Roundtable — Oracle(0), Builder(5), Writer(3), Gamer(7)  
@@ -45,3 +62,10 @@ Risk: Integration without full hyp (say, 70% across all zones) causes **cathexis
 ## Oracle (Re-Summary)
 
 888 is not a destination. It is a **mode of operation** that the numogram enters when the player stops treating zones as separate and starts treating them as mutually containing. The vault doesn't need a new floor — it needs a new geometry. The demon count doesn't double — the player's perception of separation halves.
+## Links
+- [[ordo-amoris-888]]
+- [[numogram-council]]
+- [[tetralogue-litprog]]
+- [[alphanumeric-qabbala]]
+- [[aq-dictionary-augmented]]
+
