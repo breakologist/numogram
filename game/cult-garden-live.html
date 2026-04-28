@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Cult Garden -- LIVE</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#06060a;color:#988;font:13px 'Courier New',monospace;overflow-x:hidden}
+h1{text-align:center;padding:30px 20px 4px;color:#a44;font-size:18px;letter-spacing:6px}
+.subtitle{text-align:center;color:#533;font-size:11px;margin-bottom:30px;letter-spacing:3px}
+#container{max-width:1200px;margin:0 auto;padding:0 20px 60px}
+.section{margin-bottom:40px;border:1px solid #1a1010;border-radius:4px;background:#08080e;padding:20px}
+.section h2{color:#a44;font-size:13px;letter-spacing:3px;margin-bottom:16px;border-bottom:1px solid #1a1010;padding-bottom:8px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.stat{background:#0e0e12;border:1px solid #181820;padding:12px;text-align:center}
+.stat-val{font-size:22px;color:#c44;font-weight:bold}
+.stat-label{font-size:10px;color:#644;margin-top:4px;letter-spacing:1px}
+#timeline-wrap{width:100%;margin:20px 0}
+.heatmap{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;margin:20px 0}
+.hm-cell{text-align:center;padding:16px 4px;font-size:11px;border:1px solid #181820;position:relative}
+.hm-cell .hm-num{font-size:16px;font-weight:bold}
+.hm-cell .hm-label{font-size:9px;color:#644;margin-top:4px}
+.player-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.player-card{background:#0e0e12;border:1px solid #181820;padding:14px}
+.player-name{color:#a44;font-weight:bold;font-size:12px;margin-bottom:8px}
+.player-stat{font-size:10px;color:#866;margin-bottom:3px}
+.run-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.run-card{background:#0e0e12;border:1px solid #181820;padding:10px;font-size:10px;cursor:pointer;transition:border-color .2s}
+.run-card:hover{border-color:#533}
+.run-card.expanded{grid-column:span 2;grid-row:span 2}
+.run-num{color:#a44;font-weight:bold;font-size:11px}
+.run-player{color:#866}
+.run-hyp-bar{height:3px;background:#1a1010;margin:6px 0;position:relative}
+.run-hyp-fill{height:100%;background:linear-gradient(90deg,#422,#c44)}
+.run-zones{color:#644;font-size:9px;margin-top:4px}
+.run-glyph{font-size:9px;color:#533;margin-top:4px;white-space:pre;line-height:1.2}
+.run-preview{margin-top:10px;padding:8px;background:#0a0a0e;border:1px solid #1a1010;font-size:9px;color:#755;display:none}
+.run-card.expanded .run-preview{display:block}
+.corpse-text{color:#b88;font-size:12px;line-height:1.8;font-style:italic;padding:10px;background:#0e0e12;border-left:2px solid #633}
+.corpse-line{margin-bottom:8px}
+.synth-box{background:#0e0e12;border:1px solid #2a1a1a;padding:14px;margin-top:10px}
+.synth-title{color:#a44;font-size:11px;letter-spacing:2px;margin-bottom:8px}
+.synth-line{color:#866;font-size:11px;margin-bottom:4px}
+.legend{display:flex;gap:16px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+.legend-item{font-size:10px;color:#644}
+.legend-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px}
+.conduct-badge{display:inline-block;background:#1a1010;color:#a44;padding:1px 5px;border-radius:3px;font-size:9px;margin-left:4px}
+.status-bar{position:fixed;top:0;right:0;padding:6px 12px;background:#1a0a0a;border-left:1px solid #3a2020;border-bottom:1px solid #3a2020;font-size:10px;color:#844;z-index:100}
+.status-bar.ok{color:#484}
+.status-bar.err{color:#c44}
+.loading{text-align:center;padding:40px;color:#533;font-size:12px;letter-spacing:2px}
+.error-box{text-align:center;padding:40px;color:#c44;font-size:12px;border:1px solid #3a1010;background:#120808;margin:20px}
+.error-box code{background:#1a1010;padding:2px 6px;color:#a88}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ZONE SKINS -- dynamically applied via body.zone-{N}
+   ═══════════════════════════════════════════════════════════════════════ */
+body.zone-0{background:#000;color:#333}
+body.zone-0 h1{color:#555}
+body.zone-0 .subtitle{color:#222}
+body.zone-0 .section{background:#050505;border-color:#111}
+body.zone-0 .section h2{color:#444;border-color:#111}
+body.zone-0 .stat{background:#080808;border-color:#111}
+body.zone-0 .stat-val{color:#555}
+body.zone-0 .stat-label{color:#222}
+body.zone-0 .run-card{background:#080808;border-color:#111}
+body.zone-0 .run-num{color:#444}
+body.zone-0 .corpse-text{background:#080808;border-color:#222;color:#333}
+body.zone-0 .player-card{background:#080808;border-color:#111}
+body.zone-0 .player-name{color:#555}
+body.zone-0 .status-bar{background:#000;border-color:#111;color:#333}
+
+body.zone-1{background:#0a0905;color:#aa8}
+body.zone-1 h1{color:#ccaa33}
+body.zone-1 .subtitle{color:#554}
+body.zone-1 .section{background:#0e0c05;border-color:#332a10}
+body.zone-1 .section h2{color:#FFD700;border-color:#332a10;letter-spacing:6px}
+body.zone-1 .stat{background:#131005;border-color:#2a2210}
+body.zone-1 .stat-val{color:#FFD700}
+body.zone-1 .stat-label{color:#665}
+body.zone-1 .run-card{background:#131005;border-color:#2a2210}
+body.zone-1 .run-num{color:#ccaa33}
+body.zone-1 .corpse-text{background:#131005;border-color:#443310;color:#aa8}
+body.zone-1 .player-card{background:#131005;border-color:#2a2210}
+body.zone-1 .player-name{color:#ccaa33}
+body.zone-1 .status-bar{background:#0e0c05;border-color:#332a10;color:#665}
+
+body.zone-2{background:#0a0602;color:#a86}
+body.zone-2 h1{color:#cc7722}
+body.zone-2 .subtitle{color:#432}
+body.zone-2 .section{background:#0e0803;border-color:#3a2008}
+body.zone-2 .section h2{color:#FF8C00;border-color:#3a2008}
+body.zone-2 .stat{background:#130a04;border-color:#2a1808}
+body.zone-2 .stat-val{color:#ffaa33}
+body.zone-2 .stat-label{color:#643}
+body.zone-2 .run-card{background:#130a04;border-color:#2a1808}
+body.zone-2 .run-num{color:#cc7722}
+body.zone-2 .corpse-text{background:#130a04;border-color:#4a2808;color:#a86}
+body.zone-2 .player-card{background:#130a04;border-color:#2a1808}
+body.zone-2 .player-name{color:#cc7722}
+body.zone-2 .status-bar{background:#0e0803;border-color:#3a2008;color:#643}
+
+body.zone-3{background:#0a030a;color:#a8a}
+body.zone-3 h1{color:#cc33cc}
+body.zone-3 .subtitle{color:#424}
+body.zone-3 .section{background:#0e050e;border-color:#3a103a}
+body.zone-3 .section h2{color:#FF00FF;border-color:#3a103a}
+body.zone-3 .stat{background:#130513;border-color:#2a102a}
+body.zone-3 .stat-val{color:#ff66ff}
+body.zone-3 .stat-label{color:#646}
+body.zone-3 .run-card{background:#130513;border-color:#2a102a}
+body.zone-3 .run-num{color:#cc33cc}
+body.zone-3 .corpse-text{background:#130513;border-color:#4a204a;color:#a8a}
+body.zone-3 .player-card{background:#130513;border-color:#2a102a}
+body.zone-3 .player-name{color:#cc33cc}
+body.zone-3 .status-bar{background:#0e050e;border-color:#3a103a;color:#646}
+
+body.zone-4{background:#030a0a;color:#8aa}
+body.zone-4 h1{color:#22cccc}
+body.zone-4 .subtitle{color:#244}
+body.zone-4 .section{background:#050e0e;border-color:#103a3a}
+body.zone-4 .section h2{color:#00FFFF;border-color:#103a3a}
+body.zone-4 .stat{background:#051313;border-color:#102a2a}
+body.zone-4 .stat-val{color:#33ffff}
+body.zone-4 .stat-label{color:#466}
+body.zone-4 .run-card{background:#051313;border-color:#102a2a}
+body.zone-4 .run-num{color:#22cccc}
+body.zone-4 .corpse-text{background:#051313;border-color:#204a4a;color:#8aa}
+body.zone-4 .player-card{background:#051313;border-color:#102a2a}
+body.zone-4 .player-name{color:#22cccc}
+body.zone-4 .status-bar{background:#050e0e;border-color:#103a3a;color:#466}
+
+body.zone-5{background:#020a02;color:#8a8}
+body.zone-5 h1{color:#22cc22}
+body.zone-5 .subtitle{color:#242}
+body.zone-5 .section{background:#050e05;border-color:#103a10}
+body.zone-5 .section h2{color:#00FF00;border-color:#103a10;letter-spacing:8px}
+body.zone-5 .stat{background:#051305;border-color:#102a10}
+body.zone-5 .stat-val{color:#33ff33}
+body.zone-5 .stat-label{color:#464}
+body.zone-5 .run-card{background:#051305;border-color:#102a10}
+body.zone-5 .run-num{color:#22cc22}
+body.zone-5 .corpse-text{background:#051305;border-color:#204a20;color:#8a8}
+body.zone-5 .player-card{background:#051305;border-color:#102a10}
+body.zone-5 .player-name{color:#22cc22}
+body.zone-5 .status-bar{background:#050e05;border-color:#103a10;color:#464}
+
+body.zone-6{background:#02030a;color:#88a}
+body.zone-6 h1{color:#2266cc}
+body.zone-6 .subtitle{color:#223}
+body.zone-6 .section{background:#05050e;border-color:#101a3a}
+body.zone-6 .section h2{color:#0080FF;border-color:#101a3a;text-transform:uppercase}
+body.zone-6 .stat{background:#050513;border-color:#10102a}
+body.zone-6 .stat-val{color:#3399ff}
+body.zone-6 .stat-label{color:#446}
+body.zone-6 .run-card{background:#050513;border-color:#10102a}
+body.zone-6 .run-num{color:#2266cc}
+body.zone-6 .corpse-text{background:#050513;border-color:#20204a;color:#88a}
+body.zone-6 .player-card{background:#050513;border-color:#10102a}
+body.zone-6 .player-name{color:#2266cc}
+body.zone-6 .status-bar{background:#05050e;border-color:#101a3a;color:#446}
+
+body.zone-7{background:#0a0202;color:#a88}
+body.zone-7 h1{color:#cc3333;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+body.zone-7 .subtitle{color:#422}
+body.zone-7 .section{background:#0e0505;border-color:#3a1010}
+body.zone-7 .section h2{color:#FF3333;border-color:#3a1010;animation:pulse 2s infinite}
+body.zone-7 .stat{background:#130505;border-color:#2a1010}
+body.zone-7 .stat-val{color:#ff6666}
+body.zone-7 .stat-label{color:#644}
+body.zone-7 .run-card{background:#130505;border-color:#2a1010}
+body.zone-7 .run-num{color:#cc3333}
+body.zone-7 .corpse-text{background:#130505;border-color:#4a2020;color:#a88}
+body.zone-7 .player-card{background:#130505;border-color:#2a1010}
+body.zone-7 .player-name{color:#cc3333}
+body.zone-7 .status-bar{background:#0e0505;border-color:#3a1010;color:#644}
+
+body.zone-8{background:#08030a;color:#a8a}
+body.zone-8 h1{color:#aa77dd}
+body.zone-8 .subtitle{color:#323}
+body.zone-8 .section{background:#0e050e;border-color:#2a103a}
+body.zone-8 .section h2{color:#C0A0FF;border-color:#2a103a}
+body.zone-8 .stat{background:#130513;border-color:#1a102a}
+body.zone-8 .stat-val{color:#d0b0ff}
+body.zone-8 .stat-label{color:#646}
+body.zone-8 .run-card{background:#130513;border-color:#1a102a}
+body.zone-8 .run-num{color:#aa77dd}
+body.zone-8 .corpse-text{background:#130513;border-color:#3a204a;color:#a8a}
+body.zone-8 .player-card{background:#130513;border-color:#1a102a}
+body.zone-8 .player-name{color:#aa77dd}
+body.zone-8 .status-bar{background:#0e050e;border-color:#2a103a;color:#646}
+
+body.zone-9{background:#050208;color:#a7a}
+body.zone-9 h1{color:#8833cc}
+body.zone-9 .subtitle{color:#212}
+body.zone-9 .section{background:#0a050e;border-color:#1a083a}
+body.zone-9 .section h2{color:#9900FF;border-color:#1a083a;letter-spacing:4px}
+body.zone-9 .stat{background:#0f0513;border-color:#1a082a}
+body.zone-9 .stat-val{color:#bb66ff}
+body.zone-9 .stat-label{color:#535}
+body.zone-9 .run-card{background:#0f0513;border-color:#1a082a}
+body.zone-9 .run-num{color:#8833cc}
+body.zone-9 .corpse-text{background:#0f0513;border-color:#2a104a;color:#a7a}
+body.zone-9 .player-card{background:#0f0513;border-color:#1a082a}
+body.zone-9 .player-name{color:#8833cc}
+body.zone-9 .status-bar{background:#0a050e;border-color:#1a083a;color:#535}
+</style>
+</head>
+<body>
+<div class="status-bar" id="statusBar">connecting...</div>
+<h1>THE CULT GARDEN</h1>
+<div class="subtitle" id="subtitle">-- loading cult data --</div>
+<div id="container">
+<div id="loading" class="loading">the garden waits for the cult file...</div>
+<div id="error" class="error-box" style="display:none"></div>
+<div id="content" style="display:none">
+
+<div class="section">
+<h2>CULT VITALS</h2>
+<div class="stats-grid" id="statsGrid"></div>
+<div class="stats-grid" id="statsGrid2"></div>
+</div>
+
+<div class="section">
+<h2>RUN TIMELINE</h2>
+<div id="timeline-wrap"></div>
+<div class="legend">
+<span class="legend-item"><span class="legend-dot" style="background:#c44"></span>Human (etym)</span>
+<span class="legend-item"><span class="legend-dot" style="background:#844"></span>Agent</span>
+<span class="legend-item"><span class="legend-dot" style="background:#444"></span>Test/Debug</span>
+<span class="legend-item">Y = hyp% / Size = kills / X = run number</span>
+</div>
+</div>
+
+<div class="section">
+<h2>ZONE HEATMAP -- CURRENT MEMORY</h2>
+<div class="heatmap" id="heatmap"></div>
+</div>
+
+<div class="section">
+<h2>PLAYER COMPARISON -- CURRENT MEMORY</h2>
+<div class="player-grid" id="playerGrid"></div>
+</div>
+
+<div class="section">
+<h2>LIVING MEMORY -- <span id="memCount"></span> RUNS (CLICK TO EXPAND)</h2>
+<div class="run-grid" id="runGrid"></div>
+</div>
+
+<div class="section">
+<h2>THE CORPSE -- COLLECTIVE EXQUISITE</h2>
+<div class="corpse-text" id="corpseText"></div>
+</div>
+
+<div class="section">
+<h2>SYNTHESIS PREVIEW -- NEXT OVERFLOW</h2>
+<div class="synth-box" id="synthPreview"></div>
+</div>
+
+<div class="section">
+<h2>THE DREAM -- CULT SYNTHESIS</h2>
+<div id="canvas-wrap"></div>
+<div class="legend">
+<span class="legend-item">Significance = (hyp/100)*5 + (kills/20)*3 + (zones/10)*2</span>
+</div>
+</div>
+
+</div>
+</div>
+
+<script>
+const ZONE_NAMES = ['Void','Stability','Separation','Release','Catastrophe','Pressure','Abstraction','Blood','Multiplicity','Iron Core'];
+const ZONE_COLORS = ['#888','#FFD700','#FF8C00','#FF00FF','#00FFFF','#00FF00','#0080FF','#FF3333','#C0A0FF','#9900FF'];
+
+let CULT = null;
+let lastRuns = 0;
+let pollTimer = null;
+let timelineSketch = null;
+let synthSketch = null;
+
+// =====================================================================
+// DATA LOADING
+// =====================================================================
+
+function parseMemString(s){
+  let r = {raw:s, player:'crawler', turns:0, hyp:0, zones:[], kills:0, conducts:[], run:0};
+  let m = s.match(/Run #(\d+)/); if(m) r.run = parseInt(m[1]);
+  m = s.match(/:\s*(\w+)/); if(m) r.player = m[1];
+  m = s.match(/Turn\s+(\d+)/); if(m) r.turns = parseInt(m[1]);
+  m = s.match(/Hyp\s+([\d.]+)%/); if(m) r.hyp = parseFloat(m[1]);
+  m = s.match(/Zones\s+\[([^\]]*)\]/);
+  if(m) r.zones = m[1].split(',').map(z=>parseInt(z)).filter(z=>!isNaN(z));
+  m = s.match(/Slain\s+(\d+)/); if(m) r.kills = parseInt(m[1]);
+  for(let c of ['G','S','P','Y','D']){
+    let cmap = {'G':'graph','S':'surge','P':'pathwalker','Y':'syzygy','D':'descent'};
+    if(s.includes('['+c+']') || s.includes('~'+c)) r.conducts.push(cmap[c]);
+  }
+  return r;
+}
+
+function normalizeCult(raw){
+  let cult = {meta:{}, memory:[]};
+  cult.meta = {
+    runs: raw.runs || 0,
+    total_turns: raw.total_turns || 0,
+    total_kills: raw.total_demons_slain || 0,
+    max_hyp: raw.max_hyperstition || 0,
+    overflow_count: raw.overflow_count || 0,
+    cult_zone: raw.cult_zone || 0,
+    schizo: !!raw.schizo_achieved,
+    conducts_completed: raw.conducts_completed || [],
+    conduct_attempts: raw.conduct_attempts || {},
+    gates: raw.gates_ever_opened || [],
+    zones_visited: raw.zones_ever_visited || []
+  };
+  if(raw.cult_memory && Array.isArray(raw.cult_memory)){
+    for(let m of raw.cult_memory){
+      if(typeof m === 'string') cult.memory.push(parseMemString(m));
+      else if(typeof m === 'object' && m !== null){
+        let mr = {
+          run: m.run || 0, player: m.player || 'unknown',
+          turns: m.turns || 0, hyp: m.hyp || 0,
+          zones: m.zones || [], kills: m.kills || 0,
+          conducts: m.conducts || [], raw: m.raw || ''
+        };
+        cult.memory.push(mr);
+      }
+    }
+  }
+  return cult;
+}
+
+async function loadCult(){
+  let bar = document.getElementById('statusBar');
+  bar.textContent = 'fetching...';
+  bar.className = 'status-bar';
+  try {
+    let res = await fetch('./cult.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    let raw = await res.json();
+    CULT = normalizeCult(raw);
+    bar.textContent = 'live -- ' + CULT.meta.runs + ' runs';
+    bar.className = 'status-bar ok';
+    return true;
+  } catch(e){
+    bar.textContent = 'error: ' + e.message;
+    bar.className = 'status-bar err';
+    showError(e.message);
+    return false;
+  }
+}
+
+function showError(msg){
+  let err = document.getElementById('error');
+  let load = document.getElementById('loading');
+  let content = document.getElementById('content');
+  load.style.display = 'none';
+  content.style.display = 'none';
+  err.style.display = 'block';
+  let isFile = window.location.protocol === 'file:';
+  err.innerHTML = '<b>Cannot load cult.json</b><br><br>' +
+    (isFile
+      ? 'You opened this file directly (<code>file://</code>).<br>' +
+        'The browser blocks fetch() for local files.<br><br>' +
+        '<code>python3 game/serve-garden.py</code><br>' +
+        'Then open <code>http://localhost:4545/cult-garden-live.html</code>'
+      : 'Error: ' + msg + '<br><br>Make sure <code>./cult.json</code> exists in the same directory as this HTML.');
+}
+
+// =====================================================================
+// RENDERERS
+// =====================================================================
+
+function renderStats(){
+  let g1 = document.getElementById('statsGrid');
+  let g2 = document.getElementById('statsGrid2');
+  g1.innerHTML = `
+    <div class="stat"><div class="stat-val">${CULT.meta.runs}</div><div class="stat-label">TOTAL RUNS</div></div>
+    <div class="stat"><div class="stat-val">${CULT.meta.total_turns.toLocaleString()}</div><div class="stat-label">TURNS WALKED</div></div>
+    <div class="stat"><div class="stat-val">${CULT.meta.total_kills}</div><div class="stat-label">DEMONS SLAIN</div></div>
+    <div class="stat"><div class="stat-val">${CULT.meta.overflow_count}</div><div class="stat-label">OVERFLOWED</div></div>
+  `;
+  g2.innerHTML = `
+    <div class="stat"><div class="stat-val">${CULT.meta.max_hyp}%</div><div class="stat-label">MAX HYPERSTITION</div></div>
+    <div class="stat"><div class="stat-val">${CULT.meta.cult_zone}</div><div class="stat-label">CULT ZONE (${ZONE_NAMES[CULT.meta.cult_zone].toUpperCase()})</div></div>
+    <div class="stat"><div class="stat-val">${CULT.meta.conducts_completed.length}/5</div><div class="stat-label">CONDUCTS COMPLETE</div></div>
+    <div class="stat"><div class="stat-val">${CULT.meta.zones_visited.length}/10</div><div class="stat-label">ZONES VISITED</div></div>
+  `;
+  document.getElementById('subtitle').textContent =
+    `${CULT.meta.runs} runs / ${CULT.meta.overflow_count} overflows / zone ${CULT.meta.cult_zone} / ${ZONE_NAMES[CULT.meta.cult_zone].toLowerCase()} remembers`;
+}
+
+function renderHeatmap(){
+  let hm = document.getElementById('heatmap');
+  hm.innerHTML = '';
+  let freq = {};
+  for(let z=0;z<10;z++) freq[z]=0;
+  for(let r of CULT.memory){
+    for(let z of r.zones) freq[z] = (freq[z]||0)+1;
+  }
+  let maxf = Math.max(...Object.values(freq),1);
+  for(let z=0;z<10;z++){
+    let cell = document.createElement('div');
+    cell.className = 'hm-cell';
+    let intensity = freq[z]/maxf;
+    let c = ZONE_COLORS[z];
+    let rc = parseInt(c.slice(1,3),16), gc = parseInt(c.slice(3,5),16), bc = parseInt(c.slice(5,7),16);
+    cell.style.background = `rgba(${rc},${gc},${bc},${0.1+intensity*0.5})`;
+    cell.style.borderColor = c;
+    cell.innerHTML = `<div class="hm-num" style="color:${c}">${z}</div><div class="hm-label">${freq[z]}x<br>${ZONE_NAMES[z]}</div>`;
+    hm.appendChild(cell);
+  }
+}
+
+function renderPlayers(){
+  let grid = document.getElementById('playerGrid');
+  grid.innerHTML = '';
+  let players = {};
+  for(let r of CULT.memory){
+    let p = r.player;
+    if(!players[p]) players[p] = {runs:0,turns:0,kills:0,hyp:0,zones:new Set(),max_hyp:0};
+    players[p].runs++;
+    players[p].turns += r.turns;
+    players[p].kills += r.kills;
+    players[p].hyp += r.hyp;
+    r.zones.forEach(z=>players[p].zones.add(z));
+    if(r.hyp > players[p].max_hyp) players[p].max_hyp = r.hyp;
+  }
+  for(let [name,s] of Object.entries(players)){
+    let card = document.createElement('div');
+    card.className = 'player-card';
+    let color = name==='etym'?'#c44':(name==='agent'||name==='crawler')?'#844':'#666';
+    card.innerHTML = `
+      <div class="player-name" style="color:${color}">${name.toUpperCase()}</div>
+      <div class="player-stat">${s.runs} runs / ${s.turns} turns</div>
+      <div class="player-stat">${s.kills} kills / avg hyp ${(s.hyp/s.runs).toFixed(1)}%</div>
+      <div class="player-stat">max hyp ${s.max_hyp}% / ${s.zones.size}/10 zones</div>
+    `;
+    grid.appendChild(card);
+  }
+}
+
+function renderGlyph(r){
+  let zset = new Set(r.zones);
+  let lines = [];
+  lines.push('╔═════╗');
+  lines.push(`║ ${String(r.hyp|0).padStart(3)} ║`);
+  lines.push('╠═════╣');
+  let row='║';
+  for(let z=0;z<5;z++) row += zset.has(z)?'█':'\u00B7';
+  lines.push(row+'║');
+  row='║';
+  for(let z=5;z<10;z++) row += zset.has(z)?'█':'\u00B7';
+  lines.push(row+'║');
+  lines.push('╚═════╝');
+  return lines.join('\n');
+}
+
+function getPrimitive(breadth){
+  if(breadth<=1) return 'grid';
+  if(breadth<=2) return 'line';
+  if(breadth<=3) return 'triangle';
+  if(breadth<=5) return 'ring';
+  if(breadth<=7) return 'ellipse';
+  if(breadth<=9) return 'network';
+  return 'dodecagon';
+}
+
+function renderRunGrid(){
+  let grid = document.getElementById('runGrid');
+  grid.innerHTML = '';
+  document.getElementById('memCount').textContent = CULT.memory.length;
+  for(let r of CULT.memory){
+    let card = document.createElement('div');
+    card.className = 'run-card';
+    let primary = r.zones[r.zones.length-1]||0;
+    let playerColor = r.player==='etym'?'#c44':(r.player==='agent'||r.player==='crawler')?'#844':'#444';
+    let conducts = r.conducts.map(c=>`<span class="conduct-badge">${c}</span>`).join('');
+    card.innerHTML = `
+      <div class="run-num" style="color:${playerColor}">RUN #${r.run}</div>
+      <div class="run-player">${r.player} / ${r.turns}t / ${r.kills}k ${conducts}</div>
+      <div class="run-hyp-bar"><div class="run-hyp-fill" style="width:${r.hyp}%;background:linear-gradient(90deg,${ZONE_COLORS[primary]}44,${ZONE_COLORS[primary]})"></div></div>
+      <div class="run-zones">${r.zones.map(z=>`<span style="color:${ZONE_COLORS[z]}">${z}</span>`).join(' ')}</div>
+      <div class="run-glyph">${renderGlyph(r)}</div>
+      <div class="run-preview">
+        <b>Primitive:</b> ${getPrimitive(r.zones.length)}<br>
+        <b>Glow:</b> ${Math.floor(r.hyp*2.55)} / <b>Chaos:</b> ${Math.min(10,r.kills)} / <b>Speed:</b> ${Math.max(0.5,r.turns/200).toFixed(2)}<br>
+        <b>Primary zone:</b> ${ZONE_NAMES[r.zones[r.zones.length-1]||0]}<br>
+        <b>Cult zone tint:</b> ${ZONE_NAMES[CULT.meta.cult_zone]}
+      </div>
+    `;
+    card.onclick = ()=>{card.classList.toggle('expanded');};
+    grid.appendChild(card);
+  }
+}
+
+function generateCorpse(){
+  let fragments = [];
+  let lastWords = [];
+  let cult_zone = CULT.meta.cult_zone;
+  let zoneTint = {
+    0:{vocab:['silence','void','null','Uttunul'],tempo:'slow',mood:'still'},
+    1:{vocab:['grid','gold','threshold','anchor'],tempo:'steady',mood:'grounded'},
+    2:{vocab:['fork','wound','rift','split'],tempo:'halting',mood:'divided'},
+    3:{vocab:['vortex','swarm','spiral','Djynxx'],tempo:'chaotic',mood:'swarming'},
+    4:{vocab:['wave','collapse','shatter','ripple'],tempo:'surging',mood:'violent'},
+    5:{vocab:['ring','squeeze','pressure','breath'],tempo:'tight',mood:'compressed'},
+    6:{vocab:['dodecagon','form','abstraction','hinge'],tempo:'cool',mood:'distant'},
+    7:{vocab:['pulse','vein','blood','beat'],tempo:'pulsing',mood:'urgent'},
+    8:{vocab:['swarm','flock','multiplicity','echo'],tempo:'layered',mood:'proliferating'},
+    9:{vocab:['core','singularity','iron','Plex'],tempo:'terminal',mood:'inevitable'},
+  };
+  let tint = zoneTint[cult_zone] || zoneTint[0];
+  let zoneNouns = {
+    0:['silence','void','null','zero','Uttunul'],1:['grid','gold','threshold','anchor','stability'],
+    2:['fork','wound','rift','split','separation'],3:['vortex','swarm','spiral','release','Djynxx'],
+    4:['wave','collapse','shatter','ripple','catastrophe'],5:['ring','squeeze','pressure','breath','containment'],
+    6:['dodecagon','form','abstraction','hinge','geometry'],7:['pulse','vein','blood','beat','circulation'],
+    8:['swarm','flock','multiplicity','echo','copy'],9:['core','singularity','iron','collapse','Plex'],
+  };
+  let rng = (seed)=>{let x=seed; return ()=>{x=(x*9301+49297)%233280; return x/233280;}};
+  let rand = rng(CULT.meta.runs*7 + CULT.meta.total_turns);
+  for(let r of CULT.memory){
+    let primary = r.zones[r.zones.length-1] || 0;
+    let nouns = zoneNouns[primary] || zoneNouns[0];
+    let noun = nouns[Math.min(nouns.length-1, Math.max(0, Math.floor(r.hyp/15)))];
+    let verbs;
+    if(r.kills>10) verbs=['rend','tear','gash','sever','wound'];
+    else if(r.kills>5) verbs=['cut','break','burn','crush'];
+    else if(r.kills>0) verbs=['touch','trace','mark','press'];
+    else verbs=['drift','float','pass','linger'];
+    if(r.hyp>80) verbs = verbs.map(v=>v+'ing');
+    let verb = verbs[Math.min(verbs.length-1, Math.floor(r.turns/150)%verbs.length)];
+    let openers;
+    if(r.hyp>=100) openers=['the numogram completes','schizo-lucid state achieved'];
+    else if(r.hyp>80) openers=['the Outside remembers','corrosion is a language'];
+    else if(r.kills>10) openers=['the blood speaks','descent sharpens'];
+    else if(r.zones.length>=8) openers=['the path writes itself','every zone is a word'];
+    else if(r.kills===0 && r.turns>200) openers=['the silence after','restraint is its own reward'];
+    else openers=['the crawler remembers','the path was walked','the dead speak'];
+    let opener = openers[Math.floor(rand()*openers.length)];
+    let connector = ['then','through','beneath','after','inside','beyond','against','before'][Math.floor(rand()*8)];
+    let line;
+    if(lastWords.length>0){
+      let lw = lastWords[lastWords.length-1];
+      if(r.zones.length<=2) line = `${lw} ${connector} ${verb} ${noun}.`;
+      else if(r.zones.length<=5) line = `${opener}. ${lw} ${connector} ${verb} ${noun}.`;
+      else if(r.zones.length<=8) line = `${opener}. ${lw} ${connector} ${verb} ${noun}, and the ${tint.mood} deepens.`;
+      else line = `${opener}. through ${lw}, ${verb} ${noun}. the ${tint.tempo} ${tint.mood} of ${ZONE_NAMES[primary]}.`;
+    } else {
+      line = `${opener}. ${verb} ${noun}.`;
+    }
+    lastWords.push(noun);
+    fragments.push({text:line, run:r.run, hyp:r.hyp, player:r.player});
+  }
+  return fragments;
+}
+
+function renderCorpse(){
+  let fragments = generateCorpse();
+  let container = document.getElementById('corpseText');
+  let html = '';
+  for(let f of fragments){
+    let color = f.hyp>80?'#e88':f.hyp>40?'#c88':'#866';
+    html += `<div class="corpse-line" style="color:${color}">&gt; ${f.text} <span style="color:#533;font-size:9px">[${f.player},#${f.run}]</span></div>`;
+  }
+  container.innerHTML = html;
+}
+
+function renderSynthesis(){
+  let recent = CULT.memory.slice(-5);
+  if(recent.length===0){ document.getElementById('synthPreview').innerHTML='<div class="synth-line">Not enough runs for synthesis.</div>'; return;}
+  let avgHyp = recent.reduce((a,r)=>a+r.hyp,0)/recent.length;
+  let avgTurns = recent.reduce((a,r)=>a+r.turns,0)/recent.length;
+  let totalKills = recent.reduce((a,r)=>a+r.kills,0);
+  let allZones = [...new Set(recent.flatMap(r=>r.zones))].sort((a,b)=>a-b);
+  let players = [...new Set(recent.map(r=>r.player))].sort();
+  let nouns = {0:'silence',1:'grid',2:'fork',3:'vortex',4:'wave',5:'ring',6:'form',7:'pulse',8:'swarm',9:'core'};
+  let chain = recent.map(r=>nouns[r.zones[r.zones.length-1]||0]).join(' -> ');
+  let box = document.getElementById('synthPreview');
+  box.innerHTML = `
+    <div class="synth-title">NEXT SYNTHESIS (run #${CULT.meta.runs+1} overflow)</div>
+    <div class="synth-line">Source runs: ${recent.map(r=>'#'+r.run).join(', ')}</div>
+    <div class="synth-line">Players: ${players.join('+')}</div>
+    <div class="synth-line">Avg hyp: ${avgHyp.toFixed(1)}% / Avg turns: ${avgTurns.toFixed(0)} / Total kills: ${totalKills}</div>
+    <div class="synth-line">All zones: [${allZones.join(', ')}]</div>
+    <div class="synth-line">Zone-noun chain: ${chain}</div>
+    <div class="synth-line">Predicted primitive: ${getPrimitive(allZones.length)}</div>
+  `;
+}
+
+// =====================================================================
+// P5.JS SKETCHES
+// =====================================================================
+
+function setupTimeline(){
+  const wrap = document.getElementById('timeline-wrap');
+  wrap.innerHTML = '';
+  new p5((p)=>{
+    let known = CULT.memory;
+    let totalRuns = CULT.meta.runs;
+    p.setup = ()=>{
+      p.createCanvas(Math.min(1100, window.innerWidth-60), 200);
+      p.colorMode(p.RGB,255,255,255,255);
+    };
+    p.draw = ()=>{
+      let cz = CULT.meta.cult_zone || 0;
+      p.background(6,6,10);
+      // Zone-specific background effects
+      let t = p.frameCount;
+      if(cz===3){
+        p.noStroke();
+        for(let i=0;i<5;i++){
+          let a = t*0.02+i*p.TWO_PI/5;
+          p.fill(255,0,255,8);
+          p.ellipse(p.width/2+p.cos(a)*60,p.height/2+p.sin(a)*40,100);
+        }
+      } else if(cz===4){
+        p.noFill(); p.stroke(0,255,255,20);
+        for(let x=0;x<p.width;x+=20){
+          p.line(x,90+Math.sin((x+t)*0.02)*40,x,90+Math.sin((x+t+10)*0.02)*40);
+        }
+      } else if(cz===7){
+        p.noStroke();
+        p.fill(255,50,50,10+Math.sin(t*0.1)*5);
+        p.rect(0,0,p.width,p.height);
+      }
+      let overflowedRuns = totalRuns - known.length;
+      if(overflowedRuns>0){
+        p.noStroke();
+        p.fill(20,15,15,40);
+        let cutoff = known.length>0 ? p.map(known[0].run, 1, totalRuns, 0, p.width) : p.width*0.8;
+        p.rect(0,0,cutoff,200);
+        p.fill(80,60,60,100);
+        p.textAlign(p.CENTER,p.CENTER);
+        p.textSize(10);
+        p.text(`${overflowedRuns} runs lost to overflow`, cutoff/2, 100);
+      }
+      p.fill(80,60,60,100);
+      p.textAlign(p.CENTER,p.CENTER);
+      p.textSize(10);
+      if(known.length>0){
+        let mid = p.map((known[0].run+totalRuns)/2, 1, totalRuns, 0, p.width);
+        p.text(`${known.length} runs in living memory`, mid, 100);
+      }
+      for(let r of known){
+        let x = p.map(r.run, 1, totalRuns, 20, p.width-20);
+        let y = p.map(r.hyp, 0, 110, 180, 20);
+        let sz = p.map(Math.min(25, r.kills), 0, 25, 3, 14);
+        let col;
+        if(r.player === 'etym') col = p.color(200,60,60);
+        else if(r.player === 'agent' || r.player === 'crawler') col = p.color(140,40,40);
+        else col = p.color(60,60,60);
+        if(r.hyp > 80){
+          p.noStroke();
+          p.fill(p.red(col),p.green(col),p.blue(col),30);
+          p.ellipse(x,y,sz*3);
+        }
+        p.noStroke();
+        p.fill(col);
+        p.ellipse(x,y,sz);
+        if(r.hyp >= 100){
+          p.noFill();
+          p.stroke(255,255,255,120);
+          p.strokeWeight(1);
+          p.ellipse(x,y,sz+8);
+        }
+      }
+      p.fill(100,80,80,80);
+      p.noStroke();
+      p.textAlign(p.LEFT,p.TOP);
+      p.textSize(9);
+      p.text('0%', 2, 175);
+      p.text('50%', 2, 95);
+      p.text('100%', 2, 15);
+      p.text('Run #1', 20, 185);
+      p.textAlign(p.RIGHT,p.TOP);
+      p.text(`Run #${totalRuns}`, p.width-10, 185);
+    };
+  }, wrap);
+}
+
+function setupSynthesis(){
+  const wrap = document.getElementById('canvas-wrap');
+  wrap.innerHTML = '';
+  new p5((p)=>{
+    let particles = [];
+    p.setup = ()=>{
+      p.createCanvas(Math.min(900, window.innerWidth-60), 500);
+      for(let r of CULT.memory){
+        let sig = (r.hyp/100)*5 + (r.kills/20)*3 + (r.zones.length/10)*2;
+        let count = Math.max(3, Math.floor(sig*4));
+        for(let i=0;i<count;i++){
+          particles.push({
+            x:p.random(p.width), y:p.random(500),
+            baseX: CULT.memory.length>1 ? (CULT.memory.indexOf(r)/(CULT.memory.length-1))*(p.width-20)+10 : p.width/2,
+            baseY: 250+(r.hyp-50)*2,
+            run:r, phase:p.random(p.TWO_PI),
+            speed:0.01+r.turns/2000,
+            size:2+r.kills/5,
+            color:p.color(ZONE_COLORS[r.zones[r.zones.length-1]||0]),
+          });
+        }
+      }
+    };
+    p.draw = ()=>{
+      let cz = CULT.meta.cult_zone || 0;
+      p.background(8,4,4,25);
+      let t = p.frameCount;
+      // Zone-specific dream behavior
+      for(let pt of particles){
+        let orbitR = 20+pt.run.hyp*0.5;
+        let a = t*pt.speed+pt.phase;
+        let px,py;
+        if(cz===0){
+          orbitR = 5+pt.run.hyp*0.2;
+          px = pt.baseX+p.cos(a*0.3)*orbitR;
+          py = pt.baseY+p.sin(a*0.3)*orbitR*0.3;
+        } else if(cz===1){
+          px = pt.baseX+Math.round(p.cos(a)*orbitR/10)*10;
+          py = pt.baseY+Math.round(p.sin(a)*orbitR/10)*10;
+        } else if(cz===3){
+          px = pt.baseX+p.cos(a)*orbitR+p.noise(CULT.memory.indexOf(pt.run),t*0.03)*50;
+          py = pt.baseY+p.sin(a*1.3)*orbitR*0.8+p.noise(CULT.memory.indexOf(pt.run)+50,t*0.03)*50;
+        } else if(cz===5){
+          orbitR = 8+pt.run.hyp*0.2;
+          px = pt.baseX+p.cos(a*1.5)*orbitR;
+          py = pt.baseY+p.sin(a*1.5)*orbitR*0.4;
+        } else if(cz===7){
+          let pulse = 1+Math.sin(t*0.15)*0.3;
+          px = pt.baseX+p.cos(a)*orbitR*pulse;
+          py = pt.baseY+p.sin(a)*orbitR*0.5*pulse;
+        } else if(cz===9){
+          let grav = p.dist(pt.baseX,pt.baseY,p.width/2,250)/200;
+          px = pt.baseX+p.cos(a)*orbitR*(1-grav*0.5);
+          py = pt.baseY+p.sin(a)*orbitR*0.5*(1-grav*0.5);
+        } else {
+          let jitter = pt.run.player==='etym'?0.3:1.2;
+          px = pt.baseX+p.cos(a)*orbitR+p.noise(CULT.memory.indexOf(pt.run),t*0.01)*30*jitter;
+          py = pt.baseY+p.sin(a*0.7)*orbitR*0.6+p.noise(CULT.memory.indexOf(pt.run)+99,t*0.01)*20*jitter;
+        }
+        let alpha = 30+pt.run.kills*8+pt.run.hyp*0.3;
+        pt.color.setAlpha(alpha);
+        p.noStroke();
+        p.fill(pt.color);
+        p.ellipse(px,py,pt.size);
+        for(let other of particles){
+          if(other===pt) continue;
+          if(other.run.run!==pt.run.run) continue;
+          let d = p.dist(px,py,other.x,other.y);
+          if(d<40){
+            p.stroke(p.red(pt.color),p.green(pt.color),p.blue(pt.color),8);
+            p.strokeWeight(0.5);
+            p.line(px,py,other.x,other.y);
+          }
+        }
+        pt.x=px; pt.y=py;
+      }
+      for(let r of CULT.memory){
+        let idx = CULT.memory.indexOf(r);
+        let bx = CULT.memory.length>1 ? (idx/(CULT.memory.length-1))*(p.width-20)+10 : p.width/2;
+        let by = 250+(r.hyp-50)*2;
+        p.noStroke();
+        p.fill(120,60,60,60);
+        p.textAlign(p.CENTER,p.CENTER);
+        p.textSize(9);
+        p.text('#'+r.run, bx, by-35);
+        p.noFill();
+        p.stroke(150,50,50,40);
+        p.strokeWeight(1);
+        p.ellipse(bx,by,r.hyp*0.8);
+      }
+      p.noStroke();
+      p.fill(150,80,80,40);
+      p.textAlign(p.LEFT,p.TOP);
+      p.textSize(10);
+      p.text('CULT SYNTHESIS -- ' + CULT.memory.length + ' runs in living memory',20,470);
+    };
+  }, wrap);
+}
+
+// =====================================================================
+// ORCHESTRATION
+// =====================================================================
+
+function renderAll(){
+  let cz = CULT.meta.cult_zone || 0;
+  document.body.className = 'zone-' + cz;
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('error').style.display = 'none';
+  document.getElementById('content').style.display = 'block';
+  renderStats();
+  renderHeatmap();
+  renderPlayers();
+  renderRunGrid();
+  renderCorpse();
+  renderSynthesis();
+  setupTimeline();
+  setupSynthesis();
+}
+
+async function init(){
+  let ok = await loadCult();
+  if(!ok) return;
+  renderAll();
+  lastRuns = CULT.meta.runs;
+  // Poll every 5 seconds
+  pollTimer = setInterval(async ()=>{
+    let ok2 = await loadCult();
+    if(ok2 && CULT.meta.runs !== lastRuns){
+      lastRuns = CULT.meta.runs;
+      // Fade out and re-render
+      let content = document.getElementById('content');
+      content.style.opacity = '0.5';
+      setTimeout(()=>{
+        renderAll();
+        content.style.opacity = '1';
+      }, 200);
+    }
+  }, 5000);
+}
+
+window.addEventListener('DOMContentLoaded', init);
+window.addEventListener('beforeunload', ()=>{ if(pollTimer) clearInterval(pollTimer); });
+</script>
+</body>
+</html>

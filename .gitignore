@@ -1,0 +1,69 @@
+# Cache and temporary files
+.cache/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Logs
+*.log
+*.json.log
+logs/
+
+# Session files
+.hermes/sessions/
+.hermes/obsidian/
+
+# Build outputs
+node_modules/
+build/
+dist/
+*.egg-info/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary
+*.tmp
+*.bak
+*.backup
+*~
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+
+# System files
+.bash_history
+.bash_logout
+.bash_profile
+.bashrc
+.gtkrc-2.0
+.gitconfig
+.gnupg/
+.zshrc
+.pulse-cookie
+.local/
+
+# Configuration
+*.ini
+*.conf
+
+# Media
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.mp3
+*.ogg
+*.wav
+
+# AI models
+Models to test.md
