@@ -15,7 +15,7 @@ import random
 import hashlib
 
 # Relative imports within the package
-from .writer import ModWriter, Pattern, Sample, period_for_note, NOTE_OFFSET
+from .writer import ModWriter, Pattern, Sample, period_for_note, NOTE_OFFSET, PERIOD_TABLE, PERIOD_TABLE, PERIOD_TABLE
 from .utils import generate_square_wave, generate_triangle_wave, generate_noise
 from .mapping import (
     note_and_octave_from_zone,
@@ -331,6 +331,22 @@ class ModComposer:
         octave_third = third_semi // 12
         octave_fifth = fifth_semi // 12
 
+        # ── Clamping detection ──────────────────────────────────────────────
+        # If the absolute semitone index exceeds the period table length,
+        # the note will be clamped to the final entry (period 0).
+        len_periods = len(PERIOD_TABLE)
+        clamp_root  = root_semi  >= len_periods
+        clamp_third = third_semi >= len_periods
+        clamp_fifth = fifth_semi >= len_periods
+
+        # ── Clamping detection ──────────────────────────────────────────────
+        # If the absolute semitone index exceeds the period table length,
+        # the note will be clamped to the final entry (period 0).
+        len_periods = len(PERIOD_TABLE)
+        clamp_root  = root_semi  >= len_periods
+        clamp_third = third_semi >= len_periods
+        clamp_fifth = fifth_semi >= len_periods
+
         ch0, ch1, ch2 = (channels[0], channels[1], channels[2]) if len(channels) >= 3 else (0, 1, 2)
         # Compute actual note names for triad (chromatic), preserving octave structure.
         chromatic = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B']
@@ -361,6 +377,17 @@ class ModComposer:
             'zones': zones,
             'rows': rows,
             'channels': [ch0, ch1, ch2],
+            'tone_data': [
+                {'name': root_note,  'octave': octave_root,  'semitone_index': root_semi,  'clamped': bool(clamp_root)},
+                {'name': third_note_chroma, 'octave': octave_third, 'semitone_index': third_semi, 'clamped': bool(clamp_third)},
+                {'name': fifth_note_chroma, 'octave': octave_fifth, 'semitone_index': fifth_semi, 'clamped': bool(clamp_fifth)},
+            ],
+            'clamped': {
+                'root':  bool(clamp_root),
+                'third': bool(clamp_third),
+                'fifth': bool(clamp_fifth),
+                'max_valid_index': len_periods - 1,
+            },
         }
 
     def inspect_motif(
