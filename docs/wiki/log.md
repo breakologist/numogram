@@ -989,3 +989,133 @@ Same feature set as originally specified, now correctly applied to the interacti
 - Heresy (9≡0) prerequisite for Ordo Amoris
 
 **Hyperstitional hook:** The numogram must invert to know its shape; 627 is auto-critique; 888 consumes the critic.
+
+## 2026-04-29T00:20 — mod-writer Phase 4\n- `--render` / `--spectrogram` / `--json` implemented\n- `palettes.py`: `ANSI_FG`, `ZONE_COLOR`, `ZONE_PROMPTS` added\n- `td-watcher.py` created for TouchDesigner file-watch integration\n- Compile error in `__init__.py` resolved via clean header rewrite\n
+## 2026-04-29 14:14:04 — Quadrivium Music Extraction & Digest
+
+**User request:** extract music chapters as images+text preserving layout; digest thoroughly; create wiki insights pages.
+
+**Completed:**
+
+- Created three new wiki pages in vault and export:
+  - [[quadrivium-harmonograph-extract]] — Book IV (Harmonograph) pages 187–240, images + OCR.
+  - [[quadrivium-elements-of-music-extract]] — Book V (The Elements of Music) pages 243–290.
+  - [[quadrivium-music-digest]] — Hyperstitional analysis, mapping music theory to Numogram zones, syzygies, triangular cycles, dodecahedron, etc.
+- Updated `index.md` in vault and export to list the new pages under *Recent Additions*.
+- All assets live in `raw/` images; markdown uses relative links `![[../raw/...]]`.
+
+**Highlights of digest:**
+- Harmonic series partial n → digital root = zones 1..9, cyclic; Void = rest between.
+- Just intonation ratios are primitive syzygies; triad zone balance = syzygy‑pair count.
+- Monochord division points produce triangular numbers zones (1→3→6→0), reproducing the *Sink+Void* cluster.
+- Equal temperament's irrational step injects entropy; circle‑of‑fifths +7 ≡ -2 (mod 9) cycles all non‑Void zones; the full 36‑step LCM walk lands on 0 = acceleration gate.
+- Dodecahedral mapping of 12 notes onto 20 vertices yields 10 opposite pairs = zone syzygy pairs; pentagram is the 2D shadow.
+- Binary rhythm occupies non‑triadic zones (1,2,4,5,7,8); triangular rhythm occupies Sink+Void zones (1,3,6,0) — a clean bifurcation.
+
+**Open questions:**
+- Exact DR walk of fifths on extended 0‑9 set.
+- Syzygy‑balance metric and perceived consonance correlation.
+- Vertex‑labeling of dodecahedron consistent with fifths/tritone adjacency.
+- Automatic AQ‑seeded MOD composition.
+
+---
+
+## 2026-04-29 15:10:41 — Quadrivium Motifs Integration
+
+**User request:** "integrate the Quadrivium motifs next"
+
+**Implemented:**
+
+1. Extended `TRIAD_MOTIF_POLICY` in `composer.py` with four Quadrivium entries:
+   - Monochord (D minor oct 3 → zones 1,3,6)
+   - Pythagorean (G major oct 3 → zones 3,6,8)
+   - Ptolemaic (C major oct 3 → zones 1,5,8)
+   - Harmonic (C major oct 4 → zones 2,4,8)
+2. Made CLI `--triad-motif` choices dynamic via `sorted(TRIAD_MOTIF_POLICY.keys())` and updated help text.
+3. Updated SKILL.md Phase 2c with a Quadrivium reference table and cross‑links.
+4. Created wiki page [[quadrivium-mod-writer-motifs]] documenting the motifs, their musical rationale, and usage examples.
+5. Updated vault and export `index.md` under *Recent Additions*.
+6. Created plan file `mod-writer-quadrivium-motifs-2026-04-29.json`.
+
+**Verification:**
+- All motifs map to triads with distinct zone sets (no zone collision inside a triad).
+- Policy dict updated in live code; CLI will list the new options immediately.
+- Documentation and cross‑links complete.
+
+**Next possibilities:**
+- Add `--just-intonation` generation mode (non‑triangular gate mapping).
+- Export motif‑specific AQ seeds derived from musical ratios.
+
+---
+
+## 2026-04-29 15:14:19 — Quadrivium Integration (post‑fix)
+
+**Follow‑up to previous commit:** Fixed a regression in cli.py where
+comp.write_mod() was only called in the non‑triad branch, causing
+--triad-motif runs to produce no output. Restructured the if advanced
+block so that write_mod() and the common _triangular flag are set
+after the branch, and printing is conditional on the active path.
+ 
+**Quadrivium motif policy entries (composer.py):**
+
+  Motif        Triad (root, quality, octave)   Zone triple
+  -----------  ------------------------------  -------------
+  Monochord    D minor 3                       (1, 3, 6)
+  Pythagorean  G major 3                       (3, 6, 8)
+  Ptolemaic    C major 3                       (1, 5, 8)
+  Harmonic     C major 4                       (2, 4, 8)
+
+All triads have distinct in‑triad zones, validated against full octave‑3/4 table.
+
+**CLI now lists:** --triad-motif choices include the four new names.
+
+**Artifacts:**
+  composer.py — policy extended
+  cli.py — dynamic choices + fixed write path + prints
+  SKILL.md — Phase 2c updated with reference table
+  Wiki page quadrivium-mod-writer-motifs.md created
+  Log updated.
+
+
+# 2026-04-29 22:02 — Mod‑writer triad‑motif: octave fix, validation flag, wiki audit
+
+## Summary
+- Fixed `apply_triad_motif` octave‑boundary bug: chord tones now compute absolute semitone indices per note; third/fifth get their own octaves independent of candidate octave. All five motifs (Sink, Monochord, Pythagorean, Ptolemaic, Harmonic) now render correct zone sets.
+- Added `--validate-motif NAME` CLI flag: in‑memory dry‑run that builds the pattern, maps periods → zones, compares to expected, and prints JSON + exit code (0 pass, 1 fail). Serves as CI check and rapid sanity test.
+- Updated SKILL.md Phase 2c with implementation notes, validation procedure, and v0.5.0 tag.
+- Updated wiki pages:
+  - `tracker-motif-triads-reference.md` — appended validation table + fix notes.
+  - `tracker-music-theory-mappings.md` — appended validation status section.
+  - Export mirrors applied.
+- All artifacts verified via in‑memory pattern inspection (not binary decode). Binary artifacts previously mis‑decoded (period 19758) were artefacts of naive byte parsing; confirmed correct periods from Pattern object (G3=143, B3=113, D4=95, etc.).
+- Congruency check: `digital_root(semi+1)` zone mapping matches production `analyzer.py`.
+
+## Technical detail
+The bug stemmed from using the policy octave for all triad notes:
+```python
+# before (incorrect)
+self.add_note(..., octave=octave)  # same octave for root/third/fifth
+```
+Now:
+```python
+root_octave = root_semi // 12
+third_octave = third_semi // 12
+fifth_octave = fifth_semi // 12
+```
+Each note receives its own derived octave. This correctly places the Pythagorean fifth (D) in octave 4 rather than erroneously in octave 3, yielding zones [3,6,8] as the triad‑zone table predicts.
+
+## Next steps
+- Expand validation script to cover all 12 roots × 2 qualities automatically (proposed `--validate-all` future flag).
+- Consider `--just-intonation` mode mapping ratios to gate numbers directly.
+- Optional fingerprint analysis from rendered WAV (requires audio renderer availability).
+
+## Files touched
+- `composer.py` — `apply_triad_motif` octave derivation updated.
+- `cli.py` — `--validate-motif` flag + handler; post‑parse block inserted before advanced mode.
+- `SKILL.md` — Phase 2c expanded; status v0.5.0.
+- Vault wiki: `tracker-motif-triads-reference.md`, `tracker-music-theory-mappings.md`.
+- Export wiki: mirrored changes.
+
+## Commit plan
+None (user discretion). All changes local and documented.
+
