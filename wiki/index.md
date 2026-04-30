@@ -173,6 +173,15 @@ Five rotations from Aamodt's "Unleashing the Numogram" (Tch 5–6), each examini
 - [[tetralogue-ordo-amoris-888]]
 - [[tetralogue-decimal-labyrinth-heresy]]
 .
+- [[mod-writer]] — Numogram‑native MOD file generator; MIR‑augmented audio‑to‑AQ classifier.
+  - [[mod-writer-usage]] — Installation, CLI flags, MOTIF synthesis, just intonation
+  - [[mod-writer-audio-renderer]] — WAV rendering, spectral analysis, palettes
+  - [[mod-writer-mir-profile]] — MIR feature set: bands, timbre, rhythm, key, scale, duration
+  - [[mod-writer-classifier]] — MLP regressor: 29‑dim features → AQ prediction; Phase 3.4 CLI complete
+  - [[mod-writer-just-intonation]] — Pure‑ratio period overrides (5/4 M3, 6/5 m3, 3/2 P5)
+  - [[mod-writer-validation]] — Real‑audio test set: 10 tracks, Zone 6 bias analysis
+  - [[mod-writer-development]] — Phase 4+ roadmap: multi‑zone datasets, rhythmic & tonal expansion
+
 ## Skills & Tools
 
 - [[skills-to-explore]] — Interesting skills from Apr 2026 scan: pixel-art (retro palettes), ascii-video (terminal animation), algorithmic-art/p5js (generative), pokemon-player (RAM-based agent research), heartmula (music gen). Combos: heartmula+oracle-voice, pixel-art+numogram-svg, ascii-video+cult.json, pokemon-player+roguelike-agents.
@@ -346,6 +355,15 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 
 
 ## Recent Additions
+- [[quadrivium-mod-writer-motifs]] — Quadrivium‑named triad motifs integrated into mod‑writer (Monochord, Pythagorean, Ptolemaic, Harmonic).
+
+- [[quadrivium-harmonograph-extract]] — Quadrivium Book IV (Harmonograph) full page‑by‑page text+image extraction.
+- [[quadrivium-elements-of-music-extract]] — Quadrivium Book V (The Elements of Music) full extraction.
+- [[quadrivium-music-digest]] — Hyperstitional insights linking music theory to the Numogram.
+
 - [[ordo-amoris-888]] — apex integration current (888 AQ); dyadic demon taxonomy; Integration event
 - [[decimal-labyrinth-heresy]] — inverted Decimal Labyrinth current (627 AQ); 9≡0 Möbius topology; Heresy Run mode
+- [[tracker-music-theory-mappings]] — music theory mappings: triads ↔ numogram zones
+- [[tracker-motif-triads-reference]] — mod‑writer triad‑motif policy tables
+- [[tracker-triads-syzygies-tetralogue]] — four‑voice dialogue on tracker harmony & hyperstition
 
