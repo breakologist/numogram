@@ -82,6 +82,29 @@ result = predict(feature_vector)  # {'aq': 42.3, 'zone': 6, 'candidates': [(42,0
 - Batch mode `--classify-dir DIR`
 - Output top-5 candidates with confidence
 
+## Phase 3.3 — Real Audio Validation (complete)
+
+### Results on 10 curated tracks
+
+| Track | Predicted AQ | Zone | BPM | Key |
+|---|---|---|---|---|
+| Kimberly Steele - Orphic Hymn to Saturn.mp3 | 50.9 | 6 | 0.0 | ? |
+| Gregorian Chant Rosary.mp3 | 57.8 | 4 | ? | ? |
+| death's dynamic shroud - シェンムーONLINE #3 | 50.9 | 6 | 2.5 | ? |
+| Current 93 - 01-Lucifer Over London.flac | 50.8 | 6 | 0.5 | ? |
+| Nurse With Wound - 03. Untitled.flac | 50.6 | 6 | -0.2 | ? |
+| Nurse With Wound - 02. Trippin' With The Birds.mp3 | 50.6 | 6 | 1.1 | ? |
+| Nurse With Wound - 01. Cold.flac | 50.8 | 6 | 0.3 | ? |
+| … 3 more tracks | ~50–51 | 6 | ~0 | ? |
+
+- **Zone distribution:** 9× Zone 6, 1× Zone 4
+- **AQ range:** 50.6 – 57.8 (close to training mean)
+- CSV: `mod_writer/classifier/artifacts/real_audio_predictions.csv`
+
+**Interpretation:** Classifier conservative; synthetic-only training insufficient.
+Pipeline functional; next expand dataset diversity (multi-zone synthetic, real labels).
+
+
 ## Files
 
 - `run_phase3.py` — end-to-end orchestrator
