@@ -91,6 +91,34 @@ Open `visualizer/numogram-visualizer-v7.html` in any browser. Features:
 - Quasiphonic particle labels (zone-aligned phonemes)
 - Djynxxogram Base-36 full toggle variant (v7-djynxxogram)
 
+
+### mod-writer (Numogram Tracker)
+
+Tracker composition using numogram-native motifs. Generates standard `.mod` files
+(ProTracker-compatible) from AQ seeds, syzygy chains, and triangular patterns.
+
+```bash
+# Basic generation
+python -m mod_writer --seed 123 --triad-motif Warp --rows 32
+
+# Just intonation mode (v0.6.0+)
+python -m mod_writer --seed 7 --triad-motif Warp --just-intonation
+
+# Song builder (multi-section)
+python -m mod_writer --song examples/warp-suite.json --bpm 128
+```
+
+**Features:**
+- AQ‑seeded pseudo‑random pattern generation
+- Triangular syzygy motif routing (Warp, Fives, Mesh, CTS)
+- Just‑intonation third/fifth overrides (pure ratios)
+- Multi‑section `SongBuilder` with sample auto‑rename
+- Audio analysis & MIR profiling (`--profile-audio`, `--mir-seed`)
+- Full manifest output (samples, patterns, instruments)
+
+See `mod-writer/` for the complete skill, tests, and examples. Wiki:  
+`docs/wiki/numogram-audio/mod-writer/` (usage, development, audio renderer, triangular semantics).
+
 ## Repository Status
 
 The wiki has completed a full structural audit (April 2026):
