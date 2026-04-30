@@ -24,3 +24,5 @@ Generates a four‑channel chord with syzygy harmony on channels 1‑3.
 - `mod-writer-mir-profile.md` — MIR profiling API and schema
 - `mod-writer-audio2aq.md` — training an audio → AQ mapping model
 - `mod-writer-reverse-transcription.md` — `--from-audio` direct transcription
+
+- [[mod-writer-classifier]] — MIR → AQ classifier prototype (Phase 3)
