@@ -1,0 +1,19 @@
+{
+  "duration": 7.78,
+  "sample_rate": 48000,
+  "channels": 2,
+  "bit_depth": 16,
+  "rms": 0.09440608762859236,
+  "peak": 0.588843655355589,
+  "true_peak": 0.588843655355589,
+  "lufs": -23.0,
+  "dc_offset": 0.0,
+  "crest_factor": 0.494438,
+  "peak_count": 0,
+  "quality": "pass",
+  "spectral_centroid": null,
+  "spectral_rolloff": null,
+  "spectral_flux": null,
+  "onset_count": 32,
+  "onset_density": 4.113
+}
