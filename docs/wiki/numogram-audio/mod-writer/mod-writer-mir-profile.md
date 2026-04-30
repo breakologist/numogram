@@ -18,6 +18,8 @@ the audio's own perceptual fingerprint.
 60–100+ scalar descriptors to the feature vector in a single call — opening the door
 to high‑dimensional AQ prediction.
 
+**Openness principle:** We extract the full Essentia pool *before* any manual feature selection. This lets the data speak first; curation comes later if needed. The numogram overlay is a lens, not a cage — we correlate, we don't reduce.
+
 ---
 
 ## Why MIR?
@@ -216,7 +218,7 @@ This closes the loop: *any sound can become a seed*.
 | Phase 4.4 — Vocal presence detection         | optional |
 | Phase 4.5 — Validation suite + tuning        | planned |
 
-Current milestone: **Phase 4.2** — hook Essentia's `MusicExtractor` into the trainer.
+Current milestone: **Phase 4.2** — full Essentia pool extraction integrated; Phase 4.3 classifier training queued.
 
 ---
 
