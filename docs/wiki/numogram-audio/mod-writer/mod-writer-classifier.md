@@ -84,7 +84,20 @@ python run_phase3.py
   - Acc@5: 10 % (true AQ within ±5)
   - **ZoneAcc:** 10 % (chance)
 
-### Phase 4.3 — Zone classification — planned
+### Phase 4.2 — Full‑Pool Feature Expansion (in progress)
+
+Running Essentia full‑pool extraction on the same 900 balanced seeds.
+
+Command:
+```bash
+python run_phase4_dataset.py --use-all --output artifacts/dataset_fullpool_900.npz
+```
+
+Expected feature dimension: ~80–120 (depends on Essentia pool content). This runs much slower than baseline (~2–5 s/track).
+
+**Status:** running (PID stored in `artifacts/phase4.2.pid`).
+
+## Phase 4.3 — Zone classification — planned
 - New model: `MLPClassifier` (9‑class softmax)
 - Training on `dataset_balanced_900.npz` (80/20 stratified per zone)
 - Expected **synthetic** accuracy: **≥50 %**; **real‑audio** set: **≥30 %**

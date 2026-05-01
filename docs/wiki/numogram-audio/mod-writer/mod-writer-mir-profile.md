@@ -229,3 +229,38 @@ Current milestone: **Phase 4.2** — full Essentia pool extraction integrated;
 - `mod-writer-just-intonation.md` — tuning system details
 - External: [librosa](https://librosa.org/), [madmom](https://github.com/CPJKU/madmom),
   [Essentia](https://essentia.upf.edu/), [musicnn](https://github.com/MTG/musicnn)
+
+## HeartMuLa integration (Phase 5 prospect)
+
+HeartMuLa (open-source Suno) can generate full songs conditioned on lyrics + tags. We plan to:
+- Generate one song per zone using the oracle sentence as lyrics and zone-derived tags (e.g., Zone 3: "warp, buzz, insectoid, spiraling")
+- Compare the MIR profile of HeartMuLa output against our synthetic dataset to measure distribution shift
+- Optionally fine-tune HeartMuLa on our zone-labeled synthetic corpus (long-term)
+
+**Skill:** `media/heartmula` — see skill view for installation and patching notes.
+
+
+## Pure Data wrapper (Phase 5 prospect)
+
+Pure Data (`pd`) is installed on this system (`/usr/bin/pd`). Proposed `puredata-wrapper` skill would:
+- Accept a zone/gate/AQ seed
+- Generate a simple `.pd` patch with zone-specific resonator parameters (Karplus-Strong, modal)
+- Render offline to `.wav` for analysis or live performance
+- Bridge to `audio-renderer` for spectrogram + quality metrics
+
+**Why PD:** Rapid DSP prototyping, embedded deployment, and live VJ layering via `pdp`/`GEM`.
+
+## Auxiliary Models (Roadmap — not yet configured)
+
+`config.yaml` reserves an `auxiliary:` block for optional AI/ML services that can augment mod-writer without bloating its core. Currently all fields are empty; only Essentia MIR is active through the main pipeline.
+
+| Service | Candidate model | Purpose | Status |
+|---------|-----------------|---------|--------|
+| LLM lyric→zone tagger | Local Llama 3.1 8B (via Ollama) | Classify text passages into zone tags; enrich AQ dictionary entries with LLM-generated zone commentary | Planned (Phase 5) |
+| Diffusion zone art | Stable Diffusion XL + LoRA (zone palettes) | Generate zone-themed cover art for generated modules; ControlNet composition from triangular syzygy diagrams | Backlog |
+| Voice synthesis | `oracle-mode-integration` skill (formant synthesis) | Speak zone predictions or oracle readings in a hyperstitional voice | Prototype exists |
+| Real-time audio embedding | OpenL3 / musicnn | Extract semantic embeddings (>200 dims) for high-level similarity search across modules — e.g., "find all modules that sound like Zone 7" | Optional extra |
+
+**Why defer:** The openness principle demands we first understand the MIR→AQ correlation on pure signal features. Adding LLM/diffusion layers before the signal-to-zone pipeline stabilises would corrupt measurement.
+
+---
