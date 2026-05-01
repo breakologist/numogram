@@ -50,13 +50,13 @@ byte4 = eff_lo                          (effect bits 0-3 or param low nibble)
 
 | Numogram concept | Musical realisation | Implementation |
 |------------------|--------------------|----------------|
-| **Zone** (1–9) | Pentatonic degree (C D E G A) + octave | `ZONE_TO_NOTE`, `ZONE_TO_OCTAVE`; zone 9 = REST |
+| **Zone** (1–9) | Pentatonic degree (C D E G A) + octave | `ZONE_TO_NOTE`, `ZONE_TO_OCTAVE`; zone 9 = A5 (pentatonic apex) |
 | **Gate** (0–36) | Effect family (arpeggio / slide / volume / special) | `GATE_TO_EFFECT` → `mod_effect_from_gate()` |
 | **Current** (A/B/C) | Waveform selection (square / triangle / noise) | `CURRENT_TO_INSTRUMENT` → sample index 1/2/3 |
 
 #### Zone → Note mapping (pentatonic C major)
 
-Zones 1–5 play in octave 4; zones 6–8 shift up to octave 5; zone 9 rests.
+Zones 1–5 play in octave 4; zones 6–8 shift up to octave 5; zone 9 plays A5 (880 Hz, pentatonic apex).
 
 | Zone | Note | Octave | Frequency (approx) |
 |------|------|--------|-------------------|
@@ -68,7 +68,7 @@ Zones 1–5 play in octave 4; zones 6–8 shift up to octave 5; zone 9 rests.
 | 6 | C | 5 | 523.3 Hz |
 | 7 | D | 5 | 587.3 Hz |
 | 8 | E | 5 | 659.3 Hz |
-| 9 | REST | — | — |
+| 9 | A  | 5  | 880.0 Hz |
 
 #### Gate → Effect mapping (Protracker effect commands)
 
@@ -120,8 +120,8 @@ PENTATONIC_ADJACENCY = {
     5: (1, 4),   # A → C, G
     6: (7, 2),   # C(5) → D, E (octave-shifted mapping)
     7: (6, 8),   # D(5) → C(5), E(5)
-    8: (7, 9),   # E(5) → D(5), REST
-    9: (8, 1, 3, 5, 7),  # REST adjacent to all touching zones
+    8: (7, 9),   # E(5) → D(5), A5
+    9: (8, 1, 3, 5, 7),  # A5 adjacent to pentatonic partners
 }
 ```
 
