@@ -6,6 +6,7 @@ status: reviewed
 ---
 
 ## Introduction
+- [[currents.md]] — Five currents (Numogram, Roguelike, Lore, Audio, Empirical Validator)
 
 This wiki documents the Decimal Numogram (also called the Numogram or Decimal Labyrinth) — the core diagram of the Pandemonium system developed by the CCRU (Cybernetic Culture Research Unit) in the late 1990s/early 2000s. The Numogram is a kind of occult-mathematical time-map used for "Lemurian time-sorcery," hyperstition, and demonic numerics.
 
@@ -183,8 +184,11 @@ Five rotations from Aamodt's "Unleashing the Numogram" (Tch 5–6), each examini
   - [[mod-writer-validation]] — Real‑audio test set: 10 tracks, Zone 6 bias analysis
   - [[mod-writer-development]] — Phase 4+ roadmap: multi‑zone datasets, rhythmic & tonal expansion
 
+- [[phase5-roadmap.md]] — Phase 5 project clusters (mod-writer closed-loop hyperstition)
 ## Skills & Tools
+- [[tetralogue-phase4-review-phase5-direction.md]] — Post-Phase 4 council minutes (Oracle/Builder/Writer/Gamer consensus)
 
+- [[phase5-ideas]] — Nine proposed Phase 5 skills (zone-constrained, VAE, live feedback, etc.)
 - [[skills-to-explore]] — Interesting skills from Apr 2026 scan: pixel-art (retro palettes), ascii-video (terminal animation), algorithmic-art/p5js (generative), pokemon-player (RAM-based agent research), heartmula (music gen). Combos: heartmula+oracle-voice, pixel-art+numogram-svg, ascii-video+cult.json, pokemon-player+roguelike-agents.
 - [[aq-calculator-design]] — Design document and implementation notes for standalone AQ calculators. Minimal core vs themed polished version, colour palette rationale, zone flavour catalog, history schema, extensibility points, and canonical test vectors. From 9B local‑model design session (earlier Hermes instance).
 
