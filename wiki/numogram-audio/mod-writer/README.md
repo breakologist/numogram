@@ -20,7 +20,7 @@ Validation:
 
 ## Features
 
-- Zone → pentatonic mapping (1-8 → notes, 9 = REST)
+- Zone → pentatonic mapping (1-8 → notes, 9 = A5 pentatonic apex)
 - Triad motifs (Warp/Sink/Hold/Rise/Void + Quadrivium systems)
 - Gate encoding (0-36 → Protracker effect)
 - Current selection (A/B/C) selects sample set
