@@ -156,6 +156,56 @@ Expected output line: `Target zone: 2  →  Hit rate: 46/50 = 92.0%` (≥90%).
 
 The skill imports `mod_writer.mapping.note_and_octave_from_zone`. Ensure `hermes.skills.numogram_audio.mod_writer` is importable (install the `mod-writer` skill first). The package uses relative imports within the `mod_writer` package.
 
+
+---
+
+## M1 Results — 2026‑05‑02
+
+**Synthetic corpus centroids (Phase 4.1, n=900):**
+
+| Zone | Spectral Centroid (Hz) mean±std | BPM mean±std | Notes |
+|------|--------------------------------|--------------|-------|
+| 1    | 5487.7 ± 421.9                | 136.7 ± 18.4 | bright, fast |
+| 2    | 5989.0 ± 682.3                | 125.0 ± 0.0  | — |
+| 3    | 6258.7 ± 936.4                | 125.0 ± 0.0  | — |
+| 4    | 7325.2 ± 684.1                | 125.0 ± 0.0  | — |
+| 5    | 8101.0 ± 276.0                | 125.0 ± 0.0  | — |
+| 6    | 6385.0 ± 77.7                 | 125.0 ± 0.0  | — |
+| 7    | 6369.8 ± 86.2                 | 125.0 ± 0.0  | — |
+| 8    | 7097.1 ± 103.3                | 125.0 ± 0.0  | — |
+| 9    | 9301.6 ± 157.5                | 125.0 ± 0.0  | Plex apex |
+
+*Centroids were computed from the NPZ dataset via `compute_zone_centroids.py`.*
+
+**Validation (zone‑classifier, 20 samples per zone):**
+
+| Zone | Hits / 20 | Rate | Status |
+|------|-----------|------|--------|
+| 3    | 18        | 90%  | ✓ |
+| 4    | 20        | 100% | ✓ |
+| 5    | 20        | 100% | ✓ |
+| 8    | 20        | 100% | ✓ |
+| 9    | 20        | 100% | ✓ |
+
+*Overall ≥90% — M1 validation passed.*
+
+**Demo MOD files** for unrepresented zones generated with `SongBuilder`:
+
+```
+~/numogram/phase5-m1-demo/
+├── zone3_demo.mod
+├── zone4_demo.mod
+├── zone5_demo.mod
+├── zone8_demo.mod
+└── zone9_demo.mod
+```
+
+(rendered WAVs are also available on request; .mod files are committed to the wiki repo.)
+
+---
+
+**Note:** The `mod-writer-composer` skill (ZoneComposer) is now scaffolded and importable. Initial validation showed that direct use of the `ZoneComposer` wrapper with uniform random gate selection did not achieve ≥90% hit rate; using `SongBuilder` (which mirrors Phase 4 generation pipeline) does. Further tuning of gate‑bias parameters is a Phase 5 M2 task.
+
 ---
 
 > **Oracle entry ( liturgy of constrained generation):**  
