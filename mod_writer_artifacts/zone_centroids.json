@@ -1,0 +1,119 @@
+{
+  "1": {
+    "centroid_mean": 5487.7,
+    "centroid_std": 421.9,
+    "centroid": 5487.7,
+    "bpm_mean": 136.7,
+    "bpm_std": 18.4,
+    "bpm": [
+      126,
+      146
+    ],
+    "onset_rate_mean": 0.0,
+    "track_count": 100
+  },
+  "2": {
+    "centroid_mean": 5989.0,
+    "centroid_std": 682.3,
+    "centroid": 5989.0,
+    "bpm_mean": 125.0,
+    "bpm_std": 0.0,
+    "bpm": [
+      115,
+      135
+    ],
+    "onset_rate_mean": 0.0,
+    "track_count": 100
+  },
+  "3": {
+    "centroid_mean": 6258.7,
+    "centroid_std": 936.4,
+    "centroid": 6258.7,
+    "bpm_mean": 125.0,
+    "bpm_std": 0.0,
+    "bpm": [
+      115,
+      135
+    ],
+    "onset_rate_mean": 0.0,
+    "track_count": 100
+  },
+  "4": {
+    "centroid_mean": 7325.2,
+    "centroid_std": 684.1,
+    "centroid": 7325.2,
+    "bpm_mean": 125.0,
+    "bpm_std": 0.0,
+    "bpm": [
+      115,
+      135
+    ],
+    "onset_rate_mean": 0.0,
+    "track_count": 100
+  },
+  "5": {
+    "centroid_mean": 8101.0,
+    "centroid_std": 276.0,
+    "centroid": 8101.0,
+    "bpm_mean": 125.0,
+    "bpm_std": 0.0,
+    "bpm": [
+      115,
+      135
+    ],
+    "onset_rate_mean": 0.0,
+    "track_count": 100
+  },
+  "6": {
+    "centroid_mean": 6385.0,
+    "centroid_std": 77.7,
+    "centroid": 6385.0,
+    "bpm_mean": 125.0,
+    "bpm_std": 0.0,
+    "bpm": [
+      115,
+      135
+    ],
+    "onset_rate_mean": 0.0,
+    "track_count": 100
+  },
+  "7": {
+    "centroid_mean": 6369.8,
+    "centroid_std": 86.2,
+    "centroid": 6369.8,
+    "bpm_mean": 125.0,
+    "bpm_std": 0.0,
+    "bpm": [
+      115,
+      135
+    ],
+    "onset_rate_mean": 0.0,
+    "track_count": 100
+  },
+  "8": {
+    "centroid_mean": 7097.1,
+    "centroid_std": 103.3,
+    "centroid": 7097.1,
+    "bpm_mean": 125.0,
+    "bpm_std": 0.0,
+    "bpm": [
+      115,
+      135
+    ],
+    "onset_rate_mean": 0.0,
+    "track_count": 100
+  },
+  "9": {
+    "centroid_mean": 9301.6,
+    "centroid_std": 157.5,
+    "centroid": 9301.6,
+    "bpm_mean": 125.0,
+    "bpm_std": 0.0,
+    "bpm": [
+      115,
+      135
+    ],
+    "onset_rate_mean": 0.0,
+    "track_count": 100
+  }
+}
