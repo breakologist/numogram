@@ -1,0 +1,110 @@
+[
+  {
+    "zone": 1,
+    "aq": 1,
+    "gate": 9,
+    "bpm": 125.0,
+    "onset_rate": null,
+    "beat_conf": null,
+    "spectral_centroid_hz": 6620.84,
+    "sub_bass": 0.00930000003427267,
+    "pred_no_base": 1,
+    "pred_base": 1
+  },
+  {
+    "zone": 2,
+    "aq": 2,
+    "gate": 30,
+    "bpm": 125.0,
+    "onset_rate": null,
+    "beat_conf": null,
+    "spectral_centroid_hz": 5313.98,
+    "sub_bass": 0.0026000000070780516,
+    "pred_no_base": 2,
+    "pred_base": 2
+  },
+  {
+    "zone": 3,
+    "aq": 3,
+    "gate": 23,
+    "bpm": 125.0,
+    "onset_rate": null,
+    "beat_conf": null,
+    "spectral_centroid_hz": 5434.24,
+    "sub_bass": 0.0017000000225380063,
+    "pred_no_base": 3,
+    "pred_base": 3
+  },
+  {
+    "zone": 4,
+    "aq": 4,
+    "gate": 22,
+    "bpm": 165.44,
+    "onset_rate": null,
+    "beat_conf": null,
+    "spectral_centroid_hz": 6927.55,
+    "sub_bass": 0.004900000058114529,
+    "pred_no_base": 4,
+    "pred_base": 4
+  },
+  {
+    "zone": 5,
+    "aq": 5,
+    "gate": 7,
+    "bpm": 125.0,
+    "onset_rate": null,
+    "beat_conf": null,
+    "spectral_centroid_hz": 8242.75,
+    "sub_bass": 0.004000000189989805,
+    "pred_no_base": 5,
+    "pred_base": 5
+  },
+  {
+    "zone": 6,
+    "aq": 6,
+    "gate": 29,
+    "bpm": 165.44,
+    "onset_rate": null,
+    "beat_conf": null,
+    "spectral_centroid_hz": 6406.56,
+    "sub_bass": 0.00800000037997961,
+    "pred_no_base": 6,
+    "pred_base": 6
+  },
+  {
+    "zone": 7,
+    "aq": 7,
+    "gate": 26,
+    "bpm": 125.0,
+    "onset_rate": null,
+    "beat_conf": null,
+    "spectral_centroid_hz": 6456.76,
+    "sub_bass": 0.004399999976158142,
+    "pred_no_base": 7,
+    "pred_base": 7
+  },
+  {
+    "zone": 8,
+    "aq": 8,
+    "gate": 25,
+    "bpm": 125.0,
+    "onset_rate": null,
+    "beat_conf": null,
+    "spectral_centroid_hz": 7144.65,
+    "sub_bass": 0.006099999882280827,
+    "pred_no_base": 8,
+    "pred_base": 8
+  },
+  {
+    "zone": 9,
+    "aq": 9,
+    "gate": 31,
+    "bpm": 125.0,
+    "onset_rate": null,
+    "beat_conf": null,
+    "spectral_centroid_hz": 9192.59,
+    "sub_bass": 0.0044999998062849045,
+    "pred_no_base": 9,
+    "pred_base": 9
+  }
+]
