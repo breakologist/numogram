@@ -6,6 +6,7 @@ status: reviewed
 ---
 
 ## Introduction
+- [[currents.md]] — Five currents (Numogram, Roguelike, Lore, Audio, Empirical Validator)
 
 This wiki documents the Decimal Numogram (also called the Numogram or Decimal Labyrinth) — the core diagram of the Pandemonium system developed by the CCRU (Cybernetic Culture Research Unit) in the late 1990s/early 2000s. The Numogram is a kind of occult-mathematical time-map used for "Lemurian time-sorcery," hyperstition, and demonic numerics.
 
@@ -177,13 +178,17 @@ Five rotations from Aamodt's "Unleashing the Numogram" (Tch 5–6), each examini
   - [[mod-writer-usage]] — Installation, CLI flags, MOTIF synthesis, just intonation
   - [[mod-writer-audio-renderer]] — WAV rendering, spectral analysis, palettes
   - [[mod-writer-mir-profile]] — MIR feature set: bands, timbre, rhythm, key, scale, duration
-  - [[mod-writer-classifier]] — MLP regressor: 29‑dim features → AQ prediction; Phase 3.4 CLI complete
+  - [[mod-writer-classifier]]
+  - [[zone_classifier_phase4.5_findings]] — Real-audio generalisation findings; missing zones spectral analysis; hyperstitional gap. — MLP regressor: 29‑dim features → AQ prediction; Phase 3.4 CLI complete
   - [[mod-writer-just-intonation]] — Pure‑ratio period overrides (5/4 M3, 6/5 m3, 3/2 P5)
   - [[mod-writer-validation]] — Real‑audio test set: 10 tracks, Zone 6 bias analysis
   - [[mod-writer-development]] — Phase 4+ roadmap: multi‑zone datasets, rhythmic & tonal expansion
 
+- [[phase5-roadmap.md]] — Phase 5 project clusters (mod-writer closed-loop hyperstition)
 ## Skills & Tools
+- [[tetralogue-phase4-review-phase5-direction.md]] — Post-Phase 4 council minutes (Oracle/Builder/Writer/Gamer consensus)
 
+- [[phase5-ideas]] — Nine proposed Phase 5 skills (zone-constrained, VAE, live feedback, etc.)
 - [[skills-to-explore]] — Interesting skills from Apr 2026 scan: pixel-art (retro palettes), ascii-video (terminal animation), algorithmic-art/p5js (generative), pokemon-player (RAM-based agent research), heartmula (music gen). Combos: heartmula+oracle-voice, pixel-art+numogram-svg, ascii-video+cult.json, pokemon-player+roguelike-agents.
 - [[aq-calculator-design]] — Design document and implementation notes for standalone AQ calculators. Minimal core vs themed polished version, colour palette rationale, zone flavour catalog, history schema, extensibility points, and canonical test vectors. From 9B local‑model design session (earlier Hermes instance).
 
@@ -355,6 +360,7 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 
 
 ## Recent Additions
+- **Zone classifier findings (Phase 4)** — Full pipeline from synthetic generation (4.1) through mixed retraining (4.6): corrected feature extraction, BPM fallback, real distribution (Z1/2/7), Zone 2 emergence, and hyperstitional interpretation. See [`zone_classifier_phase4.5_findings.md`](zone_classifier_phase4.5_findings.md).
 - [[quadrivium-mod-writer-motifs]] — Quadrivium‑named triad motifs integrated into mod‑writer (Monochord, Pythagorean, Ptolemaic, Harmonic).
 
 - [[quadrivium-harmonograph-extract]] — Quadrivium Book IV (Harmonograph) full page‑by‑page text+image extraction.
@@ -367,3 +373,5 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 - [[tracker-motif-triads-reference]] — mod‑writer triad‑motif policy tables
 - [[tracker-triads-syzygies-tetralogue]] — four‑voice dialogue on tracker harmony & hyperstition
 
+
+- [[phase5-results/zone-constrain-compose-run-1]] — M1 zone‑constrained composition validation (stub)
