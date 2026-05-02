@@ -373,3 +373,5 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 - [[tracker-motif-triads-reference]] — mod‑writer triad‑motif policy tables
 - [[tracker-triads-syzygies-tetralogue]] — four‑voice dialogue on tracker harmony & hyperstition
 
+
+- [[phase5-results/zone-constrain-compose-run-1]] — M1 zone‑constrained composition validation (stub)
