@@ -81,6 +81,28 @@ Every item articulates empirical validation:
 
 - **2026‑05‑03** — Gate derivation bug (`composer_extension.py` Zone 2 shift) identified and fixed; validator now corpus‑aligned. See [[phase5-bugfix-gate-derivation-2026-05-03]]
 
+
+## M2 — VAE Hallucination (2026‑05‑03 diagnostic)
+
+- [x] **Diagnostic complete** — 100 tracks generated (20× zones 3,4,5,8,9)
+  - Nearest‑centroid (scaled): **92%**  |  Classifier: **0%**
+  - Target‑centroid rank: mean=1.38, median=1.0 (86/100 are rank‑1)
+  - Root cause: RandomForest boundary rejects hallucinated MIR despite geometric proximity
+    (MFCC1/2 shifted +122/+86, other features compensate → centroid still closest)
+- [x] **Audio variety audit** — decoder collapse + conservative MIR→param mapping:
+  - BPM ~125, key C/C#, scale 'unknown', density 0.2 across all tracks
+- [x] **Remediation selected** — iterative projection in scaled feature space
+  - Target: classifier accuracy **≥80%** after correction
+  - Variety boost: `--sigma-scale` default **1.0** (full training spread), optional jitter
+- [ ] **Implementation** — fresh session to add `correct_to_zone()` to `mir_to_mod.py`,
+  flag `--project` in `vae_hallucinate.py`, re‑run pipeline
+- [ ] **Validation** — post‑projection classifier ≥80%, human listen (5/zone), t‑SNE update
+- [ ] **Fallback** if needed: train `vae_d16.pt`, add feature jitter, or switch to CVAE
+
+> **Plan file:** `~/.hermes/plans/m2-iterative-projection-plan.md` — canonical source of truth for M2 implementation
+
+---
+
 ## Links
 
 - [[currents.md]] — Five currents

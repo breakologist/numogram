@@ -1,0 +1,50 @@
+{
+  "training_samples": 900,
+  "hallucinated_samples": 100,
+  "nearest_centroid_accuracy_raw": 0.86,
+  "nearest_centroid_accuracy_scaled": 0.92,
+  "target_centroid_rank": {
+    "mean": 1.38,
+    "median": 1.0,
+    "distribution": {
+      "1": 86,
+      "2": 6,
+      "4": 3,
+      "5": 2,
+      "6": 3
+    }
+  },
+  "feature_delta_top5": [
+    {
+      "feature": "mfcc1",
+      "delta": 122.50478027343706
+    },
+    {
+      "feature": "mfcc2",
+      "delta": 86.02750976562493
+    },
+    {
+      "feature": "key_C",
+      "delta": 0.05801800101995469
+    },
+    {
+      "feature": "key_C#",
+      "delta": -0.03033595867455005
+    },
+    {
+      "feature": "mfcc5",
+      "delta": 0.009075752533972263
+    }
+  ],
+  "per_zone_scaled_accuracy": {
+    "1": NaN,
+    "2": NaN,
+    "3": 0.7727272727272727,
+    "4": 0.8333333333333334,
+    "5": 1.0,
+    "6": NaN,
+    "7": NaN,
+    "8": 1.0,
+    "9": 1.0
+  }
+}
