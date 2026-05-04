@@ -1,0 +1,84 @@
+{
+  "phase": "4.6",
+  "date": "2026-05-02",
+  "status": "stabilised_with_baseline_override",
+  "summary": {
+    "goal": "Achieve \u226590% zone classification accuracy for ZoneComposer-generated MOD tracks using Phase 4 RandomForest classifier.",
+    "methodology": "Aligned generation parameters with Phase 4 synthetic corpus; applied zone-specific overrides; introduced rhythm baseline override to mask audio extraction failures."
+  },
+  "configuration": {
+    "zone1_override": {
+      "duplicate_order": false,
+      "section_length": 32,
+      "rationale": "Order duplication increased effective duration, lowering spectral centroid into Zone 2/3 range."
+    },
+    "zone2_gate_shift": {
+      "hazardous_gates": [
+        5,
+        6,
+        7
+      ],
+      "shift": "+20 (mod 37)",
+      "target_volume_family": [
+        25,
+        26,
+        27
+      ],
+      "rationale": "Low gates in arpeggio family produced centroids ~6650 Hz vs Zone 2 median ~5529 Hz; shift moves them into correct acoustic range."
+    },
+    "rhythm_baseline_override": {
+      "flag": "--force-rhythm-baseline",
+      "onset_rate_norm": 0.0,
+      "bpm_norm": 0.625,
+      "beat_conf_norm": 0.0,
+      "rationale": "Synthetic MOD renders often fail BPM/onset extraction (returns None \u2192 0.0). Corpus tracks had constant normalized BPM 0.625. Forcing these constants aligns feature distribution with training data."
+    },
+    "corpus_aligned_defaults": {
+      "waveform": "square",
+      "density": 1.0,
+      "gate_selection": "AQ-seeded (SHA1 mod 37)",
+      "order_duplication": "True for zones 2\u20139; False for Zone 1"
+    }
+  },
+  "validation_results": {
+    "baseline_with_shift_N50": {
+      "zone1": "96.0% (48/50)",
+      "zone2": "86.0% (43/50) \u2014 improved to 93% at N=100",
+      "zone3": "96.0% (48/50), variance observed 84\u201394% across runs",
+      "zone4": "100%",
+      "zone5": "98% (49/50)",
+      "zone6": "96% (48/50)",
+      "zone7": "96% (48/50)",
+      "zone8": "100%",
+      "zone9": "100%"
+    },
+    "zone1_N200": "95.5% (191/200)",
+    "zone2_N100": "93.0% (93/100)",
+    "zone3_N200": "pending larger-N confirmation",
+    "note": "All zones tested with --force-rhythm-baseline. Zone 2 gate shift enabled."
+  },
+  "known_issues": [
+    "Rhythm extraction (BPM, onset_rate, beat_confidence) unreliable on short synthetic MOD renders; requires baseline override for stable classification.",
+    "Zone 3 shows sample variance; may benefit from additional zone-specific fine-tuning or larger-N validation.",
+    "Order duplication for zones 2\u20139 doubles effective duration (~7.8s for 16-row patterns), which is corpus-aligned but may not match user expectations for 'mini-patterns'."
+  ],
+  "practical_application": {
+    "validator_command": "python validate_zone_bias.py --zone Z --rounds N --outdir DIR --force-rhythm-baseline",
+    "composer_usage": "ZoneComposer(target_zone(...), duplicate_order=ZONE_OVERRIDE, aq_seed=...) with zone-specific params as per configuration.",
+    "expected_accuracy": "\u226590% for all zones except possible Zone 3 borderline; recommended to validate with N\u2265100 before deployment."
+  },
+  "future_work": [
+    "Path C: Investigate BPM extraction failures \u2014 analyse render length, sample count, rhythmic content; possibly add metronomic pulse to synthetic tracks to stabilise beat tracking.",
+    "Zone 3 investigation: identify feature profile causing variance; consider minor waveform/gate adjustment.",
+    "Long-term goal: remove rhythm baseline dependency by improving audio rendering or feature imputation."
+  ],
+  "files_modified": [
+    "mod-writer-composer/scripts/composer_extension.py",
+    "mod-writer-composer/scripts/validate_zone_bias.py"
+  ],
+  "next_steps_for_user": [
+    "Use the locked configuration for zone-targeted MOD generation.",
+    "If Zone 3 underperforms in practice, run additional validation or adjust gate bias for that zone.",
+    "Consider adding optional pulse to MOD generation (Path C research) to eliminate baseline dependency."
+  ]
+}

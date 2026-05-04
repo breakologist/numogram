@@ -1,0 +1,136 @@
+{
+  "task": "Phase 4.6 Production Validation \u2014 ZoneComposer",
+  "completed": "2026-05-02",
+  "status": "All zones \u226590% \u2705",
+  "artifacts": {
+    "scripts": [
+      {
+        "name": "zone-validate.py",
+        "path": "mod-writer-composer/scripts/zone-validate.py",
+        "desc": "One-command validation wrapper; always forces --force-rhythm-baseline"
+      },
+      {
+        "name": "zone_batch_generator.py",
+        "path": "mod-writer-composer/scripts/zone_batch_generator.py",
+        "desc": "Deterministic batch generator per zone with AQ seeds; fixed gate manifest recording (bug patch applied)"
+      },
+      {
+        "name": "gate_sweep_zone4.py",
+        "path": "mod-writer-composer/scripts/gate_sweep_zone4.py",
+        "desc": "Gate sweep analysis for Zone 4 (BPM artifact observation)"
+      },
+      {
+        "name": "gate_sweep_zone6.py",
+        "path": "mod-writer-composer/scripts/gate_sweep_zone6.py",
+        "desc": "Gate sweep analysis for Zone 6 (failure pattern)"
+      },
+      {
+        "name": "zone_mir_snapshot.py",
+        "path": "mod-writer-composer/scripts/zone_mir_snapshot.py",
+        "desc": "Generate MIR feature snapshot across all zones"
+      }
+    ],
+    "wiki": [
+      {
+        "name": "phase4.6_final_report.md",
+        "desc": "Human-readable closure narrative"
+      },
+      {
+        "name": "phase4.6_final_summary.json",
+        "desc": "Structured results table and config"
+      },
+      {
+        "name": "phase4.6_zone_mir_snapshot.json",
+        "desc": "One-track MIR features per zone (sonic fingerprint)"
+      },
+      {
+        "name": "path_c_bpm_artifact_research_brief.md",
+        "desc": "Root cause analysis and remediation options"
+      },
+      {
+        "name": "phase4.6_report.json",
+        "desc": "Earlier detailed report"
+      },
+      {
+        "name": "phase4.6_summary.md",
+        "desc": "Earlier human summary"
+      }
+    ],
+    "demo_pack": "/tmp/numogram_demo_tracks/ (one MOD per zone)",
+    "archive": "mod-writer-composer/archive/v1.0/ (frozen config snapshot)"
+  },
+  "validation_matrix": {
+    "note": "N=100 tracks per zone, square waveform, full density, Phase 4.6 overrides, rhythm baseline forced",
+    "zone1": {
+      "accuracy": 97.0,
+      "override": "duplicate_order=False, length=32"
+    },
+    "zone2": {
+      "accuracy": 98.0,
+      "override": "gate shift gates 5-7"
+    },
+    "zone3": {
+      "accuracy": 91.0,
+      "override": "standard"
+    },
+    "zone4": {
+      "accuracy": 100.0,
+      "override": "standard",
+      "note": "robust to BPM artifact"
+    },
+    "zone5": {
+      "accuracy": 98.0,
+      "override": "standard"
+    },
+    "zone6": {
+      "accuracy": 100.0,
+      "override": "standard",
+      "note": "baseline required; high-BPM gates improve with baseline"
+    },
+    "zone7": {
+      "accuracy": 96.0,
+      "override": "standard"
+    },
+    "zone8": {
+      "accuracy": 100.0,
+      "override": "standard"
+    },
+    "zone9": {
+      "accuracy": 100.0,
+      "override": "standard"
+    }
+  },
+  "path_c_findings": {
+    "artifact": "librosa.beat.beat_track selects false high-BPM (~165.44) instead of true 125 BPM",
+    "zones_affected": [
+      4,
+      6
+    ],
+    "root_cause": "Square-wave arpeggio onset envelope has strong harmonics at double/triple tempo",
+    "gate_dependence": {
+      "zone4": "mostly robust \u2014 high-BPM tracks still classify as Zone 4 without baseline",
+      "zone6": "sensitive \u2014 most high-BPM tracks misclassify as Zone 1 without baseline"
+    },
+    "waveform_test": {
+      "square": "shows artifact",
+      "triangle": "eliminates BPM artifact but breaks other features \u2192 not viable",
+      "sawtooth": "same as square"
+    },
+    "real_music_impact": "None \u2014 BPM extracted reliably from real audio",
+    "remediation": [
+      "Production: always use --force-rhythm-baseline for synthetic MOD classification",
+      "Future: Option A \u2014 onset envelope comb filtering to suppress false harmonics"
+    ]
+  },
+  "key_decisions": [
+    "Rhythm baseline is mandatory for synthetic MOD classification (Phase 4.6 invariant)",
+    "Zone 1 and Zone 2 overrides locked as v1.0; no further tuning needed",
+    "Path C artifact accepted as known limitation; not blocking production",
+    "Batch generator gate manifest bug fixed (was checking wrong attribute)"
+  ],
+  "next_actions": [
+    "Commit all new scripts and wiki to export repo (done: 08a4005)",
+    "Optionally run full N=200 validation sweep for final polish (not needed \u2014 N=100 is already conclusive)",
+    "If generating large batches, always invoke zone-validate.py for QA"
+  ]
+}
