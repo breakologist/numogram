@@ -1,0 +1,3311 @@
+{
+  "per_zone": [
+    [
+      1,
+      50,
+      46,
+      0.92
+    ],
+    [
+      2,
+      50,
+      46,
+      0.92
+    ],
+    [
+      3,
+      50,
+      46,
+      0.92
+    ],
+    [
+      4,
+      50,
+      50,
+      1.0
+    ],
+    [
+      5,
+      50,
+      49,
+      0.98
+    ],
+    [
+      6,
+      50,
+      50,
+      1.0
+    ],
+    [
+      7,
+      50,
+      48,
+      0.96
+    ],
+    [
+      8,
+      50,
+      50,
+      1.0
+    ],
+    [
+      9,
+      50,
+      49,
+      0.98
+    ]
+  ],
+  "matrix": {
+    "1": {
+      "1": 46,
+      "2": 4,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "2": {
+      "1": 2,
+      "2": 46,
+      "3": 2,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "3": {
+      "1": 2,
+      "2": 2,
+      "3": 46,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "4": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 50,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "5": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 1,
+      "5": 49,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "6": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 50,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "7": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 2,
+      "7": 48,
+      "8": 0,
+      "9": 0
+    },
+    "8": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 50,
+      "9": 0
+    },
+    "9": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 1,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 49
+    }
+  },
+  "tracks": [
+    {
+      "true_zone": 1,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z1_000.mod",
+      "aq": 1,
+      "ok": false
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_001.mod",
+      "aq": 10,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_002.mod",
+      "aq": 19,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_003.mod",
+      "aq": 28,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_004.mod",
+      "aq": 37,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_005.mod",
+      "aq": 46,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_006.mod",
+      "aq": 55,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_007.mod",
+      "aq": 64,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_008.mod",
+      "aq": 73,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_009.mod",
+      "aq": 82,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_010.mod",
+      "aq": 91,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_011.mod",
+      "aq": 100,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_012.mod",
+      "aq": 109,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_013.mod",
+      "aq": 118,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_014.mod",
+      "aq": 127,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_015.mod",
+      "aq": 136,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_016.mod",
+      "aq": 145,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_017.mod",
+      "aq": 154,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_018.mod",
+      "aq": 163,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_019.mod",
+      "aq": 172,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_020.mod",
+      "aq": 181,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_021.mod",
+      "aq": 190,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_022.mod",
+      "aq": 199,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_023.mod",
+      "aq": 208,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_024.mod",
+      "aq": 217,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_025.mod",
+      "aq": 226,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_026.mod",
+      "aq": 235,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z1_027.mod",
+      "aq": 244,
+      "ok": false
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_028.mod",
+      "aq": 253,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_029.mod",
+      "aq": 262,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_030.mod",
+      "aq": 271,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_031.mod",
+      "aq": 280,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_032.mod",
+      "aq": 289,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_033.mod",
+      "aq": 298,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_034.mod",
+      "aq": 307,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_035.mod",
+      "aq": 316,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_036.mod",
+      "aq": 325,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_037.mod",
+      "aq": 334,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_038.mod",
+      "aq": 343,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_039.mod",
+      "aq": 352,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_040.mod",
+      "aq": 361,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_041.mod",
+      "aq": 370,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_042.mod",
+      "aq": 379,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_043.mod",
+      "aq": 388,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z1_044.mod",
+      "aq": 397,
+      "ok": false
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_045.mod",
+      "aq": 406,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z1_046.mod",
+      "aq": 415,
+      "ok": false
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_047.mod",
+      "aq": 424,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_048.mod",
+      "aq": 433,
+      "ok": true
+    },
+    {
+      "true_zone": 1,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z1_049.mod",
+      "aq": 442,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_000.mod",
+      "aq": 2,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_001.mod",
+      "aq": 11,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_002.mod",
+      "aq": 20,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_003.mod",
+      "aq": 29,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z2_004.mod",
+      "aq": 38,
+      "ok": false
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_005.mod",
+      "aq": 47,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_006.mod",
+      "aq": 56,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_007.mod",
+      "aq": 65,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_008.mod",
+      "aq": 74,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_009.mod",
+      "aq": 83,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_010.mod",
+      "aq": 92,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_011.mod",
+      "aq": 101,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_012.mod",
+      "aq": 110,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_013.mod",
+      "aq": 119,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_014.mod",
+      "aq": 128,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_015.mod",
+      "aq": 137,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_016.mod",
+      "aq": 146,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_017.mod",
+      "aq": 155,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_018.mod",
+      "aq": 164,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_019.mod",
+      "aq": 173,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_020.mod",
+      "aq": 182,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z2_021.mod",
+      "aq": 191,
+      "ok": false
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_022.mod",
+      "aq": 200,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_023.mod",
+      "aq": 209,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_024.mod",
+      "aq": 218,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_025.mod",
+      "aq": 227,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_026.mod",
+      "aq": 236,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_027.mod",
+      "aq": 245,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_028.mod",
+      "aq": 254,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_029.mod",
+      "aq": 263,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_030.mod",
+      "aq": 272,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_031.mod",
+      "aq": 281,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_032.mod",
+      "aq": 290,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_033.mod",
+      "aq": 299,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_034.mod",
+      "aq": 308,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_035.mod",
+      "aq": 317,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_036.mod",
+      "aq": 326,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_037.mod",
+      "aq": 335,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_038.mod",
+      "aq": 344,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_039.mod",
+      "aq": 353,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_040.mod",
+      "aq": 362,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_041.mod",
+      "aq": 371,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z2_042.mod",
+      "aq": 380,
+      "ok": false
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_043.mod",
+      "aq": 389,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_044.mod",
+      "aq": 398,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_045.mod",
+      "aq": 407,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_046.mod",
+      "aq": 416,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_047.mod",
+      "aq": 425,
+      "ok": true
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z2_048.mod",
+      "aq": 434,
+      "ok": false
+    },
+    {
+      "true_zone": 2,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z2_049.mod",
+      "aq": 443,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_000.mod",
+      "aq": 3,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_001.mod",
+      "aq": 12,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_002.mod",
+      "aq": 21,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_003.mod",
+      "aq": 30,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_004.mod",
+      "aq": 39,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_005.mod",
+      "aq": 48,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_006.mod",
+      "aq": 57,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_007.mod",
+      "aq": 66,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_008.mod",
+      "aq": 75,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_009.mod",
+      "aq": 84,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_010.mod",
+      "aq": 93,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_011.mod",
+      "aq": 102,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_012.mod",
+      "aq": 111,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_013.mod",
+      "aq": 120,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_014.mod",
+      "aq": 129,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_015.mod",
+      "aq": 138,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_016.mod",
+      "aq": 147,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_017.mod",
+      "aq": 156,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_018.mod",
+      "aq": 165,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_019.mod",
+      "aq": 174,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_020.mod",
+      "aq": 183,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_021.mod",
+      "aq": 192,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_022.mod",
+      "aq": 201,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_023.mod",
+      "aq": 210,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z3_024.mod",
+      "aq": 219,
+      "ok": false
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_025.mod",
+      "aq": 228,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z3_026.mod",
+      "aq": 237,
+      "ok": false
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 1,
+      "file": "/tmp/zone_batch_validation/z3_027.mod",
+      "aq": 246,
+      "ok": false
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 2,
+      "file": "/tmp/zone_batch_validation/z3_028.mod",
+      "aq": 255,
+      "ok": false
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_029.mod",
+      "aq": 264,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_030.mod",
+      "aq": 273,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_031.mod",
+      "aq": 282,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_032.mod",
+      "aq": 291,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_033.mod",
+      "aq": 300,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_034.mod",
+      "aq": 309,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_035.mod",
+      "aq": 318,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_036.mod",
+      "aq": 327,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_037.mod",
+      "aq": 336,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_038.mod",
+      "aq": 345,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_039.mod",
+      "aq": 354,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_040.mod",
+      "aq": 363,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_041.mod",
+      "aq": 372,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_042.mod",
+      "aq": 381,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_043.mod",
+      "aq": 390,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_044.mod",
+      "aq": 399,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_045.mod",
+      "aq": 408,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_046.mod",
+      "aq": 417,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_047.mod",
+      "aq": 426,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_048.mod",
+      "aq": 435,
+      "ok": true
+    },
+    {
+      "true_zone": 3,
+      "pred_zone": 3,
+      "file": "/tmp/zone_batch_validation/z3_049.mod",
+      "aq": 444,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_000.mod",
+      "aq": 4,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_001.mod",
+      "aq": 13,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_002.mod",
+      "aq": 22,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_003.mod",
+      "aq": 31,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_004.mod",
+      "aq": 40,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_005.mod",
+      "aq": 49,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_006.mod",
+      "aq": 58,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_007.mod",
+      "aq": 67,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_008.mod",
+      "aq": 76,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_009.mod",
+      "aq": 85,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_010.mod",
+      "aq": 94,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_011.mod",
+      "aq": 103,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_012.mod",
+      "aq": 112,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_013.mod",
+      "aq": 121,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_014.mod",
+      "aq": 130,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_015.mod",
+      "aq": 139,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_016.mod",
+      "aq": 148,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_017.mod",
+      "aq": 157,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_018.mod",
+      "aq": 166,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_019.mod",
+      "aq": 175,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_020.mod",
+      "aq": 184,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_021.mod",
+      "aq": 193,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_022.mod",
+      "aq": 202,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_023.mod",
+      "aq": 211,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_024.mod",
+      "aq": 220,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_025.mod",
+      "aq": 229,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_026.mod",
+      "aq": 238,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_027.mod",
+      "aq": 247,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_028.mod",
+      "aq": 256,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_029.mod",
+      "aq": 265,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_030.mod",
+      "aq": 274,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_031.mod",
+      "aq": 283,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_032.mod",
+      "aq": 292,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_033.mod",
+      "aq": 301,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_034.mod",
+      "aq": 310,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_035.mod",
+      "aq": 319,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_036.mod",
+      "aq": 328,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_037.mod",
+      "aq": 337,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_038.mod",
+      "aq": 346,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_039.mod",
+      "aq": 355,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_040.mod",
+      "aq": 364,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_041.mod",
+      "aq": 373,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_042.mod",
+      "aq": 382,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_043.mod",
+      "aq": 391,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_044.mod",
+      "aq": 400,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_045.mod",
+      "aq": 409,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_046.mod",
+      "aq": 418,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_047.mod",
+      "aq": 427,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_048.mod",
+      "aq": 436,
+      "ok": true
+    },
+    {
+      "true_zone": 4,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z4_049.mod",
+      "aq": 445,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_000.mod",
+      "aq": 5,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_001.mod",
+      "aq": 14,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_002.mod",
+      "aq": 23,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_003.mod",
+      "aq": 32,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_004.mod",
+      "aq": 41,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_005.mod",
+      "aq": 50,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_006.mod",
+      "aq": 59,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_007.mod",
+      "aq": 68,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_008.mod",
+      "aq": 77,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_009.mod",
+      "aq": 86,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_010.mod",
+      "aq": 95,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_011.mod",
+      "aq": 104,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_012.mod",
+      "aq": 113,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_013.mod",
+      "aq": 122,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_014.mod",
+      "aq": 131,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_015.mod",
+      "aq": 140,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_016.mod",
+      "aq": 149,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_017.mod",
+      "aq": 158,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_018.mod",
+      "aq": 167,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_019.mod",
+      "aq": 176,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_020.mod",
+      "aq": 185,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_021.mod",
+      "aq": 194,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_022.mod",
+      "aq": 203,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_023.mod",
+      "aq": 212,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_024.mod",
+      "aq": 221,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_025.mod",
+      "aq": 230,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_026.mod",
+      "aq": 239,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_027.mod",
+      "aq": 248,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_028.mod",
+      "aq": 257,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_029.mod",
+      "aq": 266,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_030.mod",
+      "aq": 275,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_031.mod",
+      "aq": 284,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z5_032.mod",
+      "aq": 293,
+      "ok": false
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_033.mod",
+      "aq": 302,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_034.mod",
+      "aq": 311,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_035.mod",
+      "aq": 320,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_036.mod",
+      "aq": 329,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_037.mod",
+      "aq": 338,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_038.mod",
+      "aq": 347,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_039.mod",
+      "aq": 356,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_040.mod",
+      "aq": 365,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_041.mod",
+      "aq": 374,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_042.mod",
+      "aq": 383,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_043.mod",
+      "aq": 392,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_044.mod",
+      "aq": 401,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_045.mod",
+      "aq": 410,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_046.mod",
+      "aq": 419,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_047.mod",
+      "aq": 428,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_048.mod",
+      "aq": 437,
+      "ok": true
+    },
+    {
+      "true_zone": 5,
+      "pred_zone": 5,
+      "file": "/tmp/zone_batch_validation/z5_049.mod",
+      "aq": 446,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_000.mod",
+      "aq": 6,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_001.mod",
+      "aq": 15,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_002.mod",
+      "aq": 24,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_003.mod",
+      "aq": 33,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_004.mod",
+      "aq": 42,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_005.mod",
+      "aq": 51,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_006.mod",
+      "aq": 60,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_007.mod",
+      "aq": 69,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_008.mod",
+      "aq": 78,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_009.mod",
+      "aq": 87,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_010.mod",
+      "aq": 96,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_011.mod",
+      "aq": 105,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_012.mod",
+      "aq": 114,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_013.mod",
+      "aq": 123,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_014.mod",
+      "aq": 132,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_015.mod",
+      "aq": 141,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_016.mod",
+      "aq": 150,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_017.mod",
+      "aq": 159,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_018.mod",
+      "aq": 168,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_019.mod",
+      "aq": 177,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_020.mod",
+      "aq": 186,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_021.mod",
+      "aq": 195,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_022.mod",
+      "aq": 204,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_023.mod",
+      "aq": 213,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_024.mod",
+      "aq": 222,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_025.mod",
+      "aq": 231,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_026.mod",
+      "aq": 240,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_027.mod",
+      "aq": 249,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_028.mod",
+      "aq": 258,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_029.mod",
+      "aq": 267,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_030.mod",
+      "aq": 276,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_031.mod",
+      "aq": 285,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_032.mod",
+      "aq": 294,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_033.mod",
+      "aq": 303,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_034.mod",
+      "aq": 312,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_035.mod",
+      "aq": 321,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_036.mod",
+      "aq": 330,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_037.mod",
+      "aq": 339,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_038.mod",
+      "aq": 348,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_039.mod",
+      "aq": 357,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_040.mod",
+      "aq": 366,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_041.mod",
+      "aq": 375,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_042.mod",
+      "aq": 384,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_043.mod",
+      "aq": 393,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_044.mod",
+      "aq": 402,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_045.mod",
+      "aq": 411,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_046.mod",
+      "aq": 420,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_047.mod",
+      "aq": 429,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_048.mod",
+      "aq": 438,
+      "ok": true
+    },
+    {
+      "true_zone": 6,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z6_049.mod",
+      "aq": 447,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_000.mod",
+      "aq": 7,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_001.mod",
+      "aq": 16,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_002.mod",
+      "aq": 25,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_003.mod",
+      "aq": 34,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_004.mod",
+      "aq": 43,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_005.mod",
+      "aq": 52,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_006.mod",
+      "aq": 61,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_007.mod",
+      "aq": 70,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_008.mod",
+      "aq": 79,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_009.mod",
+      "aq": 88,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_010.mod",
+      "aq": 97,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_011.mod",
+      "aq": 106,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_012.mod",
+      "aq": 115,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_013.mod",
+      "aq": 124,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_014.mod",
+      "aq": 133,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_015.mod",
+      "aq": 142,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_016.mod",
+      "aq": 151,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_017.mod",
+      "aq": 160,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_018.mod",
+      "aq": 169,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_019.mod",
+      "aq": 178,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_020.mod",
+      "aq": 187,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_021.mod",
+      "aq": 196,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_022.mod",
+      "aq": 205,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_023.mod",
+      "aq": 214,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_024.mod",
+      "aq": 223,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_025.mod",
+      "aq": 232,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_026.mod",
+      "aq": 241,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_027.mod",
+      "aq": 250,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_028.mod",
+      "aq": 259,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_029.mod",
+      "aq": 268,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_030.mod",
+      "aq": 277,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_031.mod",
+      "aq": 286,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_032.mod",
+      "aq": 295,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_033.mod",
+      "aq": 304,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_034.mod",
+      "aq": 313,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_035.mod",
+      "aq": 322,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_036.mod",
+      "aq": 331,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z7_037.mod",
+      "aq": 340,
+      "ok": false
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_038.mod",
+      "aq": 349,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_039.mod",
+      "aq": 358,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_040.mod",
+      "aq": 367,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_041.mod",
+      "aq": 376,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_042.mod",
+      "aq": 385,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_043.mod",
+      "aq": 394,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 6,
+      "file": "/tmp/zone_batch_validation/z7_044.mod",
+      "aq": 403,
+      "ok": false
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_045.mod",
+      "aq": 412,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_046.mod",
+      "aq": 421,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_047.mod",
+      "aq": 430,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_048.mod",
+      "aq": 439,
+      "ok": true
+    },
+    {
+      "true_zone": 7,
+      "pred_zone": 7,
+      "file": "/tmp/zone_batch_validation/z7_049.mod",
+      "aq": 448,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_000.mod",
+      "aq": 8,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_001.mod",
+      "aq": 17,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_002.mod",
+      "aq": 26,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_003.mod",
+      "aq": 35,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_004.mod",
+      "aq": 44,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_005.mod",
+      "aq": 53,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_006.mod",
+      "aq": 62,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_007.mod",
+      "aq": 71,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_008.mod",
+      "aq": 80,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_009.mod",
+      "aq": 89,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_010.mod",
+      "aq": 98,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_011.mod",
+      "aq": 107,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_012.mod",
+      "aq": 116,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_013.mod",
+      "aq": 125,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_014.mod",
+      "aq": 134,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_015.mod",
+      "aq": 143,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_016.mod",
+      "aq": 152,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_017.mod",
+      "aq": 161,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_018.mod",
+      "aq": 170,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_019.mod",
+      "aq": 179,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_020.mod",
+      "aq": 188,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_021.mod",
+      "aq": 197,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_022.mod",
+      "aq": 206,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_023.mod",
+      "aq": 215,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_024.mod",
+      "aq": 224,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_025.mod",
+      "aq": 233,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_026.mod",
+      "aq": 242,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_027.mod",
+      "aq": 251,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_028.mod",
+      "aq": 260,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_029.mod",
+      "aq": 269,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_030.mod",
+      "aq": 278,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_031.mod",
+      "aq": 287,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_032.mod",
+      "aq": 296,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_033.mod",
+      "aq": 305,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_034.mod",
+      "aq": 314,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_035.mod",
+      "aq": 323,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_036.mod",
+      "aq": 332,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_037.mod",
+      "aq": 341,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_038.mod",
+      "aq": 350,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_039.mod",
+      "aq": 359,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_040.mod",
+      "aq": 368,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_041.mod",
+      "aq": 377,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_042.mod",
+      "aq": 386,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_043.mod",
+      "aq": 395,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_044.mod",
+      "aq": 404,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_045.mod",
+      "aq": 413,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_046.mod",
+      "aq": 422,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_047.mod",
+      "aq": 431,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_048.mod",
+      "aq": 440,
+      "ok": true
+    },
+    {
+      "true_zone": 8,
+      "pred_zone": 8,
+      "file": "/tmp/zone_batch_validation/z8_049.mod",
+      "aq": 449,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_000.mod",
+      "aq": 9,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_001.mod",
+      "aq": 18,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_002.mod",
+      "aq": 27,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_003.mod",
+      "aq": 36,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_004.mod",
+      "aq": 45,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_005.mod",
+      "aq": 54,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_006.mod",
+      "aq": 63,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_007.mod",
+      "aq": 72,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_008.mod",
+      "aq": 81,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_009.mod",
+      "aq": 90,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_010.mod",
+      "aq": 99,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_011.mod",
+      "aq": 108,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_012.mod",
+      "aq": 117,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_013.mod",
+      "aq": 126,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_014.mod",
+      "aq": 135,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_015.mod",
+      "aq": 144,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_016.mod",
+      "aq": 153,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_017.mod",
+      "aq": 162,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_018.mod",
+      "aq": 171,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_019.mod",
+      "aq": 180,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_020.mod",
+      "aq": 189,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_021.mod",
+      "aq": 198,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_022.mod",
+      "aq": 207,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_023.mod",
+      "aq": 216,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_024.mod",
+      "aq": 225,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_025.mod",
+      "aq": 234,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_026.mod",
+      "aq": 243,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_027.mod",
+      "aq": 252,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_028.mod",
+      "aq": 261,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_029.mod",
+      "aq": 270,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_030.mod",
+      "aq": 279,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_031.mod",
+      "aq": 288,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_032.mod",
+      "aq": 297,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_033.mod",
+      "aq": 306,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_034.mod",
+      "aq": 315,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_035.mod",
+      "aq": 324,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_036.mod",
+      "aq": 333,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_037.mod",
+      "aq": 342,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_038.mod",
+      "aq": 351,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_039.mod",
+      "aq": 360,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_040.mod",
+      "aq": 369,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_041.mod",
+      "aq": 378,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_042.mod",
+      "aq": 387,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 4,
+      "file": "/tmp/zone_batch_validation/z9_043.mod",
+      "aq": 396,
+      "ok": false
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_044.mod",
+      "aq": 405,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_045.mod",
+      "aq": 414,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_046.mod",
+      "aq": 423,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_047.mod",
+      "aq": 432,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_048.mod",
+      "aq": 441,
+      "ok": true
+    },
+    {
+      "true_zone": 9,
+      "pred_zone": 9,
+      "file": "/tmp/zone_batch_validation/z9_049.mod",
+      "aq": 450,
+      "ok": true
+    }
+  ]
+}

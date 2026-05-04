@@ -1,0 +1,53 @@
+base_model: Qwen/Qwen2.5-7B-Instruct
+# Alternatively, if you have the model locally, set:
+# base_model: /home/etym/.ollama/models/blobs/qwen2.5-7b-instruct
+
+model_type: LlamaForCausalLM
+tokenizer_type: AutoTokenizer
+
+# LoRA configuration (QLoRA)
+adapter: lora
+lora_r: 64
+lora_alpha: 128
+lora_dropout: 0.05
+lora_target_linear: true
+
+# 4-bit quantization
+quantization: nf4
+double_quant: true
+
+# Dataset
+datasets:
+  - path: ~/.hermes/data/oracle_finetuning_v1.jsonl
+    type: chat_template
+    chat_template: llama-2
+
+# Training params
+max_seq_length: 1024
+micro_batch_size: 1
+gradient_accumulation_steps: 4
+global_batch_size: 4
+
+num_epochs: 4
+learning_rate: 2e-4
+lr_scheduler: cosine
+warmup_steps: 10
+
+# Optimizer
+optimizer: adamw_8bit
+
+# Output
+output_dir: ~/.hermes/models/oracle_qwen7b_lora
+gradient_checkpointing: true
+
+# Logging
+logging_steps: 1
+save_steps: 50
+eval_steps: 50
+
+# Mixed precision
+bf16: true
+
+# Misc
+push_to_hub: false
+hub_model_id: null
