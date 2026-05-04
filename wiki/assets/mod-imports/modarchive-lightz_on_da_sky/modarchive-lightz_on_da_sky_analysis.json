@@ -1,0 +1,22 @@
+{
+  "audio": {
+    "duration": 185.420563,
+    "sample_rate": 48000,
+    "channels": 2,
+    "bit_depth": 16,
+    "rms": 0.1333521432163324,
+    "peak": 0.7852356346100717,
+    "true_peak": 0.7852356346100717,
+    "lufs": -23.0,
+    "dc_offset": 0.0,
+    "crest_factor": 0.651883,
+    "peak_count": 0,
+    "quality": "pass",
+    "spectral_centroid": null,
+    "spectral_rolloff": null,
+    "spectral_flux": null,
+    "onset_count": 1,
+    "onset_density": 0.005
+  },
+  "portrait": "Zone 0::- (-) renders a subdued, balanced voidal current (drone-like). Peak=0.79, LUFS=-23.0, CR=0.65."
+}

@@ -1,0 +1,221 @@
+[
+  {
+    "slug": "chippy_nr_137_2",
+    "title": "chippy_nr_137_2",
+    "zone": 3,
+    "syzygy": "djynxx",
+    "duration_sec": 34.91
+  },
+  {
+    "slug": "zeros_and_ones",
+    "title": "zeros_and_ones",
+    "zone": 1,
+    "syzygy": "Sink Seeking",
+    "order_positions": 33,
+    "pattern_count": 22,
+    "duration_sec": 266.34,
+    "channels": 2,
+    "void_ratio": 0.012,
+    "warp_ratio": 0.19699999999999998,
+    "hold_ratio": 0.304,
+    "rise_ratio": 0.182,
+    "sink_ratio": 0.306,
+    "motifs": [
+      "Sink-Seeking",
+      "Gate-Scattered |"
+    ]
+  },
+  {
+    "slug": "be_a_tles_for_ever",
+    "title": "be_a_tles_for_ever",
+    "zone": 7,
+    "syzygy": "Rise Seeking",
+    "order_positions": 27,
+    "pattern_count": 21,
+    "duration_sec": 215.4,
+    "channels": 2,
+    "void_ratio": 0.17600000000000002,
+    "warp_ratio": 0.183,
+    "hold_ratio": 0.177,
+    "rise_ratio": 0.336,
+    "sink_ratio": 0.128,
+    "motifs": [
+      "Rise-Seeking |"
+    ]
+  },
+  {
+    "slug": "friends",
+    "title": "friends",
+    "zone": 9,
+    "syzygy": "Unknown",
+    "order_positions": 15,
+    "pattern_count": 15,
+    "duration_sec": 96.1,
+    "channels": 2,
+    "void_ratio": 0.23,
+    "warp_ratio": 0.203,
+    "hold_ratio": 0.196,
+    "rise_ratio": 0.171,
+    "sink_ratio": 0.201,
+    "motifs": [
+      "none |"
+    ]
+  },
+  {
+    "slug": "noone_62_1999",
+    "title": "noone_62_1999",
+    "zone": 2,
+    "syzygy": "Gate Scattered",
+    "order_positions": 63,
+    "pattern_count": 63,
+    "duration_sec": 261.77,
+    "channels": 2,
+    "void_ratio": 0.18899999999999997,
+    "warp_ratio": 0.129,
+    "hold_ratio": 0.337,
+    "rise_ratio": 0.122,
+    "sink_ratio": 0.22399999999999998,
+    "motifs": [
+      "Gate-Scattered |"
+    ]
+  },
+  {
+    "slug": "retrograde",
+    "title": "retrograde",
+    "zone": 9,
+    "syzygy": "Void Dominant",
+    "order_positions": 39,
+    "pattern_count": 35,
+    "duration_sec": 149.86,
+    "channels": 2,
+    "void_ratio": 0.337,
+    "warp_ratio": 0.10099999999999999,
+    "hold_ratio": 0.192,
+    "rise_ratio": 0.125,
+    "sink_ratio": 0.245,
+    "motifs": [
+      "Void-Dominant",
+      "Gate-Scattered |"
+    ]
+  },
+  {
+    "slug": "sven_-otl_edit",
+    "title": "sven_-otl_edit",
+    "zone": 9,
+    "syzygy": "Rise Seeking",
+    "order_positions": 19,
+    "pattern_count": 18,
+    "duration_sec": 67.06,
+    "channels": 2,
+    "void_ratio": 0.259,
+    "warp_ratio": 0.102,
+    "hold_ratio": 0.317,
+    "rise_ratio": 0.263,
+    "sink_ratio": 0.059000000000000004,
+    "motifs": [
+      "Rise-Seeking",
+      "Void-Dominant",
+      "Gate-Scattered |"
+    ]
+  },
+  {
+    "slug": "yak_-_not_that_easy",
+    "title": "yak_-_not_that_easy",
+    "zone": 9,
+    "syzygy": "Void Dominant",
+    "order_positions": 40,
+    "pattern_count": 10,
+    "duration_sec": 204.9,
+    "channels": 2,
+    "void_ratio": 0.369,
+    "warp_ratio": 0.091,
+    "hold_ratio": 0.153,
+    "rise_ratio": 0.155,
+    "sink_ratio": 0.233,
+    "motifs": [
+      "Void-Dominant",
+      "Gate-Scattered |"
+    ]
+  },
+  {
+    "slug": "archon_-_sextyfour",
+    "title": "modarchive-archon_-_sextyfour",
+    "zone": 8,
+    "syzygy": "pending",
+    "order_positions": 44,
+    "pattern_count": 30,
+    "duration_sec": 197.7,
+    "note_count": 4620,
+    "channels": 2,
+    "void_ratio": 0.0,
+    "warp_ratio": 0.43200000000000005,
+    "hold_ratio": 0.22399999999999998,
+    "rise_ratio": 0.366,
+    "sink_ratio": 0.345,
+    "motifs": [
+      "Warp-Seeking",
+      "Sink-Seeking",
+      "Rise-Seeking |"
+    ]
+  },
+  {
+    "slug": "ifaskedt",
+    "title": "modarchive-ifaskedt",
+    "zone": 5,
+    "syzygy": "pending",
+    "order_positions": 45,
+    "pattern_count": 25,
+    "duration_sec": 201.3,
+    "note_count": 3456,
+    "channels": 2,
+    "void_ratio": 0.0,
+    "warp_ratio": 0.218,
+    "hold_ratio": 0.47,
+    "rise_ratio": 0.11699999999999999,
+    "sink_ratio": 0.312,
+    "motifs": [
+      "Warp-Seeking",
+      "Sink-Seeking |"
+    ]
+  },
+  {
+    "slug": "lightz_on_da_sky",
+    "title": "modarchive-lightz_on_da_sky",
+    "zone": 3,
+    "syzygy": "pending",
+    "order_positions": 43,
+    "pattern_count": 33,
+    "duration_sec": 185.4,
+    "note_count": 1838,
+    "channels": 2,
+    "void_ratio": 0.0,
+    "warp_ratio": 0.35700000000000004,
+    "hold_ratio": 0.033,
+    "rise_ratio": 0.276,
+    "sink_ratio": 0.609,
+    "motifs": [
+      "Warp-Seeking",
+      "Sink-Seeking |"
+    ]
+  },
+  {
+    "slug": "modworks-starbucks",
+    "title": "modarchive-modworks-starbucks",
+    "zone": 3,
+    "syzygy": "pending",
+    "order_positions": 21,
+    "pattern_count": 9,
+    "duration_sec": 52.6,
+    "note_count": 1388,
+    "channels": 2,
+    "void_ratio": 0.0,
+    "warp_ratio": 0.26899999999999996,
+    "hold_ratio": 0.301,
+    "rise_ratio": 0.252,
+    "sink_ratio": 0.429,
+    "motifs": [
+      "Warp-Seeking",
+      "Sink-Seeking |"
+    ]
+  }
+]
