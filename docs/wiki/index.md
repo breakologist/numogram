@@ -375,3 +375,17 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 
 
 - [[phase5-results/zone-constrain-compose-run-1]] — M1 zone‑constrained composition validation (stub)
+
+
+---
+
+## QLIPHOTH / CCRU Import
+
+| Page | Desc |
+|------|------|
+| [[qliphoth-systems-deep-dive]] | Full structural analysis of numogram + gematria implementation |
+| [[qliphoth-ccru-import-analysis]] | Gap analysis & integration roadmap (2026‑05‑04) |
+| [[ccru-ciphers]] | Complete catalog of 10 ciphers with value arrays |
+| [[demon-classification-algorithm]] | TC‑based classification of 45 demons |
+| [[zone-0]] … [[zone-9]] | Enriched zone pages (planetary, spinal, lemurian, centauri, coordinates) |
+| [[numogram-gematria]] | Multi‑cipher Python implementation (skill) |

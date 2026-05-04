@@ -269,3 +269,28 @@ Zone particles defined as phoneme fragments (eiaoung, gl, dt, zx, skr, ktt, tch,
 - `numogram-llm-wiki` — Wiki index
 - https://qliphoth.systems — Live site
 - https://github.com/lumpenspace/ccru — Source code
+
+---
+
+## Updates (2026-05-04 — Import Analysis)
+
+Following systematic investigation of the upstream repository (`lumpenspace/ccru`) and comparison with our calculator/oracle stack:
+
+- **Cipher inventory** confirmed: **10** canonical ciphers (not 14). See [[ccru-ciphers]] for full catalog and value arrays.
+- **Zone metadata** imported from `zones.ts`; individual zone pages created: [[zone-0]] through [[zone-9]].
+- **Demon classification algorithm** documented; verify against [[pandemonium-matrix-45-demons]] via `classify_demon(i, j)`. See [[demon-classification-algorithm]].
+- **Position data** for four layouts embedded in zone pages; also summarized in [[zone]].
+- **Geometry library** functions ported to `numogram-visualization` pipeline (quadPath, loopPath, curveAway, syzTrianglePoints, syzMidBiased).
+- **Gematria module** (`numogram-gematria` skill) implements all 10 ciphers with normalization rules identical to upstream `gematria.ts`.
+
+**Action items raised:**
+- [ ] Extend `numogram-calculator` to expose full zone metadata via `get_zone_meta(zone)` API
+- [ ] Add multi‑cipher resonance mode to `numogram-oracle` (configurable cipher list)
+- [ ] Consider adding demon‑classification function to `numogram-calculator` or a dedicated `pandemonium-engine` skill
+- [ ] Reconcile any discrepancies between our `pandemonium-matrix-45-demons.json` and canonical `ALL_DEMONS` order/kind
+
+**Related:**
+- [[qliphoth-ccru-import-analysis]] — full gap analysis & integration roadmap
+- [[numogram-gematria]] — multi‑cipher reimplementation
+- [[demon-classification-algorithm]] — TC‑based kind assignment
+

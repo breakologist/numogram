@@ -56,3 +56,116 @@ Zone-9 is the Pandemonium gate: "Forty-five demons dwell here." Zone-3 is the bu
 ---
 
 *See also:* `current`, `syzygy`, `warp`, `plex`, `time-circuit`, `numogram-oracle`, `pandemonium-matrix`
+
+---
+
+## Detailed Zone Entries
+
+Individual zone pages with full metadata (from `qliphoth.systems`):
+
+| Zone | Page |
+|------|------|
+| 0 — Void | [[zone-0]] |
+| 1 — Stability | [[zone-1]] |
+| 2 — Separation | [[zone-2]] |
+| 3 — Release | [[zone-3]] |
+| 4 — Catastrophe | [[zone-4]] |
+| 5 — Pressure | [[zone-5]] |
+| 6 — Abstraction | [[zone-6]] |
+| 7 — Blood | [[zone-7]] |
+| 8 — Multiplicity | [[zone-8]] |
+| 9 — Iron Core | [[zone-9]] |
+
+Each page includes: planetary correspondence, spinal level, mesh tag, phase door, lemurian lore, centauri correspondence, lemurs (entities), and 4‑layout coordinates.
+
+---
+
+## Zone Metadata (from qliphoth.systems)
+
+| Zone | Planet | Spinal | MeshTag | Door | Phases | Lemurs | Particle |
+|------|--------|--------|---------|------|--------|--------|----------|
+| 0 | Sol (The Sun) | Coccygeal | 0000 | — | 0 | — | eiaoung |
+| 1 | Mercury | Dorsal (Thoracic) | 0001 | Lurgo — Initiator | 2 | 1::0 Lurgo | gl |
+| 2 | Venus | — | 0003 | Duoddod — Lo-Way | 4 | 2::0 Duoddod, 2::1 Doogu | dt |
+| 3 | Earth | Third-eye plane | 0007 | Ixix — opens onto the Swirl | 8 | 3::0 Ixix, 3::1 Ixigool, 3::2 Ixidod | zx |
+| 4 | Mars | — | 0015 | Krako — Time-Delta | 16 | 4::0 Krako, 4::1 Sukugool, 4::2 Skoodu, 4::3 Skarkix | skr |
+| 5 | Jupiter | — | 0031 | Tokhatto — Hyperborean Door | 32 | 5::0 Tokhatto, 5::1 Tukkamu, 5::2 Kuttadid, 5::3 Tikkitix, 5::4 Katak | ktt |
+| 6 | Saturn | Third-eye plane | 0063 | Tchu — gate of Undu | 64 | 6::0 Tchu, 6::1 Djungo, 6::2 Djuddha, 6::3 Djynxx, 6::4 Tchakki, 6::5 Tchattuk | tch |
+| 7 | Uranus | — | 0127 | Puppo — Tracts of Dobo | 128 | 7::0 Puppo, 7::1 Bubbamu, 7::2 Oddubb, 7::3 Pabbakis, 7::4 Ababbatok, 7::5 Papatakoo, 7::6 Bobobja | pb |
+| 8 | Neptune | Lumbar | 0255 | Minommo — dream sorcery | 256 | 8::0 Minommo, 8::1 Murrumur, 8::2 Nammamad, 8::3 Mummumix, 8::4 Numko, 8::5 Muntuk, 8::6 Mommoljo, 8::7 Mombbo | mnm |
+| 9 | Pluto | Sacral | 0511 | Uttunul — the Ultimate Door | 512 | 9::0 Uttunul, 9::1 Tuttagool, 9::2 Unnunddo, 9::3 Ununuttix, 9::4 Unnunaka, 9::5 Tukutu, 9::6 Unnutchi, 9::7 Nuttubab, 9::8 Ummnu | tn |
+
+*Source:* `zones.ts` from [lumpenspace/ccru](https://github.com/lumpenspace/ccru). Particle list from `ZONE_PARTICLE`.
+
+---
+
+## Zone Coordinates (4 Layouts)
+
+Coordinates (pixels) for each zone in the SVG visualizer (`positions.ts`):
+
+### Original (Tetractys)
+
+| Zone | (x, y) |
+|------|--------|
+| 0 | (400, 875) |
+| 1 | (400, 550) |
+| 2 | (560, 275) |
+| 3 | (420, 115) |
+| 4 | (178, 480) |
+| 5 | (250, 370) |
+| 6 | (250, 85) |
+| 7 | (580, 400) |
+| 8 | (400, 660) |
+| 9 | (400, 770) |
+
+### Labyrinth (Symmetric Spider)
+
+| Zone | (x, y) |
+|------|--------|
+| 0 | (495, 815) |
+| 1 | (400, 655) |
+| 2 | (400, 220) |
+| 3 | (495, 60) |
+| 4 | (200, 540) |
+| 5 | (200, 335) |
+| 6 | (305, 60) |
+| 7 | (600, 335) |
+| 8 | (600, 540) |
+| 9 | (305, 815) |
+
+### Ladder (Paired Rungs)
+
+| Zone | (x, y) |
+|------|--------|
+| 0 | (260, 800) |
+| 1 | (260, 625) |
+| 2 | (260, 450) |
+| 3 | (260, 275) |
+| 4 | (260, 100) |
+| 5 | (540, 100) |
+| 6 | (540, 275) |
+| 7 | (540, 450) |
+| 8 | (540, 625) |
+| 9 | (540, 800) |
+
+### Planetary (Orbital)
+
+| Zone | Radius | Default Angle | Size (r) |
+|------|--------|---------------|----------|
+| 0 | 0 | 0° | 30 |
+| 1 | 55 | 250° | 12 |
+| 2 | 95 | 210° | 16 |
+| 3 | 130 | 170° | 17 |
+| 4 | 165 | 130° | 14 |
+| 5 | 210 | 310° | 26 |
+| 6 | 255 | 350° | 24 |
+| 7 | 295 | 30° | 21 |
+| 8 | 330 | 70° | 20 |
+| 9 | 360 | 0° | 11 |
+
+*Center:* (400,400). Angles are degrees; rotate via `date` param in planetary layout.
+
+---
+
+*See also:* [[numogram-calculator]], [[numogram-visualization]], [[qliphoth-systems-deep-dive]].
+
