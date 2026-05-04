@@ -62,3 +62,6 @@ Limbic drift, dreams, trance-states and foetal sentience. The digital byte — e
 - [[zone]] — overview
 - [[numogram-calculator]] — ZONE_DATA
 - [[pandemonium-matrix-45-demons]] — demon assignments
+
+
+**Pentagram coordinate:** **Outer ring left** (180° vertex)

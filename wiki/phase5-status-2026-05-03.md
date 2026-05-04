@@ -1,9 +1,9 @@
 ---
 title: Phase 5 Status — Closed-Loop Hyperstition (2026-05-03)
 created: 2026-05-02
-updated: 2026-05-03
+updated: 2026-05-04
 category: phase5
-status: in_progress
+status: complete
 tags: [phase5, mod-writer, zone-classifier, closed-loop, hyperstition, empirical-validation]
 ---
 
@@ -14,6 +14,11 @@ tags: [phase5, mod-writer, zone-classifier, closed-loop, hyperstition, empirical
 > **Fifth Current:** Empirical Validation — cross-modal consistency before generative release.
 
 ---
+
+## Validation Report
+**M1 milestone achieved** — See [[phase5-validation-report.md]] for full details.  
+**Overall accuracy:** 96.4% (450 tracks, 50/zone)  
+**Per-zone accuracy:** All zones ≥92% (Zone 2: 92%, Zone 7: 99%)
 
 ## Council Summary (tetralogue-phase4-review-phase5-direction.md)
 
@@ -46,7 +51,7 @@ tags: [phase5, mod-writer, zone-classifier, closed-loop, hyperstition, empirical
 - [x] **t4+t5 satisfied**: validator (`validate_zone_bias.py`) already imports real `ModComposer` and loads Phase‑4 classifier artefacts; gate derivation now aligned via patch to `composer_extension.py._gate_from_aq()`
 - [x] **Bugfix (2026-05-03)**: discovered Zone‑2 gate‑shift in `composer_extension.py` that broke acoustic consistency; fixed by restoring `archive/v1.0/` baseline and applying canonical AQ-derived gate (`int(sha1(aq_str).hex()[:8],16) % 37`) with no zone‑specific overrides
 - [x] **t6 complete**: batch validation run (50 tracks × 9 zones) completed — 96.4% overall, all zones ≥92%; results committed to `data/phase5/validation/run-1/`
-- [ ] P5‑M1 write‑up and skill spec finalisation after t6 success
+- [x] P5‑M1 write‑up and skill spec finalisation completed
 - [ ] VAE hallucination dataset pipeline initialised (PyTorch Lightning) — deferred until M1 stable
 
 ---

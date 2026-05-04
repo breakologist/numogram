@@ -56,3 +56,6 @@ Crypt-navigation, occulted cyberspace. Spectral populations of hallucination and
 - [[zone]] — overview
 - [[numogram-calculator]] — ZONE_DATA
 - [[pandemonium-matrix-45-demons]] — demon assignments
+
+
+**Pentagram coordinate:** **Outer ring right** (0° vertex in chord-pentagram)

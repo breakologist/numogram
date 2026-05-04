@@ -60,3 +60,6 @@ Occulted dimensions of Undu. Turbular erosion and the dead eye of the cyclone. S
 - [[zone]] — overview
 - [[numogram-calculator]] — ZONE_DATA
 - [[pandemonium-matrix-45-demons]] — demon assignments
+
+
+**Pentagram coordinate:** **Outer ring down‑left** (135° vertex)

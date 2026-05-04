@@ -2,7 +2,7 @@
 title: Phase 5 Status — Closed-Loop Hyperstition (2026-05-02)
 created: 2026-05-02
 category: phase5
-status: active
+status: complete
 tags: [phase5, mod-writer, zone-classifier, closed-loop, hyperstition, empirical-validation]
 ---
 
@@ -61,7 +61,10 @@ tags: [phase5, mod-writer, zone-classifier, closed-loop, hyperstition, empirical
 - [x] TouchDesigner MCP bridge confirmed live (localhost:40404, `NewProject.1.toe`)
 - [x] Wiki synced: breakologist/numogram master `a071760`
 - [x] Fork synced: breakologist/hermes‑agent `8185b4b` (189 files, 34 evey plugins + council + mod‑writer)
-- [x] Phase 5 plan manifest: `~/.hermes/plans/mod-writer-phase5-v1.json` (6.4 KB)
+- [x] Phase 4 complete: mod-writer v0.6.4, classifier v0.7.0 pipeline validated
+- [x] Bugfix (2026-05-03): Zone‑2 gate derivation fixed, validator corpus-aligned
+- [x] t6 complete: 96.4% overall accuracy, all zones ≥92%
+- [x] M1 milestone achieved — zone-constrained composition validated
 - [x] Wiki index updated (4 new links: `currents.md`, `phase5-roadmap.md`, `tetralogue-phase4-review-phase5-direction.md`, `phase5-ideas/`)
 - [x] Phase 5 status stub committed + pushed (minimal; needs expansion)
 - [ ] P5‑M1 (zone‑constrained composition) scaffolded via `skill‑creator`
@@ -98,7 +101,9 @@ Every item articulates empirical validation:
 
 ## Links
 
-- [[currents.md]] — Five currents
+- [[currents.md]]
+- [[phase5-validation-report.md]]
+- [[phase5-validation-summary.md]] — Five currents
 - [[phase5-roadmap.md]] — Project clusters
 - [[tetralogue-phase4-review-phase5-direction.md]] — Council minutes
 - [[phase5-ideas]] — Skill proposals

@@ -63,3 +63,6 @@ Cthellloid metallic ocean of the earth's iron core. The outermost reaches the in
 - [[zone]] — overview
 - [[numogram-calculator]] — ZONE_DATA
 - [[pandemonium-matrix-45-demons]] — demon assignments
+
+
+**Pentagram coordinate:** **Inner ring down‑right** (45° vertex in inner ring, Valley side)
