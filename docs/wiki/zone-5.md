@@ -59,3 +59,6 @@ Hyperborean or Wendigo mythology. Missing time and alien abduction. Inner-eye of
 - [[zone]] — overview
 - [[numogram-calculator]] — ZONE_DATA
 - [[pandemonium-matrix-45-demons]] — demon assignments
+
+
+**Pentagram coordinate:** **Inner ring apex / Valley zone 5** (90° inner vertex)

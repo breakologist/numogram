@@ -58,3 +58,6 @@ Delta-phase terminal deliria. Kurtz end-of-the-river disintegration into malaria
 - [[zone]] — overview
 - [[numogram-calculator]] — ZONE_DATA
 - [[pandemonium-matrix-45-demons]] — demon assignments
+
+
+**Pentagram coordinate:** **Outer ring down‑right** (45° vertex)

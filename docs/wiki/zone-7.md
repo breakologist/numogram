@@ -61,3 +61,6 @@ Emergence from the depths. Hyper-sea water-carriers and amphibious colonization.
 - [[zone]] — overview
 - [[numogram-calculator]] — ZONE_DATA
 - [[pandemonium-matrix-45-demons]] — demon assignments
+
+
+**Pentagram coordinate:** **Inner ring down‑left** (180° vertex in inner ring, Valley side)

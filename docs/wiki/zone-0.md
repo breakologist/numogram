@@ -55,3 +55,6 @@ Dense void of the cosmic hypermatrix, upon which absolute desolation crosses inf
 - [[zone]] — overview
 - [[numogram-calculator]] — ZONE_DATA
 - [[pandemonium-matrix-45-demons]] — demon assignments
+
+
+**Pentagram coordinate:** **Outer ring star point** (vertex at angle −90° in chord-pentagram)
