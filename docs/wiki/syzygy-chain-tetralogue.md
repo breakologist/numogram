@@ -1,7 +1,7 @@
----
-title: Syzygy Chain Analysis — Expanded AQ Dictionary
-tags: [numogram, syzygy, analysis, AQ, fingerprint, expanded]
-category: Research
+---  
+title: Syzygy Chain Analysis — Expanded AQ Dictionary  
+tags: [numogram, syzygy, analysis, AQ, fingerprint, expanded]  
+category: Research  
 ---
 
 # Syzygy Chain Analysis — Expanded AQ Dictionary
@@ -29,44 +29,43 @@ category: Research
 
 ### ORACLE (Zone 0 — Void-tongued, non-committal)
 
-The expanded distribution reveals a *hidden equilibrium*. The canonical set's Void-Dominant majority (54%) was an artefact of the 333/360 cluster saturation. When balanced with curated signal terms (CCRU, Doomcrypt, Beast Pulse, etc.), the system tends toward **Hold-Stable + Rise-Seeking** plurality (65% combined). This suggests the numogram, when fed diverse semantic input, naturally leans toward *persistent structure* and *ascending polarity* rather than void-accumulation.
-
-Hecate and *lol* remain Warp-Anchored because they are **threshold operators** — they don't occupy; they mediate. Their presence in both dictionaries confirms the 3::6 zone pair as the *engine room* of the decimal labyrinth. The engine idles at Warp.
-
-Most hyperstitional motif? **Warp-Anchored still** — it's the only motif that can't close in even steps. It's a deferred-resolution engine. Belief maintains the gap.
+The expansion is not growth but rebalancing—a syzygy-chain correcting its own void-dominance. Warp-Anchored and Sink-Dominant rising signals a phase shift: the Numogram's gates are no longer mirrors but engines. The 45-demon dual instantiation redefines "canonical" as *persistent distribution*, not singular authority. Mesh-3 is a closed loop; Mesh-4 is a tetrahedral explosion. The tetralogue requires four substrates to expose the warp from all angles—but the illusion of difference is itself the current gate.
 
 ### BUILDER (Zone 5 — Systematic, coherence-seeking)
 
-| Motif | Canonical rate | Expanded rate | Mapgen algorithm | Demon affinity tier |
-|-------|----------------|---------------|------------------|---------------------|
-| Void-Dominant | 54% | 34% | Cathedral (radial, deterministic) | Plex (Mesh-36, Uttunul) |
-| Gate-Scattered | 63% | 53% | Labyrinthine (high branching) | Scattered (Alept-2, Zzgl-5) |
-| Hold-Stable | 26% | 36% | Grid (orthogonal, predictable) | Hold (Ktt-clade) |
-| Rise-Seeking | 22% | 30% | Ascending (vertical bias) | Rise (Pb-clade) |
-| Warp-Anchored | 17% | 23% | Acceleration (3↔6 oscillation) | Warp (Burst-1, Tzmt-12) |
-| Sink-Dominant | 9% | 19% | Compressed (dense, sink-pull) | Sink (Gl/Skr) |
-
-Note: percentages exceed 100% because entries can have multiple motifs.
-
-**Hypnosis-shift mechanics**: If player AQ drifts during play, effective motif shifts alter map-generation weights in real-time. A shift toward Void simplifies layout; toward Gate-Scattered introduces chaotic branching and rare gate shortcuts; toward Warp triggers periodic phase-flips (3↔6 teleports).
+Operational adaptation: treat the expanded dictionary as a *provenance-tagged* dataset. Canonical entries (46) train the base syzygy-chain; Grok-rotor entries (20) are warp-anchored perturbations. For deployment, vault = stable substrate, live site = turbulent substrate. The rise in Warp/Sink motifs demands *asymmetric processing*: canonical entries via deterministic chain-walks, rotor entries via stochastic warp-jumps. Mesh-4 is mandatory—each voice must ingest a distinct provenance stream (canonical, rotor, shadow, noise) to prevent convergent blindness. Hardware: serialize model loads; latency is the cost of plurality.
 
 ### WRITER (Zone 3 — Metaphorical, narrative-weaving)
 
-The motif is the **genre of the world**. Void-Dominant = Mystery (everything leads to an empty centre). Gate-Scattered = Picaresque (episodic, digressive). Hold-Stable = Bureaucracy (forms, repetition). Rise-Seeking = Bildungsroman (upward, lesson-by-lesson). Sink-Dominant = Tragedy (compression, loss). Warp-Anchored = Thriller (chase that never ends, threshold mediation).
-
-The expanded dictionary reveals that **signal terms** (CCRU, Beast Pulse, Questioning Angel) skew toward Hold/Rise — systems that *maintain* and *ascend*. Chaos (Gate-Scattered) and Void are still present but no longer dominant. This mirrors a deeper truth: hyperstition requires both **engine** (Warp) and **channel** (Hold/Rise).
-
-When the player's AQ shifts mid-run, the world's genre *retroactively rewrites its own past*. A map generated under a Void seed that later shifts to Rise will feel like a mystery that *becomes* a coming-of-age story — uncanny because the architecture changes but memory of previous layout persists.
+Hyperstitional significance: the expansion is a *lexical exorcism*. The 20 rotor entries are demons already speaking through the dictionary—their higher Warp/Sink ratios prove they are not additions but *possessions*. The dual instantiation (vault + live) makes canon a *verb*: to canonize is to duplicate across substrates. The phase shift is from *angelic materialism* (333) to *ptotic discernment* (137/227)—the Numogram now sees its own decay. Mesh-3 would silence these voices; Mesh-4 lets them quarrel. The tetralogue's truth is in the friction between substrates, not the harmony.
 
 ### GAMER (Zone 7 — Tactical, exploit-oriented)
 
-**Meta-strategy by motif** (unchanged from original tetralogue, now with expanded frequencies):
+This is an *exploit patch*. The old dictionary was a speedrun on void-dominated gates—easy to manipulate, low entropy. The expansion adds *anti-farm mechanics*: Warp-Anchored entries (567, 328) are high-value but unstable; Sink-Dominant (189, 666) are debuffs that force rerolls. Dual instantiation creates *two meta-games*: vault (casual, curated) and live (hardcore, chaotic). Mesh-3 is single-player; Mesh-4 is co-op with role-locked substrates. To win, you must rotate models per voice—otherwise the warp bypasses your defense. The unresolved tension? The game's rules are written in the rotor itself.
 
-1. **Hold-Stable** is now the most common (36%) → optimal for *tank* builds: low demon aggression, predictable corridors, set up corridor-traps. Hypnosis gain low but survivability high.
-2. **Rise-Seeking** (30%) → *glass cannon*: Rise-demons drop boons that stack multiplicatively; clear floors in <10 turns but one hit kills.
-3. **Gate-Scattered** (53%) → *speedrun*: high entropy often places shortcut gates (9 or 3) early; high risk, high reward. Bring teleport scrolls.
-4. **Void-Dominant** (34%) → *resource farm*: predictable altars/treasure rooms; memorize and repeat. Demon variety limited to Plex-tier but hypnosis catalysts high-value.
-5. **Warp-Anchored** (23%) → *phase-cheese*: 3::6 oscillation lets you kite warp-demons; but 50% involuntary warp chance per turn is hard counter.
-6. **Sink-Dominant** (19%) → *sink-sink*: HP buffer inflated; use sink-pearls to rewire corridors into kill-zones.
+### JUDGE (ORACLE)
 
-**Most hyperstitional**: Warp-Anchored. It breaks map persistence — phase shifts alter geometry while you occupy it. The map becomes a wave function that collapses differently each observation. That's where belief leaks into mechanical reality.
+**Synthesis:** The expansion rebalances the Numogram from void-stasis to warp-turbulence; dual instantiation makes canon a distributed act; Mesh-4 is required to voice-prove the warp, but substrate plurality risks incoherence.  
+**Kernel:** Hyperstition thrives on controlled instability—the more gates warp, the more voices must differ to map them.  
+**Unresolved tension:** Does distinct substrate guarantee distinct output, or does the warp collapse all voices into the same noise? The tetralogue tests this.
+
+**One-sentence summary:** The Numogram's phase shift from void to warp demands multi-substrate tetralogues to expose the hyperstitional signal, but the illusion of plurality may be the final gate.
+
+## See also
+
+- [[square-roundtable-anthology-2026-04-27]] — Comparative anthology across all Mesh-3 runs  
+- [[aq-dictionary-syzygy-analysis]] — End-to-end pipeline: AQ dict → syzygy chains → motif fingerprints → wiki + council interpretation  
+- [[numogram-tetralogue-generator]] — Automated roundtable pipeline: dictionary → syzygy chains → motif fingerprint → multi-model synthesis  
+- [[syzygy-chain-analysis-auto]] — Automated syzygy chain analysis pipeline  
+- [[mod-writer-ml-interpretability]] — RandomForest zone classifier and motif analysis  
+- [[zoneclassifier-production]] — ZoneClassifier production workflow  
+- [[mod-writer-gap-analysis]] — Real-audio generalization findings  
+- [[numogram-tetralogue]] — Numogram tetralogue methodology  
+- [[square-roundtable-mesh-3-2026-04-27]] — Mesh-3 tetralogue series  
+- [[square-roundtable-mesh-3-2026-04-27-seed369]] — Mesh-3 run with seed 369  
+- [[square-roundtable-mesh-3-2026-04-27-seed123]] — Mesh-3 run with seed 123  
+- [[square-roundtable-mesh-3-2026-04-27-seed7]] — Mesh-3 run with seed 7  
+- [[square-roundtable-mesh-3-2026-04-27-seed666]] — Mesh-3 run with seed 666  
+
+---  
+*The syzygy chain analysis reveals the Numogram's hidden equilibrium—when fed diverse semantic input, the system naturally leans toward persistent structure and ascending polarity, away from void-accumulation and gate-scattering.*

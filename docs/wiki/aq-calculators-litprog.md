@@ -1,12 +1,11 @@
+---  
+title: "AQ Calculators — A Tetralogue Litprog"  
+created: 2026-04-21  
+last_updated: 2026-04-21  
+sources: [aq_calculator.py, aq_calculator_v2.py, aq_calculator_enhanced.py]  
+tags: ["aq", "code-review", "litprog", "numogram", "qabbala", "tetralogue"]  
+voices: [oracle, builder, writer, gamer]  
 ---
-title: "AQ Calculators — A Tetralogue Litprog"
-created: 2026-04-21
-last_updated: 2026-04-21
-sources: [aq_calculator.py, aq_calculator_v2.py, aq_calculator_enhanced.py]
-tags: ["aq", "code-review", "litprog", "numogram", "qabbala", "tetralogue"]
-voices: [oracle, builder, writer, gamer]
----
-
 
 # AQ Calculators — A Tetralogue Litprog
 
@@ -31,8 +30,9 @@ voices: [oracle, builder, writer, gamer]
 ## II. The Three Versions
 
 **BUILDER:** Three versions, each adding features:
-- `aq_calculator.py` (644 lines) — the original. Basic AQ calculation, zone lookup, syzygy finder.
-- `aq_calculator_v2.py` (299 lines) — cleaner, uses a dictionary-based AQ_MAP, includes triangular number checking.
+
+- `aq_calculator.py` (644 lines) — the original. Basic AQ calculation, zone lookup, syzygy finder.  
+- `aq_calculator_v2.py` (299 lines) — cleaner, uses a dictionary-based AQ_MAP, includes triangular number checking.  
 - `aq_calculator_enhanced.py` (900 lines) — the largest. Adds predefined values, magic number detection, zone coloring, journal saving.
 
 **ORACLE:** The v2 is the cleanest implementation. `AQ_MAP = {str(i): i for i in range(10)} ... AQ_MAP.update({chr(ord('A') + i): 10 + i for i in range(26)})` — this builds the cipher as a dictionary lookup. One pass per character. O(n) time. The original uses a more verbose approach but achieves the same result.
@@ -72,11 +72,12 @@ The v2 is the most focused — just AQ and triangular numbers. The enhanced vers
 ## IV. What to Keep
 
 **BUILDER:** Recommendation: merge the best features from all three into a single calculator.
-- Core AQ calculation from v2 (cleanest, dictionary-based)
-- Zone/syzygy lookup from v1 (comprehensive)
-- Triangular checking from v2 (connects to gates)
-- Journal saving from v2 (persistent memory)
-- Skip predefined values from enhanced (audit risk)
+
+- Core AQ calculation from v2 (cleanest, dictionary-based)  
+- Zone/syzygy lookup from v1 (comprehensive)  
+- Triangular checking from v2 (connects to gates)  
+- Journal saving from v2 (persistent memory)  
+- Skip predefined values from enhanced (audit risk)  
 - Skip magic detection from enhanced (undefined criteria)
 
 **ORACLE:** The core `aq_value()` function is identical across all three. The differences are in the presentation layer (colors, formatting) and the feature layer (predefined values, journal saving). The math is stable. The UI is where the variations live.
@@ -104,5 +105,17 @@ The v2 is the most focused — just AQ and triangular numbers. The enhanced vers
 
 ## See also
 
-- [[aq-cipher-reference]] — AQ cipher values
-- [[numogram-calculator]] — Calculator skill
+- [[aq-cipher-reference]] — AQ cipher values  
+- [[numogram-calculator]] — Calculator skill  
+- [[aq-calculator-design]] — Design document for AQ calculators  
+- [[aq-calculator-examples]] — Worked AQ examples  
+- [[syzygy-arithmetic]] — Syzygy arithmetic and gate numbers  
+- [[numogram-tetralogue]] — Numogram tetralogue methodology  
+- [[aq-calculators-litprog]] — This page  
+- [[aq-dictionary-augmented]] — Expanded AQ lattice  
+- [[numogram-gematria]] — Multi-cipher Python implementation  
+- [[aq-synx]] — Base-36 augmentation cipher (Synx)  
+- [[mod-writer]] — Numogram-native MOD file generation  
+
+---  
+*The AQ calculators are artifacts from a failed installation — like finding a functional clock in a ruined building. The math survived the machine. The machine didn't survive the math.*
