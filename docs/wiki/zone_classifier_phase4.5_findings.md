@@ -46,8 +46,6 @@ Mixed retraining (synthetic 900 + real 40, weight 0.5) **preserves synthetic acc
 | 5 | 0 | 0% | — |
 | 6 | 0 | 0% | — |
 | 7 | 25 | 62.5% | Autechre, Eliane Radigue, Earth, Boris, Sunn O))), Tim Hecker, Current 93 |
-| 8 | 0 | 0% | — |
-| 9 | 0 | 0% | — |
 
 **Total**: 40 tracks (2 per artist from 20 selected; one artist missing due to unreadable FLAC).
 
@@ -243,13 +241,29 @@ Key takeaway: **real tracks are already at home in their zones**; synthetic anch
 
 ---
 
-## Open Questions & Next Steps
+## See also
 
-1. **BPM validation on more tracks** — instrument the real extraction to log BPM vs onset_rate discrepancies for manual spot-check.
-2. **TD integration (Phase 4.7)** — Drive TouchDesigner visuals from zone probabilities / SHAP values via MCP; sonify zone transitions in realtime.
-3. **Zone merging study** — Given only 3 zones appear empirically, should we collapse zones into spectral families (Sink/Hold/Warp) for a coarser but more realistic model?
-4. **Synthetic generator recalibration** — Can we tune the zone archetypes to match real spectral distributions, yielding a more \"realistic\" hyperstitional space?
+- [[phase5-roadmap]] — Phase 5 roadmap for mod-writer with empirical validation projects
+- [[currents]] — The four (plus one) currents: Numogram Oracle, Roguelike Architect, Lore Weaver, Audio Alchemist, Empirical Validator
+- [[fifth-current-empirical-validation]] — Doctrine and practices for empirical validation (upcoming)
+- [[zone-constrained-composition]] — Skill proposal for zone-constrained composition
+- [[hallucinate-empty-zones]] — Skill proposal for VAE hallucination of empty zones
+- [[mod-writer-validation]] — Mod-writer validation results
+- [[aq-augmentation-pipeline]] — AQ dictionary augmentation pipeline
+- [[mod-writer-ml-interpretability]] — Machine learning interpretability for MOD generation
+- [[square-roundtable-mesh-3-2026-04-27]] — Mesh-3 tetralogue series
+- [[aq-dictionary-augmented]] — Expanded AQ dictionary with augmentation pipeline
+- [[mod-writer-gap-analysis]] — Analysis of gaps in MOD generation
+- [[zonecomposer-production]] — ZoneComposer production workflow
+- [[tracker-composition-principles]] — Tracker composition principles
+- [[tracker-motif-triads-reference]] — Triad-motif policy tables
+- [[aq-calculators-litprog]] — AQ calculators tetralogue
+- [[aq-synx]] — Base-36 augmentation cipher (Synx)
+- [[numogram-gematria]] — Multi-cipher Python implementation
+- [[numogram-visualizer-v6]] — Numogram Visualizer v6
+- [[numogram-visualizer-v7]] — Numogram Visualizer v7 (Base-36 Djynxxogram)
+- [[barker-spiral]] — Barker Spiral analysis
+- [[numogram-tetralogue]] — Numogram tetralogue methodology
 
 ---
-
 *Page updated by Hermes Agent v2.0 — Audio current + wiki consolidation, 2026-05-01*

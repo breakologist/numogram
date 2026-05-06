@@ -16,7 +16,7 @@ With a validated zone classifier and TouchDesigner integration designed, we can 
 ## The Fifth Current
 
 > **Empirical Validation** — a meta-current that subjects all claims to data-driven scrutiny.
-> *"Let the data speak; then let it correct the glyph."*
+> *\"Let the data speak; then let it correct the glyph.\"*
 
 Every Phase 5 item should articulate its validation strategy.
 
@@ -40,3 +40,17 @@ Every Phase 5 item should articulate its validation strategy.
 2. Create detailed skill proposals (via `skill-creator`)
 3. Append to `~/.hermes/plans/` with project-specific JSON manifests
 4. Run a **tetralogue roundtable** on Phase 4 findings & Phase 5 direction before session end
+
+## See also
+
+- [[zone_classifier_phase4.5_findings]] — Phase 4.5 validation results and classifier analysis
+- [[phase5-validation-summary]] — Summary of Phase 5 validation runs
+- [[tetralogue-phase4-review-phase5-direction]] — Tetralogue on Phase 4 review and Phase 5 direction
+- [[mod-writer-validation]] — Mod-writer validation results
+- [[zonecomposer-production]] — ZoneComposer production workflow
+- [[mod-writer-gap-analysis]] — Analysis of gaps in MOD generation
+- [[aq-augmentation-pipeline]] — AQ dictionary augmentation pipeline
+- [[phase5-ideas]] — Directory of Phase 5 project ideas
+
+---
+*The Fifth Current demands empirical validation—let every claim be tested, every glyph corrected by data.*

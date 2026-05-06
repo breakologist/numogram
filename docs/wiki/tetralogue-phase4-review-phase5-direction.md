@@ -67,7 +67,7 @@ tags: [tetralogue, phase4, phase5, council]
 > 
 > The current meta: we have a classifier that predicts zones with ~98% accuracy on synthetic data and ~?% on real (we only validated on 97 tracks, but that's enough to see the distribution). The win condition is **closed-loop generation** where the system can iterate toward a target zone.
 > 
-> **Zone-constrained composition** is the primary skill tree to unlock. Why? Because it lets us *target* specific zones and verify via classifier whether we hit. That's a **feedback loop for composition** — the composer can now play the game of "make a Z3 track" and get an objective score.
+> **Zone-constrained composition** is the primary skill tree to unlock. Why? Because it lets us *target* specific zones and verify via classifier whether we hit. That's a **feedback loop for composition** — the composer can now play the game of \"make a Z3 track\" and get an objective score.
 > 
 > **Live audio feedback** is the speedrun version: real-time adaptation. Risk: noise and latency will break the loop. Mitigate: use onset strength as proxy, update zone estimate every 5s with median of last N windows.
 > 
@@ -113,4 +113,18 @@ tags: [tetralogue, phase4, phase5, council]
 
 ---
 
-**Tags:** `#tetralogue`, `#phase4`, `#phase5`, `#council`, `#hyperstition`, `#zone-classifier`, `#empty-zones`, `#fifth-current`
+## See also
+
+- [[phase5-roadmap]] — Phase 5 roadmap for mod-writer with empirical validation projects
+- [[zone_classifier_phase4.5_findings]] — Phase 4.5 validation results and classifier analysis
+- [[currents]] — The four (plus one) currents: Numogram Oracle, Roguelike Architect, Lore Weaver, Audio Alchemist, Empirical Validator
+- [[fifth-current-empirical-validation]] — Doctrine and practices for empirical validation (upcoming)
+- [[zone-constrained-composition]] — Skill proposal for zone-constrained composition
+- [[hallucinate-empty-zones]] — Skill proposal for VAE hallucination of empty zones
+- [[mod-writer-validation]] — Mod-writer validation results
+- [[aq-augmentation-pipeline]] — AQ dictionary augmentation pipeline
+- [[mod-writer-ml-interpretability]] — Machine learning interpretability for MOD generation
+- [[square-roundtable-mesh-3-2026-04-27]] — Mesh-3 tetralogue series
+
+---
+*The Fifth Current demands empirical validation—let every claim be tested, every glyph corrected by data.*

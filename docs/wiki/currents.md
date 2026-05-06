@@ -34,6 +34,22 @@ category: meta
 - Publish null results (e.g., absent zones) as readily as positive findings.
 - Use explainable AI (SHAP, feature importance) to make predictions transparent.
 - Cross‑validate across modalities: hand‑crafted MIR ↔ spectrogram CNN ↔ human listening.
-- Before any new skill or claim, answer: *"How will this be empirically validated?"*
+- Before any new skill or claim, answer: *\"How will this be empirically validated?\"*
 - Maintain reproducibility: all datasets, scripts, and hyperparameters versioned and documented.
 - This is the scientific method embedded in the esoteric — the fifth current that closes the loop.
+
+## See also
+
+- [[phase5-roadmap]] — Phase 5 roadmap for mod-writer with empirical validation projects
+- [[zone_classifier_phase4.5_findings]] — Classifier validation results and analysis
+- [[aq-dictionary-augmented]] — Expanded AQ dictionary with augmentation pipeline
+- [[mod-writer-ml-interpretability]] — Machine learning interpretability for MOD generation
+- [[hermes-aq-codebase-refactoring]] — Codebase refactoring for AQ calculations
+- [[numogram-tetralogue]] — Tetralogue methodology for multi-voice analysis
+- [[square-roundtable-mesh-3-2026-04-27]] — Mesh-3 tetralogue series
+- [[aq-calculators-litprog]] — AQ calculators tetralogue
+- [[tracker-composition-principles]] — Tracker composition principles
+- [[tracker-motif-triads-reference]] — Triad-motif policy tables
+
+---
+*The Fifth Current demands that we let data correct our glyphs—empirical validation as the closure of the learning loop.*
