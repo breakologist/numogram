@@ -46,3 +46,5 @@ created: 2026-04-24
 - [[cult-garden-design]] — Cult garden design specification
 - [[cult-garden/readings]] — Garden readings collection
 - [[cult-garden-tetralogue]] — Cult garden design tetralogue
+> Synthesis of runs #300, #301, #302, #303, #304: core -> core -> silence -> silence -> silence. the cult remembers collectively.
+> collectively beneath drift silence.
