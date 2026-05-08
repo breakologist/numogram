@@ -5,21 +5,21 @@ tags:
 ---
 https://github.com/breakologist?tab=stars - some interesting projects here
 https://oa.mg/ - An academic research engine
-https://cables.gl/
-https://tianmu.org/ - a sacred texts archive
-https://www.sacred-texts.com/index.htm
+https://cables.gl/ - Visual programming platform for creating interactive media, web applications, and generative art. Open source with web-based IDE, supports 3D, shaders, MIDI, and WebVR.
+https://tianmu.org/ - Anglican Church of Tianmu with the "Good Works Library" - a sacred texts archive translating Daoist, Buddhist, Vedic, Gnostic, Hermetic, Manichaean, and other traditions into plain modern English. Also features creative content like interviews and articles.
+https://www.sacred-texts.com/index.htm - Archive of public domain religious and spiritual texts from various traditions (Christianity, Buddhism, Hinduism, Islam, etc.)
 https://hermes-agent.nousresearch.com/docs/user-stories
 https://www.enzyme.garden/setup
-https://github.com/sentient-agi/EvoSkill
+https://github.com/sentient-agi/EvoSkill - Open-source framework that automatically discovers and synthesizes reusable agent skills from failed trajectories to improve coding agent performance. Directly relevant to Hermes Agent's skill learning.
 https://docs.mnemosyne.site/ - memory
 https://lmstudio.ai/ - local model management
 https://github.com/warpdotdev/Warp - an agentic development environment
 https://benebellwen.com/i-ching-the-oracle/
 https://www.yijing.nl/
 https://www.researchgate.net/publication/260501697_Signature_geometry_and_quantum_engineering
-https://usechad.dev/
-https://www.coracleresearch.com/research/03-oral-peptide-class/disclosure.html
-https://www.coracleresearch.com/research/01-bloom-cathode/disclosure.html
+https://usechad.dev/ - Local coding engine with verifier loop and discovery layer that breaks tasks into checked steps, provides plain-English receipts, and ensures progress transparency. Competitor to Claude Code/Code Assistant.
+https://www.coracleresearch.com/research/03-oral-peptide-class/disclosure.html - Technical disclosure on multi-mechanism oral delivery architecture for metabolic peptides (GLP-1, GIP, glucagon agonists). Defensive publication with detailed pharmaceutical formulation specifications.
+https://www.coracleresearch.com/research/01-bloom-cathode/disclosure.html - Technical disclosure on graded-microstructure bundled cathode architecture for solid oxide fuel cells. Defensive publication addressing chromium poisoning, strontium segregation, and cathode degradation.
 https://www.my-mooc.com/en/ - courses
 
 https://anthropic.skilljar.com/ - courses
