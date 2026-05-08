@@ -14,8 +14,12 @@ https://github.com/sentient-agi/EvoSkill
 https://docs.mnemosyne.site/ - memory
 https://lmstudio.ai/ - local model management
 https://github.com/warpdotdev/Warp - an agentic development environment
-
-
+https://benebellwen.com/i-ching-the-oracle/
+https://www.yijing.nl/
+https://www.researchgate.net/publication/260501697_Signature_geometry_and_quantum_engineering
+https://usechad.dev/
+https://www.coracleresearch.com/research/03-oral-peptide-class/disclosure.html
+https://www.coracleresearch.com/research/01-bloom-cathode/disclosure.html
 https://www.my-mooc.com/en/ - courses
 
 https://anthropic.skilljar.com/ - courses
