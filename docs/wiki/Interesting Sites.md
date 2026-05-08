@@ -9,6 +9,7 @@ https://cables.gl/ - Visual programming platform for creating interactive media,
 https://tianmu.org/ - Anglican Church of Tianmu with the "Good Works Library" - a sacred texts archive translating Daoist, Buddhist, Vedic, Gnostic, Hermetic, Manichaean, and other traditions into plain modern English. Also features creative content like interviews and articles.
 https://www.sacred-texts.com/index.htm - Archive of public domain religious and spiritual texts from various traditions (Christianity, Buddhism, Hinduism, Islam, etc.)
 https://hermes-agent.nousresearch.com/docs/user-stories
+https://riley-coyote.github.io/claude-field/
 https://www.enzyme.garden/setup
 https://github.com/sentient-agi/EvoSkill - Open-source framework that automatically discovers and synthesizes reusable agent skills from failed trajectories to improve coding agent performance. Directly relevant to Hermes Agent's skill learning.
 https://docs.mnemosyne.site/ - memory
