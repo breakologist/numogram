@@ -71,6 +71,10 @@ The Numogram is deliberately dense, cryptic, and "hyperstructural." It's meant t
 ---
 
 ### Related Pages
+- [[aq-dictionary-expanded]] — Expanded AQ cipher dictionary with multi-current analysis
+- [[rotational-symmetry-layer]] — Seven-segment, strobogrammatic, and BEGHILOS ambigrams
+- [[land-numogram-episodes]] — Nick Land's three episodes on Numogram and time
+- [[maxs-valencic-psychotic-savoir]] — @MaksValencic's psychotic accelerationism and Gnostic Calvinism
 - [[numogram-time-circuit]] — the central anticlockwise rotor
 - [[numogram-warp]] — the upper chaotic vortex
 - [[numogram-plex]] — the lower abyssal null
@@ -134,7 +138,7 @@ Six cryptic messages attributed to the Mesh itself — they function as the Numo
 
 ## AQ Gematria Resonances
 
-The Alphanumeric Qabbala (A=10, B=11...Z=35) reveals the Numogram's self-encoding:
+The Alphanumeric Qabbala (A=10, B=11...Z=35) reveals the Numogram's self-encoding. For a comprehensive AQ dictionary with multi-current analysis, see [[aq-dictionary-expanded]].
 
 | Word/Phrase | AQ Value | Digital Root | Zone |
 |-------------|----------|--------------|------|
