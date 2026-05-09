@@ -1,4 +1,0 @@
-Run: Run #233: agent, Turn 135, Hyp 26%, Zones [0, 1], Slain 4
-Entropy: f6251176e9e1fc5555e2f844d48a3fa3
-Mixed: a43140678225a7d1b99833d8667a57cc
-Zone from mixed: 2

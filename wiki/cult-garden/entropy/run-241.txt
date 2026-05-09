@@ -1,4 +1,0 @@
-Run: Run #221: etym, Turn 340, Hyp 89%, Zones [0, 1, 2, 3, 4, 5, 6, 8, 9], Slain 1 [G P ~S]
-Entropy: b4c596fd139ae5e3beb07f6782cffcd9
-Mixed: 624d0c2c1128ca18e3414784f4ee0507
-Zone from mixed: 8
