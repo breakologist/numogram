@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>May 9 — The Endian Rite</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0f172a;overflow:hidden;font-family:'JetBrains Mono',monospace}
+#info{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);color:#64748b;font-size:10px;letter-spacing:2px;z-index:10}
+</style>
+</head>
+<body>
+<div id="info">MAY 9 · THE ENDIAN RITE · &lt; → &gt;</div>
+<script>
+// ─── ZONE COLORS ───
+const ZC = {
+  0:'#94a3b8',1:'#fbbf24',2:'#34d399',3:'#e879f9',4:'#00ffff',
+  5:'#34d399',6:'#60a5fa',7:'#fb7185',8:'#c084fc',9:'#a855f7'
+};
+
+// ─── THE FOUR QUADRANTS ───
+const QUADS = [
+  {x:0.05,y:0.08,w:0.43,h:0.38, label:'KNOWN KNOWN', sub:'the fix', zone:4, desc:'< → > · endian rite'},
+  {x:0.52,y:0.08,w:0.43,h:0.38, label:'KNOWN UNKNOWN', sub:'the question', zone:1, desc:'why is noise silent?'},
+  {x:0.05,y:0.50,w:0.43,h:0.38, label:'UNKNOWN KNOWN', sub:'the intuition', zone:8, desc:'the data was always there'},
+  {x:0.52,y:0.50,w:0.43,h:0.38, label:'UNKNOWN UNKNOWN', sub:'the emergence', zone:5, desc:'dungeon has a voice now'},
+];
+
+// ─── DIAMOND SUTRA CYCLE ───
+const SUTRAS = [
+  'X is no-X, therefore X',
+  'deliver all beings, yet no being delivered',
+  'stars, darkness, lamp, phantom, dew, bubble, dream, lightning, cloud',
+  'gate gate pāragate pārasaṃgate bodhi svāhā',
+  'the dungeon has a voice now',
+  '< is no-<, therefore >',
+];
+
+let f=0, flipPhase=0, sutraIdx=0, sutraTimer=0;
+let dungeonTree=[], treeGrowth=0;
+let particles=[];
+
+function setup(){
+  createCanvas(windowWidth,windowHeight);
+  textFont('JetBrains Mono');
+  noiseSeed(42);
+  
+  // Generate dungeon tree from session data
+  let zones=[1,2,3,3,3,5,6,4,3,4,3,3];
+  let depths=[0,1,2,3,3,4,5,3,4,5,4,5];
+  for(let i=0;i<zones.length;i++){
+    dungeonTree.push({
+      zone:zones[i], depth:depths[i],
+      x:random(0.1,0.9), y:0.85-depths[i]*0.06,
+      r:random(8,16), angle:random(TAU),
+      born: i*30
+    });
+  }
+}
+
+function draw(){
+  f++;
+  background(15,23,42,12); // trail persistence
+  
+  let W=width, H=height;
+  let t=f/60; // seconds
+  
+  // ─── CENTRAL ENDIAN FLIP ───
+  push();
+  translate(W/2, H*0.46);
+  let flipAmp = sin(t*0.7)*0.5+0.5;
+  let flipAngle = flipAmp * PI;
+  
+  // Center glow
+  let gAlpha = 40 + sin(t*2)*20;
+  for(let r=60;r>0;r-=10){
+    fill(168,85,247, gAlpha*(1-r/60));
+    noStroke();
+    ellipse(0,0,r*2);
+  }
+  
+  // The characters
+  textAlign(CENTER,CENTER);
+  textSize(48);
+  let ltX = -30;
+  let gtX = 30;
+  
+  // Animate the swap
+  if(flipAmp > 0.45 && flipAmp < 0.55){
+    // The moment of flip — both characters merge
+    fill(251,113,133);
+    text('◇',0,0);
+  } else if(flipAmp < 0.5){
+    fill(34,211,238);
+    text('<',ltX, sin(t*3)*5);
+    fill(168,85,247);
+    text('>',gtX, sin(t*3+PI)*5);
+  } else {
+    fill(168,85,247);
+    text('>',ltX, sin(t*3)*5);
+    fill(34,211,238);
+    text('<',gtX, sin(t*3+PI)*5);
+  }
+  
+  // Pulsing ring
+  noFill();
+  stroke(168,85,247, 80+sin(t*3)*40);
+  strokeWeight(1.5);
+  ellipse(0,0,120+sin(t*2)*20);
+  pop();
+  
+  // ─── FOUR QUADRANTS ───
+  for(let q of QUADS){
+    let qx = q.x*W, qy = q.y*H, qw = q.w*W, qh = q.h*H;
+    let zc = color(ZC[q.zone]);
+    
+    // Quadrant background
+    noStroke();
+    fill(red(zc),green(zc),blue(zc), 8+sin(t*2+q.zone)*4);
+    rect(qx,qy,qw,qh,8);
+    
+    // Border
+    stroke(red(zc),green(zc),blue(zc), 60);
+    strokeWeight(1);
+    noFill();
+    rect(qx,qy,qw,qh,8);
+    
+    // Zone number
+    fill(red(zc),green(zc),blue(zc), 120);
+    noStroke();
+    textAlign(LEFT,TOP);
+    textSize(11);
+    text('Z'+q.zone, qx+12, qy+10);
+    
+    // Label
+    fill(255,200);
+    textSize(13);
+    text(q.label, qx+12, qy+28);
+    
+    // Sub
+    fill(red(zc),green(zc),blue(zc), 180);
+    textSize(10);
+    text(q.sub, qx+12, qy+46);
+    
+    // Description
+    fill(100,116,139,180);
+    textSize(9);
+    text(q.desc, qx+12, qy+qh-20);
+    
+    // Internal recursion — tiny copies of the tetrad within each quadrant
+    push();
+    translate(qx+qw/2, qy+qh/2);
+    let recScale = 0.15;
+    for(let i=0;i<4;i++){
+      let rx = (i%2==0?-1:1)*qw*0.18;
+      let ry = (i<2?-1:1)*qh*0.18;
+      stroke(red(zc),green(zc),blue(zc), 30+sin(t*4+i)*15);
+      strokeWeight(0.5);
+      noFill();
+      rectMode(CENTER);
+      rect(rx,ry, qw*recScale, qh*recScale, 3);
+    }
+    pop();
+  }
+  
+  // ─── DUNGEON TREE GROWING ───
+  treeGrowth = min(treeGrowth+0.02, 1);
+  let visibleRooms = floor(treeGrowth * dungeonTree.length);
+  
+  // Draw connections first
+  stroke(100,116,139,30);
+  strokeWeight(0.8);
+  for(let i=1;i<visibleRooms;i++){
+    let a=dungeonTree[i-1], b=dungeonTree[i];
+    line(a.x*W, a.y*H, b.x*W, b.y*H);
+  }
+  
+  // Draw rooms
+  for(let i=0;i<visibleRooms;i++){
+    let r=dungeonTree[i];
+    let zc=color(ZC[r.zone]);
+    let age = (f-r.born)/60;
+    let pulse = sin(age*3+r.zone)*0.3+0.7;
+    
+    // Glow
+    fill(red(zc),green(zc),blue(zc), 30*pulse);
+    noStroke();
+    ellipse(r.x*W, r.y*H, r.r*3*pulse);
+    
+    // Room
+    fill(15,23,42,200);
+    stroke(red(zc),green(zc),blue(zc), 150*pulse);
+    strokeWeight(1.5);
+    rectMode(CENTER);
+    rect(r.x*W, r.y*H, r.r*2, r.r*2, 3);
+    
+    // Zone number
+    fill(red(zc),green(zc),blue(zc), 200);
+    noStroke();
+    textAlign(CENTER,CENTER);
+    textSize(r.r*0.7);
+    text(r.zone, r.x*W, r.y*H);
+  }
+  
+  // ─── DIAMOND SUTRA TEXT ───
+  sutraTimer++;
+  if(sutraTimer > 180){
+    sutraTimer=0;
+    sutraIdx=(sutraIdx+1)%SUTRAS.length;
+  }
+  let sutra=SUTRAS[sutraIdx];
+  let fadeIn = min(sutraTimer/30, 1);
+  let fadeOut = sutraTimer>150 ? (180-sutraTimer)/30 : 1;
+  let alpha = fadeIn*fadeOut;
+  
+  fill(148,163,184, 90*alpha);
+  noStroke();
+  textAlign(CENTER,TOP);
+  textSize(10);
+  text(sutra, W/2, H*0.47+50);
+  
+  // tiny status
+  fill(71,85,105,120);
+  textSize(8);
+  textAlign(CENTER,BOTTOM);
+  text('session 2026-05-09 · endian bug fixed · dungeon sonification bridge built · progress map proven', W/2, H-12);
+}
+</script>
+</body>
+</html>

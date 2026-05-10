@@ -15,12 +15,12 @@ tags: [aq, dictionary, currents, 137, 333, 360, 666, 888, syzygy, heresy]
 
 | Gate | AQ | Qwerty | Numeric Qwerty | Synx / Yxshh | Key Terms | Resonance |
 |------|----|--------|----------------|--------------|-----------|-----------|
-| **137** | 137 | — | — | — | Autism, Sullen, Ptotic (Eyes=227) | Neuro-oracular discernment (Z2 renewal) |
+| **137** | 137 | — | — | — | English, Lucifer, Autism, Sullen, Ptotic (Eyes=227) | Neuro-oracular discernment (Z2 renewal) |
 | **333** | 333 | — | — | — | Gnostic Calvinism, Angelic Materialism, Xenocosmography, Askance Eyes, Crypts of Slants | Slant torque (Z3 Warp; Dickinson cluster 111/117/171/666) |
 | **360** | 360 | 360 | — | — | Decimal Labyrinth = Tree of Knowledge | Mod-9 heresy (~80% of 333; @cybermonist group theory) |
 | **666** | 666 | — | — | — | Beast Pulse, Metaxic Language, Dickinson "superb slant" | Diabolical torque (Z6 Warp; Synx=devil's spirit) |
-| **777** | 777 | — | — | — | "Let there be light", "Do what thou wilt" | Divine law (Z3 Warp) |
-| **888** | 888 | — | — | — | Ordo Amoris (good/evil integration) | Apex integration (Z6/Z9 syzygy) |
+| **777** | 777 | — | — | — | "and god said let there be light and there was light", "do what thou wilt shall be the whole of the law" | Divine law (Z3 Warp) |
+| **888** | 888 | — | — | — | "ordo amoris integrates good and evil spirits alike" (good/evil integration) | Apex integration (Z6/Z9 syzygy) |
 
 **Full Table** (48+ entries): Multi-cipher (AQ/Qwerty/Synx); threads (Dickinson, Atlantean Cross, Lemurian protocol).
 

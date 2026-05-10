@@ -24,22 +24,39 @@ Every Phase 5 item should articulate its validation strategy.
 
 | ID | Title | Status | Skills |
 |----|-------|--------|--------|
-| [P5-zone-constrain-compose](phase5-ideas/zone-constrained-composition.md) | Zone-Constrained Composition | proposed | mod-writer-classifier, mod-writer-composer |
-| [P5-live-audio-loop](phase5-ideas/live-audio-zone-feedback.md) | Live Audio → Zone → MOD Feedback | proposed | mod-writer-classifier, puredata-wrapper |
+| [P5-zone-constrain-compose](phase5-ideas/zone-constrained-composition.md) | Zone-Constrained Composition | ✅ complete (96.4%, May 3) | mod-writer-classifier, mod-writer-composer |
+| [P5-hallucinate-empty-zones](phase5-ideas/hallucinate-empty-zones.md) | VAE Hallucination of Empty Zones | ✅ complete (92%, May 6) | mlops/training, vae-hallucination, numogram-hallucination-pipeline |
+| [P5-live-audio-loop](phase5-ideas/live-audio-zone-feedback.md) | Live Audio → Zone → MOD Feedback | 🔥 priority #1 | mod-writer-classifier, puredata-wrapper |
+| [P5-audio-oracle-linking](phase5-ideas/audio-oracle-aq-linking.md) | Cross-Domain Audio–AQ–Oracle Linking | proposed | numogram-oracle, numogram-dictionary-augmenter |
+| [P5-zone-explorer-gui](phase5-ideas/zone-explorer-gui.md) | Interactive Zone Explorer GUI | proposed | p5js, touchdesigner-mcp |
 | [P5-dataset-expansion](phase5-ideas/dataset-expansion-synthesis.md) | Dataset Expansion & Empty-Zone Synthesis | proposed | mod-writer-classifier, mod-writer-composer |
 | [P5-spectrogram-cnn](phase5-ideas/spectrogram-cnn.md) | Cross-Modal Spectrogram CNN | proposed | mod-writer-classifier, mlops/inference |
-| [P5-zone-explorer-gui](phase5-ideas/zone-explorer-gui.md) | Interactive Zone Explorer GUI | proposed | p5js, touchdesigner-mcp |
-| [P5-oracle-audio-linking](phase5-ideas/audio-oracle-aq-linking.md) | Cross-Domain Audio–AQ–Oracle Linking | proposed | numogram-oracle, numogram-dictionary-augmenter |
-| [P5-hallucinate-empty-zones](phase5-ideas/hallucinate-empty-zones-vae.md) | Generative Filling of Empty Zones | proposed | mlops/training, audiocraft-audio-generation |
 | [P5-discography-zone-drift](phase5-ideas/discography-zone-drift.md) | Artist Discography Zone Timeline | proposed | visualization |
 | [P5-auto-release-pipeline](phase5-ideas/auto-release-pipeline.md) | Hermes Skill Auto-Release Pipeline | proposed | cronjob, github-repo-management |
 
+## Completed Milestones
+
+### M1 — Zone-Constrained Composition (May 3)
+- **96.4%** overall accuracy (434/450 tracks, 50×9 zones)
+- All zones ≥92% (Z4, Z6, Z8 at 100%)
+- Real-world slice: 10/10 on artist-labelled zones 2 & 7
+- Results: [[phase5-results/zone-constrain-compose-run-1]]
+
+### M2 — VAE Hallucination of Empty Zones (May 6)
+- **92%** target-zone accuracy across all five gap zones
+- Z3=95%, Z4=90%, Z5=88%, Z8=95%, Z9=92%
+- Ear test: 4.2/5 coherence
+- Method: syzygy-walk latent sampling + iterative projection in scaled feature space
+- Skills: `numogram-hallucination-pipeline`, `vae-hallucination`
+- Results: [[phase5-results/phase5-m2-vae-hallucination]]
+
 ## Next Steps
 
-1. Prioritise 1–2 items for immediate scaffolding
-2. Create detailed skill proposals (via `skill-creator`)
-3. Append to `~/.hermes/plans/` with project-specific JSON manifests
-4. Run a **tetralogue roundtable** on Phase 4 findings & Phase 5 direction before session end
+1. ~~Prioritise 1–2 items for immediate scaffolding~~ — DONE (M1, M2)
+2. ~~Create detailed skill proposals (via `skill-creator`)~~ — DONE (5 skills created)
+3. **Current priority**: M3 — Live Audio → Zone → MOD Feedback (real-time closed-loop instrument)
+4. M4 batch (oracle linking, spectrogram CNN, discography drift) can run in parallel
+5. M5 (GUI, dataset, auto-release) — post-M3 polish pass
 
 ## See also
 

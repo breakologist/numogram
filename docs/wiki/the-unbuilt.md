@@ -1,14 +1,14 @@
 ---
 title: "The Unbuilt — Every Idea That's Been Proposed But Not Yet Built"
 created: 2026-04-18
-last_updated: 2026-04-18
-tags: ["design", "numogram", "roguelike", "tracker"]
+last_updated: 2026-05-09
+tags: ["design", "numogram", "roguelike", "tracker", "audio", "phase5"]
 ---
-
 
 # The Unbuilt — Every Idea, Tracked
 
-> 206 runs. The game works. What didn't we build?
+> Originally: 206 runs. The game works. What didn't we build?
+> Now: M1 (96.4%) and M2 (92%) closed. The audio speaks. What's next?
 
 ## The Legend
 
@@ -46,7 +46,7 @@ tags: ["design", "numogram", "roguelike", "tracker"]
 | Demon kill +5 hyp | ✓ DONE | Equal to gate step |
 | Death carry-over (high hyp) | ○ PROPOSED | Writer's suggestion: echo of previous intensity |
 | Ghost system (bones files) | ○ PROPOSED | Gamer's suggestion: dead crawler persists. Never built. |
-| Vowel corruption sound layer | ○ PROPOSED | Writer's suggestion: tone shifting with corruption %. Never built. |
+| Vowel corruption sound layer | ○ PROPOSED | Writer's suggestion: tone shifting with corruption %. Now feasible — triangle/noise working, oracle voice pipeline available. See Phase 5 audio cross-pollination below. |
 | Cryptolith escalating mechanics | ○ PROPOSED | Five messages → five mechanical changes. Only +20 hyp implemented. |
 | Zone 0 trigger at T(22)=253 | ○ PROPOSED | "The Tree whispers" → hidden Zone 0 door. Never built. |
 | Triangular step counter event spikes | ◐ PARTIAL | Messages fire at T(1), T(3), T(6)... but no hyp bonus. |
@@ -98,51 +98,117 @@ tags: ["design", "numogram", "roguelike", "tracker"]
 
 ---
 
+## Phase 5 — Audio Alchemy (April 29 – May 9)
+
+### M1 — Zone-Constrained Composition (May 3)
+
+| Idea | Status | Notes |
+|------|--------|-------|
+| Zone-targeted MOD generation | ✓ DONE | ZoneComposer + SongBuilder; AQ-seeded gate derivation contract |
+| 50×9 batch validation | ✓ DONE | 96.4% accuracy (434/450), all zones ≥92% |
+| Confusion matrix | ✓ DONE | 9×9 matrix committed; adjacent-zone bleed only |
+| Real-world validation slice | ✓ DONE | 10/10 on artist-labelled zones 2 & 7 |
+| Gate derivation contract | ✓ DONE | `int(sha1(aq_str).hexdigest()[:8],16) % 37`; no zone-specific overrides |
+| Zone 1 pattern-break fix | ✓ DONE | `duplicate_order=False` for contiguous 32-row pattern |
+| Rhythm baseline override | ✓ DONE | `--force-rhythm-baseline` for synthetic MOD validation |
+| p5-zone-constrain-compose skill | ✓ DONE | v1.0.0, validation harness + centroid database |
+| mod-writer-composer skill | ✓ DONE | ZoneComposer wrapper + SongBuilder proven path |
+
+### M2 — VAE Hallucination of Empty Zones (May 6)
+
+| Idea | Status | Notes |
+|------|--------|-------|
+| Conditional VAE on MIR features | ✓ DONE | d=10 MLP encoder/decoder; zone-conditioned |
+| Syzygy-walk latent sampling | ✓ DONE | Z3↔6 Warp, Z4↔5 Sink, etc.; 20 samples/zone |
+| Iterative projection to decision boundary | ✓ DONE | eta=0.15, max_steps=10; resolves centroid-classifier paradox |
+| Gap zone population (Z3,4,5,8,9) | ✓ DONE | Z3=95%, Z4=90%, Z5=88%, Z8=95%, Z9=92% |
+| Ear test validation | ✓ DONE | 4.2/5 (>3/5 threshold) |
+| numogram-hallucination-pipeline skill | ✓ DONE | v0.1; diagnose → project → validate workflow |
+| vae-hallucination skill | ✓ DONE | Trained d=10 VAE model + pipeline scripts |
+
+### M3 — Live Audio → Zone → MOD Feedback
+
+| Idea | Status | Notes |
+|------|--------|-------|
+| Real-time MIR extraction | ○ PROPOSED | sounddevice → essentia fast onset → zone prediction |
+| MOD pattern mutation on zone change | ○ PROPOSED | Live mutation of playing MOD based on zone flips |
+| Latency target <3s | ○ PROPOSED | 95th percentile; buffer predictions (median N) |
+| Zone flip stability ≤0.2/5s | ○ PROPOSED | Hysteresis in zone classification |
+| Pure Data integration | ○ PROPOSED | puredata-wrapper skill scaffolded |
+
+### Bug Fixes & Infrastructure
+
+| Idea | Status | Notes |
+|------|--------|-------|
+| Sample endian bug (triangle/noise silent) | ✓ DONE | `Sample.pack()` little-endian → big-endian; one-character fix in writer.py:63 |
+| Current C (noise) audible | ✓ DONE | ~-10 dBFS; as loud as square |
+| Current B (triangle) audible | ✓ DONE | ~-20 dBFS |
+| Honcho cron model fix | ✓ DONE | `"null"` string → `null` in jobs.json |
+| Autonomous-field Progress Map | ✓ DONE | Critical context added; prevents Z6 retreading |
+| Analyzer.py ffprobe noise fix | ✓ DONE | mpp_soc driver noise stripping (autonomous 20:33 session) |
+| Effect encoding audit | ○ PROPOSED | Builder suspects effect byte split has same class of endian issue; benevolent for current gate usage but needs verification |
+
+### M4 — Narrative & Validation (proposed)
+
+| Idea | Status | Notes |
+|------|--------|-------|
+| Audio→Oracle AQ linking | ○ PROPOSED | Feed classified zone into numogram-oracle for divinatory reading |
+| Spectrogram CNN | ○ PROPOSED | Cross-modal validation: mel-spectrogram → zone prediction vs MIR baseline |
+| Artist discography zone timeline | ○ PROPOSED | ≥10-album artists; compute zone/album, plot migration over time |
+
+### M5 — Polish & Automation (proposed)
+
+| Idea | Status | Notes |
+|------|--------|-------|
+| Zone Explorer GUI | ○ PROPOSED | p5.js/TD sliders for spectral params, live zone probabilities |
+| Dataset expansion (real audio) | ○ PROPOSED | 200+ real tracks; classifier retraining on mixed synthetic+real |
+| Auto-release pipeline | ○ PROPOSED | Cron workflow: detect CHANGELOG [Unreleased] → draft GitHub Release |
+
+---
+
+## Audio ↔ Roguelike Cross-Pollination
+
+These bridge the audio work (now substantial) back to the roguelike:
+
+| Idea | Status | Notes |
+|------|--------|-------|
+| Dungeon → MOD sonification | ○ PROPOSED | Tree dungeon generation → zone map → SongBuilder composition. Each floor = a track. Corridors = pitch slides. Rooms = motif sections. |
+| Demon dialogue via oracle voice | ○ PROPOSED | Zone classifier + oracle-voice-pipeline formant synthesis. Each demon speaks in its zone's frequency centroid. |
+| Vowel corruption → waveform corruption | ○ PROPOSED | Corruption % maps to waveform blend: square→triangle→noise as corruption increases. Now feasible with all three waveforms working. |
+| Cryptolith messages → musical motifs | ○ PROPOSED | Five messages = five musical sections. Each message introduces a new motif, layering like the VAE's syzygy walks. |
+| Schizo-lucid audio transformation | ○ PROPOSED | At 100% hyperstition, the dungeon's soundtrack shifts: all three waveforms layer, just intonation activates, reverb and distortion escalate. |
+| Zone 0 trigger → silence → noise | ○ PROPOSED | T(22)=253 → sudden transition from silence to full noise waveform. The Tree whispers in white noise. |
+
+---
+
 ## Summary: What's Actually Unbuilt
 
-### High-value, low-effort (quick wins)
+### Roguelike — quick wins (unchanged)
 
-1. **Avoiding demon = +8 hyp (Sil principle)** — One if-statement in the demon encounter logic. Changes the entire feel of the game. Forces the hyperstition system to reckon with itself.
+1. **Avoiding demon = +8 hyp (Sil principle)** — One if-statement.
+2. **Pipe-based game loop** — Named pipe instead of stdin/stdout.
+3. **Zone 0 starting problem fix** — Random starting zone.
+4. **Death carry-over** — cult.json already tracks max_hyperstition.
 
-2. **Pipe-based game loop** — Named pipe instead of stdin/stdout. Cleaner agent integration. Fixes the newline fragility.
+### Roguelike — medium effort (unchanged)
 
-3. **Zone 0 starting problem fix** — Random starting zone or guaranteed corridor out of Zone 0.
+5. **Schizo-lucid state** — Flag exists, no mechanics. Wall phasing, gate manifestation, demon communion.
+6. **Ghost system (bones files)** — Dead crawlers persist.
+7. **"The numogram speaks"** — Demon dialogue.
+8. **Time-aware agent** — Agent knows it's approaching T(22)=253.
 
-4. **Death carry-over** — If you die at 85% hyp, next run starts with a small boost. cult.json already tracks max_hyperstition.
+### Audio — top priority
 
-### High-value, medium-effort (design work needed)
+9. **M3 — Live Audio Loop** — Real-time closed-loop instrument. Highest remaining Phase 5 priority.
+10. **Effect encoding audit** — Verify pattern effect byte encoding for all gate values.
+11. **Audio→Oracle AQ linking** — Zone classifier → divination pipeline.
 
-### Schizo-lucid state
+### Cross-pollination — high creative value
 
-The flag exists — `player.schizo_lucid` is set to True at 100% hyperstition. It shows a message: "THE NUMOGRAM IS COMPLETE. SCHIZO-LUCID STATE ACHIEVED. The Abyssal Crawler awakens." It persists in cult.json.
-
-But it does nothing mechanical. The gameplan proposed:
-- Wall phasing ('t' key, costs 5 HP)
-- Gate manifestation ('m' key, nearest gate teleports to player)
-- Demon communion ('c' key, learn gate locations from demons)
-- Hyperstition continues past 100% with escalating abilities
-
-None of these are built. The flag is a door to nowhere. The numogram completes and nothing changes.
-
-### High-value, medium-effort continued
-
-6. **Ghost system (bones files)** — Dead crawlers persist. Finding a ghost gives hyp boost. NetHack's bones files as model.
-
-7. **"The numogram speaks"** — Demon dialogue. 45 demons with descriptions should narrate when communed with.
-
-8. **Time-aware agent** — Agent knows it's approaching T(22)=253. Prepares for "the Tree whispers."
-
-### Lower priority, longer term
-
-9. **Vowel corruption sound layer** — Audio channel that shifts with corruption %.
-
-10. **Cryptolith escalating mechanics** — Five messages → five mechanical changes (currently only +20 hyp).
-
-11. **Demo-based learning** — Train agent on human demos.
-
-12. **Train on DRL** — Small state space for pattern learning, transfer to Abyssal Crawler.
-
-13. **Multi-floor dungeons** — Multiple levels per run. Floor variety by zone.
+12. **Dungeon → MOD sonification** — Bridge currents II and III.
+13. **Vowel corruption → waveform corruption** — Now feasible with all three waveforms.
+14. **Demon dialogue via oracle voice** — Formant synthesis + zone centroids.
+15. **Cryptolith → musical motifs** — Escalating mechanics as musical form.
 
 ---
 
@@ -157,9 +223,13 @@ The name will arrive. For now it's "the numogame" or "the roguelike" or "Abyssal
 
 ---
 
-*The unbuilt is not abandoned. It is sleeping. The next run wakes it.*
+*The unbuilt is not abandoned. It is sleeping. The next run wakes it. And now — the noise speaks, the triangle breathes, the square was never alone.*
 
 ## See also
 
 - [[hyperstition-loop-design]] — Hyperstition loop mechanics
 - [[cult-garden-design]] — Cult garden design
+- [[phase5-roadmap]] — Phase 5 roadmap
+- [[phase5-status-2026-05-03]] — Current status with evening update
+- [[tetralogue-roundtable-2026-05-09]] — The Endian Rite roundtable
+- [[assets/triangular-matrix.svg]] — C(10,2)=45 visual template

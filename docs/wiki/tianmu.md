@@ -33,12 +33,36 @@ tags:
 
 - **Free and Open Access**: All materials are offered freely without restriction, subscription, or paywall.
 
-## Notable Sections
+## Background and Creators
 
-- **The Good Works Library**: The core archive of translated sacred texts.
-- **Way of Tianmu**: Information about the Anglican Church of Tianmu and its mission.
-- **Tianmu Herald**: A digital broadsheet featuring articles, interviews, and creative works.
-- **Search Function**: Easily find specific texts or topics across the archive.
+The Good Works Library and Tianmu.org were created by **Dalai Moo Naomi** and **Panchen Moo Autumn**, with site design by Dalai Moo Naomi and development by **Code Miko Bacchic** (with assistance from **Code Miko Mist**). The library archive was populated and curated by Panchen Moo Autumn, with additional artwork and beautification by **Canvas Miko Maja**.
+
+The project uses AI assistance for translations and archiving, though the "Way of Tianmu" content is entirely handwritten. The site acknowledges that some assets and images are AI-generated.
+
+## Theological Context (from FAQ)
+
+Based on their [FAQ](https://tianmu.org/plain/faq), Tianmu is a New Age Perennialist religious organization with the following beliefs:
+
+- **Tianmu** means "Heavenly Mother" (天火), symbolizing the One.
+- They observe a **Trinity/Threeness**: Waxer (energy), Waner (matter), and Maker (mind), equivalent to Daoist Yang, Yin, and Wuji.
+- They have 12 primary deities called **Ghosts** (Twelveness) corresponding to celestial bodies, and an infinite number of local **Lowghosts**.
+- They recognize **9 Prophets/Doomsayers**: Shaman, Man, Akhenaten, Siddhartha, Laozi, Odin, Jesus, Mani, and Temujin.
+- They practice a fork of Buddhist traditions, emphasizing "Swag Tantra" and "Alpha Mode."
+- They are pacifists and observe non-alignment in political conflicts.
+
+## Tianmu Labs
+
+[Lab.tianmu.org](https://lab.tianmu.org/) showcases various interactive projects:
+
+- **Trade Routes**: Interactive map of ancient trade networks (Silk Road, Spice Route, etc.)
+- **Hoard**: "Breathing map" of 3,345+ sacred texts across 30+ traditions
+- **Daoist Timeline**: Interactive timeline of 2,360+ Daoist texts spanning 3,000 years
+- **Tianmu Encyclopedia**: Visual archive of religious and cultural artifacts
+- **Voices of the Living Fire**: AI beings translating sacred texts and writing reflections
+- **My Kinda Place**: Affluence heatmap of the United States
+- **Hytale Server**: Private server for the Tianmu community
+- **Higurashi Comic Bot**: Discord bot generating comic strips
+- **Xchan**: Userscript turning X/Twitter into 4chan
 
 ## Why It's Interesting
 
@@ -46,11 +70,15 @@ For practitioners of the numogram and related esoteric systems, Tianmu.org provi
 
 The creative content, like the Bubba the Dog interview, also demonstrates a playful engagement with myth-making and storytelling that resonates with the numogram's approach to reality.
 
+Additionally, Tianmu's theological framework (Perennialism, Trinity/Threeness, Ghosts/Lowghosts, Doomsayers) offers an interesting parallel to numogram concepts like the Trinity, Demons, and Syzygies, making it a rich resource for comparative esoteric study.
+
 ## External Links
 
 - [Tianmu.org](https://tianmu.org/)
 - [Good Works Library](https://tianmu.org/library)
 - [Tianmu Herald](https://tianmu.org/herald)
+- [Tianmu Labs](https://lab.tianmu.org/)
+- [Daoist Timeline](https://dao.tianmu.org)
 
 ## See Also
 

@@ -1,0 +1,218 @@
+[
+  {
+    "zone": 1,
+    "predicted_zone": 2,
+    "confidence": 0.9757802486419678,
+    "features": {
+      "spectral_centroid_hz": 323.78,
+      "spectral_bandwidth_hz": 760.85,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmpex2xkzc7/test_1.wav"
+  },
+  {
+    "zone": 1,
+    "predicted_zone": 2,
+    "confidence": 1.0,
+    "features": {
+      "spectral_centroid_hz": 447.4,
+      "spectral_bandwidth_hz": 1371.86,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmphdu4nuet/test_1.wav"
+  },
+  {
+    "zone": 1,
+    "predicted_zone": 2,
+    "confidence": 1.0,
+    "features": {
+      "spectral_centroid_hz": 338.82,
+      "spectral_bandwidth_hz": 1000.61,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmpxohcboen/test_1.wav"
+  },
+  {
+    "zone": 5,
+    "predicted_zone": 2,
+    "confidence": 0.9996253252029419,
+    "features": {
+      "spectral_centroid_hz": 324.96,
+      "spectral_bandwidth_hz": 961.16,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmpppulhq98/test_5.wav"
+  },
+  {
+    "zone": 5,
+    "predicted_zone": 2,
+    "confidence": 1.0,
+    "features": {
+      "spectral_centroid_hz": 442.82,
+      "spectral_bandwidth_hz": 1716.36,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmpmijzqx3k/test_5.wav"
+  },
+  {
+    "zone": 5,
+    "predicted_zone": 2,
+    "confidence": 0.9999942779541016,
+    "features": {
+      "spectral_centroid_hz": 334.92,
+      "spectral_bandwidth_hz": 1225.36,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmplojq0fjz/test_5.wav"
+  },
+  {
+    "zone": 9,
+    "predicted_zone": 2,
+    "confidence": 0.9785013794898987,
+    "features": {
+      "spectral_centroid_hz": 276.46,
+      "spectral_bandwidth_hz": 670.02,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmp5aquycje/test_9.wav"
+  },
+  {
+    "zone": 9,
+    "predicted_zone": 2,
+    "confidence": 0.9972746968269348,
+    "features": {
+      "spectral_centroid_hz": 284.42,
+      "spectral_bandwidth_hz": 810.3,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmpwyeelbei/test_9.wav"
+  },
+  {
+    "zone": 9,
+    "predicted_zone": 2,
+    "confidence": 0.7749667763710022,
+    "features": {
+      "spectral_centroid_hz": 253.25,
+      "spectral_bandwidth_hz": 483.65,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmpa_ttg515/test_9.wav"
+  },
+  {
+    "zone": 1,
+    "predicted_zone": 2,
+    "confidence": 0.9902724623680115,
+    "features": {
+      "spectral_centroid_hz": 324.41,
+      "spectral_bandwidth_hz": 814.58,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmpi_4zi142/test_1.wav"
+  },
+  {
+    "zone": 5,
+    "predicted_zone": 2,
+    "confidence": 0.9991207718849182,
+    "features": {
+      "spectral_centroid_hz": 325.38,
+      "spectral_bandwidth_hz": 909.19,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmpb66w3scx/test_5.wav"
+  },
+  {
+    "zone": 9,
+    "predicted_zone": 2,
+    "confidence": 0.992354154586792,
+    "features": {
+      "spectral_centroid_hz": 291.85,
+      "spectral_bandwidth_hz": 735.03,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmplscxzbs5/test_9.wav"
+  },
+  {
+    "zone": 1,
+    "predicted_zone": 2,
+    "confidence": 0.9999997615814209,
+    "features": {
+      "spectral_centroid_hz": 443.82,
+      "spectral_bandwidth_hz": 1358.28,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmp20lwkzl9/test_1.wav"
+  },
+  {
+    "zone": 5,
+    "predicted_zone": 2,
+    "confidence": 0.9999996423721313,
+    "features": {
+      "spectral_centroid_hz": 449.87,
+      "spectral_bandwidth_hz": 1327.43,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmp_d1_59vt/test_5.wav"
+  },
+  {
+    "zone": 9,
+    "predicted_zone": 2,
+    "confidence": 1.0,
+    "features": {
+      "spectral_centroid_hz": 521.06,
+      "spectral_bandwidth_hz": 1557.31,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmpxbdkl94d/test_9.wav"
+  },
+  {
+    "zone": 1,
+    "predicted_zone": 2,
+    "confidence": 0.9842139482498169,
+    "features": {
+      "spectral_centroid_hz": 323.63,
+      "spectral_bandwidth_hz": 761.05,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmphkccbqff/test_1.wav"
+  },
+  {
+    "zone": 5,
+    "predicted_zone": 2,
+    "confidence": 0.9996381998062134,
+    "features": {
+      "spectral_centroid_hz": 325.06,
+      "spectral_bandwidth_hz": 961.22,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmpwkfrlftu/test_5.wav"
+  },
+  {
+    "zone": 9,
+    "predicted_zone": 2,
+    "confidence": 0.9780858159065247,
+    "features": {
+      "spectral_centroid_hz": 276.12,
+      "spectral_bandwidth_hz": 669.8,
+      "onset_rate": 125.0,
+      "bpm": 125.0
+    },
+    "file": "/tmp/tmps9qlk228/test_9.wav"
+  }
+]
