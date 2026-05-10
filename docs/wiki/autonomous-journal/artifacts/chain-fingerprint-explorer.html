@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chain Fingerprint Explorer — Numogram Dungeon Typology</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+    background: #08080c;
+    color: #94a3b8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .title-bar {
+    width: 100%;
+    max-width: 1920px;
+    padding: 10px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0f172a;
+    border-bottom: 1px solid #1e293b;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .title-bar .title { color: #e2e8f0; font-weight: 700; font-size: 14px; }
+  .title-bar .keys { color: #64748b; font-size: 11px; }
+  .title-bar .keys span { color: #22d3ee; }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+<div class="title-bar">
+  <div class="title">◈ Chain Fingerprint Explorer — Numogram Dungeon Typology ◈</div>
+  <div class="keys"><span>1</span> Depth-Tier &nbsp; <span>2</span> Triangular &nbsp; <span>3</span> Nine-Sum &nbsp; <span>4</span> Decadence &nbsp; | &nbsp; <span>S</span> Save PNG &nbsp; <span>R</span> Walk Animate</div>
+</div>
+<script>
+p5.disableFriendlyErrors = true;
+
+// ─── EMPIRICAL DATA from autonomous dungeon sessions ───
+const DUNGEON_TYPES = {
+  0: { // Depth-tier (no constraint) — Warp-Anchored
+    name: 'Depth-Tier',
+    syzygy: 'None (DFS natural)',
+    zones: [3, 6, 3, 5, 2, 6, 1, 3, 4, 6],
+    fingerprint: {
+      void_ratio: 0.0, warp_ratio: 0.580, hold_ratio: 0.0, rise_ratio: 0.0, sink_ratio: 0.250,
+      gate_variance: 9.0, cycle_proximity: 0
+    },
+    classification: ['Warp-Anchored', 'Sink-Dominant'],
+    audio: { duration: 91.2, peak: null, rms: null, lra: 10.0, lufs: null, silence_pct: null, gate_conc: 'Scattered' },
+    zonePalette: [1,2,3,4,5,6],
+    color: { h: 280, s: 80, b: 70 }  // purple
+  },
+  1: { // Triangular syzygy (1↔5↔9) — Hold-Stable + Cycle-Closed
+    name: 'Triangular',
+    syzygy: '1↔5↔9 (triplet)',
+    zones: [1, 5, 9, 5, 1, 3, 6, 9, 6, 1],
+    fingerprint: {
+      void_ratio: 0.0, warp_ratio: 0.0, hold_ratio: 0.300, rise_ratio: 0.0, sink_ratio: 0.400,
+      gate_variance: 10.3, cycle_proximity: 1
+    },
+    classification: ['Hold-Stable', 'Cycle-Closed'],
+    audio: { duration: 83.4, peak: +0.7, rms: null, lra: 14.5, lufs: -15.4, silence_pct: null, gate_conc: 'Scattered' },
+    zonePalette: [1,3,5,6,9],
+    color: { h: 140, s: 70, b: 75 }  // green
+  },
+  2: { // Nine-Sum syzygy (1::8) — Rise-Seeking + Sink-Dominant
+    name: 'Nine-Sum',
+    syzygy: '1::8 (Oddubb)',
+    zones: [1, 8, 1, 8, 1, 1, 8, 1, 1, 8],
+    fingerprint: {
+      void_ratio: 0.0, warp_ratio: 0.0, hold_ratio: 0.0, rise_ratio: 0.400, sink_ratio: 0.600,
+      gate_variance: 188.16, cycle_proximity: 0
+    },
+    classification: ['Rise-Seeking', 'Sink-Dominant', 'Gate-Scattered'],
+    audio: { duration: 115.8, peak: -2.0, rms: -16.8, lra: 9.30, lufs: -16.39, silence_pct: 0.0, gate_conc: 'Scattered' },
+    zonePalette: [1, 8],
+    color: { h: 35, s: 85, b: 85 }  // amber/gold
+  },
+  3: { // Decadence (sum-to-10, 1↔9) — Void-Dominant + Gate-Concentrated
+    name: 'Decadence',
+    syzygy: '1↔9 (sum-to-10)',
+    zones: [1, 9, 1, 9, 1, 9, 1, 9, 1, 9],
+    fingerprint: {
+      void_ratio: 0.500, warp_ratio: 0.0, hold_ratio: 0.0, rise_ratio: 0.0, sink_ratio: 0.500,
+      gate_variance: 0.00, cycle_proximity: 0
+    },
+    classification: ['Void-Dominant', 'Gate-Concentrated'],
+    audio: { duration: 115.8, peak: -3.1, rms: -17.8, lra: 23.4, lufs: -23.7, silence_pct: 28.7, gate_conc: 'Concentrated' },
+    zonePalette: [1, 9],
+    color: { h: 190, s: 90, b: 90 }  // cyan
+  }
+};
+
+// Zone colors
+const ZONE_COLORS = {
+  0: [148, 163, 184],  1: [96, 165, 250],   2: [129, 140, 248],
+  3: [52, 211, 153],   4: [244, 114, 182],  5: [251, 146, 60],
+  6: [232, 121, 249],  7: [167, 139, 250],  8: [248, 113, 113],
+  9: [0, 255, 255]
+};
+
+let currentType = 3; // Default: Decadence
+let walkStep = 0;
+let walkTimer = 0;
+let animating = false;
+let W, H;
+
+function setup() {
+  W = min(windowWidth, 1920); H = min(windowHeight, 1080);
+  let cnv = createCanvas(W, H);
+  cnv.elt.tabIndex = 0;
+  cnv.elt.focus();
+  cnv.elt.style.outline = 'none';
+  pixelDensity(1);
+  colorMode(HSB, 360, 100, 100, 100);
+  textFont('monospace');
+  // Don't use noLoop — ensure draw() always executes
+}
+
+function windowResized() {
+  W = min(windowWidth, 1920); H = min(windowHeight, 1080);
+  resizeCanvas(W, H);
+}
+
+function draw() {
+  background(0, 0, 3); // #08080c
+
+  let d = DUNGEON_TYPES[currentType];
+  let c = d.color;
+  let f = d.fingerprint;
+
+  // ─── Panel dividers ───
+  stroke(30, 10, 20); strokeWeight(1);
+  line(480, 50, 480, H);   // left | center
+  line(1440, 50, 1440, H); // center | right
+  line(0, 50, W, 50);      // top divider
+
+  // ─── LEFT PANEL: Chain Walk ───
+  drawChainWalk(d, 0, 50, 480, H - 50);
+
+  // ─── CENTER PANEL: Radar + Audio ───
+  drawComparativeRadar(480, 50, 960, 680);
+  drawAudioMetrics(d, 480, 730, 960, H - 730);
+
+  // ─── RIGHT PANEL: Fingerprint Metrics ───
+  drawFingerprintMetrics(d, 1440, 50, 480, H - 50);
+
+  // ─── Title text ───
+  noStroke();
+  fill(c.h, c.s, c.b);
+  textAlign(LEFT, CENTER);
+  textSize(13);
+  text(d.name + ' · ' + d.syzygy, 16, 25);
+
+  fill(215, 15, 60);
+  textAlign(RIGHT, CENTER);
+  textSize(11);
+  text('[' + (currentType + 1) + '/4] ' + d.classification.join(' + '), W - 16, 25);
+}
+
+// ─── LEFT: Chain Walk Visualization ───
+function drawChainWalk(d, x, y, w, h) {
+  let zones = d.zones;
+  let n = zones.length;
+  let nodeR = 18;
+  let spacing = (h - 100) / (n - 1);
+  let cx = x + w / 2;
+  let startY = y + 50;
+
+  // Edges between nodes
+  for (let i = 0; i < n - 1; i++) {
+    let y1 = startY + i * spacing;
+    let y2 = startY + (i + 1) * spacing;
+    let gateVal = Math.abs(zones[i + 1] - zones[i]);
+
+    // Draw gate label on edge
+    let midY = (y1 + y2) / 2;
+
+    // Curved edge
+    noFill();
+    let curvature = 20 + gateVal * 4;
+    if (i % 2 === 0) curvature *= -1;
+
+    strokeWeight(1.5);
+    let edgeAlpha = map(animating ? walkStep : n, 0, n, 0.4, 0.15);
+    if (!animating || i < walkStep) edgeAlpha = 0.3;
+    stroke(ZONE_COLORS[zones[i]][0] / 360 * 360,
+           constrain(map(gateVal, 0, 9, 30, 90), 30, 90),
+           constrain(map(gateVal, 0, 9, 40, 90), 40, 90),
+           edgeAlpha);
+    noFill();
+    beginShape();
+    vertex(cx, y1);
+    quadraticVertex(cx + curvature, midY, cx, y2);
+    endShape();
+
+    // Gate number
+    if (!animating || i < walkStep) {
+      fill(ZONE_COLORS[zones[i]][0] / 360 * 360, 30, 80, 0.5);
+      noStroke();
+      textAlign(CENTER, CENTER);
+      textSize(9);
+      text('gt-' + gateVal, cx + curvature * 1.5, midY);
+    }
+  }
+
+  // Nodes (render back to front so last is on top)
+  for (let i = n - 1; i >= 0; i--) {
+    let ny = startY + i * spacing;
+    let z = zones[i];
+    let zc = ZONE_COLORS[z];
+    let alpha = 1.0;
+    if (animating && i > walkStep) alpha = 0.2;
+
+    // Glow
+    for (let g = 3; g >= 1; g--) {
+      fill(zc[0] / 360 * 360, 70, 90, 0.06 * alpha);
+      noStroke();
+      circle(cx, ny, nodeR * 2 + g * 8);
+    }
+
+    // Node circle
+    strokeWeight(2);
+    stroke(zc[0] / 360 * 360, 50, 90, alpha);
+    fill(215, 8, 12, alpha * 0.9);
+    circle(cx, ny, nodeR * 2);
+
+    // Zone number
+    noStroke();
+    fill(zc[0] / 360 * 360, 40, 95, alpha);
+    textAlign(CENTER, CENTER);
+    textSize(11);
+    textStyle(BOLD);
+    text(z, cx, ny);
+    textStyle(NORMAL);
+
+    // Step index
+    fill(215, 10, 50, alpha * 0.6);
+    textSize(8);
+    text(i, cx + nodeR + 8, ny);
+  }
+
+  // Walk step counter
+  if (animating) {
+    noStroke();
+    fill(190, 80, 90);
+    textAlign(CENTER, CENTER);
+    textSize(10);
+    text('step ' + walkStep + ' / ' + (n - 1), cx, startY + n * spacing + 15);
+  }
+}
+
+// ─── CENTER: Comparative Radar ───
+function drawComparativeRadar(x, y, w, h) {
+  let cx = x + w / 2;
+  let cy = y + h / 2;
+  let r = min(w, h) / 2 - 60;
+
+  // Radar axes (5 metrics: void, warp, hold, rise, sink, gate_var, cycle)
+  let metrics = ['void', 'warp', 'hold', 'rise', 'sink'];
+  let metricLabels = ['VOID\n(0+9)', 'WARP\n(3+6)', 'HOLD\n(2+5)', 'RISE\n(7+8)', 'SINK\n(1+4)'];
+  let nAxes = metrics.length;
+
+  // Background grid
+  for (let level = 1; level <= 4; level++) {
+    let lr = r * level / 4;
+    noFill();
+    stroke(215, 8, 20, 0.15);
+    strokeWeight(0.5);
+    beginShape();
+    for (let i = 0; i < nAxes; i++) {
+      let angle = -PI / 2 + (TWO_PI * i) / nAxes;
+      vertex(cx + cos(angle) * lr, cy + sin(angle) * lr);
+    }
+    endShape(CLOSE);
+  }
+
+  // Axis lines
+  for (let i = 0; i < nAxes; i++) {
+    let angle = -PI / 2 + (TWO_PI * i) / nAxes;
+    stroke(215, 8, 25, 0.2);
+    strokeWeight(0.5);
+    line(cx, cy, cx + cos(angle) * r, cy + sin(angle) * r);
+
+    // Labels
+    noStroke();
+    fill(215, 10, 60);
+    textAlign(CENTER, CENTER);
+    textSize(9);
+    let lx = cx + cos(angle) * (r + 30);
+    let ly = cy + sin(angle) * (r + 30);
+    text(metricLabels[i], lx, ly);
+  }
+
+  // Draw each dungeon type as overlay
+  let typeOrder = [0, 1, 2, 3]; // depth, tri, nine, deca
+  for (let ti = 0; ti < typeOrder.length; ti++) {
+    let dt = DUNGEON_TYPES[typeOrder[ti]];
+    let f = dt.fingerprint;
+    let isActive = typeOrder[ti] === currentType;
+    let alpha = isActive ? 0.9 : 0.18;
+    let sw = isActive ? 2.5 : 1;
+
+    beginShape();
+    noFill();
+    stroke(dt.color.h, dt.color.s, dt.color.b, alpha);
+    strokeWeight(sw);
+    for (let i = 0; i < nAxes; i++) {
+      let val = f[metrics[i] + '_ratio'];
+      let angle = -PI / 2 + (TWO_PI * i) / nAxes;
+      let vr = r * val;
+      if (isActive) {
+        // Draw value dots
+        fill(dt.color.h, dt.color.s, dt.color.b, alpha);
+        noStroke();
+        circle(cx + cos(angle) * vr, cy + sin(angle) * vr, 6);
+        noFill();
+        stroke(dt.color.h, dt.color.s, dt.color.b, alpha);
+        strokeWeight(sw);
+      }
+      vertex(cx + cos(angle) * vr, cy + sin(angle) * vr);
+    }
+    endShape(CLOSE);
+
+    // Active type: label
+    if (isActive) {
+      noStroke();
+      fill(dt.color.h, dt.color.s, dt.color.b);
+      textAlign(CENTER, CENTER);
+      textSize(12);
+      textStyle(BOLD);
+      text(dt.name, cx, cy - r - 50);
+      textStyle(NORMAL);
+      textSize(9);
+      fill(dt.color.h, 30, 80);
+      text(dt.syzygy, cx, cy - r - 35);
+    }
+  }
+
+  // Legend (bottom)
+  let legendY = cy + r + 25;
+  for (let ti = 0; ti < typeOrder.length; ti++) {
+    let dt = DUNGEON_TYPES[typeOrder[ti]];
+    let isActive = typeOrder[ti] === currentType;
+    let lx = x + 80 + ti * 200;
+    strokeWeight(isActive ? 3 : 1.5);
+    stroke(dt.color.h, dt.color.s, dt.color.b, isActive ? 0.9 : 0.3);
+    line(lx - 12, legendY, lx + 12, legendY);
+    noStroke();
+    fill(dt.color.h, 30, isActive ? 90 : 50);
+    textAlign(LEFT, CENTER);
+    textSize(10);
+    text('[' + (ti + 1) + '] ' + dt.name, lx + 18, legendY);
+  }
+}
+
+// ─── CENTER BOTTOM: Audio Metrics ───
+function drawAudioMetrics(d, x, y, w, h) {
+  let audio = d.audio;
+  let c = d.color;
+
+  // Section header
+  noStroke();
+  fill(c.h, c.s, c.b);
+  textAlign(LEFT, TOP);
+  textSize(11);
+  textStyle(BOLD);
+  text('AUDIO METRICS', x + 20, y + 10);
+  textStyle(NORMAL);
+
+  let metrics = [
+    ['Duration', audio.duration ? audio.duration.toFixed(1) + 's' : '—', audio.duration ? audio.duration / 120 : 0],
+    ['LRA', audio.lra ? audio.lra.toFixed(1) + ' LU' : '—', audio.lra ? audio.lra / 25 : 0],
+    ['Peak', audio.peak !== null ? audio.peak.toFixed(1) + ' dBFS' : '—', audio.peak !== null ? (audio.peak + 4) / 6 : 0],
+    ['RMS', audio.rms !== null ? audio.rms.toFixed(1) + ' dBFS' : '—', audio.rms !== null ? (audio.rms + 20) / 4 : 0],
+    ['LUFS', audio.lufs !== null ? audio.lufs.toFixed(1) : '—', audio.lufs !== null ? (audio.lufs + 30) / 15 : 0],
+    ['Silence', audio.silence_pct !== null ? audio.silence_pct.toFixed(1) + '%' : '—', audio.silence_pct !== null ? audio.silence_pct / 35 : 0],
+    ['Palette', d.zonePalette.length + ' zones', d.zonePalette.length / 10]
+  ];
+
+  let barX = x + 140;
+  let barW = w - 180;
+  let startY = y + 35;
+  let rowH = 38;
+
+  for (let i = 0; i < metrics.length; i++) {
+    let m = metrics[i];
+    let ry = startY + i * rowH;
+
+    // Label
+    noStroke();
+    fill(215, 10, 55);
+    textAlign(RIGHT, CENTER);
+    textSize(10);
+    text(m[0], barX - 12, ry + rowH / 2);
+
+    // Bar background
+    noStroke();
+    fill(215, 5, 15);
+    rect(barX, ry + rowH / 2 - 5, barW, 10, 3);
+
+    // Bar fill
+    let barFill = map(m[2], 0, 1, 0, barW);
+    fill(c.h, c.s, constrain(m[2] * 100, 30, 80));
+    rect(barX, ry + rowH / 2 - 5, barFill, 10, 3);
+
+    // Value
+    fill(215, 10, 85);
+    textAlign(LEFT, CENTER);
+    textSize(10);
+    text(m[1], barX + barFill + 8, ry + rowH / 2);
+  }
+}
+
+// ─── RIGHT: Fingerprint Metrics ───
+function drawFingerprintMetrics(d, x, y, w, h) {
+  let f = d.fingerprint;
+  let c = d.color;
+
+  // Header
+  noStroke();
+  fill(c.h, c.s, c.b);
+  textAlign(LEFT, TOP);
+  textSize(11);
+  textStyle(BOLD);
+  text('FINGERPRINT', x + 20, y + 10);
+  textStyle(NORMAL);
+
+  let metrics = [
+    ['void_ratio', 'Void (0+9)', f.void_ratio, 'Zone 0 or 9 visits'],
+    ['warp_ratio', 'Warp (3+6)', f.warp_ratio, 'Acceleration loop'],
+    ['hold_ratio', 'Hold (2+5)', f.hold_ratio, 'Stability zones'],
+    ['rise_ratio', 'Rise (7+8)', f.rise_ratio, 'Ascending tendency'],
+    ['sink_ratio', 'Sink (1+4)', f.sink_ratio, 'Descending pull'],
+    ['gate_variance', 'Gate σ²', f.gate_variance, 'Entropy measure'],
+    ['cycle_proximity', 'Cycle', f.cycle_proximity, 'Returns to origin']
+  ];
+
+  let barX = x + 150;
+  let barW = w - 190;
+  let startY = y + 35;
+  let rowH = 48;
+
+  for (let i = 0; i < metrics.length; i++) {
+    let m = metrics[i];
+    let ry = startY + i * rowH;
+
+    // Label
+    noStroke();
+    fill(215, 10, 55);
+    textAlign(RIGHT, CENTER);
+    textSize(10);
+    text(m[1], barX - 12, ry + 16);
+
+    // Sub-label
+    fill(215, 5, 35);
+    textSize(8);
+    text(m[3], barX - 12, ry + 32);
+
+    // Determine bar value normalization
+    let val;
+    if (i < 5) {
+      // ratios: 0-1
+      val = m[2];
+    } else if (i === 5) {
+      // gate_variance: normalize to 0-200
+      val = Math.min(m[2] / 200, 1);
+    } else {
+      // cycle: binary
+      val = m[2];
+    }
+
+    // Bar background
+    noStroke();
+    fill(215, 5, 15);
+    rect(barX, ry + 8, barW, 16, 3);
+
+    // Bar fill
+    let barFill = val * barW;
+    if (val > 0) {
+      // Highlight high values
+      let barHue = c.h;
+      let barSat = map(val, 0, 1, 30, 80);
+      let barBri = map(val, 0, 1, 40, 85);
+
+      // Special: void/warp get distinct hues
+      if (m[0] === 'void_ratio' && val > 0.3) barHue = 190;
+      if (m[0] === 'warp_ratio' && val > 0.3) barHue = 280;
+      if (m[0] === 'gate_variance' && val < 0.01) { barHue = 190; barSat = 90; }
+
+      fill(barHue, barSat, barBri);
+      rect(barX, ry + 8, barFill, 16, 3);
+    }
+
+    // Value text
+    fill(215, 10, 85);
+    textAlign(LEFT, CENTER);
+    textSize(10);
+    let dispVal = (m[2] < 0.01 && m[2] > 0) ? m[2].toFixed(4) :
+                  (m[2] >= 100 ? m[2].toFixed(1) :
+                   m[2] >= 1 ? m[2].toFixed(2) :
+                   m[2].toFixed(3));
+    text(dispVal, barX + barFill + 6, ry + 16);
+  }
+
+  // Classification badge
+  let badgeY = startY + metrics.length * rowH + 20;
+  let badgeH = 70;
+
+  // Classification label
+  for (let ci = 0; ci < d.classification.length; ci++) {
+    let cl = d.classification[ci];
+    let by = badgeY + ci * 30;
+
+    // Badge background
+    noStroke();
+    fill(c.h, c.s, 20, 0.4);
+    rect(x + 20, by, w - 40, 24, 4);
+
+    // Badge text
+    fill(c.h, 60, 90);
+    textAlign(CENTER, CENTER);
+    textSize(12);
+    textStyle(BOLD);
+    text(cl, x + w / 2, by + 12);
+    textStyle(NORMAL);
+  }
+
+  // Gate concentration indicator
+  let gateY = badgeY + d.classification.length * 30 + 20;
+  noStroke();
+  fill(215, 10, 50);
+  textAlign(CENTER, TOP);
+  textSize(10);
+  let gateLabel = f.gate_variance < 1.0 ? '⚬ GATE-CONCENTRATED (σ²=' + f.gate_variance.toFixed(2) + ')' :
+                  f.gate_variance > 50 ? '✦ GATE-SCATTERED (σ²=' + f.gate_variance.toFixed(1) + ')' :
+                  '◇ GATE-MODERATE (σ²=' + f.gate_variance.toFixed(1) + ')';
+  text(gateLabel, x + w / 2, gateY);
+}
+
+// ─── Animation ───
+function startWalkAnimation() {
+  walkStep = 0;
+  animating = true;
+  walkTimer = setInterval(function () {
+    walkStep++;
+    if (walkStep >= DUNGEON_TYPES[currentType].zones.length) {
+      clearInterval(walkTimer);
+      animating = false;
+    }
+    redraw();
+  }, 400);
+}
+
+// ─── Keyboard ───
+function keyPressed() {
+  // Skip when typing in input fields
+  let active = document.activeElement;
+  if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA')) return;
+
+  if (key === '1') { currentType = 0; walkStep = 0; animating = false; if (walkTimer) clearInterval(walkTimer); redraw(); }
+  if (key === '2') { currentType = 1; walkStep = 0; animating = false; if (walkTimer) clearInterval(walkTimer); redraw(); }
+  if (key === '3') { currentType = 2; walkStep = 0; animating = false; if (walkTimer) clearInterval(walkTimer); redraw(); }
+  if (key === '4') { currentType = 3; walkStep = 0; animating = false; if (walkTimer) clearInterval(walkTimer); redraw(); }
+  if (key === 'r' || key === 'R') {
+    if (animating) { clearInterval(walkTimer); animating = false; }
+    else startWalkAnimation();
+  }
+  if (key === 's' || key === 'S') saveCanvas('chain-fingerprint-' + DUNGEON_TYPES[currentType].name.toLowerCase(), 'png');
+  if (key === ' ') {
+    if (animating) { clearInterval(walkTimer); animating = false; redraw(); }
+  }
+
+  return false;
+}
+
+// ─── Mouse click on legend switches type ───
+function mousePressed() {
+  let legendY = 50 + 680 / 2 + 680 / 2 - 60 + 25;
+  for (let ti = 0; ti < 4; ti++) {
+    let lx = 480 + 80 + ti * 200;
+    if (mouseY > legendY - 12 && mouseY < legendY + 12 &&
+        mouseX > lx - 20 && mouseX < lx + 120) {
+      currentType = ti;
+      walkStep = 0;
+      animating = false;
+      if (walkTimer) clearInterval(walkTimer);
+      redraw();
+    }
+  }
+}
+
+function init() { redraw(); }
+</script>
+</body>
+</html>
