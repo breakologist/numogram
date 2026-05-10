@@ -131,3 +131,8 @@ These episodes provide:
 - Essential context for understanding the 333, 360, and 666 currents
 
 They represent the primary modern interpretation and expansion of the CCRU's numogrammatic system.
+
+## Deep Dives
+
+- [[land-decimal-intelligence]] — Detailed analysis of Episode 3: cipher methods, 360 architecture, 89 paths, LLM prophecy, and connections to classifier/audio work
+- [[classifier-v080-wu-xing-era]] — The 153/207 split (Outside vs Time-Circuit) in classifier practice
