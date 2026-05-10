@@ -28,6 +28,10 @@ demos/*.avi
 *.swo
 *~
 
+# Workspace artifacts
+session_*/
+testing/
+
 # OS
 .DS_Store
 Thumbs.db
