@@ -224,3 +224,33 @@ Each entry lists what already exists on both sides, and what needs to be built t
 - [[the-unbuilt]] — Everything proposed but not yet built
 - [[voice-prior-claims]] — Accumulated voice claims and empirical status
 - [[tetralogue-roundtable-2026-05-09]] — The Endian Rite roundtable
+- [[diamond-sutra-and-the-endian-rite]] — Diamond Sutra connections
+- [[endian-rite-visualization]] — Interactive p5.js visualization
+
+---
+
+## Appendix: Three Pairing Systems for Dungeon Generation
+
+The 00:47 autonomous session discovered that triangular syzygy partners limit zone palette to {1,3,5,6,9}. But the numogram actually offers three distinct pairing systems, each producing a different dungeon shape:
+
+| System | Rule | Pairs | Zones | Dungeon Feel |
+|--------|------|-------|-------|-------------|
+| **Triangular Partners** | `SYZYGY_PARTNERS` mapping | Z1↔(5,9), Z2↔(4,8), Z3↔(6,9)... | {1,3,5,6,9} | Vortical, clustered, mid-zone dominant |
+| **Nine-Sum Syzygies** | `x + y = 9` | 1::8, 2::7, 3::6, 4::5, 0::9 | {0,1,2,3,4,5,6,7,8,9} | Stable, cyclic, full coverage |
+| **Decadence Pairs** | `x + y = 10` | 1↔9, 2↔8, 3↔7, 4↔6, 5↔5 | {1,2,3,4,5,6,7,8,9} | Bridge-crossing, risky, crosses circuit boundary |
+
+Key structural insight: all four Decadence pairs are **amphidemons** — they cross the Time-Circuit/Outer boundary ([[pandemonium-matrix]]). A dungeon using decadence pairing would literally breach the circuit, creating transitions from the central rotor into the Warp or Plex periphery.
+
+### Three-Region Dungeon Architecture
+
+A dungeon could have three region layers matching the numogram:
+
+| Region | Zones | Dungeon Rule | Demon Type |
+|--------|-------|-------------|------------|
+| **Time-Circuit** | 1,2,4,5,7,8 | Nine-sum syzygy pairing (stable traversal) | Chronodemons (internal patrols) |
+| **Warp** | 3,6 | Triangular partner pairing (vortical, "hyperstition goes feral") | Amphidemons (bridges to outer) |
+| **Plex** | 0,9 | Decadence pairing (abyssal, "access extremely restricted") | Xenodemons (outer-to-outer) |
+
+### Card-Game Dungeon Variant
+
+The Decadence card game ([[decadence]]) offers an alternative generation method: deal 5 face-up "zone" cards (Set-1), turn 5 face-down "room" cards (Set-2). Pair to 10 to connect rooms. First failed pair = demon boss. The deck IS the dungeon seed. This could trigger as a random event at appropriate dungeon depth or zone level.
