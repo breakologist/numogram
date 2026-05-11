@@ -1,0 +1,94 @@
+{
+  "title": "Syzygy Partner Dialogue",
+  "bpm": 130,
+  "sections": 10,
+  "movements": [
+    {
+      "name": "Surge-Echo",
+      "zone_a": 1,
+      "zone_b": 8,
+      "tess_a": [
+        0.5,
+        0.35,
+        0.15
+      ],
+      "tess_b": [
+        0.15,
+        0.25,
+        0.6
+      ],
+      "description": "The Surge speaks first; Echo answers from the far wall",
+      "start_section": 0
+    },
+    {
+      "name": "Hold-Rise",
+      "zone_a": 2,
+      "zone_b": 7,
+      "tess_a": [
+        0.25,
+        0.5,
+        0.25
+      ],
+      "tess_b": [
+        0.2,
+        0.3,
+        0.5
+      ],
+      "description": "Suspension trembles; the sigh of ascent lifts through",
+      "start_section": 2
+    },
+    {
+      "name": "Warp-Abstraction",
+      "zone_a": 3,
+      "zone_b": 6,
+      "tess_a": [
+        0.15,
+        0.35,
+        0.5
+      ],
+      "tess_b": [
+        0.1,
+        0.3,
+        0.6
+      ],
+      "description": "Djynxx: the Warp churns; the pattern eats itself static",
+      "start_section": 4
+    },
+    {
+      "name": "Gate-Sink",
+      "zone_a": 4,
+      "zone_b": 5,
+      "tess_a": [
+        0.6,
+        0.3,
+        0.1
+      ],
+      "tess_b": [
+        0.3,
+        0.4,
+        0.3
+      ],
+      "description": "Murrumur: the Gate opens; the Sink swallows what passes",
+      "start_section": 6
+    },
+    {
+      "name": "Plex-Return",
+      "zone_a": 9,
+      "zone_b": 1,
+      "tess_a": [
+        0.4,
+        0.4,
+        0.2
+      ],
+      "tess_b": [
+        0.5,
+        0.35,
+        0.15
+      ],
+      "description": "Plex radiates into Surge \u2014 the cycle closes, breath resumes",
+      "start_section": 8
+    }
+  ],
+  "mod_path": "/tmp/autonomous-field-20260510-syzygy-dialogue/syzygy_dialogue.mod",
+  "mod_size": 45078
+}

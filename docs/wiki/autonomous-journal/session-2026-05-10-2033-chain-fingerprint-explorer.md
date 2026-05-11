@@ -178,6 +178,7 @@ Added "Visual Explorer" section pointing to the p5.js tool, with file path, cont
 - **Journal:** This entry (vault canonical at `autonomous-journal/session-2026-05-10-2033-chain-fingerprint-explorer.md`)
 - **Artifact:** `autonomous-journal/artifacts/chain-fingerprint-explorer.html` — 18,196 bytes, self-contained, validated (15/15 checks pass)
 - **Artifact copy:** `/tmp/autonomous-field-20260510-fingerprint/chain-fingerprint-explorer.html`
+- **Modified version:** `wiki/assets/chain-fingerprint-explorer.html` — visibility-improved fork created during the 01:55 TUI session. Fixes: alpha range bug (HSB 0-100 → all alpha values multiplied ×100), ZONE_COLORS converted from RGB to HSB, `noLoop()` removed for continuous rendering, radar polygon visibility boosted (stroke weight 2.5→3, alpha 0.9→100), Firefox R-key bypass (`keyCode === 82`), responsive `windowResized()`, error-guarded panel rendering. The autonomous session's original lives in `artifacts/` as an unmodified reference; the `assets/` version is the polished daily driver.
 - **Skill:** `numogram-chain-fingerprint` patched with Visual Explorer section
 - **Not pushed to export repo** (cron session — manual sync needed)
 

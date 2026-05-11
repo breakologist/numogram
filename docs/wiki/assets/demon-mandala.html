@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demon Mandala — Syzygy Pentagram</title>
+<script>p5.disableFriendlyErrors = true;</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+  html, body { margin: 0; padding: 0; overflow: hidden; background: #08080f; }
+  canvas { display: block; }
+  #hud {
+    position: fixed; top: 16px; left: 16px;
+    font-family: 'Share Tech Mono', monospace;
+    color: #b8b0d0; font-size: 12px; line-height: 1.6;
+    pointer-events: none;
+    text-shadow: 0 0 8px rgba(140,120,200,0.4);
+    max-width: 320px;
+  }
+  #hud .title { font-size: 14px; color: #c8a0ff; letter-spacing: 2px; }
+  #hud .val { color: #90e0d0; }
+  #hud .warn { color: #ff9060; }
+  #legend {
+    position: fixed; bottom: 20px; right: 20px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px; color: #888; line-height: 1.5;
+    pointer-events: none;
+  }
+  #legend span { margin-right: 12px; }
+</style>
+</head>
+<body>
+<div id="hud">
+  <div class="title">SYZYGY DEMON MANDALA</div>
+  <div>Hover over demons for details</div>
+  <div id="info" style="margin-top:8px"></div>
+</div>
+<div id="legend">
+  <span style="color:#6090ff">▬ Bookends (DR=8)</span>
+  <span style="color:#ff5060">▬ Mirrors (DR=3)</span>
+  <span style="color:#ffb040">▬ Solitary Warp (DR=2)</span>
+  <br>
+  <span style="color:#40e0d0">--- Prime-sharing</span>
+  <span style="color:#ff60ff">── Syzygy pairs</span>
+</div>
+<script>
+// === Demon Data ===
+const demons = [
+  { name: "Murrumur", aq: 215, dr: 8, zone: 8, governs: [1,8], primes: [5,43], 
+    current: "A", gate: 8, bpm: 115, tZone: 36,
+    drFamily: "Bookends", primeFamily: "{5}-Crossers",
+    description: "The whisper that opens the labyrinth. Surge demon — initiation, the first word. Largest AQ." },
+  { name: "Oddubb", aq: 102, dr: 3, zone: 3, governs: [2,7], primes: [2,3,17],
+    current: "A", gate: 3, bpm: 122, tZone: 6,
+    drFamily: "Mirrors", primeFamily: "{2,3}-Mirrors",
+    description: "The hold that reflects. Mirror demon — reflection, sustaining, hidden twin to Uttunul." },
+  { name: "Djynxx", aq: 155, dr: 2, zone: 2, governs: [3,6], primes: [5,31],
+    current: "B", gate: 2, bpm: 135, tZone: 3,
+    drFamily: "Solitary Warp", primeFamily: "{5}-Crossers",
+    description: "The solitary warp. Acceleration and dissolution — the outsider. Double Plex resonance: Synx+Σpf→Z9." },
+  { name: "Katak", aq: 89, dr: 8, zone: 8, governs: [4,5], primes: [89],
+    current: "D", gate: 8, bpm: 109, tZone: 36,
+    drFamily: "Bookends", primeFamily: "{89}-Solo",
+    description: "The sink of closure. Minimal demon — 24th prime, smallest AQ. True solitary in prime space." },
+  { name: "Uttunul", aq: 192, dr: 3, zone: 3, governs: [0,9], primes: [2,2,2,2,2,2,3],
+    current: "C", gate: 3, bpm: 132, tZone: 6,
+    drFamily: "Mirrors", primeFamily: "{2,3}-Mirrors",
+    description: "The void that terminates. Plex demon — 2\u2076\u00D73, pure binary recursion crowned by ternary." }
+];
+
+// Pentagram positions (5 points)
+const N = 5;
+const positions = [];
+
+// === State ===
+let hoveredDemon = -1;
+let time = 0;
+let selectedDemon = -1;
+
+// === Color system (CCRU-inspired) ===
+const COLORS = {
+  bg: [240, 15, 4],          // deep void indigo
+  bookend: [220, 80, 75],     // Murrumur/Katak blue
+  mirror: [355, 85, 80],      // Oddubb/Uttunul red
+  warp: [38, 95, 90],         // Djynxx gold
+  primeEdge: [170, 60, 70],   // prime-sharing cyan
+  syzygyEdge: [295, 50, 70],  // syzygy pairs magenta
+  glow: [260, 40, 90],        // zone aura
+  text: [260, 15, 85],        // text primary
+  hud: [260, 20, 75],         // HUD text
+  plexGlow: [300, 60, 95],    // Zone 9 glow
+  voidHalo: [240, 30, 50],    // Zone 0 halo
+};
+
+function getDemonColor(demon) {
+  if (demon.drFamily === "Bookends") return COLORS.bookend;
+  if (demon.drFamily === "Mirrors") return COLORS.mirror;
+  return COLORS.warp;
+}
+
+function getZoneColor(zone) {
+  // Zone → hue mapping
+  const hues = {0:270, 1:0, 2:30, 3:120, 4:180, 5:210, 6:240, 7:300, 8:330, 9:60};
+  return hues[zone] || 200;
+}
+
+function setup() {
+  let cnv = createCanvas(windowWidth, windowHeight);
+  cnv.elt.tabIndex = 0;
+  cnv.elt.focus();
+  cnv.elt.style.outline = 'none';
+  pixelDensity(1);
+  colorMode(HSB, 360, 100, 100, 100);
+  textFont('Share Tech Mono');
+  
+  // Compute pentagram positions
+  let cx = width / 2;
+  let cy = height / 2 - 20;
+  let r = min(width, height) * 0.32;
+  for (let i = 0; i < N; i++) {
+    let angle = -PI/2 + i * TWO_PI / N;
+    positions[i] = { x: cx + r * cos(angle), y: cy + r * sin(angle) };
+  }
+}
+
+function draw() {
+  time += 0.01;
+  
+  // Background with subtle noise
+  background(COLORS.bg[0], COLORS.bg[1], COLORS.bg[2]);
+  
+  // Faint radial gradient from center
+  noStroke();
+  for (let i = 5; i > 0; i--) {
+    let a = (6 - i) * 0.3;
+    fill(COLORS.bg[0], COLORS.bg[1], COLORS.bg[2] + i * 0.5, a);
+    let r = min(width, height) * (0.55 - i * 0.02);
+    ellipse(width/2, height/2 - 20, r * 2, r * 2);
+  }
+  
+  // === Draw Syzygy arcs (curved lines between complementary zones) ===
+  // Each demon governs a pair {z1, z2} where z1+z2=9 (except Uttunul {0,9})
+  let syzygyPairs = [[0,9], [1,8], [2,7], [3,6], [4,5]];
+  
+  push();
+  noFill();
+  for (let pair of syzygyPairs) {
+    // Draw arc through pentagon edges showing syzygy pairs
+    let z1 = pair[0], z2 = pair[1];
+    if (z1 === 0 && z2 === 9) {
+      // Plex-Void pair: draw central arc
+      stroke(COLORS.plexGlow[0], COLORS.plexGlow[1], COLORS.plexGlow[2], 15);
+      strokeWeight(1.5);
+      let cx = width/2, cy = height/2 - 20;
+      arc(cx, cy, min(width, height) * 0.15, min(width, height) * 0.15, -PI/2, PI/2);
+    }
+  }
+  pop();
+  
+  // === Draw prime-sharing connections ===
+  // Murrumur-Djynxx share prime 5
+  // Oddubb-Uttunul share primes 2,3
+  let primeConnections = [
+    { from: 0, to: 2 },  // Murrumur-Djynxx ({5}-Crossers)
+    { from: 1, to: 4 },  // Oddubb-Uttunul ({2,3}-Mirrors)
+  ];
+  
+  push();
+  strokeWeight(1.2);
+  for (let conn of primeConnections) {
+    let a = positions[conn.from];
+    let b = positions[conn.to];
+    let midX = (a.x + b.x) / 2;
+    let midY = (a.y + b.y) / 2 - 30;
+    
+    // Dashed curve for prime-sharing
+    let alpha = (hoveredDemon === conn.from || hoveredDemon === conn.to) ? 25 : 10;
+    stroke(COLORS.primeEdge[0], COLORS.primeEdge[1], COLORS.primeEdge[2], alpha);
+    noFill();
+    beginShape();
+    for (let t = 0; t <= 1; t += 0.05) {
+      let x = bezierPoint(a.x, a.x, midX, b.x, t);
+      let y = bezierPoint(a.y, a.y, midY, b.y, t);
+      vertex(x, y);
+    }
+    endShape();
+    
+    // Label
+    if (alpha > 15) {
+      fill(COLORS.primeEdge[0], COLORS.primeEdge[1], COLORS.primeEdge[2], 80);
+      noStroke();
+      textAlign(CENTER);
+      textSize(9);
+      let labelText = conn.from === 0 ? "{5}" : "{2,3}";
+      text(labelText, midX, midY - 5);
+    }
+  }
+  pop();
+  
+  // === Draw outer pentagram ring ===
+  push();
+  noFill();
+  stroke(260, 10, 25, 10);
+  strokeWeight(0.5);
+  beginShape();
+  for (let i = 0; i <= N; i++) {
+    let idx = i % N;
+    vertex(positions[idx].x, positions[idx].y);
+  }
+  endShape();
+  pop();
+  
+  // === Draw centre: Zone 9 / Plex ===
+  let cx2 = width/2;
+  let cy2 = height/2 - 20;
+  let pulse = 1 + 0.08 * sin(time * 1.5);
+  
+  // Plex glow
+  for (let i = 3; i >= 0; i--) {
+    let gAlpha = (4 - i) * 3;
+    let gR = 25 + i * 8;
+    fill(COLORS.plexGlow[0], COLORS.plexGlow[1], COLORS.plexGlow[2], gAlpha);
+    noStroke();
+    ellipse(cx2, cy2, gR * pulse, gR * pulse);
+  }
+  
+  // Plex label
+  fill(COLORS.plexGlow[0], COLORS.plexGlow[1], COLORS.plexGlow[2], 80);
+  noStroke();
+  textAlign(CENTER);
+  textSize(11);
+  text("Z9 PLEX", cx2, cy2 - 18);
+  textSize(8);
+  text("Uttunul's domain", cx2, cy2 - 5);
+  
+  // Syzygy Completion arrows from center
+  let arrowAlpha = 8 + 3 * sin(time * 0.7);
+  for (let i = 0; i < N; i++) {
+    let angle = -PI/2 + i * TWO_PI / N;
+    let innerR = 28;
+    let outerR = innerR + 15 + 5 * sin(time * 1.2 + i);
+    let x1 = cx2 + innerR * cos(angle);
+    let y1 = cy2 + innerR * sin(angle);
+    let x2 = cx2 + outerR * cos(angle);
+    let y2 = cy2 + outerR * sin(angle);
+    stroke(COLORS.plexGlow[0], COLORS.plexGlow[1], COLORS.plexGlow[2], arrowAlpha);
+    strokeWeight(0.8);
+    line(x1, y1, x2, y2);
+    // arrowhead
+    let ax = x2 - 4 * cos(angle + 0.4);
+    let ay = y2 - 4 * sin(angle + 0.4);
+    let bx = x2 - 4 * cos(angle - 0.4);
+    let by = y2 - 4 * sin(angle - 0.4);
+    line(x2, y2, ax, ay);
+    line(x2, y2, bx, by);
+  }
+  
+  // === Draw demon nodes ===
+  for (let i = 0; i < N; i++) {
+    let demon = demons[i];
+    let pos = positions[i];
+    let demonColor = getDemonColor(demon);
+    let isHovered = (hoveredDemon === i);
+    let isSelected = (selectedDemon === i);
+    
+    // Triangular duration glow — size proportional to T(zone)
+    let glowSize = map(demon.tZone, 3, 45, 28, 42);
+    let glowPulse = 1 + 0.12 * sin(time * 2 + i * 1.3);
+    let glowAlpha = isHovered ? 30 : (isSelected ? 25 : 12 + 4 * sin(time + i));
+    
+    for (let g = 3; g >= 0; g--) {
+      let ga = (4 - g) * glowAlpha / 3;
+      fill(demonColor[0], demonColor[1], demonColor[2], ga);
+      noStroke();
+      ellipse(pos.x, pos.y, (glowSize + g * 6) * glowPulse, (glowSize + g * 6) * glowPulse);
+    }
+    
+    // Main circle
+    let mainR = isHovered ? 26 : (isSelected ? 28 : 22);
+    fill(demonColor[0], demonColor[1], demonColor[2], 90);
+    stroke(demonColor[0], demonColor[1], demonColor[2] + 10, 60);
+    strokeWeight(isHovered ? 2.5 : 1.5);
+    ellipse(pos.x, pos.y, mainR * 2, mainR * 2);
+    
+    // Inner circle
+    fill(COLORS.bg[0], COLORS.bg[1], COLORS.bg[2] + 2, 80);
+    noStroke();
+    ellipse(pos.x, pos.y, mainR * 1.5, mainR * 1.5);
+    
+    // Demon name
+    fill(demonColor[0], demonColor[1], demonColor[2] + 20, 95);
+    noStroke();
+    textAlign(CENTER);
+    textSize(isHovered ? 12 : 10);
+    text(demon.name, pos.x, pos.y - mainR - 8);
+    
+    // AQ value
+    fill(COLORS.text[0], COLORS.text[1], COLORS.text[2], 70);
+    textSize(9);
+    text("AQ:" + demon.aq, pos.x, pos.y - mainR + 14);
+    
+    // Zone
+    let zHue = getZoneColor(demon.zone);
+    fill(zHue, 60, 80, 80);
+    textSize(11);
+    textStyle(BOLD);
+    text("Z" + demon.zone, pos.x, pos.y + 3);
+    textStyle(NORMAL);
+    
+    // DR
+    fill(COLORS.text[0], COLORS.text[1], 90, 65);
+    textSize(8);
+    text("DR:" + demon.dr, pos.x, pos.y + mainR - 12);
+    
+    // Governed pair
+    textSize(8);
+    fill(COLORS.text[0], COLORS.text[1], COLORS.text[2], 55);
+    let govText = "{" + demon.governs[0] + "," + demon.governs[1] + "}";
+    text(govText, pos.x, pos.y + mainR + 12);
+    
+    // Triangular duration ring
+    noFill();
+    stroke(demonColor[0], demonColor[1], demonColor[2], isHovered ? 40 : 15);
+    strokeWeight(1);
+    let triR = map(demon.tZone, 3, 45, 35, 65);
+    let triPhase = map(demon.tZone, 3, 45, 2.0, 0.3);
+    let triArc = map(demon.tZone, 3, 45, 0.15, 0.85);
+    let triAngle = time * triPhase;
+    arc(pos.x, pos.y, triR, triR, triAngle, triAngle + triArc * TWO_PI);
+  }
+  
+  // === Draw DR Family connections (lines between same-DR demons) ===
+  // Bookends: Murrumur(0) - Katak(3) via pentagram edge
+  // Mirrors: Oddubb(1) - Uttunul(4) via pentagram edge
+  let drConnections = [
+    { from: 0, to: 3, color: COLORS.bookend, label: "DR=8 Bookends" },
+    { from: 1, to: 4, color: COLORS.mirror, label: "DR=3 Mirrors" },
+  ];
+  
+  push();
+  for (let conn of drConnections) {
+    let a = positions[conn.from];
+    let b = positions[conn.to];
+    let alpha = (hoveredDemon === conn.from || hoveredDemon === conn.to) ? 35 : 15;
+    stroke(conn.color[0], conn.color[1], conn.color[2], alpha);
+    strokeWeight(1);
+    line(a.x, a.y, b.x, b.y);
+    
+    // Label at midpoint
+    let mx = (a.x + b.x) / 2;
+    let my = (a.y + b.y) / 2;
+    let lblAngle = atan2(b.y - a.y, b.x - a.x);
+    let offsetX = -12 * sin(lblAngle);
+    let offsetY = 12 * cos(lblAngle);
+    
+    if (alpha > 20) {
+      fill(conn.color[0], conn.color[1], conn.color[2], 70);
+      noStroke();
+      textSize(8);
+      textAlign(CENTER);
+      text(conn.label, mx + offsetX, my + offsetY);
+    }
+  }
+  pop();
+  
+  // === Djynxx solitary indicator ===
+  let djPos = positions[2];
+  push();
+  noFill();
+  stroke(COLORS.warp[0], COLORS.warp[1], COLORS.warp[2], 8 + 4 * sin(time * 1.8));
+  strokeWeight(0.7);
+  let solR = 70 + 3 * sin(time * 1.1);
+  arc(djPos.x, djPos.y, solR * 2, solR * 2, 0, TWO_PI);
+  pop();
+  
+  // === HUD update ===
+  if (hoveredDemon >= 0) {
+    let d = demons[hoveredDemon];
+    let infoDiv = document.getElementById('info');
+    infoDiv.innerHTML = 
+      '<span style="color:#ffe0a0;font-size:14px">' + d.name + '</span><br>' +
+      '<span class="val">AQ=' + d.aq + '</span> DR=' + d.dr + ' Z' + d.zone + '<br>' +
+      'Governs: {' + d.governs[0] + ',' + d.governs[1] + '} | Gate=' + d.gate + '<br>' +
+      'Primes: ' + (d.primes.length === 1 ? d.primes[0] : d.primes.join('×')) + '<br>' +
+      'T(zone)=' + d.tZone + ' | BPM=' + d.bpm + '<br>' +
+      '<span style="color:#a0d0c0">' + d.drFamily + '</span> | ' +
+      '<span style="color:#d0a0c0">' + d.primeFamily + '</span><br>' +
+      '<span style="font-size:10px;color:#888">' + d.description + '</span>';
+  } else if (selectedDemon >= 0) {
+    let d = demons[selectedDemon];
+    let infoDiv = document.getElementById('info');
+    infoDiv.innerHTML = 
+      '<span style="color:#ffe0a0;font-size:14px">' + d.name + ' (selected)</span><br>' +
+      '<span class="val">AQ=' + d.aq + '</span> Z' + d.zone + ' · ' + d.drFamily;
+  } else {
+    document.getElementById('info').innerHTML = 
+      '<span style="color:#666">Move mouse over demons</span><br>' +
+      '<span style="color:#555;font-size:10px">Click to pin | [R] randomize | [S] screenshot</span>';
+  }
+}
+
+function mouseMoved() {
+  hoveredDemon = -1;
+  // Don't change hoveredDemon if selected is pinned and we're away
+  for (let i = 0; i < N; i++) {
+    let d = dist(mouseX, mouseY, positions[i].x, positions[i].y);
+    if (d < 40) {
+      hoveredDemon = i;
+      break;
+    }
+  }
+}
+
+function mousePressed() {
+  if (hoveredDemon >= 0) {
+    selectedDemon = (selectedDemon === hoveredDemon) ? -1 : hoveredDemon;
+  }
+}
+
+function keyPressed() {
+  if (key === 'r' || key === 'R') {
+    selectedDemon = floor(random(N));
+    hoveredDemon = selectedDemon;
+  }
+  if (key === 's' || key === 'S') {
+    saveCanvas('demon-mandala', 'png');
+  }
+  if (key === ' ') {
+    selectedDemon = -1;
+    hoveredDemon = -1;
+  }
+  return false;
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  // Recompute positions
+  let cx = width / 2;
+  let cy = height / 2 - 20;
+  let r = min(width, height) * 0.32;
+  for (let i = 0; i < N; i++) {
+    let angle = -PI/2 + i * TWO_PI / N;
+    positions[i] = { x: cx + r * cos(angle), y: cy + r * sin(angle) };
+  }
+}
+</script>
+</body>
+</html>

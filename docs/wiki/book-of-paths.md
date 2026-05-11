@@ -35,36 +35,36 @@ The **Book of Paths** is the canonical 47-entry Alphanumeric Qabbala dictionary 
 | 111 = Slant
 | 117 = Askance
 | 121 = the one
-| 128 = yi jing
-| 137 = english
+| 128 = Yi Jing
+| 137 = English / Lucifer / autism / ptotic / sullen
 | 140 = Ayn Rand = Nick Land
 | 144 = Problem
-| 151 = abracadabra
+| 151 = abracadabra / skewing
 | 153 = Hermetic
 | 166 = Solomon
 | 171 = The Slant / Dazzling
 | 173 = Eye Slant
 | 174 = Numogram
 | 180 = Anglossic
-| 189 = CCCXXXIII
+| 189 = CCCXXXIII /  True Faith
 | 209 = Choronzon
 | 210 = Beast Pulse = Doomcrypt (handle) = Fruitless
 | 222 = savoir faire
 | 227 = Ptotic Eyes
 | 234 = the numogram
 | 235 = numerology
-| 250 = Iota Alpha Omega
+| 250 = Iota Alpha Omega / Jesus Christ 
 | 300 = fifteen fifty one
 | 313 = twelve fifty one
 | 328 = Alphanumeric Qabbala
-| 333 = one eight nine zero
-| 360 = the decimal labyrinth
-| 369 = that is all hassan sabba
+| 333 = one eight nine zero / evacuate humanity / Angelic Materialism / English Occultism / The Invisible Hands / Gnostic Calvinism / the empty summit / and that strangely / xenocosmography
+| 360 = the decimal labyrinth / two five dual snakes / the tree of knowledge / life is computation / Hermetic Cosmogony
+| 369 = that is all hassan sabba / the three sided shapes /
 | 444 = Synx is a devil's spirit
 | 567 = Questioning Angel Key / The Questioning Angel is the Key
 | 660 = Knowledge
-| 666 = of man's first disobediance and the fruit
-| 777 = And God said, Let there be light, and there was light
+| 666 = of man's first disobediance and the fruit / the cybernetic culture research unit / to be or not to be, that is the question
+| 777 = And God said, Let there be light, and there was light / Do what thou wilt shall be the whole of the law*
 | 888 = ordo amoris integrates good and evil spirits alike
 | 1848 = Psychodynamics
 
