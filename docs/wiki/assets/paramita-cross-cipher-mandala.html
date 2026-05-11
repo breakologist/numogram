@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Paramita Cross-Cipher Mandala — Corrected Zone Mapping</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a12; color: #c0c0c0; font-family: 'Courier New', monospace;
+         display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+  canvas { display: block; }
+  #controls { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+              background: rgba(10,10,18,0.9); padding: 10px 20px; border-radius: 8px;
+              border: 1px solid #333; font-size: 12px; text-align: center; }
+  #controls span { margin: 0 10px; color: #888; }
+  #controls kbd { background: #222; padding: 2px 6px; border-radius: 3px; color: #fff; }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+</head>
+<body>
+<div id="controls">
+  <span><kbd>1</kbd> DR-zones (canonical)</span>
+  <span><kbd>2</kbd> %10-zones (20:33 session)</span>
+  <span><kbd>3</kbd> Prime families</span>
+  <span><kbd>s</kbd> Save PNG</span>
+</div>
+<script>
+const paramitas = [
+  { name: "DANA", english: "Generosity", aq: 56, dr: 2, z_dr: 2, z_p10: 6,
+    primes: "2³×7", synx: 118, synx_dr: 1 },
+  { name: "SILA", english: "Discipline", aq: 77, dr: 5, z_dr: 5, z_p10: 7,
+    primes: "7×11", synx: 250, synx_dr: 7 },
+  { name: "KSANTI", english: "Patience", aq: 128, dr: 2, z_dr: 2, z_p10: 8,
+    primes: "2⁷", synx: 485, synx_dr: 8 },
+  { name: "VIRYA", english: "Diligence", aq: 120, dr: 3, z_dr: 3, z_p10: 0,
+    primes: "2³×3×5", synx: 1058, synx_dr: 5 },
+  { name: "DHYANA", english: "Meditation", aq: 107, dr: 8, z_dr: 8, z_p10: 7,
+    primes: "107†", synx: 783, synx_dr: 9 },
+  { name: "PRAJNA", english: "Wisdom", aq: 114, dr: 6, z_dr: 6, z_p10: 4,
+    primes: "2×3×19", synx: 356, synx_dr: 5 },
+];
+
+let viewMode = 1; // 1=DR-zones, 2=%10-zones, 3=prime-families
+let nodes = [];
+let cx, cy, radius;
+let t = 0;
+
+const zoneColors = {
+  0: [180, 180, 220], // Void - pale lavender
+  1: [60, 200, 200],  // Surge - teal
+  2: [200, 100, 220], // Time-Circuit - purple
+  3: [220, 160, 40],  // Warp - gold
+  4: [220, 80, 80],   // Gate/Sink - red
+  5: [120, 220, 120], // Central Hinge - green
+  6: [160, 160, 255], // Abstraction - blue-lavender
+  7: [255, 180, 80],  // Hold - orange
+  8: [80, 180, 255],  // Surge - sky blue
+  9: [255, 100, 255], // Plex - magenta
+};
+
+const solitaireColor = [255, 60, 60]; // Bright red for solitaire
+
+function setup() {
+  createCanvas(900, 800);
+  cx = width / 2;
+  cy = height / 2 - 30;
+  radius = 250;
+
+  // Position nodes in hexagon
+  for (let i = 0; i < 6; i++) {
+    let angle = -HALF_PI + i * TWO_PI / 6;
+    nodes.push({
+      ...paramitas[i],
+      x: cx + cos(angle) * radius,
+      y: cy + sin(angle) * radius,
+      angle: angle,
+    });
+  }
+}
+
+function draw() {
+  background(10, 10, 18);
+  t += 0.01;
+
+  // Decimal ring
+  noFill();
+  for (let z = 0; z <= 9; z++) {
+    let angle = -HALF_PI + z * TWO_PI / 10;
+    let rx = cx + cos(angle) * (radius + 70);
+    let ry = cy + sin(angle) * (radius + 70);
+    let col = zoneColors[z];
+    stroke(col[0], col[1], col[2], 80);
+    strokeWeight(2);
+    ellipse(rx, ry, 30);
+    noStroke();
+    fill(col[0], col[1], col[2], 200);
+    textAlign(CENTER, CENTER);
+    textSize(14);
+    text(z, rx, ry);
+  }
+
+  // Outer ring
+  stroke(60, 60, 90, 120);
+  strokeWeight(1);
+  noFill();
+  ellipse(cx, cy, (radius + 70) * 2);
+
+  // VIRYA+PRAJNA = THE NUMOGRAM connection line
+  let virya = nodes[3];
+  let prajna = nodes[5];
+  let pulseVal = sin(t * 2) * 0.3 + 0.7;
+
+  // Draw Plex completion arc
+  stroke(255, 100, 255, 100 * pulseVal);
+  strokeWeight(3);
+  drawingContext.setLineDash([8, 4]);
+  arc(cx, cy, radius * 1.6, radius * 1.6, virya.angle, prajna.angle);
+  drawingContext.setLineDash([]);
+
+  // VIRYA-PRAJNA label
+  noStroke();
+  fill(255, 100, 255, 180 * pulseVal);
+  textSize(11);
+  let midAngle = (virya.angle + prajna.angle) / 2;
+  if (midAngle > HALF_PI) midAngle -= PI;
+  let labelR = radius + 45;
+  text("VIRYA+PRAJNA=234=THE NUMOGRAM", cx + cos(midAngle) * labelR, cy + sin(midAngle) * labelR);
+
+  // Draw connections between prime-family members
+  if (viewMode === 3) {
+    // Prime 2 family: DANA, KSANTI, VIRYA, PRAJNA
+    let p2_members = [0, 2, 3, 5];
+    for (let i = 0; i < p2_members.length; i++) {
+      for (let j = i + 1; j < p2_members.length; j++) {
+        let a = nodes[p2_members[i]], b = nodes[p2_members[j]];
+        stroke(255, 200, 100, 40);
+        strokeWeight(1);
+        line(a.x, a.y, b.x, b.y);
+      }
+    }
+    // Prime 3 family: VIRYA, PRAJNA
+    stroke(255, 150, 50, 80);
+    strokeWeight(3);
+    line(nodes[3].x, nodes[3].y, nodes[5].x, nodes[5].y);
+
+    // Prime 7 family: DANA, SILA
+    stroke(150, 255, 100, 80);
+    strokeWeight(3);
+    line(nodes[0].x, nodes[0].y, nodes[1].x, nodes[1].y);
+  }
+
+  // Draw syzygy arcs
+  for (let node of nodes) {
+    let z = viewMode === 2 ? node.z_p10 : node.z_dr;
+    let partner = (9 - z) % 10;
+    // Find if any other paramita maps to partner zone
+    for (let other of nodes) {
+      let oz = viewMode === 2 ? other.z_p10 : other.z_dr;
+      if (oz === partner && other !== node) {
+        stroke(zoneColors[z][0], zoneColors[z][1], zoneColors[z][2], 30);
+        strokeWeight(1);
+        drawingContext.setLineDash([3, 6]);
+        line(node.x, node.y, other.x, other.y);
+        drawingContext.setLineDash([]);
+      }
+    }
+  }
+
+  // Draw nodes
+  for (let i = 0; i < nodes.length; i++) {
+    let node = nodes[i];
+    let z = viewMode === 2 ? node.z_p10 : node.z_dr;
+    let col = zoneColors[z];
+    let isSolitaire = i === 4; // DHYANA is solitaire
+
+    // Glow
+    let glowSize = 15 + sin(t * 2 + i) * 5;
+    if (isSolitaire) {
+      glowSize *= 1.5;
+      fill(solitaireColor[0], solitaireColor[1], solitaireColor[2], 20);
+      noStroke();
+      ellipse(node.x, node.y, glowSize * 4);
+    }
+
+    node.r = 22 + sin(t + i) * 2;
+    fill(col[0], col[1], col[2], 180);
+    stroke(col[0], col[1], col[2], 255);
+    strokeWeight(2);
+    ellipse(node.x, node.y, node.r * 2);
+
+    // Node label
+    noStroke();
+    fill(255);
+    textAlign(CENTER, CENTER);
+    textSize(11);
+    text(node.name, node.x, node.y);
+
+    // AQ + zone info below
+    fill(200);
+    textSize(10);
+    let zoneLabel = viewMode === 1 ? `Z${z}(DR)` : viewMode === 2 ? `Z${z}(%10)` : node.primes;
+    text(`AQ=${node.aq} ${zoneLabel}`, node.x, node.y + node.r + 16);
+
+    // Solitaire marker
+    if (isSolitaire) {
+      fill(solitaireColor[0], solitaireColor[1], solitaireColor[2], 200);
+      textSize(9);
+      text("† SOLITAIRE", node.x, node.y + node.r + 28);
+    }
+  }
+
+  // Center info
+  noStroke();
+  fill(255, 255, 255, 220);
+  textAlign(CENTER, CENTER);
+  textSize(18);
+  text("PARAMITA MANDALA", cx, cy - 30);
+
+  let modeName = viewMode === 1 ? "DR-Zones (Canonical)" : viewMode === 2 ? "Mod-10 Zones (20:33 Session)" : "Prime Families";
+  fill(180);
+  textSize(12);
+  text(modeName, cx, cy);
+
+  let total = 602;
+  let dr_total = 8;
+  fill(140);
+  textSize(11);
+  text("Σ = 602 → DR=8 → Z8 (Murrumur/Surge)", cx, cy + 20);
+  text("DR=9 → Plex | DR=8 → Surge/Echo | DANA+KSANTI=2(Virya's zone)", cx, cy + 38);
+
+  // Empirical correction notice
+  fill(255, 180, 100, 200);
+  textSize(10);
+  text("CORRECTION: 20:33 Plex-subsets use wrong zone derivation", cx, height - 60);
+  text("KSANTI+SILA+PRAJNA=319 → DR=4, not Z9 (see journal entry)", cx, height - 45);
+  text("VIRYA+PRAJNA=234 → DR=9=Plex ✓ (only pair that reaches Plex)", cx, height - 30);
+}
+
+function keyPressed() {
+  if (key === '1') viewMode = 1;
+  else if (key === '2') viewMode = 2;
+  else if (key === '3') viewMode = 3;
+  else if (key === 's' || key === 'S') saveCanvas('paramita-cross-cipher-mandala', 'png');
+}
+</script>
+</body>
+</html>

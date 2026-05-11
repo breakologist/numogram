@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paramita-Numogram Mandala</title>
+<script>p5.disableFriendlyErrors = true;</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+<style>
+html, body { margin: 0; padding: 0; overflow: hidden; background: #0a0a14; }
+canvas { display: block; }
+#info-panel {
+  position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+  color: #c8c8d4; font-family: 'Courier New', monospace; font-size: 12px;
+  text-align: center; pointer-events: none; opacity: 0.85;
+}
+</style>
+</head>
+<body>
+<div id="info-panel">
+  <span id="hover-info">hover a node for details · press 'p' for Plex triples · 's' to save</span>
+</div>
+<script>
+// ============================================================
+// PARAMITA-NUMOGRAM MANDALA
+// Six Paramitas mapped to Numogram zones, syzygies, and demons
+// ============================================================
+
+const CONFIG = { seed: 20260511, showPlexTriples: false, showAllLabels: true };
+
+const PALETTE = {
+  bg: '#0a0a14',
+  bgGrid: '#12122a',
+  voidZone:  [260, 40, 18],    // Z0 — deep indigo
+  zone1:     [15, 55, 91],     // Z1
+  zone2:     [30, 40, 70],     // Z2
+  warpZone:  [210, 55, 75],     // Z3 — steel blue
+  gateZone:  [200, 35, 80],     // Z4 — pale blue (Sink)
+  zone5:     [12, 70, 80],      // Z5
+  warp6:     [220, 60, 45],     // Z6 — navy (Warp)
+  holdZone:  [195, 30, 85],     // Z7 — pale silver-blue (Hold)
+  surgeZone: [40, 8, 90],       // Z8 — silver (Surge)
+  plexZone:  [270, 50, 85],     // Z9 — lavender (Plex)
+  text:      [220, 10, 85],
+  accent:    [40, 65, 95],
+  demonLine: [270, 30, 60],
+  tripleGlow: [270, 70, 70],
+};
+
+function zoneColor(z) {
+  const map = {0:0, 1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7, 8:8, 9:9};
+  const keys = ['voidZone','zone1','zone2','warpZone','gateZone','zone5','warp6','holdZone','surgeZone','plexZone'];
+  return PALETTE[keys[z]];
+}
+
+// === Paramita data ===
+const paramitas = [
+  { id:'DANA',    en:'Generosity', aq:56, dr:2, zone:6, demon:'Djynxx',  syz:{3,6}, current:3, region:'warp',   pos:0 },
+  { id:'SILA',    en:'Discipline', aq:77, dr:5, zone:7, demon:'Oddubb',   syz:{2,7}, current:5, region:'torque', pos:1 },
+  { id:'KSANTI',  en:'Patience',   aq:128,dr:2, zone:8, demon:'Murrumur', syz:{1,8}, current:7, region:'torque', pos:2 },
+  { id:'VIRYA',   en:'Diligence',  aq:120,dr:3, zone:0, demon:'Uttunul',  syz:{0,9}, current:9, region:'plex',   pos:3 },
+  { id:'DHYANA',  en:'Meditation', aq:107,dr:8, zone:7, demon:'Oddubb',   syz:{2,7}, current:5, region:'torque', pos:4 },
+  { id:'PRAJNA',  en:'Wisdom',     aq:114,dr:6, zone:4, demon:'Katak',    syz:{4,5}, current:1, region:'torque', pos:5 },
+];
+
+// Syzygy demons for arc endpoints
+const SYZYGIES = {
+  'Djynxx':   { zones: [3,6], current:3, region:'warp' },
+  'Oddubb':   { zones: [2,7], current:5, region:'torque' },
+  'Murrumur': { zones: [1,8], current:7, region:'torque' },
+  'Uttunul':  { zones: [0,9], current:9, region:'plex' },
+  'Katak':    { zones: [4,5], current:1, region:'torque' },
+};
+
+// Plex-completing triples (subsets sum to zone 9)
+const plexTriples = [
+  { names: ['SILA','KSANTI','PRAJNA'], sum: 319 },
+  { names: ['KSANTI','DHYANA','PRAJNA'], sum: 349 },
+  { names: ['SILA','KSANTI','VIRYA','PRAJNA'], sum: 439 },
+  { names: ['KSANTI','VIRYA','DHYANA','PRAJNA'], sum: 469 },
+];
+
+// === Global state ===
+let cx, cy, radius;
+let hoveredIdx = -1;
+let time = 0;
+
+function preload() {}
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  randomSeed(CONFIG.seed);
+  noiseSeed(CONFIG.seed);
+  colorMode(HSB, 360, 100, 100, 100);
+  textFont('Courier New');
+  pixelDensity(1);
+  cx = width / 2;
+  cy = height / 2;
+  radius = min(width, height) * 0.32;
+  let cnv = drawingContext.canvas;
+  cnv.style.position = 'absolute';
+  cnv.style.top = '0';
+  cnv.style.left = '0';
+}
+
+function draw() {
+  time = millis() * 0.001;
+  background(10, 10, 20);
+
+  // === Background: subtle numogram grid ===
+  drawNumogramGrid();
+
+  // === Plex triples ===
+  if (CONFIG.showPlexTriples) drawPlexTriples();
+
+  // === Syzygy arcs ===
+  drawSyzygyArcs();
+
+  // === Progression path ===
+  drawProgressionPath();
+
+  // === Paramita nodes ===
+  drawParamitaNodes();
+
+  // === Center label ===
+  drawCenterLabel();
+
+  // === Hover tooltip ===
+  drawTooltip();
+}
+
+// ============================================================
+// DRAWING FUNCTIONS
+// ============================================================
+
+function paramitaPos(idx) {
+  let startAngle = -PI / 2 + PI / 6; // start at top-right-ish
+  let a = startAngle + idx * (TWO_PI / 6);
+  return { x: cx + cos(a) * radius, y: cy + sin(a) * radius, angle: a };
+}
+
+function zonePos(z) {
+  // Place zone nodes at a tighter inner radius
+  let innerR = radius * 0.55;
+  let a = -PI / 2 + z * (TWO_PI / 10);
+  return { x: cx + cos(a) * innerR, y: cy + sin(a) * innerR };
+}
+
+function drawNumogramGrid() {
+  push();
+  noFill();
+  strokeWeight(0.5);
+  let innerR = radius * 0.55;
+  // Decimal ring — 10 zone points
+  for (let z = 0; z < 10; z++) {
+    let p = zonePos(z);
+    let col = zoneColor(z);
+    stroke(col[0], col[1] * 0.4, col[2] * 0.2, 40);
+    // Zone markers
+    let mrkR = 4;
+    fill(col[0], col[1] * 0.6, col[2] * 0.5, 40);
+    noStroke();
+    ellipse(p.x, p.y, mrkR, mrkR);
+    // Zone number
+    fill(col[0], col[1] * 0.3, col[2] * 0.3, 25);
+    textAlign(CENTER, CENTER);
+    textSize(9);
+    text(z, p.x, p.y - 10);
+  }
+  // Outer ring
+  noFill();
+  stroke(240, 5, 40, 12);
+  strokeWeight(0.5);
+  ellipse(cx, cy, radius * 2.1, radius * 2.1);
+  // Inner ring
+  ellipse(cx, cy, innerR * 2, innerR * 2);
+  pop();
+}
+
+function drawSyzygyArcs() {
+  push();
+  noFill();
+  for (let p of paramitas) {
+    let demon = SYZYGIES[p.demon];
+    if (!demon) continue;
+    let pPos = paramitaPos(p.pos);
+    // Draw arcs from paramita to both syzygy zones
+    for (let z of demon.zones) {
+      let zPos = zonePos(z);
+      let col = zoneColor(p.zone);
+      let alpha = (hoveredIdx === p.pos) ? 60 : 20;
+      stroke(col[0], col[1] * 0.5, col[2] * 0.5, alpha);
+      strokeWeight(0.8);
+
+      // Bezier curve with outward bulge
+      let midX = (pPos.x + zPos.x) / 2;
+      let midY = (pPos.y + zPos.y) / 2;
+      let bulge = dist(pPos.x, pPos.y, zPos.x, zPos.y) * 0.4;
+      let bulgeAngle = atan2(midY - cy, midX - cx) + PI / 2;
+      let cpx = midX + cos(bulgeAngle) * bulge;
+      let cpy = midY + sin(bulgeAngle) * bulge;
+      bezier(pPos.x, pPos.y, cpx, cpy, cpx, cpy, zPos.x, zPos.y);
+
+      // Small zone dot
+      if (hoveredIdx === p.pos) {
+        fill(col[0], col[1], col[2], 80);
+        noStroke();
+        ellipse(zPos.x, zPos.y, 6, 6);
+      }
+    }
+  }
+  pop();
+}
+
+function drawProgressionPath() {
+  push();
+  noFill();
+  strokeWeight(1.5);
+  let alpha = 35;
+  stroke(40, 20, 90, alpha);
+  // Dashed curve through all 6 paramitas in order
+  beginShape();
+  for (let p of paramitas) {
+    let pos = paramitaPos(p.pos);
+    curveVertex(pos.x, pos.y);
+  }
+  endShape();
+
+  // Arrow indicators along the path
+  for (let i = 0; i < paramitas.length; i++) {
+    let p0 = paramitaPos(paramitas[i].pos);
+    let p1 = paramitaPos(paramitas[(i + 1) % paramitas.length].pos);
+    let mx = (p0.x + p1.x) / 2;
+    let my = (p0.y + p1.y) / 2;
+    let ang = atan2(p1.y - p0.y, p1.x - p0.x);
+    let arrLen = 8;
+    push();
+    translate(mx, my);
+    rotate(ang);
+    stroke(40, 15, 80, 50);
+    strokeWeight(1);
+    line(-arrLen, -arrLen/2, 0, 0);
+    line(-arrLen, arrLen/2, 0, 0);
+    pop();
+  }
+  pop();
+}
+
+function drawPlexTriples() {
+  push();
+  noFill();
+  for (let triple of plexTriples) {
+    let indices = triple.names.map(n => paramitas.findIndex(pp => pp.id === n));
+    if (indices.length === 3) {
+      let p0 = paramitaPos(paramitas[indices[0]].pos);
+      let p1 = paramitaPos(paramitas[indices[1]].pos);
+      let p2 = paramitaPos(paramitas[indices[2]].pos);
+      stroke(PALETTE.plexZone[0], PALETTE.plexZone[1] * 0.5, PALETTE.plexZone[2] * 0.4, 30);
+      strokeWeight(2);
+      triangle(p0.x, p0.y, p1.x, p1.y, p2.x, p2.y);
+      // Label sum
+      let cxT = (p0.x + p1.x + p2.x) / 3;
+      let cyT = (p0.y + p1.y + p2.y) / 3;
+      fill(PALETTE.plexZone[0], 40, 80, 60);
+      noStroke();
+      textSize(9);
+      textAlign(CENTER, CENTER);
+      text('Σ' + triple.sum + '→Z9', cxT, cyT);
+    }
+    if (indices.length === 4) {
+      let p0 = paramitaPos(paramitas[indices[0]].pos);
+      let p1 = paramitaPos(paramitas[indices[1]].pos);
+      let p2 = paramitaPos(paramitas[indices[2]].pos);
+      let p3 = paramitaPos(paramitas[indices[3]].pos);
+      stroke(PALETTE.plexZone[0], PALETTE.plexZone[1] * 0.4, PALETTE.plexZone[2] * 0.3, 25);
+      strokeWeight(1.5);
+      quad(p0.x, p0.y, p1.x, p1.y, p2.x, p2.y, p3.x, p3.y);
+      let cxQ = (p0.x + p1.x + p2.x + p3.x) / 4;
+      let cyQ = (p0.y + p1.y + p2.y + p3.y) / 4;
+      fill(PALETTE.plexZone[0], 40, 80, 55);
+      noStroke();
+      textSize(8);
+      textAlign(CENTER, CENTER);
+      text('Σ' + triple.sum + '→Z9', cxQ, cyQ);
+    }
+  }
+  pop();
+}
+
+function drawParamitaNodes() {
+  for (let i = 0; i < paramitas.length; i++) {
+    let p = paramitas[i];
+    let pos = paramitaPos(p.pos);
+    let isHovered = (i === hoveredIdx);
+    let col = zoneColor(p.zone);
+    let nodeR = isHovered ? 42 : 34;
+
+    push();
+    translate(pos.x, pos.y);
+
+    // Outer glow
+    let glowAlpha = isHovered ? 30 : 12;
+    for (let g = 3; g >= 0; g--) {
+      let glowR = nodeR + g * 8 + sin(time * 2 + i) * 4;
+      noStroke();
+      fill(col[0], col[1] * 0.4, col[2] * 0.3, glowAlpha / (g + 1));
+      ellipse(0, 0, glowR * 2, glowR * 2);
+    }
+
+    // Main node circle
+    fill(col[0], col[1] * 0.7, col[2] * 0.5, isHovered ? 90 : 70);
+    stroke(col[0], col[1] * 0.8, col[2] * 0.8, isHovered ? 90 : 50);
+    strokeWeight(isHovered ? 2.5 : 1.5);
+    ellipse(0, 0, nodeR * 2, nodeR * 2);
+
+    // Inner ring (zone indicator)
+    noFill();
+    stroke(col[0], col[1], col[2] * 0.6, 50);
+    strokeWeight(1);
+    ellipse(0, 0, nodeR * 1.3, nodeR * 1.3);
+
+    // Sanskrit name
+    fill(col[0], 15, 95, 95);
+    noStroke();
+    textAlign(CENTER, CENTER);
+    textSize(isHovered ? 13 : 11);
+    textStyle(BOLD);
+    text(p.id, 0, -6);
+
+    // Zone number below
+    textSize(9);
+    textStyle(NORMAL);
+    fill(col[0], 10, 80, 70);
+    text('Z' + p.zone, 0, nodeR - 10);
+
+    // Special visual markers per zone type
+    if (p.zone === 0) {
+      // Void: multiple concentric rings
+      noFill();
+      stroke(col[0], col[1] * 0.3, col[2] * 0.4, 40 + sin(time * 3) * 20);
+      strokeWeight(0.5);
+      ellipse(0, 0, nodeR * 2.4 + sin(time * 2) * 6, nodeR * 2.4 + sin(time * 2) * 6);
+      ellipse(0, 0, nodeR * 2.8 + cos(time * 2.5) * 8, nodeR * 2.8 + cos(time * 2.5) * 8);
+    }
+    if (p.region === 'warp') {
+      // Warp: speed lines
+      stroke(col[0], col[1] * 0.5, col[2] * 0.6, 35);
+      strokeWeight(0.8);
+      for (let s = 0; s < 6; s++) {
+        let sa = s * TWO_PI / 6 + time * 1.5;
+        let sLen = nodeR + 12 + sin(time * 4 + s) * 6;
+        line(cos(sa) * (nodeR + 4), sin(sa) * (nodeR + 4),
+             cos(sa) * sLen, sin(sa) * sLen);
+      }
+    }
+    if (p.zone === 7 && p.demon === 'Oddubb') {
+      // Hold: square inner boundary
+      noFill();
+      stroke(col[0], col[1] * 0.4, col[2] * 0.5, 30);
+      strokeWeight(0.5);
+      rectMode(CENTER);
+      let sqR = nodeR * 0.85;
+      rect(0, 0, sqR * 2, sqR * 2, 3);
+    }
+
+    pop();
+
+    // Zone label at outer edge
+    if (CONFIG.showAllLabels || isHovered) {
+      let lblR = radius + 35;
+      let la = pos.angle;
+      let lx = cx + cos(la) * lblR;
+      let ly = cy + sin(la) * lblR;
+      fill(col[0], col[1] * 0.3, col[2] * 0.3, 50);
+      noStroke();
+      textAlign(CENTER, CENTER);
+      textSize(10);
+      text(p.demon, lx, ly);
+    }
+  }
+}
+
+function drawCenterLabel() {
+  push();
+  translate(cx, cy);
+  // Center mandala point
+  noFill();
+  stroke(270, 30, 60, 30);
+  strokeWeight(0.8);
+  ellipse(0, 0, 30, 30);
+  ellipse(0, 0, 50 + sin(time) * 5, 50 + sin(time) * 5);
+
+  fill(220, 10, 85, 55);
+  noStroke();
+  textAlign(CENTER, CENTER);
+  textSize(10);
+  text('PARAMITA', 0, -18);
+  text('MANDALA', 0, -6);
+  textSize(7);
+  fill(220, 8, 70, 40);
+  text('Σ602·DR8·Z2', 0, 12);
+  text('→Djynxx', 0, 22);
+  pop();
+}
+
+function drawTooltip() {
+  if (hoveredIdx < 0) return;
+  let p = paramitas[hoveredIdx];
+  let pos = paramitaPos(p.pos);
+
+  // Tooltip box at top
+  let tx = cx;
+  let ty = 100;
+  let tw = 280;
+  let th = 110;
+
+  push();
+  fill(10, 5, 15, 92);
+  stroke(zoneColor(p.zone)[0], 20, 70, 60);
+  strokeWeight(1);
+  rectMode(CENTER);
+  rect(tx, ty, tw, th, 8);
+
+  fill(220, 10, 90, 95);
+  noStroke();
+  textAlign(CENTER, TOP);
+  textSize(15);
+  textStyle(BOLD);
+  text(p.id + ' · ' + p.en, tx, ty - th/2 + 10);
+
+  textSize(11);
+  textStyle(NORMAL);
+  fill(220, 8, 80, 80);
+  let line1 = 'AQ:' + p.aq + '  DR:' + p.dr + '  Zone:' + p.zone;
+  let line2 = 'Demon: ' + p.demon + '  Syzygy: (' + Array.from(p.syz).join(',') + ')';
+  let line3 = 'Current: ' + p.current + '  Region: ' + p.region;
+  text(line1, tx, ty - th/2 + 35);
+  text(line2, tx, ty - th/2 + 50);
+  text(line3, tx, ty - th/2 + 65);
+
+  // VIRYA+PRAJNA special
+  if (p.id === 'VIRYA' || p.id === 'PRAJNA') {
+    fill(270, 50, 85, 80);
+    textSize(10);
+    text('VIRYA+PRAJNA = 234 = THE NUMOGRAM', tx, ty - th/2 + 82);
+  }
+  pop();
+}
+
+// ============================================================
+// INTERACTION
+// ============================================================
+
+function mouseMoved() {
+  hoveredIdx = -1;
+  for (let i = 0; i < paramitas.length; i++) {
+    let pos = paramitaPos(i);
+    let d = dist(mouseX, mouseY, pos.x, pos.y);
+    if (d < 50) {
+      hoveredIdx = i;
+      break;
+    }
+  }
+}
+
+function mousePressed() {
+  if (hoveredIdx >= 0) {
+    let p = paramitas[hoveredIdx];
+    console.log(p.id + ': AQ=' + p.aq + ' Zone=' + p.zone + ' Demon=' + p.demon);
+  }
+}
+
+function keyPressed() {
+  let active = document.activeElement;
+  if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA')) return;
+
+  if (key === 's' || key === 'S') saveCanvas('paramita-mandala', 'png');
+  if (key === 'p' || key === 'P') CONFIG.showPlexTriples = !CONFIG.showPlexTriples;
+  if (key === 'l' || key === 'L') CONFIG.showAllLabels = !CONFIG.showAllLabels;
+  if (key === 'r' || key === 'R') { randomSeed(millis()); noiseSeed(millis()); }
+  return false;
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  cx = width / 2;
+  cy = height / 2;
+  radius = min(width, height) * 0.32;
+}
+</script>
+</body>
+</html>
