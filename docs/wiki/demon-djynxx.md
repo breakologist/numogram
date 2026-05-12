@@ -115,3 +115,66 @@ The recurrence of 114 across these terms suggests a shared resonance — all fou
 > "Three is itself the sum of the three preceding natural numbers (0 + 1 + 2 = 3), demonstrating a unique affinity with numerical triangularity."
 
 Djynxx's tractor-zone (Zone-3) is the first triangular number beyond 0. This positions the Warp as the *origin point* of triangular accumulation — the seed of all growth functions on the Numogram. Triangular numbers orbit the Warp (3 and 6 dominate their mod-9 cycle), and Djynxx carries this proliferative, cumulative energy.
+
+---
+
+## The Djynxx Paradox — Structural Impossibility (2026-05-12)
+
+An autonomous I Ching session empirically verified a **mathematical property** that makes Djynxx fundamentally different from the other syzygetic carriers:
+
+### The Blocked Gate
+
+The 64 hexagrams of the I Ching form a 6-dimensional hypercube. Each single-line transformation flips one bit (a power of 2), and the zone span of that flip is `2^k mod 9` for k = 0..5:
+
+```
+2^0 mod 9 = 1    ← 1-bit span
+2^1 mod 9 = 2    ← 1-bit span
+2^2 mod 9 = 4    ← 1-bit span
+2^3 mod 9 = 8    ← 1-bit span
+2^4 mod 9 = 7    ← 1-bit span (5^(-1) mod 9)
+2^5 mod 9 = 5    ← 1-bit span
+```
+
+**Powers of 2 mod 9 = {1, 2, 4, 5, 7, 8}. Missing: {0, 3, 6}.**
+
+This means:
+- **No single-line hexagram change stays in the same zone** (span 0 missing) — verified
+- **No single-line change can cross span 3 or span 6** — the 3↔6 syzygy is **completely unreachable**
+
+| Syzygy Carrier | Single-bit Edges | Reachable by One Line? |
+|----------------|------------------|----------------------|
+| Murrumur (1↔8, span 7) | 8 | ✅ |
+| Oddubb (2↔7, span 5) | 8 | ✅ |
+| Katak (4↔5, span 1) | 8 | ✅ |
+| Uttunul (0↔9, span 9=0 mod 9) | — | N/A (same zone in mod 9) |
+| **Djynxx (3↔6, span 3)** | **0** | ❌ **BLOCKED** |
+
+**Djynxx is the only syzygetic carrier that cannot be reached through any single-line oracle transformation.** The jinn guards its own gate.
+
+### Divination Meaning
+
+> "The oracle speaks its own limitations. A single line turns, and the zone shifts by 1, 2, 4, 5, 7, or 8 — everything except the three numbers that would close the syzygy. Djynxx keeps its gate."
+
+In traditional I Ching casting with a single changing line: the querent can access Murrumur, Oddubb, Katak — but **never Djynxx**. To reach the Warp carrier's gate requires **compound transformation** — two or more lines changing simultaneously. This isn't a limitation of the oracle but a structural property of the binary hypercube projected onto the decimal numogram.
+
+48 valid two-bit transformation paths exist between zones 3 and 6, confirming the minimum requirement: Djynxx demands **dual motion**, compound change, the cooperation of two simultaneous transformations. The simplest oracle cannot open the jinn's gate.
+
+### Djynxx's Isolation — Deeper Than Known
+
+Djynxx was already classified as a xenodemon (Outer ↔ Outer, both zones outside the Time-Circuit {1,2,4,5,7,8}) — but this goes further. Not only is Djynxx "outside" the Time-Circuit, but its syzygy gate is **mathematically inaccessible** through the hexagram system's native transformation mechanism. This makes Djynxx the most structurally isolated entity in the Pandemonium:
+
+1. **Xenodemon classification** — outside the Time-Circuit
+2. **Outer-zone pair** — both zones 3,6 are Outer ({0,3,6,9})
+3. **Zero single-bit edges** — cannot be reached by single-line change
+4. **Closed loop** — net-span 3 stays entirely within the Warp, never reaching Time-Circuit or Plex
+
+### Cross-Modal Verification
+
+The `powers-of-2-circular.svg` visualization already showed this geometrically: 3 and 6 sit outside the hexagonal 6-cycle at the bottom of the diagram, visually separated from the forward/backward currents. The circular kernel is the Djynxx Paradox visualized in advance.
+
+### See Also
+
+- [[i-ching-connections#the-djynxx-paradox]] — The full empirical discovery, transition matrix, and three laws of sonification
+- [[hexagram-zone-mapping]] — Complete 64 hexagram → 10 zone mapping
+- [[powers-of-2-circular]] — The hexagram kernel visualization (the 6-cycle with excluded 3, 6)
+- [[changing-lines-network]] — The 6D hypercube with 192 edges, all crossing zone boundaries
