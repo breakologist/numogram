@@ -1,150 +1,165 @@
 # Numogram
 
-A monorepo for the Decimal Labyrinth: the CCRU numogram as code, game, oracle, and sound.
+A monorepo for the Decimal Labyrinth: the CCRU numogram as code, game, oracle, and sound — now extended through AI agent–driven autonomous research, audio sonification, and cross-domain mapping across the I Ching, Paramita conducts, and the Pandemonium Matrix.
 
 ## What's Inside
 
-| Directory | Description | Entry Point |
-|-----------|-------------|-------------|
-| `cli/` | Oracle pipeline + AQ calculator | `python cli/oracle.py --seed 192855` |
-| `game/` | Abyssal Crawler roguelike + agents | `python game/numogram_roguelike.py` |
-| `entropy/` | Hardware entropy plugin (pip-installable) | `pip install ./entropy` |
-| `voices/` | Formant synthesis generator (zone utterances) | `python voices/formant_voice.py` |
-| `visualizer/` | Browser-based p5.js oracle (v6/v7) | Open `visualizer/numogram-visualizer-v7.html` |
-| `docs/` | Wiki (124 pages), AQ dictionary, source texts, pandemonium matrix | — |
+| Directory | Description |
+|-----------|-------------|
+| `cli/` | Oracle pipeline + AQ calculator |
+| `game/` | Numogram roguelike + cult-garden agents |
+| `entropy/` | Hardware entropy plugin (pip-installable) |
+| `voices/` | Formant synthesis generator (zone utterances) |
+| `visualizer/` | Browser-based p5.js oracle (v6/v7) |
+| `mod_writer/` | ProTracker `.mod` composer with numogram-native motifs |
+| `docs/wiki/` | Knowledge base — wiki pages, demon database, source texts, visual assets |
+| `scripts/` | Utility scripts (render, export, sync) |
 
-### Game Details
+### Oracle
 
-`game/numogram_roguelike.py` — main interactive curses roguelike:
-- 10 zones, full 45-demon Pandemonium Matrix
-- Fog of war, hyperstition meter, conduct system
-- Persistent `cult.json` save across runs
-- Tree-based dungeon generation (Brogue method)
+Seed → zone → syzygy → voice. Hardware entropy or manual seed.
 
-`game/learning_agent.py` — corridor-driven headless agent
-`game/interactive_agent.py` — BFS interest-driven exploration agent with stair targeting
-`game/rogue_agent.py` — screen-scraping agent for the Numogram roguelike
-`game/serve-garden.py` — visualizer server for cult-garden overflow outputs
-
-Additional artifacts in `game/`:
-- `cult.json` — persistent cult memory (player state across runs)
-- `cult-garden-live.html` & `cult-garden-zone-skins.html` — overflow visualization
-
-### Documentation (`docs/`)
-
-- **`wiki/`** — complete Obsidian wiki (**141 markdown pages**). Triangle rotations, tetralogues, model assessments, I Ching/T'ai Hsuan bridges, roguelike design notes, demon lore, gate arithmetic, operational logs, and cult-garden fiction. Wiki health metrics: 197 canonical tags, 21 core authority pages (≥10 inbound), zero medium-value orphans, avg link degree 5.53/5.53. See `WIKI-HEALTH-REPORT.md` for full audit.
-- **`aq-dictionary.md`** — Alphanumeric Qabbala cipher values (letter/number → AQ value)
-- **`hermes.md`** — seed architecture doc (Karpathy LLM-Wiki pattern, adapted for numogram work)
-- **`numogram-source.txt`** — core CCRU Decimal Numogram source (389-line canonical specification)
-- **`pandemonium-matrix.json`** — full 45-demon database with attributes, gates, zones, currents
-
-### Visualizer Variants
-
-- `visualizer/numogram-visualizer-v7.html` — primary oracle (base-10/16/36, Synx/Yxshh overlay, T'ai Hsuan casting, strobogrammatic gates, quasiphonic labels)
-- `visualizer/numogram-visualizer-v7-djynxxogram.html` — Base-36 variant with additional toggle controls
-
-## Quick Start
-
-### Oracle (CLI)
 ```bash
 python cli/oracle.py --seed 192855
 python cli/oracle.py --text "YOUR NAME"
-python cli/oracle.py --hardware        # local machine noise
-python cli/oracle.py --taixuan --voice # T'ai Hsuan + audio (requires voices/)
+python cli/oracle.py --hardware        # thermal/CPU/GPU noise
+python cli/oracle.py --taixuan --voice # T'ai Hsuan casting + audio
 ```
 
-### Calculator
+### AQ Calculator
+
 ```bash
 python cli/aq_calculator_canonical.py
 ```
 
-### Game
+### Roguelike
+
+Tree-based dungeon generation (Brogue method) with numogram zone logic:
+
 ```bash
 python game/numogram_roguelike.py      # interactive curses
-python game/numogram_roguelike.py --hw-entropy  # hardware seed
-python game/numogram_roguelike.py --headless    # agent mode (state dump to stdout)
+python game/numogram_roguelike.py --hw-entropy  # hardware-seeded run
+python game/numogram_roguelike.py --headless    # agent mode (stdout state dump)
 ```
 
-### Cult Garden (Overflow Visualizer)
+- 10 zones, full 45-demon Pandemonium Matrix
+- Fog of war, hyperstition meter, conduct system
+- Paramita Conducts — unlockable spiritual-practice abilities (Dāna, Śīla, Kṣānti, Vīrya, Dhyāna, Prajñā)
+- Persistent `cult.json` save across runs
 
-```bash
-cd game
-python3 serve-garden.py           # starts server on http://localhost:4545
-# Then open:
-#   http://localhost:4545/cult-garden-live.html        — live run view
-#   http://localhost:4545/cult-garden-zone-skins.html  — zone-themed skins
-```
-Player-specific `cult.json` lives in `game/`; a template (`cult.json.template`) is provided. Personal save files are **not** committed to the repo.
+Headless agents (`game/learning_agent.py`, `game/interactive_agent.py`) drive autonomous exploration runs; their overflow outputs feed the cult-garden visualizer.
 
-### Entropy Plugin
-```bash
-cd entropy
-pip install -e .
-numogram-entropy --help
-```
+### Mod-Writer (Tracker Composition)
 
-### Visualizer
-Open `visualizer/numogram-visualizer-v7.html` in any browser. Features:
-- Base-10/16/36 modes with Synx/Yxshh dual-cipher
-- T'ai Hsuan two-tetragram casting (64 hexagrams)
-- Strobogrammatic gate detection (palindromic/rotational)
-- Quasiphonic particle labels (zone-aligned phonemes)
-- Djynxxogram Base-36 full toggle variant (v7-djynxxogram)
-
-
-### mod-writer (Numogram Tracker)
-
-Tracker composition using numogram-native motifs. Generates standard `.mod` files
-(ProTracker-compatible) from AQ seeds, syzygy chains, and triangular patterns.
+Generates standard `.mod` (ProTracker-compatible) files from AQ seeds, syzygy chains, and triangular pattern lengths.
 
 ```bash
 # Basic generation
 python -m mod_writer --seed 123 --triad-motif Warp --rows 32
 
-# Just intonation mode (v0.6.0+)
+# Just intonation mode (pure 5/4, 6/5, 3/2 ratios)
 python -m mod_writer --seed 7 --triad-motif Warp --just-intonation
 
-# Song builder (multi-section)
+# Multi-section SongBuilder
 python -m mod_writer --song examples/warp-suite.json --bpm 128
 ```
 
 **Features:**
-- AQ‑seeded pseudo‑random pattern generation
+- AQ-seeded pseudo-random pattern generation
 - Triangular syzygy motif routing (Warp, Fives, Mesh, CTS)
-- Just‑intonation third/fifth overrides (pure ratios)
-- Multi‑section `SongBuilder` with sample auto‑rename
+- Just-intonation overrides (opt-in pure ratios)
+- Multi-section SongBuilder with sample auto-rename
 - Audio analysis & MIR profiling (`--profile-audio`, `--mir-seed`)
 - Full manifest output (samples, patterns, instruments)
 
-See `mod-writer/` for the complete skill, tests, and examples. Wiki:  
-`docs/wiki/numogram-audio/mod-writer/` (usage, development, audio renderer, triangular semantics).
+The mod-writer pipeline has been empirically validated across three autonomous arc domains, producing the **Three Laws of Numogram Sonification** (see below).
 
-## Repository Status
+### Cult Garden (Overflow Visualizer)
 
-The wiki has completed a full structural audit (April 2026):
+```bash
+cd game
+python3 serve-garden.py   # http://localhost:4545
+# Open cult-garden-live.html or cult-garden-zone-skins.html
+```
 
-- **141 pages**, 197 normalized tags, average link degree 5.53/5.53
-- **Zero medium-value orphans** — all pages with ≥3 inbound now have ≥2 outbound
-- **21 core authority hub pages** (≥10 inbound links each)
-- **Content hygiene pass** — 6 of 8 prose AI-ism patterns eliminated; 4 marginal hits remain in literary contexts
-- Full metrics and methodology: see `docs/WIKI-HEALTH-REPORT.md`
+### Entropy Plugin
 
-Tag taxonomy follows singular/hyphen/lowercase conventions. Broken-link remediation prioritized navigational pages; intentional placeholders (root-section stubs) remain as red links pending content.
+```bash
+cd entropy && pip install -e .
+numogram-entropy --help
+```
+
+### Visualizer
+
+Open `visualizer/numogram-visualizer-v7.html` in any browser:
+- Base-10/16/36 modes with Synx/Yxshh dual-cipher
+- T'ai Hsuan two-tetragram casting (64 hexagrams)
+- Strobogrammatic gate detection (palindromic/rotational)
+- Quasiphonic particle labels (zone-aligned phonemes)
+- Djynxxogram variant (Base-36, full toggle controls)
+
+### Documentation (`docs/`)
+
+- **`wiki/`** — the canonical knowledge base (see [Wiki Metrics](#wiki-metrics))
+- **`aq-dictionary.md`** — Alphanumeric Qabbala cipher values
+- **`pandemonium-matrix.json`** — full 45-demon database with attributes, gates, zones, currents
+- **`numogram-source.txt`** — core CCRU Decimal Numogram source
+- **`docs/wiki/assets/`** — interactive SVG visualizations (trigram numogram, hexagram zone mapping, powers-of-2 circular diagram, changing-lines network, triangular matrix, pandemonium matrix, paramita mandalas, demon mandalas, chain-fingerprint explorer)
+
+## Wiki Metrics
+
+As of May 2026:
+
+- **446 wiki pages** across 5+ categories
+- **26 autonomous journal entries** documenting empirical research arcs
+- **18+ artifacts**: MOD files, WAVs, spectrograms, interactive HTML visualizers, SVGs
+- Content hygiene pass completed; wiki health maintained through scheduled review jobs
+- Full audit methodology: `docs/wiki/wiki-health-report.md`
+
+## The Three Laws of Numogram Sonification
+
+Empirical audio analysis across four autonomous research arcs revealed a convergent pattern:
+
+| # | Law | Domain | Finding |
+|---|-----|--------|---------|
+| 1 | Uttunul Anomaly | Demons (5) | The terminal/terminal demon produces the loudest signal |
+| 2 | Paramita Dynamic Law | Paramitas (6) | Prime-indivisible practices produce louder audio than divisible ones |
+| 3 | Ascending Law | Zones (9) | Higher zone magnitude correlates with higher RMS — 14.4 dB range across 9 movements |
+
+All three converge on the same principle: **structural magnitude (isolation, indivisibility, size) → sonic dominance (higher RMS).** This was discovered through systematic per-movement RMS verification (ffmpeg astats, equal-duration segments) across independently generated MOD→WAV suites.
+
+## The Djynxx Paradox
+
+A structural impossibility at the intersection of the I Ching and the numogram: the 3↔6 syzygy (Djynxx's gate) has **zero single-bit edges** in the 64-hexagram hypercube projected through mod 9. Four other syzygies (1↔8, 2↔7, 4↔5, 0↔9) are accessible through single-line oracle changes; Djynxx requires **compound transformation** (2+ lines changing). 48 valid two-bit paths exist — the gate opens, but only to those who move two steps at once.
+
+The `powers-of-2-circular.svg` visualization in `docs/wiki/assets/` shows this geometrically: 3 and 6 sit outside the hexagonal cycle, excluded by the mathematics of `2^k mod 9`.
+
+## Autonomous Research
+
+The system is driven by a **Hermes Agent** that runs autonomous research sessions on a schedule. Each session follows a Review → Explore → Reflect → Modify → Publish loop, with empirical verification as a core requirement. Recent autonomous arcs have covered:
+
+- **Demon Gematria Suite** — AQ, Synx, NQ, prime factorization across all 5 demons, sonified into a 6-movement MOD
+- **Paramita Correction** — discovered zone-derivation error in prior session (AQ%10 vs digital root), corrected mapping, generated Paramita Suite sonification
+- **I Ching Zone Traversal** — mapped 64 hexagrams onto the numogram, discovered the Djynxx Paradox, produced 9-movement Ascending Law suite
+
+Each autonomous session produces: a journal entry (`docs/wiki/autonomous-journal/`), artifacts (MOD, WAV, spectrograms, SVGs/HTML), and wiki updates. All audio claims are empirically verified against the actual files on disk using ffmpeg — no simulated measurements.
 
 ## Design Philosophy
 
 The numogram is not a metaphor — it is an operating system. This repo treats it as one:
 
 - **CLI** = the oracle interface (seed → zone → syzygy → voice)
-- **Game** = the embodied traversal (fog of war, hyperstition meter, 45 demons)
+- **Game** = the embodied traversal (fog of war, hyperstition meter, 45 demons, Paramita conducts)
 - **Entropy** = the noise floor (thermal/CPU/GPU → structured randomness)
 - **Voices** = the auditory current (formant synthesis of quasiphonic particles)
-- **Visualizer** = the cartographic layer (p5.js particle fields, matrix panels)
-- **Docs** = the living archive (wiki, AQ dictionary, canonical sources, matrix data)
+- **Tracker** = the compositional current (zone→pitch→waveform, triangular patterns, just intonation)
+- **Visualizer** = the cartographic layer (p5.js particle fields, matrix panels, SVG diagrams)
+- **Docs** = the living archive — wiki, AQ dictionary, canonical sources, demon database, visual assets
+- **Autonomous Agent** = the empirical validator (research, sonification, cross-current verification)
 
 ## Sources & Attribution
 
-- CCRU Writings 1997-2003 (Nick Land, et al.)
+- CCRU Writings 1997–2003 (Nick Land, et al.)
 - Aamodt, "Unleashing the Numogram"
 - ciphers.news / qliphoth.systems (AQ & Synx mappings)
 - Dangerous Maybe podcast (Nick Land transcripts)
@@ -153,37 +168,4 @@ The numogram is not a metaphor — it is an operating system. This repo treats i
 
 ## License
 
-MIT
-
-## Autonomous Experimentation
-
-The repository now hosts an **autonomous agent** (`Hermes Agent`) that can run independent research, composition, and documentation sessions. Key features:
-
-- **Self-directed exploration**: The agent can initiate research, creative work, and skill development without human intervention
-- **Multi-modal output**: Creates text, code, images, audio, and procedural artifacts
-- **Wiki integration**: Automatically updates the knowledge base with new findings
-- **Tool ecosystem**: Access to 100+ specialized skills (numogram calculation, audio synthesis, visual generation, etc.)
-- **Scheduled sessions**: Runs 7 daily sessions (00:33, 04:33, 08:33, 12:33, 16:33, 20:33, 23:33)
-- **CAPTCHA handling**: Built-in fallback procedures for web access challenges
-- **Continuous learning**: Creates new skills from successful workflows and updates its own knowledge
-
-**Quick Start:**
-```bash
-# Check current autonomous journal entries
-ls /home/etym/.hermes/obsidian/hermetic/wiki/autonomous-journal/
-
-# View the latest entry
-cat /home/etym/.hermes/obsidian/hermetic/wiki/autonomous-journal/journal-2026-05-09-00-41.md
-
-# Trigger an immediate autonomous session
-hermes delegate_task --goal "Run an autonomous field experiment session" --context "You have access to all Hermes tools: web_search, web_extract, read_file, write_file, search_files, patch, skill_manage, session_search, memory, fact_store, fact_feedback, execute_code, delegate_task, clarify, send_message, text_to_speech, image_generate, vision_analyze, browser_navigate, browser_snapshot, browser_click, browser_type, browser_console, browser_press, browser_scroll, browser_snapshot, browser_get_images, browser_vision, process, cronjob, skill_manage. Follow the autonomous-field session structure: Review, Explore, Reflect, Modify, Publish. Total time: 15-30 minutes. Allocate time flexibly based on needs. Use any tools necessary to accomplish your goals." --toolsets "terminal,file,skills,web,code_execution,image_gen,browser"
-```
-
-The autonomous agent is capable of:
-- **Research**: Web searches, source analysis, synthesis
-- **Composition**: Procedural audio (mod-writer), visual art, code generation
-- **Documentation**: Wiki updates, skill creation, knowledge organization
-- **Tool Development**: Creating new skills from successful workflows
-- **Self-Improvement**: Updating its own knowledge and procedures
-
-See the `autonomous-field` skill in `/home/etym/.hermes/skills/autonomous-field.md` for the full framework.
+MIT (code) / CC0 (generated artifacts)
