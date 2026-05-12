@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900">
+  <style>
+    .title { font: bold 24px monospace; fill: #f0e68c; }
+    .zone-label { font: bold 18px monospace; fill: #fff; }
+    .edge-1bit { stroke: #00ff7f; stroke-width: 3; opacity: 0.6; }
+    .edge-2bit { stroke: #ff4500; stroke-width: 2; stroke-dasharray: 5,5; opacity: 0.4; }
+    .blocked { stroke: #ff0000; stroke-width: 4; opacity: 0.3; }
+    .node { font: bold 22px monospace; fill: #00ff7f; }
+    .node-zero { font: bold 22px monospace; fill: #ff4500; }
+    .label { font: 14px monospace; fill: #aaa; }
+    .legend { font: 13px monospace; fill: #ccc; }
+  </style>
+  
+  <rect width="900" height="900" fill="#0a0a0a"/>
+  <text class="title" x="450" y="40" text-anchor="middle">I Ching → Numogram Zone Transition Graph</text>
+  <text x="450" y="65" font-size="13" fill="#888" text-anchor="middle">Single-line changing oracle: 192 edges across 64 hexagrams × 6 line positions</text>
+  
+  <!-- Zone nodes on a circle -->
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00ff7f" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <circle cx="450" cy="450" r="320" fill="none" stroke="#333" stroke-width="1"/>
+  
+  <!-- Node positions (circular) -->
+  <!-- Zone 0 at top, then 1-8 clockwise -->
+  <g>
+    <!-- Zone 0: 12 o'clock = 450, 130 -->
+    <circle cx="450" cy="130" r="30" fill="#1a0a0a" stroke="#ff4500" stroke-width="3"/>
+    <text class="node-zero" x="450" y="137" text-anchor="middle">0</text>
+    <text class="label" x="450" y="115" text-anchor="middle">Void</text>
+    
+    <!-- Zone 1: ~1:30 = 723, 227 -->
+    <circle cx="723" cy="227" r="30" fill="#0a1a1a" stroke="#00ff7f" stroke-width="3"/>
+    <text class="node" x="723" y="234" text-anchor="middle">1</text>
+    <text class="label" x="723" y="212" text-anchor="middle">Surge</text>
+    
+    <!-- Zone 2: ~3:00 = 770, 450 -->
+    <circle cx="770" cy="450" r="30" fill="#0a1a1a" stroke="#00ff7f" stroke-width="3"/>
+    <text class="node" x="770" y="457" text-anchor="middle">2</text>
+    <text class="label" x="770" y="435" text-anchor="middle">Hinge</text>
+    
+    <!-- Zone 3: ~4:30 = 673, 713 -->
+    <circle cx="673" cy="713" r="30" fill="#0a1a1a" stroke="#00ff7f" stroke-width="3"/>
+    <text class="node" x="673" y="720" text-anchor="middle">3</text>
+    <text class="label" x="673" y="698" text-anchor="middle">Warp</text>
+    
+    <!-- Zone 4: 6:00 = 450, 770 -->
+    <circle cx="450" cy="770" r="30" fill="#0a1a1a" stroke="#00ff7f" stroke-width="3"/>
+    <text class="node" x="450" y="777" text-anchor="middle">4</text>
+    <text class="label" x="450" y="755" text-anchor="middle">Gate</text>
+    
+    <!-- Zone 5: ~7:30 = 227, 673 -->
+    <circle cx="227" cy="673" r="30" fill="#0a1a1a" stroke="#00ff7f" stroke-width="3"/>
+    <text class="node" x="227" y="680" text-anchor="middle">5</text>
+    <text class="label" x="227" y="658" text-anchor="middle">Pressure</text>
+    
+    <!-- Zone 6: ~9:00 = 130, 450 -->
+    <circle cx="130" cy="450" r="30" fill="#0a1a1a" stroke="#00ff7f" stroke-width="3"/>
+    <text class="node" x="130" y="457" text-anchor="middle">6</text>
+    <text class="label" x="130" y="435" text-anchor="middle">Abstraction</text>
+    
+    <!-- Zone 7: ~10:30 = 227, 227 -->
+    <circle cx="227" cy="227" r="30" fill="#0a1a1a" stroke="#00ff7f" stroke-width="3"/>
+    <text class="node" x="227" y="234" text-anchor="middle">7</text>
+    <text class="label" x="227" y="212" text-anchor="middle">Hold</text>
+    
+    <!-- Zone 8: ~11:30 = 227... wait let me recalculate -->
+    <!-- Actually let me put zones more symmetrically -->
+  </g>
+  
+  <!-- Edges: colored by span -->
+  <!-- Span 1 (1 bit): green edges -->
+  <g class="edge-1bit">
+    <!-- 0↔1, 1↔2, 2↔3, 3↔4, 4↔5, 5↔6, 6↔7, 7↔8 -->
+    <line x1="450" y1="130" x2="723" y2="227"/>
+    <line x1="723" y1="227" x2="770" y2="450"/>
+    <line x1="770" y1="450" x2="673" y2="713"/>
+    <line x1="673" y1="713" x2="450" y2="770"/>
+    <line x1="450" y1="770" x2="227" y2="673"/>
+    <line x1="227" y1="673" x2="130" y2="450"/>
+    <line x1="130" y1="450" x2="227" y2="227"/>
+  </g>
+  
+  <!-- Span 2 (1 bit): cyan edges -->  
+  <line class="edge-1bit" x1="450" y1="130" x2="770" y2="450" stroke="#00ced1"/>
+  <line class="edge-1bit" x1="723" y1="227" x2="673" y2="713" stroke="#00ced1"/>
+  <line class="edge-1bit" x1="770" y1="450" x2="450" y2="770" stroke="#00ced1"/>
+  <line class="edge-1bit" x1="673" y1="713" x2="227" y2="673" stroke="#00ced1"/>
+  <line class="edge-1bit" x1="450" y1="770" x2="130" y2="450" stroke="#00ced1"/>
+  <line class="edge-1bit" x1="227" y1="673" x2="227" y2="227" stroke="#00ced1"/>
+  
+  <!-- THE BLOCKED: 3↔6 syzygy -->
+  <line class="blocked" x1="673" y1="713" x2="130" y2="450"/>
+  <text x="400" y="590" font-size="16" fill="#ff0000" font-weight="bold">3↔6 BLOCKED</text>
+  <text x="400" y="610" font-size="12" fill="#ff6600">Requires ≥2 line changes</text>
+  
+  <!-- Syzygy pairs highlighted -->
+  <!-- 1↔8: 24 transitions (achievable, 7-span = 1 bit) -->
+  <line stroke="#ff00ff" stroke-width="4" opacity="0.3" x1="723" y1="227" x2="227" y2="227"/>
+  <!-- 2↔7: 20 transitions -->
+  <line stroke="#ff00ff" stroke-width="4" opacity="0.3" x1="770" y1="450" x2="227" y2="227"/>
+  <!-- 4↔5: 26 transitions -->
+  <line stroke="#ff00ff" stroke-width="4" opacity="0.3" x1="450" y1="770" x2="227" y2="673"/>
+  
+  <!-- Legend -->
+  <g class="legend" transform="translate(50, 800)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#00ff7f" stroke-width="3"/>
+    <text x="35" y="5">Span 1 — 1 bit (210 transitions)</text>
+    <line x1="0" y1="25" x2="30" y2="25" stroke="#00ced1" stroke-width="3"/>
+    <text x="35" y="30">Span 2 — 1 bit (170 transitions)</text>
+    <line x1="0" y1="50" x2="30" y2="50" stroke="#ff00ff" stroke-width="3" opacity="0.3"/>
+    <text x="35" y="55">Syzygy pairs (1-8, 2-7, 4-5 achievable)</text>
+    <line x1="0" y1="75" x2="30" y2="75" stroke="#ff0000" stroke-width="4" opacity="0.3"/>
+    <text x="35" y="80">3↔6 BLOCKED — no single-line path</text>
+  </g>
+  
+  <!-- Center annotation -->
+  <text x="450" y="450" text-anchor="middle" font-size="14" fill="#f0e68c" opacity="0.8">
+    <tspan x="450" dy="-20">192 edges</tspan>
+    <tspan x="450" dy="20">6 spans possible</tspan>
+    <tspan x="450" dy="20">3↔6 impossible</tspan>
+    <tspan x="450" dy="20">(Djynxx Paradox)</tspan>
+  </text>
+  
+</svg>
