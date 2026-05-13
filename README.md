@@ -11,9 +11,9 @@ A monorepo for the Decimal Labyrinth: the CCRU numogram as code, game, oracle, a
 | `entropy/` | Hardware entropy plugin (pip-installable) |
 | `voices/` | Formant synthesis generator (zone utterances) |
 | `visualizer/` | Browser-based p5.js oracle (v6/v7) |
-| `mod_writer/` | ProTracker `.mod` composer with numogram-native motifs |
+| `mod_writer/` | ProTracker `.mod` composer with numogram-native motifs, classifier, VAE pipeline |
 | `docs/wiki/` | Knowledge base — wiki pages, demon database, source texts, visual assets |
-| `scripts/` | Utility scripts (render, export, sync) |
+| `scripts/` | Text recombination pipeline: xeno-jump, cut-up, seed-transforms, oracle-seed + enriched AQ corpus (89K entries) |
 
 ### Oracle
 

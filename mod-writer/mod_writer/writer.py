@@ -162,7 +162,7 @@ class ModWriter:
 
 # ── Helpers for generating waveforms ──────────────────────────────────────
 def square_wave(frequency: float = 110.0, duration: float = 0.1,
-                sample_rate: int = 8000, amplitude: int = 80) -> bytes:
+                sample_rate: int = 44100, amplitude: int = 80) -> bytes:
     """Generate 8-bit unsigned square wave samples (simple)."""
     n = int(sample_rate * duration)
     period = sample_rate / frequency
@@ -174,7 +174,7 @@ def square_wave(frequency: float = 110.0, duration: float = 0.1,
     return bytes(samples)
 
 def triangle_wave(frequency: float = 110.0, duration: float = 0.1,
-                  sample_rate: int = 8000, amplitude: int = 80) -> bytes:
+                  sample_rate: int = 44100, amplitude: int = 80) -> bytes:
     n = int(sample_rate * duration)
     period = sample_rate / frequency
     samples = bytearray()
@@ -188,7 +188,7 @@ def triangle_wave(frequency: float = 110.0, duration: float = 0.1,
         samples.append(val)
     return bytes(samples)
 
-def noise_wave(duration: float = 0.1, sample_rate: int = 8000) -> bytes:
+def noise_wave(duration: float = 0.1, sample_rate: int = 44100) -> bytes:
     import random
     n = int(sample_rate * duration)
     return bytes(random.getrandbits(8) for _ in range(n))

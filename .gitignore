@@ -3,12 +3,15 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
-.venv/
-venv/
-env/
 *.egg-info/
 dist/
 build/
+*.pyc
+
+# Venv
+.venv/
+venv/
+env/
 
 # Personal / runtime data
 cult.json
@@ -31,6 +34,21 @@ demos/*.avi
 # Workspace artifacts
 session_*/
 testing/
+tmp/
+deleted-files-archive/
+
+# Runtime / internal
+__pycache__/
+.pytest_cache/
+*.pid
+*.joblib
+*.npz
+model.joblib
+zone_clf.joblib
+zone_scaler.joblib
+scaler.joblib
+*.bkp
+*.bak
 
 # OS
 .DS_Store
