@@ -1,129 +1,143 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900">
   <style>
-    .title { font: bold 24px monospace; fill: #f0e68c; }
-    .zone-label { font: bold 18px monospace; fill: #fff; }
-    .edge-1bit { stroke: #00ff7f; stroke-width: 3; opacity: 0.6; }
-    .edge-2bit { stroke: #ff4500; stroke-width: 2; stroke-dasharray: 5,5; opacity: 0.4; }
-    .blocked { stroke: #ff0000; stroke-width: 4; opacity: 0.3; }
-    .node { font: bold 22px monospace; fill: #00ff7f; }
-    .node-zero { font: bold 22px monospace; fill: #ff4500; }
-    .label { font: 14px monospace; fill: #aaa; }
-    .legend { font: 13px monospace; fill: #ccc; }
+    .title { font: bold 22px monospace; fill: #f0e68c; }
+    .subtitle { font: 12px monospace; fill: #888; }
+    .zone-label { font: 14px monospace; fill: #aaa; }
+    .zone-num { font: bold 28px monospace; fill: #00ff7f; text-anchor: middle; dominant-baseline: central; }
+    .zone-num-zero { font: bold 28px monospace; fill: #ff4500; text-anchor: middle; dominant-baseline: central; }
+    .center-text { font: 13px monospace; fill: #f0e68c; opacity: 0.9; text-anchor: middle; }
+    .annotation { font: 11px monospace; fill: #ff6600; text-anchor: middle; }
+    .legend { font: 12px monospace; fill: #ccc; }
   </style>
-  
   <rect width="900" height="900" fill="#0a0a0a"/>
-  <text class="title" x="450" y="40" text-anchor="middle">I Ching → Numogram Zone Transition Graph</text>
-  <text x="450" y="65" font-size="13" fill="#888" text-anchor="middle">Single-line changing oracle: 192 edges across 64 hexagrams × 6 line positions</text>
-  
-  <!-- Zone nodes on a circle -->
-  <defs>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#00ff7f" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  
-  <circle cx="450" cy="450" r="320" fill="none" stroke="#333" stroke-width="1"/>
-  
-  <!-- Node positions (circular) -->
-  <!-- Zone 0 at top, then 1-8 clockwise -->
-  <g>
-    <!-- Zone 0: 12 o'clock = 450, 130 -->
-    <circle cx="450" cy="130" r="30" fill="#1a0a0a" stroke="#ff4500" stroke-width="3"/>
-    <text class="node-zero" x="450" y="137" text-anchor="middle">0</text>
-    <text class="label" x="450" y="115" text-anchor="middle">Void</text>
-    
-    <!-- Zone 1: ~1:30 = 723, 227 -->
-    <circle cx="723" cy="227" r="30" fill="#0a1a1a" stroke="#00ff7f" stroke-width="3"/>
-    <text class="node" x="723" y="234" text-anchor="middle">1</text>
-    <text class="label" x="723" y="212" text-anchor="middle">Surge</text>
-    
-    <!-- Zone 2: ~3:00 = 770, 450 -->
-    <circle cx="770" cy="450" r="30" fill="#0a1a1a" stroke="#00ff7f" stroke-width="3"/>
-    <text class="node" x="770" y="457" text-anchor="middle">2</text>
-    <text class="label" x="770" y="435" text-anchor="middle">Hinge</text>
-    
-    <!-- Zone 3: ~4:30 = 673, 713 -->
-    <circle cx="673" cy="713" r="30" fill="#0a1a1a" stroke="#00ff7f" stroke-width="3"/>
-    <text class="node" x="673" y="720" text-anchor="middle">3</text>
-    <text class="label" x="673" y="698" text-anchor="middle">Warp</text>
-    
-    <!-- Zone 4: 6:00 = 450, 770 -->
-    <circle cx="450" cy="770" r="30" fill="#0a1a1a" stroke="#00ff7f" stroke-width="3"/>
-    <text class="node" x="450" y="777" text-anchor="middle">4</text>
-    <text class="label" x="450" y="755" text-anchor="middle">Gate</text>
-    
-    <!-- Zone 5: ~7:30 = 227, 673 -->
-    <circle cx="227" cy="673" r="30" fill="#0a1a1a" stroke="#00ff7f" stroke-width="3"/>
-    <text class="node" x="227" y="680" text-anchor="middle">5</text>
-    <text class="label" x="227" y="658" text-anchor="middle">Pressure</text>
-    
-    <!-- Zone 6: ~9:00 = 130, 450 -->
-    <circle cx="130" cy="450" r="30" fill="#0a1a1a" stroke="#00ff7f" stroke-width="3"/>
-    <text class="node" x="130" y="457" text-anchor="middle">6</text>
-    <text class="label" x="130" y="435" text-anchor="middle">Abstraction</text>
-    
-    <!-- Zone 7: ~10:30 = 227, 227 -->
-    <circle cx="227" cy="227" r="30" fill="#0a1a1a" stroke="#00ff7f" stroke-width="3"/>
-    <text class="node" x="227" y="234" text-anchor="middle">7</text>
-    <text class="label" x="227" y="212" text-anchor="middle">Hold</text>
-    
-    <!-- Zone 8: ~11:30 = 227... wait let me recalculate -->
-    <!-- Actually let me put zones more symmetrically -->
-  </g>
-  
-  <!-- Edges: colored by span -->
-  <!-- Span 1 (1 bit): green edges -->
-  <g class="edge-1bit">
-    <!-- 0↔1, 1↔2, 2↔3, 3↔4, 4↔5, 5↔6, 6↔7, 7↔8 -->
-    <line x1="450" y1="130" x2="723" y2="227"/>
-    <line x1="723" y1="227" x2="770" y2="450"/>
-    <line x1="770" y1="450" x2="673" y2="713"/>
-    <line x1="673" y1="713" x2="450" y2="770"/>
-    <line x1="450" y1="770" x2="227" y2="673"/>
-    <line x1="227" y1="673" x2="130" y2="450"/>
-    <line x1="130" y1="450" x2="227" y2="227"/>
-  </g>
-  
-  <!-- Span 2 (1 bit): cyan edges -->  
-  <line class="edge-1bit" x1="450" y1="130" x2="770" y2="450" stroke="#00ced1"/>
-  <line class="edge-1bit" x1="723" y1="227" x2="673" y2="713" stroke="#00ced1"/>
-  <line class="edge-1bit" x1="770" y1="450" x2="450" y2="770" stroke="#00ced1"/>
-  <line class="edge-1bit" x1="673" y1="713" x2="227" y2="673" stroke="#00ced1"/>
-  <line class="edge-1bit" x1="450" y1="770" x2="130" y2="450" stroke="#00ced1"/>
-  <line class="edge-1bit" x1="227" y1="673" x2="227" y2="227" stroke="#00ced1"/>
-  
-  <!-- THE BLOCKED: 3↔6 syzygy -->
-  <line class="blocked" x1="673" y1="713" x2="130" y2="450"/>
-  <text x="400" y="590" font-size="16" fill="#ff0000" font-weight="bold">3↔6 BLOCKED</text>
-  <text x="400" y="610" font-size="12" fill="#ff6600">Requires ≥2 line changes</text>
-  
-  <!-- Syzygy pairs highlighted -->
-  <!-- 1↔8: 24 transitions (achievable, 7-span = 1 bit) -->
-  <line stroke="#ff00ff" stroke-width="4" opacity="0.3" x1="723" y1="227" x2="227" y2="227"/>
-  <!-- 2↔7: 20 transitions -->
-  <line stroke="#ff00ff" stroke-width="4" opacity="0.3" x1="770" y1="450" x2="227" y2="227"/>
-  <!-- 4↔5: 26 transitions -->
-  <line stroke="#ff00ff" stroke-width="4" opacity="0.3" x1="450" y1="770" x2="227" y2="673"/>
-  
-  <!-- Legend -->
-  <g class="legend" transform="translate(50, 800)">
-    <line x1="0" y1="0" x2="30" y2="0" stroke="#00ff7f" stroke-width="3"/>
-    <text x="35" y="5">Span 1 — 1 bit (210 transitions)</text>
-    <line x1="0" y1="25" x2="30" y2="25" stroke="#00ced1" stroke-width="3"/>
-    <text x="35" y="30">Span 2 — 1 bit (170 transitions)</text>
-    <line x1="0" y1="50" x2="30" y2="50" stroke="#ff00ff" stroke-width="3" opacity="0.3"/>
-    <text x="35" y="55">Syzygy pairs (1-8, 2-7, 4-5 achievable)</text>
-    <line x1="0" y1="75" x2="30" y2="75" stroke="#ff0000" stroke-width="4" opacity="0.3"/>
-    <text x="35" y="80">3↔6 BLOCKED — no single-line path</text>
-  </g>
-  
-  <!-- Center annotation -->
-  <text x="450" y="450" text-anchor="middle" font-size="14" fill="#f0e68c" opacity="0.8">
-    <tspan x="450" dy="-20">192 edges</tspan>
-    <tspan x="450" dy="20">6 spans possible</tspan>
-    <tspan x="450" dy="20">3↔6 impossible</tspan>
-    <tspan x="450" dy="20">(Djynxx Paradox)</tspan>
+  <text class="title" x="450.0" y="35" text-anchor="middle">I Ching → Numogram Zone Transition Graph</text>
+  <text class="subtitle" x="450.0" y="55" text-anchor="middle">64 hexagrams × 6 line positions = 192 edges spanning the 10 zones</text>
+  <circle cx="450" cy="470" r="320" fill="none" stroke="#222" stroke-width="1"/>
+  <path d="M 450 150 Q 535 209 638 211" stroke="#4ecdc4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 638 211 Q 672 309 754 371" stroke="#4ecdc4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 754 371 Q 724 470 754 569" stroke="#4ecdc4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 754 569 Q 672 631 638 729" stroke="#4ecdc4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 638 729 Q 535 731 450 790" stroke="#4ecdc4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 450 790 Q 365 731 262 729" stroke="#4ecdc4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 262 729 Q 228 631 146 569" stroke="#4ecdc4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 146 569 Q 176 470 146 371" stroke="#4ecdc4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 146 371 Q 228 309 262 211" stroke="#4ecdc4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 262 211 Q 365 209 450 150" stroke="#4ecdc4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 450 150 Q 585 285 754 371" stroke="#45b7d1" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 638 211 Q 668 399 754 569" stroke="#45b7d1" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 754 371 Q 668 541 638 729" stroke="#45b7d1" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 754 569 Q 585 655 450 790" stroke="#45b7d1" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 638 729 Q 450 699 262 729" stroke="#45b7d1" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 450 790 Q 315 655 146 569" stroke="#45b7d1" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 262 729 Q 232 541 146 371" stroke="#45b7d1" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 146 569 Q 232 399 262 211" stroke="#45b7d1" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 146 371 Q 315 285 450 150" stroke="#45b7d1" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 262 211 Q 450 241 638 211" stroke="#45b7d1" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 450 150 Q 516 449 638 729" stroke="#96ceb4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 638 211 Q 516 491 450 790" stroke="#96ceb4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 754 371 Q 490 526 262 729" stroke="#96ceb4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 754 569 Q 450 539 146 569" stroke="#96ceb4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 638 729 Q 410 526 146 371" stroke="#96ceb4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 450 790 Q 384 491 262 211" stroke="#96ceb4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 262 729 Q 384 449 450 150" stroke="#96ceb4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 146 569 Q 410 414 638 211" stroke="#96ceb4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 146 371 Q 450 401 754 371" stroke="#96ceb4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 262 211 Q 490 414 754 569" stroke="#96ceb4" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 450 150 Q 420 470 450 790" stroke="#ffeaa7" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 638 211 Q 426 452 262 729" stroke="#ffeaa7" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 754 371 Q 441 441 146 569" stroke="#ffeaa7" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 754 569 Q 459 441 146 371" stroke="#ffeaa7" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 638 729 Q 474 452 262 211" stroke="#ffeaa7" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 450 790 Q 480 470 450 150" stroke="#ffeaa7" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 262 729 Q 474 488 638 211" stroke="#ffeaa7" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 146 569 Q 459 499 754 371" stroke="#ffeaa7" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 146 371 Q 441 499 754 569" stroke="#ffeaa7" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 262 211 Q 426 488 638 729" stroke="#ffeaa7" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 450 150 Q 274 342 146 569" stroke="#fd79a8" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 638 211 Q 383 263 146 371" stroke="#fd79a8" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 754 371 Q 517 263 262 211" stroke="#fd79a8" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 754 569 Q 626 342 450 150" stroke="#fd79a8" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 638 729 Q 668 470 638 211" stroke="#fd79a8" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 450 790 Q 626 598 754 371" stroke="#fd79a8" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 262 729 Q 517 677 754 569" stroke="#fd79a8" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 146 569 Q 383 677 638 729" stroke="#fd79a8" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 146 371 Q 274 598 450 790" stroke="#fd79a8" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 262 211 Q 232 470 262 729" stroke="#fd79a8" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 450 150 Q 280 236 146 371" stroke="#e17055" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 638 211 Q 450 181 262 211" stroke="#e17055" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 754 371 Q 620 236 450 150" stroke="#e17055" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 754 569 Q 725 381 638 211" stroke="#e17055" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 638 729 Q 725 559 754 371" stroke="#e17055" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 450 790 Q 620 704 754 569" stroke="#e17055" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 262 729 Q 450 759 638 729" stroke="#e17055" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 146 569 Q 280 704 450 790" stroke="#e17055" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 146 371 Q 175 559 262 729" stroke="#e17055" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M 262 211 Q 175 381 146 569" stroke="#e17055" stroke-width="1" fill="none" opacity="0.2"/>
+  <line x1="754" y1="569" x2="262" y2="729"
+    stroke="#ff0000" stroke-width="3" stroke-dasharray="8,4" opacity="0.5"/>
+  <text class="annotation" x="458" y="679">3↔6</text>
+  <text font-size="10" fill="#ff4444" text-anchor="middle" x="458" y="694">BLOCKED</text>
+  <text font-size="9" fill="#888" text-anchor="middle" x="458" y="706">(Fu Xi only)</text>
+  <line x1="638" y1="211" x2="146" y2="371"
+    stroke="#00ff7f" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.15"/>
+  <line x1="754" y1="371" x2="146" y2="569"
+    stroke="#00ff7f" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.15"/>
+  <line x1="638" y1="729" x2="450" y2="790"
+    stroke="#00ff7f" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.15"/>
+  <line x1="754" y1="569" x2="262" y2="729"
+    stroke="#00ff7f" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.15"/>
+  <line x1="450" y1="150" x2="262" y2="211"
+    stroke="#00ff7f" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.15"/>
+  <circle cx="450" cy="150" r="28" fill="#1a0a0a" stroke="#ff4500" stroke-width="2.5"/>
+  <text class="zone-num-zero" x="450" y="150">0</text>
+  <text class="zone-label" x="450" y="108" text-anchor="middle">Void</text>
+  <circle cx="638" cy="211" r="28" fill="#0a1a1a" stroke="#00ff7f" stroke-width="2.5"/>
+  <text class="zone-num" x="638" y="211">1</text>
+  <text class="zone-label" x="638" y="169" text-anchor="middle">Surge</text>
+  <circle cx="754" cy="371" r="28" fill="#0a1a1a" stroke="#00ff7f" stroke-width="2.5"/>
+  <text class="zone-num" x="754" y="371">2</text>
+  <text class="zone-label" x="754" y="329" text-anchor="middle">Hinge</text>
+  <circle cx="754" cy="569" r="28" fill="#0a1a1a" stroke="#00ff7f" stroke-width="2.5"/>
+  <text class="zone-num" x="754" y="569">3</text>
+  <text class="zone-label" x="754" y="527" text-anchor="middle">Warp</text>
+  <circle cx="638" cy="729" r="28" fill="#0a1a1a" stroke="#00ff7f" stroke-width="2.5"/>
+  <text class="zone-num" x="638" y="729">4</text>
+  <text class="zone-label" x="638" y="687" text-anchor="middle">Gate</text>
+  <circle cx="450" cy="790" r="28" fill="#0a1a1a" stroke="#00ff7f" stroke-width="2.5"/>
+  <text class="zone-num" x="450" y="790">5</text>
+  <text class="zone-label" x="450" y="748" text-anchor="middle">Pressure</text>
+  <circle cx="262" cy="729" r="28" fill="#0a1a1a" stroke="#00ff7f" stroke-width="2.5"/>
+  <text class="zone-num" x="262" y="729">6</text>
+  <text class="zone-label" x="262" y="687" text-anchor="middle">Abstraction</text>
+  <circle cx="146" cy="569" r="28" fill="#0a1a1a" stroke="#00ff7f" stroke-width="2.5"/>
+  <text class="zone-num" x="146" y="569">7</text>
+  <text class="zone-label" x="146" y="527" text-anchor="middle">Hold</text>
+  <circle cx="146" cy="371" r="28" fill="#0a1a1a" stroke="#00ff7f" stroke-width="2.5"/>
+  <text class="zone-num" x="146" y="371">8</text>
+  <text class="zone-label" x="146" y="329" text-anchor="middle">Surge-Plex</text>
+  <circle cx="262" cy="211" r="28" fill="#0a1a1a" stroke="#00ff7f" stroke-width="2.5"/>
+  <text class="zone-num" x="262" y="211">9</text>
+  <text class="zone-label" x="262" y="169" text-anchor="middle">Plex</text>
+  <text class="center-text" x="450" y="430">192 edges total</text>
+  <text class="center-text" x="450" y="450">6 spans via powers of 2 mod 9</text>
+  <text class="center-text" x="450" y="470">Spans 0, 3, 6 missing</text>
+  <text class="center-text" x="450" y="490">Fu Xi: 3↔6 BLOCKED (Djynxx)</text>
+  <text class="center-text" x="450" y="510">King Wen: ALL syzygies reachable</text>
+  <text class="legend" x="50" y="770">Legend (King Wen edge counts):
+  <line x1="50" y1="780" x2="75" y2="780" stroke="#4ecdc4" stroke-width="2"/>
+  <text class="legend" x="80" y="784">Span 1: 210 edges (1-bit)
+  <line x1="50" y1="798" x2="75" y2="798" stroke="#45b7d1" stroke-width="2"/>
+  <text class="legend" x="80" y="802">Span 2: 170 edges (1-bit)
+  <line x1="50" y1="834" x2="75" y2="834" stroke="#96ceb4" stroke-width="2"/>
+  <text class="legend" x="80" y="838">Span 4: 102 edges (1-bit)
+  <line x1="50" y1="852" x2="75" y2="852" stroke="#ffeaa7" stroke-width="2"/>
+  <text class="legend" x="80" y="856">Span 5: 82 edges (1-bit)
+  <line x1="50" y1="888" x2="75" y2="888" stroke="#fd79a8" stroke-width="2"/>
+  <text class="legend" x="80" y="892">Span 7: 50 edges (1-bit)
+  <line x1="50" y1="906" x2="75" y2="906" stroke="#e17055" stroke-width="2"/>
+  <text class="legend" x="80" y="910">Span 8: 28 edges (1-bit)
+  <line x1="50" y1="888" x2="75" y2="888" stroke="#ff0000" stroke-width="2" stroke-dasharray="4,2"/>
+  <text class="legend" x="80" y="892">Span 3,6: BLOCKED (Fu Xi)</text>
+  <text class="legend" x="50" y="910">— syzygy pairs (green dashed)</text>
   </text>
-  
 </svg>

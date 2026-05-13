@@ -1,102 +1,55 @@
 ---
-title: "Hexagram → Demon: The Complete Casting Pipeline"
-created: 2026-04-20
-tags: ["i-ching", "casting", "demon", "entropy", "hexagram", "numogram", "oracle", "pandemonium"]
+title: "Hexagram → Demon Mapping"
+created: 2026-05-13
+last_updated: 2026-05-13
+status: stub
+tags: ["i-ching", "hexagram", "demon", "numogram", "casting", "pandemonium"]
+related:
+  - [[hexagram-zone-mapping]]
+  - [[i-ching-connections]]
+  - [[iching-numogram-casting]]
+  - [[pandemonium]]
 ---
 
+# Hexagram → Demon Mapping
 
-# Hexagram → Demon: The Complete Casting Pipeline
+> **STUB.** Pipeline for mapping single or two-hexagram I Ching readings to the 45-demon Pandemonium Matrix.
 
-## The Mapping
+## Single Hexagram → 5 Carrier Demons
 
-Every hexagram cast from entropy maps to a numogram zone via digital root. Every zone has a syzygy partner. The syzygy pair maps to a specific demon in the Pandemonium Matrix. Therefore: every hexagram calls a demon.
-
-**Single hexagram → 5 syzygetic carriers:**
-
-Each hexagram maps to its zone's syzygy demon:
-
-| Zone | Syzygy | Demon | Mesh |
-|------|--------|-------|------|
-| 0 | 0::9 | Uttunul | 36 |
-| 1, 8 | 1::8 | Murrumur | 29 |
-| 2, 7 | 2::7 | Oddubb | 23 |
-| 3, 6 | 3::6 | Djynxx | 18 |
-| 4, 5 | 4::5 | Katak | 14 |
-
-Distribution: Katak, Djynxx, Oddubb, Murrumur each receive 14 hexagrams (7 per zone × 2 zones). Uttunul receives 8 (Zone 0 has 1 hex, Zone 9 has 7).
-
-**Two hexagrams → ALL 45 demons:**
-
-A traditional I Ching reading produces two hexagrams (the reading and the transformed). Each maps to a zone. The zone pair (A, B) looks up a demon via net-span A::B in the Pandemonium Matrix.
-
-- 64 × 64 = 4,096 possible two-hexagram castings
-- ALL 45 demons are reachable
-- The I Ching is a complete oracle for the full Pandemonium
-
-## The Casting Pipeline
+A single hexagram maps to a zone, which maps to its syzygy carrier:
 
 ```
-Hardware entropy (/dev/urandom)
-  ↓
-6 bytes (thermal, CPU, GPU sensors)
-  ↓
-byte % 4 → line value (0→6, 1→7, 2→8, 3→9)
-  ↓
-6 lines → Hexagram A (reading)
-  ↓
-changing lines → Hexagram B (transformed)
-  ↓
-Zone A = digital_root(A-1)
-Zone B = digital_root(B-1)
-  ↓
-Zone pair (A, B)
-  ↓
-Net-span lookup in Pandemonium Matrix
-  ↓
-Demon called (one of 45)
+Hexagram → zone → syzygy → carrier demon
 ```
 
-## Key Hexagrams → Demons
+| Carrier | Syzygy | Hexagrams assigned (DR method) |
+|---------|--------|-------------------------------|
+| Murrumur | 1↔8 | Zones 1 and 8 hexagrams |
+| Oddubb | 2↔7 | Zones 2 and 7 hexagrams |
+| Djynxx | 3↔6 | Zones 3 and 6 hexagrams |
+| Katak | 4↔5 | Zones 4 and 5 hexagrams |
+| Uttunul | 0↔9 | Zone 9 hexagrams only (Zone 0 has none via DR) |
 
-| Hex | Name | Zone | Demon | Character |
-|-----|------|------|-------|-----------|
-| #1 | Qian (Creative) | 0 | Uttunul (36) | The void calls the plex carrier |
-| #2 | Kun (Receptive) | 1 | Murrumur (29) | First yin calls the deep ones |
-| #23 | Bo (Splitting Apart) | 4 | Katak (14) | Decay calls the desolator |
-| #24 | Fu (Return) | 5 | Katak (14) | The shock calls the sink |
-| #51 | Zhen (Thunder) | 5 | Katak (14) | Thunder calls the desolator |
-| #52 | Gen (Mountain) | 6 | Djynxx (18) | Stillness calls the jinn |
-| #63 | Ji Ji (After Completion) | 8 | Murrumur (29) | Balance calls the deep ones |
-| #64 | Wei Ji (Before Completion) | 9 | Uttunul (36) | Threshold calls the plex carrier |
+Distribution: 14 hexagrams each for Katak, Djynxx, Oddubb, Murrumur. 7 for Uttunul (under DR method, Zone 0 is empty).
 
-## The Number Patterns
+## Two Hexagrams → All 45 Demons
 
-The user observed: 64 → 10 and 45 → 9.
+Traditional casting (reading + transformed hexagram) produces 64×64 = 4,096 possible readings. When mapped via the Pandemonium Matrix net-span lookup, **ALL 45 demons are reachable** from two-hexagram castings.
 
-- **64 hexagrams → 10 zones**: The binary system (2⁶) collapses into the decimal system (10) via digital root. Six bits become ten zones.
-- **45 demons → 9**: C(10,2) = 45. The syzygy target is always 9. The Pandemonium is organized around the sum that equals 9. Every demon is a distance from 9.
-- **64 → 45**: 64 hexagrams minus the 5 syzygetic carriers that appear in single-hexagram casting = 59 remaining. But 45 is the total demon count, not the remainder. The relationship is structural: 64 is the binary surface, 45 is the decimal connective tissue.
-- **6 → 10 → 45 → 9 → 5**: Six lines → ten zones → forty-five demons → nine (the syzygy target) → five carriers. The pipeline descends from the binary through the decimal to the demonic.
+The net-span between the two hexagram zones determines the demon. Non-syzygy pairs walk **unmediated paths** — no carrier, traversed alone. See [[i-ching-connections#non-syzygy-paths]].
 
-## Tools
+## Unmediated Paths
 
-```bash
-# Cast a single hexagram from hardware entropy
-python3 ~/.hermes/skills/numogram-oracle/oracle.py --iching
+~69% of possible zone pairs are unmediated (no named carrier). These include:
+- Lateral steps (net-span 1): adjacent zones, subtle shifts
+- Wide gaps (net-span 2-4): significant but unnamed transitions
 
-# Batch cast with zone distribution
-~/numogram-entropy/.venv/bin/numogram-entropy --iching
+The querent walks these paths without a demon escort. See [[i-ching-connections]] for divination interpretation.
 
-# Map hexagram to demon
-python3 ~/.hermes/skills/numogram-oracle/oracle.py --iching --seed $(od -An -tu4 -N4 /dev/urandom | tr -d ' ')
-```
+## See Also
 
-## Related
-
-- [[hexagram-zone-mapping]] — Complete 64 hexagram → 10 zone mapping
-- [[pandemonium-matrix]] — 45-demon reference with full enumeration
-- [[i-ching-connections]] — Powers of 2, twin serpents, entropy casting
-- [[wu-xing-numogram]] — Five elements as five syzygies
-- [[subdecadence]] — Syzygy pairing game (sum to 9)
-- [[decadence]] — Decadence pairing game (sum to 10)
-- [[c-ten-fortyfive-fiveness]] — C(10)=45, pentagram, self-decadence
+- [[hexagram-zone-mapping]] — Full 64-hexagram reference table
+- [[iching-numogram-casting]] — Complete casting pipeline skill
+- [[pandemonium]] — 45-demon matrix reference
+- [[tai-hsuan-ching-demons]] — Tetragram-to-demon pipeline (ternary system)

@@ -17,6 +17,21 @@ ZONE_TO_OCTAVE = {
     6: 5, 7: 5, 8: 5, 9: 5   # 9 = A5
 }
 
+# Stacked pentatonic tessitura — multi-octave distribution weights per zone.
+# Each entry: [weight_oct4, weight_oct5, weight_oct6] — probabilities for lo/mid/hi register.
+# Sums to 1.0. Z9 (Plex) balances across all three octaves. Z4 (Gate) favours low.
+ZONE_TESSITURA = {
+    1: [0.50, 0.35, 0.15],   # Surge — warm, grounded
+    2: [0.25, 0.50, 0.25],   # Separation — midrange suspension
+    3: [0.15, 0.35, 0.50],   # Release — bright, ascending
+    4: [0.60, 0.30, 0.10],   # Gate — deep, grounded
+    5: [0.30, 0.40, 0.30],   # Pressure — balanced
+    6: [0.10, 0.30, 0.60],   # Abstraction — highest register, static shimmer
+    7: [0.20, 0.30, 0.50],   # Blood — rising, sighing
+    8: [0.15, 0.25, 0.60],   # Multiplicity — bright ceiling shimmer
+    9: [0.40, 0.40, 0.20],   # Plex — balanced, full-spectrum
+}
+
 # Gate (0-36) → effect category
 # 0-9:   arpeggio pattern (0=off, 1=up, 2=down, 3=random, 4=chord)
 # 10-19: pitch slide speed  (10=slow, 19=fast)
@@ -54,13 +69,33 @@ def effect_from_gate(gate: int):
     mapping = GATE_TO_EFFECT.get(gate, ('NONE', 0))
     return mapping
 
-def note_and_octave_from_zone(zone: int) -> Tuple[str, int]:
-    """Return (note_name, octave) for zone (0-9). Zone 0 returns ('REST', 0)."""
+def note_and_octave_from_zone(zone: int, stacked: bool = False) -> Tuple[str, int]:
+    """Return (note_name, octave) for zone (0-9).
+    
+    If stacked=True, samples octave from zone-specific tessitura weights.
+    Zone 0 returns ('REST', 0) in both modes.
+    """
     if zone == 0:
         return ('REST', 0)
     note = ZONE_TO_NOTE[zone]
-    octave = ZONE_TO_OCTAVE[zone]
+    if stacked:
+        octave = sample_octave_from_tessitura(zone)
+    else:
+        octave = ZONE_TO_OCTAVE[zone]
     return (note, octave)
+
+
+def sample_octave_from_tessitura(zone: int) -> int:
+    """Sample an octave (4, 5, or 6) from the zone's stacked tessitura distribution.
+    
+    Returns a weighted-random octave based on ZONE_TESSITURA weights.
+    Falls back to ZONE_TO_OCTAVE if tessitura is unavailable.
+    """
+    import random
+    weights = ZONE_TESSITURA.get(zone)
+    if weights is None:
+        return ZONE_TO_OCTAVE.get(zone, 4)
+    return random.choices([4, 5, 6], weights=weights)[0]
 
 
 def mod_effect_from_gate(gate: int) -> Tuple[int, int]:

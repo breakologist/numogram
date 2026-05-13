@@ -39,6 +39,7 @@ class SongBuilder:
         entropy: Optional[float] = None,
         entropy_seed: Optional[int] = None,
         aq_seed: Optional[str] = None,
+        stacked_octaves: bool = False,
         title: Optional[str] = None,
     ) -> None:
         if motif is None and zone is None:
@@ -57,6 +58,7 @@ class SongBuilder:
             'entropy':   entropy,
             'entropy_seed': entropy_seed,
             'aq_seed':   aq_seed,
+            'stacked_octaves': stacked_octaves,
             'title':     title or f"Section {len(self.sections)+1}",
         })
 
@@ -71,7 +73,7 @@ class SongBuilder:
     def _param_hash(self, sec: Dict[str, Any]) -> str:
         sig = { k: sec[k] for k in (
             'motif','zone','gate','current','rows','triangular',
-            'syzygy','syzygy_channels','entropy','entropy_seed','aq_seed'
+            'syzygy','syzygy_channels','entropy','entropy_seed','aq_seed','stacked_octaves'
         ) }
         return hashlib.sha256(json.dumps(sig, sort_keys=True).encode()).hexdigest()[:16]
 
@@ -102,6 +104,7 @@ class SongBuilder:
             if sec['aq_seed']:
                 comp.constrain_gates_by_aq(sec['aq_seed'])
         comp._triangular = sec['triangular']
+        comp._stacked_octaves = sec.get('stacked_octaves', False)
 
     def _merge_samples(self, modw: ModWriter, comp: ModComposer, section_no: int) -> None:
         prefix = f"S{section_no}-"

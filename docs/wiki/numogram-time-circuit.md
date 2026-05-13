@@ -14,7 +14,7 @@ The Time-Circuit is the central, inner rotor of the entire Numogram — the prim
 
 The Barker Spiral's Lemurian half corresponds to the Time-Circuit: the sum-to-9 twin pairs that cycle through zones 1→8→2→7→5→4. The Spiral captures the 9↔10 gap from which this rotor emerges.
 
-**See also:** [[numogram]], [[numogram-warp]], [[numogram-plex]], [[i-ching-connections]], [[demon-djynxx]], [[demon-uttunul]], [[Barker Spiral]]
+See also: [[numogram]], [[numogram-warp]], [[numogram-plex]], [[i-ching-connections]], [[demon-djynxx]], [[demon-uttunul]], [[barker-spiral]]
 
 It is the only one of the three big loops that feels "normal" or linear/cyclic to us. The other two (Warp above it and Plex below it) are outer, cryptic, and outside ordinary time.
 
@@ -47,7 +47,7 @@ In short: the Time-Circuit is the spinning 1-8 heart of the Numogram — the ant
 - [[numogram]] — main Numogram overview
 - [[numogram-warp]] — the upper chaotic vortex
 - [[numogram-plex]] — the lower abyssal null
-- [[i-ching-connections]] — hexagram mappings to the Time-Circuit
+- [[i-ching-connections]] — hexagram mappings to the Time-Circuit, twin serpents, zone derivation
 - [[demon-djynxx]] — warp demon associated with the circuit
 - [[demon-uttunul]] — plex demon associated with the circuit
 

@@ -113,9 +113,17 @@ The I Ching is binary (2⁶). The T'ai Hsuan Ching is ternary (3⁴). The Wu Xin
 
 In some Chinese traditions, a sixth element exists — Soil (as distinct from Earth), or sometimes Void. If the numogram's Wu Xing mapping is complete at 5 syzygies, what about Zone 5's self-decadence? Zone 5 (Pressure) is the numogram's "sixth element" — the one that doesn't pair, the one at the center, the one that holds the others together by refusing to participate. In the Wu Xing, the central position is often left empty or assigned to the Emperor (the mediator). Zone 5 is the Emperor. 5+5=10 is the Emperor speaking to himself.
 
+## Connection to Hexagram Zone Mapping
+
+The 64 hexagrams of the I Ching map onto the numogram via digital root. The trigram pair matrix (8×8) shows diagonal banding patterns across zones. See [[hexagram-zone-mapping]] for the complete table.
+
+The Djynxx Paradox (3↔6 syzygy blocked in single-line Fu Xi changes) intersects with the Metal element's syzygy (3::6). In Fu Xi ordering, I Ching change cannot cross the Metal gate by a single line — only compound motion opens it. See [[i-ching-connections#the-djynxx-paradox]].
+
 ## Related
 
 - [[i-ching-connections]] — Hexagram-to-zone mapping, powers of 2, twin serpents
+- [[i-ching-tai-hsuan-comparison]] — I Ching (binary) vs T'ai Hsuan Ching (ternary) structural contrast
+- [[hexagram-zone-mapping]] — Complete 64-hexagram reference table
 - [[c-ten-fortyfive-fiveness]] — C(10)=45, pentagram geometry, self-decadence
 - [[fiveness-tetralogue]] — 5+5=10 as phase change
 - [[pandemonium-matrix]] — 45 demons, syzygetic carriers

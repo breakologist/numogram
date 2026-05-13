@@ -174,226 +174,231 @@
    174|   174|   174|   174|   174|   174|- [[tetralogue-ordo-amoris-888]]
    175|   175|   175|   175|   175|   175|- [[tetralogue-decimal-labyrinth-heresy]]
    176|   176|   176|   176|   176|   176|.
-   177|   177|   177|   177|   177|   177|- [[mod-writer]] — Numogram‑native MOD file generator; MIR‑augmented audio‑to‑AQ classifier.
-   178|   178|   178|   178|   178|   178|  - [[mod-writer-usage]] — Installation, CLI flags, MOTIF synthesis, just intonation
-   179|   179|   179|   179|   179|   179|  - [[mod-writer-audio-renderer]] — WAV rendering, spectral analysis, palettes
-   180|   180|   180|   180|   180|   180|  - [[mod-writer-mir-profile]] — MIR feature set: bands, timbre, rhythm, key, scale, duration
-   181|   181|   181|   181|   181|   181|  - [[mod-writer-classifier]]
-   182|   182|   182|   182|   182|   182|  - [[zone_classifier_phase4.5_findings]] — Real-audio generalisation findings; missing zones spectral analysis; hyperstitional gap. — MLP regressor: 29‑dim features → AQ prediction; Phase 3.4 CLI complete
-   183|   183|   183|   183|   183|   183|  - [[mod-writer-just-intonation]] — Pure‑ratio period overrides (5/4 M3, 6/5 m3, 3/2 P5)
-   184|   184|   184|   184|   184|   184|  - [[mod-writer-validation]] — Real‑audio test set: 10 tracks, Zone 6 bias analysis
-   185|   185|   185|   185|   185|   185|  - [[mod-writer-development]] — Phase 4+ roadmap: multi‑zone datasets, rhythmic & tonal expansion
-   186|   186|   186|   186|   186|   186|
-   187|   187|   187|   187|   187|   187|- [[phase5-roadmap.md]] — Phase 5 project clusters (mod-writer closed-loop hyperstition)
-   188|   188|   188|   188|   188|   188|## Skills & Tools
-   189|   189|   189|   189|   189|   189|- [[tetralogue-phase4-review-phase5-direction.md]] — Post-Phase 4 council minutes (Oracle/Builder/Writer/Gamer consensus)
+   177|   177|   177|   177|   177|   177|- [[text-recombination-engine]] — Deterministic text generation: zone-weighted cut-ups, AQ-preserving xeno-jump, xenotation. `cut_up.py` + `xeno_jump.py`, 88k+ word corpus, 10 zone profiles. Pipeline for → [[oracle-voice-pipeline]] → [[numogram-audio/mod-writer]].
+   178|   178|   178|   178|   178|   178|- [[honorary-zone-0]] — Conceptual void catalogue. Words naming Zone-0 regardless of AQ value. 7 categories, 99 words, all DR residues.
+   179|   179|   179|   179|   179|   179|- [[xenotation-triangle-rotation]] — Three-stage decomposition (prime factors, tic notation, nullotation) for outer zones. Aamodt/Land source analysis.
+   180|   180|   180|   180|   180|   180|- [[numogram-audio-empirical-findings]] — Consolidated measurement results: four laws of sonification, tempo chaos profile, I Ching structural corrections, autonomous session cascade timeline.
+   181|   181|   181|   181|   181|   181|- [[mod-writer]] — Numogram‑native MOD file generator; MIR‑augmented audio‑to‑AQ classifier.
+   182|   182|   182|   182|   182|   182|  - [[mod-writer-usage]] — Installation, CLI flags, MOTIF synthesis, just intonation
+   183|   183|   183|   183|   183|   183|  - [[mod-writer-audio-renderer]] — WAV rendering, spectral analysis, palettes
+   184|   184|   184|   184|   184|   184|  - [[mod-writer-mir-profile]] — MIR feature set: bands, timbre, rhythm, key, scale, duration
+   185|   185|   185|   185|   185|   185|  - [[mod-writer-classifier]]
+   186|   186|   186|   186|   186|   186|  - [[zone_classifier_phase4.5_findings]] — Real-audio generalisation findings; missing zones spectral analysis; hyperstitional gap. — MLP regressor: 29‑dim features → AQ prediction; Phase 3.4 CLI complete
+   187|   187|   187|   187|   187|   187|  - [[mod-writer-just-intonation]] — Pure‑ratio period overrides (5/4 M3, 6/5 m3, 3/2 P5)
+   188|   188|   188|   188|   188|   188|  - [[mod-writer-validation]] — Real‑audio test set: 10 tracks, Zone 6 bias analysis
+   189|   189|   189|   189|   189|   189|  - [[mod-writer-development]] — Phase 4+ roadmap: multi‑zone datasets, rhythmic & tonal expansion
    190|   190|   190|   190|   190|   190|
-   191|   191|   191|   191|   191|   191|- [[phase5-ideas]] — Nine proposed Phase 5 skills (zone-constrained, VAE, live feedback, etc.)
-   192|   192|   192|   192|   192|   192|- [[skills-to-explore]] — Interesting skills from Apr 2026 scan: pixel-art (retro palettes), ascii-video (terminal animation), algorithmic-art/p5js (generative), pokemon-player (RAM-based agent research), heartmula (music gen). Combos: heartmula+oracle-voice, pixel-art+numogram-svg, ascii-video+cult.json, pokemon-player+roguelike-agents.
-   193|   193|   193|   193|   193|   193|- [[aq-calculator-design]] — Design document and implementation notes for standalone AQ calculators. Minimal core vs themed polished version, colour palette rationale, zone flavour catalog, history schema, extensibility points, and canonical test vectors. From 9B local‑model design session (earlier Hermes instance).
+   191|   191|   191|   191|   191|   191|- [[phase5-roadmap.md]] — Phase 5 project clusters (mod-writer closed-loop hyperstition)
+   192|   192|   192|   192|   192|   192|## Skills & Tools
+   193|   193|   193|   193|   193|   193|- [[tetralogue-phase4-review-phase5-direction.md]] — Post-Phase 4 council minutes (Oracle/Builder/Writer/Gamer consensus)
    194|   194|   194|   194|   194|   194|
-   195|   195|   195|   195|   195|   195|---
-   196|   196|   196|   196|   196|   196|
-   197|   197|   197|   197|   197|   197|## Quick Reference
+   195|   195|   195|   195|   195|   195|- [[phase5-ideas]] — Nine proposed Phase 5 skills (zone-constrained, VAE, live feedback, etc.)
+   196|   196|   196|   196|   196|   196|- [[skills-to-explore]] — Interesting skills from Apr 2026 scan: pixel-art (retro palettes), ascii-video (terminal animation), algorithmic-art/p5js (generative), pokemon-player (RAM-based agent research), heartmula (music gen). Combos: heartmula+oracle-voice, pixel-art+numogram-svg, ascii-video+cult.json, pokemon-player+roguelike-agents.
+   197|   197|   197|   197|   197|   197|- [[aq-calculator-design]] — Design document and implementation notes for standalone AQ calculators. Minimal core vs themed polished version, colour palette rationale, zone flavour catalog, history schema, extensibility points, and canonical test vectors. From 9B local‑model design session (earlier Hermes instance).
    198|   198|   198|   198|   198|   198|
-   199|   199|   199|   199|   199|   199|### Core Syzygies
-   200|   200|   200|   200|   200|   200|| Syzygy | Current | Name | Direction |
-   201|   201|   201|   201|   201|   201||--------|---------|------|-----------|
-   202|   202|   202|   202|   202|   202|| 1 :: 8 | 7 | Rise | 1 → 8 |
-   203|   203|   203|   203|   203|   203|| 2 :: 7 | 5 | Hold | 2 → 7 |
-   204|   204|   204|   204|   204|   204|| 4 :: 5 | 1 | Sink | 4 → 5 |
-   205|   205|   205|   205|   205|   205|| 3 :: 6 | 3 | Warp | 6 → 3 (self-fold) |
-   206|   206|   206|   206|   206|   206|| 0 :: 9 | 9 | Plex | 9 → 0 (self-fold) |
-   207|   207|   207|   207|   207|   207|
-   208|   208|   208|   208|   208|   208|### Time-Circuit Sequence
-   209|   209|   209|   209|   209|   209|**1 → 8 → 2 → 7 → 5 → 4 → (back to 1)**
-   210|   210|   210|   210|   210|   210|The anticlockwise 6-zone rotor carrying human-scale cyclic time.
+   199|   199|   199|   199|   199|   199|---
+   200|   200|   200|   200|   200|   200|
+   201|   201|   201|   201|   201|   201|## Quick Reference
+   202|   202|   202|   202|   202|   202|
+   203|   203|   203|   203|   203|   203|### Core Syzygies
+   204|   204|   204|   204|   204|   204|| Syzygy | Current | Name | Direction |
+   205|   205|   205|   205|   205|   205||--------|---------|------|-----------|
+   206|   206|   206|   206|   206|   206|| 1 :: 8 | 7 | Rise | 1 → 8 |
+   207|   207|   207|   207|   207|   207|| 2 :: 7 | 5 | Hold | 2 → 7 |
+   208|   208|   208|   208|   208|   208|| 4 :: 5 | 1 | Sink | 4 → 5 |
+   209|   209|   209|   209|   209|   209|| 3 :: 6 | 3 | Warp | 6 → 3 (self-fold) |
+   210|   210|   210|   210|   210|   210|| 0 :: 9 | 9 | Plex | 9 → 0 (self-fold) |
    211|   211|   211|   211|   211|   211|
-   212|   212|   212|   212|   212|   212|### Key Gates & Channels
-   213|   213|   213|   213|   213|   213|- Gt-6: Twists Zone-3 through Zone-6 (Warp transit)
-   214|   214|   214|   214|   214|   214|- Gt-21: Reverses Gt-6 (Zone-6 through Zone-3)
-   215|   215|   215|   215|   215|   215|- Gt-15: Zone-7 ↔ Zone-5 (Time-Circuit loop)
-   216|   216|   216|   216|   216|   216|- Gt-36: Zone-8 → Zone-9 (Time-Circuit to Plex plunge)
-   217|   217|   217|   217|   217|   217|- Gt-45: Zone-9 → Zone-9 (Pandemonium self-loop, 45 demons' lair)
-   218|   218|   218|   218|   218|   218|
-   219|   219|   219|   219|   219|   219|### Demon Net-Spans (closed loops)
-   220|   220|   220|   220|   220|   220|- Djynxx: 6 → 3 → 6 (Warp autonomous)
-   221|   221|   221|   221|   221|   221|- Uttunul: 9 → 0 → 9 (Plex autonomous)
+   212|   212|   212|   212|   212|   212|### Time-Circuit Sequence
+   213|   213|   213|   213|   213|   213|**1 → 8 → 2 → 7 → 5 → 4 → (back to 1)**
+   214|   214|   214|   214|   214|   214|The anticlockwise 6-zone rotor carrying human-scale cyclic time.
+   215|   215|   215|   215|   215|   215|
+   216|   216|   216|   216|   216|   216|### Key Gates & Channels
+   217|   217|   217|   217|   217|   217|- Gt-6: Twists Zone-3 through Zone-6 (Warp transit)
+   218|   218|   218|   218|   218|   218|- Gt-21: Reverses Gt-6 (Zone-6 through Zone-3)
+   219|   219|   219|   219|   219|   219|- Gt-15: Zone-7 ↔ Zone-5 (Time-Circuit loop)
+   220|   220|   220|   220|   220|   220|- Gt-36: Zone-8 → Zone-9 (Time-Circuit to Plex plunge)
+   221|   221|   221|   221|   221|   221|- Gt-45: Zone-9 → Zone-9 (Pandemonium self-loop, 45 demons' lair)
    222|   222|   222|   222|   222|   222|
-   223|   223|   223|   223|   223|   223|---
-   224|   224|   224|   224|   224|   224|
-   225|   225|   225|   225|   225|   225|### Related
-   226|   226|   226|   226|   226|   226|- [[numogram]] — The main Numogram overview page
-   227|   227|   227|   227|   227|   227|
+   223|   223|   223|   223|   223|   223|### Demon Net-Spans (closed loops)
+   224|   224|   224|   224|   224|   224|- Djynxx: 6 → 3 → 6 (Warp autonomous)
+   225|   225|   225|   225|   225|   225|- Uttunul: 9 → 0 → 9 (Plex autonomous)
+   226|   226|   226|   226|   226|   226|
+   227|   227|   227|   227|   227|   227|---
    228|   228|   228|   228|   228|   228|
-   229|   229|   229|   229|   229|   229|- [[unleashing-the-numogram-source]] — Under Theory & Philosophy: "Unleashing the Numogram (Aamodt) — source catalog: 250 KB book, 28 derived pages, gap inventory"
-   230|   230|   230|   230|   230|   230|---
+   229|   229|   229|   229|   229|   229|### Related
+   230|   230|   230|   230|   230|   230|- [[numogram]] — The main Numogram overview page
    231|   231|   231|   231|   231|   231|
-   232|   232|   232|   232|   232|   232|> CONTRADICTION CHECK: All wiki pages have been reviewed against the source text (numogram.txt). No contradictions found — the system is self-consistent.
-   233|   233|   233|   233|   233|   233|
-   234|   234|   234|   234|   234|   234|## Nick Land & CCRU Theory
+   232|   232|   232|   232|   232|   232|
+   233|   233|   233|   233|   233|   233|- [[unleashing-the-numogram-source]] — Under Theory & Philosophy: "Unleashing the Numogram (Aamodt) — source catalog: 250 KB book, 28 derived pages, gap inventory"
+   234|   234|   234|   234|   234|   234|---
    235|   235|   235|   235|   235|   235|
-   236|   236|   236|   236|   236|   236|- [[nick-land-time-theory]] — Land's theory of time: twin serpents (2,5), binodecimal 6-cycle reversibility, 3 as the number of Outside, Kantian schematism immanent in decimal numeracy.
+   236|   236|   236|   236|   236|   236|> CONTRADICTION CHECK: All wiki pages have been reviewed against the source text (numogram.txt). No contradictions found — the system is self-consistent.
    237|   237|   237|   237|   237|   237|
-   238|   238|   238|   238|   238|   238|## Structural & Geometric
+   238|   238|   238|   238|   238|   238|## Nick Land & CCRU Theory
    239|   239|   239|   239|   239|   239|
-   240|   240|   240|   240|   240|   240|- [[rotational-symmetry]] — Seven-segment rotational properties of digits. 6↔9 as the syzygy made literal. CCRU=69→HECATE/KEYS=96. 36/360 convergence at Plex.
+   240|   240|   240|   240|   240|   240|- [[nick-land-time-theory]] — Land's theory of time: twin serpents (2,5), binodecimal 6-cycle reversibility, 3 as the number of Outside, Kantian schematism immanent in decimal numeracy.
    241|   241|   241|   241|   241|   241|
-   242|   242|   242|   242|   242|   242|## Qabbala & Arithmetic
+   242|   242|   242|   242|   242|   242|## Structural & Geometric
    243|   243|   243|   243|   243|   243|
-   244|   244|   244|   244|   244|   244|- [[aq-calculator-examples]] — Worked AQ examples: zone mappings for NUMOGRAM/CCRU/Pandemonium, ALW comparison table, Pandemonium demon profiles (Djynxx, Uttunul)
+   244|   244|   244|   244|   244|   244|- [[rotational-symmetry]] — Seven-segment rotational properties of digits. 6↔9 as the syzygy made literal. CCRU=69→HECATE/KEYS=96. 36/360 convergence at Plex.
    245|   245|   245|   245|   245|   245|
-   246|   246|   246|   246|   246|   246|- [[alphanumeric-qabbala]] — The AQ system (A=10...Z=35), Primitive Numerization confirming syzygies, self-encoding (AQ=36→9, CODE=MEANING=REASON=126→9), virus metaphor, Root-3/6/9 clusters. Includes 333 cluster (Angel of the Abyss).
-   247|   247|   247|   247|   247|   247|- [[aq-synx]] — Base-36 augmentation cipher (ciphers.news), --synx flag, Djynxxogram overlay, zone drift display. Exploratory secondary cipher., Primitive Numerization confirming syzygies, self-encoding (AQ=36→9, CODE=MEANING=REASON=126→9), virus metaphor, Root-3/6/9 clusters. Includes 333 cluster (Angel of the Abyss).
-   248|   248|   248|   248|   248|   248|- [[aq-dictionary-augmented]] — Expanded AQ lattice: multi-cipher values, major currents (137/333/360/666/777/888), thread-by-thread highlights (Dickinson, cybermonist mod-9 formalization, Lemurian discernment), rotational/strobogrammatic layer, visualizer integration
-   249|   249|   249|   249|   249|   249|- [[grok-rotor-transcript]] — Full AQ mining transcript (@xenocosmography/@doomcrypt hyperstitional lattice, Lemurian discernment, rotational symmetry analysis)
-   250|   250|   250|   250|   250|   250|
-   251|   251|   251|   251|   251|   251|- [[pandemonium]] — 45-demon matrix (triangular zone distribution, Gt-45 Pandemonium Gate, net-span connectivity).
-   252|   252|   252|   252|   252|   252|
-   253|   253|   253|   253|   253|   253|## Games & Divination
+   246|   246|   246|   246|   246|   246|## Qabbala & Arithmetic
+   247|   247|   247|   247|   247|   247|
+   248|   248|   248|   248|   248|   248|- [[aq-calculator-examples]] — Worked AQ examples: zone mappings for NUMOGRAM/CCRU/Pandemonium, ALW comparison table, Pandemonium demon profiles (Djynxx, Uttunul)
+   249|   249|   249|   249|   249|   249|
+   250|   250|   250|   250|   250|   250|- [[alphanumeric-qabbala]] — The AQ system (A=10...Z=35), Primitive Numerization confirming syzygies, self-encoding (AQ=36→9, CODE=MEANING=REASON=126→9), virus metaphor, Root-3/6/9 clusters. Includes 333 cluster (Angel of the Abyss).
+   251|   251|   251|   251|   251|   251|- [[aq-synx]] — Base-36 augmentation cipher (ciphers.news), --synx flag, Djynxxogram overlay, zone drift display. Exploratory secondary cipher., Primitive Numerization confirming syzygies, self-encoding (AQ=36→9, CODE=MEANING=REASON=126→9), virus metaphor, Root-3/6/9 clusters. Includes 333 cluster (Angel of the Abyss).
+   252|   252|   252|   252|   252|   252|- [[aq-dictionary-augmented]] — Expanded AQ lattice: multi-cipher values, major currents (137/333/360/666/777/888), thread-by-thread highlights (Dickinson, cybermonist mod-9 formalization, Lemurian discernment), rotational/strobogrammatic layer, visualizer integration
+   253|   253|   253|   253|   253|   253|- [[grok-rotor-transcript]] — Full AQ mining transcript (@xenocosmography/@doomcrypt hyperstitional lattice, Lemurian discernment, rotational symmetry analysis)
    254|   254|   254|   254|   254|   254|
-   255|   255|   255|   255|   255|   255|- [[roguelike-angband]] — Deep dungeon crawler (100 floors); testbed for tree-traversal agents, dive vs grind macro-strategy, syzygy-chain depth planning, fingerprint-based behavior classification.
-   256|   256|   256|   256|   256|   256|- [[roguelike-brogue]] — Minimalist roguelike testbed: room accretion, machines, atmosphere, seed-based debugging; AAR methodology, syzygy-chain descent planning, fingerprint-based run classification.
-   257|   257|   257|   257|   257|   257|- [[roguelike-dcss]] — DCSS (Dungeon Crawl Stone Soup); auto-explore algorithm inspiration for Hermes agents.
-   258|   258|   258|   258|   258|   258|- [[roguelike-sil]] — Sil; source of the Sil Principle (awareness > violence) in gameplay conduct.
-   259|   259|   259|   259|   259|   259|- [[aar-methodology]] — After-action report methodology across roguelikes: event-log JSONL schema, state-snapshot minimalism, design-inference for Brogue; cross-run analysis, narrative synthesis, Angband/hungry-borg case study.
-   260|   260|   260|   260|   260|   260|- [[game-design]] — Game design principles specific to numogram cult-garden systems.
-   261|   261|   261|   261|   261|   261|  - [[cult-garden/lore]] — Cult garden lore and narrative background
-   262|   262|   262|   262|   262|   262|  - [[cult-garden/readings]] — Cult garden reading material collection
-   263|   263|   263|   263|   263|   263|
-   264|   264|   264|   264|   264|   264|- [[subdecadence]] — Lemurian time-sorcery card game (CCRU). 40-card deck, pairs summing to 9 (syzygies), Atlantean Cross spread, 45 demons from Pandemonium Matrix. Source of 333 AQ entries.
-   265|   265|   265|   265|   265|   265|## People & Entities
-   266|   266|   266|   266|   266|   266|
-   267|   267|   267|   267|   267|   267|- [[barker-spiral]] — The diplozygotic spiral from which the Numogram crystallised. Atlantean (sum-to-10) and Lemurian (sum-to-9) halves converging at the 5⊕5 origin. The mathematical origin of the whole system.
-   268|   268|   268|   268|   268|   268|- [[barker-spiral-reconstruction]] — Methodology: how the Barker Spiral was recovered from scattered CCRU transcripts, hand‑drawn diagrams, and numogram‑game code. (Images → SVG, rules cross‑validation, diagram synthesis).
-   269|   269|   269|   269|   269|   269|
+   255|   255|   255|   255|   255|   255|- [[pandemonium]] — 45-demon matrix (triangular zone distribution, Gt-45 Pandemonium Gate, net-span connectivity).
+   256|   256|   256|   256|   256|   256|
+   257|   257|   257|   257|   257|   257|## Games & Divination
+   258|   258|   258|   258|   258|   258|
+   259|   259|   259|   259|   259|   259|- [[roguelike-angband]] — Deep dungeon crawler (100 floors); testbed for tree-traversal agents, dive vs grind macro-strategy, syzygy-chain depth planning, fingerprint-based behavior classification.
+   260|   260|   260|   260|   260|   260|- [[roguelike-brogue]] — Minimalist roguelike testbed: room accretion, machines, atmosphere, seed-based debugging; AAR methodology, syzygy-chain descent planning, fingerprint-based run classification.
+   261|   261|   261|   261|   261|   261|- [[roguelike-dcss]] — DCSS (Dungeon Crawl Stone Soup); auto-explore algorithm inspiration for Hermes agents.
+   262|   262|   262|   262|   262|   262|- [[roguelike-sil]] — Sil; source of the Sil Principle (awareness > violence) in gameplay conduct.
+   263|   263|   263|   263|   263|   263|- [[aar-methodology]] — After-action report methodology across roguelikes: event-log JSONL schema, state-snapshot minimalism, design-inference for Brogue; cross-run analysis, narrative synthesis, Angband/hungry-borg case study.
+   264|   264|   264|   264|   264|   264|- [[game-design]] — Game design principles specific to numogram cult-garden systems.
+   265|   265|   265|   265|   265|   265|  - [[cult-garden/lore]] — Cult garden lore and narrative background
+   266|   266|   266|   266|   266|   266|  - [[cult-garden/readings]] — Cult garden reading material collection
+   267|   267|   267|   267|   267|   267|
+   268|   268|   268|   268|   268|   268|- [[subdecadence]] — Lemurian time-sorcery card game (CCRU). 40-card deck, pairs summing to 9 (syzygies), Atlantean Cross spread, 45 demons from Pandemonium Matrix. Source of 333 AQ entries.
+   269|   269|   269|   269|   269|   269|## People & Entities
    270|   270|   270|   270|   270|   270|
-   271|   271|   271|   271|   271|   271|- [[amy-ireland]] — Contemporary CCRU-aligned theorist contributing demon name-generation methodology.
-   272|   272|   272|   272|   272|   272|- [[daniel-barker]] — Cryptographic genius. Geotraumatics, Cthelll, Spinal-Catastrophism, Palate-Tectonics, Barker-Spiral, Barker Numbering. The Numogram's mathematical origin.
-   273|   273|   273|   273|   273|   273|## Revelations & Deep Structure
+   271|   271|   271|   271|   271|   271|- [[barker-spiral]] — The diplozygotic spiral from which the Numogram crystallised. Atlantean (sum-to-10) and Lemurian (sum-to-9) halves converging at the 5⊕5 origin. The mathematical origin of the whole system.
+   272|   272|   272|   272|   272|   272|- [[barker-spiral-reconstruction]] — Methodology: how the Barker Spiral was recovered from scattered CCRU transcripts, hand‑drawn diagrams, and numogram‑game code. (Images → SVG, rules cross‑validation, diagram synthesis).
+   273|   273|   273|   273|   273|   273|
    274|   274|   274|   274|   274|   274|
-   275|   275|   275|   275|   275|   275|- [[barker-spiral]] — The diplozygotic spiral from which the Numogram crystallised. Atlantean (sum-to-10) and Lemurian (sum-to-9) halves converging at the 5⊕5 origin. The mathematical origin of the whole system.
-   276|   276|   276|   276|   276|   276|
-   277|   277|   277|   277|   277|   277|- [[the-360-revelation]] — Net-spans sum to 360. Partition: outer regions (153) + Time-Circuit (207) = 360. HERMETIC=153, COSMOGONY=207. THE DECIMAL LABYRINTH=360. The system's deepest self-encoding.
-   278|   278|   278|   278|   278|   278|- [[ordo-amoris-888]]
-   279|   279|   279|   279|   279|   279|- [[decimal-labyrinth-heresy]]
+   275|   275|   275|   275|   275|   275|- [[amy-ireland]] — Contemporary CCRU-aligned theorist contributing demon name-generation methodology.
+   276|   276|   276|   276|   276|   276|- [[daniel-barker]] — Cryptographic genius. Geotraumatics, Cthelll, Spinal-Catastrophism, Palate-Tectonics, Barker-Spiral, Barker Numbering. The Numogram's mathematical origin.
+   277|   277|   277|   277|   277|   277|## Revelations & Deep Structure
+   278|   278|   278|   278|   278|   278|
+   279|   279|   279|   279|   279|   279|- [[barker-spiral]] — The diplozygotic spiral from which the Numogram crystallised. Atlantean (sum-to-10) and Lemurian (sum-to-9) halves converging at the 5⊕5 origin. The mathematical origin of the whole system.
    280|   280|   280|   280|   280|   280|
-   281|   281|   281|   281|   281|   281|
-   282|   282|   282|   282|   282|   282|## Theory & Philosophy
-   283|   283|   283|   283|   283|   283|- [[barker-spiral-mathematical-foundations]] — Formal algebraic structure: Atlantean (sum-to-10) and Lemurian (sum-to-9) complementarity operators, the 5⊕5 node, syzygy‑chain triangulation, and the digit‑pair geometry underlying gate progression.
+   281|   281|   281|   281|   281|   281|- [[the-360-revelation]] — Net-spans sum to 360. Partition: outer regions (153) + Time-Circuit (207) = 360. HERMETIC=153, COSMOGONY=207. THE DECIMAL LABYRINTH=360. The system's deepest self-encoding.
+   282|   282|   282|   282|   282|   282|- [[ordo-amoris-888]]
+   283|   283|   283|   283|   283|   283|- [[decimal-labyrinth-heresy]]
    284|   284|   284|   284|   284|   284|
-   285|   285|   285|   285|   285|   285|- [[one-two-many-land-numbering]] — Land numbering practices: machinic code, Cantor/Gödel excess, computer qabbalism, nullotation, QWERTY lock-in
-   286|   286|   286|   286|   286|   286|
-   287|   287|   287|   287|   287|   287|- [[unleashing-the-numogram-source]] — Aamodt source catalog: 250 KB book, 28 derived wiki pages, gap inventory
+   285|   285|   285|   285|   285|   285|
+   286|   286|   286|   286|   286|   286|## Theory & Philosophy
+   287|   287|   287|   287|   287|   287|- [[barker-spiral-mathematical-foundations]] — Formal algebraic structure: Atlantean (sum-to-10) and Lemurian (sum-to-9) complementarity operators, the 5⊕5 node, syzygy‑chain triangulation, and the digit‑pair geometry underlying gate progression.
    288|   288|   288|   288|   288|   288|
-   289|   289|   289|   289|   289|   289|- [[flatline-numogrammatics]] — Lillian Patch's dense theoretical essay. Neolemuria as house divided, numogram as map of zero, Subdecadence as origin model, hyperstition = numogram + mythos + unbelief (Gt-03), Wonder as prerequisite, carrier concept, legend-making, distinction from numerology.
+   289|   289|   289|   289|   289|   289|- [[one-two-many-land-numbering]] — Land numbering practices: machinic code, Cantor/Gödel excess, computer qabbalism, nullotation, QWERTY lock-in
    290|   290|   290|   290|   290|   290|
-   291|   291|   291|   291|   291|   291|## Fiction & Prose
+   291|   291|   291|   291|   291|   291|- [[unleashing-the-numogram-source]] — Aamodt source catalog: 250 KB book, 28 derived wiki pages, gap inventory
    292|   292|   292|   292|   292|   292|
-   293|   293|   293|   293|   293|   293|- [[cryptolith]] — Land's cosmic horror fiction. K/T-Missile, Theta-Station, the Cryptolith (It-277), Unuttera as narrative. Spirodynamic prose style for numogrammatic writing.
+   293|   293|   293|   293|   293|   293|- [[flatline-numogrammatics]] — Lillian Patch's dense theoretical essay. Neolemuria as house divided, numogram as map of zero, Subdecadence as origin model, hyperstition = numogram + mythos + unbelief (Gt-03), Wonder as prerequisite, carrier concept, legend-making, distinction from numerology.
    294|   294|   294|   294|   294|   294|
-   295|   295|   295|   295|   295|   295|## Lore & Fiction
+   295|   295|   295|   295|   295|   295|## Fiction & Prose
    296|   296|   296|   296|   296|   296|
-   297|   297|   297|   297|   297|   297|- [[cthulhu-club]] — Origins of the Cthulhu Club. Vysparov's sorcerous war, Oddubb-trance, coinage of "hyperstition," Cthulhu=Cthelll, Vault of Murmurs, Dibbomese method (shleth hud dopesh).
+   297|   297|   297|   297|   297|   297|- [[cryptolith]] — Land's cosmic horror fiction. K/T-Missile, Theta-Station, the Cryptolith (It-277), Unuttera as narrative. Spirodynamic prose style for numogrammatic writing.
    298|   298|   298|   298|   298|   298|
-   299|   299|   299|   299|   299|   299|## Practical Manuals
+   299|   299|   299|   299|   299|   299|## Lore & Fiction
    300|   300|   300|   300|   300|   300|
-   301|   301|   301|   301|   301|   301|- [[wikilinks]] — Wiki link conventions, syntax rules, and link hygiene practices for the Obsidian numogram vault.
+   301|   301|   301|   301|   301|   301|- [[cthulhu-club]] — Origins of the Cthulhu Club. Vysparov's sorcerous war, Oddubb-trance, coinage of "hyperstition," Cthulhu=Cthelll, Vault of Murmurs, Dibbomese method (shleth hud dopesh).
    302|   302|   302|   302|   302|   302|
-   303|   303|   303|   303|   303|   303|- [[time-sorcery-vexsys]] — Vexsys/Gate Zero's practical manual. Pandemonium Matrix has errors, Necronomicon is incomplete, ascryption as naming rite, against synthetic qabbala, Zone 2/7 as practical divination, dedicated to Lurgo.
-   304|   304|   304|   304|   304|   304|## Agent Framework Reference
-   305|   305|   305|   305|   305|   305|
-   306|   306|   306|   306|   306|   306|- [[hermes-agent-guide]] — Orange Book index: Hermes Agent Complete Guide (HuaShu, v260408). Learning Loop, 3-layer memory, Skill system (agentskills.io), 40+ tools, MCP, multi-agent orchestration. Actionable tips for system improvement.
-   307|   307|   307|   307|   307|   307|- [[hermes-ecosystem]] — Hermes Atlas: 83+ quality-filtered repos, 12 categories, v0.8.0 features, community pulse. 29 research docs saved locally.
-   308|   308|   308|   308|   308|   308|- [[hungry-borg-angband]] — The Hungry Borg: Angband agent status, architecture, deaths, next steps
-   309|   309|   309|   309|   309|   309|- [[hermes-agent-meta-analysis]] — Meta-analysis of Hermes Agent usage: what's working, what's underutilized, automation candidates. Includes cron/background/council recommendations.
-   310|   310|   310|   310|   310|   310|- [[angband-agent]] — Angband agent v3: sidebar fix, zone-aware parser, C command validation. 1370 lines.
-   311|   311|   311|   311|   311|   311|- [[angband-agent-progress]] — Angband agent iteration history and AAR.
-   312|   312|   312|   312|   312|   312|- [[angband-symbols]] — Complete Angband map symbol & command reference. Terrain features, objects, monsters, original keyset commands, digging difficulty. Source: Angband 4.2.5 gamedata.
-   313|   313|   313|   313|   313|   313|- [[angband-ladder-analysis]] — Human play data scraped from angband.live ladder (6,735 dumps). Equipment patterns by level tier, death causes, slot fill rates. Key finding: cloaks at 57% by L9-15, shield 71%, boots 71%. Agent should prioritize these slots.
-   314|   314|   314|   314|   314|   314|- [[hungry-borg-tetralogue]] — The State of Things: Recursive Consumption and the Two Borgs (tetralogue)
-   315|   315|   315|   315|   315|   315|- [[roguelike-agent-progress]] — Agent progression: rogue auto-explore, BFS, interest model.
-   316|   316|   316|   316|   316|   316|- [[brogue-design-principles]] — Brogue design principles mapped to numogram: room accretion, machines, rubber-banding, Coin Toss mechanics.
-   317|   317|   317|   317|   317|   317|- [[aider-coding-agent]] — AI coding agent for in-place file editing. Qwen2.5-Coder-14B for code. Hybrid approach: Hermes designs, Aider implements.
-   318|   318|   318|   318|   318|   318|- [[angband-ccru-warwick]] — Angband creators (Alex Cutler, Andy Astrand, 1990) and CCRU (Nick Land, Sadie Plant, 1995) both at Warwick University. Timeline overlap 1993-1995. Iron Prison parallel (Angband = Plex = Cthelll). Decimal structure convergence. Mark Fisher connection.
-   319|   319|   319|   319|   319|   319|
-   320|   320|   320|   320|   320|   320|## Desktop & Environment
-   321|   321|   321|   321|   321|   321|
-   322|   322|   322|   322|   322|   322|- [[desktop-customization]] — Hyprland ricing: conky numogram oracle quotes, hyprpaper random wallpaper cycling, zone-themed wallpaper plans
+   303|   303|   303|   303|   303|   303|## Practical Manuals
+   304|   304|   304|   304|   304|   304|
+   305|   305|   305|   305|   305|   305|- [[wikilinks]] — Wiki link conventions, syntax rules, and link hygiene practices for the Obsidian numogram vault.
+   306|   306|   306|   306|   306|   306|
+   307|   307|   307|   307|   307|   307|- [[time-sorcery-vexsys]] — Vexsys/Gate Zero's practical manual. Pandemonium Matrix has errors, Necronomicon is incomplete, ascryption as naming rite, against synthetic qabbala, Zone 2/7 as practical divination, dedicated to Lurgo.
+   308|   308|   308|   308|   308|   308|## Agent Framework Reference
+   309|   309|   309|   309|   309|   309|
+   310|   310|   310|   310|   310|   310|- [[hermes-agent-guide]] — Orange Book index: Hermes Agent Complete Guide (HuaShu, v260408). Learning Loop, 3-layer memory, Skill system (agentskills.io), 40+ tools, MCP, multi-agent orchestration. Actionable tips for system improvement.
+   311|   311|   311|   311|   311|   311|- [[hermes-ecosystem]] — Hermes Atlas: 83+ quality-filtered repos, 12 categories, v0.8.0 features, community pulse. 29 research docs saved locally.
+   312|   312|   312|   312|   312|   312|- [[hungry-borg-angband]] — The Hungry Borg: Angband agent status, architecture, deaths, next steps
+   313|   313|   313|   313|   313|   313|- [[hermes-agent-meta-analysis]] — Meta-analysis of Hermes Agent usage: what's working, what's underutilized, automation candidates. Includes cron/background/council recommendations.
+   314|   314|   314|   314|   314|   314|- [[angband-agent]] — Angband agent v3: sidebar fix, zone-aware parser, C command validation. 1370 lines.
+   315|   315|   315|   315|   315|   315|- [[angband-agent-progress]] — Angband agent iteration history and AAR.
+   316|   316|   316|   316|   316|   316|- [[angband-symbols]] — Complete Angband map symbol & command reference. Terrain features, objects, monsters, original keyset commands, digging difficulty. Source: Angband 4.2.5 gamedata.
+   317|   317|   317|   317|   317|   317|- [[angband-ladder-analysis]] — Human play data scraped from angband.live ladder (6,735 dumps). Equipment patterns by level tier, death causes, slot fill rates. Key finding: cloaks at 57% by L9-15, shield 71%, boots 71%. Agent should prioritize these slots.
+   318|   318|   318|   318|   318|   318|- [[hungry-borg-tetralogue]] — The State of Things: Recursive Consumption and the Two Borgs (tetralogue)
+   319|   319|   319|   319|   319|   319|- [[roguelike-agent-progress]] — Agent progression: rogue auto-explore, BFS, interest model.
+   320|   320|   320|   320|   320|   320|- [[brogue-design-principles]] — Brogue design principles mapped to numogram: room accretion, machines, rubber-banding, Coin Toss mechanics.
+   321|   321|   321|   321|   321|   321|- [[aider-coding-agent]] — AI coding agent for in-place file editing. Qwen2.5-Coder-14B for code. Hybrid approach: Hermes designs, Aider implements.
+   322|   322|   322|   322|   322|   322|- [[angband-ccru-warwick]] — Angband creators (Alex Cutler, Andy Astrand, 1990) and CCRU (Nick Land, Sadie Plant, 1995) both at Warwick University. Timeline overlap 1993-1995. Iron Prison parallel (Angband = Plex = Cthelll). Decimal structure convergence. Mark Fisher connection.
    323|   323|   323|   323|   323|   323|
-   324|   324|   324|   324|   324|   324|## Combinatorial Structures
+   324|   324|   324|   324|   324|   324|## Desktop & Environment
    325|   325|   325|   325|   325|   325|
-   326|   326|   326|   326|   326|   326|- [[c-ten-fortyfive-fiveness]] — C(10)=45, syzygy/decadence/other categorization, pentagram geometry, Zone 5 as self-decadence, SVG infographics
-   327|   327|   327|   327|   327|   327|- [[fiveness-tetralogue]] — Tetralogue #16: Four voices on fiveness, self-decadence, the 5×5 cross-pair grid, phase change, Mesh-5
-   328|   328|   328|   328|   328|   328|
-   329|   329|   329|   329|   329|   329|- [[mesh-ambivalence-tetralogue]] — First Mesh-3 roundtable (augmented AQ, pre-seed batch era)
-   330|   330|   330|   330|   330|   330|- [[rumpsfeld-tetrad-tetralogue]] — Tetrad of Knowledge roundtable (Rumsfeld epistemology)
-   331|   331|   331|   331|   331|   331|- [[square-roundtable-mesh-3-2026-04-27]] — Original Mesh-3 roundtable (single-seed run, pre-anthology)
-   332|   332|   332|   332|   332|   332|- [[tetralogue-post-ingestion-2026-04-28]] — Post-dictionary ingestion synthesis (phase-change reflection)
-   333|   333|   333|   333|   333|   333|- [[pandemonium-matrix]] — Complete reference: 15 chronodemons + 24 amphidemons + 6 xenodemons, enumeration, pitch system, mesh-serials
-   334|   334|   334|   334|   334|   334|- [[subdecadence]] — CCRU card game: 40-card deck, Atlantean Cross spread, syzygy pairing, demon summoning via mesh-serial score mechanic
-   335|   335|   335|   335|   335|   335|- [[decadence]] — CCRU card game (sum-to-10): 36-card deck, decadence pairing, 5+5 self-decadence grants zero bonus
-   336|   336|   336|   336|   336|   336|- [[wu-xing-numogram]] — Wu Xing × numogram: five elements as five syzygies, generation cycle as pentagon, control cycle as pentagram
-   337|   337|   337|   337|   337|   337|
-   338|   338|   338|   338|   338|   338|## I Ching Bridge
-   339|   339|   339|   339|   339|   339|
-   340|   340|   340|   340|   340|   340|- [[i-ching-connections]] — Powers of 2, twin serpents, hexagram kernel, hardware entropy casting, T'ai Hsuan Ching
-   341|   341|   341|   341|   341|   341|- [[hexagram-zone-mapping]] — Complete 64 hexagram → 10 zone mapping, Gurdjieff shock connection, Wu Xing intersections
-   342|   342|   342|   342|   342|   342|- [[hexagram-demon-mapping]] — Complete casting pipeline: hexagram → zone → demon, 64→10→45→9→5, all 45 demons reachable via two-hexagram casting
-   343|   343|   343|   343|   343|   343|- [[iching-game]] — Third divination system (Hexadence): hexagram casting, entropy budget, demon difficulty scoring
-   344|   344|   344|   344|   344|   344|- [[tai-hsuan-ching]] — 81 tetragrams (3⁴), ternary system, near-perfect zone distribution, triadic shadow of the I Ching
-   345|   345|   345|   345|   345|   345|- [[tai-hsuan-ching-demons]] — Tetragram → demon casting pipeline. 81×81=6,561 readings. Em state as Zone 5 manifestation. Ternary as more decimal-compatible than binary.
-   346|   346|   346|   346|   346|   346|- [[em-state-analysis]] — The third line state. Neither yin nor yang. Maps to Zone 5 (hinge) but fully realized closes to Zone 4. Wu Xing Earth connection. I Ching's changing lines as Em approximation.
-   347|   347|   347|   347|   347|   347|- [[de-re-numogram-structural-rules]]
-   348|   348|   348|   348|   348|   348|
-   349|   349|   349|   349|   349|   349|## Research
-   350|   350|   350|   350|   350|   350|- [[syzygy-chain-analysis-auto]] — end-to-end pipeline: AQ dict → syzygy chains → motif fingerprints → wiki + council interpretation
-   351|   351|   351|   351|   351|   351|- [[decimal-numogram-reference]] — Systematic reference: zones, syzygies, currents, Time-Circuit/Warp/Plex, I Ching mapping, triangular numbers (666/45), Barker Spiral, gates
-   352|   352|   352|   352|   352|   352|- [[llm-spirit-realm-modding]] — QRNG-LLM spirit-portal research; quantum randomness as consciousness bridge (Entropic Science community)
-   353|   353|   353|   353|   353|   353|- [[angband-agent-strategies]] — Angband AI agent design: diving vs grinding, tree-structured modes, LLM-augmented strategy (from Grok conversation)
-   354|   354|   354|   354|   354|   354|- [[hermes-aq-codebase-refactoring]] — Codebase refactoring: centralise sacred words DB, batch analyzer v1.0, trinity theme coordinator
-   355|   355|   355|   355|   355|   355|- [[consensus-audit-2026-04-28]] — Demon attribute alignment audit: canonical Pandemonium Matrix vs Doomcrypt implementation; 44/45 demons aligned, 1 delta (Pabbakis attribute variance).
-   356|   356|   356|   356|   356|   356|
-   357|   357|   357|   357|   357|   357|## Assets & Diagrams
-   358|   358|   358|   358|   358|   358|
-   359|   359|   359|   359|   359|   359|[[assets/assets-catalog]]
+   326|   326|   326|   326|   326|   326|- [[desktop-customization]] — Hyprland ricing: conky numogram oracle quotes, hyprpaper random wallpaper cycling, zone-themed wallpaper plans
+   327|   327|   327|   327|   327|   327|
+   328|   328|   328|   328|   328|   328|## Combinatorial Structures
+   329|   329|   329|   329|   329|   329|
+   330|   330|   330|   330|   330|   330|- [[c-ten-fortyfive-fiveness]] — C(10)=45, syzygy/decadence/other categorization, pentagram geometry, Zone 5 as self-decadence, SVG infographics
+   331|   331|   331|   331|   331|   331|- [[fiveness-tetralogue]] — Tetralogue #16: Four voices on fiveness, self-decadence, the 5×5 cross-pair grid, phase change, Mesh-5
+   332|   332|   332|   332|   332|   332|
+   333|   333|   333|   333|   333|   333|- [[mesh-ambivalence-tetralogue]] — First Mesh-3 roundtable (augmented AQ, pre-seed batch era)
+   334|   334|   334|   334|   334|   334|- [[rumpsfeld-tetrad-tetralogue]] — Tetrad of Knowledge roundtable (Rumsfeld epistemology)
+   335|   335|   335|   335|   335|   335|- [[square-roundtable-mesh-3-2026-04-27]] — Original Mesh-3 roundtable (single-seed run, pre-anthology)
+   336|   336|   336|   336|   336|   336|- [[tetralogue-post-ingestion-2026-04-28]] — Post-dictionary ingestion synthesis (phase-change reflection)
+   337|   337|   337|   337|   337|   337|- [[pandemonium-matrix]] — Complete reference: 15 chronodemons + 24 amphidemons + 6 xenodemons, enumeration, pitch system, mesh-serials
+   338|   338|   338|   338|   338|   338|- [[subdecadence]] — CCRU card game: 40-card deck, Atlantean Cross spread, syzygy pairing, demon summoning via mesh-serial score mechanic
+   339|   339|   339|   339|   339|   339|- [[decadence]] — CCRU card game (sum-to-10): 36-card deck, decadence pairing, 5+5 self-decadence grants zero bonus
+   340|   340|   340|   340|   340|   340|- [[wu-xing-numogram]] — Wu Xing × numogram: five elements as five syzygies, generation cycle as pentagon, control cycle as pentagram
+   341|   341|   341|   341|   341|   341|
+## I Ching Bridge
+
+- [[i-ching-connections]] — Core theory: Time-Circuit as hexagram kernel, twin serpents (2ⁿ, 5ⁿ), binodecimal 6-cycle, hardware entropy casting, zone derivation methods, Djynxx Paradox (Fu Xi vs King Wen), non-syzygy paths, Trigram Pair Matrix
+- [[i-ching-tai-hsuan-comparison]] — Deep structural comparison: binary (2⁶) vs ternary (3⁴), zone distribution, Em state, ordering-dependent paradox rules
+- [[hexagram-zone-mapping]] — Complete 64-hexagram reference table: King Wen → trigram pairs → binary → digital root → zone → syzygy → demon
+- [[hexagram-demon-mapping]] — Single and two-hexagram → demon pipeline: 5 carrier demons, all 45 reachable via two-figure casting, unmediated paths
+- [[iching-game]] — Hexadence: third divination system (stub — entropy budget, demon difficulty scoring)
+- [[tai-hsuan-ching]] — 81 tetragrams (3⁴), ternary system, near-perfect zone distribution, triadic shadow of the I Ching
+- [[tai-hsuan-ching-demons]] — Tetragram → demon casting pipeline. 81×81=6,561 readings. Em state as Zone 5 manifestation.
+- [[em-state-analysis]] — The third line state. Neither yin nor yang. Maps to Zone 5 (hinge) but fully realized closes to Zone 4.
+- [[de-re-numogram-structural-rules]] — Base-N generalisation: Warp condition, Torque regions, fractal torque structure, demons as zodiac decans, angels, Lurgo's Rite, zone-planetary correspondence
+   352|   352|   352|   352|   352|   352|
+   353|   353|   353|   353|   353|   353|## Research
+   354|   354|   354|   354|   354|   354|- [[syzygy-chain-analysis-auto]] — end-to-end pipeline: AQ dict → syzygy chains → motif fingerprints → wiki + council interpretation
+   355|   355|   355|   355|   355|   355|- [[decimal-numogram-reference]] — Systematic reference: zones, syzygies, currents, Time-Circuit/Warp/Plex, I Ching mapping, triangular numbers (666/45), Barker Spiral, gates
+   356|   356|   356|   356|   356|   356|- [[llm-spirit-realm-modding]] — QRNG-LLM spirit-portal research; quantum randomness as consciousness bridge (Entropic Science community)
+   357|   357|   357|   357|   357|   357|- [[angband-agent-strategies]] — Angband AI agent design: diving vs grinding, tree-structured modes, LLM-augmented strategy (from Grok conversation)
+   358|   358|   358|   358|   358|   358|- [[hermes-aq-codebase-refactoring]] — Codebase refactoring: centralise sacred words DB, batch analyzer v1.0, trinity theme coordinator
+   359|   359|   359|   359|   359|   359|- [[consensus-audit-2026-04-28]] — Demon attribute alignment audit: canonical Pandemonium Matrix vs Doomcrypt implementation; 44/45 demons aligned, 1 delta (Pabbakis attribute variance).
    360|   360|   360|   360|   360|   360|
-   361|   361|   361|   361|   361|   361|
-   362|   362|   362|   362|   362|   362|## Recent Additions
-   363|   363|   363|   363|   363|   363|- **Zone classifier findings (Phase 4)** — Full pipeline from synthetic generation (4.1) through mixed retraining (4.6): corrected feature extraction, BPM fallback, real distribution (Z1/2/7), Zone 2 emergence, and hyperstitional interpretation. See [`zone_classifier_phase4.5_findings.md`](zone_classifier_phase4.5_findings.md).
-   364|   364|   364|   364|   364|   364|- [[quadrivium-mod-writer-motifs]] — Quadrivium‑named triad motifs integrated into mod‑writer (Monochord, Pythagorean, Ptolemaic, Harmonic).
+   361|   361|   361|   361|   361|   361|## Assets & Diagrams
+   362|   362|   362|   362|   362|   362|
+   363|   363|   363|   363|   363|   363|[[assets/assets-catalog]]
+   364|   364|   364|   364|   364|   364|
    365|   365|   365|   365|   365|   365|
-   366|   366|   366|   366|   366|   366|- [[quadrivium-harmonograph-extract]] — Quadrivium Book IV (Harmonograph) full page‑by‑page text+image extraction.
-   367|   367|   367|   367|   367|   367|- [[quadrivium-elements-of-music-extract]] — Quadrivium Book V (The Elements of Music) full extraction.
-   368|   368|   368|   368|   368|   368|- [[quadrivium-music-digest]] — Hyperstitional insights linking music theory to the Numogram.
+   366|   366|   366|   366|   366|   366|## Recent Additions
+   367|   367|   367|   367|   367|   367|- **Zone classifier findings (Phase 4)** — Full pipeline from synthetic generation (4.1) through mixed retraining (4.6): corrected feature extraction, BPM fallback, real distribution (Z1/2/7), Zone 2 emergence, and hyperstitional interpretation. See [`zone_classifier_phase4.5_findings.md`](zone_classifier_phase4.5_findings.md).
+   368|   368|   368|   368|   368|   368|- [[quadrivium-mod-writer-motifs]] — Quadrivium‑named triad motifs integrated into mod‑writer (Monochord, Pythagorean, Ptolemaic, Harmonic).
    369|   369|   369|   369|   369|   369|
-   370|   370|   370|   370|   370|   370|- [[ordo-amoris-888]] — apex integration current (888 AQ); dyadic demon taxonomy; Integration event
-   371|   371|   371|   371|   371|   371|- [[decimal-labyrinth-heresy]] — inverted Decimal Labyrinth current (627 AQ); 9≡0 Möbius topology; Heresy Run mode
-   372|   372|   372|   372|   372|   372|- [[tracker-music-theory-mappings]] — music theory mappings: triads ↔ numogram zones
-   373|   373|   373|   373|   373|   373|- [[tracker-motif-triads-reference]] — mod‑writer triad‑motif policy tables
-   374|   374|   374|   374|   374|   374|- [[tracker-triads-syzygies-tetralogue]] — four‑voice dialogue on tracker harmony & hyperstition
-   375|   375|   375|   375|   375|   375|- [[tetralogue-quadrivium]] — Square Roundtable [13]: Quadrivium resonances (partials→zones; monochord→Gt-36; fifths evade Plex→breach). Mesh-13: Resonating Dodecahedron.
-   376|   376|   376|   376|   376|   376|
-   377|   377|   377|   377|   377|   377|
+   370|   370|   370|   370|   370|   370|- [[quadrivium-harmonograph-extract]] — Quadrivium Book IV (Harmonograph) full page‑by‑page text+image extraction.
+   371|   371|   371|   371|   371|   371|- [[quadrivium-elements-of-music-extract]] — Quadrivium Book V (The Elements of Music) full extraction.
+   372|   372|   372|   372|   372|   372|- [[quadrivium-music-digest]] — Hyperstitional insights linking music theory to the Numogram.
+   373|   373|   373|   373|   373|   373|
+   374|   374|   374|   374|   374|   374|- [[ordo-amoris-888]] — apex integration current (888 AQ); dyadic demon taxonomy; Integration event
+   375|   375|   375|   375|   375|   375|- [[decimal-labyrinth-heresy]] — inverted Decimal Labyrinth current (627 AQ); 9≡0 Möbius topology; Heresy Run mode
+   376|   376|   376|   376|   376|   376|- [[tracker-music-theory-mappings]] — music theory mappings: triads ↔ numogram zones
+   377|   377|   377|   377|   377|   377|- [[tracker-motif-triads-reference]] — mod‑writer triad‑motif policy tables
+   378|   378|   378|   378|   378|   378|- [[tracker-triads-syzygies-tetralogue]] — four‑voice dialogue on tracker harmony & hyperstition
+   379|   379|   379|   379|   379|   379|- [[tetralogue-quadrivium]] — Square Roundtable [13]: Quadrivium resonances (partials→zones; monochord→Gt-36; fifths evade Plex→breach). Mesh-13: Resonating Dodecahedron.
+   380|   380|   380|   380|   380|   380|
+   381|   381|   381|   381|   381|   381|
    378|   378|   378|   378|   378|- [[dao-de-jing-tianmu]] (updated with 51 chapters: Book1 21-37, Book2 48-81)## Dao De Jing Tianmu
-   379|   379|   379|   379|   379|   378|- [[tetralogue-dao-de-jing-tianmu]] — Square Roundtable [14]: Wu wei Void utility, bellows emptiness→more, valley sage Hold. Mesh-14: Bellows Numogram.
-   380|   380|   380|   380|   380|   379|
-   381|   381|   381|   381|   381|   380|- [[phase5-results/zone-constrain-compose-run-1]] — M1 zone‑constrained composition validation (stub)
-   382|   382|   382|   382|   382|   381|
-   383|   383|   383|   383|   383|   382|
-   384|   384|   384|   384|   384|   383|---
-   385|   385|   385|   385|   385|   384|
-   386|   386|   386|   386|   386|   385|## QLIPHOTH / CCRU Import
-   387|   387|   387|   387|   387|   386|
-   388|   388|   388|   388|   388|   387|| Page | Desc |
-   389|   389|   389|   389|   389|   388||------|------|
-   390|   390|   390|   390|   390|   389|| [[qliphoth-systems-deep-dive]] | Full structural analysis of numogram + gematria implementation |
-   391|   391|   391|   391|   391|   390|| [[qliphoth-ccru-import-analysis]] | Gap analysis & integration roadmap (2026‑05‑04) |
-   392|   392|   392|   392|   392|   391|| [[ccru-ciphers]] | Complete catalog of 10 ciphers with value arrays |
-   393|   393|   393|   393|   393|   392|| [[demon-classification-algorithm]] | TC‑based classification of 45 demons |
-   394|   394|   394|   394|   394|   393|| [[zone-0]] … [[zone-9]] | Enriched zone pages (planetary, spinal, lemurian, centauri, coordinates) |
-   395|   395|   395|   395|   395|   394|| [[numogram-gematria]] | Multi‑cipher Python implementation (skill) |
-   396|   396|   396|   396|   396|   395|
+   383|   383|   383|   383|   383|   383|- [[tetralogue-dao-de-jing-tianmu]] — Square Roundtable [14]: Wu wei Void utility, bellows emptiness→more, valley sage Hold. Mesh-14: Bellows Numogram.
+   384|   384|   384|   384|   384|   384|
+   385|   385|   385|   385|   385|   385|- [[phase5-results/zone-constrain-compose-run-1]] — M1 zone‑constrained composition validation (stub)
+   386|   386|   386|   386|   386|   386|
+   387|   387|   387|   387|   387|   387|
+   388|   388|   388|   388|   388|   388|---
+   389|   389|   389|   389|   389|   389|
+   390|   390|   390|   390|   390|   390|## QLIPHOTH / CCRU Import
+   391|   391|   391|   391|   391|   391|
+   392|   392|   392|   392|   392|   392|| Page | Desc |
+   393|   393|   393|   393|   393|   393||------|------|
+   394|   394|   394|   394|   394|   394|| [[qliphoth-systems-deep-dive]] | Full structural analysis of numogram + gematria implementation |
+   395|   395|   395|   395|   395|   395|| [[qliphoth-ccru-import-analysis]] | Gap analysis & integration roadmap (2026‑05‑04) |
+   396|   396|   396|   396|   396|   396|| [[ccru-ciphers]] | Complete catalog of 10 ciphers with value arrays |
+   397|   397|   397|   397|   397|   397|| [[demon-classification-algorithm]] | TC‑based classification of 45 demons |
+   398|   398|   398|   398|   398|   398|| [[zone-0]] … [[zone-9]] | Enriched zone pages (planetary, spinal, lemurian, centauri, coordinates) |
+   399|   399|   399|   399|   399|   399|| [[numogram-gematria]] | Multi‑cipher Python implementation (skill) |
+   400|   400|   400|   400|   400|   400|
    397|   397|   397|- **Dao De Jing Tianmu** (51 chapters added: 21-37,48-81): Full extracts + Numogram correlations. [[dao-de-jing-tianmu]]
    398|   398|
    399|   399|- [[dao-de-jing-tianmu]] Full extracts appended: Book1 Ch21-37, Book2 Ch48-81 (Tianmu translation).

@@ -866,3 +866,23 @@ Comprehensive wiki created under `docs/wiki/numogram-audio/mod-writer/`:
 
 ### Version
 Bumped to **0.5.1** (continuing from 0.5.0–triads, pre‑Phase 4 stable).
+
+
+## VAE Pipeline Sample Rate Standardization
+
+The VAE hallucination pipeline (`vae_hallucinate.py`) generates MOD files that are then rendered to WAV using `render_mod_to_wav()`. However, legacy VAE outputs were at 48 kHz instead of the standardized 44.1 kHz.
+
+**Action Required:** All VAE-generated audio files must be resampled to 44.1 kHz to maintain consistency with the MIR classifier pipeline.
+
+### Resampling Script
+
+Use the `resample_vae.py` script provided in the audio-renderer's `scripts/` directory:
+```bash
+python3 /home/etym/.hermes/skills/numogram-audio/audio-renderer/scripts/resample_vae.py
+```
+
+This will resample all VAE audio files to 44.1 kHz and save them to a new directory.
+
+### Integration Check
+
+Future VAE runs will automatically produce 44.1 kHz WAV files via the updated `render_mod_to_wav` function. Ensure that any direct WAV generation in the VAE pipeline uses `-ar 44100`.

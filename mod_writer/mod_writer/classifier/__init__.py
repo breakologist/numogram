@@ -17,53 +17,71 @@ if _skill_root not in sys.path:
 from mod_writer.mir_profiler import MIRFeatureExtractor
 
 ARTIFACTS_DIR = os.path.join(os.path.dirname(__file__), "artifacts")
-_scaler = None
-_model = None
+_KEY_MAP = {'C':0,'C#':1,'D':2,'D#':3,'E':4,'F':5,'F#':6,'G':7,'G#':8,'A':9,'A#':10,'B':11}
 
-KEY_MAP = {'C':0,'C#':1,'D':2,'D#':3,'E':4,'F':5,'F#':6,'G':7,'G#':8,'A':9,'A#':10,'B':11}
+# Zone classifier artifacts (canonical, Phase 4.6+)
+_zone_scaler = None
+_zone_clf = None
+
+
+def _load_zone_classifier():
+    global _zone_scaler, _zone_clf
+    if _zone_scaler is None:
+        _zone_scaler = joblib.load(os.path.join(ARTIFACTS_DIR, "zone_scaler.joblib"))
+        _zone_clf = joblib.load(os.path.join(ARTIFACTS_DIR, "zone_clf.joblib"))
+    return _zone_scaler, _zone_clf
 
 
 def load_artifacts():
-    global _scaler, _model
-    if _scaler is None:
-        _scaler = joblib.load(os.path.join(ARTIFACTS_DIR, "scaler.joblib"))
-        _model  = joblib.load(os.path.join(ARTIFACTS_DIR, "model.joblib"))
-    return _scaler, _model
+    """Backward compat: return the zone classifier as (scaler, model)."""
+    return _load_zone_classifier()
 
 
 def _flatten(features: dict) -> np.ndarray:
-    vec = []
-    bands = features.get('lowlevel',{}).get('bands',{})
-    for b in ['sub_bass','bass','low_mid','mid','high_mid','high']:
-        vec.append(bands.get(b, 0.0))
-    timbre = features.get('lowlevel',{}).get('timbre',{})
-    vec.append(timbre.get('spectral_centroid',0.0) or 0.0)
-    vec.append(timbre.get('spectral_bandwidth',0.0) or 0.0)
-    vec.append(timbre.get('spectral_rolloff',0.0) or 0.0)
-    vec.append(timbre.get('dynamic_complexity',0.0) or 0.0)
-    rhythm = features.get('rhythm',{})
-    vec.append((rhythm.get('onset_rate') or 0.0) / 200.0)
-    vec.append((rhythm.get('bpm') or 0.0) / 200.0)
-    vec.append((rhythm.get('beat_confidence') or 0.0) / 100.0)
-    key = features.get('key') or {}
-    key_idx = KEY_MAP.get(key.get('key'), 0) if key.get('key') else 0
-    key_onehot = [0]*12; key_onehot[key_idx] = 1; vec.extend(key_onehot)
-    scale = key.get('scale') if key else None
-    vec.extend([1,0,0] if scale=='major' else [0,1,0] if scale=='minor' else [0,0,1])
-    meta = features.get('metadata',{}) or {}
+    """Extract 29-dim feature vector — matches data_collector._flatten_features.
+
+    Expected MIRFeatureExtractor output schema:
+      lowlevel: sub_bass, bass, low_mid, mid, high_mid, high,
+                spectral_centroid_hz, spectral_bandwidth_hz,
+                spectral_rolloff, dynamic_complexity
+      midlevel: onset_rate, bpm, beat_confidence, key (str), scale (str)
+      metadata: duration_s
+    """
+    vec: list[float] = []
+    low = features.get('lowlevel', {})
+    for band_name in ['sub_bass','bass','low_mid','mid','high_mid','high']:
+        vec.append(low.get(band_name, 0.0))
+    vec.append(low.get('spectral_centroid_hz', 0.0) or 0.0)
+    vec.append(low.get('spectral_bandwidth_hz', 0.0) or 0.0)
+    vec.append(low.get('spectral_rolloff', 0.0) or 0.0)
+    vec.append(low.get('dynamic_complexity', 0.0) or 0.0)
+    mid = features.get('midlevel', {})
+    vec.append((mid.get('onset_rate') or 0.0) / 200.0)
+    vec.append((mid.get('bpm') or 0.0) / 200.0)
+    vec.append((mid.get('beat_confidence', 0.0) or 0.0) / 100.0)
+    key_str = mid.get('key', '')
+    key_idx = _KEY_MAP.get(key_str, 0)
+    key_onehot = [0]*12; key_onehot[key_idx] = 1
+    vec.extend(key_onehot)
+    scale_val = mid.get('scale')
+    if scale_val == 'major':
+        vec.extend([1,0,0])
+    elif scale_val == 'minor':
+        vec.extend([0,1,0])
+    else:
+        vec.extend([0,0,1])
+    meta = features.get('metadata', {}) or {}
     dur = meta.get('duration_s') or meta.get('duration') or 0.0
-    vec.append(float(dur)/120.0)
+    vec.append(float(dur) / 120.0)
     return np.array(vec, dtype=np.float32)
 
 
-def _aq_to_zone(aq):
-    num = int(round(abs(aq)))
-    dr = sum(int(d) for d in str(num)) % 9
-    return 9 if dr == 0 else dr
-
-
 def predict_audio(path: str) -> dict:
-    """Transcode if necessary, extract MIR features, predict AQ."""
+    """Transcode if necessary, extract MIR features, predict zone using the
+    canonical zone classifier (Phase 4.6+, RandomForest 500 trees + StandardScaler).
+
+    Returns dict with 'zone' (1-9), 'predicted_zone_prob', plus audio metadata.
+    """
     ext = os.path.splitext(path)[1].lower()
     if ext != '.wav':
         fd, wav = tempfile.mkstemp(suffix='.wav'); os.close(fd)
@@ -78,18 +96,21 @@ def predict_audio(path: str) -> dict:
     try:
         feats = MIRFeatureExtractor().extract(wav, use_all=False)
         vec = _flatten(feats).reshape(1, -1)
-        scaler, model = load_artifacts()
-        pred = float(model.predict(scaler.transform(vec))[0])
-        meta = feats.get('metadata',{}) or {}
+        scaler, clf = _load_zone_classifier()
+        zone_pred = int(clf.predict(scaler.transform(vec))[0])
+        zone_probs = None
+        if hasattr(clf, 'predict_proba'):
+            zone_probs = clf.predict_proba(scaler.transform(vec))[0].tolist()
+        meta = feats.get('metadata', {}) or {}
         return {
             'file': os.path.basename(path),
             'path': path,
-            'predicted_aq': round(pred, 2),
-            'zone': _aq_to_zone(int(round(pred))),
+            'zone': zone_pred,
+            'predicted_zone_prob': zone_probs,
             'duration_s': meta.get('duration_s', 0.0),
-            'bpm': feats.get('midlevel',{}).get('bpm'),
-            'key': (feats.get('key',{}).get('key') if feats.get('key') else None),
-            'scale': (feats.get('key',{}).get('scale') if feats.get('key') else None),
+            'bpm': feats.get('midlevel', {}).get('bpm'),
+            'key': feats.get('midlevel', {}).get('key'),
+            'scale': feats.get('midlevel', {}).get('scale'),
         }
     finally:
         if cleanup and os.path.exists(wav):

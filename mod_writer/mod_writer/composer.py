@@ -239,7 +239,7 @@ class ModComposer:
                 note = explicit_note
                 octave = explicit_octave
             else:
-                note, octave = note_and_octave_from_zone(zone)
+                note, octave = note_and_octave_from_zone(zone, stacked=getattr(self, '_stacked_octaves', False))
             sample_idx = CURRENT_TO_INSTRUMENT.get(current, 1)
             eff_cmd, eff_param = mod_effect_from_gate(gate)
 
