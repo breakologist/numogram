@@ -173,20 +173,21 @@ class CrumpleDocumentary(Scene):
 
         # ── ACT V: Epilogue ──────────────────────────────────────────────────────
         epigraph = Text(
-            "The AQ checksum is the hash; the xeno-jump is the lossy compression.\n"
+            "The AQ checksum is the hash;\n"
+            "the xeno-jump is the lossy compression.\n"
             "Reconstruction measures the loss.",
-            font_size=32, color=LAVENDER, font="monospace", line_spacing=1.2
+            font_size=28, color=LAVENDER, font="monospace", line_spacing=1.2
         )
-        epigraph.to_edge(UP)
+        epigraph.to_edge(UP, buff=0.5)
         self.play(Write(epigraph), run_time=3)
         self.wait(2)
 
         credits = VGroup(
-            Text("Crumple/Reconstruct Protocol", font_size=36, color=GOLD, font="monospace"),
-            Text("Manim Documentary by Hermes-AQ", font_size=28, color=CYAN, font="monospace"),
-            Text("breakologist/numogram · Hermes Agent v2.0", font_size=24, color=GREEN, font="monospace"),
-        ).arrange(DOWN, buff=0.4)
-        credits.next_to(epigraph, DOWN, buff=1.0)
+            Text("Crumple/Reconstruct Protocol", font_size=32, color=GOLD, font="monospace"),
+            Text("Manim Documentary by Hermes-AQ", font_size=26, color=CYAN, font="monospace"),
+            Text("breakologist/numogram · Hermes Agent v2.0", font_size=22, color=GREEN, font="monospace"),
+        ).arrange(DOWN, buff=0.3)
+        credits.next_to(epigraph, DOWN, buff=0.4)
         self.play(FadeIn(credits, lag_ratio=0.3))
         self.wait(4)
 
