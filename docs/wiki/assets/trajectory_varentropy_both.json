@@ -1,0 +1,487 @@
+{
+  "mode": "single",
+  "parameters": {
+    "text": "The machine speaks",
+    "corpus_size": 89050,
+    "generations": 8,
+    "seed": 666,
+    "creative": true,
+    "creative_strategy": "varentropy",
+    "bucket_key": "both",
+    "correlate": true
+  },
+  "original_aq": 301,
+  "original_words": [
+    "The",
+    "machine",
+    "speaks"
+  ],
+  "trajectory": [
+    {
+      "generation": 0,
+      "text": "The machine speaks",
+      "words": [
+        "The",
+        "machine",
+        "speaks"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "original_aq": 301,
+      "mutated_aq": 301
+    },
+    {
+      "generation": 1,
+      "text": "App bahrain bissau",
+      "words": [
+        "App",
+        "bahrain",
+        "bissau"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 301,
+      "entropy": 3.169925,
+      "metrics": {
+        "total_edit": 16,
+        "avg_edit": 5.333333,
+        "max_edit": 7,
+        "exact_count": 0,
+        "total_words": 3
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "The",
+          "crumpled": "App",
+          "reconstructed": "bop",
+          "bucket_key": "AQ=60&len=3",
+          "bucket_size": 38,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "machine",
+          "crumpled": "bahrain",
+          "reconstructed": "cuddled",
+          "bucket_key": "AQ=116&len=7",
+          "bucket_size": 88,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "speaks",
+          "crumpled": "bissau",
+          "reconstructed": "forget",
+          "bucket_key": "AQ=125&len=6",
+          "bucket_size": 257,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "text": "Jct perms bernard",
+      "words": [
+        "Jct",
+        "perms",
+        "bernard"
+      ],
+      "recovery_rate": 0.3333333333333333,
+      "aq_preserved": true,
+      "mutated_aq": 301,
+      "entropy": 3.572469,
+      "metrics": {
+        "total_edit": 12,
+        "avg_edit": 4.0,
+        "max_edit": 6,
+        "exact_count": 1,
+        "total_words": 3
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "The",
+          "crumpled": "Jct",
+          "reconstructed": "the",
+          "bucket_key": "AQ=60&len=3",
+          "bucket_size": 38,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 1,
+          "original": "machine",
+          "crumpled": "perms",
+          "reconstructed": "tires",
+          "bucket_key": "AQ=116&len=5",
+          "bucket_size": 121,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "speaks",
+          "crumpled": "bernard",
+          "reconstructed": "baubles",
+          "bucket_key": "AQ=125&len=7",
+          "bucket_size": 169,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "text": "Defi deceive halogen",
+      "words": [
+        "Defi",
+        "deceive",
+        "halogen"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 301,
+      "entropy": 3.441446,
+      "metrics": {
+        "total_edit": 16,
+        "avg_edit": 5.333333,
+        "max_edit": 7,
+        "exact_count": 0,
+        "total_words": 3
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "The",
+          "crumpled": "Defi",
+          "reconstructed": "dane",
+          "bucket_key": "AQ=60&len=4",
+          "bucket_size": 18,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "machine",
+          "crumpled": "deceive",
+          "reconstructed": "goddard",
+          "bucket_key": "AQ=116&len=7",
+          "bucket_size": 88,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "speaks",
+          "crumpled": "halogen",
+          "reconstructed": "hepatic",
+          "bucket_key": "AQ=125&len=7",
+          "bucket_size": 169,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "text": "Kkk pongee devils",
+      "words": [
+        "Kkk",
+        "pongee",
+        "devils"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 301,
+      "entropy": 3.410417,
+      "metrics": {
+        "total_edit": 13,
+        "avg_edit": 4.333333,
+        "max_edit": 6,
+        "exact_count": 0,
+        "total_words": 3
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "The",
+          "crumpled": "Kkk",
+          "reconstructed": "eth",
+          "bucket_key": "AQ=60&len=3",
+          "bucket_size": 38,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "machine",
+          "crumpled": "pongee",
+          "reconstructed": "carats",
+          "bucket_key": "AQ=116&len=6",
+          "bucket_size": 211,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "speaks",
+          "crumpled": "devils",
+          "reconstructed": "leeway",
+          "bucket_key": "AQ=125&len=6",
+          "bucket_size": 257,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "text": "Jct phaedra romped",
+      "words": [
+        "Jct",
+        "phaedra",
+        "romped"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 301,
+      "entropy": 3.503258,
+      "metrics": {
+        "total_edit": 12,
+        "avg_edit": 4.0,
+        "max_edit": 5,
+        "exact_count": 0,
+        "total_words": 3
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "The",
+          "crumpled": "Jct",
+          "reconstructed": "wee",
+          "bucket_key": "AQ=60&len=3",
+          "bucket_size": 38,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "machine",
+          "crumpled": "phaedra",
+          "reconstructed": "dobbing",
+          "bucket_key": "AQ=116&len=7",
+          "bucket_size": 88,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "speaks",
+          "crumpled": "romped",
+          "reconstructed": "parish",
+          "bucket_key": "AQ=125&len=6",
+          "bucket_size": 257,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 6,
+      "text": "Bail blows canteen",
+      "words": [
+        "Bail",
+        "blows",
+        "canteen"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 301,
+      "entropy": 3.503258,
+      "metrics": {
+        "total_edit": 17,
+        "avg_edit": 5.666667,
+        "max_edit": 7,
+        "exact_count": 0,
+        "total_words": 3
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "The",
+          "crumpled": "Bail",
+          "reconstructed": "bail",
+          "bucket_key": "AQ=60&len=4",
+          "bucket_size": 18,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "machine",
+          "crumpled": "blows",
+          "reconstructed": "parky",
+          "bucket_key": "AQ=116&len=5",
+          "bucket_size": 121,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "speaks",
+          "crumpled": "canteen",
+          "reconstructed": "reigned",
+          "bucket_key": "AQ=125&len=7",
+          "bucket_size": 169,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 7,
+      "text": "Bali bootee chorale",
+      "words": [
+        "Bali",
+        "bootee",
+        "chorale"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 301,
+      "entropy": 3.32636,
+      "metrics": {
+        "total_edit": 16,
+        "avg_edit": 5.333333,
+        "max_edit": 6,
+        "exact_count": 0,
+        "total_words": 3
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "The",
+          "crumpled": "Bali",
+          "reconstructed": "bail",
+          "bucket_key": "AQ=60&len=4",
+          "bucket_size": 18,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "machine",
+          "crumpled": "bootee",
+          "reconstructed": "bakery",
+          "bucket_key": "AQ=116&len=6",
+          "bucket_size": 211,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "speaks",
+          "crumpled": "chorale",
+          "reconstructed": "dictate",
+          "bucket_key": "AQ=125&len=7",
+          "bucket_size": 169,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 8,
+      "text": "Duh dollar hotly",
+      "words": [
+        "Duh",
+        "dollar",
+        "hotly"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 301,
+      "entropy": 3.20282,
+      "metrics": {
+        "total_edit": 13,
+        "avg_edit": 4.333333,
+        "max_edit": 5,
+        "exact_count": 0,
+        "total_words": 3
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "The",
+          "crumpled": "Duh",
+          "reconstructed": "hip",
+          "bucket_key": "AQ=60&len=3",
+          "bucket_size": 38,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "machine",
+          "crumpled": "dollar",
+          "reconstructed": "nubbin",
+          "bucket_key": "AQ=116&len=6",
+          "bucket_size": 211,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "speaks",
+          "crumpled": "hotly",
+          "reconstructed": "tykes",
+          "bucket_key": "AQ=125&len=5",
+          "bucket_size": 68,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_recovery_rate": 0.0,
+    "aq_preserved": true,
+    "final_text": "Duh dollar hotly",
+    "final_aq": 301,
+    "original_length": 18,
+    "final_length": 16,
+    "length_ratio": 0.8888888888888888,
+    "original_entropy": 3.4613201402110083,
+    "final_entropy": 3.20282,
+    "entropy_delta": -0.2585001402110083,
+    "total_edit_distance": 13,
+    "avg_edit_per_word": 4.333333,
+    "max_single_word_edit": 5,
+    "exact_matches": "0/3",
+    "exact_ratio": 0.0
+  },
+  "correlation": {
+    "word_bucket_edit": [
+      {
+        "word": "The",
+        "bucket_size": 38,
+        "edit_distance": 3
+      },
+      {
+        "word": "machine",
+        "bucket_size": 211,
+        "edit_distance": 5
+      },
+      {
+        "word": "speaks",
+        "bucket_size": 68,
+        "edit_distance": 5
+      }
+    ],
+    "pearson_r": 0.633892
+  }
+}

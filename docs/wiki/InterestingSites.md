@@ -13,7 +13,7 @@ tags:
 # Interesting Sites - Add a small description to any that don't have one yet + append any interesting sites you find, write to new or append to old wiki articles
 https://github.com/NousResearch/hermes-agent
 https://github.com/breakologist?tab=stars - some interesting projects here
-https://github.com/trycua/cua
+https://github.com/trycua/cua - agentic computer use, could be a powerful basis for future, check it out
 https://osf.io/preprints/psyarxiv/4nv79_v1
 https://github.com/faltz009
 https://github.com/CodebuffAI/codebuff/tree/main/freebuff
@@ -64,7 +64,7 @@ https://twigl.app/
 https://archive.org/
 https://ourworldindata.org
 https://glint.trade/ - cool [[Maps|map]] with [[OSINT]] info (possible CCP bias?)
-https://worldwatch.uk/ - 
+https://worldwatch.uk/ - Interactive global OSINT dashboard: real-time conflict forecasting, infrastructure tracking, disaster monitoring, network analysis, and sandbox mapping. 3D globe with layers for military, energy, communications, economic governance, and live OSINT feeds. Forecast intensity scoring by country.
 https://warheatmap.app/
 https://unishka.substack.com/p/osint-of-united-kingdom
 https://lemuriantimes.net/nexus - [[Numogram]] intro, links
