@@ -2,7 +2,6 @@
 tags:
   - Reference
   - "#Maps"
-  - Sacred Texts
   - Daoism
   - Buddhism
   - Hermeticism
@@ -14,6 +13,12 @@ tags:
 # Interesting Sites - Add a small description to any that don't have one yet + append any interesting sites you find, write to new or append to old wiki articles
 https://github.com/NousResearch/hermes-agent
 https://github.com/breakologist?tab=stars - some interesting projects here
+https://github.com/trycua/cua
+https://osf.io/preprints/psyarxiv/4nv79_v1
+https://github.com/faltz009
+https://github.com/CodebuffAI/codebuff/tree/main/freebuff
+https://github.com/golanlevin/p5-single-line-font-resources/blob/main/README.md#p5js-port-of-masaya-matsuuras-vib-ribbon-fonts
+https://github.com/huggingface/ml-intern/pull/228
 https://oa.mg/ - An academic research engine
 https://cables.gl/ - Visual programming platform for creating interactive media, web applications, and generative art. Open source with web-based IDE, supports 3D, shaders, MIDI, and WebVR.
 https://tianmu.org/ - Anglican Church of Tianmu with the "Good Works Library" - a sacred texts archive translating Daoist, Buddhist, Vedic, Gnostic, Hermetic, Manichaean, and other traditions into plain modern English. Also features creative content like interviews and articles.
@@ -74,7 +79,7 @@ https://github.com/anpicasso/hermes-plugin-chrome-profiles
 https://github.com/browser-use/browser-harness
 https://doomcrypt.github.io/subdecadence/ - Subdecadence card game
 https://github.com/doomcrypt/subdecadence - main github page for same
-https://charcuterie.elastiq.ch - nifty unicode viewer
+https://charcuterie.elastiq.ch - CLIP/SigLIP-powered Unicode glyph similarity explorer. Cross-script visual discovery, draw-to-find. See [[charcuterie-unicode-explorer]] for deep dive.
 https://gematriaresearch.blogspot.com/ - v. interesting site 
 https://alektryon.github.io/aqqa/ - an AQ calc/lookup
 https://alektryon.github.io/aq-io/ - and again
