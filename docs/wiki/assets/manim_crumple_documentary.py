@@ -18,18 +18,39 @@ Assets required (all present in docs/wiki/assets/):
   - trajectory_varentropy_both.json (for batch stats)
 """
 
-from manim import *
-import json, os
-
-# ─── VideoMobject availability (Manim Community vs 3b1b builds) ────────────────
+# ─── Engine selection: prefer manimlib (manimgl) ─────────────────────────────
 try:
-    from manim import VideoMobject  # available in 3b1b-manim / video‑enabled installs
+    from manimlib import *
+    _ENGINE = 'manimgl'
+    print("[DEBUG] Engine: manimgl (manimlib)")
+except Exception as e:
+    print(f"[DEBUG] manimlib import failed: {e.__class__.__name__}: {e}")
+    from manim import *
+    _ENGINE = 'manim'
+    print("[DEBUG] Engine: manim (Community)")
+
+# ─── VideoMobject availability ────────────────────────────────────────────────
+try:
+    if _ENGINE == 'manimgl':
+        from manimlib import VideoMobject
+    else:
+        from manim import VideoMobject
     _HAS_VIDEO = True
-except ImportError:                 # Manim Community 0.20.1
+except ImportError:
     VideoMobject = None
     _HAS_VIDEO = False
 
-# ─── Asset paths ──────────────────────────────────────────────────────────────
+
+# ─── Compatibility aliases (Community → manimgl) ──────────────────────────────
+if _ENGINE == 'manimgl':
+    # Create is not exported by manimlib; use ShowCreation
+    if 'Create' not in globals():
+        Create = ShowCreation
+    # FadeIn/FadeOut exist, Write exists.
+    # Axes, Rectangle, Text, VGroup are present.
+    # No further aliases needed currently.
+import json, os
+
 ASSET_DIR = "/home/etym/numogram/docs/wiki/assets"
 ZONE_SPIRAL = os.path.join(ASSET_DIR, "ZoneSpiral.mp4")
 SYZYGY_CASCADE = os.path.join(ASSET_DIR, "SyzygyCascade.mp4")
@@ -172,11 +193,15 @@ class CrumpleDocumentary(Scene):
         self.play(FadeOut(VGroup(dots, reg_line, r_text, scatter_axes, corr_title)))
 
         # ── ACT V: Epilogue ──────────────────────────────────────────────────────
+        # Text kwargs: line_spacing is Community‑only
+        text_kwargs = dict(font_size=28, color=LAVENDER, font="monospace")
+        if _ENGINE == 'manim':
+            text_kwargs['line_spacing'] = 1.2
         epigraph = Text(
             "The AQ checksum is the hash;\n"
             "the xeno-jump is the lossy compression.\n"
             "Reconstruction measures the loss.",
-            font_size=28, color=LAVENDER, font="monospace", line_spacing=1.2
+            **text_kwargs
         )
         epigraph.to_edge(UP, buff=0.5)
         self.play(Write(epigraph), run_time=3)
