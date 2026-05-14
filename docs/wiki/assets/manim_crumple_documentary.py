@@ -22,10 +22,10 @@ Assets required (all present in docs/wiki/assets/):
 try:
     from manimlib import *
     _ENGINE = 'manimgl'
-    except Exception as e:
-        from manim import *
+except Exception:
+    from manim import *
     _ENGINE = 'manim'
-    
+
 # ─── VideoMobject availability ────────────────────────────────────────────────
 try:
     if _ENGINE == 'manimgl':
@@ -37,15 +37,12 @@ except ImportError:
     VideoMobject = None
     _HAS_VIDEO = False
 
-
-# ─── Compatibility aliases (Community → manimgl) ──────────────────────────────
+# ─── Compatibility aliases (manimgl vs Community) ─────────────────────────────
 if _ENGINE == 'manimgl':
     # Create is not exported by manimlib; use ShowCreation
     if 'Create' not in globals():
         Create = ShowCreation
-    # FadeIn/FadeOut exist, Write exists.
-    # Axes, Rectangle, Text, VGroup are present.
-    # No further aliases needed currently.
+
 import json, os
 
 ASSET_DIR = "/home/etym/numogram/docs/wiki/assets"
@@ -219,13 +216,15 @@ class CrumpleDocumentary(Scene):
 
     # ── helper ─────────────────────────────────────────────────────────────────
     def play_video_clip(self, path: str, run_time: float):
-        """Embed an MP4 if VideoMobject is available; otherwise show a placeholder."""
+        """Embed an MP4 if VideoMobject is available; otherwise show a placeholder.
+        Returns the mobject (video or placeholder) which remains in the scene;
+        caller is responsible for fading it out."""
         if _HAS_VIDEO:
             video = VideoMobject(filename=path, speed=1.0)
             video.set_width(14).set_height(8, stretch=True)
+            video.set_z_index(0)  # background layer; text typically has default 0 but added later → draws on top
             self.play(Create(video), run_time=0.5)
             self.wait(run_time - 0.5)
-            self.play(FadeOut(video), run_time=0.5)
             return video
         else:
             # Fallback: show a placeholder rectangle with filename and play icon
@@ -239,5 +238,4 @@ class CrumpleDocumentary(Scene):
             placeholder = VGroup(rect, label, icon).arrange(DOWN, buff=0.3)
             self.play(FadeIn(placeholder), run_time=0.5)
             self.wait(run_time - 0.5)
-            self.play(FadeOut(placeholder), run_time=0.5)
             return placeholder
