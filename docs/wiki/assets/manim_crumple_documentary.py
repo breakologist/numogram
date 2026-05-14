@@ -22,13 +22,10 @@ Assets required (all present in docs/wiki/assets/):
 try:
     from manimlib import *
     _ENGINE = 'manimgl'
-    print("[DEBUG] Engine: manimgl (manimlib)")
-except Exception as e:
-    print(f"[DEBUG] manimlib import failed: {e.__class__.__name__}: {e}")
-    from manim import *
+    except Exception as e:
+        from manim import *
     _ENGINE = 'manim'
-    print("[DEBUG] Engine: manim (Community)")
-
+    
 # ─── VideoMobject availability ────────────────────────────────────────────────
 try:
     if _ENGINE == 'manimgl':
