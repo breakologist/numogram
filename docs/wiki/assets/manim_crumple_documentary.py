@@ -189,12 +189,22 @@ class CrumpleDocumentary(Scene):
 
     # ── helper ─────────────────────────────────────────────────────────────────
     def play_video_clip(self, path: str, run_time: float):
-        """Read an existing rendered MP4 and embed it as a VideoMobject."""
-        # Note: VideoMobject requires ffmpeg at runtime.
-        from manim import VideoMobject, Create, FadeOut
-        video = VideoMobject(filename=path, speed=1.0)
-        video.set_width(14).set_height(8, stretch=True)
-        self.play(Create(video), run_time=0.5)  # fade-in
-        self.wait(run_time - 0.5)
-        self.play(FadeOut(video), run_time=0.5)
-        return video
+        """Embed an MP4 if VideoMobject is available; otherwise show a placeholder."""
+        try:
+            from manim import VideoMobject, Create, FadeOut
+            video = VideoMobject(filename=path, speed=1.0)
+            video.set_width(14).set_height(8, stretch=True)
+            self.play(Create(video), run_time=0.5)
+            self.wait(run_time - 0.5)
+            self.play(FadeOut(video), run_time=0.5)
+            return video
+        except ImportError:
+            # Fallback: show a placeholder with filename
+            rect = Rectangle(width=14, height=8, fill_color="#111111", fill_opacity=1, stroke_color=CYAN, stroke_width=2)
+            label = Text(os.path.basename(path), font_size=36, color=GOLD, font="monospace")
+            play_tri = Text("▶", font_size=72, color=GREEN)
+            vgroup = VGroup(rect, label, play_tri).arrange(DOWN, buff=0.3)
+            self.play(FadeIn(vgroup), run_time=0.5)
+            self.wait(run_time - 0.5)
+            self.play(FadeOut(vgroup), run_time=0.5)
+            return vgroup

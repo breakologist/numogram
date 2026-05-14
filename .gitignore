@@ -19,6 +19,7 @@ cult.json
 
 # Large media
 demos/*.mp4
+!docs/wiki/assets/*.mp4
 demos/*.avi
 *.mp4
 *.wav
