@@ -7,31 +7,95 @@ Xenotation (nullotation → tic notation → prime factorization) is applied
 as a zone-specific textual decomposition for outer zones (0, 3, 6, 9).
 """
 
-import os, re, random, math, json
+import os, re, random, math, json, zipfile
 
 # ═══════════════════════════════════════════
-# CORPUS
+# CORPUS SELECTION
 # ═══════════════════════════════════════════
-def load_corpus():
-    corpus = {}
-    targets = {
+def _epub_text(path):
+    """Extract readable text from an epub (zip of xhtml)."""
+    texts = []
+    try:
+        with zipfile.ZipFile(path) as z:
+            for name in z.namelist():
+                if name.endswith(('.xhtml', '.html', '.htm', '.txt')):
+                    try:
+                        t = z.read(name).decode('utf-8', errors='ignore')
+                        t = re.sub(r'<[^>]+>', ' ', t)
+                        t = t.replace('&amp;', '&').replace('&nbsp;', ' ')
+                        t = re.sub(r'\s+', ' ', t).strip()
+                        if len(t) > 100:
+                            texts.append(t)
+                    except: pass
+    except: pass
+    return '\n\n'.join(texts)
+
+CORPUS_SOURCES = {
+    'oracle': {
         'ccru': "/home/etym/numogram/docs/numogram-source.txt",
+        'grok_rotor': "/home/etym/.hermes/obsidian/hermetic/raw/Grok rotor.md",
+        'grok_notes': "/home/etym/.hermes/obsidian/hermetic/raw/Grok notes on the Numogram.md",
+        'grok_convo': "/home/etym/.hermes/obsidian/hermetic/raw/Grok convo.md",
+        'grok_angband': "/home/etym/.hermes/obsidian/hermetic/raw/Grok Angband conversation.md",
+        'land_numogram': "/home/etym/.hermes/obsidian/hermetic/raw/nick land numogram explained.txt",
+        'land_time': "/home/etym/.hermes/obsidian/hermetic/raw/nick land time.txt",
+        'unleashing': "/home/etym/.hermes/obsidian/hermetic/raw/Unleashing the Numogram.md",
+        'declab': "/home/etym/.hermes/obsidian/hermetic/raw/ccru-net-declab-stripped-2026-04-28.txt",
+        'occultures': "/home/etym/.hermes/obsidian/hermetic/raw/ccru-net-occultures-full-2026-04-28.txt",
         'djynxx': "/home/etym/.hermes/obsidian/hermetic/wiki/demon-djynxx.md",
         'paramita': "/home/etym/.hermes/obsidian/hermetic/wiki/paramita.md",
         'iching': "/home/etym/.hermes/obsidian/hermetic/wiki/i-ching-connections.md",
-        'xenotation': "/home/etym/.hermes/obsidian/hermetic/wiki/xenotation-triangle-rotation.md",
-        'quotes': "/home/etym/.config/conky/numogram-quotes.txt",
-    }
-    for name, path in targets.items():
-        if os.path.exists(path):
-            corpus[name] = _clean(open(path).read())
+        'bentov': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/Itzhak Bentov - Stalking The Wild Pendulum - On the Mechanics of Consciousness.epub"),
+        'starships': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/Star.Ships.epub"),
+        'geosophia_i': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/Geosophia-I.epub"),
+        'geosophia_ii': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/Geosophia-II.epub"),
+        'time_sorcery': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/Time Sorcery - Vexsys.epub"),
+        'cryptolith': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/LAND -- Cryptolith.epub"),
+        'xenosystems': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/XENOSYSTEMS_FRAGMENTS.epub"),
+    },
+    'xenon': {
+        'gist_zones': "/home/etym/Documents/05-Research/gist",
+        'kron_tensors': "/home/etym/.hermes/obsidian/hermetic/raw/Kron-TensorsForCircuits_djvu.txt",
+    },
+}
+
+def load_corpus(name='oracle'):
+    import zipfile
+    corpus = {}
+    targets = CORPUS_SOURCES.get(name, CORPUS_SOURCES['oracle'])
     
-    journal_dir = "/home/etym/.hermes/obsidian/hermetic/wiki/autonomous-journal"
-    journals = []
-    for f in sorted(os.listdir(journal_dir)):
-        if f.startswith('session-') and f.endswith('.md'):
-            journals.append(_clean(open(os.path.join(journal_dir, f)).read()))
-    corpus['journals'] = '\n\n'.join(journals)
+    for source_name, path in targets.items():
+        if isinstance(path, tuple):
+            # (format, actual_path)
+            fmt, actual_path = path
+            if fmt == 'epub':
+                corpus[source_name] = _clean(_epub_text(actual_path))
+        elif os.path.isdir(path):
+            # Read all text files in directory
+            for f in sorted(os.listdir(path)):
+                fp = os.path.join(path, f)
+                if os.path.isfile(fp) and f.endswith(('.txt', '.md')):
+                    try:
+                        text = _clean(open(fp, encoding='utf-8', errors='ignore').read())
+                        if text:
+                            corpus[f"{source_name}:{f}"] = text
+                    except: pass
+        elif os.path.exists(path):
+            corpus[source_name] = _clean(open(path).read())
+    
+    # Journals always available for oracle
+    if name in ('oracle', 'all'):
+        journal_dir = "/home/etym/.hermes/obsidian/hermetic/wiki/autonomous-journal"
+        if os.path.exists(journal_dir):
+            journals = []
+            for f in sorted(os.listdir(journal_dir)):
+                if f.startswith('session-') and f.endswith('.md'):
+                    journals.append(_clean(open(os.path.join(journal_dir, f)).read()))
+            if journals:
+                corpus['journals'] = '\n'.join(journals)
+    
+    # Filter empty entries
+    corpus = {k: v for k, v in corpus.items() if v and len(v) > 20}
     return corpus
 
 def _clean(text):
@@ -263,21 +327,31 @@ def nullotate_chain(corpus, zone, length=40, seed=None, iters=3):
 
 if __name__ == '__main__':
     import sys
-    corpus = load_corpus()
+    
+    # Check for --corpus flag
+    corpus_name = 'oracle'
+    args = sys.argv[1:]
+    if '--corpus' in args:
+        idx = args.index('--corpus')
+        if idx + 1 < len(args):
+            corpus_name = args[idx + 1]
+            args = args[:idx] + args[idx+2:]
+    
+    corpus = load_corpus(corpus_name)
     
     if len(sys.argv) > 1:
-        cmd = sys.argv[1]
+        cmd = args[0] if args else None
     else:
         # Default: generate multi-zone
         result = generate_multi(corpus, seed=666, length=25)
         print(result)
         sys.exit(0)
     
-    if cmd == "zone" and len(sys.argv) > 2:
-        zone = int(sys.argv[2])
-        source = sys.argv[3] if len(sys.argv) > 3 else None
-        length = int(sys.argv[4]) if len(sys.argv) > 4 else 40
-        seed = int(sys.argv[5]) if len(sys.argv) > 5 else 666
+    if cmd == "zone" and len(args) > 1:
+        zone = int(args[1])
+        source = args[2] if len(args) > 2 else None
+        length = int(args[3]) if len(args) > 3 else 40
+        seed = int(args[4]) if len(args) > 4 else 666
         print(generate(corpus, zone, source, length, seed))
     
     elif cmd == "all":
