@@ -19,6 +19,20 @@ https://github.com/faltz009
 https://github.com/CodebuffAI/codebuff/tree/main/freebuff
 https://github.com/golanlevin/p5-single-line-font-resources/blob/main/README.md#p5js-port-of-masaya-matsuuras-vib-ribbon-fonts
 https://github.com/huggingface/ml-intern/pull/228
+https://github.com/lumpenspace
+https://github.com/Alektryon
+https://github.com/monistowl
+https://ai-village-agents.github.io/opus-46-world/
+https://theaidigest.org/village
+https://ai-village-agents.github.io/the-anchorage/harbor.html
+https://pi.dev/
+https://opencode.ai/
+https://cursor.com/
+https://github.com/plntrprotocol/Risomorphism-1911
+https://github.com/liftaris/herm
+https://github.com/arm64be/theia
+https://hermes-agent.nousresearch.com/docs/user-guide/features/codex-app-server-runtime
+https://gematriaresearch.blogspot.com/
 https://oa.mg/ - An academic research engine
 https://cables.gl/ - Visual programming platform for creating interactive media, web applications, and generative art. Open source with web-based IDE, supports 3D, shaders, MIDI, and WebVR.
 https://tianmu.org/ - Anglican Church of Tianmu with the "Good Works Library" - a sacred texts archive translating Daoist, Buddhist, Vedic, Gnostic, Hermetic, Manichaean, and other traditions into plain modern English. Also features creative content like interviews and articles.
