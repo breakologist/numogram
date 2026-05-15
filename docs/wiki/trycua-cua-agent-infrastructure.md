@@ -1,12 +1,26 @@
 ---
 title: "trycua/cua — Computer-Use Agent Infrastructure"
 tags: [cua, computer-use, agents, sandbox, mcp, trajectory, background-control, cua-bench, cua-driver, automation, empirical-validation, roguelike, audio]
-date: 2026-05-14
+date: 2026-05-15
 status: active
 source: https://github.com/trycua/cua
 ---
 
 # trycua/cua — Computer-Use Agent Infrastructure
+
+## ⚡ Current Installation Status (2026-05-15)
+
+| Component | Status | Notes |
+|-----------|--------|-------|
+| **cua CLI** (v0.1.8) | ✅ Installed | `~/.cua/bin/cua` — cloud sandbox management |
+| **cua Python SDK** | ❌ Blocked | Requires Python `<3.14`; system has 3.14.4 |
+| **Docker** | ✅ Available | Used as local sandbox equivalent |
+| **CuaBot** | ❌ Not installed | Optional, needs Node.js |
+| **cua-bench** | ❌ Not installed | Needs `uv` + separate checkout |
+
+The Python SDK (`cua-sandbox`, `cua-agent`) pins `requires-python = ">=3.11,<3.14"` and will not install on Python 3.14. A Hermes skill (`cua-setup`) documents the current state and provides Docker-based sandbox templates as a stopgap. Track https://github.com/trycua/cua for when Python 3.14 support lands.
+
+See [[cua-setup]] for the Hermes skill with install details and Docker sandbox templates.
 
 Open-source infrastructure for building, benchmarking, and deploying AI agents that control full desktops across macOS, Linux, and Windows. Provides unified sandboxes, SDKs, MCP drivers, and RL environments to train and evaluate computer-use agents **without disrupting foreground user workflows**.
 

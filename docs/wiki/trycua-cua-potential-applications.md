@@ -1,11 +1,15 @@
 ---
 title: "trycua/cua - Computer-Use Agent Infrastructure Applications"
 tags: [cua, computer-use, agents, sandbox, sdk, benchmark, mcp, trajectory, automation, empirical-validation]
-date: 2026-05-14
+date: 2026-05-15
 status: active
 ---
 
 # trycua/cua - Computer-Use Agent Infrastructure for Our Currents
+
+## ⚡ Current Installation Status
+
+See [[trycua-cua-agent-infrastructure]] for the live status table. **TL;DR:** cua CLI (v0.1.8) installed; Python SDK blocked on Python 3.14; Docker-based sandbox templates in [[cua-setup]] skill as stopgap.
 
 ## Overview
 **trycua/cua** is open-source infrastructure for building, benchmarking, and deploying AI agents that control full desktops across macOS, Linux, and Windows. It provides sandboxes, SDKs, MCP drivers, and benchmarks - all with a strict "no-foreground" contract that lets agents operate without disrupting user workflow.
