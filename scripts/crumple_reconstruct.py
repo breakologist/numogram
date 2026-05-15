@@ -46,7 +46,7 @@ from math import log2
 from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from xeno_jump import get_aq, digital_root, load_index, process_text
+from xeno_jump import get_aq, digital_root, load_corpus as load_index, process_text
 
 
 def run_trajectory(text, corpus_data, generations, seed,
