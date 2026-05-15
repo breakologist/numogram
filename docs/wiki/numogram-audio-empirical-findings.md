@@ -1,7 +1,7 @@
 ---
 title: "Numogram Audio — Empirical Findings"
 created: 2026-05-12
-last_updated: 2026-05-12
+last_updated: 2026-05-15
 status: active
 tags: [audio, empirical, numogram, mod-writer, sonification, I-Ching, paramita, demonstration, zone-audio, laws-of-sonification]
 related:
@@ -115,6 +115,7 @@ DHYĀNA + PRAJNĀ are also the loudest movements (−11.88, −11.49 dBFS), anch
 |----------|-------------|--------|-------|
 | `paramita_suite.wav` | Declared 👻 GHOST (12:44 session) | ✅ EXISTS (6.6 MB) | Was in `artifacts/` subdirectory — search was incomplete |
 | `features_zone*.wav` (9 files) | Declared 🚫 CORRUPTED | 🚫 CORRUPTED | Actually JSON feature dumps misnamed as `.wav` — Essentia-style MIR data |
+| **Corpus Conflation Ghost** | Flagged in 23:33 session | ✅ Real measurement, wrong corpus | Corpus B (44.1kHz mono, r=−0.2848) correctly measured but conflated with Corpus A (48kHz stereo, r=+0.8962). Both datasets coexist; attribution error, not fabrication error. *New Ghost Type formalized 2026-05-15.* |
 
 **Lesson:** Ghost audits require recursive filesystem search (`find` / `os.walk`), not just directory listing. Declaring a ghost without thorough search creates false negatives that propagate.
 
@@ -144,7 +145,28 @@ Zone variability (standard deviation of RMS across random seeds) **decreases wit
 
 **Ratio: 17.0 : 1** from Gate to Plex. This is structural — not a parameter choice but an emergent property of the zone→seed→generation pipeline.
 
-### 2.3 Third Law — Directional Duality
+### 2.3 Fifth Law — Regime Duality (Verified 2026-05-15)
+
+Two generation regimes produce **opposite energy gradients**. However, the zone-seed dataset now exists in two physically distinct forms on disk:
+
+| Corpus | Format | r | Channel | Evidence |
+|--------|--------|---|---------|----------|
+| **Corpus A** (session-1233) | 48kHz, stereo (373,440 fr) | **r = +0.8962** | Stereo combined | 9 WAVs, 2nd re-measurement confirmed |
+| **Corpus B** (artifacts-2333) | 44.1kHz, mono (343,098 fr) | **r = −0.2848** | Mono | Independently measured; *not* Ascending trend |
+
+**The Fifth Law holds for Corpus A only** (48kHz stereo). Corpus B has a flat (null) RMS trend. Both artifacts exist on disk simultaneously and cannot be substituted.
+
+**New Ghost Type — Corpus Conflation Ghost:**
+A prior session (23:33) measured Corpus B correctly (r=−0.28), but attributed it to corpus A's "Fifth Law" label, creating the illusion of falsification. The 23:33 session was *correctly* measuring its own dataset, just not the one cited.
+
+**2026-05-15 audit also found:**
+- 48kHz stereo seed WAVs are **asymmetric**: left channel dominates right by 3–11 dB per zone. Previous measurement likely left-channel-only.
+- Singleton corrected WAVs have a constant +3.52 dB RMS offset vs. prior session. The zone-correlation (r = −0.9844) is preserved.
+- Batch corrected (z3/z4/z5/z8/z9, 100 files): still strong descending regime (r = −0.9991) confirmed from zone means.
+- Classifier accuracy confirmed: 77.8% for both zone-seed (Corpus A) and singleton-corrected sets (Z3↔Z2, Z4↔Z3 confusion pair in both).
+- **VAE batch (z3/z4/z5/z8/z9, 100 files): 46%** — real measurement from `vae_corrected_classification_VERIFICATION_20260514.json`. Per-zone breakdown: Z3→Z1 (70% wrong), Z4→Z4 (70%), Z5→Z1 (75%), Z8→Z8 (60%), Z9→Z9 (90%). *Not hallucinated; updated 2026-05-15.*
+
+### 2.4 Third Law — Directional Duality
 
 Two valid generation regimes exist with **opposite energy gradients**:
 
@@ -155,9 +177,9 @@ Two valid generation regimes exist with **opposite energy gradients**:
 
 These are not contradictions. They emerge from different parameter spaces within the same mod-writer system. The ascending regime maps zone→pitch→octave; the descending regime uses a different seed structure with sub-zone overrides.
 
-### 2.4 Fourth Law — Energy-Frequency Coupling
+### 2.5 Fourth Law — Energy-Frequency Coupling
 
-**NEW.** Within any fixed generation regime, energy and dominant frequency are **anti-correlated**:
+**Verified 5×.** Within any fixed generation regime, energy and dominant frequency are **anti-correlated**:
 
 - **RMS vs zone number:** r = −0.984 (near-perfect negative)
 - **Frequency vs zone number:** r = +0.960 (near-perfect positive)

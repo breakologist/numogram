@@ -1,0 +1,136 @@
+{
+  "experiment": "sample-rate-normalization",
+  "timestamp": "2026-05-13T23:33:00",
+  "exp1_corrected_native": {
+    "total": 100,
+    "correct": 46,
+    "accuracy": 0.46,
+    "per_zone": {
+      "3": {
+        "correct": 2,
+        "total": 20,
+        "accuracy": 0.1
+      },
+      "4": {
+        "correct": 14,
+        "total": 20,
+        "accuracy": 0.7
+      },
+      "5": {
+        "correct": 0,
+        "total": 20,
+        "accuracy": 0.0
+      },
+      "8": {
+        "correct": 12,
+        "total": 20,
+        "accuracy": 0.6
+      },
+      "9": {
+        "correct": 18,
+        "total": 20,
+        "accuracy": 0.9
+      }
+    }
+  },
+  "exp2_originals_native": {
+    "total": 25,
+    "correct": 19,
+    "accuracy": 0.76,
+    "per_zone": {
+      "3": {
+        "correct": 4,
+        "total": 5,
+        "accuracy": 0.8
+      },
+      "4": {
+        "correct": 4,
+        "total": 5,
+        "accuracy": 0.8
+      },
+      "5": {
+        "correct": 1,
+        "total": 5,
+        "accuracy": 0.2
+      },
+      "8": {
+        "correct": 5,
+        "total": 5,
+        "accuracy": 1.0
+      },
+      "9": {
+        "correct": 5,
+        "total": 5,
+        "accuracy": 1.0
+      }
+    }
+  },
+  "exp3_corrected_fixed": {
+    "total": 100,
+    "correct": 34,
+    "accuracy": 0.34,
+    "per_zone": {
+      "3": {
+        "correct": 0,
+        "total": 20,
+        "accuracy": 0.0
+      },
+      "4": {
+        "correct": 4,
+        "total": 20,
+        "accuracy": 0.2
+      },
+      "5": {
+        "correct": 10,
+        "total": 20,
+        "accuracy": 0.5
+      },
+      "8": {
+        "correct": 20,
+        "total": 20,
+        "accuracy": 1.0
+      },
+      "9": {
+        "correct": 0,
+        "total": 20,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "exp4_originals_fixed": {
+    "total": 25,
+    "correct": 9,
+    "accuracy": 0.36,
+    "per_zone": {
+      "3": {
+        "correct": 0,
+        "total": 5,
+        "accuracy": 0.0
+      },
+      "4": {
+        "correct": 2,
+        "total": 5,
+        "accuracy": 0.4
+      },
+      "5": {
+        "correct": 2,
+        "total": 5,
+        "accuracy": 0.4
+      },
+      "8": {
+        "correct": 5,
+        "total": 5,
+        "accuracy": 1.0
+      },
+      "9": {
+        "correct": 0,
+        "total": 5,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "gap_native": 0.3,
+  "gap_fixed": 0.019999999999999962,
+  "files_corrected": 100,
+  "files_originals": 25
+}

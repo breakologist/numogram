@@ -14,42 +14,42 @@ status: active
 
 **Missing: 34 numerical entries** (not documented with their AQ = value in the wiki)
 
-| # | Term(s) | Notes / Wiki presence |
-|---|---------|-----------------------|
-| 31 | AL | Term appears in wiki contexts but not with its AQ value |
-| 52 | IAO | Term appears (Iao) but not with AQ=52 |
-| 54 | kek | — |
-| 63 | lama | Term appears (Tibetan) but not as AQ entry |
-| 66 | ten, lol | Terms referenced (ten=66 appears in gate discussions) but lol not documented |
-| 77 | eloi | — |
-| 83 | Time, Doom, Death, Decay, Out | High significance — these are the 5 words with AQ=83, none documented |
-| 89 | Faith | — |
-| 100 | true, Santa | — |
-| 101 | three | Mentioned as "three" but not as AQ=101 mapping |
-| 121 | the one | — |
-| 128 | yi jing | Term appears but not as AQ=128 |
-| 137 | autism, english, lucifer | **Notable:** 'autism' is a recent addition; english/lucifer appear elsewhere |
-| 144 | problem | — |
-| 151 | abracadabra | — |
-| 153 | Hermetic | Appears in skill names but AQ=153 not explicit |
-| 166 | Solomon | — |
-| 174 | Numogram | Term appears extensively but AQ=174 not stated |
-| 180 | Anglossic | — |
-| 189 | CCCXXXIII, true faith, Hell Machine | CCCXXXIII referenced but not as AQ=189 |
-| 210 | Doomcrypt, fruitless, Beast Pulse | Doomcrypt is a key term in game design |
-| 222 | savoir faire | — |
-| 234 | the numogram, Baroqwerty | Numogram appears but AQ=234 not explicit |
-| 235 | numerology | — |
-| 250 | Jesus Christ, Iota Alpha Omega | — |
-| 300 | fifteen fifty one | — |
-| 313 | twelve fifty one | — |
-| 328 | Alphanumeric Qabbala | Full term appears but AQ not documented |
-| 341 | Baroque Futurism | — |
-| 360 | life is computation, the decimal labyrinth, the tree of knowledge, two five dual snakes, hermetic cosmogony, Harmonic Syzygies | **High:** several of these phrases appear but not with the AQ=360 mapping |
-| 369 | the three sided shapes, that is all hassan sabba, Soy Simulation | — |
-| 567 | the questioning angel is the key | — |
-| 666 | to be or not to be…, tree of knowledge of good and evil, CCRU (variant), Of mans first disobedience… | **High:** 666 is central and already heavily discussed, but the updated phrasing variants are missing |
-| 777 | And God said…, do what thou wilt… | **High:** major occult references |
+| #   | Term(s)                                                                                                                        | Notes / Wiki presence                                                                                 |
+| --- | ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| 31  | AL                                                                                                                             | Term appears in wiki contexts but not with its AQ value                                               |
+| 52  | IAO                                                                                                                            | Term appears (Iao) but not with AQ=52                                                                 |
+| 54  | kek                                                                                                                            | —                                                                                                     |
+| 63  | lama                                                                                                                           | Term appears (Tibetan) but not as AQ entry                                                            |
+| 66  | ten, lol                                                                                                                       | Terms referenced (ten=66 appears in gate discussions) but lol not documented                          |
+| 77  | eloi                                                                                                                           | —                                                                                                     |
+| 83  | Time, Doom, Death, Decay, Out                                                                                                  | High significance — these are the 5 words with AQ=83, none documented                                 |
+| 89  | Faith                                                                                                                          | —                                                                                                     |
+| 100 | true, Santa                                                                                                                    | —                                                                                                     |
+| 101 | three                                                                                                                          | Mentioned as "three" but not as AQ=101 mapping                                                        |
+| 121 | the one                                                                                                                        | —                                                                                                     |
+| 128 | yi jing                                                                                                                        | Term appears but not as AQ=128                                                                        |
+| 137 | autism, english, lucifer                                                                                                       | **Notable:** 'autism' is a recent addition; english/lucifer appear elsewhere                          |
+| 144 | problem                                                                                                                        | —                                                                                                     |
+| 151 | abracadabra                                                                                                                    | —                                                                                                     |
+| 153 | Hermetic                                                                                                                       | Appears in skill names but AQ=153 not explicit                                                        |
+| 166 | Solomon                                                                                                                        | —                                                                                                     |
+| 174 | Numogram                                                                                                                       | Term appears extensively but AQ=174 not stated                                                        |
+| 180 | Anglossic                                                                                                                      | —                                                                                                     |
+| 189 | CCCXXXIII, true faith, Hell Machine                                                                                            | CCCXXXIII referenced but not as AQ=189                                                                |
+| 210 | Doomcrypt, fruitless, Beast Pulse                                                                                              | Doomcrypt is a key term in game design                                                                |
+| 222 | savoir faire                                                                                                                   | —                                                                                                     |
+| 234 | the numogram, Baroqwerty                                                                                                       | Numogram appears but AQ=234 not explicit                                                              |
+| 235 | numerology                                                                                                                     | —                                                                                                     |
+| 250 | Jesus Christ, Iota Alpha Omega                                                                                                 | —                                                                                                     |
+| 300 | fifteen fifty one                                                                                                              | —                                                                                                     |
+| 313 | twelve fifty one                                                                                                               | —                                                                                                     |
+| 328 | Alphanumeric Qabbala                                                                                                           | Full term appears but AQ not documented                                                               |
+| 341 | Baroque Futurism                                                                                                               | —                                                                                                     |
+| 360 | life is computation, the decimal labyrinth, the tree of knowledge, two five dual snakes, hermetic cosmogony, Harmonic Syzygies | **High:** several of these phrases appear but not with the AQ=360 mapping                             |
+| 369 | the three sided shapes, that is all hassan sabba, Soy Simulation                                                               | —                                                                                                     |
+| 567 | the questioning angel is the key                                                                                               | —                                                                                                     |
+| 666 | to be or not to be…, tree of knowledge of good and evil, CCRU (variant), Of mans first disobedience…                           | **High:** 666 is central and already heavily discussed, but the updated phrasing variants are missing |
+| 777 | And God said…, do what thou wilt…                                                                                              | **High:** major occult references                                                                     |
 
 **Pattern gaps:**
 
@@ -69,19 +69,19 @@ From the Grok conversation mining @xenocosmography and @doomcrypt's X posts, che
 
 ### Core Equivalences (already in updated dictionary)
 
-| Term | AQ | Notes |
-|------|-----|-------|
-| Xenocosmography | 333 | Handle = Angelic Materialism = English Occultism = Gnostic Calvinism |
-| Doomcrypt | 210 | Handle + Beast Pulse = 210 (shared sigil between accounts) |
-| Angelic Materialism | 333 | @doomcrypt bio sigil |
-| Baroqwerty | 234 | QWERTY-derived = The Numogram |
-| The Questioning Angel is the Key | 567 | Oracular statement |
-| Autism | 137 | Reflective/sigilic |
-| True Faith | 189 | Also CCCXXXIII = 189 |
-| Hell Machine | 189 | Same gate as True Faith |
-| CCCXXXIII | 189 | Roman numeral form collapses to same value |
-| Beast Pulse | 210 | Shared term between accounts |
-| Iota Alpha Omega | 250 | Also Jesus Christ = 250 |
+| Term                             | AQ  | Notes                                                                |
+| -------------------------------- | --- | -------------------------------------------------------------------- |
+| Xenocosmography                  | 333 | Handle = Angelic Materialism = English Occultism = Gnostic Calvinism |
+| Doomcrypt                        | 210 | Handle + Beast Pulse = 210 (shared sigil between accounts)           |
+| Angelic Materialism              | 333 | @doomcrypt bio sigil                                                 |
+| Baroqwerty                       | 234 | QWERTY-derived = The Numogram                                        |
+| The Questioning Angel is the Key | 567 | Oracular statement                                                   |
+| Autism                           | 137 | Reflective/sigilic                                                   |
+| True Faith                       | 189 | Also CCCXXXIII = 189                                                 |
+| Hell Machine                     | 189 | Same gate as True Faith                                              |
+| CCCXXXIII                        | 189 | Roman numeral form collapses to same value                           |
+| Beast Pulse                      | 210 | Shared term between accounts                                         |
+| Iota Alpha Omega                 | 250 | Also Jesus Christ = 250                                              |
 
 ### Synx Values (from ciphers.news)
 

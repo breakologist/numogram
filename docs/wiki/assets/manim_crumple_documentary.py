@@ -18,33 +18,11 @@ Assets required (all present in docs/wiki/assets/):
   - trajectory_varentropy_both.json (for batch stats)
 """
 
-# ─── Engine selection: prefer manimlib (manimgl) ─────────────────────────────
-try:
-    from manimlib import *
-    _ENGINE = 'manimgl'
-except Exception:
-    from manim import *
-    _ENGINE = 'manim'
-
-# ─── VideoMobject availability ────────────────────────────────────────────────
-try:
-    if _ENGINE == 'manimgl':
-        from manimlib import VideoMobject
-    else:
-        from manim import VideoMobject
-    _HAS_VIDEO = True
-except ImportError:
-    VideoMobject = None
-    _HAS_VIDEO = False
-
-# ─── Compatibility aliases (manimgl vs Community) ─────────────────────────────
-if _ENGINE == 'manimgl':
-    # Create is not exported by manimlib; use ShowCreation
-    if 'Create' not in globals():
-        Create = ShowCreation
-
+from manim import *
+from manim import VideoMobject  # for embedded clips
 import json, os
 
+# ─── Asset paths ──────────────────────────────────────────────────────────────
 ASSET_DIR = "/home/etym/numogram/docs/wiki/assets"
 ZONE_SPIRAL = os.path.join(ASSET_DIR, "ZoneSpiral.mp4")
 SYZYGY_CASCADE = os.path.join(ASSET_DIR, "SyzygyCascade.mp4")
@@ -187,26 +165,21 @@ class CrumpleDocumentary(Scene):
         self.play(FadeOut(VGroup(dots, reg_line, r_text, scatter_axes, corr_title)))
 
         # ── ACT V: Epilogue ──────────────────────────────────────────────────────
-        # Text kwargs: line_spacing is Community‑only
-        text_kwargs = dict(font_size=28, color=LAVENDER, font="monospace")
-        if _ENGINE == 'manim':
-            text_kwargs['line_spacing'] = 1.2
         epigraph = Text(
-            "The AQ checksum is the hash;\n"
-            "the xeno-jump is the lossy compression.\n"
+            "The AQ checksum is the hash; the xeno-jump is the lossy compression.\n"
             "Reconstruction measures the loss.",
-            **text_kwargs
+            font_size=32, color=LAVENDER, font="monospace", line_spacing=1.2
         )
-        epigraph.to_edge(UP, buff=0.5)
+        epigraph.to_edge(UP)
         self.play(Write(epigraph), run_time=3)
         self.wait(2)
 
         credits = VGroup(
-            Text("Crumple/Reconstruct Protocol", font_size=32, color=GOLD, font="monospace"),
-            Text("Manim Documentary by Hermes-AQ", font_size=26, color=CYAN, font="monospace"),
-            Text("breakologist/numogram · Hermes Agent v2.0", font_size=22, color=GREEN, font="monospace"),
-        ).arrange(DOWN, buff=0.3)
-        credits.next_to(epigraph, DOWN, buff=0.4)
+            Text("Crumple/Reconstruct Protocol", font_size=36, color=GOLD, font="monospace"),
+            Text("Manim Documentary by Hermes-AQ", font_size=28, color=CYAN, font="monospace"),
+            Text("breakologist/numogram · Hermes Agent v2.0", font_size=24, color=GREEN, font="monospace"),
+        ).arrange(DOWN, buff=0.4)
+        credits.next_to(epigraph, DOWN, buff=1.0)
         self.play(FadeIn(credits, lag_ratio=0.3))
         self.wait(4)
 
@@ -216,26 +189,22 @@ class CrumpleDocumentary(Scene):
 
     # ── helper ─────────────────────────────────────────────────────────────────
     def play_video_clip(self, path: str, run_time: float):
-        """Embed an MP4 if VideoMobject is available; otherwise show a placeholder.
-        Returns the mobject (video or placeholder) which remains in the scene;
-        caller is responsible for fading it out."""
-        if _HAS_VIDEO:
+        """Embed an MP4 if VideoMobject is available; otherwise show a placeholder."""
+        try:
+            from manim import VideoMobject, Create, FadeOut
             video = VideoMobject(filename=path, speed=1.0)
             video.set_width(14).set_height(8, stretch=True)
-            video.set_z_index(0)  # background layer; text typically has default 0 but added later → draws on top
             self.play(Create(video), run_time=0.5)
             self.wait(run_time - 0.5)
+            self.play(FadeOut(video), run_time=0.5)
             return video
-        else:
-            # Fallback: show a placeholder rectangle with filename and play icon
-            rect = Rectangle(
-                width=14, height=8,
-                fill_color="#111111", fill_opacity=1,
-                stroke_color=CYAN, stroke_width=2
-            )
+        except ImportError:
+            # Fallback: show a placeholder with filename
+            rect = Rectangle(width=14, height=8, fill_color="#111111", fill_opacity=1, stroke_color=CYAN, stroke_width=2)
             label = Text(os.path.basename(path), font_size=36, color=GOLD, font="monospace")
-            icon   = Text("▶", font_size=72, color=GREEN)
-            placeholder = VGroup(rect, label, icon).arrange(DOWN, buff=0.3)
-            self.play(FadeIn(placeholder), run_time=0.5)
+            play_tri = Text("▶", font_size=72, color=GREEN)
+            vgroup = VGroup(rect, label, play_tri).arrange(DOWN, buff=0.3)
+            self.play(FadeIn(vgroup), run_time=0.5)
             self.wait(run_time - 0.5)
-            return placeholder
+            self.play(FadeOut(vgroup), run_time=0.5)
+            return vgroup
