@@ -1,0 +1,1915 @@
+{
+  "source": "Tianmu Yijing Oracle (https://lab.tianmu.org/yijing/)",
+  "translator": "Dalai Moo Naomi",
+  "extracted": "2026-05-16",
+  "hexagrams": {
+    "1": {
+      "num": 1,
+      "unicode": "䷀",
+      "binary": "111111",
+      "binary_repr": "111/111",
+      "lower_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "upper_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "name_cn": "乾",
+      "pinyin": "Qián",
+      "name_en": "The Creative",
+      "judgment": "Supreme success through perseverance. The creative force moves ceaselessly, generating all things. Strength upon strength.",
+      "image": "Heaven moves with vigour. The wise one never ceases to strengthen themselves.",
+      "king_wen": 1,
+      "zone_canonical": 1,
+      "syzygy_partner": 8,
+      "syzygy": "1::8 (Murrumur/29)"
+    },
+    "2": {
+      "num": 2,
+      "unicode": "䷁",
+      "binary": "000000",
+      "binary_repr": "000/000",
+      "lower_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "upper_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "name_cn": "坤",
+      "pinyin": "Kūn",
+      "name_en": "The Receptive",
+      "judgment": "Devotion brings supreme success. The mare's perseverance is favourable. Yield and support; find strength in gentleness.",
+      "image": "The earth's condition is receptive devotion. The wise one sustains all things with generous virtue.",
+      "king_wen": 2,
+      "zone_canonical": 2,
+      "syzygy_partner": 7,
+      "syzygy": "2::7 (Oddubb/23)"
+    },
+    "3": {
+      "num": 3,
+      "unicode": "䷂",
+      "binary": "010001",
+      "binary_repr": "010/001",
+      "lower_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "upper_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "name_cn": "屯",
+      "pinyin": "Zhūn",
+      "name_en": "Difficulty at the Beginning",
+      "judgment": "Great success if you persevere. Do not act alone; seek helpers. Like a seedling pushing through frozen ground.",
+      "image": "Clouds and thunder gather. The wise one brings order out of confusion.",
+      "king_wen": 3,
+      "zone_canonical": 3,
+      "syzygy_partner": 6,
+      "syzygy": "3::6 (Djynxx/18)"
+    },
+    "4": {
+      "num": 4,
+      "unicode": "䷃",
+      "binary": "100010",
+      "binary_repr": "100/010",
+      "lower_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "upper_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "name_cn": "蒙",
+      "pinyin": "Méng",
+      "name_en": "Youthful Folly",
+      "judgment": "Not I seek the young fool — the young fool seeks me. Sincerity is needed. Accept instruction with humility.",
+      "image": "A spring emerges at the foot of the mountain. The wise one cultivates character through decisive action.",
+      "king_wen": 4,
+      "zone_canonical": 4,
+      "syzygy_partner": 5,
+      "syzygy": "4::5 (Katak/14)"
+    },
+    "5": {
+      "num": 5,
+      "unicode": "䷄",
+      "binary": "010111",
+      "binary_repr": "010/111",
+      "lower_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "upper_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "name_cn": "需",
+      "pinyin": "Xū",
+      "name_en": "Waiting",
+      "judgment": "Sincerity brings brilliant success. Cross the great water when the time is right. Nourish yourself while waiting.",
+      "image": "Clouds rise to heaven. The wise one eats, drinks, and is joyful while waiting.",
+      "king_wen": 5,
+      "zone_canonical": 5,
+      "syzygy_partner": 4,
+      "syzygy": "5::4 (Katak/14)"
+    },
+    "6": {
+      "num": 6,
+      "unicode": "䷅",
+      "binary": "111010",
+      "binary_repr": "111/010",
+      "lower_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "upper_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "name_cn": "訟",
+      "pinyin": "Sòng",
+      "name_en": "Conflict",
+      "judgment": "Sincerity is obstructed. Pause halfway — do not push to the end. Seek a wise mediator.",
+      "image": "Heaven and water move in opposite directions. The wise one considers the beginning before undertaking affairs.",
+      "king_wen": 6,
+      "zone_canonical": 6,
+      "syzygy_partner": 3,
+      "syzygy": "6::3 (Djynxx/18)"
+    },
+    "7": {
+      "num": 7,
+      "unicode": "䷆",
+      "binary": "000010",
+      "binary_repr": "000/010",
+      "lower_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "upper_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "name_cn": "師",
+      "pinyin": "Shī",
+      "name_en": "The Army",
+      "judgment": "The army needs discipline and an experienced leader. Correct conduct brings good fortune. Strength must serve righteousness.",
+      "image": "Water stored within the earth. The wise one is generous to the people and gathers multitudes.",
+      "king_wen": 7,
+      "zone_canonical": 7,
+      "syzygy_partner": 2,
+      "syzygy": "7::2 (Oddubb/23)"
+    },
+    "8": {
+      "num": 8,
+      "unicode": "䷇",
+      "binary": "010000",
+      "binary_repr": "010/000",
+      "lower_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "upper_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "name_cn": "比",
+      "pinyin": "Bǐ",
+      "name_en": "Holding Together",
+      "judgment": "Good fortune. Examine yourself — are you truly devoted? Latecomers meet misfortune. Unity requires a centre.",
+      "image": "Water upon the earth flows together. The ancient kings established myriad states and maintained close ties with the feudal lords.",
+      "king_wen": 8,
+      "zone_canonical": 8,
+      "syzygy_partner": 1,
+      "syzygy": "8::1 (Murrumur/29)"
+    },
+    "9": {
+      "num": 9,
+      "unicode": "䷈",
+      "binary": "110111",
+      "binary_repr": "110/111",
+      "lower_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "upper_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "name_cn": "小畜",
+      "pinyin": "Xiǎo Chù",
+      "name_en": "Small Taming",
+      "judgment": "Success through gentle restraint. Dense clouds but no rain yet from the western regions. Patience — influence grows slowly.",
+      "image": "Wind blows across heaven. The wise one refines the outward expression of their virtue.",
+      "king_wen": 9,
+      "zone_canonical": 9,
+      "syzygy_partner": 0,
+      "syzygy": "9::0 (Uttunul/36)"
+    },
+    "10": {
+      "num": 10,
+      "unicode": "䷉",
+      "binary": "111011",
+      "binary_repr": "111/011",
+      "lower_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "upper_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "name_cn": "履",
+      "pinyin": "Lǚ",
+      "name_en": "Treading",
+      "judgment": "Tread upon the tiger's tail with care. If one does not provoke the tiger, success follows. Propriety protects.",
+      "image": "Heaven above, the lake below. The wise one distinguishes high and low and settles the hearts of the people.",
+      "king_wen": 10,
+      "zone_canonical": 1,
+      "syzygy_partner": 8,
+      "syzygy": "1::8 (Murrumur/29)"
+    },
+    "11": {
+      "num": 11,
+      "unicode": "䷊",
+      "binary": "000111",
+      "binary_repr": "000/111",
+      "lower_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "upper_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "name_cn": "泰",
+      "pinyin": "Tài",
+      "name_en": "Peace",
+      "judgment": "The small departs, the great approaches. Good fortune and success. Heaven and earth unite — all things flourish.",
+      "image": "Heaven and earth unite. The ruler channels the way of heaven and earth to aid the people.",
+      "king_wen": 11,
+      "zone_canonical": 2,
+      "syzygy_partner": 7,
+      "syzygy": "2::7 (Oddubb/23)"
+    },
+    "12": {
+      "num": 12,
+      "unicode": "䷋",
+      "binary": "111000",
+      "binary_repr": "111/000",
+      "lower_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "upper_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "name_cn": "否",
+      "pinyin": "Pǐ",
+      "name_en": "Standstill",
+      "judgment": "Standstill — the way of inferior people prevails. Perseverance of the wise one. The great departs, the small approaches.",
+      "image": "Heaven and earth do not unite. The wise one withdraws into their inner worth to avoid difficulties.",
+      "king_wen": 12,
+      "zone_canonical": 3,
+      "syzygy_partner": 6,
+      "syzygy": "3::6 (Djynxx/18)"
+    },
+    "13": {
+      "num": 13,
+      "unicode": "䷌",
+      "binary": "111101",
+      "binary_repr": "111/101",
+      "lower_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "upper_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "name_cn": "同人",
+      "pinyin": "Tóng Rén",
+      "name_en": "Fellowship",
+      "judgment": "Fellowship in the open brings success. Cross the great water. Strength through shared purpose.",
+      "image": "Heaven together with fire. The wise one organises clans and distinguishes things.",
+      "king_wen": 13,
+      "zone_canonical": 4,
+      "syzygy_partner": 5,
+      "syzygy": "4::5 (Katak/14)"
+    },
+    "14": {
+      "num": 14,
+      "unicode": "䷍",
+      "binary": "101111",
+      "binary_repr": "101/111",
+      "lower_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "upper_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "name_cn": "大有",
+      "pinyin": "Dà Yǒu",
+      "name_en": "Great Possession",
+      "judgment": "Supreme success. Fire in the heavens shines far. Abundance flows to the magnanimous.",
+      "image": "Fire above heaven. The wise one curbs evil and promotes good, in accordance with the will of heaven.",
+      "king_wen": 14,
+      "zone_canonical": 5,
+      "syzygy_partner": 4,
+      "syzygy": "5::4 (Katak/14)"
+    },
+    "15": {
+      "num": 15,
+      "unicode": "䷎",
+      "binary": "000100",
+      "binary_repr": "000/100",
+      "lower_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "upper_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "name_cn": "謙",
+      "pinyin": "Qiān",
+      "name_en": "Modesty",
+      "judgment": "Modesty brings success to completion. The mountain concealed within the earth. The humble are exalted.",
+      "image": "The mountain rests within the earth. The wise one reduces what is excessive and increases what is lacking.",
+      "king_wen": 15,
+      "zone_canonical": 6,
+      "syzygy_partner": 3,
+      "syzygy": "6::3 (Djynxx/18)"
+    },
+    "16": {
+      "num": 16,
+      "unicode": "䷏",
+      "binary": "001000",
+      "binary_repr": "001/000",
+      "lower_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "upper_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "name_cn": "豫",
+      "pinyin": "Yù",
+      "name_en": "Enthusiasm",
+      "judgment": "It furthers one to appoint helpers and set armies marching. Action taken with enthusiasm and correct timing.",
+      "image": "Thunder emerges from the earth with force. The ancient kings made music to honour virtue.",
+      "king_wen": 16,
+      "zone_canonical": 7,
+      "syzygy_partner": 2,
+      "syzygy": "7::2 (Oddubb/23)"
+    },
+    "17": {
+      "num": 17,
+      "unicode": "䷐",
+      "binary": "011001",
+      "binary_repr": "011/001",
+      "lower_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "upper_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "name_cn": "隨",
+      "pinyin": "Suí",
+      "name_en": "Following",
+      "judgment": "Supreme success through perseverance. No blame. Adapt to the time — know when to lead and when to follow.",
+      "image": "Thunder within the lake. The wise one goes indoors at nightfall to rest.",
+      "king_wen": 17,
+      "zone_canonical": 8,
+      "syzygy_partner": 1,
+      "syzygy": "8::1 (Murrumur/29)"
+    },
+    "18": {
+      "num": 18,
+      "unicode": "䷑",
+      "binary": "100110",
+      "binary_repr": "100/110",
+      "lower_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "upper_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "name_cn": "蠱",
+      "pinyin": "Gǔ",
+      "name_en": "Work on What Has Been Spoiled",
+      "judgment": "Great success. Cross the great water. Consider three days before and three days after the turning point.",
+      "image": "Wind blows at the foot of the mountain. The wise one stirs up the people and nourishes their virtue.",
+      "king_wen": 18,
+      "zone_canonical": 9,
+      "syzygy_partner": 0,
+      "syzygy": "9::0 (Uttunul/36)"
+    },
+    "19": {
+      "num": 19,
+      "unicode": "䷒",
+      "binary": "000011",
+      "binary_repr": "000/011",
+      "lower_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "upper_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "name_cn": "臨",
+      "pinyin": "Lín",
+      "name_en": "Approach",
+      "judgment": "Great success through perseverance. But when the eighth month comes, there will be misfortune. Use this time well.",
+      "image": "The earth above the lake. The wise one is inexhaustible in teaching and boundless in protecting the people.",
+      "king_wen": 19,
+      "zone_canonical": 1,
+      "syzygy_partner": 8,
+      "syzygy": "1::8 (Murrumur/29)"
+    },
+    "20": {
+      "num": 20,
+      "unicode": "䷓",
+      "binary": "110000",
+      "binary_repr": "110/000",
+      "lower_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "upper_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "name_cn": "觀",
+      "pinyin": "Guān",
+      "name_en": "Contemplation",
+      "judgment": "The ablution has been made but not yet the offering. Look within with sincerity. Observe the deeper pattern.",
+      "image": "Wind blows over the earth. The ancient kings visited all regions, observed the people, and gave instruction.",
+      "king_wen": 20,
+      "zone_canonical": 2,
+      "syzygy_partner": 7,
+      "syzygy": "2::7 (Oddubb/23)"
+    },
+    "21": {
+      "num": 21,
+      "unicode": "䷔",
+      "binary": "101001",
+      "binary_repr": "101/001",
+      "lower_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "upper_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "name_cn": "噬嗑",
+      "pinyin": "Shì Kè",
+      "name_en": "Biting Through",
+      "judgment": "Success. Use legal proceedings. An obstacle must be forcefully removed. Justice applied with clarity.",
+      "image": "Thunder and lightning. The ancient kings made penalties clear and enforced the laws.",
+      "king_wen": 21,
+      "zone_canonical": 3,
+      "syzygy_partner": 6,
+      "syzygy": "3::6 (Djynxx/18)"
+    },
+    "22": {
+      "num": 22,
+      "unicode": "䷕",
+      "binary": "100101",
+      "binary_repr": "100/101",
+      "lower_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "upper_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "name_cn": "賁",
+      "pinyin": "Bì",
+      "name_en": "Grace",
+      "judgment": "Success in small matters. Grace is the beauty of form, not substance. Adorn but do not depend on adornment.",
+      "image": "Fire at the foot of the mountain. The wise one clarifies governance but dares not judge with severity alone.",
+      "king_wen": 22,
+      "zone_canonical": 4,
+      "syzygy_partner": 5,
+      "syzygy": "4::5 (Katak/14)"
+    },
+    "23": {
+      "num": 23,
+      "unicode": "䷖",
+      "binary": "100000",
+      "binary_repr": "100/000",
+      "lower_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "upper_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "name_cn": "剝",
+      "pinyin": "Bō",
+      "name_en": "Splitting Apart",
+      "judgment": "Not favourable to go anywhere. The inferior erodes the foundation. Wait — the cycle will turn. Strengthen what remains.",
+      "image": "The mountain rests upon the earth. Those above secure their position by being generous to those below.",
+      "king_wen": 23,
+      "zone_canonical": 5,
+      "syzygy_partner": 4,
+      "syzygy": "5::4 (Katak/14)"
+    },
+    "24": {
+      "num": 24,
+      "unicode": "䷗",
+      "binary": "000001",
+      "binary_repr": "000/001",
+      "lower_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "upper_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "name_cn": "復",
+      "pinyin": "Fù",
+      "name_en": "Return",
+      "judgment": "Success. Coming and going without error. The return of the light after darkness. The turning point has arrived.",
+      "image": "Thunder within the earth. The ancient kings closed the passes at the solstice and let all rest.",
+      "king_wen": 24,
+      "zone_canonical": 6,
+      "syzygy_partner": 3,
+      "syzygy": "6::3 (Djynxx/18)"
+    },
+    "25": {
+      "num": 25,
+      "unicode": "䷘",
+      "binary": "111001",
+      "binary_repr": "111/001",
+      "lower_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "upper_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "name_cn": "無妄",
+      "pinyin": "Wú Wàng",
+      "name_en": "Innocence",
+      "judgment": "Supreme success through perseverance. Act without ulterior motive. Unexpected misfortune strikes the reckless.",
+      "image": "Thunder rolls beneath heaven. All things receive their true nature. The ancient kings nourished all beings in accordance with the season.",
+      "king_wen": 25,
+      "zone_canonical": 7,
+      "syzygy_partner": 2,
+      "syzygy": "7::2 (Oddubb/23)"
+    },
+    "26": {
+      "num": 26,
+      "unicode": "䷙",
+      "binary": "100111",
+      "binary_repr": "100/111",
+      "lower_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "upper_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "name_cn": "大畜",
+      "pinyin": "Dà Chù",
+      "name_en": "Great Taming",
+      "judgment": "Perseverance brings reward. Do not eat at home — go forth and serve. Cross the great water. Accumulate wisdom.",
+      "image": "Heaven within the mountain. The wise one studies the words and deeds of the past to accumulate virtue.",
+      "king_wen": 26,
+      "zone_canonical": 8,
+      "syzygy_partner": 1,
+      "syzygy": "8::1 (Murrumur/29)"
+    },
+    "27": {
+      "num": 27,
+      "unicode": "䷚",
+      "binary": "100001",
+      "binary_repr": "100/001",
+      "lower_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "upper_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "name_cn": "頤",
+      "pinyin": "Yí",
+      "name_en": "Nourishment",
+      "judgment": "Perseverance brings good fortune. Consider what nourishes — both body and mind. Watch the mouth: what goes in and out.",
+      "image": "Thunder at the foot of the mountain. The wise one is careful of speech and temperate in eating and drinking.",
+      "king_wen": 27,
+      "zone_canonical": 9,
+      "syzygy_partner": 0,
+      "syzygy": "9::0 (Uttunul/36)"
+    },
+    "28": {
+      "num": 28,
+      "unicode": "䷛",
+      "binary": "011110",
+      "binary_repr": "011/110",
+      "lower_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "upper_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "name_cn": "大過",
+      "pinyin": "Dà Guò",
+      "name_en": "Great Exceeding",
+      "judgment": "The ridgepole sags. It furthers one to have somewhere to go. Success through extraordinary measures.",
+      "image": "The lake submerges the trees. The wise one stands alone without fear and withdraws from the world without regret.",
+      "king_wen": 28,
+      "zone_canonical": 1,
+      "syzygy_partner": 8,
+      "syzygy": "1::8 (Murrumur/29)"
+    },
+    "29": {
+      "num": 29,
+      "unicode": "䷜",
+      "binary": "010010",
+      "binary_repr": "010/010",
+      "lower_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "upper_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "name_cn": "坎",
+      "pinyin": "Kǎn",
+      "name_en": "The Abysmal Water",
+      "judgment": "Sincerity in the heart brings success. Danger upon danger. Flow like water — maintain your inner truth through peril.",
+      "image": "Water flows ceaselessly. The wise one walks in lasting virtue and practises the art of teaching.",
+      "king_wen": 29,
+      "zone_canonical": 2,
+      "syzygy_partner": 7,
+      "syzygy": "2::7 (Oddubb/23)"
+    },
+    "30": {
+      "num": 30,
+      "unicode": "䷝",
+      "binary": "101101",
+      "binary_repr": "101/101",
+      "lower_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "upper_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "name_cn": "離",
+      "pinyin": "Lí",
+      "name_en": "The Clinging Fire",
+      "judgment": "Perseverance brings success. Tend the cow — cultivate docility. Fire depends on fuel; clarity depends on what sustains it.",
+      "image": "Brightness rises twice. The great one illuminates the four directions with continuing brightness.",
+      "king_wen": 30,
+      "zone_canonical": 3,
+      "syzygy_partner": 6,
+      "syzygy": "3::6 (Djynxx/18)"
+    },
+    "31": {
+      "num": 31,
+      "unicode": "䷞",
+      "binary": "011100",
+      "binary_repr": "011/100",
+      "lower_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "upper_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "name_cn": "咸",
+      "pinyin": "Xián",
+      "name_en": "Influence",
+      "judgment": "Success. Perseverance furthers. Taking a maiden to wife brings good fortune. Mutual attraction and resonance.",
+      "image": "The lake upon the mountain. The wise one receives others with openness.",
+      "king_wen": 31,
+      "zone_canonical": 4,
+      "syzygy_partner": 5,
+      "syzygy": "4::5 (Katak/14)"
+    },
+    "32": {
+      "num": 32,
+      "unicode": "䷟",
+      "binary": "001110",
+      "binary_repr": "001/110",
+      "lower_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "upper_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "name_cn": "恆",
+      "pinyin": "Héng",
+      "name_en": "Duration",
+      "judgment": "Success without blame. Perseverance furthers. Movement within constancy. The way endures through all change.",
+      "image": "Thunder and wind strengthen each other. The wise one stands firm and does not change direction.",
+      "king_wen": 32,
+      "zone_canonical": 5,
+      "syzygy_partner": 4,
+      "syzygy": "5::4 (Katak/14)"
+    },
+    "33": {
+      "num": 33,
+      "unicode": "䷠",
+      "binary": "111100",
+      "binary_repr": "111/100",
+      "lower_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "upper_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "name_cn": "遯",
+      "pinyin": "Dùn",
+      "name_en": "Retreat",
+      "judgment": "Success in small matters. Strategic withdrawal at the right moment. The wise one retreats with dignity.",
+      "image": "Mountain under heaven. The wise one keeps the inferior at a distance — not angrily but with reserve.",
+      "king_wen": 33,
+      "zone_canonical": 6,
+      "syzygy_partner": 3,
+      "syzygy": "6::3 (Djynxx/18)"
+    },
+    "34": {
+      "num": 34,
+      "unicode": "䷡",
+      "binary": "001111",
+      "binary_repr": "001/111",
+      "lower_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "upper_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "name_cn": "大壯",
+      "pinyin": "Dà Zhuàng",
+      "name_en": "Great Power",
+      "judgment": "Perseverance furthers. Power must be tempered with righteousness, or it becomes mere force.",
+      "image": "Thunder above heaven. The wise one does not tread on paths that are not in accord with established order.",
+      "king_wen": 34,
+      "zone_canonical": 7,
+      "syzygy_partner": 2,
+      "syzygy": "7::2 (Oddubb/23)"
+    },
+    "35": {
+      "num": 35,
+      "unicode": "䷢",
+      "binary": "101000",
+      "binary_repr": "101/000",
+      "lower_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "upper_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "name_cn": "晉",
+      "pinyin": "Jìn",
+      "name_en": "Progress",
+      "judgment": "The powerful prince is honoured with horses. Advancement and recognition come naturally when virtue shines.",
+      "image": "The sun rises above the earth. The wise one brightens their own radiant virtue.",
+      "king_wen": 35,
+      "zone_canonical": 8,
+      "syzygy_partner": 1,
+      "syzygy": "8::1 (Murrumur/29)"
+    },
+    "36": {
+      "num": 36,
+      "unicode": "䷣",
+      "binary": "000101",
+      "binary_repr": "000/101",
+      "lower_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "upper_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "name_cn": "明夷",
+      "pinyin": "Míng Yí",
+      "name_en": "Darkening of the Light",
+      "judgment": "Perseverance in adversity furthers. Conceal your brightness in difficult times. Endure with inner strength.",
+      "image": "The sun sinks into the earth. The wise one veils their light in dealing with the masses, yet still shines.",
+      "king_wen": 36,
+      "zone_canonical": 9,
+      "syzygy_partner": 0,
+      "syzygy": "9::0 (Uttunul/36)"
+    },
+    "37": {
+      "num": 37,
+      "unicode": "䷤",
+      "binary": "110101",
+      "binary_repr": "110/101",
+      "lower_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "upper_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "name_cn": "家人",
+      "pinyin": "Jiā Rén",
+      "name_en": "The Family",
+      "judgment": "The woman's perseverance furthers. Order begins at home. Proper relationships form the foundation of all society.",
+      "image": "Wind comes from fire. The wise one speaks with substance and acts with constancy.",
+      "king_wen": 37,
+      "zone_canonical": 1,
+      "syzygy_partner": 8,
+      "syzygy": "1::8 (Murrumur/29)"
+    },
+    "38": {
+      "num": 38,
+      "unicode": "䷥",
+      "binary": "101011",
+      "binary_repr": "101/011",
+      "lower_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "upper_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "name_cn": "睽",
+      "pinyin": "Kuí",
+      "name_en": "Opposition",
+      "judgment": "Good fortune in small matters. When people are estranged, progress comes through gentle, indirect means.",
+      "image": "Fire above, the lake below. The wise one recognises differences while maintaining commonality.",
+      "king_wen": 38,
+      "zone_canonical": 2,
+      "syzygy_partner": 7,
+      "syzygy": "2::7 (Oddubb/23)"
+    },
+    "39": {
+      "num": 39,
+      "unicode": "䷦",
+      "binary": "010100",
+      "binary_repr": "010/100",
+      "lower_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "upper_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "name_cn": "蹇",
+      "pinyin": "Jiǎn",
+      "name_en": "Obstruction",
+      "judgment": "The southwest furthers. The northeast does not. Seek counsel. Retreat to gather strength before advancing.",
+      "image": "Water upon the mountain. The wise one turns inward and examines their own character.",
+      "king_wen": 39,
+      "zone_canonical": 3,
+      "syzygy_partner": 6,
+      "syzygy": "3::6 (Djynxx/18)"
+    },
+    "40": {
+      "num": 40,
+      "unicode": "䷧",
+      "binary": "001010",
+      "binary_repr": "001/010",
+      "lower_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "upper_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "name_cn": "解",
+      "pinyin": "Xiè",
+      "name_en": "Deliverance",
+      "judgment": "The southwest furthers. Where there is nothing more to do, return brings good fortune. Act swiftly when the way opens.",
+      "image": "Thunder and rain arise. The wise one pardons mistakes and forgives transgressions.",
+      "king_wen": 40,
+      "zone_canonical": 4,
+      "syzygy_partner": 5,
+      "syzygy": "4::5 (Katak/14)"
+    },
+    "41": {
+      "num": 41,
+      "unicode": "䷨",
+      "binary": "100011",
+      "binary_repr": "100/011",
+      "lower_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "upper_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "name_cn": "損",
+      "pinyin": "Sǔn",
+      "name_en": "Decrease",
+      "judgment": "Sincerity brings supreme good fortune. Simplify and reduce excess. Sacrifice below to enrich above.",
+      "image": "The lake at the foot of the mountain. The wise one controls anger and restrains desire.",
+      "king_wen": 41,
+      "zone_canonical": 5,
+      "syzygy_partner": 4,
+      "syzygy": "5::4 (Katak/14)"
+    },
+    "42": {
+      "num": 42,
+      "unicode": "䷩",
+      "binary": "110001",
+      "binary_repr": "110/001",
+      "lower_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "upper_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "name_cn": "益",
+      "pinyin": "Yì",
+      "name_en": "Increase",
+      "judgment": "It furthers one to cross the great water. The time is ripe for undertakings. Give generously and receive naturally.",
+      "image": "Wind and thunder increase each other. The wise one improves when seeing good, and corrects faults.",
+      "king_wen": 42,
+      "zone_canonical": 6,
+      "syzygy_partner": 3,
+      "syzygy": "6::3 (Djynxx/18)"
+    },
+    "43": {
+      "num": 43,
+      "unicode": "䷪",
+      "binary": "011111",
+      "binary_repr": "011/111",
+      "lower_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "upper_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "name_cn": "夬",
+      "pinyin": "Guài",
+      "name_en": "Breakthrough",
+      "judgment": "Resolutely make the matter known. Speak truth even in danger. Do not resort to arms. Press forward with right purpose.",
+      "image": "The lake rises to heaven. The wise one distributes blessings to those below and avoids dwelling on their own virtue.",
+      "king_wen": 43,
+      "zone_canonical": 7,
+      "syzygy_partner": 2,
+      "syzygy": "7::2 (Oddubb/23)"
+    },
+    "44": {
+      "num": 44,
+      "unicode": "䷫",
+      "binary": "111110",
+      "binary_repr": "111/110",
+      "lower_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
+      },
+      "upper_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "name_cn": "姤",
+      "pinyin": "Gòu",
+      "name_en": "Coming to Meet",
+      "judgment": "The maiden is powerful — do not marry her. A force appears unexpectedly. Exercise caution with what approaches.",
+      "image": "Wind beneath heaven. The prince sends forth commands to the four quarters.",
+      "king_wen": 44,
+      "zone_canonical": 8,
+      "syzygy_partner": 1,
+      "syzygy": "8::1 (Murrumur/29)"
+    },
+    "45": {
+      "num": 45,
+      "unicode": "䷬",
+      "binary": "011000",
+      "binary_repr": "011/000",
+      "lower_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "upper_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "name_cn": "萃",
+      "pinyin": "Cuì",
+      "name_en": "Gathering Together",
+      "judgment": "Success. The king approaches the temple. Gathering requires a centre. Great offerings are favourable.",
+      "image": "The lake above the earth. The wise one renews their weapons to meet the unforeseen.",
+      "king_wen": 45,
+      "zone_canonical": 9,
+      "syzygy_partner": 0,
+      "syzygy": "9::0 (Uttunul/36)"
+    },
+    "46": {
+      "num": 46,
+      "unicode": "䷭",
+      "binary": "000110",
+      "binary_repr": "000/110",
+      "lower_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
+      },
+      "upper_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "name_cn": "升",
+      "pinyin": "Shēng",
+      "name_en": "Pushing Upward",
+      "judgment": "Supreme success. Seek out the great one without anxiety. Steady growth upward. Set forth to the south.",
+      "image": "Wood grows within the earth. The wise one builds up small things into high and great.",
+      "king_wen": 46,
+      "zone_canonical": 1,
+      "syzygy_partner": 8,
+      "syzygy": "1::8 (Murrumur/29)"
+    },
+    "47": {
+      "num": 47,
+      "unicode": "䷮",
+      "binary": "011010",
+      "binary_repr": "011/010",
+      "lower_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "upper_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "name_cn": "困",
+      "pinyin": "Kùn",
+      "name_en": "Oppression",
+      "judgment": "Success through perseverance for the great one. No blame. Words are not believed in this time. Endure silently.",
+      "image": "The lake with no water. The wise one stakes their life to follow their will.",
+      "king_wen": 47,
+      "zone_canonical": 2,
+      "syzygy_partner": 7,
+      "syzygy": "2::7 (Oddubb/23)"
+    },
+    "48": {
+      "num": 48,
+      "unicode": "䷯",
+      "binary": "010110",
+      "binary_repr": "010/110",
+      "lower_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "upper_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "name_cn": "井",
+      "pinyin": "Jǐng",
+      "name_en": "The Well",
+      "judgment": "The town may change but the well does not. The inexhaustible source. Draw from the depths with a sound vessel.",
+      "image": "Water above wood. The wise one encourages the people and exhorts them to help one another.",
+      "king_wen": 48,
+      "zone_canonical": 3,
+      "syzygy_partner": 6,
+      "syzygy": "3::6 (Djynxx/18)"
+    },
+    "49": {
+      "num": 49,
+      "unicode": "䷰",
+      "binary": "011101",
+      "binary_repr": "011/101",
+      "lower_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "upper_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "name_cn": "革",
+      "pinyin": "Gé",
+      "name_en": "Revolution",
+      "judgment": "Believed in only after completion. Supreme success through perseverance. Regret vanishes. Transform what must be transformed.",
+      "image": "Fire in the lake. The wise one sets the calendar and makes the seasons clear.",
+      "king_wen": 49,
+      "zone_canonical": 4,
+      "syzygy_partner": 5,
+      "syzygy": "4::5 (Katak/14)"
+    },
+    "50": {
+      "num": 50,
+      "unicode": "䷱",
+      "binary": "101110",
+      "binary_repr": "101/110",
+      "lower_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "upper_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "name_cn": "鼎",
+      "pinyin": "Dǐng",
+      "name_en": "The Cauldron",
+      "judgment": "Supreme good fortune and success. The sacred vessel transforms the raw into the refined. Nourish the worthy.",
+      "image": "Fire above wood. The wise one consolidates their fate by making their position correct.",
+      "king_wen": 50,
+      "zone_canonical": 5,
+      "syzygy_partner": 4,
+      "syzygy": "5::4 (Katak/14)"
+    },
+    "51": {
+      "num": 51,
+      "unicode": "䷲",
+      "binary": "001001",
+      "binary_repr": "001/001",
+      "lower_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "upper_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "name_cn": "震",
+      "pinyin": "Zhèn",
+      "name_en": "The Arousing Thunder",
+      "judgment": "Success. Thunder comes — shock and awe. Then laughter. The shock brings fear, but fear brings vigilance.",
+      "image": "Repeated thunder. The wise one examines themselves with fearful apprehension and cultivates their virtue.",
+      "king_wen": 51,
+      "zone_canonical": 6,
+      "syzygy_partner": 3,
+      "syzygy": "6::3 (Djynxx/18)"
+    },
+    "52": {
+      "num": 52,
+      "unicode": "䷳",
+      "binary": "100100",
+      "binary_repr": "100/100",
+      "lower_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "upper_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "name_cn": "艮",
+      "pinyin": "Gèn",
+      "name_en": "Keeping Still",
+      "judgment": "Keep the back still so the body is not felt. Walking in the courtyard, one does not see the people. No blame. Stillness brings clarity.",
+      "image": "Mountains standing together. The wise one does not allow their thoughts to go beyond the situation.",
+      "king_wen": 52,
+      "zone_canonical": 7,
+      "syzygy_partner": 2,
+      "syzygy": "7::2 (Oddubb/23)"
+    },
+    "53": {
+      "num": 53,
+      "unicode": "䷴",
+      "binary": "110100",
+      "binary_repr": "110/100",
+      "lower_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "upper_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "name_cn": "漸",
+      "pinyin": "Jiàn",
+      "name_en": "Development",
+      "judgment": "The maiden is given in marriage. Good fortune. Gradual progress, step by step, like a wild goose approaching the shore.",
+      "image": "Wood upon the mountain grows gradually. The wise one abides in dignity and virtue to improve the mores.",
+      "king_wen": 53,
+      "zone_canonical": 8,
+      "syzygy_partner": 1,
+      "syzygy": "8::1 (Murrumur/29)"
+    },
+    "54": {
+      "num": 54,
+      "unicode": "䷵",
+      "binary": "001011",
+      "binary_repr": "001/011",
+      "lower_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "upper_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "name_cn": "歸妹",
+      "pinyin": "Guī Mèi",
+      "name_en": "The Marrying Maiden",
+      "judgment": "Undertakings bring misfortune. Nothing that acts to further. Know your place within the situation and act accordingly.",
+      "image": "Thunder above the lake. The wise one understands impermanence through the transitory.",
+      "king_wen": 54,
+      "zone_canonical": 9,
+      "syzygy_partner": 0,
+      "syzygy": "9::0 (Uttunul/36)"
+    },
+    "55": {
+      "num": 55,
+      "unicode": "䷶",
+      "binary": "001101",
+      "binary_repr": "001/101",
+      "lower_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "upper_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "name_cn": "豐",
+      "pinyin": "Fēng",
+      "name_en": "Abundance",
+      "judgment": "Success. The king attains fullness. Do not be sad — be like the sun at midday. Abundance cannot last forever.",
+      "image": "Thunder and lightning arrive together. The wise one decides lawsuits and carries out punishments.",
+      "king_wen": 55,
+      "zone_canonical": 1,
+      "syzygy_partner": 8,
+      "syzygy": "1::8 (Murrumur/29)"
+    },
+    "56": {
+      "num": 56,
+      "unicode": "䷷",
+      "binary": "101100",
+      "binary_repr": "101/100",
+      "lower_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "upper_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "name_cn": "旅",
+      "pinyin": "Lǚ",
+      "name_en": "The Wanderer",
+      "judgment": "Success in small matters. Perseverance of the traveller. Be cautious and do not linger. Dignity in transience.",
+      "image": "Fire upon the mountain. The wise one is clear and cautious in imposing penalties and does not delay lawsuits.",
+      "king_wen": 56,
+      "zone_canonical": 2,
+      "syzygy_partner": 7,
+      "syzygy": "2::7 (Oddubb/23)"
+    },
+    "57": {
+      "num": 57,
+      "unicode": "䷸",
+      "binary": "110110",
+      "binary_repr": "110/110",
+      "lower_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "upper_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "name_cn": "巽",
+      "pinyin": "Xùn",
+      "name_en": "The Gentle Wind",
+      "judgment": "Success in small matters. It furthers one to have somewhere to go. Gentle penetration, like wind. Persistent influence.",
+      "image": "Winds following upon each other. The wise one spreads commands and carries out undertakings.",
+      "king_wen": 57,
+      "zone_canonical": 3,
+      "syzygy_partner": 6,
+      "syzygy": "3::6 (Djynxx/18)"
+    },
+    "58": {
+      "num": 58,
+      "unicode": "䷹",
+      "binary": "011011",
+      "binary_repr": "011/011",
+      "lower_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "upper_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "name_cn": "兌",
+      "pinyin": "Duì",
+      "name_en": "The Joyous Lake",
+      "judgment": "Success. Perseverance furthers. True joy comes from inner strength shared generously with others.",
+      "image": "Lakes resting upon each other. The wise one joins with friends for discussion and practice.",
+      "king_wen": 58,
+      "zone_canonical": 4,
+      "syzygy_partner": 5,
+      "syzygy": "4::5 (Katak/14)"
+    },
+    "59": {
+      "num": 59,
+      "unicode": "䷺",
+      "binary": "110010",
+      "binary_repr": "110/010",
+      "lower_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "upper_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "name_cn": "渙",
+      "pinyin": "Huàn",
+      "name_en": "Dispersion",
+      "judgment": "Success. The king approaches the temple. Cross the great water. Dissolve barriers and reunite what has scattered.",
+      "image": "Wind blows over the water. The ancient kings made offerings to the Lord and built temples.",
+      "king_wen": 59,
+      "zone_canonical": 5,
+      "syzygy_partner": 4,
+      "syzygy": "5::4 (Katak/14)"
+    },
+    "60": {
+      "num": 60,
+      "unicode": "䷻",
+      "binary": "010011",
+      "binary_repr": "010/011",
+      "lower_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "upper_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "name_cn": "節",
+      "pinyin": "Jié",
+      "name_en": "Limitation",
+      "judgment": "Success. Bitter limitation should not be persevered in. Set boundaries, but not so rigid they become painful.",
+      "image": "Water above the lake. The wise one creates number and measure, and examines the nature of virtue and conduct.",
+      "king_wen": 60,
+      "zone_canonical": 6,
+      "syzygy_partner": 3,
+      "syzygy": "6::3 (Djynxx/18)"
+    },
+    "61": {
+      "num": 61,
+      "unicode": "䷼",
+      "binary": "110011",
+      "binary_repr": "110/011",
+      "lower_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
+      },
+      "upper_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
+      },
+      "name_cn": "中孚",
+      "pinyin": "Zhōng Fú",
+      "name_en": "Inner Truth",
+      "judgment": "Pigs and fishes — even the lowliest are moved by sincerity. Cross the great water. Inner truth reaches all beings.",
+      "image": "Wind above the lake. The wise one deliberates over criminal cases and delays executions.",
+      "king_wen": 61,
+      "zone_canonical": 7,
+      "syzygy_partner": 2,
+      "syzygy": "7::2 (Oddubb/23)"
+    },
+    "62": {
+      "num": 62,
+      "unicode": "䷽",
+      "binary": "001100",
+      "binary_repr": "001/100",
+      "lower_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
+      },
+      "upper_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
+      },
+      "name_cn": "小過",
+      "pinyin": "Xiǎo Guò",
+      "name_en": "Small Exceeding",
+      "judgment": "Success in small matters. The flying bird brings the message. Ascend not, descend. Great good fortune in humility.",
+      "image": "Thunder upon the mountain. The wise one in conduct exceeds in reverence, in mourning exceeds in sorrow, in expenditure exceeds in thrift.",
+      "king_wen": 62,
+      "zone_canonical": 8,
+      "syzygy_partner": 1,
+      "syzygy": "8::1 (Murrumur/29)"
+    },
+    "63": {
+      "num": 63,
+      "unicode": "䷾",
+      "binary": "010101",
+      "binary_repr": "010/101",
+      "lower_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "upper_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "name_cn": "既濟",
+      "pinyin": "Jì Jì",
+      "name_en": "After Completion",
+      "judgment": "Success in small matters. Perseverance furthers. Good fortune at the beginning, disorder at the end. Remain watchful.",
+      "image": "Water above fire. The wise one considers misfortune in advance and arms against it.",
+      "king_wen": 63,
+      "zone_canonical": 9,
+      "syzygy_partner": 0,
+      "syzygy": "9::0 (Uttunul/36)"
+    },
+    "64": {
+      "num": 64,
+      "unicode": "䷿",
+      "binary": "101010",
+      "binary_repr": "101/010",
+      "lower_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
+      },
+      "upper_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
+      },
+      "name_cn": "未濟",
+      "pinyin": "Wèi Jì",
+      "name_en": "Before Completion",
+      "judgment": "Success. The fox nearly completes the crossing. If its tail gets wet, there is nothing that furthers. Discernment is needed at the threshold.",
+      "image": "Fire above water. The wise one carefully distinguishes things and keeps each in its place.",
+      "king_wen": 64,
+      "zone_canonical": 1,
+      "syzygy_partner": 8,
+      "syzygy": "1::8 (Murrumur/29)"
+    }
+  },
+  "trigrams": {
+    "111": {
+      "name": "乾",
+      "pinyin": "Qián",
+      "en": "Heaven",
+      "symbol": "☰"
+    },
+    "000": {
+      "name": "坤",
+      "pinyin": "Kūn",
+      "en": "Earth",
+      "symbol": "☷"
+    },
+    "001": {
+      "name": "震",
+      "pinyin": "Zhèn",
+      "en": "Thunder",
+      "symbol": "☳"
+    },
+    "010": {
+      "name": "坎",
+      "pinyin": "Kǎn",
+      "en": "Water",
+      "symbol": "☵"
+    },
+    "100": {
+      "name": "艮",
+      "pinyin": "Gèn",
+      "en": "Mountain",
+      "symbol": "☶"
+    },
+    "110": {
+      "name": "巽",
+      "pinyin": "Xùn",
+      "en": "Wind",
+      "symbol": "☴"
+    },
+    "101": {
+      "name": "離",
+      "pinyin": "Lí",
+      "en": "Fire",
+      "symbol": "☲"
+    },
+    "011": {
+      "name": "兌",
+      "pinyin": "Duì",
+      "en": "Lake",
+      "symbol": "☱"
+    }
+  },
+  "zone_method": "canonical_dr: 1 + (KW-1) % 9",
+  "encoding": "lower_3bits + upper_3bits"
+}
