@@ -145,3 +145,10 @@ print(f"Syzygy: {hex29['syzygy']}")
 - [[hexagram-zone-mapping]] — canonical reference table
 - [[iching-numogram-casting]] — casting pipeline skill
 - [[numogram-oracle-yijing-patch]] — oracle expansion outline
+
+## Companion Diagrams (Canonical DR)
+
+| Diagram | File | Description |
+|---------|------|-------------|
+| **Hexagram→Zone Mapping** | `assets/hexagram-zone-mapping-tianmu.svg` | 10-zone column layout. 8 hex in Z1, 7 in Z2-Z9, Z0 empty. |
+| **Trigram-Pair Matrix** | `assets/trigram-pair-matrix-tianmu.svg` | 8×8 matrix sorted by binary descending. Color-coded by zone. |
