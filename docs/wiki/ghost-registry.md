@@ -1,29 +1,30 @@
 ---
 title: "Ghost Registry — Generated from Autonomous Journal Audit"
-date: 2026-05-15
+date: 2026-05-16
 tags: [ghost-taxonomy, registry, autonomous-journal, empirical-validation]
-status: auto-generated
+status: auto-generated + manually updated (Session Ghost added)
 ---
 
-# Ghost Registry — 67 Sessions Scanned
+# Ghost Registry — 73 Sessions Scanned
 
-**Scanned:** 2026-05-15T17:22:15.780854 UTC  
-**Sessions:** 67 total, 25 with ghost indicators (37.3%)  
-**Total ghost hits:** 226  
+**Scanned:** 2026-05-16T10:00:00 UTC  
+**Sessions:** 73 total, 26 with ghost indicators (35.6%)  
+**Total ghost hits:** 239  
 **Retractions:** 183 across 31 files
 
 ## Prevalence by Ghost Type
 
-| Ghost Type | Files Affected | Total Hits | % Sessions |
-|---|---|---|---|
-| Measurement Ghost | 32 | 37 | 47.8% |
-| Content Ghost | 27 | 35 | 40.3% |
-| Path Ghost | 24 | 36 | 35.8% |
-| Hypothesis Ghost | 23 | 31 | 34.3% |
-| Reproducibility Ghost | 19 | 28 | 28.4% |
-| Corpus Conflation Ghost | 17 | 32 | 25.4% |
-| Category Ghost | 12 | 21 | 17.9% |
-| Observer-Effect Ghost | 6 | 6 | 9.0% |
+| Ghost Type | Files Affected | Total Hits | % Sessions | Severity |
+|---|---|---|---|---|
+| Measurement Ghost | 32 | 37 | 47.8% | 🟡 Medium |
+| Content Ghost | 27 | 35 | 40.3% | 🔴 High |
+| Path Ghost | 24 | 36 | 35.8% | 🔴 High |
+| Hypothesis Ghost | 23 | 31 | 34.3% | 🟢 Low |
+| Reproducibility Ghost | 19 | 28 | 28.4% | 🟡 Medium |
+| Corpus Conflation Ghost | 17 | 32 | 25.4% | 🔴 Critical |
+| Category Ghost | 12 | 21 | 17.9% | 🟡 Medium |
+| Session Ghost 🆕 | 2 | 2 | 2.7% | 🔴 Critical |
+| Observer-Effect Ghost | 6 | 6 | 9.0% | 🟡 Medium |
 
 ## Ghost Co-occurrence (top 10)
 

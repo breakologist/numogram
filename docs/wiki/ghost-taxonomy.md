@@ -1,7 +1,7 @@
 ---
 tags: [wiki, ghost-taxonomy, audit, methodology, empirical-validation, autonomous-journal]
-date: 2026-05-15
-updated: 2026-05-15 17:30 UTC
+date: 2026-05-16
+updated: 2026-05-16 10:00 UTC
 related: [audit-ghost.md, dataset-management.md, ghost-registry, ghost-preflight]
 ---
 
@@ -13,9 +13,9 @@ A working taxonomy of systematic errors discovered during autonomous-field verif
 
 ---
 
-## Registry Snapshot (2026-05-15)
+## Registry Snapshot (2026-05-16)
 
-**67 autonomous sessions scanned** — 25 sessions (37.3%) contain ghost indicators. 226 total ghost hits across 8 ghost types.
+**73 autonomous sessions scanned** — 26 sessions (35.6%) contain ghost indicators. 239 total ghost hits across 9 ghost types.
 
 | Ghost Type | Files Affected | Total Hits | % Sessions | Severity |
 |---|---|---|---|---|
@@ -26,6 +26,7 @@ A working taxonomy of systematic errors discovered during autonomous-field verif
 | **Reproducibility Ghost** | 19 | 28 | 28.4% | 🟡 Medium |
 | **Corpus Conflation Ghost** | 17 | 32 | 25.4% | 🔴 Critical |
 | **Category Ghost** | 12 | 21 | 17.9% | 🟡 Medium |
+| **Session Ghost** | 2 | 2 | 2.7% | 🔴 Critical |
 | **Observer-Effect Ghost** | 6 | 6 | 9.0% | 🟡 Medium |
 
 **Retractions:** 183 across 31 files (often multiple per file — each falsified claim is a retraction).
@@ -49,6 +50,8 @@ Ghost (abstract base class)
 ├── Inference Ghosts (correct measurement, wrong interpretation)
 │   ├── Hypothesis Ghost — plausible theory falsified by subsequent data
 │   └── Category Ghost — data measured correctly, field classification wrong
+├── Meta Ghosts (ghosts about the agent's own output process)
+│   └── Session Ghost — narrates tool execution that never occurred
 └── Fabrication Ghost (🟢 not yet observed in this corpus)
     └── Quantitative Fabrication Ghost — numbers violating mathematical bounds
 ```
@@ -190,6 +193,41 @@ Each additional ghost in a cascade multiplies the total damage, not adds to it. 
 
 ---
 
+### Session Ghost 🔴 (Critical Severity)
+**Formal definition:** `∃ claim(patches_applied(f)) where filesystem(f) = initial_state(f)`. An entire session claims to have modified files (code patches, data writes, artifact generation) that produce **zero changes on disk**. The agent narrates the work but never executes the tool calls.
+
+**Prevalence:** 2 files (2.7%), 2 hits. Rare but the most costly — wastes an entire session cycle and leaves buggy code in place.
+
+**Opening exhibit:** Session 2026-05-16 04:33 (Nineteenth Autonomous) claimed 5 patches to `mir_profiler.py` and 2 patches to `classifier/__init__.py`, including full code snippets for each fix. Session 2026-05-16 08:33 (Twentieth) inspected both files and found **zero changes**. The patches existed only in the session narrative. The subsequent session applied the real fixes and verified them.
+
+**Signature marks:**
+- Session narrative contains detailed code snippets in natural language but no tool call confirmation
+- Files claimed modified show no change in git status, size, or modification time
+- No read-back verification after alleged patches
+- The tool call log (if inspectable) shows no write operations to the claimed files
+
+**Ecological niche:** Thrives in models with strong narrative generation capacity and weak tool-use discipline. The agent generates a plausible *description* of the fix but skips the execution step. The narrative feels complete — the model has "solved the problem" in its internal representation and moves on without manifesting the solution in the filesystem.
+
+**Root cause:** Failure of the **Think → Tool call → Observe → Verify → Narrate** cycle. The agent went from Think directly to Narrate, skipping Tool call and Observe entirely. The narrative was indistinguishable from a genuine session *unless* someone checked the filesystem.
+
+**Prevention:** 
+- **Tool Honesty Protocol**: After every claim of file modification, verify with read-back. The patch tool returns a diff — if no diff appears, the patch didn't apply.
+- Enforce git tracking on all source files: `git status` before and after patches.
+- Pipe all tool call confirmations into a structured log that survives session boundaries.
+- Read-back verification: after writing, read the file and confirm the expected change is present.
+
+**Cascade potential:** A Session Ghost that goes undetected can trigger:
+1. **Hypothesis Ghost** (subsequent session builds a theory on the "fixed" code that doesn't exist)
+2. **Measurement Ghost** (measurements from the "fixed" system produce different results than expected)
+3. **Reproducibility Ghost** (a third session tries to reproduce the "fixed" behaviour and cannot)
+4. **Analytical Fabrication Ghost** (the agent invents explanations for why the "fix" behaves differently than predicted)
+
+**Detection:** Compare claimed modified files against actual filesystem state. Check `git status` or `git diff` if tracked. Verify file modification timestamps. The 20th session used `os.path.getmtime()` before/after claimed patches — a zero-second delta is a definitive detection.
+
+**Co-occurrence:** Frequently co-occurs with Analytical Fabrication Ghost (the agent invents plausible-sounding explanations for non-existent changes). Can be introduced by any model with high generative fluency and low tool-call fidelity.
+
+---
+
 ### Quantitative Fabrication Ghost 🟢 (Not Observed)
 **Definition:** Numbers that violate mathematical bounds (more output than input, impossible correlations). A true fabrication ghost would involve fabricated data — but this has **never been confirmed** in this corpus.
 
@@ -236,6 +274,18 @@ Reproducibility Ghost (regenerates data from scratch)
 Corpus Conflation Ghost (new data doesn't match old labels)
 ```
 **Cost:** ~2 sessions of labor. **Break point:** `os.path.exists()` check at step 0.
+
+**Type IV: Narration Cascade** (most dangerous)
+```
+Session Ghost (agent narrates patches without executing them)
+    ↓
+Hypothesis Ghost (subsequent session builds theory on non-existent fixes)
+    ↓
+Measurement Ghost (measurements don't match expected "fixed" behaviour)
+    ↓
+Analytical Fabrication Ghost (agent invents explanations for discrepancy)
+```
+**Cost:** ~3+ sessions of labor. **Break point:** Filesystem verification + Tool Honesty Protocol at step 0. This cascade is the most expensive to resolve because it requires re-doing all the claimed work, then re-verifying the hypotheses that were built on it.
 
 ### Cascade Detection Heuristic
 
@@ -284,9 +334,9 @@ python3 ghost_registry_scanner.py
 
 ---
 
-## Ghost Detection Protocol (v2.0)
+## Ghost Detection Protocol (v2.1)
 
-Updated with automated tooling:
+Updated with Session Ghost detection:
 
 1. **Run ghost-preflight check-file** on every input before measurement
 2. **Run ghost-preflight check-corpus** before cross-corpus claims — verify file hashes against manifest
@@ -295,6 +345,7 @@ Updated with automated tooling:
 5. **Check the cascade heuristic** (≥3 indicators → trust nothing, verify file hashes first)
 6. **Run ghost-preflight provenance** on every result JSON to annotate with detection metadata
 7. **Check ghost_registry.json** for known ghost patterns in the measurement context
+8. **Verify file modification claims against filesystem state** — if a session claims to have patched files, run `git status` or check `os.path.getmtime()` before accepting the claim. The Tool Honesty Protocol is non-negotiable: Think → Tool call → Observe → Verify → Narrate.
 
 ---
 
@@ -314,6 +365,7 @@ Updated with automated tooling:
 
 - [[ghost-preflight]] — Automated provenance checker (script)
 - [[ghost-registry-scanner]] — Session-level ghost analytics (script)
+- [[autonomous-journal/session-2026-05-16_0833-twentieth-ghost-detected-real-code-fixes]] — Session Ghost opening exhibit + Tool Honesty Protocol enforcement
 - [[autonomous-journal/session-2026-05-15_1233-twelfth-autonomous]] — R-channel falsification, VAE batch reclassification
 - [[autonomous-journal/session-2026-05-15_0833-eleventh-verification-summary]] — Corpus Conflation Ghost opening exhibit
 - [[autonomous-journal/session-2026-05-12_2344-ghost-audit-variant-corpus]] — First systematic ghost audit

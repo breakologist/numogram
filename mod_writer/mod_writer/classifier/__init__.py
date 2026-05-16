@@ -95,6 +95,13 @@ def predict_audio(path: str) -> dict:
 
     try:
         feats = MIRFeatureExtractor().extract(wav, use_all=False)
+        
+        # OOD detection: check spectral centroid against training range [4817, 9683]
+        TRAINING_CENTROID_MIN = 4817
+        TRAINING_CENTROID_MAX = 9683
+        centroid = feats.get('lowlevel', {}).get('spectral_centroid_hz', 0.0) or 0.0
+        is_ood = centroid < TRAINING_CENTROID_MIN or centroid > TRAINING_CENTROID_MAX
+        
         vec = _flatten(feats).reshape(1, -1)
         scaler, clf = _load_zone_classifier()
         zone_pred = int(clf.predict(scaler.transform(vec))[0])
@@ -111,6 +118,8 @@ def predict_audio(path: str) -> dict:
             'bpm': feats.get('midlevel', {}).get('bpm'),
             'key': feats.get('midlevel', {}).get('key'),
             'scale': feats.get('midlevel', {}).get('scale'),
+            'ood': is_ood,
+            'spectral_centroid_hz': round(centroid, 1),
         }
     finally:
         if cleanup and os.path.exists(wav):

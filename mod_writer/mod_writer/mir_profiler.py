@@ -177,6 +177,26 @@ class MIRFeatureExtractor:
         bandwidth = np.sqrt(np.sum((f - centroid)**2 * power) / total_power)
         lowlevel['spectral_centroid_hz'] = round(float(centroid), 2)
         lowlevel['spectral_bandwidth_hz'] = round(float(bandwidth), 2)
+
+        # ── Spectral rolloff (85th percentile) ──────────────────────────────
+        cumsum = np.cumsum(power)
+        rolloff_threshold = 0.85 * total_power
+        rolloff_idx = int(np.searchsorted(cumsum, rolloff_threshold))
+        rolloff_idx = min(rolloff_idx, len(f) - 1)
+        lowlevel['spectral_rolloff'] = round(float(f[rolloff_idx]), 2)
+
+        # ── Dynamic complexity: coefficient of variation of frame RMS ──────
+        nperseg_dc = min(1024, len(y))
+        hop_dc = 512
+        dc_frames: list[float] = []
+        for start in range(0, len(y) - nperseg_dc + 1, hop_dc):
+            frame = y[start:start + nperseg_dc]
+            dc_frames.append(float(np.sqrt(np.mean(frame ** 2))))
+        dc_frames_arr = np.array(dc_frames)
+        rms_mean = float(np.mean(dc_frames_arr)) + 1e-12
+        rms_std = float(np.std(dc_frames_arr))
+        lowlevel['dynamic_complexity'] = round(rms_std / rms_mean, 4)
+
         lowlevel['crest_factor'] = round(crest, 2)
         lowlevel['rms_db'] = round(20 * np.log10(rms + 1e-12), 2)
         lowlevel['peak_db'] = round(20 * np.log10(peak + 1e-12), 2)
@@ -274,6 +294,29 @@ class MIRFeatureExtractor:
             'onset_density_hz': round(onset_density_val, 2),
             'source_onsets_count': len(onset_list),
         }
+
+        # Also store onset_rate in midlevel so classifier _flatten finds it
+        if 'onset_rate' not in midlevel or midlevel.get('onset_rate') is None:
+            midlevel['onset_rate'] = round(onset_density_val, 2)
+
+        # Populate beat_confidence from librosa path if not already set
+        if 'beat_confidence' not in midlevel or midlevel.get('beat_confidence') is None:
+            beat_conf = None
+            if _HAS_LIBROSA:
+                try:
+                    # onset_env defined at line ~189 in the librosa branch
+                    onset_env_tmp = onset_env  # type: ignore
+                    ac = np.correlate(onset_env_tmp, onset_env_tmp, mode='same')
+                    center = len(ac) // 2
+                    if len(ac) > 20:
+                        search = ac[center + 3: center + int(sr / hop * 2.5 + 1)]
+                        if len(search) > 0:
+                            peak_val = float(np.max(np.abs(search)))
+                            auto_val = float(np.abs(ac[center])) + 1e-12
+                            beat_conf = round(min(peak_val / auto_val, 1.0), 3)
+                except Exception:
+                    beat_conf = None
+            midlevel['beat_confidence'] = beat_conf
 
         # ── Sources record ─────────────────────────────────────────────────
         sources = {

@@ -32,7 +32,7 @@ def _epub_text(path):
 
 CORPUS_SOURCES = {
     'oracle': {
-        'ccru': "/home/etym/numogram/docs/numogram-source.txt",
+        'ccru': "/home/etym/.hermes/obsidian/hermetic/raw/Unleashing the Numogram.md",
         'grok_rotor': "/home/etym/.hermes/obsidian/hermetic/raw/Grok rotor.md",
         'grok_notes': "/home/etym/.hermes/obsidian/hermetic/raw/Grok notes on the Numogram.md",
         'grok_convo': "/home/etym/.hermes/obsidian/hermetic/raw/Grok convo.md",
@@ -52,10 +52,23 @@ CORPUS_SOURCES = {
         'time_sorcery': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/Time Sorcery - Vexsys.epub"),
         'cryptolith': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/LAND -- Cryptolith.epub"),
         'xenosystems': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/XENOSYSTEMS_FRAGMENTS.epub"),
+        # --- New sources: lexical & philosophical texture (added 2026-05-16) ---
+        'devils_dictionary': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/Ambrose Bierce - The Devil's Dictionary.epub"),
+        'buddhist_suttas': "/home/etym/.hermes/obsidian/hermetic/raw/Buddhist-Suttas.md",
+        'diamond_sutra': "/home/etym/.hermes/obsidian/hermetic/raw/Diamond-Sutra.md",
+        'lotus_sutra': "/home/etym/.hermes/obsidian/hermetic/raw/Lotus-Sutra.md",
+        'mountains_water': "/home/etym/.hermes/obsidian/hermetic/raw/Mountains&Water-Sutra.md",
+        'esoteric_alphabet': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/TheEsotericStructureOfTheAlphabet_AlvinBoydKuhn-TheEsotericStructureOfTheAlphabet.epub"),
+        'troward_dore': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/T.Troward - Dore Lectures.epub"),
+        'troward_creative': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/T.Troward - The Creative Process.epub"),
+        'troward_edinburgh': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/T.Troward - The Edinburgh Lectures.epub"),
+        'troward_hidden': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/T.Troward - The Hidden Power.epub"),
+        'troward_law_word': ('epub', "/home/etym/.hermes/obsidian/hermetic/raw/T.Troward - The Law and the Word.epub"),
     },
     'xenon': {
         'gist_zones': "/home/etym/Documents/05-Research/gist",
         'kron_tensors': "/home/etym/.hermes/obsidian/hermetic/raw/Kron-TensorsForCircuits_djvu.txt",
+        'tokyo_passport': "/home/etym/.hermes/obsidian/hermetic/raw/Tokyo Millennium Civilian Passport.txt",
     },
 }
 

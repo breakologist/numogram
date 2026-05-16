@@ -46,6 +46,10 @@ from math import log2
 from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Also search ~/.hermes/scripts/ for corpus files
+_HERMES_SCRIPTS = os.path.expanduser("~/.hermes/scripts")
+if _HERMES_SCRIPTS not in sys.path:
+    sys.path.insert(0, _HERMES_SCRIPTS)
 from xeno_jump import get_aq, digital_root, load_corpus as load_index, process_text
 
 
@@ -217,10 +221,29 @@ def run_trajectory(text, corpus_data, generations, seed,
 # ═══════════════════════════════════════════
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+_HERMES_SCRIPTS = os.path.expanduser("~/.hermes/scripts")
+
+def _find_corpus(name):
+    """Search SCRIPT_DIR first, then ~/.hermes/scripts/ for corpus files."""
+    filenames = {
+        'general': ['aq_corpus_index.json'],
+        'oracle':  ['aq_corpus_enriched.json', 'aq_corpus_oracle.json'],
+        'xenon':   ['aq_corpus_xenon.json'],
+    }
+    candidates = filenames.get(name, [])
+    for fn in candidates:
+        for base in (SCRIPT_DIR, _HERMES_SCRIPTS):
+            p = os.path.join(base, fn)
+            if os.path.exists(p):
+                return p
+    # Fallback to original path convention for error messaging
+    orig = filenames.get(name, ['?'])[0]
+    return os.path.join(SCRIPT_DIR, orig)
+
 INDEX_PATHS = {
-    'general': os.path.join(SCRIPT_DIR, 'aq_corpus_index.json'),
-    'oracle':  os.path.join(SCRIPT_DIR, 'aq_corpus_enriched.json'),
-    'xenon':   os.path.join(SCRIPT_DIR, 'aq_corpus_xenon.json'),
+    'general': lambda: _find_corpus('general'),
+    'oracle':  lambda: _find_corpus('oracle'),
+    'xenon':   lambda: _find_corpus('xenon'),
 }
 
 # ═══════════════════════════════════════════
@@ -228,7 +251,10 @@ INDEX_PATHS = {
 # ═══════════════════════════════════════════
 
 def load_corpus(name):
-    path = INDEX_PATHS.get(name)
+    path_getter = INDEX_PATHS.get(name)
+    if not path_getter:
+        return None
+    path = path_getter() if callable(path_getter) else path_getter
     if not path or not os.path.exists(path):
         return None
     with open(path) as f:
