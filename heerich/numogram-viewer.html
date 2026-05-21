@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Numogram — Zone Chambers v5</title>
+<style>
+  body { margin:0; background:#000; display:flex; justify-content:center; align-items:center; min-height:100vh; }
+  #container { position:relative; width:90vw; height:90vh; }
+  #container svg { width:100%; height:100%; }
+  .label {
+    position:absolute;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    pointer-events:none;
+    font-family:monospace;
+  }
+  .label .name { font-size:11px; font-weight:bold; color:#fff; }
+  .label .sub { font-size:9px; }
+  .label .detail { font-size:8px; color:#888; }
+</style>
+</head>
+<body>
+<div id="container">
+<object id="numogramSvg" data="outputs/numogram-v5-clean.svg" type="image/svg+xml" width="100%" height="100%"></object>
+</div>
+<script>
+// Zone data
+const ZONES = [
+  { z:0, name:'Void',    planet:'Sun',     demon:'—',          clr:'#aaaaaa', x:-0.67, y:0,   z3:4 },
+  { z:1, name:'Gate 1',  planet:'Mercury', demon:'Lurgo',      clr:'#ee44ee', x:0,     y:12,  z3:12 },
+  { z:2, name:'Gate 2',  planet:'Venus',   demon:'Duoddod',    clr:'#4488ff', x:0,     y:12,  z3:33.75 },
+  { z:3, name:'Gate 3',  planet:'Earth',   demon:'Ixix',       clr:'#44cc77', x:6.33,  y:24,  z3:41.75 },
+  { z:4, name:'Zone 4',  planet:'Mars',    demon:'Krako',      clr:'#ee4444', x:-13.33,y:12,  z3:17.75 },
+  { z:5, name:'Abyss',   planet:'Jupiter', demon:'Tokhatto',   clr:'#ee8833', x:-13.33,y:12,  z3:28 },
+  { z:6, name:'Zone 6',  planet:'Saturn',  demon:'Djynxx',     clr:'#ddcc33', x:-6.33, y:12,  z3:41.75 },
+  { z:7, name:'Gate 7',  planet:'Uranus',  demon:'Oddubb',     clr:'#7755cc', x:13.33, y:12,  z3:28 },
+  { z:8, name:'Gate 8',  planet:'Neptune', demon:'Murrumur',   clr:'#9944ee', x:13.33, y:12,  z3:17.75 },
+  { z:9, name:'Plex',    planet:'Pluto',   demon:'Uttunul',    clr:'#666666', x:-6.33, y:0,   z3:4 },
+]
+
+// Wait for SVG to load, then extract projection
+document.getElementById('numogramSvg').addEventListener('load', function() {
+  const svgDoc = this.contentDocument
+  if (!svgDoc) return
+
+  // Get viewBox
+  const svgEl = svgDoc.querySelector('svg')
+  const vb = svgEl.getAttribute('viewBox').split(' ').map(Number)
+  const [vx, vy, vw, vh] = vb
+
+  // Find voxels for each zone by color
+  for (const zone of ZONES) {
+    const polygons = svgDoc.querySelectorAll(`[fill="${zone.clr}"]`)
+    if (polygons.length === 0) continue
+
+    // Use the first polygon's top face (highest listed in SVG = nearest)
+    let sx = 0, sy = 0, count = 0
+    for (const poly of polygons) {
+      const pts = poly.getAttribute('points').trim().split(/\s+/)
+      for (const p of pts) {
+        const [x, y] = p.split(',').map(Number)
+        sx += x; sy += y
+      }
+      count += pts.length
+    }
+
+    const avgX = sx / count
+    const avgY = sy / count
+
+    // Map SVG coords to container
+    const container = document.getElementById('container')
+    const rect = container.getBoundingClientRect()
+    const scaleX = rect.width / vw
+    const scaleY = rect.height / vh
+    const px = (avgX - vx) * scaleX
+    const py = (avgY - vy) * scaleY - 20  // 20px above chamber
+
+    // Create label
+    const label = document.createElement('div')
+    label.className = 'label'
+    label.style.left = px + 'px'
+    label.style.top = py + 'px'
+    label.innerHTML = `
+      <div class="name" style="background:rgba(0,0,0,0.8); padding:2px 8px; border:1px solid ${zone.clr}; border-radius:3px;">
+        Z${zone.z} ${zone.name}
+      </div>
+      <div class="sub" style="color:${zone.clr}">${zone.planet}</div>
+      <div class="detail">${zone.demon}</div>
+    `
+    container.appendChild(label)
+  }
+})
+</script>
+</body>
+</html>

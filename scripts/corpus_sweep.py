@@ -109,11 +109,32 @@ def save_file(filename, content):
     size = os.path.getsize(path)
     print(f"  {filename:<35s} {size:>8,} bytes")
 
-# Load indices
-idx = load_corpus(CORPUS)
-oracle_idx = load_corpus('oracle')
-xenon_idx = load_corpus('xenon')
-general_idx = load_corpus('general')
+# Load indices with graceful handling of missing corpora
+def safe_load_corpus(name):
+    try:
+        return load_corpus(name)
+    except (FileNotFoundError, OSError) as e:
+        print(f"  Warning: Corpus '{name}' not loaded ({e})")
+        return {}
+
+idx = safe_load_corpus(CORPUS)
+oracle_idx = safe_load_corpus('oracle')
+xenon_idx = safe_load_corpus('xenon')
+general_idx = safe_load_corpus('general')
+
+# Fallback: if primary corpus is empty, use any loaded corpus
+for label, loaded in [('oracle', oracle_idx), ('xenon', xenon_idx), ('general', general_idx)]:
+    if loaded:
+        _FALLBACK = loaded
+        break
+else:
+    print("FATAL: No corpora available!")
+    sys.exit(1)
+
+# If primary corpus is empty, fall back
+if not idx:
+    print(f"  Primary corpus '{CORPUS}' not available, falling back to next available")
+    idx = _FALLBACK
 
 total_entries = sum(len(v) for v in idx.values())
 total_buckets = len(idx)

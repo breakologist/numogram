@@ -10,6 +10,7 @@ from pathlib import Path
 import json
 import tempfile
 import hashlib
+from typing import List
 import numpy as np
 
 # ── Make sibling audio-renderer importable ────────────────────────────────────
@@ -18,12 +19,15 @@ import numpy as np
 # The audio-renderer skill is a sibling directory at
 #   ~/.hermes/skills/numogram-audio/audio-renderer
 _this_file = Path(__file__).resolve()
-_skill_root = _this_file.parent.parent.parent  # classifier/ → mod_writer/ → mod-writer/
+_skill_root = _this_file.parent.parent.parent  # classifier/ -> mod_writer/ -> mod-writer/
 _audio_renderer_path = _skill_root.parent / "audio-renderer"
 if str(_audio_renderer_path) not in sys.path:
     sys.path.insert(0, str(_audio_renderer_path))
 
-from renderer import render_mod_to_wav  # audio-renderer exposes this
+# Use SoftSynth renderer (in-memory, produces rich 452+ Hz centroids)
+# The ffmpeg path (renderer.py) was found to produce sub-bass-only 70 Hz output
+# See autonomous-journal/session-2026-05-19_2041 for post-mortem.
+from synth import render_mod_to_wav  # SoftSynth: takes (mod_object, wav_path)
 
 # Local mod-writer packages
 sys.path.insert(0, str(_skill_root))
@@ -32,15 +36,6 @@ from mod_writer.mir_profiler import MIRFeatureExtractor
 
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
-
-def _mod_to_bytes(mod_writer) -> bytes:
-    out = bytearray()
-    out.extend(mod_writer.pack_header())
-    for pat in mod_writer.patterns:
-        out.extend(pat.pack())
-    for samp in mod_writer.samples:
-        out.extend(samp.data)
-    return bytes(out)
 
 
 def _digital_root(n: int) -> int:
@@ -68,7 +63,7 @@ def _flatten_features(features: dict) -> np.ndarray:
     Base 29-dim from lowlevel/midlevel/metadata. If ``features`` contains
     an ``essentia_features`` dict (produced by MIRFeatureExtractor with
     ``use_all=True``), those numeric scalars are appended in sorted-key order,
-    expanding the vector to 60–100+ dimensions.
+    expanding the vector to 60-100+ dimensions.
     """
     KEY_MAP = {
         'C': 0, 'C#': 1, 'D': 2, 'D#': 3, 'E': 4, 'F': 5, 'F#': 6,
@@ -76,26 +71,26 @@ def _flatten_features(features: dict) -> np.ndarray:
     }
     vec: List[float] = []
     low = features.get('lowlevel', {})
-    # Band energies — stored as flat keys in lowlevel (not under 'bands' sub-dict)
+    # Band energies -- stored as flat keys in lowlevel (not under 'bands' sub-dict)
     for band_name in ['sub_bass','bass','low_mid','mid','high_mid','high']:
         vec.append(low.get(band_name, 0.0))
-    # Timbre features — also flat keys
+    # Timbre features -- also flat keys
     vec.append(low.get('spectral_centroid_hz', 0.0) or 0.0)
     vec.append(low.get('spectral_bandwidth_hz', 0.0) or 0.0)
     vec.append(low.get('spectral_rolloff', 0.0) or 0.0)
     vec.append(low.get('dynamic_complexity', 0.0) or 0.0)
-    # Rhythm — stored in midlevel
+    # Rhythm -- stored in midlevel
     mid = features.get('midlevel', {})
     vec.append((mid.get('onset_rate') or 0.0) / 200.0)
     vec.append((mid.get('bpm') or 0.0) / 200.0)
     vec.append((mid.get('beat_confidence', 0.0) or 0.0) / 100.0)
-    # Key — stored as string like 'F#', not a dict
+    # Key -- stored as string like 'F#', not a dict
     key_str = mid.get('key', '')
     key_idx = KEY_MAP.get(key_str, 0)
     key_onehot = [0]*12
     key_onehot[key_idx] = 1
     vec.extend(key_onehot)
-    # Scale — stored as string 'major'/'minor' or absent
+    # Scale -- stored as string 'major'/'minor' or absent
     scale_val = mid.get('scale')
     if scale_val == 'major':
         vec.extend([1,0,0])
@@ -103,7 +98,7 @@ def _flatten_features(features: dict) -> np.ndarray:
         vec.extend([0,1,0])
     else:
         vec.extend([0,0,1])
-    # Duration — from metadata
+    # Duration -- from metadata
     meta = features.get('metadata', {}) or {}
     dur = meta.get('duration_s') or meta.get('duration') or 0.0
     vec.append(float(dur) / 120.0)
@@ -141,7 +136,7 @@ def build_dataset(
         Number of distinct AQ seeds to generate *per zone*.
     aq_range : range | None
         Legacy Phase-3.1 mode. If provided, ignores `zones`/`seeds_per_zone`
-        and iterates exactly this integer AQ range (single-zone 1 baseline).
+        and iterates exactly this integer AQ range (single-zone 1 baseline).
 
     Returns
     -------
@@ -183,7 +178,7 @@ def build_dataset(
             if invalid:
                 raise ValueError(f"zones must be 1-9; got {invalid}")
         total = seeds_per_zone * len(target_zones)
-        print(f"[dataset] Balanced: {seeds_per_zone} seeds × {len(target_zones)} zones = {total} examples")
+        print(f"[dataset] Balanced: {seeds_per_zone} seeds x {len(target_zones)} zones = {total} examples")
 
     mir = MIRFeatureExtractor()
     X_list = []
@@ -194,20 +189,16 @@ def build_dataset(
     idx = 0
 
     if aq_range is not None:
-        # Phase 3.1 baseline: zone 1, aq_iter supplied
+        # Phase 3.1 baseline: zone 1, aq_iter supplied
         for aq in aq_iter:
             try:
                 sb = SongBuilder()
                 sb.add_section(zone=1, rows=16, aq_seed=str(aq))
                 mod_obj = sb.build(verbose=False)
-                mod_bytes = _mod_to_bytes(mod_obj)
 
-                with tempfile.NamedTemporaryFile(suffix=".mod", delete=False) as tmp_mod:
-                    tmp_mod.write(mod_bytes)
-                    tmp_mod.flush()
-                    mod_path = tmp_mod.name
-
-                wav_path = render_mod_to_wav(mod_path)
+                with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tmp_wav:
+                    wav_path = tmp_wav.name
+                render_mod_to_wav(mod_obj, wav_path)
                 feats = mir.extract(wav_path, use_all=False)
                 vec = _flatten_features(feats)
 
@@ -215,7 +206,6 @@ def build_dataset(
                 y_list.append(int(aq))
                 zone_list.append(_digital_root(int(aq)))
 
-                os.unlink(mod_path)
                 os.unlink(wav_path)
 
                 idx += 1
@@ -232,16 +222,17 @@ def build_dataset(
             for aq in _aq_candidates_for_zone(zone, seeds_per_zone):
                 try:
                     sb = SongBuilder()
-                    sb.add_section(zone=zone, rows=16, aq_seed=str(aq))
+                    seed_val = int(aq) % (2**16)
+                    sb.add_section(
+                        zone=zone, rows=16, aq_seed=str(aq),
+                        entropy=0.12,
+                        entropy_seed=seed_val,
+                    )
                     mod_obj = sb.build(verbose=False)
-                    mod_bytes = _mod_to_bytes(mod_obj)
 
-                    with tempfile.NamedTemporaryFile(suffix=".mod", delete=False) as tmp_mod:
-                        tmp_mod.write(mod_bytes)
-                        tmp_mod.flush()
-                        mod_path = tmp_mod.name
-
-                    wav_path = render_mod_to_wav(mod_path)
+                    with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tmp_wav:
+                        wav_path = tmp_wav.name
+                    render_mod_to_wav(mod_obj, wav_path)
                     feats = mir.extract(wav_path, use_all=False)
                     vec = _flatten_features(feats)
 
@@ -249,7 +240,6 @@ def build_dataset(
                     y_list.append(int(aq))
                     zone_list.append(zone)
 
-                    os.unlink(mod_path)
                     os.unlink(wav_path)
 
                     idx += 1
@@ -269,13 +259,13 @@ def build_dataset(
         'n_samples': int(len(y)),
         'n_features': int(X.shape[1]),
         'zones_present': sorted(set(map(int, z))),
-        'generator': 'mod-writer balanced synthetic dataset (Phase 4.1)',
-        'date': '2026-04-30',
+        'generator': 'mod-writer balanced synthetic dataset (Phase 4.2 - SoftSynth rendering)',
+        'date': '2026-05-20',
         'failures': failures,
     }
 
     np.savez_compressed(output_path, X=X, y=y, zones=z, meta=json.dumps(meta))
-    print(f"[dataset] Saved X={X.shape}, y={y.shape}, zones={z.shape} → {output_path}")
+    print(f"[dataset] Saved X={X.shape}, y={y.shape}, zones={z.shape} -> {output_path}")
     if failures:
         print(f"[dataset] {len(failures)} failures (first few shown above)")
     return {'X': X, 'y': y, 'zones': z, 'meta': meta}
@@ -299,4 +289,3 @@ def load_dataset(path: str | None = None) -> dict:
         'zones': zones,
         'meta': json.loads(meta_str)
     }
-

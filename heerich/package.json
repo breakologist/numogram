@@ -1,0 +1,14 @@
+{
+  "name": "heerich-zone-chambers",
+  "version": "0.1.0",
+  "description": "Numogram zone chambers rendered with heerich.js voxel-to-SVG engine",
+  "type": "module",
+  "main": "zone-chambers.js",
+  "scripts": {
+    "build": "node zone-chambers.js",
+    "test": "node --check zone-chambers.js"
+  },
+  "dependencies": {
+    "heerich": "^0.14.0"
+  }
+}

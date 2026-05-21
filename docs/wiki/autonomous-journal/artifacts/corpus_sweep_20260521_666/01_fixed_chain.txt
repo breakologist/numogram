@@ -1,0 +1,201 @@
+FIXED AQ CHAIN — oracle (2026-05-21 23:38)
+════════════════════════════════════════════════════════════════════════
+AQ checksum never changes. Vocabulary cascades.
+Corpus: oracle (455 buckets, 42,507 entries)
+Engine: xeno_jump v2, all-word mode, seed 666
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=708, Z6): The cryptolith opens the decimator gate
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ Bali archaeological angelic bali belongeth alas
+  [  2] ✓ Ws qualitative rhyme ws beekeeping nth
+  [  3] ✓ Fwd entitlement delilah fwd hammering educ
+  [  4] ✓ Eis selectively sally eis dissected pay
+  [  5] ✓ Ngl qualitative rhyme ngl sanctify nth
+  ... (35 intermediate steps) ...
+  [ 40] ✓ Fide cryptolith cioran fide extolled cur
+  [ 41] ✓ Sie phnoukentaba norcia sie versely mara
+  [ 42] ✓ Ran rhadamanthus rough ran treaties ori
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1018, Z1): hyperstition flows through the triangular syzygy
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ authoritative beasts basileus bali assimilated antecedent
+  [  2] ✓ understandably bacchus assumes ws straighten permadeath
+  [  3] ✓ inadvertently hewing hurting fwd filthiness dindymus
+  [  4] ✓ untranslatable drums deranging eis tapeworms pitiless
+  [  5] ✓ understandably rolled sanctus ngl straighten permadeath
+  ... (35 intermediate steps) ...
+  [ 40] ✓ firstcentury forces exercise fide emphasizes unlikely
+  [ 41] ✓ thesuggestion xxiii ulansey sie recognizes massifies
+  [ 42] ✓ unfrequently tongs tetraact ran sustenance phnounebe
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=465, Z6): Katak and Oddubb coil the plex
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ Blur ame Bamboo akri bali aroma
+  [  2] ✓ Betz alf Pcxei oflf ws shoo
+  [  3] ✓ Hodel gak Dictu claw fwd fleet
+  [  4] ✓ Drop bob Prima pelf eis sore
+  [  5] ✓ Robed mo Pcxei oflf ngl shoo
+  ... (35 intermediate steps) ...
+  [ 40] ✓ Gamer dna Whate yer fide duku
+  [ 41] ✓ Wipe si Magdala loci sie penal
+  [ 42] ✓ Thet nn Pops peace ran slice
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=712, Z1): teleoplexy accelerates the void circuit
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ communicated apostolic bali arial beginner
+  [  2] ✓ uncultured prophetic ws arabs attract
+  [  3] ✓ householder dispenses fwd gauge infants
+  [  4] ✓ voluntary quarters eis dagon elevated
+  [  5] ✓ uncultured prophetic ngl nux recluse
+  ... (35 intermediate steps) ...
+  [ 40] ✓ formalizing vowelsin fide dunk fruited
+  [ 41] ✓ supporter orthodox sie tomb theopen
+  [ 42] ✓ vaganostus purchases ran shin soaring
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=925, Z7): the demon uttunul whispers from the djynxxagram
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ bali befell arresting apartfrom arian bali antagonistic
+  [  2] ✓ ws ragged qabbalists precision tram ws regulations
+  [  3] ✓ fwd durga dizzying diverting from fwd discontented
+  [  4] ✓ eis rpya restarts progress vedic eis sandalpowder
+  [  5] ✓ ngl ragged qabbalists precision tram ngl regulations
+  ... (35 intermediate steps) ...
+  [ 40] ✓ fide damian creditors unreliable eagled fide unprotected
+  [ 41] ✓ sie oooo ngarinyin neugebauer saidj sie possession
+  [ 42] ✓ ran rigel reluctance prescribed utt ran saintliness
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=820, Z1): paramita conducts dissolve the qliphoth veil
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ bhagavann anywhere bewildered bali bewildered baidam
+  [  2] ✓ beltway parrott bacchanalian ws bacchanalian aron
+  [  3] ✓ implore difficult intending fwd intending fool
+  [  4] ✓ egotism politico easterly eis easterly cpex
+  [  5] ✓ sandhill parrott semesilam ngl semesilam refs
+  ... (35 intermediate steps) ...
+  [ 40] ✓ gondwana tzikvik functlon fide functlon duct
+  [ 41] ✓ unscaled modality wrongly sie wrongly vadic
+  [ 42] ✓ thieves perishes unadorned ran unadorned str
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=760, Z4): numogrammic recursion spirals zone nine
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ classleaders andtwelfth anunnaki befell barge
+  [  2] ✓ churchiness reordering onwards ragged babble
+  [  3] ✓ ingularity exercising debugging durga hasn
+  [  4] ✓ expansions revolting pattern rpya dion
+  [  5] ✓ rottingdean reordering onwards ragged opt
+  ... (35 intermediate steps) ...
+  [ 40] ✓ harmonists waterless troops damian farq
+  [ 41] ✓ unholiness prevailing macrobian oooo stab
+  [ 42] ✓ thespelling restrained palpably rigel rene
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=740, Z2): entropy garden seeded with hardware random
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ aperture arahat befell befell asymbol benoit
+  [  2] ✓ overrun reeled ragged ragged assigned beehive
+  [  3] ✓ detection enigma durga durga glowing harqil
+  [  4] ✓ pentacles scarce rpya rpya corinth dennis
+  [  5] ✓ overrun reeled ragged ragged purism pupil
+  ... (35 intermediate steps) ...
+  [ 40] ✓ swarming danger damian damian emerging fixate
+  [ 41] ✓ mansions nkrx oooo oooo suicidal wander
+  [ 42] ✓ parapraes ruwe rigel rigel skryer tarot
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=698, Z5): beat poetry through the abecedarium chain
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ alif cazotte basileus bali appertain argha
+  [  2] ✓ prc capitals assumes ws permadeath wasa
+  [  3] ✓ cum january hurting fwd dindymus fuel
+  [  4] ✓ ren erecting deranging eis pitiless zahi
+  [  5] ✓ prc sanctifi sanctus ngl permadeath wasa
+  ... (35 intermediate steps) ...
+  [ 40] ✓ call gravely exercise fide unlikely erat
+  [ 41] ✓ llm thunder ulansey sie massifies rot
+  [ 42] ✓ read strung tetraact ran phnounebe woo
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=967, Z4): what the Tathagata preached as merit was no-stock of merit
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ arian bali Basileus bolfry bed attack anar ane-baraduc at attack
+  [  2] ✓ tram ws Assumes belching ki midday loeb rk-scales bai midday
+  [  3] ✓ from fwd Hurting lesser cq defined dano ean-enhance fo defined
+  [  4] ✓ vedic eis Deranging evander ki monin meek uh-semang bs monin
+  [  5] ✓ tram ngl Sanctus shuts hl midday loeb rk-scales mh midday
+  ... (35 intermediate steps) ...
+  [ 40] ✓ eagled fide Exercise heraldic sa thread usc dig-direct dec thread
+  [ 41] ✓ saidj sie Ulansey zoomed gm kulli kahn oad-ofron rc kulli
+  [ 42] ✓ utt ran Tetraact ulcers ki mitre mecca ti-seeing of mitre
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1312, Z7): I am the silence that is incomprehensible and the voice whose sound is manifold
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ I bab bali anthro bands ame architecturally ame bali baalit annals barabbas ame beginner
+  [  2] ✓ I kc ws organic yjie alf ventriloquism alf ws rider nommo peoria alf attract
+  [  3] ✓ I bab fwd djedkare foom gak interconnective gak fwd fables deform diadems gak infants
+  [  4] ✓ I kc eis phlegra david bob yifrtnizmusw bob eis secale ogarbha prose bob elevated
+  [  5] ✓ I ie ngl organic zpp mo underemphasises mo ngl rider nommo peoria mo recluse
+  ... (35 intermediate steps) ...
+  [ 40] ✓ I bab fide xxxv dull dna eschatologically dna fide deride women yaqui dna fruited
+  [ 41] ✓ I kc sie maters used si thunderstorms si sie otis meadow medley si theopen
+  [ 42] ✓ I ie ran pharoah sued nn ventriloquism nn ran salica obtain pradana nn soaring
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1088, Z8): wherever there is the possession of signs there is falsehood
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ aperture ammon ame bali antagonistic at baraduc ammon ame atrophy
+  [  2] ✓ overrun sewed alf ws regulations bai scales sewed alf obvious
+  [  3] ✓ detection equal gak fwd discontented fo enhance equal gak despicable
+  [  4] ✓ pentacles sirs bob eis sandalpowder bs semang sirs bob patrons
+  [  5] ✓ overrun sewed mo ngl regulations mh scales sewed mo obvious
+  ... (35 intermediate steps) ...
+  [ 40] ✓ swarming drink dna fide unprotected dec direct drink dna ubdecadence
+  [ 41] ✓ mansions pitch si sie possession rc ofron pitch si litters
+  [ 42] ✓ parapraes sides nn ran saintliness of seeing sides nn ouranos
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1110, Z3): a Bodhisattva should give gifts unsupported by the idea of a sign
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ a Asymmetry berenice anew armit communitarian ale bali ave at a bands
+  [  2] ✓ a Astrologer bankers ladle piles typographical lea ws auf bai a yjie
+  [  3] ✓ a Iterations indians dart deccdes hypothesized dam fwd gach fo a foom
+  [  4] ✓ a Ethnicities dudgeon legs psalm unsupported lo eis cpi bs a david
+  [  5] ✓ a Sprouting rubens ladle piles typographical jag ngl rai mh a zpp
+  ... (35 intermediate steps) ...
+  [ 40] ✓ a Homogenized founds than viru exploitation ve fide eer dec a dull
+  [ 41] ✓ a Victorians vestal harp metre subsumption ied sie vae rc a used
+  [ 42] ✓ a Threatening texts left pour unpleasantly lea ran tq of a sued
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1336, Z4): the stock of merit of the one who gives unsupported is not easy to measure
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ bali baraduc at attack at bali bend akaje athene communitarian ame ante arial aged bumping
+  [  2] ✓ ws scales bai midday bai ws bedad rand osman typographical alf maya arabs lie bolutu
+  [  3] ✓ fwd enhance fo defined fo fwd ite esv detain hypothesized gak clip gauge dim idiocies
+  [  4] ✓ eis semang bs monin bs eis fame sale pause unsupported bob neat dagon mid eastern
+  [  5] ✓ ngl scales mh midday mh ngl rig rand osman typographical mo maya nux lie reverie
+  ... (35 intermediate steps) ...
+  [ 40] ✓ fide direct dec thread dec fide gri deth wordb exploitation dna yes dunk vac future
+  [ 41] ✓ sie ofron rc kulli rc sie vic mode marks subsumption si jude tomb ipa toylar
+  [ 42] ✓ ran seeing of mitre of ran tei rom paired unpleasantly nn mou shin mal sudoku

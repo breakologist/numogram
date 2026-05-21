@@ -88,36 +88,43 @@ class SoftSynth:
     def render(self, bpm: int = DEFAULT_BPM, speed: int = DEFAULT_SPEED) -> array.array:
         dur   = self.row_duration(bpm, speed)
         fpr   = max(1, int(round(dur * OUTPUT_RATE)))   # frames per row
-        total_rows = len(self.mod.orders) * 64
+
+        # Calculate total rows from ACTUAL pattern lengths, not assuming 64 per order
+        rows_per_order = []
+        for order_idx in self.mod.orders:
+            pat = self.mod.patterns[order_idx]
+            rows_per_order.append(len(pat.rows))
+        total_rows = sum(rows_per_order)
         total_frames = total_rows * fpr
         output = array.array('h', [0] * total_frames)
 
-        # Global row index → (pattern_step, row_in_pattern)
-        for grobal_row in range(total_rows):
-            pattern_step = grobal_row // 64
-            row_in_pat   = grobal_row % 64
-            pat_idx      = self.mod.orders[pattern_step]
-            pat          = self.mod.patterns[pat_idx]
+        # Iterate over each order entry and its actual pattern rows
+        global_row = 0
+        for order_step, order_idx in enumerate(self.mod.orders):
+            pat = self.mod.patterns[order_idx]
+            pat_rows = len(pat.rows)
+            for row_in_pat in range(pat_rows):
+                # Update channel states from this row's cells
+                for ch in range(4):
+                    period, samp_idx, eff, param = pat.rows[row_in_pat][ch]
+                    if period != 0 and samp_idx != 0:
+                        vol = self.mod.samples[samp_idx-1].volume
+                        self.voices[ch].trigger(self.samples[samp_idx], period, vol)
+                    elif period == 0:
+                        self.voices[ch].stop()          # note‑cut
 
-            # Update channel states from this row's cells
-            for ch in range(4):
-                period, samp_idx, eff, param = pat.rows[row_in_pat][ch]
-                if period != 0 and samp_idx != 0:
-                    vol = self.mod.samples[samp_idx-1].volume
-                    self.voices[ch].trigger(self.samples[samp_idx], period, vol)
-                elif period == 0:
-                    self.voices[ch].stop()          # note‑cut
+                # Mix all voices for this row
+                start = global_row * fpr
+                for voice in self.voices:
+                    chunk = voice.render(fpr)
+                    for i, s in enumerate(chunk):
+                        idx = start + i
+                        val = output[idx] + s
+                        if val > 32767: val = 32767
+                        if val < -32768: val = -32768
+                        output[idx] = val
 
-            # Mix all voices for this row
-            start = grobal_row * fpr
-            for voice in self.voices:
-                chunk = voice.render(fpr)
-                for i, s in enumerate(chunk):
-                    idx = start + i
-                    val = output[idx] + s
-                    if val > 32767: val = 32767
-                    if val < -32768: val = -32768
-                    output[idx] = val
+                global_row += 1
 
         return output
 
