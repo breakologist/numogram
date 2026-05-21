@@ -1,0 +1,221 @@
+ZONE CUT-UP from Jumped Text (2026-05-21 09:00)
+════════════════════════════════════════════════════════════════════════
+Each zone's fragmentation profile applied to xeno-jumped text.
+Corpus for source text: oracle
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: The cryptolith opens the decimator gate
+JUMPED: Baat apparatuses aliens baat assists akat
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · Baat
+
+  ZONE 1 [SURGE]
+  Baat apparatuses aliens baat assists akat Baat apparatuses aliens baat assists akat—
+
+  ZONE 2 [SEPARATION]
+  Baat apparatuses aliens baat assists akat
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  Baat apparatuses aliens baat assists akat
+
+  ZONE 5 [PRESSURE]
+  Baat apparatuses aliens baat assists akat
+
+  ZONE 6 [ABSTRACTION]
+  baat :: apparatuses :: akat
+
+  ZONE 7 [BLOOD]
+  Baat apparatuses aliens baat assists akat
+
+  ZONE 8 [MULTIPLICITY]
+  apparatuses
+apparatuses
+aliens
+aliens
+assists
+assists
+akat
+akat
+
+  ZONE 9 [PLEX]
+  ass≡ts aliens akat apparatuses Baat
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: hyperstition flows through the triangular syzygy
+JUMPED: authentication ashore arouser baat apsyrtus amphiaros
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · au∂ntication
+
+  ZONE 1 [SURGE]
+  authentication ashore arouser baat apsyrtus amphiaros authentication ashore arouser baat apsyrtus amphiaros—
+
+  ZONE 2 [SEPARATION]
+  authentication ashore arouser baat apsyrtus amphiaros
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  authentication ashore arouser baat apsyrtus amphiaros
+
+  ZONE 5 [PRESSURE]
+  authentication ashore arouser baat apsyrtus amphiaros
+
+  ZONE 6 [ABSTRACTION]
+  baat :: ashore :: amphiaros
+
+  ZONE 7 [BLOOD]
+  authentication ashore arouser baat apsyrtus amphiaros
+
+  ZONE 8 [MULTIPLICITY]
+  ashore
+ashore
+arouser
+arouser
+apsyrtus
+apsyrtus
+amphiaros
+amphiaros
+
+  ZONE 9 [PLEX]
+  apsyrtus arouser amphiaros ashore au∂ntication
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: Katak and Oddubb coil the plex
+JUMPED: Berne alf Arupa aion baat ariki
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · Berne
+
+  ZONE 1 [SURGE]
+  Berne alf Arupa aion baat ariki Berne alf Arupa aion baat ariki—
+
+  ZONE 2 [SEPARATION]
+  Berne alf Arupa aion baat ariki
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  Berne alf Arupa aion baat ariki
+
+  ZONE 5 [PRESSURE]
+  Berne alf Arupa aion baat ariki
+
+  ZONE 6 [ABSTRACTION]
+  baat :: ariki
+
+  ZONE 7 [BLOOD]
+  Berne alf Arupa aion baat ariki
+
+  ZONE 8 [MULTIPLICITY]
+  ariki
+ariki
+baat
+baat
+alf
+alf
+Berne
+Berne
+
+  ZONE 9 [PLEX]
+  ariki Berne aion (()) baat Arupa
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: teleoplexy accelerates the void circuit
+JUMPED: clausewitz anesthesia baat arabia attained
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · clausewitz
+
+  ZONE 1 [SURGE]
+  clausewitz anesthesia baat arabia attained clausewitz anesthesia baat arabia attained—
+
+  ZONE 2 [SEPARATION]
+  clausewitz anesthesia baat arabia attained
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  clausewitz anesthesia baat arabia attained
+
+  ZONE 5 [PRESSURE]
+  clausewitz anesthesia baat arabia attained
+
+  ZONE 6 [ABSTRACTION]
+  arabia :: attained
+
+  ZONE 7 [BLOOD]
+  clausewitz anesthesia baat arabia attained
+
+  ZONE 8 [MULTIPLICITY]
+  attained
+attained
+anesthesia
+anesthesia
+clausewitz
+clausewitz
+arabia
+arabia
+
+  ZONE 9 [PLEX]
+  clausewitz baat attained arabia (())
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: the demon uttunul whispers from the djynxxagram
+JUMPED: baat avoid appearsto analyzable arani baat andrelations
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · baat
+
+  ZONE 1 [SURGE]
+  baat avoid appearsto analyzable arani baat andrelations baat avoid appearsto analyzable arani baat andrelations—
+
+  ZONE 2 [SEPARATION]
+  baat avoid appearsto analyzable arani baat andrelations
+
+  ZONE 3 [WARP]
+  andrelsto 
+
+  ZONE 4 [GATE]
+  baat avoid appearsto analyzable arani baat andrelations
+
+  ZONE 5 [PRESSURE]
+  baat avoid appearsto analyzable arani baat andrelations
+
+  ZONE 6 [ABSTRACTION]
+  arani :: baat :: baat
+
+  ZONE 7 [BLOOD]
+  baat avoid appearsto analyzable arani baat andrelations
+
+  ZONE 8 [MULTIPLICITY]
+  baat
+baat
+baat
+baat
+appearsto
+appearsto
+arani
+arani
+analyzable
+analyzable
+
+  ZONE 9 [PLEX]
+  appearsto baat baat arani andrelations analyzable (())
