@@ -1,0 +1,1131 @@
+{
+  "mode": "single",
+  "parameters": {
+    "text": "three three three fracture through the decimal vein",
+    "corpus_size": 89050,
+    "generations": 10,
+    "seed": 333,
+    "creative": true,
+    "creative_strategy": "varentropy",
+    "bucket_key": "aq",
+    "correlate": false
+  },
+  "original_aq": 883,
+  "original_words": [
+    "three",
+    "three",
+    "three",
+    "fracture",
+    "through",
+    "the",
+    "decimal",
+    "vein"
+  ],
+  "trajectory": [
+    {
+      "generation": 0,
+      "text": "three three three fracture through the decimal vein",
+      "words": [
+        "three",
+        "three",
+        "three",
+        "fracture",
+        "through",
+        "the",
+        "decimal",
+        "vein"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "original_aq": 883,
+      "mutated_aq": 883
+    },
+    {
+      "generation": 1,
+      "text": "decant decant decant corteges creamery bang cannes blags",
+      "words": [
+        "decant",
+        "decant",
+        "decant",
+        "corteges",
+        "creamery",
+        "bang",
+        "cannes",
+        "blags"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 883,
+      "entropy": 3.604818,
+      "metrics": {
+        "total_edit": 43,
+        "avg_edit": 5.375,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 8
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "three",
+          "crumpled": "decant",
+          "reconstructed": "decant",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "three",
+          "crumpled": "decant",
+          "reconstructed": "lases",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "three",
+          "crumpled": "decant",
+          "reconstructed": "ugly",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "fracture",
+          "crumpled": "corteges",
+          "reconstructed": "incurred",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "through",
+          "crumpled": "creamery",
+          "reconstructed": "wiggling",
+          "bucket_key": "AQ=160",
+          "bucket_size": 699,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "the",
+          "crumpled": "bang",
+          "reconstructed": "bail",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "decimal",
+          "crumpled": "cannes",
+          "reconstructed": "fasts",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "vein",
+          "crumpled": "blags",
+          "reconstructed": "ovid",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 3,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "text": "clogs clogs clogs coffining whamming mas rheum role",
+      "words": [
+        "clogs",
+        "clogs",
+        "clogs",
+        "coffining",
+        "whamming",
+        "mas",
+        "rheum",
+        "role"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 883,
+      "entropy": 3.821827,
+      "metrics": {
+        "total_edit": 43,
+        "avg_edit": 5.375,
+        "max_edit": 7,
+        "exact_count": 0,
+        "total_words": 8
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "three",
+          "crumpled": "clogs",
+          "reconstructed": "clogs",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "three",
+          "crumpled": "clogs",
+          "reconstructed": "lading",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "three",
+          "crumpled": "clogs",
+          "reconstructed": "wagged",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "fracture",
+          "crumpled": "coffining",
+          "reconstructed": "petcocks",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "through",
+          "crumpled": "whamming",
+          "reconstructed": "misjudge",
+          "bucket_key": "AQ=160",
+          "bucket_size": 699,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "the",
+          "crumpled": "mas",
+          "reconstructed": "kkk",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "decimal",
+          "crumpled": "rheum",
+          "reconstructed": "spiced",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "vein",
+          "crumpled": "role",
+          "reconstructed": "lades",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "text": "livid livid livid learners jaybirds elbe flirt facial",
+      "words": [
+        "livid",
+        "livid",
+        "livid",
+        "learners",
+        "jaybirds",
+        "elbe",
+        "flirt",
+        "facial"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 883,
+      "entropy": 3.64137,
+      "metrics": {
+        "total_edit": 38,
+        "avg_edit": 4.75,
+        "max_edit": 7,
+        "exact_count": 0,
+        "total_words": 8
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "three",
+          "crumpled": "livid",
+          "reconstructed": "likes",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "three",
+          "crumpled": "livid",
+          "reconstructed": "lases",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "three",
+          "crumpled": "livid",
+          "reconstructed": "adored",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "fracture",
+          "crumpled": "learners",
+          "reconstructed": "laughter",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "through",
+          "crumpled": "jaybirds",
+          "reconstructed": "rowlock",
+          "bucket_key": "AQ=160",
+          "bucket_size": 699,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "the",
+          "crumpled": "elbe",
+          "reconstructed": "duh",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "decimal",
+          "crumpled": "flirt",
+          "reconstructed": "flames",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "vein",
+          "crumpled": "facial",
+          "reconstructed": "ting",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 3,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "text": "smear smear smear russian zechariah mgm rowed sacco",
+      "words": [
+        "smear",
+        "smear",
+        "smear",
+        "russian",
+        "zechariah",
+        "mgm",
+        "rowed",
+        "sacco"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 883,
+      "entropy": 3.627392,
+      "metrics": {
+        "total_edit": 39,
+        "avg_edit": 4.875,
+        "max_edit": 7,
+        "exact_count": 0,
+        "total_words": 8
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "three",
+          "crumpled": "smear",
+          "reconstructed": "slum",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "three",
+          "crumpled": "smear",
+          "reconstructed": "reran",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "three",
+          "crumpled": "smear",
+          "reconstructed": "dills",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "fracture",
+          "crumpled": "russian",
+          "reconstructed": "reviews",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "through",
+          "crumpled": "zechariah",
+          "reconstructed": "varmint",
+          "bucket_key": "AQ=160",
+          "bucket_size": 699,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "the",
+          "crumpled": "mgm",
+          "reconstructed": "elbe",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "decimal",
+          "crumpled": "rowed",
+          "reconstructed": "lifted",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "vein",
+          "crumpled": "sacco",
+          "reconstructed": "peon",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 2,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "text": "oboes oboes oboes netters mopiest sam withe grip",
+      "words": [
+        "oboes",
+        "oboes",
+        "oboes",
+        "netters",
+        "mopiest",
+        "sam",
+        "withe",
+        "grip"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 883,
+      "entropy": 3.543837,
+      "metrics": {
+        "total_edit": 40,
+        "avg_edit": 5.0,
+        "max_edit": 7,
+        "exact_count": 0,
+        "total_words": 8
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "three",
+          "crumpled": "oboes",
+          "reconstructed": "oboes",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "three",
+          "crumpled": "oboes",
+          "reconstructed": "tull",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "three",
+          "crumpled": "oboes",
+          "reconstructed": "moira",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "fracture",
+          "crumpled": "netters",
+          "reconstructed": "heavenly",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "through",
+          "crumpled": "mopiest",
+          "reconstructed": "swiping",
+          "bucket_key": "AQ=160",
+          "bucket_size": 699,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "the",
+          "crumpled": "sam",
+          "reconstructed": "don",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "decimal",
+          "crumpled": "withe",
+          "reconstructed": "member",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "vein",
+          "crumpled": "grip",
+          "reconstructed": "wags",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 4,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 6,
+      "text": "fever fever fever escapist effectual dane curer coned",
+      "words": [
+        "fever",
+        "fever",
+        "fever",
+        "escapist",
+        "effectual",
+        "dane",
+        "curer",
+        "coned"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 883,
+      "entropy": 3.588296,
+      "metrics": {
+        "total_edit": 40,
+        "avg_edit": 5.0,
+        "max_edit": 7,
+        "exact_count": 0,
+        "total_words": 8
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "three",
+          "crumpled": "fever",
+          "reconstructed": "fever",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "three",
+          "crumpled": "fever",
+          "reconstructed": "jinni",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "three",
+          "crumpled": "fever",
+          "reconstructed": "edited",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "fracture",
+          "crumpled": "escapist",
+          "reconstructed": "creditor",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "through",
+          "crumpled": "effectual",
+          "reconstructed": "subpart",
+          "bucket_key": "AQ=160",
+          "bucket_size": 699,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "the",
+          "crumpled": "dane",
+          "reconstructed": "moe",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "decimal",
+          "crumpled": "curer",
+          "reconstructed": "brecht",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "vein",
+          "crumpled": "coned",
+          "reconstructed": "caner",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 7,
+      "text": "brawl brawl brawl brollies caseloads auk bereft away",
+      "words": [
+        "brawl",
+        "brawl",
+        "brawl",
+        "brollies",
+        "caseloads",
+        "auk",
+        "bereft",
+        "away"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 883,
+      "entropy": 3.678605,
+      "metrics": {
+        "total_edit": 39,
+        "avg_edit": 4.875,
+        "max_edit": 7,
+        "exact_count": 0,
+        "total_words": 8
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "three",
+          "crumpled": "brawl",
+          "reconstructed": "brawl",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "three",
+          "crumpled": "brawl",
+          "reconstructed": "sides",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "three",
+          "crumpled": "brawl",
+          "reconstructed": "tibet",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "fracture",
+          "crumpled": "brollies",
+          "reconstructed": "director",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "through",
+          "crumpled": "caseloads",
+          "reconstructed": "busying",
+          "bucket_key": "AQ=160",
+          "bucket_size": 699,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "the",
+          "crumpled": "auk",
+          "reconstructed": "coo",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "decimal",
+          "crumpled": "bereft",
+          "reconstructed": "seven",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "vein",
+          "crumpled": "away",
+          "reconstructed": "dabber",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 8,
+      "text": "bjork bjork bjork birdbaths bluefins app bakers arcade",
+      "words": [
+        "bjork",
+        "bjork",
+        "bjork",
+        "birdbaths",
+        "bluefins",
+        "app",
+        "bakers",
+        "arcade"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 883,
+      "entropy": 3.91337,
+      "metrics": {
+        "total_edit": 45,
+        "avg_edit": 5.625,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 8
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "three",
+          "crumpled": "bjork",
+          "reconstructed": "bjork",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "three",
+          "crumpled": "bjork",
+          "reconstructed": "loath",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "three",
+          "crumpled": "bjork",
+          "reconstructed": "steak",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "fracture",
+          "crumpled": "birdbaths",
+          "reconstructed": "ufology",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "through",
+          "crumpled": "bluefins",
+          "reconstructed": "agnostic",
+          "bucket_key": "AQ=160",
+          "bucket_size": 699,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "the",
+          "crumpled": "app",
+          "reconstructed": "kim",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "decimal",
+          "crumpled": "bakers",
+          "reconstructed": "fibril",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "vein",
+          "crumpled": "arcade",
+          "reconstructed": "abased",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 9,
+      "text": "seneca seneca seneca resizes redeemable glad legals lades",
+      "words": [
+        "seneca",
+        "seneca",
+        "seneca",
+        "resizes",
+        "redeemable",
+        "glad",
+        "legals",
+        "lades"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 883,
+      "entropy": 3.339351,
+      "metrics": {
+        "total_edit": 42,
+        "avg_edit": 5.25,
+        "max_edit": 7,
+        "exact_count": 0,
+        "total_words": 8
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "three",
+          "crumpled": "seneca",
+          "reconstructed": "semen",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "three",
+          "crumpled": "seneca",
+          "reconstructed": "orcas",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "three",
+          "crumpled": "seneca",
+          "reconstructed": "ruhr",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "fracture",
+          "crumpled": "resizes",
+          "reconstructed": "inkstand",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "through",
+          "crumpled": "redeemable",
+          "reconstructed": "scorers",
+          "bucket_key": "AQ=160",
+          "bucket_size": 699,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "the",
+          "crumpled": "glad",
+          "reconstructed": "adar",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "decimal",
+          "crumpled": "legals",
+          "reconstructed": "uzbek",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "vein",
+          "crumpled": "lades",
+          "reconstructed": "moog",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 4,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 10,
+      "text": "bento bento bento bellboys birdsong app baeyer arabs",
+      "words": [
+        "bento",
+        "bento",
+        "bento",
+        "bellboys",
+        "birdsong",
+        "app",
+        "baeyer",
+        "arabs"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 883,
+      "entropy": 3.642064,
+      "metrics": {
+        "total_edit": 45,
+        "avg_edit": 5.625,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 8
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "three",
+          "crumpled": "bento",
+          "reconstructed": "bento",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "three",
+          "crumpled": "bento",
+          "reconstructed": "lodged",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "three",
+          "crumpled": "bento",
+          "reconstructed": "dwell",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "fracture",
+          "crumpled": "bellboys",
+          "reconstructed": "salvador",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "through",
+          "crumpled": "birdsong",
+          "reconstructed": "waivers",
+          "bucket_key": "AQ=160",
+          "bucket_size": 699,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "the",
+          "crumpled": "app",
+          "reconstructed": "dena",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "decimal",
+          "crumpled": "baeyer",
+          "reconstructed": "jigger",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "vein",
+          "crumpled": "arabs",
+          "reconstructed": "ayes",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 4,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_recovery_rate": 0.0,
+    "aq_preserved": true,
+    "final_text": "bento bento bento bellboys birdsong app baeyer arabs",
+    "final_aq": 883,
+    "original_length": 51,
+    "final_length": 52,
+    "length_ratio": 1.0196078431372548,
+    "original_entropy": 3.566541216162523,
+    "final_entropy": 3.642064,
+    "entropy_delta": 0.07552278383747701,
+    "total_edit_distance": 45,
+    "avg_edit_per_word": 5.625,
+    "max_single_word_edit": 8,
+    "exact_matches": "0/8",
+    "exact_ratio": 0.0
+  }
+}
