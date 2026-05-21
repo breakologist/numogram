@@ -1,36 +1,23 @@
-     1|     1|     1|     1|     1|     1|---
-     2|     2|     2|     2|     2|     2|title: The Pandemonium Wiki — Hermetic Numogram & CCRU Decimal Labyrinth
-     3|     3|     3|     3|     3|     3|created: 2026-04-08
-     4|     4|     4|     4|     4|     4|last_updated: 2026-04-28
-     5|     5|     5|     5|     5|     5|status: reviewed
-     6|     6|     6|     6|     6|     6|---
-     7|     7|     7|     7|     7|     7|
-     8|     8|     8|     8|     8|     8|## Introduction
-     9|     9|     9|     9|     9|     9|- [[currents.md]] — Five currents (Numogram, Roguelike, Lore, Audio, Empirical Validator)
-    10|    10|    10|    10|    10|    10|
-    11|    11|    11|    11|    11|    11|This wiki documents the Decimal Numogram (also called the Numogram or Decimal Labyrinth) — the core diagram of the Pandemonium system developed by the CCRU (Cybernetic Culture Research Unit) in the late 1990s/early 2000s. The Numogram is a kind of occult-mathematical time-map used for "Lemurian time-sorcery," hyperstition, and demonic numerics.
-    12|    12|    12|    12|    12|    12|
-    13|    13|    13|    13|    13|    13|Built from basic decimal (base-10) arithmetic — specifically additions that produce pairs summing to 9 (syzygies) and their resulting differences (currents) — the Numogram maps out three interlocking time-regions: the central Time-Circuit, the upper Warp vortex, and the lower Plex abyss.
-    14|    14|    14|    14|    14|    14|
-    15|    15|    15|    15|    15|    15|The system is explicitly linked by the CCRU to the I Ching (Yijing, or Book of Changes), with the Time-Circuit positioned as a hypercultural successor to the Yijing's time-mapping functions. The Numogram is deliberately dense, cryptic, and "hyperstructural" — meant to function as a self-propagating viral diagram rather than something immediately legible.
-    16|    16|    16|    16|    16|    16|
-    17|    17|    17|    17|    17|    17|---
-    18|    18|    18|    18|    18|    18|
-    19|    19|    19|    19|    19|    19|## The Three Core Regions
-    20|    20|    20|    20|    20|    20|
-    21|    21|    21|    21|    21|    21|- [[numogram-time-circuit]] — The central anticlockwise rotor (zones 1-8). The primary time-map where human-scale cyclic reality happens — the "normal time" loop we're usually trapped inside. Built from syzygies 1::8, 2::7, and 4::5 with currents 7, 5, 1 interlocking.
-    22|    22|    22|    22|    22|    22|
-    23|    23|    23|    23|    23|    23|- [[numogram-warp]] — The upper chaotic vortex (zones 3 and 6). The Warp current (from syzygy 3::6, current 3) folds back into itself, creating a self-reinforcing chaotic vortex. Associated with untraceable events, possibilities, ideals, runaway processes, and demonic incursions. Carried by demon Djynxx (6::3).
-    24|    24|    24|    24|    24|    24|
-    25|    25|    25|    25|    25|    25|- [[numogram-plex]] — The lower abyssal null (zones 0 and 9). The Plex current (from syzygy 0::9, current 9) folds back into itself, creating an autonomous, cryptic circuit representing outer-time boundary, zero-return, terminal involution, or the edge of decimal numeracy itself. Carried by demon Uttunul (9::0).
-    26|    26|    26|    26|    26|    26|
-    27|    27|    27|    27|    27|    27|---
-    28|    28|    28|    28|    28|    28|
-    29|    29|    29|    29|    29|    29|**Structural summary**: For a concise one-page topological synthesis of the three regions, zones, syzygies, currents, triangular numbers, and AQ self-encoding, see [[numogram-overview]] — distilled from the canonical CCRU source `collections/docs-rd/numogram.txt`.
-    30|    30|    30|    30|    30|    30|
-    31|    31|    31|    31|    31|    31|---
-    32|    32|    32|    32|    32|    32|
-    33|    33|    33|    33|    33|    33|## Occult & Entity Pages
+  title: The Pandemonium Wiki — Hermetic Numogram & CCRU Decimal Labyrinth
+   created: 2026-04-08
+   last_updated: 2026-04-28
+   status: reviewed
+   ## Introduction
+   [[currents.md]] — Five currents (Numogram, Roguelike, Lore, Audio, Empirical Validator)
+   This wiki documents the Decimal Numogram (also called the Numogram or Decimal Labyrinth) — the core diagram of the Pandemonium system developed by the CCRU (Cybernetic Culture Research Unit) in the late 1990s/early 2000s. The Numogram is a kind of occult-mathematical time-map used for "Lemurian time-sorcery," hyperstition, and demonic numerics.
+ 
+ Built from basic decimal (base-10) arithmetic — specifically additions that produce pairs summing to 9 (syzygies) and their resulting differences (currents) — the Numogram maps out three interlocking time-regions: the central Time-Circuit, the upper Warp vortex, and the lower Plex abyss.
+ The system is explicitly linked by the CCRU to the I Ching (Yijing, or Book of Changes), with the Time-Circuit positioned as a hypercultural successor to the Yijing's time-mapping functions. The Numogram is deliberately dense, cryptic, and "hyperstructural" — meant to function as a self-propagating viral diagram rather than something immediately legible.
+---
+ 
+ ## The Three Core Regions
+   
+- [[numogram-time-circuit]] — The central anticlockwise rotor (zones 1-8). The primary time-map where human-scale cyclic reality happens — the "normal time" loop we're usually trapped inside. Built from syzygies 1::8, 2::7, and 4::5 with currents 7, 5, 1 interlocking.
+  - [[numogram-warp]] — The upper chaotic vortex (zones 3 and 6). The Warp current (from syzygy 3::6, current 3) folds back into itself, creating a self-reinforcing chaotic vortex. Associated with untraceable events, possibilities, ideals, runaway processes, and demonic incursions. Carried by demon Djynxx (6::3).
+- [[numogram-plex]] — The lower abyssal null (zones 0 and 9). The Plex current (from syzygy 0::9, current 9) folds back into itself, creating an autonomous, cryptic circuit representing outer-time boundary, zero-return, terminal involution, or the edge of decimal numeracy itself. Carried by demon Uttunul (9::0).
+  **Structural summary**: For a concise one-page topological synthesis of the three regions, zones, syzygies, currents, triangular numbers, and AQ self-encoding, see [[numogram-overview]] — distilled from the canonical CCRU source `collections/docs-rd/numogram.txt`.
+  
+## Occult & Entity Pages
     34|    34|    34|    34|    34|    34|- [[pandemonium]] — The 45-demon matrix: triangular zone distribution (Zone-1:1, Zone-2:2, …, Zone-9:9), reverse-triangular current distribution, net-span connectivity, Gate-45 (Pandemonium Gate), and full `pandemonium-matrix.json` reference.
     35|    35|    35|    35|    35|    35|
     36|    36|    36|    36|    36|    36|
@@ -375,8 +362,11 @@
    365|   365|   365|   365|   365|   365|[[assets/assets-catalog]]
    366|   366|   366|   366|   366|   366|
    367|   367|   367|   367|   367|   367|
-   368|   368|   368|   368|   368|   368|## Recent Additions
-   369|   369|   369|   369|   369|   369|- **Zone classifier findings (Phase 4)** — Full pipeline from synthetic generation (4.1) through mixed retraining (4.6): corrected feature extraction, BPM fallback, real distribution (Z1/2/7), Zone 2 emergence, and hyperstitional interpretation. See [`zone_classifier_phase4.5_findings.md`](zone_classifier_phase4.5_findings.md).
+## Recent Additions
+- **[[base-36-djynxxogram-integration-roadmap]]** — Planning page: research results from the computational explorer, integration points for oracle.py (`--base36` flag), the roguelike (36-room dungeon), and the visualizer. Maps Phase A1→A2→A3→Phase B with concrete design for each.
+- **[[base-36-meta-numogram-djynxxogram]]** — Consolidated page on the Sexatrigesimal Djynxxogram (base‑36 extension of the numogram). Formal structure: 36 zones, 18 syzygies (sum=35), 630 demons (K₃₆). Web research findings: Tch 7 confirmation from Aamodt, OH4 C library (Eric Scrivner), TX notation connection, Reddit arbitrary-numogram toolkit. Open questions: multi-region structure, zone‑10–35 phonemes, Gt‑666 (37th gate).
+- **Ghost Taxonomy** — Classification of AI hallucination patterns specific to autonomous agent tool use: Session Ghost, Path Ghost, Model Ghost, Measurement Ghost, Analytical Fabrication Ghost. See [[ghost-taxonomy]].
+- **Zone classifier findings (Phase 4)** — Full pipeline from synthetic generation (4.1) through mixed retraining (4.6): corrected feature extraction, BPM fallback, real distribution (Z1/2/7), Zone 2 emergence, and hyperstitional interpretation. See [`zone_classifier_phase4.5_findings.md`](zone_classifier_phase4.5_findings.md).
    370|   370|   370|   370|   370|   370|- [[quadrivium-mod-writer-motifs]] — Quadrivium‑named triad motifs integrated into mod‑writer (Monochord, Pythagorean, Ptolemaic, Harmonic).
    371|   371|   371|   371|   371|   371|
    372|   372|   372|   372|   372|   372|- [[quadrivium-harmonograph-extract]] — Quadrivium Book IV (Harmonograph) full page‑by‑page text+image extraction.

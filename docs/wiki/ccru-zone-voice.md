@@ -153,7 +153,122 @@ From CCRU zone pages, the Munumese quasiphonic particles map zone numbers to spe
 | 8 | mnm | Moan, lullaby, forgetting |
 | 9 | tn | Grunt, pleasure/rage, the gate opens |
 
-These particles are ALREADY encoded in `oracle.py`'s `ZONE_DATA` under the `"name"` field. The oracle sentences in `oracle_sentences.py` decompose these particles into phoneme sequences for formant synthesis. The zone voice profiles in `formant_voice.py` set pitch, formant scale, and breathiness per zone.
+These particles are ALREADY encoded in `oracle.py`'s `ZONE_DATA` under the `"name"` field.
+
+---
+
+## Extended Quasiphonic Particles — Zones 10–35 (Djynxxogram)
+
+The base-36 Djynxxogram extends zone space from 10 to 36 zones (0–35). Zones 10–35 map to letters A–Z and require a naming system consistent with the CCRU quasiphonic tradition. Two complementary approaches exist:
+
+### Approach 1: Combinatorial (Amy Ireland's Method)
+
+Each zone's decimal digits are decomposed, and their quasiphonic particles are concatenated. This follows the same logic as demon name generation (see §Demon Name Generation): zone 15 = 1's "gl" + 5's "ktt" = "glktt".
+
+| Zone | Char | Decimal Digits | Particle | Family | 
+|------|------|---------------|----------|--------|
+| 10 | A | 1, 0 | gleia | gl- (Surge) |
+| 11 | B | 1, 1 | glgl | gl- (Surge) |
+| 12 | C | 1, 2 | gldt | gl- (Surge) |
+| 13 | D | 1, 3 | glzx | gl- (Surge) |
+| 14 | E | 1, 4 | glskr | gl- (Surge) |
+| 15 | F | 1, 5 | glktt | gl- (Surge) |
+| 16 | G | 1, 6 | gltch | gl- (Surge) |
+| 17 | H | 1, 7 | glpb | gl- (Surge) |
+| 18 | I | 1, 8 | glmnm | gl- (Surge) |
+| 19 | J | 1, 9 | gltn | gl- (Surge) |
+| 20 | K | 2, 0 | dteia | dt- (Hold) |
+| 21 | L | 2, 1 | dtgl | dt- (Hold) |
+| 22 | M | 2, 2 | dtdt | dt- (Hold) |
+| 23 | N | 2, 3 | dtzx | dt- (Hold) |
+| 24 | O | 2, 4 | dtskr | dt- (Hold) |
+| 25 | P | 2, 5 | dtktt | dt- (Hold) |
+| 26 | Q | 2, 6 | dttch | dt- (Hold) |
+| 27 | R | 2, 7 | dtpb | dt- (Hold) |
+| 28 | S | 2, 8 | dtmnm | dt- (Hold) |
+| 29 | T | 2, 9 | dttn | dt- (Hold) |
+| 30 | U | 3, 0 | zxeia | zx- (Warp) |
+| 31 | V | 3, 1 | zxgl | zx- (Warp) |
+| 32 | W | 3, 2 | zxdt | zx- (Warp) |
+| 33 | X | 3, 3 | zxzx | zx- (Warp) |
+| 34 | Y | 3, 4 | zxskr | zx- (Warp) |
+| 35 | Z | 3, 5 | zxktt | zx- (Warp) |
+
+**Emergent family structure:** The tens digit determines the initial consonant cluster, creating three phonetic families:
+- **gl- family** (zones 10–19, A–J): children of Zone 1 (Surge). Phoneme prefix: glottal catch, beginnings
+- **dt- family** (zones 20–29, K–T): children of Zone 2 (Hold). Phoneme prefix: stuttering, boundaries
+- **zx- family** (zones 30–35, U–Z): children of Zone 3 (Warp). Phoneme prefix: insectoid buzz, static
+
+This family structure maps directly to decimal attractors: gl- → attractor 1 (Surge), dt- → attractor 2 (Hold), zx- → attractor 3 (Warp).
+
+**Length truncation:** Particles over ~8 characters are trimmed to the first 3 characters of each component digit's particle, keeping them pronounceable. Full-length forms are preserved in the reference data.
+
+### Approach 2: Letter-Native (Oracle Readability)
+
+For oracle readings and spoken output, a letter-native naming system maps each zone to a syllable derived from the letter's phonetic value:
+
+| Zone | Char | Name | IPA | Notes |
+|------|------|------|-----|-------|
+| 10 | A | Aya | /aɪ.ə/ | |
+| 11 | B | Buh | /bʌ/ | |
+| 12 | C | Kuh | /kʌ/ | Hard C |
+| 13 | D | Duh | /dʌ/ | |
+| 14 | E | Eh | /ɛ/ | |
+| 15 | F | Fuh | /fʌ/ | |
+| 16 | G | Guh | /gʌ/ | |
+| 17 | H | Huh | /hʌ/ | |
+| 18 | I | Ih | /ɪ/ | Short i |
+| 19 | J | Juh | /dʒʌ/ | |
+| 20 | K | Kay | /keɪ/ | |
+| 21 | L | Luh | /lʌ/ | |
+| 22 | M | Muh | /mʌ/ | |
+| 23 | N | Nuh | /nʌ/ | |
+| 24 | O | Oh | /oʊ/ | |
+| 25 | P | Puh | /pʌ/ | |
+| 26 | Q | Kwuh | /kwʌ/ | |
+| 27 | R | Ruh | /rʌ/ | |
+| 28 | S | Suh | /sʌ/ | |
+| 29 | T | Tuh | /tʌ/ | |
+| 30 | U | Uh | /ʌ/ | |
+| 31 | V | Vuh | /vʌ/ | |
+| 32 | W | Wuh | /wʌ/ | |
+| 33 | X | Kss | /ks/ | Sibilant hiss |
+| 34 | Y | Yuh | /jʌ/ | |
+| 35 | Z | Zuh | /zʌ/ | Outer zone |
+
+**Usage distinction:**
+- **Letter-native** is used in `oracle.py` `--base36` mode — more natural for spoken oracle readings
+- **Combinatorial** is used in `numogram-base-explorer.py` — maintains quasiphonic tradition for technical diagrams
+- Both are configurable via flags in the explorer (`--phoneme combinatorial|letter`)
+
+### Demonstration: the Djynxxogram Speaks
+
+**CCCXXXIII** traverses zones 12 (Kuh), 33 (Kss), 18 (Ih), repeated thrice:
+- Kazimierz-style stutter: *Kuh-Kuh-Kuh-Kss-Kss-Kss-Ih-Ih-Ih*
+- Combinatorial: *gldt-gldt-gldt-zxzx-zxzx-zxzx-glmnm-glmnm-glmnm*
+- The triple repetition mirrors the 666 pattern: three identical steps through the same zone
+
+### Extension: 630 Demon Names
+
+The same combinatorial logic applies to the full Djynxxogram's 630 demons (C(36,2) = 630 edges in K₃₆). Each demon's name would combine the particles from its two zones:
+
+```python
+def demon_name_b36(zone_a: int, zone_b: int, method="combinatorial") -> str:
+    """Generate a demon name from two Djynxxogram zones."""
+    if method == "combinatorial":
+        a_part = ZONE36_COMBINATORIAL[zone_a]
+        b_part = ZONE36_COMBINATORIAL[zone_b]
+    else:
+        a_part = ZONE36_LETTER_NAMES[zone_a]
+        b_part = ZONE36_LETTER_NAMES[zone_b]
+    # Combine with vowel insertion for pronounceability
+    combined = a_part[:4] + b_part[:4]
+    return combined.lower()
+```
+
+Example: demon of syzygy A(10)::P(25):
+- Combinatorial: *gleia* + *dtktt* → *gleidtktt* (Zone A meets Zone P)
+- Letter-native: *Aya* + *Puh* → *Ayapuh*
 
 ---
 
