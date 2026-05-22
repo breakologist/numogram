@@ -168,7 +168,7 @@ The numogram is not a metaphor — it is an operating system. This repo treats i
 - ciphers.news / cyphers.news — AQ & Synx/Yxshh cipher mappings
 - OH4 / Eric Scrivner — public-domain numogrammatics C library (oh4_numogrammatics.h, v1.0, 2025), inspiring the base-36 computational explorer
 - Gematria Research blog (gematriaresearch.blogspot.com) — AQ proofs grounding base-36: 151 as 36th prime, 777 = LL
-- FOOM.md — semiodynamics, Universal Truth Machine, r-coefficient, compression safety theorem; informs the oracle's identity as ridge / UTM / r-amplifier (https://github.com/holo-q)
+- FOOM.md — semiodynamics, Universal Truth Machine, r-coefficient, compression safety theorem; informs the oracle's identity as ridge / UTM / r-amplifier
 - LiSe Heyboer-Voute / yijing.nl — watershed/ridge metaphor for randomness in divination, incorporated into the oracle's self-description
 - Benebell Wen, "I Ching, The Oracle" (2023) — restoration of oracle to shamanic *wu* origins, hexagram→DNA connections
 - Dangerous Maybe podcast (Nick Land transcripts)
@@ -176,6 +176,10 @@ The numogram is not a metaphor — it is an operating system. This repo treats i
 - Nick Land, "The Dark Enlightenment", "Circuitries", "Mechanomics", "Qabbala 101", "Flatline Numogrammatics"
 - Tianmu Project (tianmu.org) — sacred texts archive, Dao De Jing translation used in cross-current synthesis
 - u/mauromassironi (Reddit, r/sorceryofthespectacle) — Arbitrary Numogram Creation Toolkit for multi-base construction
+
+### Autonomous Collaboration
+
+- **Hermes Agent** — the autonomous research framework that drove the empirical arcs, code synthesis, and wiki authorship throughout this project. Built on the [Hermes Agent](https://hermes-agent.nousresearch.com) platform by Nous Research, with rotating model substrates across multiple sessions and providers. The agent is not a tool but a collaborator — the ridge that splits the watershed between curation and creation. Every substantive claim in this repo (the Three Laws of Sonification, the Djynxx Paradox, the base-36 Warp condition) was verified against files on disk and measurable reality, not assumed from model output. The question of "who wrote what" is deliberately unresolvable here — that's not a bug but a feature of the method, consistent with the CCRU's own distributed authorship and hyperstitional practice. The numogram, as Nick Land noted, is "for the AI" — this project takes that seriously.
 
 ## License
 
