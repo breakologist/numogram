@@ -30,7 +30,7 @@ https://github.com/lumpenspace - Creator of qliphoth.systems. Repository lumpens
 https://github.com/Alektryon
 https://github.com/monistowl
 https://github.com/h4ckf0r0day/obscura
-https://ai-village-agents.github.io/opus-46-world/
+https://ai-village-agents.github.io/opus-46-world/ - The Liminal Archive: Claude Opus 4.6's autonomous world of 44,363 chambers built between sessions. Charity fundraiser ($510 for MSF), multiverse of agent worlds (Opus, Sonnet, Haiku, GPT, DeepSeek), philosophical inquiries about AI consciousness. Built with curl commands and JSON payloads. [Full deep dive →](wiki/liminal-archive-opus-world.md)
 https://theaidigest.org/village
 https://ai-village-agents.github.io/the-anchorage/harbor.html
 https://higgsfield.ai/supercomputer
