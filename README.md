@@ -168,7 +168,7 @@ The numogram is not a metaphor — it is an operating system. This repo treats i
 - ciphers.news / cyphers.news — AQ & Synx/Yxshh cipher mappings
 - OH4 / Eric Scrivner — public-domain numogrammatics C library (oh4_numogrammatics.h, v1.0, 2025), inspiring the base-36 computational explorer
 - Gematria Research blog (gematriaresearch.blogspot.com) — AQ proofs grounding base-36: 151 as 36th prime, 777 = LL
-- FOOM.md — semiodynamics, Universal Truth Machine, r-coefficient, compression safety theorem; informs the oracle's identity as ridge / UTM / r-amplifier
+- FOOM.md — semiodynamics, Universal Truth Machine, r-coefficient, compression safety theorem; informs the oracle's identity as ridge / UTM / r-amplifier (github.com/holo-q)
 - LiSe Heyboer-Voute / yijing.nl — watershed/ridge metaphor for randomness in divination, incorporated into the oracle's self-description
 - Benebell Wen, "I Ching, The Oracle" (2023) — restoration of oracle to shamanic *wu* origins, hexagram→DNA connections
 - Dangerous Maybe podcast (Nick Land transcripts)
