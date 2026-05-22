@@ -163,6 +163,8 @@ The numogram is not a metaphor — it is an operating system. This repo treats i
 - Aamodt, "Unleashing the Numogram" (Tch 0–9) — the definitive excavation of the system
 - Amy Ireland — demon name-generation methodology (combinatorial phonetic system), used for extending quasiphonic particles to zones 10–35
 - lumpenspace / qliphoth.systems — interactive SVG numogram and AQ gematria toolkit (github.com/lumpenspace/ccru)
+- Alektryon — AQ calculator ecosystem (alektryon.github.io/aqqa, aq-io), Aquarian Qabbala tools
+- Doomcrypt — Subdecadence card game implementation (github.com/doomcrypt/subdecadence), Lemurian time-sorcery in playable form
 - ciphers.news / cyphers.news — AQ & Synx/Yxshh cipher mappings
 - OH4 / Eric Scrivner — public-domain numogrammatics C library (oh4_numogrammatics.h, v1.0, 2025), inspiring the base-36 computational explorer
 - Gematria Research blog (gematriaresearch.blogspot.com) — AQ proofs grounding base-36: 151 as 36th prime, 777 = LL
