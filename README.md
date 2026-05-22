@@ -159,12 +159,21 @@ The numogram is not a metaphor — it is an operating system. This repo treats i
 
 ## Sources & Attribution
 
-- CCRU Writings 1997–2003 (Nick Land, et al.)
-- Aamodt, "Unleashing the Numogram"
-- ciphers.news / qliphoth.systems (AQ & Synx mappings)
+- CCRU Writings 1997–2003 (Nick Land, Sadie Plant, et al.)
+- Aamodt, "Unleashing the Numogram" (Tch 0–9) — the definitive excavation of the system
+- Amy Ireland — demon name-generation methodology (combinatorial phonetic system), used for extending quasiphonic particles to zones 10–35
+- lumpenspace / qliphoth.systems — interactive SVG numogram and AQ gematria toolkit (github.com/lumpenspace/ccru)
+- ciphers.news / cyphers.news — AQ & Synx/Yxshh cipher mappings
+- OH4 / Eric Scrivner — public-domain numogrammatics C library (oh4_numogrammatics.h, v1.0, 2025), inspiring the base-36 computational explorer
+- Gematria Research blog (gematriaresearch.blogspot.com) — AQ proofs grounding base-36: 151 as 36th prime, 777 = LL
+- FOOM.md — semiodynamics, Universal Truth Machine, r-coefficient, compression safety theorem; informs the oracle's identity as ridge / UTM / r-amplifier
+- LiSe Heyboer-Voute / yijing.nl — watershed/ridge metaphor for randomness in divination, incorporated into the oracle's self-description
+- Benebell Wen, "I Ching, The Oracle" (2023) — restoration of oracle to shamanic *wu* origins, hexagram→DNA connections
 - Dangerous Maybe podcast (Nick Land transcripts)
 - Brian Walker, Brogue design principles
-- Nick Land, "The Dark Enlightenment" & "Circuitries" essays
+- Nick Land, "The Dark Enlightenment", "Circuitries", "Mechanomics", "Qabbala 101", "Flatline Numogrammatics"
+- Tianmu Project (tianmu.org) — sacred texts archive, Dao De Jing translation used in cross-current synthesis
+- u/mauromassironi (Reddit, r/sorceryofthespectacle) — Arbitrary Numogram Creation Toolkit for multi-base construction
 
 ## License
 
