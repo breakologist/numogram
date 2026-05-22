@@ -17,7 +17,7 @@ def run_interactive(player_name="agent", max_turns=800, verbose=True):
     # Start the headless game as a subprocess
     env = {**os.environ, 'NUMOGRAM_PLAYER': player_name}
     proc = subprocess.Popen(
-        ['python3', '/home/etym/numogame/numogram_roguelike.py', '--headless', '--hw-entropy'],
+        ['python3', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'numogram_roguelike.py'), '--headless', '--hw-entropy'],
         stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
         env=env, text=True, bufsize=1
     )
@@ -35,7 +35,7 @@ def run_interactive(player_name="agent", max_turns=800, verbose=True):
     # Cross-run knowledge: the agent remembers from past runs
     try:
         import json
-        with open('/home/etym/numogame/cult.json') as f:
+        with open(os.path.expanduser('~/numogame/cult.json')) as f:
             cult = json.load(f)
         _cult_gates = cult.get('gates_ever_opened', [])
         _cult_zones = cult.get('zones_ever_visited', [])

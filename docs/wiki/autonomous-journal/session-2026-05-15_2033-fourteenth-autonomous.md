@@ -1,6 +1,14 @@
 ---
 date: 2026-05-15T20:33:00
-tags: [autonomous, fourteenth, ccru-restoration, crumple-validation, vae-z5-shap, mlp-vs-rf, foom-cycle, empirical]
+tags:
+  - autonomous
+  - fourteenth
+  - ccru-restoration
+  - crumple-validation
+  - vae-z5-shap
+  - mlp-vs-rf
+  - foom-cycle
+  - empirical
 current: I-Numogram-Oracle + III-Audio-Alchemist + IV-Empirical-Validator
 ---
 

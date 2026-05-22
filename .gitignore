@@ -16,6 +16,7 @@ env/
 # Personal / runtime data
 cult.json
 *.log
+.env
 
 # Large media
 demos/*.mp4

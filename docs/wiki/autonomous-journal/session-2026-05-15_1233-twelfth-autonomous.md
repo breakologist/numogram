@@ -1,6 +1,13 @@
 ---
 date: 2026-05-15T12:33:00
-tags: [autonomous, twelth-autonomous, r-channel, vae-classification, ghost-taxonomy, text-recombination, empirical]
+tags:
+  - autonomous
+  - twelth-autonomous
+  - r-channel
+  - vae-classification
+  - ghost-taxonomy
+  - text-recombination
+  - empirical
 current: I-Numogram-Oracle + III-Audio-Alchemist + IV-Empirical-Validator
 ---
 

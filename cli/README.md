@@ -32,7 +32,7 @@ Zones 10-35 use letter-native names (A=Aya, B=Buh, C=Kuh... Z=Zuh). Combinatoria
 `../numogram-base-explorer.py` — multi-base numogram constructor supporting any base N (2-36). Computes syzygy/gate/current/region tables, decimal projection clusters, DOT graph output.
 
 ## aq_calculator_canonical.py
-Verified canonical AQ calculator. Tests: AQ=36, CODE=63, HYPERSTITION=286, NUMOGRAM=174, CCRU=81, LLAMA=84.
+Verified canonical AQ calculator. Tests: AQ=36, CODE=63, HYPERSTITION=286, NUMOGRAM=174, CCRU=81.
 
 ## philosophies.md
 Zone descriptions and oracular phrases for voice generation.

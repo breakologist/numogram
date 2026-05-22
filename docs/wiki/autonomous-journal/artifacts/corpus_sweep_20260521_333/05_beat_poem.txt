@@ -1,0 +1,81 @@
+BEAT POEM — AQ-Preserved Seed Chains (2026-05-21 12:38)
+════════════════════════════════════════════════════════════════════════
+Each seed word chains through its AQ bucket.
+Corpus: oracle | Seeds: Cryptolith, Teleoplexy, Paramita, Syzygy, Void
+
+
+────────────────────────────────────────────────────────────────────────
+CHAIN: Cryptolith (AQ=236, Z2)
+────────────────────────────────────────────────────────────────────────
+  Cryptolith → psychopomp → incidentally → incontinent → eloquently → martyrdoms → calendrically → foreclosure → pointround → pointround → incestuous → metatronics → excellently → everjrwhere → imperatives → psychopomp → euphrosyne → mistresses → cautiously → incestuous → archaeological → exposition → whereabouts → intervening → penetration → selectively → yampolskiy → yampolskiy → excellently → suryavarta → oppression → ethnography → penetration → pointround → fieryenergy → antecedently → formularies → contemplated → martyrdoms → butterflies → unmistakable → symmetries → chronomagical
+
+
+────────────────────────────────────────────────────────────────────────
+CHAIN: Teleoplexy (AQ=229, Z4)
+────────────────────────────────────────────────────────────────────────
+  Teleoplexy → displacement → assertions → compllation → integrative → displacement → realization → encapsulated → optionally → abnormality → curriculum → imposition → philosophic → pedestrians → seismograph → perfections → respirator → consultant → playwright → perfectness → unparalleled → thermostat → voluntary → metaphorical → consultant → enslavement → clausewitz → abnormality → effectivity → perfections → mushroomz → stepmother → timecircuit → coruscating → encirclement → astronomiae → vaganostus → infatuation → terminating → consolidated → pluralizes → corroborate → prefiguring
+
+
+────────────────────────────────────────────────────────────────────────
+CHAIN: Paramita (AQ=151, Z7)
+────────────────────────────────────────────────────────────────────────
+  Paramita → metamind → regents → labours → interim → fancying → herodias → guzzle → thither → metamind → manageable → stroud → negativa → egotism → handsome → occasion → condense → antonio → termini → goeteuo → xeston → mithras → bearskin → expense → messier → polity → tilopy → visited → sumeru → thickly → edifying → flatline → havewon → quotes → purely → skelmis → occasion → brokers → inscribe → beltway → nesting → hangings → regents
+
+
+────────────────────────────────────────────────────────────────────────
+CHAIN: Syzygy (AQ=181, Z1)
+────────────────────────────────────────────────────────────────────────
+  Syzygy → phnounebe → pistachio → unlikely → cthulhoid → inspires → coattails → trillion → conflicted → glittered → unsteady → responded → standards → fireunder → chemically → matchless → sunshine → inferring → thessaly → interlaced → unbounded → permadeath → lustily → sulawesi → stressed → glorifies → watchdogs → positing → ramshackle → italicised → chemically → caucasians → pitiless → carpenter → whomever → everyone → tolerated → varnished → tirinanx → hermetics → quilting → timidity → sundries
+
+
+────────────────────────────────────────────────────────────────────────
+CHAIN: Void (AQ=86, Z5)
+────────────────────────────────────────────────────────────────────────
+  Void → dunk → decked → when → shin → gnon → kent → hitac → lars → beans → gnon → peti → gauge → crit → nato → delas → galli → sakai → armed → peti → paul → gauge → open → galli → away → aniel → limp → aetna → armed → iven → dagon → muke → lhasa → igigi → nux → capabi → vine → cron → pans → sided → arabs → faddle → soy
+
+
+────────────────────────────────────────────────────────────────────────
+COMPOSED VERSE
+────────────────────────────────────────────────────────────────────────
+  Cryptolith
+  the displacement of psychopomp metamind
+  incidentally ⟡ assertions ⟡ regents
+  unlikely when compllation
+  eloquently integrative interim cthulhoid shin
+  martyrdoms
+  the realization of calendrically herodias
+  foreclosure ⟡ encapsulated ⟡ guzzle
+  conflicted lars optionally
+  pointround abnormality metamind glittered beans
+  incestuous
+  the imposition of metatronics stroud
+  excellently ⟡ philosophic ⟡ negativa
+  fireunder crit pedestrians
+  imperatives seismograph handsome chemically nato
+  psychopomp
+  the respirator of euphrosyne condense
+  mistresses ⟡ consultant ⟡ antonio
+  thessaly armed playwright
+  incestuous perfectness goeteuo interlaced peti
+  archaeological
+  the thermostat of exposition mithras
+  whereabouts ⟡ voluntary ⟡ bearskin
+  sulawesi galli metaphorical
+  penetration consultant messier stressed away
+  selectively
+  the clausewitz of yampolskiy tilopy
+  yampolskiy ⟡ abnormality ⟡ visited
+  ramshackle armed effectivity
+  suryavarta perfections thickly italicised iven
+  oppression
+  the stepmother of ethnography flatline
+  penetration ⟡ timecircuit ⟡ havewon
+  carpenter igigi coruscating
+  fieryenergy encirclement purely whomever nux
+  antecedently
+  the vaganostus of formularies occasion
+  contemplated ⟡ infatuation ⟡ brokers
+  tirinanx pans terminating
+  butterflies consolidated beltway hermetics sided
+  unmistakable
+  the corroborate of symmetries hangings

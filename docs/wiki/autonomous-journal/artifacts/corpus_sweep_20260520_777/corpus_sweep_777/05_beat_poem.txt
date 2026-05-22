@@ -1,0 +1,72 @@
+BEAT POEM — AQ-Preserved Seed Chains (2026-05-20 23:36)
+════════════════════════════════════════════════════════════════════════
+Each seed word chains through its AQ bucket.
+Corpus: oracle | Seeds: Cryptolith, Teleoplexy, Paramita, Syzygy, Void
+
+
+────────────────────────────────────────────────────────────────────────
+CHAIN: Cryptolith (AQ=236, Z2)
+────────────────────────────────────────────────────────────────────────
+  Cryptolith → ethnography → oceanography → oceanography → insinuating → qualitative → extrapolate → incestuous → pointround → vocabularies → apparatuses → oceanography → theurgists → spiritless → proofreading → intervening → selectively → foreclosure → commentator → clairvoyance → transference → butterflies → imperatives → chronomagical → unreasoning → acquisition → suryavarta → qualitative → incestuous → foreclosure → reproducible → extrapolate → chronomagical → superseding
+
+
+────────────────────────────────────────────────────────────────────────
+CHAIN: Teleoplexy (AQ=229, Z4)
+────────────────────────────────────────────────────────────────────────
+  Teleoplexy → glfojwdigpff → misconceived → supersonic → disappearance → programmable → unparalleled → biogeological → outflanking → editorially → uncultured → territory → correlation → thermostat → thermostat → integrative → subsisting → curriculum → timecircuit → respirator → ethnological → administered → represents → inaccessibly → groupthink → trephonios → ploughshare → creativefire → philosophic → extravagance → sluggishly → constricted → theegyptian → population
+
+
+────────────────────────────────────────────────────────────────────────
+CHAIN: Paramita (AQ=151, Z7)
+────────────────────────────────────────────────────────────────────────
+  Paramita → noonday → moderns → greatly → crashing → genocidal → diamonds → basement → advisor → thinner → knights → labours → allures → focuses → deucalian → tyndall → rehearse → diamonds → tyndall → sassur → sizeable → rotary → stroud → passeth → piglets → visited → bilaniuk → bishops → quotes → massacre → vomited → staring → exposed → massive
+
+
+────────────────────────────────────────────────────────────────────────
+CHAIN: Syzygy (AQ=181, Z1)
+────────────────────────────────────────────────────────────────────────
+  Syzygy → shattered → reprobate → macrocosm → saturday → vindicated → ventured → tolerated → votaries → healthily → activity → typifies → emperors → macrocosm → gassilasca → mercurial → ramshackle → lilybaeum → commutes → chemically → exposing → bettering → votaries → employer → eloquent → escalating → inferring → commutes → varnished → ofverses → pharisees → interfere → overused → compliance
+
+
+────────────────────────────────────────────────────────────────────────
+CHAIN: Void (AQ=86, Z5)
+────────────────────────────────────────────────────────────────────────
+  Void → blind → role → baffle → lens → bpms → nato → ever → crit → champ → ivar → role → pans → vine → mimo → arabia → aetna → ever → limp → deals → draco → ovid → tete → lupa → hitac → asks → omega → shin → goug → awake → lawn → asks → hung → udana
+
+
+────────────────────────────────────────────────────────────────────────
+COMPOSED VERSE
+────────────────────────────────────────────────────────────────────────
+  Cryptolith
+  the glfojwdigpff of ethnography noonday
+  oceanography ⟡ misconceived ⟡ moderns
+  macrocosm baffle supersonic
+  insinuating disappearance crashing saturday lens
+  qualitative
+  the unparalleled of extrapolate diamonds
+  incestuous ⟡ biogeological ⟡ basement
+  votaries crit outflanking
+  vocabularies editorially thinner healthily champ
+  apparatuses
+  the territory of oceanography labours
+  theurgists ⟡ correlation ⟡ allures
+  macrocosm vine thermostat
+  proofreading thermostat deucalian gassilasca mimo
+  intervening
+  the subsisting of selectively rehearse
+  foreclosure ⟡ curriculum ⟡ diamonds
+  commutes limp timecircuit
+  clairvoyance respirator sassur chemically deals
+  transference
+  the administered of butterflies rotary
+  imperatives ⟡ represents ⟡ stroud
+  employer lupa inaccessibly
+  unreasoning groupthink piglets eloquent hitac
+  acquisition
+  the ploughshare of suryavarta bilaniuk
+  qualitative ⟡ creativefire ⟡ bishops
+  varnished goug philosophic
+  foreclosure extravagance massacre ofverses awake
+  reproducible
+  the constricted of extrapolate staring
+  chronomagical ⟡ theegyptian ⟡ exposed

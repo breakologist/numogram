@@ -1742,7 +1742,7 @@ def get_conduct_bonus_hyp(cult):
     """Check if Descent conduct is completed — gives +10 starting hyp."""
     return 10 if "descent" in cult.get("conducts_completed", []) else 0
 
-DEMO_DIR = "/home/etym/numogame/demos"
+DEMO_DIR = os.path.expanduser("~/numogame/demos")
 
 class DemoRecorder:
     """Records keypresses and game events to a replayable demo file.

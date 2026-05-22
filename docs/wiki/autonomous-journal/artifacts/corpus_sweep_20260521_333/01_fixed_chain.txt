@@ -1,0 +1,201 @@
+FIXED AQ CHAIN — oracle (2026-05-21 12:38)
+════════════════════════════════════════════════════════════════════════
+AQ checksum never changes. Vocabulary cascades.
+Corpus: oracle (455 buckets, 42,508 entries)
+Engine: xeno_jump v2, all-word mode, seed 333
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=708, Z6): The cryptolith opens the decimator gate
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ Don commentator blitz don democrati boy
+  [  2] ✓ Dado testimonial stark dado concerts seed
+  [  3] ✓ Ise futuristic ganiti ise notifies foci
+  [  4] ✓ Rna thisdefinite tasked rna tribunal sin
+  [  5] ✓ Lta initiatives incite lta prohibit gun
+  ... (35 intermediate steps) ...
+  [ 40] ✓ Sabb overspilled minor sabb troubled keel
+  [ 41] ✓ Sw undisturbed tombs sw zanizbar wade
+  [ 42] ✓ Kau incestuous hadron kau pleasure gnu
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1018, Z1): hyperstition flows through the triangular syzygy
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ comutativity denuded davidson don criticizes cathedrals
+  [  2] ✓ computronium cranks collected dado vanishinsf reprobate
+  [  3] ✓ monstrosity minoan orderly ise insolvent excavates
+  [  4] ✓ soteriological traces thetrue rna vsarisuta satiating
+  [  5] ✓ ostentatious plugs raccoons lta melanesians wholesale
+  ... (35 intermediate steps) ...
+  [ 40] ✓ sleeplessness tying thrilled sabb priestess lilybaeum
+  [ 41] ✓ thesuggestion zetes unending sw responses soandrell
+  [ 42] ✓ ofvivification owlet presume kau laviolette forsaking
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=465, Z6): Katak and Oddubb coil the plex
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ Ditch bob Bury belch don city
+  [  2] ✓ Dante bel Saneha rey dado verba
+  [  3] ✓ Many is Fires desk ise infra
+  [  4] ✓ Till om Serif rye rna wyde
+  [  5] ✓ Paces jr Wheat vice lta lays
+  ... (35 intermediate steps) ...
+  [ 40] ✓ Tome om Locri lego sabb owen
+  [ 41] ✓ Ywn si Stale skr sw plex
+  [ 42] ✓ Natha jed Given eyed kau jugs
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=712, Z1): teleoplexy accelerates the void circuit
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ develooment clangours don corn dialogue
+  [  2] ✓ deductively rousseau dado capabi counts
+  [  3] ✓ mosquitos grammatria ise keber obscure
+  [  4] ✓ sluggishly sarvathat rna snap sounds
+  [  5] ✓ phanerozoic whichindeed lta melt pompeii
+  ... (35 intermediate steps) ...
+  [ 40] ✓ sluggishly observable sabb sold specify
+  [ 41] ✓ teleoplexy southish sw udana tiferet
+  [ 42] ✓ ornamenting imitation kau liked perhaps
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=925, Z7): the demon uttunul whispers from the djynxxagram
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ don chast clockwork caricature charm don bibleauthors
+  [  2] ✓ dado soft simplified resilience byte dado strangeness
+  [  3] ✓ ise gobby flatulent fractional kalod ise incessantly
+  [  4] ✓ rna svaha southern sacrificial regal rna supplicates
+  [  5] ✓ lta inman imaginings thebounds lvii lta unprotected
+  ... (35 intermediate steps) ...
+  [ 40] ✓ sabb nagara missteps miscarried regal sabb phraseology
+  [ 41] ✓ sw which taraxandra shortened samia sw technoscience
+  [ 42] ✓ kau highs governing homestash leto kau inexplicably
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=820, Z1): paramita conducts dissolve the qliphoth veil
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ diamonds catholics discount don discount cheer
+  [  2] ✓ crypto richelieu curtains dado curtains brew
+  [  3] ✓ negativa external olympian ise olympian laps
+  [  4] ✓ thither scorning undeniable rna undeniable theo
+  [  5] ✓ pukkasi unbearable respects lta respects pagan
+  ... (35 intermediate steps) ...
+  [ 40] ✓ timaeus manually unifying sabb unifying tine
+  [ 41] ✓ wanting sleepers anchovies sw anchovies vipa
+  [ 42] ✓ peaceably globalism published kau published mapr
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=760, Z4): numogrammic recursion spirals zone nine
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ emphasizing charismatic bookends chast cnet
+  [  2] ✓ delusionari solicitate proceeds soft cent
+  [  3] ✓ numerizing incursion exclaimed gobby ledge
+  [  4] ✓ transcriber statecraft pygmies svaha ror
+  [  5] ✓ profession waveforms violence inman nein
+  ... (35 intermediate steps) ...
+  [ 40] ✓ tripartite pertaining kikaaixai nagara sakk
+  [ 41] ✓ vercoutier tittering rhizome which tali
+  [ 42] ✓ persephassa invasions fulcrum highs mock
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=740, Z2): entropy garden seeded with hardware random
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ capacities butan chast chast cleanses dactyl
+  [  2] ✓ protest stand soft soft calendric clever
+  [  3] ✓ espoused guru gobby gobby linkages mcardle
+  [  4] ✓ qfyqirci tafrac svaha svaha slaying termed
+  [  5] ✓ trawling itched inman inman paranoid philoe
+  ... (35 intermediate steps) ...
+  [ 40] ✓ kennewick memri nagara nagara smarato threw
+  [ 41] ✓ reptiles uqija which which tenured willed
+  [ 42] ✓ finishing homage highs highs nitrate oacute
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=698, Z5): beat poetry through the abecedarium chain
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ bank embracing davidson don caucasians clich
+  [  2] ✓ xv ditions collected dado reprobate catch
+  [  3] ✓ faced nicholas orderly ise excavates jeon
+  [  4] ✓ yu subtly thetrue rna satiating quo
+  [  5] ✓ grab purest raccoons lta wholesale medal
+  ... (35 intermediate steps) ...
+  [ 40] ✓ lamb suckles thrilled sabb lilybaeum quo
+  [ 41] ✓ lte unfolded unending sw soandrell shap
+  [ 42] ✓ flee pinecone presume kau forsaking lewd
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=967, Z4): what the Tathagata preached as merit was no-stock of merit
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ charm don Davidson dynamic br boons bole chi-casket bee boons
+  [  2] ✓ byte dado Collected decrease mg pacific owe cbo-tangle bs pacific
+  [  3] ✓ kalod ise Orderly pandora eae fatted ess gal-glyph il fatted
+  [  4] ✓ regal rna Thetrue undoes mg pipes papa nae-tinged pe pipes
+  [  5] ✓ lvii lta Raccoons revise qc weren zap it-income jk weren
+  ... (35 intermediate steps) ...
+  [ 40] ✓ regal sabb Thrilled uphill fn jury java mp-moats pe jury
+  [ 41] ✓ samia sw Unending apparel oe reins pri oad-varied rc reins
+  [ 42] ✓ leto kau Presume realise eo foray fine ich-hating jk foray
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1312, Z7): I am the silence that is incomprehensible and the voice whose sound is manifold
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ I bab don cloacina crew ble comparativists bob don chios bruno causas ble diagnose
+  [  2] ✓ I ma dado remote bugs bel discriminations bel dado takau pound rouen bel counts
+  [  3] ✓ I fh ise frills lord is philanthropist is ise herds giraffe front is obscure
+  [  4] ✓ I ma rna rumor syn om superficialness om rna thank requi saxon om sounds
+  [  5] ✓ I fh lta urging njfs jr quintessential jr lta know using tweet jr pompeii
+  ... (35 intermediate steps) ...
+  [ 40] ✓ I gg sabb mallow table om structuralism om sabb next loses lungs om specify
+  [ 41] ✓ I ma sw sleeps veau si thunderstorms si sw user sheath sieved si tiferet
+  [ 42] ✓ I fh kau grander mish jed quintessential jed kau kabalah harry gurri jed perhaps
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1088, Z8): wherever there is the possession of signs there is falsehood
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ capacities bulbs ble don bibleauthors bee casket bulbs ble category
+  [  2] ✓ protest tired bel dado strangeness bs tangle tired bel rectangle
+  [  3] ✓ espoused hardy is ise incessantly il glyph hardy is factorial
+  [  4] ✓ qfyqirci ugly om rna supplicates pe tinged ugly om replacing
+  [  5] ✓ trawling level jr lta unprotected jk income level jr thieving
+  ... (35 intermediate steps) ...
+  [ 40] ✓ kennewick oscar om sabb phraseology pe moats oscar om kandjour
+  [ 41] ✓ reptiles wins si sw technoscience rc varied wins si seizure
+  [ 42] ✓ finishing jeered jed kau inexplicably jk hating jeered jed fricasees
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1110, Z3): a Bodhisattva should give gifts unsupported by the idea of a sign
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ a Earthlyfate dioxide behen cabirs determinately big don camb bee a crew
+  [  2] ✓ a Desultory defender mita rubbed deforestation mn dado bya bs a bugs
+  [  3] ✓ a Painstaking morgue ekaz fledged monopolistic die ise lcm il a lord
+  [  4] ✓ a Todiscover thermo moan seems shortcomings mn rna up pe a syn
+  [  5] ✓ a Samantabhadra poured wit wands philosophers sh lta nma jk a njfs
+  ... (35 intermediate steps) ...
+  [ 40] ✓ a Treecarries though gong marti shortcomings hee sabb vae pe a table
+  [ 41] ✓ a Worthless waterl own spot superimposed ol sw alae rc a veau
+  [ 42] ✓ a Pythagoras pabbakis felt goose numogramwarp ela kau mx jk a mish
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1336, Z4): the stock of merit of the one who gives unsupported is not easy to measure
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ don casket bee boons bee don ehu cite books determinately ble beads corn ate deselect
+  [  2] ✓ dado tangle bs pacific bs dado dwg suf revel deforestation bel pact capabi ot decreased
+  [  3] ✓ ise glyph il fatted il ise mil hath fawned monopolistic is film keber eng newitt
+  [  4] ✓ rna tinged pe pipes pe rna tie tay samit shortcomings om pain snap pdf sumero
+  [  5] ✓ lta income jk weren jk lta one ides under philosophers jr vied melt vac questi
+  ... (35 intermediate steps) ...
+  [ 40] ✓ sabb moats pe jury pe sabb tw mani kynge shortcomings om jacob sold hoc swansea
+  [ 41] ✓ sw varied rc reins rc sw vu wadi simil superimposed si rata udana rag vairoz
+  [ 42] ✓ kau hating jk foray jk kau nik how ganges numogramwarp jed galt liked fas pilots

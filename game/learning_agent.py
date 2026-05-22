@@ -276,7 +276,7 @@ def run_agent_game(player_name="agent", verbose=True):
     cult_gates = []
     has_seen_gates_ever = False
     try:
-        with open('/home/etym/numogame/cult.json') as f:
+        with open(os.path.expanduser('~/numogame/cult.json')) as f:
             cult = json.load(f)
         cult_zones = cult.get('zones_ever_visited', [])
         cult_gates = cult.get('gates_ever_opened', [])
@@ -325,8 +325,10 @@ def run_agent_game(player_name="agent", verbose=True):
     
     # Run the game
     env = {**os.environ, 'NUMOGRAM_PLAYER': player_name}
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    game_path = os.path.join(script_dir, 'numogram_roguelike.py')
     result = subprocess.run(
-        ['python3', '/home/etym/numogame/numogram_roguelike.py', '--headless', '--hw-entropy'],
+        ['python3', game_path, '--headless', '--hw-entropy'],
         input=moves, capture_output=True, text=True, env=env, timeout=30
     )
     
