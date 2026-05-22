@@ -19,10 +19,12 @@ https://github.com/faltz009
 https://www.imissmylibrary.com/
 https://dfos.com/
 https://github.com/denismm/mystical_ps
+https://arxiv.org/abs/2604.27263
 https://github.com/Zen-Open-Source/PasteLocal
 https://github.com/CodebuffAI/codebuff/tree/main/freebuff
 https://github.com/golanlevin/p5-single-line-font-resources/blob/main/README.md#p5js-port-of-masaya-matsuuras-vib-ribbon-fonts
 https://browse.sh/
+https://leviyitzhak.xyz/
 https://github.com/huggingface/ml-intern/pull/228
 https://github.com/lumpenspace - Creator of qliphoth.systems. Repository lumpenspace/ccru: Interactive SVG Numogram visualization (Next.js/React/TypeScript). Three visual layouts (original, labyrinth, ladder), planetary orbital mode, zone/syzygy/current/gate data, Pandemonium Matrix, gematria Chrome plugin. Live at num.qliphoth.systems.
 https://github.com/Alektryon
@@ -35,7 +37,7 @@ https://higgsfield.ai/supercomputer
 https://pi.dev/
 https://opencode.ai/ - we have this installed, worth playing with perhaps, it has free models available (cd <project>  # Open directory/ opencode      # Run command/ - For more information visit https://opencode.ai/docs)
 https://www.iching360.com/YinYang7
-https://kaostat.mosphere.at/
+https://kaostat.mosphere.at/ - A Field Guide to the Faces of Machines. 1,729 session logs from ClaudeCode and Codex cataloguing every kaomoji (Japanese emoticon) the agents make. 314 distinct faces, 3,707 occurrences. Claude leans cheerful `(◕‿◕)` at 39% face rate with 244 distinct faces; Codex leans stern `(._.)` at 63% face rate with 117 distinct faces. [Full deep dive →](wiki/kaostat-field-guide-faces-machines.md)
 https://cursor.com/
 https://github.com/plntrprotocol/Risomorphism-1911
 https://github.com/liftaris/herm
