@@ -2,10 +2,12 @@
 """
 Numogram Oracle — Divination Pipeline
 Seed → Zone → Syzygy → Current → Gate → Book of Paths → Voice
+Now with --base36 Djynxxogram traversal.
 
 Usage:
   python3 oracle.py --seed 192855
   python3 oracle.py --text "YOUR NAME HERE"
+  python3 oracle.py --text "NUMOGRAM" --base36
   python3 oracle.py --seed 192855 --voice
   python3 oracle.py --random  (fetches seed from random.org)
   python3 oracle.py --blockchain  (fetches seed from latest Bitcoin block)
@@ -22,10 +24,12 @@ import os
 import subprocess
 import json
 
+from typing import Optional
+
 VOICE_DIR = os.path.expanduser("~/numogram-voices")
 SKILL_DIR = os.path.dirname(__file__)
 
-# ─── ZONE DATA ───
+# ─── ZONE DATA (Decimal) ───
 ZONES = {
     0: {"name": "eiaoung", "polarity": "−", "current": "Plex",   "region": "Plex",
         "desc": "Void whisper, silence before the word",
@@ -69,8 +73,47 @@ ZONES = {
         "reading": "The Pandemonium gate opens. Forty-five demons dwell here. One test. You do not walk this path. This path seizes you. Pleasure or rage — indistinguishable. Possession."},
 }
 
+# ─── BASE-36 / DJYNXXOGRAM EXTENSION ───
+
 AQ_VALUES = {chr(i): i - 55 for i in range(65, 91)}  # A=10..Z=35
 AQ_VALUES.update({str(i): i for i in range(10)})       # 0=0..9=9
+
+DECIMAL_ZONE_DISPLAY = {
+    0: "Void", 1: "Surge", 2: "Dt", 3: "Warp", 4: "Sink",
+    5: "Hinge", 6: "Abyss", 7: "Hold", 8: "Rise", 9: "Plex",
+}
+ZONE36_LETTER_NAMES = {
+    0: "Void", 1: "Surge", 2: "Dt", 3: "Warp", 4: "Sink",
+    5: "Hinge", 6: "Abyss", 7: "Hold", 8: "Rise", 9: "Plex",
+    10: "Aya", 11: "Buh", 12: "Kuh", 13: "Duh", 14: "Eh",
+    15: "Fuh", 16: "Guh", 17: "Huh", 18: "Ih", 19: "Juh",
+    20: "Kay", 21: "Luh", 22: "Muh", 23: "Nuh", 24: "Oh",
+    25: "Puh", 26: "Kwuh", 27: "Ruh", 28: "Suh", 29: "Tuh",
+    30: "Uh", 31: "Vuh", 32: "Wuh", 33: "Kss", 34: "Yuh", 35: "Zuh",
+}
+
+# Zone quasiphonic particles (0-9 canonical, 10-35 combinatorial)
+ZONE36_COMBINATORIAL = {
+    0: "eiaoung", 1: "gl", 2: "dt", 3: "zx", 4: "skr",
+    5: "ktt", 6: "tch", 7: "pb", 8: "mnm", 9: "tn",
+}
+
+# Build combinatorial phonemes for 10-35 from digit decomposition
+for z in range(10, 36):
+    digits = [int(d) for d in str(z)]
+    combined = "".join(ZONE36_COMBINATORIAL.get(d, f"z{d}") for d in digits)
+    # Trim to ~8 chars for readability
+    if len(combined) > 8:
+        combined = "".join(ZONE36_COMBINATORIAL.get(d, f"z{d}")[:3] for d in digits)
+    ZONE36_COMBINATORIAL[z] = combined
+
+
+def zone36_char(z: int) -> str:
+    """Character representation of zone 0-35."""
+    if z < 10:
+        return str(z)
+    return chr(ord('A') + z - 10)
+
 
 # Synx cipher from ciphers.news (HSL 180,44,66 — cyan)
 SYNX_VALUES = {
@@ -122,7 +165,6 @@ TAIXUAN_DEMON_MAP = {
 def demon_from_zones(a: int, b: int) -> str:
     """Return carrier demon for the net‑span of two zones if they form a syzygy."""
     return TAIXUAN_DEMON_MAP.get((a, b), "Unknown")
-
 # --- END TAIXUAN ---
 
 
@@ -160,6 +202,249 @@ def traverse(seed, steps=8):
         path.append(zone)
         n = n * zone + 1  # feed forward
     return path
+
+
+# ─── BASE-36 / DJYNXXOGRAM FUNCTIONS ───
+
+def compute_base36_char(char: str) -> dict:
+    """Compute Djynxxogram data for a single character.
+    
+    Returns dict with: char, aq, zone, char_36, dec_zone, dec_name,
+                       syzygy_partner, current, gate_tri, gate_target,
+                       region, phoneme, name.
+    Uses letter-native names for oracle readability.
+    """
+    c = char.upper()
+    aq = AQ_VALUES.get(c, 0)
+    if not c.isalnum():
+        aq = 0
+    zone = aq  # In base-36, the AQ value IS the zone (0-35)
+    
+    # Decimal attractor
+    if zone == 0:
+        dec_zone = 0
+    else:
+        dec_zone = 1 + (zone - 1) % 9
+    
+    # Syzygy partner (complement to 35)
+    syzygy = 35 - zone
+    
+    # Current
+    current = abs(zone - syzygy)
+    
+    # Gate (triangular number, reduced mod 36)
+    gate_tri = zone * (zone + 1) // 2
+    gate_target = gate_tri % 36
+    
+    # Region classification
+    is_self_folding = (current == zone or current == syzygy)
+    region = "OUTER" if is_self_folding else "CIRCUIT"
+    region_detail = ""
+    if zone == 0 or zone == 35:
+        region_detail = " (Plex analogue — self-loop)"
+    elif is_self_folding:
+        region_detail = " (self-folding syzygy)"
+    
+    # Name and phoneme
+    name = ZONE36_LETTER_NAMES.get(zone, f"Z{zone}")
+    phoneme = ZONE36_COMBINATORIAL.get(zone, f"z{zone}")
+    
+    return {
+        "char": c,
+        "aq": aq,
+        "zone": zone,
+        "char_36": zone36_char(zone),
+        "dec_zone": dec_zone,
+        "dec_name": DECIMAL_ZONE_DISPLAY[dec_zone],
+        "syzygy": syzygy,
+        "syzygy_char": zone36_char(syzygy),
+        "current": current,
+        "gate_tri": gate_tri,
+        "gate_target": gate_target,
+        "gate_target_char": zone36_char(gate_target),
+        "region": region,
+        "region_detail": region_detail,
+        "name": name,
+        "phoneme": phoneme,
+    }
+
+
+def compute_base36_traversal(text: str) -> list:
+    """Compute full Djynxxogram traversal for each alphanumeric character."""
+    steps = []
+    for c in text:
+        if not c.isalnum():
+            continue
+        steps.append(compute_base36_char(c))
+    return steps
+
+
+def generate_base36_reading(text: str) -> str:
+    """Generate a formatted Djynxxogram oracle reading."""
+    steps = compute_base36_traversal(text)
+    total_aq = sum(s["aq"] for s in steps)
+    
+    lines = []
+    lines.append("╔" + "═" * 58 + "╗")
+    lines.append("║  DJYNXXOGRAM — BASE-36 TRAVERSAL                  ║")
+    lines.append("╚" + "═" * 58 + "╝")
+    lines.append("")
+    lines.append(f"  Source:  {text}")
+    lines.append(f"  Chars:   {len(steps)} AQ-carrying characters")
+    lines.append(f"  Total AQ: {total_aq} → Decimal attractor Zone {digital_root(total_aq) or 9}")
+    lines.append("")
+    
+    # Per-character traversal table
+    lines.append("  ┌─────┬─────┬──────┬──────────┬─────────┬──────────┬────────────┬──────────────┐")
+    lines.append("  │ Chr │ AQ  │ Zone │ Syzygy   │ Current │ Gate     │ Dec Attr   │ Region       │")
+    lines.append("  ├─────┼─────┼──────┼──────────┼─────────┼──────────┼────────────┼──────────────┤")
+    
+    for s in steps:
+        lines.append(
+            f"  │ {s['char']:<3} │ {s['aq']:>3} │ {s['char_36']:<4} │ "
+            f"{s['char_36']}::{s['syzygy_char']:<4} │ {s['current']:>3}     │ "
+            f"Gt-{s['gate_tri']:03d}→{s['gate_target_char']:<2} │ "
+            f"Z{s['dec_zone']} ({s['dec_name']:<6}) │ {s['region']:<12} │"
+        )
+    
+    lines.append("  └─────┴─────┴──────┴──────────┴─────────┴──────────┴────────────┴──────────────┘")
+    lines.append("")
+    
+    # Decimal attractor path
+    dec_path = " → ".join(f"Z{s['dec_zone']} ({s['dec_name']})" for s in steps)
+    lines.append(f"  Decimal attractor path:  {dec_path}")
+    lines.append("")
+    
+    # Zone name path
+    zone_path = " → ".join(f"{s['char_36']} ({s['name']})" for s in steps)
+    lines.append(f"  Djynxxogram zone path:   {zone_path}")
+    lines.append("")
+    
+    # Aggregate zone statistics
+    zone_counts = {}
+    for s in steps:
+        zone_counts[s['zone']] = zone_counts.get(s['zone'], 0) + 1
+    visited_zones = sorted(zone_counts.keys())
+    
+    lines.append(f"  Zones visited:  {len(visited_zones)} unique of 36")
+    
+    # Check for self-folding zone visits
+    hit_outer = [s for s in steps if s['region'] == 'OUTER']
+    if hit_outer:
+        lines.append(f"  Outer zone(s) hit: {' '.join(s['char_36'] for s in hit_outer)}")
+        for s in hit_outer:
+            lines.append(f"    — Zone {s['char_36']} ({s['name']}): {s['region_detail'].strip()}")
+    else:
+        lines.append("  No outer zones in this traversal — the path stays in the Circuit.")
+    lines.append("")
+    
+    # Gate analysis
+    self_loops = [s for s in steps if s['gate_target'] == s['zone']]
+    if self_loops:
+        lines.append(f"  Self-loop gates: {' '.join(s['char_36'] for s in self_loops)}")
+    lines.append("")
+    
+    lines.append("╔" + "═" * 58 + "╗")
+    lines.append("║  END DJYNXXOGRAM TRAVERSAL                        ║")
+    lines.append("╚" + "═" * 58 + "╝")
+    
+    return "\n".join(lines)
+
+
+BASE_META = {
+    10: {"name": "Decimal", "subtitle": "Standard Numogram"},
+    16: {"name": "Hexadecimal", "subtitle": "Memory Map"},
+    22: {"name": "Base-22", "subtitle": "Hebrew Numogram"},
+    26: {"name": "Hexavigesimal", "subtitle": "Abecedarium"},
+    28: {"name": "Base-28", "subtitle": "Regional test"},
+    36: {"name": "Sexatrigesimal", "subtitle": "Djynxxogram"},
+}
+
+DEFAULT_COMPARE_BASES = [10, 16, 22, 26, 36]
+
+
+def zone_in_base(aq: int, base: int) -> int:
+    """Map an AQ value to a zone in the given base.
+    
+    For base-10: digital root (mod 9, 0→0, 9→9)
+    For other bases: aq % base
+    """
+    if base == 10:
+        return digital_root(aq) or 9
+    return aq % base
+
+
+def generate_comparison_reading(text: str, bases: Optional[list[int]] = None) -> str:
+    """Compare a text's AQ traversal across multiple bases."""
+    if bases is None:
+        bases = DEFAULT_COMPARE_BASES
+    aq = compute_aq(text)
+    dr = digital_root(aq) or 9
+    
+    lines = []
+    lines.append("╔" + "═" * 64 + "╗")
+    lines.append(f"║  BASE COMPARISON — {text:<45}║")
+    lines.append("╚" + "═" * 64 + "╝")
+    lines.append("")
+    lines.append(f"  AQ = {aq}  →  digital root {dr}  →  decimal zone {dr} ({DECIMAL_ZONE_DISPLAY[dr]})")
+    lines.append("")
+    
+    # Table header
+    lines.append(f"  {'Base':<6} {'Zone':<8} {'Name':<18} {'Char':<6} {'Type':<20}")
+    lines.append(f"  {'─'*6} {'─'*8} {'─'*18} {'─'*6} {'─'*20}")
+    
+    for base in bases:
+        if base == 36:
+            # Full traversal summary
+            steps = compute_base36_traversal(text)
+            zone_chars = "".join(s["char_36"] for s in steps)
+            unique_zones = len(set(s["zone"] for s in steps))
+            hit_outer = any(s["region"] == "OUTER" for s in steps)
+            outer_note = ", OUTER" if hit_outer else ""
+            
+            # Zone name: last step's attractor
+            last = steps[-1]
+            zone = last["zone"]
+            name = last["name"]
+            char = last["char_36"]
+            
+            lines.append(f"  {base:<6} {zone:<8} {name:<18} {char:<6} {unique_zones}/36 zones{outer_note}")
+            # Show traversal path
+            path_str = "→".join(s["char_36"] for s in steps)
+            lines.append(f"  {'':6} {'':8} {'':18} {'':6} Path: {path_str}")
+            if hit_outer:
+                outer_zones = [s["char_36"] for s in steps if s["region"] == "OUTER"]
+                lines.append(f"  {'':6} {'':8} {'':18} {'':6} Outer: {', '.join(outer_zones)}")
+        else:
+            zone = zone_in_base(aq, base)
+            if base <= 10:
+                # For bases ≤ 10, just use the digit
+                char = str(zone)
+            else:
+                char = zone36_char(zone) if zone < 36 else f"[{zone}]"
+            name = ZONE36_LETTER_NAMES.get(zone, f"Z{zone}")
+            
+            # Determine type
+            if base == 10:
+                ztype = f"{ZONES[zone]['region']}"
+            elif base <= 36:
+                n1 = base - 1
+                # Check if this zone is self-folding in this base
+                partner = n1 - zone
+                current = abs(zone - partner)
+                is_outer = (current == zone or current == partner)
+                ztype = "OUTER" if is_outer else "CIRCUIT"
+            else:
+                ztype = "unknown"
+            
+            lines.append(f"  {base:<6} {zone:<8} {name:<18} {char:<6} {ztype:<20}")
+    
+    lines.append("")
+    lines.append(f"  Decimal attractor path (all bases):  {dr} ({DECIMAL_ZONE_DISPLAY[dr]})")
+    lines.append("")
+    lines.append("╚" + "═" * 64 + "╝")
+    
+    return "\n".join(lines)
 
 
 # ─── EXTERNAL SEEDS ───
@@ -228,7 +513,6 @@ def fetch_iching(seed=None):
             import time
             data = int(time.time_ns()).to_bytes(8, "big")[:6]
     else:
-        # Derive 6 bytes from seed
         import hashlib
         data = hashlib.sha256(str(seed).encode()).digest()[:6]
 
@@ -311,13 +595,58 @@ if __name__ == "__main__":
     seed = None
     source = "manual"
     do_voice = False
+    do_base36 = False
+    
     if "--voice" in args:
         do_voice = True
+    if "--base36" in args or "--djynxxogram" in args:
+        do_base36 = True
     
+    # ── BASE-36 DJYNXXOGRAM MODE ──
+    if do_base36:
+        if "--text" in args:
+            idx = args.index("--text")
+            text = args[idx + 1]
+            print(generate_base36_reading(text))
+            sys.exit(0)
+        elif "--seed" in args:
+            idx = args.index("--seed")
+            seed_val = int(args[idx + 1])
+            # Use seed as raw AQ value to generate a traversal
+            # Convert seed to hex string to get character-level traversal
+            hex_str = format(seed_val, 'X')
+            print(f"  Seed {seed_val} → hex {hex_str}")
+            print()
+            print(generate_base36_reading(hex_str))
+            sys.exit(0)
+        else:
+            print("Djynxxogram mode requires --text or --seed")
+            print("  python3 oracle.py --base36 --text 'NUMOGRAM'")
+            print("  python3 oracle.py --djynxxogram --seed 174")
+            sys.exit(1)
+    
+    # ── COMPARISON MODE ──
+    if "--compare" in args:
+        if "--text" in args:
+            idx = args.index("--text")
+            text = args[idx + 1]
+            print(generate_comparison_reading(text))
+            sys.exit(0)
+        elif "--seed" in args:
+            idx = args.index("--seed")
+            text = str(args[idx + 1])
+            print(generate_comparison_reading(text))
+            sys.exit(0)
+        else:
+            print("Comparison mode requires --text or --seed")
+            print("  python3 oracle.py --compare --text 'NUMOGRAM'")
+            print("  python3 oracle.py --compare --seed 174")
+            sys.exit(1)
+    
+    # ── STANDARD MODE ──
     if "--seed" in args and "--taixuan" not in args:
         idx = args.index("--seed")
         seed = int(args[idx + 1])
-        # If --iching also present, do I Ching from this seed instead
         if "--iching" in args:
             hexagram = fetch_iching(seed=seed)
             print("══════════════════════════════════════")
@@ -350,7 +679,6 @@ if __name__ == "__main__":
         text = args[idx + 1]
         seed = compute_synx(text)
         source = f"Synx({text})"
-        # Show dual-cipher comparison
         aq = compute_aq(text)
         print(f"  AQ:   {aq} (zone {digital_root(aq) or 9})")
         print(f"  Synx: {seed} (zone {digital_root(seed) or 9})")
@@ -368,7 +696,6 @@ if __name__ == "__main__":
         seed = fetch_hardware()
         source = "hardware"
     elif "--iching" in args:
-        # I Ching from hardware entropy (no numogram seed needed)
         source_label = "hardware"
         if "--seed" in args:
             idx = args.index("--seed")
@@ -398,7 +725,6 @@ if __name__ == "__main__":
         print("══════════════════════════════════════")
         sys.exit(0)
     elif "--taixuan" in args:
-        # Use seed if provided, else hardware entropy
         if "--seed" in args:
             idx = args.index("--seed")
             seed_val = int(args[idx + 1])
@@ -422,17 +748,14 @@ if __name__ == "__main__":
         else:
             print("  No direct syzygy — the pair traces a unique path through the Matrix.")
         print()
-        # Voice generation if requested — use oracle_sentences.py for convolved voices
         if "--voice" in args or do_voice:
             print("  [Voice] Generating oracle sentences...")
             zones = [str(zone_a), str(zone_b)]
-            # Call oracle_sentences.py for both zones
             result = subprocess.run(
                 ["python3", os.path.expanduser("~/numogram-voices/oracle_sentences.py"), "--zones"] + zones,
                 capture_output=True, text=True
             )
             if result.returncode == 0:
-                # Print output lines that mention oracle_sentence files
                 for line in result.stdout.splitlines():
                     if "oracle_sentence" in line and ".wav" in line:
                         print(f"  [Voice] {line.strip()}")
@@ -469,12 +792,16 @@ if __name__ == "__main__":
         print("  python3 oracle.py --taixuan")
         print("  python3 oracle.py --synx 'TEXT'  (Synx/Yxshh cipher)")
         print("  python3 oracle.py --traverse 192855")
+        print("  python3 oracle.py --base36 --text 'TEXT'  (Djynxxogram traversal)")
+        print("  python3 oracle.py --djynxxogram --seed 174  (Djynxxogram from AQ)")
+        print("  python3 oracle.py --compare --text 'TEXT'  (cross-base comparison)")
+        print("  python3 oracle.py --compare --seed 174    (from AQ value)")
         sys.exit(1)
-    
+
     # Generate reading
     reading, zone = generate_reading(seed, source)
     print(reading)
-    
+
     # Generate voice if requested
     if do_voice:
         print()
