@@ -566,6 +566,34 @@ def generate_reading(seed, source="manual"):
     return "\n".join(lines), zone
 
 
+def generate_planchette(zone: int) -> str:
+    """Planchettte a brief zone-glyph planchette for oracle output."""
+    z     = ZONES.get(zone, {"name": "???", "particle": "???", "region": "???"})
+    gate  = get_gate(zone)
+    sz    = get_syzygy(zone)
+    cur   = get_current(zone)
+    region = z.get("region", "??")
+    particle = z.get("name", "???")
+    png   = "~/numogram/docs/wiki/assets/zone-glyphs/zone-{z}.png".format(z=zone)
+
+    # fixed-width helpers (56 total interior cols)
+    W = 54
+    hdr1 = "ZONE {z} — {r:<16} [{p:>8}]".format(z=zone, r=region, p=particle)
+    hdr2 = "Current: {c:2}    Gate: Gt-{g:<2}=Z{g:<2}    Syzygy: {z}::{sy:<2}".format(
+                c=cur, g=gate, z=zone, sy=sz)
+
+    lines = []
+    lines.append("")
+    lines.append("  ╔" + "═"*W + "╗")
+    lines.append("  ║   " + hdr1 + (W-len(hdr1))*" " + "  ║")
+    lines.append("  ╠" + "═"*W + "╣")
+    lines.append("  ║   " + hdr2 + (W-len(hdr2))*" " + "  ║")
+    lines.append("  ║   PNG: {p:<40}  ║".format(p=png))
+    lines.append("  ╚" + "═"*W + "╝")
+    return "\n".join(lines)
+
+
+
 def generate_voice(zone):
     """Generate oracle voice audio for a zone"""
     z = ZONES[zone]
@@ -596,18 +624,28 @@ if __name__ == "__main__":
     source = "manual"
     do_voice = False
     do_base36 = False
+    do_planchette = False
     
     if "--voice" in args:
         do_voice = True
     if "--base36" in args or "--djynxxogram" in args:
         do_base36 = True
+    if "--planchette" in args:
+        do_planchette = True
     
     # ── BASE-36 DJYNXXOGRAM MODE ──
     if do_base36:
         if "--text" in args:
             idx = args.index("--text")
             text = args[idx + 1]
-            print(generate_base36_reading(text))
+            b36_text = generate_base36_reading(text)
+            print(b36_text)
+            if do_planchette:
+                steps = compute_base36_traversal(text)
+                dec_zone = digital_root(sum(s['aq'] for s in steps)) or 9
+                print()
+                print(generate_planchette(dec_zone))
+            print()
             sys.exit(0)
         elif "--seed" in args:
             idx = args.index("--seed")
@@ -617,11 +655,18 @@ if __name__ == "__main__":
             hex_str = format(seed_val, 'X')
             print(f"  Seed {seed_val} → hex {hex_str}")
             print()
-            print(generate_base36_reading(hex_str))
+            h_s = generate_base36_reading(hex_str)
+            print(h_s)
+            if do_planchette:
+                steps = compute_base36_traversal(hex_str)
+                dec_zone = digital_root(sum(s['aq'] for s in steps)) or 9
+                print()
+                print(generate_planchette(dec_zone))
+            print()
             sys.exit(0)
         else:
             print("Djynxxogram mode requires --text or --seed")
-            print("  python3 oracle.py --base36 --text 'NUMOGRAM'")
+            print("  python3 oracle.py --base36 --text 'NUMOGRAM' --planchette")
             print("  python3 oracle.py --djynxxogram --seed 174")
             sys.exit(1)
     
@@ -796,11 +841,17 @@ if __name__ == "__main__":
         print("  python3 oracle.py --djynxxogram --seed 174  (Djynxxogram from AQ)")
         print("  python3 oracle.py --compare --text 'TEXT'  (cross-base comparison)")
         print("  python3 oracle.py --compare --seed 174    (from AQ value)")
+        print("  python3 oracle.py --seed N --planchette  (zone glyph planchette)")
         sys.exit(1)
 
     # Generate reading
     reading, zone = generate_reading(seed, source)
     print(reading)
+
+    if do_planchette and zone is not None:
+        print(generate_planchette(zone))
+        print()
+
 
     # Generate voice if requested
     if do_voice:
