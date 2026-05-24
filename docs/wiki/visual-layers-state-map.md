@@ -173,6 +173,6 @@ SVG tarot cards + a pixel-depth map = autostereogram. zone-grounded depth → pi
 
 ## Execution order
 
-**Done:** Thread 1 (mask) ✓ → Thread 2 (palette) ✓ → Thread 3 (CSS demon cards) ✓
-**Next:** Thread 5 (noise) → Thread 4 (`--tty`) → Thread 6 (TD bridge, TUI first)
+**Done:** Thread 1 (mask) ✓ → Thread 2 (palette) ✓ → Thread 3 (CSS demon cards) ✓ → Thread 5 (noise) ✓
+**Next:** Thread 4 (`--tty`) → Thread 6 (TD bridge)
 **Parked:** Thread 7 (stereogram — weekend project)
