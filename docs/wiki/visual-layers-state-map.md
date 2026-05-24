@@ -129,15 +129,24 @@ Z0 (void) → static grain. Z5 (Atlantean hinge) → striated, two-triangle pinc
 
 ---
 
-## Thread 6 — p5.js walker → TouchDesigner OSC bridge ⏳ Pending
+## Thread 6 — p5.js walker → TouchDesigner OSC bridge
 
 **Goal:** Real-time audio-visual scrying loop. p5.js sketch walks zones deterministically → sends OSC `{'zone':N,'frame':M}` → TD TOP shader resizes/warps → realtime numogram visualizer.
 
-**Prerequisites:** p5.js zone-walker sketch built first (terminal-verified). Then MCP call into TouchDesigner via `touchdesigner-mcp` skill exposes 36 native tools.
+### Step 1 — Zone-walker sketch ✓ DONE (2026-05-25)
 
-**Minimum viable:** zone transitions → RGB→zone groovy=> ONE zone-constrained per-step render → 10-zone demo ARC. 6 zones → 3 frames → 1 frame per zone.
+`docs/wiki/assets/zone-walker.html` — standalone p5.js HTML, no TD dependency.  
+Features: 10-zone cycle (Z0→Z9), 1.5 s per zone, 0.3 s fade between zones, per-zone RGB SYNTH swatches, frame counter.  
+Zone colour source: `zone-palettes.json` → `ZONE_COLORS` dict → `SYNTH[1]` (primary lead), `SYNTH[0]` (dark base).
 
-**Shortest path:** build p5 sketch → zone-constrained render → MCP → TD composer → 5-miner shift preset → automated 10-zone shift render loop.
+### Step 2 — MCP TD bridge ⏳ BLOCKED
+
+twozero MCP still requires: (1) `twozero.tox` in TD project, (2) MCP enabled in twozero settings (auto-start=Yes), (3) port localhost:40404 responding to `GET /mcp`.  
+Port 40404: not open. TD (PID 947426) is running under Wine but MCP is not yet live.  
+Next action pending TD setup completion.
+
+**Minimum viable overall:** zone transitions → zone-constrained per-step render → MCP hook → TD TOP shader.  
+**Shortest path:** Step 1 ✓ → MCP → TD oscillator → 10-zone demo loop.
 
 ## Thread 7 — Stereogram card gallery ⏳ Weekend
 
