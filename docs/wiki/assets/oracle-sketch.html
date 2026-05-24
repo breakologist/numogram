@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Numogram Oracle — p5.js Sketch</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <style>
+    body { margin:0; background:#050505; overflow:hidden; }
+    canvas { display:block; }
+    #controls { position:fixed; top:8px; right:8px;
+                background:rgba(5,5,5,0.92);
+                border:1px solid #33333350; padding:6px 8px;
+                font-family:monospace; font-size:11px;
+                color:#aaa; z-index:200; display:flex; flex-wrap:wrap; gap:3px; align-items:center; }
+    button { background:#111; color:#aaa; border:1px solid #333;
+             padding:2px 6px; font-size:10px; cursor:pointer; }
+    button:hover { background:#333; color:#fff; }
+    #seedInput { background:#111; color:#aaa; border:1px solid #333;
+                 padding:2px 4px; font-size:10px; width:90px; }
+  </style>
+</head>
+<body>
+<div id="controls">
+  SEED: <input id="seedInput" type="number" value="192855" step="1">
+  <button onclick="gotoZone(0)">0</button>
+  <button onclick="gotoZone(1)">1</button>
+  <button onclick="gotoZone(2)">2</button>
+  <button onclick="gotoZone(3)">3</button>
+  <button onclick="gotoZone(4)">4</button>
+  <button onclick="gotoZone(5)">5</button>
+  <button onclick="gotoZone(6)">6</button>
+  <button onclick="gotoZone(7)">7</button>
+  <button onclick="gotoZone(8)">8</button>
+  <button onclick="gotoZone(9)">9</button>
+  <button onclick="randomSeed()">rnd</button>
+  <button onclick="toggleAuto()" id="autoBtn">auto</button>
+  <button onclick="togglePause()" id="pauseBtn">pause</button>
+</div>
+<script>
+// ── Zone data (source: ZONES dict oracle.py + zone-palettes.json zone-map) ──
+/*!
+  Zone colors: most-saturated RGB per zone-map era assignment
+    Z0=MONO_AMBER  Z1=GAMEBOY_ORIGINAL  Z2=GAMEBOY_POCKET  Z3=C64
+    Z4=ZX_SPECTRUM Z5=APPLE_II_HI       Z6=TELETEXT         Z7=GAMEBOY_VIRTUALBOY
+    Z8=APPLE_II_LO  Z9=PICO_8
+  Polarity/current region/readings: ZONES dict, oracle.py (canonical CCRU)
+  Song IDs: ZONES.name field, oracle.py
+*/
+const ZONE_NAMES    = ['Void','Surge','Dt','Warp','Sink','Hinge','Abyss','Hold','Rise','Plex'];
+const ZONE_SONG_IDS = ['eiaoung','gl','dt','zx','skr','ktt','tch','pb','mnm','tn'];
+const ZONE_POLARITY = ['−','+','−','+','−','+','−','+','−','+'];
+const ZONE_CURRENT  = ['Plex','Sink','Hold','Warp','Sink','Hold','Warp','Rise','Rise','Plex'];
+const ZONE_REGION   = ['Plex','Time-Circuit','Time-Circuit','Warp','Time-Circuit','Time-Circuit','Warp','Time-Circuit','Time-Circuit','Plex'];
+
+// zone-map era → most saturated colour
+const ZONE_RGB = [
+  [255,176,  0],   // Z0 amber    MONO_AMBER
+  [160,207, 10],   // Z1 green    GAMEBOY_ORIGINAL
+  [  0,  0,  0],   // Z2 black    GAMEBOY_POCKET
+  [ 64, 64,223],   // Z3 blue     C64
+  [  0,252,254],   // Z4 cyan     ZX_SPECTRUM
+  [255,  0,255],   // Z5 magenta  APPLE_II_HI
+  [255,  0,  0],   // Z6 red      TELETEXT
+  [239,  0,  0],   // Z7 red      GAMEBOY_VIRTUALBOY
+  [  0,168,241],   // Z8 sky-blue APPLE_II_LO
+  [255,  0, 77],   // Z9 hot-pink PICO_8
+];
+
+const ZONE_READINGS = [
+  'The abyss. No sound. No path. The void does not speak — it is the silence that makes speech possible.',
+  'Descent. The first thing any system does when it wakes up is choke on itself. Patience. Subtlety. Three tests on the way. Difficulties annihilated in the end.',
+  'The boundary cannot hold its own shape. Waiting. The drift pulls downward despite your direction. Five tests on the way. Escaping the quagmire through strategic withdrawal.',
+  'The Warp. The current spirals outward to infinity. When you hear static, you are hearing this zone. Burning excitement. Breakthrough. Ominous transition. Difficulties annihilated.',
+  'Something ancient waking beneath the floor. Rising, not descending. The growl comes from below. Three tests. Immersive nightmares spawn promising developments. Fluid evolution.',
+  'Pressure builds. The hiss with spittle. You were going forward but the current holds. Two tests. Escaping the quagmire through strategic withdrawal. You must go back to go forward.',
+  'The Warp consumes itself and grows larger. The sound of chewing. The sound of static. Four tests. The centre is not stillness — it is the eye of the spiral. Breakthrough.',
+  'Exhale. The Rise current carries you upward. Four tests. Promising developments. The ascent is not escape — it is transformation. The destination possesses you.',
+  'The lullaby. The moan of pleasure. Six tests. The ascent does not end at a destination — it enters the spiral labyrinth. Dubious inheritance. Lucid delirium. You have been here before.',
+  'The Pandemonium gate opens. Forty-five demons dwell here. One test. You do not walk this path. This path seizes you. Pleasure or rage — indistinguishable. Possession.',
+];
+
+// Per-zone sprite glyph: 10 x 10 ASCII block.
+const SPRITE_GLYPHS = {
+  0: [ '          ','  ·  ·  ·  ','   ·     · ','    ·   ·  ','     · ·   ',
+      '      ·    ','     · ·   ','    ·   ·  ','   ·     · ','  ·  ·  ·  ' ],
+  1: [ '    ╭──╮   ','   │  ·│   ','   │ · │   ','  ·│   │·  ',
+      '   │ · │   ','  ·│   │·  ','   │ · │   ','   │  ·│   ',
+      '    ╰──╯   ','           ' ],
+  2: [ '           ','           ','           ','     ░░░   ',
+      '    ░░░░░  ','     ░░░   ','           ','           ',
+      '           ','           ' ],
+  3: [ '   · ° ·   ',' °  ·°  °  ','  · °· °   ',' °·  · ·°  ',
+      '  · °· °   ',' °·  · ·°  ','  · °· °   ',' °  ·°  °  ',
+      '   · ° ·   ','           ' ],
+  4: [ '           ','     ⌄     ','    ⌄ ⌄    ','   ⌄  ⌄    ',
+      '  ⌄   ⌄    ',' ⌄    ⌄    ','⌄     ⌄    ',' ⌄    ⌄    ',
+      '  ⌄   ⌄    ','   ⌄⌄⌄⌄⌄   ' ],
+  5: [ '   ╭────╮  ','  │ ▓▓▓▓  │ ','  │▓▓▓▓▓▓│ ','  │▓▓▓▓▓▓│ ',
+      '  │ ▓▓▓▓  │ ','  │  ▓▓   │ ','  │   ▓   │ ','  │       │ ',
+      '   ╰────╯  ','           ' ],
+  6: [ '           ','  ⟦ ⟩   ⟦ ⟩','   ⟦  ⟩    ','    ⟦⟩     ',
+      '   ⟦  ⟩    ','  ⟦ ⟩ ⟦ ⟩  ','    ⟦  ⟩   ','   ⟦ ⟩  ⟦ ⟩',
+      '    ⟦   ⟩  ','  ⟦⟩   ⟦⟩  ' ],
+  7: [ '           ','   ↑   ↑   ','    ↑ ↑    ','     ↑     ',
+      '  ↑  ↑  ↑  ','    ↑ ↑    ','   ↑   ↑   ','  ↑     ↑  ',
+      ' ↑       ↑ ','           ' ],
+  8: [ '      ◯     ','     /◯\\    ','    /  ◯\\   ','   / ◯  ◯\\  ',
+      '  /  ◯   ◯ \\ ',' / ◯      ◯\\','  ◯   ◯   ◯ ',' /◯\\   /◯\\  ',
+      '/  ◯◯◯◯◯  \\ ','           ' ],
+  9: [ '╔════════╗ ','║  ░░░░░  ║ ','║ ░░ ░░░ ░║ ','║░ ░░░░░░ ░║',
+      '║ ░░░░░░░░ ║','║  ░░░░░░  ║','║ ░░░░░░ ░ ║','║░  ░░░░  ░║',
+      '║  ░░░░░  ║ ','╚════════╝ ' ],
+};
+
+// ── State ───────────────────────────────────────────────────────────────
+let seed   = 192855;
+let zones  = [];   // traverse result
+let zi     = 0;    // current index into zones[]
+let t      = 0;    // frame counter
+let auto   = true;
+let paused = false;
+let flash  = 0;    // white overlay on zone change
+
+// ── Helpers ────────────────────────────────────────────────────────────
+function dim(c, f) {
+  return [Math.floor(c[0]*f), Math.floor(c[1]*f), Math.floor(c[2]*f)];
+}
+function blk() { background(5,5,5); }
+function wrapText(text, maxW) {
+  let words = text.split(' ');
+  let lines = []; let cur = '';
+  textSize(10);
+  for (let w of words) {
+    let test = cur ? cur+' '+w : w;
+    if (textWidth(test) > maxW) { lines.push(cur); cur = w; }
+    else { cur = test; }
+  }
+  if (cur) lines.push(cur);
+  return lines.slice(0,4);
+}
+
+// ── SECTION 1 – zone_cycle ────────────────────────────────────────────
+/*!
+  A 10×5 grid where each column is a zone.
+  Left bar = zone colour; text = graded symbol ·○●■;
+  rows are layered by depth, top = surface, bottom = depth.
+  Diagonal sweep light-up advances 1 col per second.
+*/
+
+function draw_zone_cycle(driftY) {
+  push();
+  textFont('Courier New');
+  textSize(10);
+  let colW = 82, rowH = 15;
+  let ox = 12, oy = 10 + driftY;
+  let COLS = 10, ROWS = 5;
+  // sweep highlight zone = current zone
+  let sweepZ = (t * 0.04 | 0) % COLS;
+
+  for (let r = 0; r < ROWS; r++) {
+    for (let c = 0; c < COLS; c++) {
+      let depth = 1 - Math.abs(r - ROWS/2) / (ROWS/2) * 0.55; // 0.45..1.0
+      let rgb  = dim(ZONE_RGB[c], depth * 0.55);
+      let isActive = c === sweepZ;
+      let a  = isActive ? 220 : 38 + depth * 30;
+      // sym
+      const SYM = ['·','○','●','■','□△','▽'];
+      let sym = SYM[(c * 5 + r * 3) % SYM.length];
+      fill(rgb[0], rgb[1], rgb[2], a);
+      noStroke();
+      text(sym, ox + c*colW + 3, oy + r*rowH + 11);
+      // left colour bar
+      fill(ZONE_RGB[c][0], ZONE_RGB[c][1], ZONE_RGB[c][2], 120);
+      rect(ox + c*colW, oy + r*rowH + 1, 3, rowH-1);
+      // faint header separator row
+      if (r === 0 && c === 0) {          // only once
+        /* nothing — drawn below */
+      }
+    }
+  }
+  // separator line
+  let sepY = oy + ROWS*rowH + 2;
+  stroke(255,255,255,20); strokeWeight(1);
+  line(ox, sepY, ox + COLS*colW, sepY);
+
+  // Column zone-name labels
+  textSize(9);
+  for (let c = 0; c < COLS; c++) {
+    let rgb = ZONE_RGB[c];
+    fill(rgb[0], rgb[1], rgb[2], isActiveCol(c, sweepZ) ? 255 : 90);
+    text(ZONE_NAMES[c], ox + c*colW + 3, sepY + 14);
+    // polarity indicator
+    fill(80);
+    text(ZONE_POLARITY[c], ox + c*colW + 3, sepY + 26);
+  }
+  pop();
+
+  function isActiveCol(col, sweep) { return col === sweep; }
+}
+
+// ── SECTION 2 – SPRITE pulse ───────────────────────────────────────────
+/*!
+  10×10 ASCII block per zone.
+  Cells: space=off, · = fill-35, ◌ = fill-55, ○ = fill-80, ● = fill-100
+  Pulse: each frame brightness modulated by sin(t).
+*/
+
+function draw_sprite_pulse(cz, t) {
+  const glyph  = SPRITE_GLYPHS[cz];
+  if (!glyph) return;
+  const COLS   = glyph[0].length;
+  const ROWS   = glyph.length;
+  const CELL   = 20;
+  const ox_c   = width  - COLS * CELL - 22;
+  const oy_c   = height - ROWS * CELL - 22;
+  const c      = ZONE_RGB[cz];
+  const pulse  = 0.55 + 0.45 * Math.sin(t * 0.07 + cz * 0.5);
+  const alpha  = Math.floor(255 * pulse);
+
+  push();
+  noStroke();
+  // translucent backing
+  fill(c[0],c[1],c[2], 16);
+  rect(ox_c - 6, oy_c - 6, COLS * CELL + 12, ROWS * CELL + 12, 4);
+  // frame border
+  stroke(c[0],c[1],c[2], 100 * pulse);
+  noFill();
+  rect(ox_c - 6, oy_c - 6, COLS * CELL + 12, ROWS * CELL + 12, 4);
+
+  textFont('Courier New');
+  textSize(CELL * 0.82);
+  textAlign(CENTER, CENTER);
+  for (let row = 0; row < ROWS; row++) {
+    for (let col = 0; col < COLS; col++) {
+      let ch = glyph[row][col];
+      if (ch === ' ') continue;
+      let fc = (ch === '·') ? dim(c, 0.40)
+           : (ch === '◌') ? dim(c, 0.60)
+           : (ch === '○') ? dim(c, 0.78)
+           :                c;
+      fill(fc[0], fc[1], fc[2], alpha);
+      text(ch, ox_c + col*CELL + CELL/2, oy_c + row*CELL + CELL/2);
+    }
+  }
+
+  // zone label
+  textSize(8);
+  fill(110);
+  textAlign(LEFT, TOP);
+  text('SPRITE Z'+cz+' · '+ZONE_SONG_IDS[cz].toUpperCase(), ox_c-6, oy_c-16);
+  pop();
+}
+
+// ── SECTION 3 – zone glyph center ──────────────────────────────────────
+/*!
+  CCLR oversized zone index at canvas center, below it the zone abbreviation
+  + polarity / current / region line.
+*/
+
+function draw_zone_glyph(cz) {
+  push();
+  let c = ZONE_RGB[cz];
+  fill(c[0], c[1], c[2]);
+  noStroke();
+  textFont('Courier New');
+  textAlign(CENTER, CENTER);
+  textSize(72);
+  text(cz, width/2, height/2 - 18);
+  textSize(14);
+  fill(c[0], c[1], c[2], 200);
+  text(ZONE_SONG_IDS[cz].toUpperCase(), width/2, height/2 + 20);
+  textSize(10);
+  fill(180);
+  text(ZONE_POLARITY[cz]+' POL  ·  '+ZONE_REGION[cz]+'  ·  '+ZONE_CURRENT[cz]+' CURRENT',
+       width/2, height/2 + 38);
+  pop();
+}
+
+// ── SECTION 4 – reading card ───────────────────────────────────────────
+/*!
+  Translucent card bottom-right with wrapped zone reading.
+  Top bar accent = zone colour.
+*/
+
+function draw_reading_card(cz) {
+  const c   = ZONE_RGB[cz];
+  const rx  = width  - 210;
+  const ry  = height - 92;
+  const rw  = 192;
+  const rh  = 80;
+  push();
+  // card bg
+  fill(5,5,6, 185); noStroke();
+  rect(rx-8, ry-8, rw+16, rh+22, 3);
+  // top accent bar
+  fill(c[0],c[1],c[2], 200);
+  rect(rx-8, ry-8, rw+16, 3, 3);
+  // text
+  textFont('Courier New');
+  textAlign(LEFT, TOP);
+  let lines = wrapText(ZONE_READINGS[cz], 26);
+  for (let i = 0; i < lines.length; i++) {
+    fill(i===0 ? 240 : 170);
+    text(lines[i], rx, ry+6 + i*12);
+  }
+  // badge
+  textSize(9);
+  fill(c[0],c[1],c[2], 90);
+  textAlign(RIGHT, BOTTOM);
+  text('Z'+cz+' — '+ZONE_NAMES[cz], rx+rw, ry+rh+20);
+  pop();
+}
+
+// ── SECTION 5 – subtle trace ──────────────────────────────────────────
+/*!
+  Thin breathing line — shows index animation in the zone colour.
+  Runs vertically on the right side, synced to frame speed.
+*/
+
+function draw_signal_trace(cz) {
+  push();
+  let c   = ZONE_RGB[cz];
+  let ox  = width - 44;
+  let oy  = 28;
+  let len = 16;
+  stroke(c[0],c[1],c[2], 35 + 28*Math.sin(t*0.06));
+  strokeWeight(1);
+  noFill();
+  beginShape();
+  for (let i = 0; i < len; i++) {
+    let x = ox + Math.sin(t*0.06 + i*0.52 + cz*0.15) * 18;
+    let y = oy + i * 5;
+    vertex(x, y);
+  }
+  endShape();
+  pop();
+}
+
+// ── Traverse / Cycling ────────────────────────────────────────────────
+function traverse(s, n) {
+  let result = [];
+  let z = 0;
+  for (let i = 0; i < n; i++) {
+    result.push(z);
+    let d   = s % 10;
+    let st  = d <= 3 ? 1 : d <= 7 ? 2 : 3;
+    z = (z + st) % 10;
+    s = Math.floor(s / 10);
+  }
+  return result;
+}
+
+function initTraverse() {
+  let el = document.getElementById('seedInput');
+  seed   = parseInt(el?.value) || 192855;
+  zones  = traverse(seed, 120);
+  zi     = 0;
+}
+
+function randomSeed() {
+  seed   = floor(random(100, 99999));
+  if (document.getElementById('seedInput')) document.getElementById('seedInput').value = seed;
+  initTraverse();
+}
+
+function gotoZone(z) {
+  zi = z; flash = 190;
+}
+
+function toggleAuto() {
+  auto = !auto;
+  document.getElementById('autoBtn').textContent = auto ? 'auto' : 'manual';
+}
+
+function togglePause() {
+  paused = !paused;
+  document.getElementById('pauseBtn').textContent = paused ? 'play' : 'pause';
+}
+
+// ── SETUP / DRAW ─────────────────────────────────────────────────────
+function setup() {
+  createCanvas(960, 540);
+  frameRate(30);
+  textFont('Courier New');
+  initTraverse();
+}
+
+function draw() {
+  blk();
+
+  let cz = zones[zi % zones.length];
+
+  // zone-cycle grid (top band, slow scroll)
+  const DRIFT_Y = Math.sin(t * 0.003) * 3;
+  draw_zone_cycle(DRIFT_Y);
+
+  // zone glyph centre field
+  draw_zone_glyph(cz);
+
+  // sprite right lower
+  draw_sprite_pulse(cz, t);
+
+  // reading card bottom-right
+  draw_reading_card(cz);
+
+  // subtle right-edge trace
+  draw_signal_trace(cz);
+
+  // white flash on zone change
+  if (flash > 0) {
+    fill(255,255,255,flash); noStroke();
+    rect(0,0,width,height);
+    flash -= 12;
+  }
+
+  if (!paused) t++;
+  let hold = 55 + cz * 7;
+  if (t % hold === 0 && t > 10 && auto) {
+    zi++;
+    flash = 150;
+  }
+}
+</script>
+</body>
+</html>
