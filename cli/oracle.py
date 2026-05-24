@@ -1051,16 +1051,39 @@ if __name__ == "__main__":
         print("  python3 oracle.py --seed N --planchette --sprite               (pixel medallion only)")
         sys.exit(1)
 
-    # ── PLANCHETTE / JSON OUTPUT ──
-    if do_planchette or do_json:
+    # ── PLANCHETTE / READING OUTPUT ──
+    if do_planchette or do_json or do_sprite or do_ascii_glyph:
         reading, zone = generate_reading(seed, source)
 
     if do_planchette and do_json and zone is not None:
         print(generate_planchette_json(zone, get_current(zone), get_gate(zone), get_syzygy(zone)))
     elif do_planchette and zone is not None:
+        if not (do_sprite or do_ascii_glyph or do_json):
+            _out_lines = generate_planchette(zone).split("\n")
+        else:
+            _out_lines = []
+        if do_sprite:
+            _out_lines.append(render_zone_sprite(zone))
+            _out_lines.append("")
+        if do_ascii_glyph:
+            _out_lines.append(generate_planchette_glyph(zone, get_current(zone),
+                                                         get_gate(zone), get_syzygy(zone)))
+        if do_json:
+            _out_lines.append(generate_planchette_json(zone, get_current(zone),
+                                                        get_gate(zone), get_syzygy(zone)))
         print(reading)
         print()
-        # ── collect planchette lines (regardless of display mode) ──────
+        _rgb = _ZONE_TTY_RGB.get(zone, (200, 200, 200))
+        if do_tty:
+            for _l in _out_lines:
+                print(_tty_color(*_rgb) + _l + "\x1b[0m")
+        else:
+            for _l in _out_lines:
+                print(_l)
+        print()
+
+    # ── sprite / ascii-glyph / json without planchette ──
+    if zone is not None and (do_sprite or do_ascii_glyph or do_json) and not do_planchette:
         _out_lines = []
         if do_sprite:
             _out_lines.append(render_zone_sprite(zone))
@@ -1071,10 +1094,6 @@ if __name__ == "__main__":
         if do_json:
             _out_lines.append(generate_planchette_json(zone, get_current(zone),
                                                         get_gate(zone), get_syzygy(zone)))
-        if not (do_sprite or do_ascii_glyph or do_json):
-            _out_lines.extend(generate_planchette(zone).split("\n"))
-
-        # ── print, optionally tty-coloured ────────────────────────────
         _rgb = _ZONE_TTY_RGB.get(zone, (200, 200, 200))
         if do_tty:
             for _l in _out_lines:
