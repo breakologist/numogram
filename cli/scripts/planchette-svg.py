@@ -56,6 +56,63 @@ MUTED  = "#94a3b8"
 BLACK  = "#0f172a"
 
 
+# ─── PALETTE LOADING ──────────────────────────────────────────────────
+# Hardware-accurate palettes from the Hermes pixel-art skill
+# Inserts palette colors and zone maps into the medallion pixel grid
+try:
+    import importlib.util, pathlib
+    _PAL_PATH = pathlib.Path.home() / '/home/etym/.hermes/skills/creative/pixel-art/scripts/palettes.py'
+    if _PAL_PATH.exists():
+        _spec  = importlib.util.spec_from_file_location("palettes", str(_PAL_PATH))
+        _mod   = importlib.util.module_from_spec(_spec)
+        _spec.loader.exec_module(_mod)
+        _HWPALETTES = _mod.PALETTES
+    else:
+        raise FileNotFoundError
+except Exception:
+    _HWPALETTES = {}
+
+ZONE_HW_PALETTE = {
+     0: "MONO_AMBER",
+     1: "GAMEBOY_ORIGINAL",
+     2: "GAMEBOY_POCKET",
+     3: "C64",
+     4: "ZX_SPECTRUM",
+     5: "APPLE_II_HI",
+     6: "TELETEXT",
+     7: "GAMEBOY_VIRTUALBOY",
+     8: "APPLE_II_LO",
+     9: "PICO_8",
+}
+
+def _pixel_color(zone, x, y, for_svg=False):
+    pal_name = ZONE_HW_PALETTE.get(zone, "C64")
+    colors = _HWPALETTES.get(pal_name)
+    if colors is None:
+        sys.stderr.write(f"[PALETTE-FALLBACK] {pal_name} not in HWPALETTES\n")
+        colors = _hw_palette(pal_name)
+    n   = max(1, len(colors))
+    idx = (x * (zone+1) + y * (zone+2)) % n
+    r, g, b = colors[idx]  # pick colour for this pixel position
+    if for_svg:
+        return f"#{r:02x}{g:02x}{b:02x}"
+    return (r, g, b, 255)
+
+def _hw_palette(name):
+    _SYNTH = {
+        "MONO_AMBER":          [(122,87,0),(187,136,0)],
+        "GAMEBOY_ORIGINAL":    [(0,35,0),(69,112,14)],
+        "GAMEBOY_POCKET":    [(0, 0,  0),(85,85,85)],
+        "C64":      [(0,0,0),(124,124,124),(0,0,252),(148,0,132)],
+        "ZX_SPECTRUM":    [(0,0,0),(0,40,248),(255,36,20),(255,255,255)],
+        "APPLE_II_HI":    [(0,0,0),(255,0,0),(0,255,0),(255,255,255),(0,175,255)],
+        "TELETEXT":    [(0,0,0),(255,0,0),(255,255,0),(0,255,0)],
+        "GAMEBOY_VIRTUALBOY":[(200,0,0),(164,0,0),(85,0,0),(0,0,0)],
+        "APPLE_II_LO":    [(0,0,0),(234,93,240),(0,104,82),(0,145,80)],
+        "PICO_8":    [(0,0,0),(29,43,83),(126,37,83),(171,82,54)],
+    }
+    return _SYNTH.get(name, [(128,0,128),(0,128,0),(0,0,255),(255,0,0)])
+
 # ─── HELPERS ────────────────────────────────────────────────
 
 def _zc(z: int) -> str: return ZONE_COLORS.get(z, WHITE)
@@ -122,8 +179,7 @@ def pixel_medallion(cx: int, cy: int, size: int, zone: int) -> str:
     for py in range(rows):
         for px_ in range(cols):
             if _pixel_hash(px_, py, zone):
-                zc = _zc(zone)
-                px[px_, py] = (int(zc[1:3],16), int(zc[3:5],16), int(zc[5:7],16), 192)
+                px[px_, py] = _pixel_color(zone, px_, py)
     buf = BytesIO()
     img.save(buf, "PNG")
     b64 = base64.b64encode(buf.getvalue()).decode()
@@ -135,7 +191,7 @@ def _pixel_svg(cx: int, cy: int, size: int, zone: int) -> str:
     """SVG-only pixel pattern — no PIL dependency."""
     sz = max(12, size)
     step = sz // 10
-    accent = _zc(zone)
+    accent = _pixel_color(zone, xi, yi, for_svg=True)
     parts = [f'<rect x="{cx-sz//2}" y="{cy-sz//2}" width="{sz}" height="{sz}" fill="{BLACK}" rx="2"/>']
     for yi in range(10):
         for xi in range(10):
@@ -230,7 +286,7 @@ def render(
 
     # ── pixel-art medallion ────────────────────────────────────
     MCX = 230
-    lns += [pixel_medallion(MCX, MED_CY, MED_R*2, zone)]
+    lns += [pixel_medallion(MCX, MED_CY, MED_R*2, zone)] 
 
     # ── gesture line: glyph → medallion ───────────────────────
     lns += [f'<path d="M {GL_CX} {GL_CY+GL_R+2} Q {(GL_CX+MCX)//2} {GL_CY+GL_R+4+(MED_CY-MED_R-(GL_CY+GL_R+2))//2} {MCX} {MED_CY-MED_R-4}"',
@@ -270,9 +326,9 @@ def render(
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--zone",     type=int, required=True)
-    p.add_argument("--current",  type=int, required=True)
-    p.add_argument("--gate",     type=int, required=True)
+    p.add_argument("--zone",     type=int, required=False)
+    p.add_argument("--current",  type=int, required=False)
+    p.add_argument("--gate",     type=int, required=False)
     p.add_argument("--syzygy",   default="")
     p.add_argument("--aq",       type=int, default=137)
     p.add_argument("--particle", default="ktt")
@@ -284,6 +340,16 @@ def main():
     p.add_argument("--stdin", action="store_true",
                    help="read planchette JSON from oracle.py --planchette --json")
     args = p.parse_args()
+
+    if not args.stdin:
+        missing = []
+        for name in ("zone","current","gate"):
+            if getattr(args, name) is None:
+                missing.append(name)
+        if missing:
+            print("planchette-svg: missing --zone --current --gate "
+                  "or use --stdin", file=sys.stderr)
+            sys.exit(2)
 
     if args.stdin:
         d = json.load(sys.stdin)

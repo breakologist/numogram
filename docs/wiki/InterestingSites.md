@@ -16,6 +16,7 @@ https://github.com/breakologist?tab=stars - some interesting projects here
 https://github.com/trycua/cua - agentic computer use, could be a powerful basis for future, check it out
 https://osf.io/preprints/psyarxiv/4nv79_v1
 https://github.com/faltz009
+https://eloptic-energy-nexus.netlify.app/#/
 https://www.imissmylibrary.com/
 https://dfos.com/
 https://github.com/denismm/mystical_ps
@@ -41,6 +42,7 @@ https://kaostat.mosphere.at/ - A Field Guide to the Faces of Machines. 1,729 ses
 https://cursor.com/
 https://github.com/plntrprotocol/Risomorphism-1911
 https://github.com/liftaris/herm
+https://codepen.io/DULA2025/pen/PwbKNJM
 https://github.com/arm64be/theia
 https://hermes-agent.nousresearch.com/docs/user-guide/features/codex-app-server-runtime
 https://gematriaresearch.blogspot.com/
@@ -126,3 +128,23 @@ https://grok.com/ - xAI's Grok: Humorous and rebellious conversational AI
 https://www.moonshot.ai/ - Moonshot AI: Large language model with creative reasoning capabilities
 https://higgsfield.ai/supercomputer
 https://claude.ai/new
+
+---
+
+
+## Pixel Art Hardware Palettes (SNES / C64 / NES / GB…)
+The `pixel-art` skill pulls all palette RGB from [Synero/pixel-art-studio](https://github.com/Synero/pixel-art-studio).
+28 named palettes hardware-accurate plus 10 artistic. Relevant ones mapped in planchette zone-palette table below.
+
+| Palette | Colours | Console / Era |
+|---------|--------|----------------|
+| MONO_AMBER | 4 | CRT amber terminal |
+| GAMEBOY_ORIGINAL | 4 | DMG green (1989) |
+| GAMEBOY_POCKET | 4 | Grey (1996) |
+| C64 | 16 | Commodore 64 (1982) |
+| ZX_SPECTRUM | 8 | Sinclair ZX Spectrum (1982) |
+| APPLE_II_HI | 6 | Apple II hires (280×192) |
+| TELETEXT | 8 | BBC Teletext (1974) |
+| GAMEBOY_VIRTUALBOY | 4 | Virtual Boy red (1995) |
+| APPLE_II_LO | 16 | Apple II lo-res |
+| PICO_8 | 16 | PICO-8 fantasy console |

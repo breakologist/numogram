@@ -254,3 +254,7 @@ All interactive exhibits created using open source tools: Python, PyQt, PyGame, 
 
 All visual content created by the Hermetic Archive team using open source tools: Manim, p5.js, D3.js, WebGL, and Inkscape.
 
+
+
+## Pixel-Art Medallion (2026-05-24)
+`planchette-svg.py` now renders a 10×10 per-zone pixel grid in the medallion position, using hardware-accurate palettes from the `pixel-art` skill (28 palette keys). Each zone maps to one palette — Virtual Boy red for Z7, C64 full spectrum for Z3, PICO-8 for Z9, etc. The pixel grid is size-adaptive (120px SVG fallback, PIL PNG precise at 10px). Path wanted: pixel-art → tsubuyaki gallery → audio-visual scrying.
