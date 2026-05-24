@@ -1060,23 +1060,28 @@ if __name__ == "__main__":
     elif do_planchette and zone is not None:
         print(reading)
         print()
-        if do_sprite or do_ascii_glyph:
-            if do_sprite:
-                print(render_zone_sprite(zone))
-                print()
-            if do_ascii_glyph:
-                print(generate_planchette_glyph(zone, get_current(zone), get_gate(zone), get_syzygy(zone)))
-        elif do_json:
-            print(generate_planchette_json(zone, get_current(zone), get_gate(zone), get_syzygy(zone)))
+        # ── collect planchette lines (regardless of display mode) ──────
+        _out_lines = []
+        if do_sprite:
+            _out_lines.append(render_zone_sprite(zone))
+            _out_lines.append("")
+        if do_ascii_glyph:
+            _out_lines.append(generate_planchette_glyph(zone, get_current(zone),
+                                                         get_gate(zone), get_syzygy(zone)))
+        if do_json:
+            _out_lines.append(generate_planchette_json(zone, get_current(zone),
+                                                        get_gate(zone), get_syzygy(zone)))
+        if not (do_sprite or do_ascii_glyph or do_json):
+            _out_lines.extend(generate_planchette(zone).split("\n"))
+
+        # ── print, optionally tty-coloured ────────────────────────────
+        _rgb = _ZONE_TTY_RGB.get(zone, (200, 200, 200))
+        if do_tty:
+            for _l in _out_lines:
+                print(_tty_color(*_rgb) + _l + "\x1b[0m")
         else:
-            if do_tty and zone is not None:
-                _colored_lines = []
-                for _l in generate_planchette(zone).split("\n"):
-                    _rgb = _ZONE_TTY_RGB.get(zone)
-                    _colored_lines.append(_tty_color(*_rgb) + _l + "\x1b[0m")
-                print("\n".join(_colored_lines))
-            else:
-                print(generate_planchette(zone))
+            for _l in _out_lines:
+                print(_l)
         print()
 
 
