@@ -46,6 +46,15 @@ Delta-phase terminal deliria. Kurtz end-of-the-river disintegration into malaria
 
 *Coordinates from `positions.ts` (qliphoth.systems, 2026-04-30).*
 
+
+## Visual
+
+![Zone 4 glyph](assets/zone-glyphs/zone-4.png) { .zone-glyph }
+
+> Aggressive ziggurat-anti-mass with dark spines. A reptiloid growl stacked in redundant hierarchy (skr-hkhurrrr).
+
+*Glyph: 32×32 PICO-8 pixel-art, generated from zone 4's DECOM particle and conceptual description. See [[zone-pixel-glyphs]] for the full set and generator notes.*
+
 ## Hyperstitional Notes
 
 - Zone 4 corresponds to the **skr** particle.

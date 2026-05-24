@@ -43,6 +43,15 @@ Meta-static pod-deliria and techno-immortalism. Transcendent sky-god divinity an
 
 *Coordinates from `positions.ts` (qliphoth.systems, 2026-04-30).*
 
+
+## Visual
+
+![Zone 1 glyph](assets/zone-glyphs/zone-1.png) { .zone-glyph }
+
+> Door/gag reflex — the inaugural inhalation, a glottal gateframe. The word itself recoils before speech.
+
+*Glyph: 32×32 PICO-8 pixel-art, generated from zone 1's DECOM particle and conceptual description. See [[zone-pixel-glyphs]] for the full set and generator notes.*
+
 ## Hyperstitional Notes
 
 - Zone 1 corresponds to the **gl** particle.

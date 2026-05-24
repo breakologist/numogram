@@ -51,6 +51,15 @@ Cthellloid metallic ocean of the earth's iron core. The outermost reaches the in
 
 *Coordinates from `positions.ts` (qliphoth.systems, 2026-04-30).*
 
+
+## Visual
+
+![Zone 9 glyph](assets/zone-glyphs/zone-9.png) { .zone-glyph }
+
+> Iron Core, Pandemonium aperture. The Cthellloid forty-five bloom — plutonium peak at the edge of completion, gate toward the half of a ternary spoon.
+
+*Glyph: 32×32 PICO-8 pixel-art, generated from zone 9's DECOM particle and conceptual description. See [[zone-pixel-glyphs]] for the full set and generator notes.*
+
 ## Hyperstitional Notes
 
 - Zone 9 corresponds to the **tn** particle.  

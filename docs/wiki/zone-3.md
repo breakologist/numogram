@@ -45,6 +45,15 @@ Swirling nebulae, cosmic dust clouds and alien pattern. Vortical involvement wit
 
 *Coordinates from `positions.ts` (qliphoth.systems, 2026-04-30).*
 
+
+## Visual
+
+![Zone 3 glyph](assets/zone-glyphs/zone-3.png) { .zone-glyph }
+
+> Buzz-cutter static, radial spokes. When you hear static you are hearing this zone — burning excitement, breakthrough, ominous transition.
+
+*Glyph: 32×32 PICO-8 pixel-art, generated from zone 3's DECOM particle and conceptual description. See [[zone-pixel-glyphs]] for the full set and generator notes.*
+
 ## Hyperstitional Notes
 
 - Zone 3 corresponds to the **zx** particle.

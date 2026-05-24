@@ -44,6 +44,15 @@ Crypt-navigation, occulted cyberspace. Spectral populations of hallucination and
 
 *Coordinates from `positions.ts` (qliphoth.systems, 2026-04-30).*
 
+
+## Visual
+
+![Zone 2 glyph](assets/zone-glyphs/zone-2.png) { .zone-glyph }
+
+> Imploded fricative, stutter fracture, angle tick — the Shperer fracture vertical. A break that never quite closes.
+
+*Glyph: 32×32 PICO-8 pixel-art, generated from zone 2's DECOM particle and conceptual description. See [[zone-pixel-glyphs]] for the full set and generator notes.*
+
 ## Hyperstitional Notes
 
 - Zone 2 corresponds to the **dt** particle.

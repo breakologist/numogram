@@ -50,6 +50,15 @@ Limbic drift, dreams, trance-states and foetal sentience. The digital byte — e
 
 *Coordinates from `positions.ts` (qliphoth.systems, 2026-04-30).*
 
+
+## Visual
+
+![Zone 8 glyph](assets/zone-glyphs/zone-8.png) { .zone-glyph }
+
+> Three-fold petal bloom. The moan of Lukh/Shuplu spirit-diffraction through pleasure-blow. Three petals folding in mirror-symmetry.
+
+*Glyph: 32×32 PICO-8 pixel-art, generated from zone 8's DECOM particle and conceptual description. See [[zone-pixel-glyphs]] for the full set and generator notes.*
+
 ## Hyperstitional Notes
 
 - Zone 8 corresponds to the **mnm** particle.

@@ -48,11 +48,21 @@ Occulted dimensions of Undu. Turbular erosion and the dead eye of the cyclone. S
 
 *Coordinates from `positions.ts` (qliphoth.systems, 2026-04-30).*
 
+
+## Visual
+
+![Zone 6 glyph](assets/zone-glyphs/zone-6.png) { .zone-glyph }
+
+> Portail-â-worm occlusion. Turbular erosion chewing through static time. Navvy-char driven edge in perpetual entering.
+
+*Glyph: 32×32 PICO-8 pixel-art, generated from zone 6's DECOM particle and conceptual description. See [[zone-pixel-glyphs]] for the full set and generator notes.*
+
 ## Hyperstitional Notes
 
 - Zone 6 corresponds to the **tch** particle.
 - Syzygy partner: Zone 3 (see demon)
 - Gate connections: see [[numogram/gates]].
+<! ---> The V3 real-resonator SHAP driver: *very_high_ratio dominates (0.0849)*, confirming Z6's acoustic signature as the tube/bow friction zone — extended highs (>8 kHz) + spectral rolloff. [[numogram-audio/real-resonator-shap-driver-signatures]] [[numogram-audio/zone-mapping-consistency]] for full analysis table.
 - Current: **None**
 
 ## Related

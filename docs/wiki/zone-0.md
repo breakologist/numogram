@@ -43,6 +43,15 @@ Dense void of the cosmic hypermatrix, upon which absolute desolation crosses inf
 
 *Coordinates from `positions.ts` (qliphoth.systems, 2026-04-30).*
 
+
+## Visual
+
+![Zone 0 glyph](assets/zone-glyphs/zone-0.png) { .zone-glyph }
+
+> Concentric void diamond — the silent desolate abyss that is also the source of all potential. The zero from which the decimal labyrinth unfolds and to which it returns.
+
+*Glyph: 32×32 PICO-8 pixel-art, generated from zone 0's DECOM particle and conceptual description. See [[zone-pixel-glyphs]] for the full set and generator notes.*
+
 ## Hyperstitional Notes
 
 - Zone 0 corresponds to the **eiaoung** particle.  

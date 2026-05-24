@@ -47,6 +47,15 @@ Hyperborean or Wendigo mythology. Missing time and alien abduction. Inner-eye of
 
 *Coordinates from `positions.ts` (qliphoth.systems, 2026-04-30).*
 
+
+## Visual
+
+![Zone 5 glyph](assets/zone-glyphs/zone-5.png) { .zone-glyph }
+
+> Diamond constriction — two triangles pinching toward a gold pressure thread. The Atlantean Hinge, self-decadence, golden ratio compression.
+
+*Glyph: 32×32 PICO-8 pixel-art, generated from zone 5's DECOM particle and conceptual description. See [[zone-pixel-glyphs]] for the full set and generator notes.*
+
 ## Hyperstitional Notes
 
 - Zone 5 corresponds to the **ktt** particle.
