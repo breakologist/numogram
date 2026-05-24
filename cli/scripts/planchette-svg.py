@@ -72,6 +72,21 @@ try:
 except Exception:
     _HWPALETTES = {}
 
+_FALLBACK_COLOR = [[128, 0, 128], [0, 128, 0], [0, 0, 255], [255, 0, 0]]
+
+# ─── ZONE → SYNTH FALLBACK ─────────────────────────────────────────────
+# Canonical sidecar: zone-palettes.json (generated from PALETTES skill).
+# Indexed by zone number → list of SYNTH RGB tuples.  Loaded once here so
+# _pixel_color() never needs to hit the stale _SYNTH dict.
+try:
+    _here = pathlib.Path(__file__).parent
+    _repo = _here.parent.parent          # /home/etym/numogram/
+    _JSON_SIDE = _repo / "docs" / "wiki" / "assets" / "zone-palettes.json"
+    _ZONE_SYNTHS = (json.loads(_JSON_SIDE.read_text())
+                    .get("zone_colors", {}))
+except Exception:
+    _ZONE_SYNTHS = {}
+
 ZONE_HW_PALETTE = {
      0: "MONO_AMBER",
      1: "GAMEBOY_ORIGINAL",
@@ -89,8 +104,10 @@ def _pixel_color(zone, x, y, for_svg=False):
     pal_name = ZONE_HW_PALETTE.get(zone, "C64")
     colors = _HWPALETTES.get(pal_name)
     if colors is None:
-        sys.stderr.write(f"[PALETTE-FALLBACK] {pal_name} not in HWPALETTES\n")
-        colors = _hw_palette(pal_name)
+        # Live SYNTH lookup — all branches pre-declared, no stale inline dicts
+        colors = (_ZONE_SYNTHS.get(str(zone))
+                  or _HWPALETTES.get(pal_name)
+                  or _FALLBACK_COLOR)
     n   = max(1, len(colors))
     idx = (x * (zone+1) + y * (zone+2)) % n
     r, g, b = colors[idx]  # pick colour for this pixel position
@@ -99,19 +116,15 @@ def _pixel_color(zone, x, y, for_svg=False):
     return (r, g, b, 255)
 
 def _hw_palette(name):
-    _SYNTH = {
-        "MONO_AMBER":          [(122,87,0),(187,136,0)],
-        "GAMEBOY_ORIGINAL":    [(0,35,0),(69,112,14)],
-        "GAMEBOY_POCKET":    [(0, 0,  0),(85,85,85)],
-        "C64":      [(0,0,0),(124,124,124),(0,0,252),(148,0,132)],
-        "ZX_SPECTRUM":    [(0,0,0),(0,40,248),(255,36,20),(255,255,255)],
-        "APPLE_II_HI":    [(0,0,0),(255,0,0),(0,255,0),(255,255,255),(0,175,255)],
-        "TELETEXT":    [(0,0,0),(255,0,0),(255,255,0),(0,255,0)],
-        "GAMEBOY_VIRTUALBOY":[(200,0,0),(164,0,0),(85,0,0),(0,0,0)],
-        "APPLE_II_LO":    [(0,0,0),(234,93,240),(0,104,82),(0,145,80)],
-        "PICO_8":    [(0,0,0),(29,43,83),(126,37,83),(171,82,54)],
-    }
-    return _SYNTH.get(name, [(128,0,128),(0,128,0),(0,0,255),(255,0,0)])
+    """Return SYNTH RGBs for palette NAME.
+
+    Delegate to _HWPALETTES (PALETTES skill).  C64 as universal last-resort.
+    zone-palettes.json is indexed by zone, not palette name, so it lives in
+    _ZONE_SYNTHS and is consumed by _pixel_color() directly.
+    """
+    if _HWPALETTES:
+        return _HWPALETTES.get(name, _HWPALETTES.get("C64", _FALLBACK_COLOR))
+    return _FALLBACK_COLOR
 
 # ─── HELPERS ────────────────────────────────────────────────
 

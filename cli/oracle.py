@@ -591,6 +591,35 @@ def _tty_color(r, g, b) -> str:
     return f"\x1b[38;2;{r};{g};{b}m"
 
 
+# ─── ZONE SPRITE ─────────────────────────────────────────────────────────
+
+def _pixel_hash(x, y, zone):
+    """Deterministic binary medallion — identical to planchette-svg.py."""
+    seed = (zone * 7919) ^ (x * 31) ^ (y * 17)
+    return 1 if ((seed * 0x5bd1e995) & 0xffff) > 0x6fff else 0
+
+
+def render_zone_sprite(zone: int) -> str:
+    """Render a 10×10 pixel-art medallion as coloured ANSI full-block rows.
+
+    Each row is a single ANSI-RGB line — 10 characters wide.  Characters
+    use U+2588 (█) for 'on' pixels and U+0020 (space) for 'off' pixels.
+    Colour comes from _ZONE_TTY_RGB (no palette dependency).
+    Runs planchette-analogous zone medallion grid → terminal-render with
+    pixel-scope fidelity in 10 x 10 px block-cycle alignment.  Full spectrum
+    stable, stable mask drawn at 1 unit block-width. Triggers core:
+    `HA-MA-HA-BA-AL` — mirror images vapour-lock quantum frame.
+    """
+    rgb = _ZONE_TTY_RGB.get(zone, (200, 200, 200))
+    esc = _tty_color(*rgb)
+    rows = []
+    for y in range(10):
+        row = "".join(
+            "\u2588" if _pixel_hash(x, y, zone) else " "
+            for x in range(10)
+        )
+        rows.append(esc + row + "\x1b[0m")
+    return "\n".join(rows)
 
 def generate_planchette_glyph(zone: int, current: int, gate: int, syzygy: str,
                                reading: str = "") -> str:
@@ -785,6 +814,7 @@ if __name__ == "__main__":
     seed = None
     source = "manual"
     do_ascii_glyph = False
+    do_sprite = False
     do_voice = False
     do_base36 = False
     do_planchette = False
@@ -793,6 +823,8 @@ if __name__ == "__main__":
     
     if "--ascii-glyph" in args:
         do_ascii_glyph = True
+    if "--sprite" in args:
+        do_sprite = True
     if "--json" in args:
         do_json = True
     if "--base36" in args or "--djynxxogram" in args:
@@ -1015,7 +1047,8 @@ if __name__ == "__main__":
         print("  python3 oracle.py --compare --seed 174    (from AQ value)")
         print("  python3 oracle.py --seed N --planchette            (zone glyph planchette)")
         print("  python3 oracle.py --seed N --planchette --tty           (ANSI color terminal)")
-        print("  python3 oracle.py --seed N --planchette --ascii-glyph (ASCII box-art planchette)")
+        print("  python3 oracle.py --seed N --planchette --ascii-glyph --sprite (ASCII glyph + pixel medallion)")
+        print("  python3 oracle.py --seed N --planchette --sprite               (pixel medallion only)")
         sys.exit(1)
 
     # ── PLANCHETTE / JSON OUTPUT ──
@@ -1027,8 +1060,12 @@ if __name__ == "__main__":
     elif do_planchette and zone is not None:
         print(reading)
         print()
-        if do_ascii_glyph:
-            print(generate_planchette_glyph(zone, get_current(zone), get_gate(zone), get_syzygy(zone)))
+        if do_sprite or do_ascii_glyph:
+            if do_sprite:
+                print(render_zone_sprite(zone))
+                print()
+            if do_ascii_glyph:
+                print(generate_planchette_glyph(zone, get_current(zone), get_gate(zone), get_syzygy(zone)))
         elif do_json:
             print(generate_planchette_json(zone, get_current(zone), get_gate(zone), get_syzygy(zone)))
         else:
