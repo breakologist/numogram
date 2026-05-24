@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Numogram Zone Walker</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+<style>
+body { margin:0; background:#111; overflow:hidden; }
+canvas { display:block; }
+#info {
+  position:absolute; bottom:10px; left:10px;
+  font:12px/1.5 monospace; color:rgba(255,255,255,.75);
+  pointer-events:none; white-space:pre;
+}
+</style>
+</head>
+<body>
+<div id="info"></div>
+<script>
+// ── zone data ──────────────────────────────────────────────────────────────
+const ZONE_COLORS  = JSON.parse('{"0": [[122, 87, 0], [187, 136, 0]], "1": [[15, 56, 15], [155, 188, 15]], "2": [[0, 0, 0], [85, 85, 85]], "3": [[0, 0, 0], [124, 124, 124], [0, 0, 252], [148, 0, 132]], "4": [[0, 0, 0], [0, 40, 248], [255, 36, 20], [255, 255, 255]], "5": [[0, 0, 0], [255, 0, 0], [0, 255, 0], [255, 255, 255], [0, 175, 255]], "6": [[0, 0, 0], [255, 0, 0], [255, 255, 0], [0, 255, 0]], "7": [[255, 0, 0], [164, 0, 0], [85, 0, 0], [0, 0, 0]], "8": [[0, 0, 0], [234, 93, 240], [0, 104, 82], [0, 145, 80]], "9": [[0, 0, 0], [29, 43, 83], [126, 37, 83], [171, 82, 54]]}');
+const ZONE_NAMES   = ["VOID","FIRST","DOUBLING","ACCELERANDO",
+                      "DECELERANDO","ATTENTION","ABJECTIVE","PUNCTURE","BLOOD","PLEX"];
+const ZONE_FRAMES  = 90;    // 1.5 s per zone  (@60fps)
+const FADE_FRAMES  = 18;    // 0.3 s transition
+
+// ── helpers ────────────────────────────────────────────────────────────────
+function zRgb(z, i) {
+  const c = ZONE_COLORS[z];
+  i = Math.min(Math.max(i, 0), c.length-1);
+  return c[i];}
+function hex(z, i) {
+  const c = zRgb(z, i);
+  return ['#'
+    + ('0'+c[0]).slice(-2)
+    + ('0'+c[1]).slice(-2)
+    + ('0'+c[2]).slice(-2)][0];}
+function fadeHex(a, b, t) {
+  const ai = parseInt(a.slice(1),16);
+  const bi = parseInt(b.slice(1),16);
+  const ar=(ai>>16)&0xff, ag=(ai>>8)&0xff, ab=ai&0xff;
+  const br=(bi>>16)&0xff, bg=(bi>>8)&0xff, bb=bi&0xff;
+  const r=Math.round(ar+(br-ar)*t);
+  const g=Math.round(ag+(bg-ag)*t);
+  const bl=Math.round(ab+(bb-ab)*t);
+  return '#'+('0'+r).slice(-2)+('0'+g).slice(-2)+('0'+bl).slice(-2);}
+
+// ── p5 ─────────────────────────────────────────────────────────────────────
+function setup() {
+  const w = min(window.innerWidth, 900);
+  const h = min(window.innerHeight, 520);
+  createCanvas(w, h).parent(document.body);
+  textFont('monospace');
+  frameRate(60);
+  noStroke();
+}
+function draw() {
+  background(18);
+  const total   = ZONE_FRAMES + FADE_FRAMES;
+  const tick    = frameCount % (ZONE_NAMES.length * total);
+  const current = Math.floor(tick / total);
+  const step    = tick % total;
+  const next    = (current + 1) % ZONE_NAMES.length;
+  const bgColor  = hex(current, 1);
+  const nextClr  = hex(next,    1);
+  const t        = step < FADE_FRAMES ? step / FADE_FRAMES : 0;
+  const mixColor = fadeHex(bgColor, nextClr, t);
+  // background rect
+  fill(mixColor);
+  rect(0, 0, width, height);
+  // dark veil
+  fill(0,0,0, 58);
+  rect(0,0,width,height);
+  // zone number
+  const fs = min(width*.38, height*.5);
+  textAlign(CENTER, CENTER);
+  fill(255,255,255,40);
+  textSize(fs);
+  text('Z'+current, width*.55, height*.45);
+  // zone name
+  textSize(28);
+  fill(255,255,255,90);
+  text(ZONE_NAMES[current], width*.55, height*.45 + fs*.52);
+  // info panel (top-left)
+  textAlign(LEFT,TOP);
+  textSize(13);
+  fill(255,255,255,130);
+  const lx=24, sy=20;
+  text('Zone: '+current+' / '+(ZONE_NAMES.length-1), lx, sy);
+  text('Name: '+ZONE_NAMES[current], lx, sy+20);
+  const pct=(step/total*100).toFixed(1);
+  text('Frame: '+step+' / '+total+' ('+pct+'%)', lx, sy+40);
+  text('Next:  Z'+next+' '+ZONE_NAMES[next], lx, sy+60);
+  // SYNTH swatches
+  const sw=14, gap=4, swX=lx, swY=sy+84;
+  const synth = ZONE_COLORS[current];
+  for(let i=0; i<Math.min(3,synth.length); i++){
+    const c=synth[i];
+    fill(c[0],c[1],c[2]);
+    rect(swX+i*(sw+gap), swY, sw, sw);
+  }
+  // bottom info strip
+  const info = document.getElementById('info');
+  if(info) info.textContent =
+    'Z'+current+' '+ZONE_NAMES[current]+
+    '   SYNTH['+synth.length+']  '+
+    'tick='+tick+' step='+step+' next=Z'+next;
+}
+function windowResized() { resizeCanvas(window.innerWidth, window.innerHeight); }
+</script>
+</body>
+</html>
