@@ -19,6 +19,7 @@ Usage:
   python3 oracle.py --iching --seed 192855  (I Ching from a specific seed)
   python3 oracle.py --seed N --planchette            (zone ASCII planchette)
   python3 oracle.py --seed N --planchette --ascii-glyph (box-art ASCII planchette + glyph channel)
+  python3 oracle.py --seed N --planchette --json     (machine-readable JSON for pipes)
   python3 oracle.py --text "NUMOGRAM" --compare (cross-base 2/10/16/22/26/36)
 """
 
@@ -697,6 +698,42 @@ def generate_planchette(zone: int) -> str:
     return "\n".join(lines)
 
 
+def generate_planchette_json(zone: int, current: int, gate: int, syzygy: int) -> str:
+    """Machine-readable JSON for planchette pipelines (planchette-svg.py --stdin etc.).
+    
+    gate_raw  = triangular sum(sum(1..zone)) before plex reduction
+    gate_loops = number of while-iterations needed to reduce gate_raw to single digit
+                 (0 = direct, 1 = single-plex, 2+ = multi-loop, only Z7 is 2)
+    """
+    z = ZONES.get(zone, {"name": "???", "particle": "???", "region": "???", "reading": "???"})
+
+    gate_raw   = sum(range(zone + 1)) if zone != 0 else 0
+    gate_hist  = []
+    g          = gate_raw
+    while g >= 10:
+        g = sum(int(d) for d in str(g))
+        gate_hist.append(g)
+    gate_loops = len(gate_hist)
+
+    d = {
+        "zone":         zone,
+        "name":         z["name"],
+        "region":       z.get("region", "???"),
+        "particle":     z.get("particle", z["name"]),
+        "polarity":     z.get("polarity", "?"),
+        "current":      current,
+        "gate":         gate,
+        "gate_raw":     gate_raw,
+        "gate_loops":   gate_loops,
+        "gate_history": gate_hist,
+        "syzygy":       f"{zone}::{syzygy}",
+        "reading":      z.get("reading", ""),
+    }
+    return json.dumps(d, separators=(",", ":"))
+
+
+
+
 
 def generate_voice(zone):
     """Generate oracle voice audio for a zone"""
@@ -730,11 +767,12 @@ if __name__ == "__main__":
     do_voice = False
     do_base36 = False
     do_planchette = False
-
-    if "--voice" in args:
-        do_voice = True
+    do_json = False
+    
     if "--ascii-glyph" in args:
         do_ascii_glyph = True
+    if "--json" in args:
+        do_json = True
     if "--base36" in args or "--djynxxogram" in args:
         do_base36 = True
     if "--planchette" in args:
@@ -751,7 +789,10 @@ if __name__ == "__main__":
                 steps = compute_base36_traversal(text)
                 dec_zone = digital_root(sum(s['aq'] for s in steps)) or 9
                 print()
-                print(generate_planchette(dec_zone))
+                if do_json:
+                    print(generate_planchette_json(dec_zone, get_current(dec_zone), get_gate(dec_zone), get_syzygy(dec_zone)))
+                else:
+                    print(generate_planchette(dec_zone))
             print()
             sys.exit(0)
         elif "--seed" in args:
@@ -952,16 +993,24 @@ if __name__ == "__main__":
         print("  python3 oracle.py --seed N --planchette --ascii-glyph (ASCII box-art planchette)")
         sys.exit(1)
 
-    # Generate reading
-    reading, zone = generate_reading(seed, source)
-    print(reading)
+    # ── PLANCHETTE / JSON OUTPUT ──
+    if do_planchette or do_json:
+        reading, zone = generate_reading(seed, source)
 
-    if do_planchette and zone is not None:
+    if do_planchette and do_json and zone is not None:
+        print(generate_planchette_json(zone, get_current(zone), get_gate(zone), get_syzygy(zone)))
+    elif do_planchette and zone is not None:
+        print(reading)
+        print()
         if do_ascii_glyph:
             print(generate_planchette_glyph(zone, get_current(zone), get_gate(zone), get_syzygy(zone)))
+        elif do_json:
+            print(generate_planchette_json(zone, get_current(zone), get_gate(zone), get_syzygy(zone)))
         else:
             print(generate_planchette(zone))
         print()
+
+
 
 
     # Generate voice if requested
