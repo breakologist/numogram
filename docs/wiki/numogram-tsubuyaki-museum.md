@@ -794,3 +794,11 @@ The fourth pass is the most compressed overall (1,746 chars), yet contains the w
 
 - [[tsubuyaki-oo-gallery]] — OO tsubuyaki gallery
 - [[zone-mapping]] — Zone mapping system
+
+## v6 — Pixel Medallion Gallery (2026-05-24)
+
+`numogram-tsubuyaki-v6.html` adds a **36‑px pixel‑art medallion signature** to each card header, rendered inline as base64 PNG. Each medallion uses the zone’s hardware‑accurate palette from the `pixel-art` skill (ZONE\_HW\_PALETTE mapping, same table in `planchette-svg.py`). The grid is deterministic: `colors[(x*(z+1)+y*(z+2)) % n]` for zone `z`, pixel `(x,y)`.
+
+Result: the gallery visually browses as a numogram in hardware palette — Virtual Boy reds on Z7, C64 full spectrum on Z3, PICO‑8 fantasy on Z9, mono amber void on Z0.
+
+File: `assets/numogram-tsubuyaki-v6.html`
