@@ -14,8 +14,10 @@ A monorepo for the Decimal Labyrinth: the CCRU numogram as code, game, oracle, a
 | `mod_writer/` | ProTracker `.mod` composer with numogram-native motifs, classifier, VAE pipeline |
 | `docs/wiki/` | Knowledge base — wiki pages, demon database, source texts, visual assets |
 | `scripts/` | Text recombination pipeline: xeno-jump, cut-up, seed-transforms, oracle-seed + enriched AQ corpus (89K entries) |
+| `scripts/demon-cards.py` | \*\*New\*\* — 45 Pandemonium demon tarot-card SVG generator with \`--carrier\`/\`--zone\`/\`--demo\` filters; cards embed zone glyphs, current-arc, AQΣ, gate formula, and decay strip |
+| `scripts/syzygy-card.py` | \*\*New\*\* — 5 carrier syzygy-pair tarot-card SVG generator; produces equilateral-trajectory cards for all 5 zone-pairs (0::9, 1::8, 2::7, 3::6, 4::5) |
 
-### Oracle 
+### Oracle
 
 Seed → zone → syzygy → voice. Hardware entropy or manual seed.
 
