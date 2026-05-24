@@ -1,0 +1,122 @@
+{
+  "corpus": "zone-seed",
+  "timestamp": "2026-05-14T16:33",
+  "replication_of": "multiple prior sessions",
+  "summary": {
+    "total": 9,
+    "correct": 7,
+    "per_zone": {
+      "1": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "2": {
+        "correct": 0,
+        "total": 1,
+        "accuracy": 0.0
+      },
+      "3": {
+        "correct": 0,
+        "total": 1,
+        "accuracy": 0.0
+      },
+      "4": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "5": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "6": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "7": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "8": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "9": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      }
+    },
+    "accuracy": 0.7777777777777778
+  },
+  "details": [
+    {
+      "file": "zone_1_seed.wav",
+      "zone_true": 1,
+      "zone_pred": 1,
+      "confidence": 0.9999808073043823,
+      "correct": true
+    },
+    {
+      "file": "zone_2_seed.wav",
+      "zone_true": 2,
+      "zone_pred": 1,
+      "confidence": 0.9854217767715454,
+      "correct": false
+    },
+    {
+      "file": "zone_3_seed.wav",
+      "zone_true": 3,
+      "zone_pred": 4,
+      "confidence": 0.8812589645385742,
+      "correct": false
+    },
+    {
+      "file": "zone_4_seed.wav",
+      "zone_true": 4,
+      "zone_pred": 4,
+      "confidence": 0.7491170167922974,
+      "correct": true
+    },
+    {
+      "file": "zone_5_seed.wav",
+      "zone_true": 5,
+      "zone_pred": 5,
+      "confidence": 0.7921838760375977,
+      "correct": true
+    },
+    {
+      "file": "zone_6_seed.wav",
+      "zone_true": 6,
+      "zone_pred": 6,
+      "confidence": 0.9991458654403687,
+      "correct": true
+    },
+    {
+      "file": "zone_7_seed.wav",
+      "zone_true": 7,
+      "zone_pred": 7,
+      "confidence": 0.9995044469833374,
+      "correct": true
+    },
+    {
+      "file": "zone_8_seed.wav",
+      "zone_true": 8,
+      "zone_pred": 8,
+      "confidence": 0.9996521472930908,
+      "correct": true
+    },
+    {
+      "file": "zone_9_seed.wav",
+      "zone_true": 9,
+      "zone_pred": 9,
+      "confidence": 0.9968723654747009,
+      "correct": true
+    }
+  ]
+}

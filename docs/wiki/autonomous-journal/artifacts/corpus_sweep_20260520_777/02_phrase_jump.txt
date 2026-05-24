@@ -1,0 +1,550 @@
+PHRASE JUMP — One-Word Mutation (2026-05-20 23:36)
+════════════════════════════════════════════════════════════════════════
+Exactly one word jumps per generation. AQ checksum intact, vocabulary drifts.
+Corpus: oracle | Mode: first-match | Seed 777
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=708, Z6): The cryptolith opens the decimator gate
+────────────────────────────────────────────────────────────────────────
+  [  0]   The cryptolith opens the decimator gate
+  [  1] The → Fol  —  Fol cryptolith opens the decimator gate
+  [  2] Fol → Ibid  —  Ibid cryptolith opens the decimator gate
+  [  3] Ibid → Adar  —  Adar cryptolith opens the decimator gate
+  [  4] Adar → Kau  —  Kau cryptolith opens the decimator gate
+  [  5] Kau → Flea  —  Flea cryptolith opens the decimator gate
+  [  6] Flea → Pdm  —  Pdm cryptolith opens the decimator gate
+  [  7] Pdm → Cui  —  Cui cryptolith opens the decimator gate
+  [  8] Cui → Grh  —  Grh cryptolith opens the decimator gate
+  [  9] Grh → Ewe  —  Ewe cryptolith opens the decimator gate
+  [ 10] Ewe → Ams  —  Ams cryptolith opens the decimator gate
+  [ 11] Ams → Enn  —  Enn cryptolith opens the decimator gate
+  [ 12] Enn → Ill  —  Ill cryptolith opens the decimator gate
+  [ 13] Ill → Sw  —  Sw cryptolith opens the decimator gate
+  [ 14] Sw → Grh  —  Grh cryptolith opens the decimator gate
+  [ 15] Grh → Fol  —  Fol cryptolith opens the decimator gate
+  [ 16] Fol → Glad  —  Glad cryptolith opens the decimator gate
+  [ 17] Glad → Ise  —  Ise cryptolith opens the decimator gate
+  [ 18] Ise → Vaj  —  Vaj cryptolith opens the decimator gate
+  [ 19] Vaj → The  —  The cryptolith opens the decimator gate
+  [ 20] The → Jct  —  Jct cryptolith opens the decimator gate
+  [ 21] Jct → Ieee  —  Ieee cryptolith opens the decimator gate
+  [ 22] Ieee → Hud  —  Hud cryptolith opens the decimator gate
+  [ 23] Hud → Flea  —  Flea cryptolith opens the decimator gate
+  [ 24] Flea → Ies  —  Ies cryptolith opens the decimator gate
+  [ 25] Ies → Bobe  —  Bobe cryptolith opens the decimator gate
+  [ 26] Bobe → Ill  —  Ill cryptolith opens the decimator gate
+  [ 27] Ill → Tal  —  Tal cryptolith opens the decimator gate
+  [ 28] Tal → Fale  —  Fale cryptolith opens the decimator gate
+  [ 29] Fale → Rna  —  Rna cryptolith opens the decimator gate
+  [ 30] Rna → Crab  —  Crab cryptolith opens the decimator gate
+  [ 31] Crab → Don  —  Don cryptolith opens the decimator gate
+  [ 32] Don → Cui  —  Cui cryptolith opens the decimator gate
+  [ 33] Cui → Dean  —  Dean cryptolith opens the decimator gate
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1018, Z1): hyperstition flows through the triangular syzygy
+────────────────────────────────────────────────────────────────────────
+  [  0]   hyperstition flows through the triangular syzygy
+  [  1] hyperstition → inadvertently  —  inadvertently flows through the triangular syzygy
+  [  2] inadvertently → unfrequently  —  unfrequently flows through the triangular syzygy
+  [  3] unfrequently → accusativecases  —  accusativecases flows through the triangular syzygy
+  [  4] accusativecases → ofvivification  —  ofvivification flows through the triangular syzygy
+  [  5] ofvivification → functionality  —  functionality flows through the triangular syzygy
+  [  6] functionality → redistributes  —  redistributes flows through the triangular syzygy
+  [  7] redistributes → computronium  —  computronium flows through the triangular syzygy
+  [  8] computronium → wasinwrought  —  wasinwrought flows through the triangular syzygy
+  [  9] wasinwrought → everlastingly  —  everlastingly flows through the triangular syzygy
+  [ 10] everlastingly → alphaprivative  —  alphaprivative flows through the triangular syzygy
+  [ 11] alphaprivative → everlastingly  —  everlastingly flows through the triangular syzygy
+  [ 12] everlastingly → monstrosity  —  monstrosity flows through the triangular syzygy
+  [ 13] monstrosity → thesuggestion  —  thesuggestion flows through the triangular syzygy
+  [ 14] thesuggestion → informatively  —  informatively flows through the triangular syzygy
+  [ 15] informatively → hyperstition  —  hyperstition flows through the triangular syzygy
+  [ 16] hyperstition → informatively  —  informatively flows through the triangular syzygy
+  [ 17] informatively → monstrosity  —  monstrosity flows through the triangular syzygy
+  [ 18] monstrosity → transitioning  —  transitioning flows through the triangular syzygy
+  [ 19] transitioning → todemonstrate  —  todemonstrate flows through the triangular syzygy
+  [ 20] todemonstrate → monstrosity  —  monstrosity flows through the triangular syzygy
+  [ 21] monstrosity → labyrinththeme  —  labyrinththeme flows through the triangular syzygy
+  [ 22] labyrinththeme → intercalations  —  intercalations flows through the triangular syzygy
+  [ 23] intercalations → functionality  —  functionality flows through the triangular syzygy
+  [ 24] functionality → lexicographers  —  lexicographers flows through the triangular syzygy
+  [ 25] lexicographers → centralisation  —  centralisation flows through the triangular syzygy
+  [ 26] centralisation → monstrosity  —  monstrosity flows through the triangular syzygy
+  [ 27] monstrosity → todemonstrate  —  todemonstrate flows through the triangular syzygy
+  [ 28] todemonstrate → firstcentury  —  firstcentury flows through the triangular syzygy
+  [ 29] firstcentury → soteriological  —  soteriological flows through the triangular syzygy
+  [ 30] soteriological → claustrophobia  —  claustrophobia flows through the triangular syzygy
+  [ 31] claustrophobia → distractedness  —  distractedness flows through the triangular syzygy
+  [ 32] distractedness → computronium  —  computronium flows through the triangular syzygy
+  [ 33] computronium → comutativity  —  comutativity flows through the triangular syzygy
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=465, Z6): Katak and Oddubb coil the plex
+────────────────────────────────────────────────────────────────────────
+  [  0]   Katak and Oddubb coil the plex
+  [  1] Katak → Healed  —  Healed and Oddubb coil the plex
+  [  2] Healed → Katak  —  Katak and Oddubb coil the plex
+  [  3] Katak → Airy  —  Airy and Oddubb coil the plex
+  [  4] Airy → Nated  —  Nated and Oddubb coil the plex
+  [  5] Nated → Glum  —  Glum and Oddubb coil the plex
+  [  6] Glum → Site  —  Site and Oddubb coil the plex
+  [  7] Site → Cops  —  Cops and Oddubb coil the plex
+  [  8] Cops → Inks  —  Inks and Oddubb coil the plex
+  [  9] Inks → Fetid  —  Fetid and Oddubb coil the plex
+  [ 10] Fetid → Badly  —  Badly and Oddubb coil the plex
+  [ 11] Badly → Elder  —  Elder and Oddubb coil the plex
+  [ 12] Elder → Logs  —  Logs and Oddubb coil the plex
+  [ 13] Logs → Yrs  —  Yrs and Oddubb coil the plex
+  [ 14] Yrs → Iqri  —  Iqri and Oddubb coil the plex
+  [ 15] Iqri → Hays  —  Hays and Oddubb coil the plex
+  [ 16] Hays → Hyas  —  Hyas and Oddubb coil the plex
+  [ 17] Hyas → Look  —  Look and Oddubb coil the plex
+  [ 18] Look → Elder  —  Elder and Oddubb coil the plex
+  [ 19] Elder → Fetid  —  Fetid and Oddubb coil the plex
+  [ 20] Fetid → Menu  —  Menu and Oddubb coil the plex
+  [ 21] Menu → Latch  —  Latch and Oddubb coil the plex
+  [ 22] Latch → Karma  —  Karma and Oddubb coil the plex
+  [ 23] Karma → Goop  —  Goop and Oddubb coil the plex
+  [ 24] Goop → Lilt  —  Lilt and Oddubb coil the plex
+  [ 25] Lilt → Cargo  —  Cargo and Oddubb coil the plex
+  [ 26] Cargo → Loft  —  Loft and Oddubb coil the plex
+  [ 27] Loft → Zags  —  Zags and Oddubb coil the plex
+  [ 28] Zags → Gales  —  Gales and Oddubb coil the plex
+  [ 29] Gales → Ties  —  Ties and Oddubb coil the plex
+  [ 30] Ties → Clock  —  Clock and Oddubb coil the plex
+  [ 31] Clock → Disci  —  Disci and Oddubb coil the plex
+  [ 32] Disci → Coun  —  Coun and Oddubb coil the plex
+  [ 33] Coun → Decima  —  Decima and Oddubb coil the plex
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=712, Z1): teleoplexy accelerates the void circuit
+────────────────────────────────────────────────────────────────────────
+  [  0]   teleoplexy accelerates the void circuit
+  [  1] teleoplexy → groupthink  —  groupthink accelerates the void circuit
+  [  2] groupthink → ungenerous  —  ungenerous accelerates the void circuit
+  [  3] ungenerous → abnormality  —  abnormality accelerates the void circuit
+  [  4] abnormality → optionally  —  optionally accelerates the void circuit
+  [  5] optionally → generational  —  generational accelerates the void circuit
+  [  6] generational → reputation  —  reputation accelerates the void circuit
+  [  7] reputation → curriculum  —  curriculum accelerates the void circuit
+  [  8] curriculum → unigenitus  —  unigenitus accelerates the void circuit
+  [  9] unigenitus → eschatology  —  eschatology accelerates the void circuit
+  [ 10] eschatology → battlemented  —  battlemented accelerates the void circuit
+  [ 11] battlemented → effectivity  —  effectivity accelerates the void circuit
+  [ 12] effectivity → minuteness  —  minuteness accelerates the void circuit
+  [ 13] minuteness → tantamount  —  tantamount accelerates the void circuit
+  [ 14] tantamount → impurities  —  impurities accelerates the void circuit
+  [ 15] impurities → grandfathers  —  grandfathers accelerates the void circuit
+  [ 16] grandfathers → impracticable  —  impracticable accelerates the void circuit
+  [ 17] impracticable → misconceived  —  misconceived accelerates the void circuit
+  [ 18] misconceived → transducing  —  transducing accelerates the void circuit
+  [ 19] transducing → theempyrean  —  theempyrean accelerates the void circuit
+  [ 20] theempyrean → mystically  —  mystically accelerates the void circuit
+  [ 21] mystically → meaningnight  —  meaningnight accelerates the void circuit
+  [ 22] meaningnight → integrative  —  integrative accelerates the void circuit
+  [ 23] integrative → geneticists  —  geneticists accelerates the void circuit
+  [ 24] geneticists → meritocracy  —  meritocracy accelerates the void circuit
+  [ 25] meritocracy → correlation  —  correlation accelerates the void circuit
+  [ 26] correlation → metaphorical  —  metaphorical accelerates the void circuit
+  [ 27] metaphorical → temperament  —  temperament accelerates the void circuit
+  [ 28] temperament → extravagance  —  extravagance accelerates the void circuit
+  [ 29] extravagance → skillfully  —  skillfully accelerates the void circuit
+  [ 30] skillfully → culpability  —  culpability accelerates the void circuit
+  [ 31] culpability → devastation  —  devastation accelerates the void circuit
+  [ 32] devastation → declarations  —  declarations accelerates the void circuit
+  [ 33] declarations → descriptive  —  descriptive accelerates the void circuit
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=925, Z7): the demon uttunul whispers from the djynxxagram
+────────────────────────────────────────────────────────────────────────
+  [  0]   the demon uttunul whispers from the djynxxagram
+  [  1] the → fol  —  fol demon uttunul whispers from the djynxxagram
+  [  2] fol → ibid  —  ibid demon uttunul whispers from the djynxxagram
+  [  3] ibid → adar  —  adar demon uttunul whispers from the djynxxagram
+  [  4] adar → kau  —  kau demon uttunul whispers from the djynxxagram
+  [  5] kau → flea  —  flea demon uttunul whispers from the djynxxagram
+  [  6] flea → pdm  —  pdm demon uttunul whispers from the djynxxagram
+  [  7] pdm → cui  —  cui demon uttunul whispers from the djynxxagram
+  [  8] cui → grh  —  grh demon uttunul whispers from the djynxxagram
+  [  9] grh → ewe  —  ewe demon uttunul whispers from the djynxxagram
+  [ 10] ewe → ams  —  ams demon uttunul whispers from the djynxxagram
+  [ 11] ams → enn  —  enn demon uttunul whispers from the djynxxagram
+  [ 12] enn → ill  —  ill demon uttunul whispers from the djynxxagram
+  [ 13] ill → sw  —  sw demon uttunul whispers from the djynxxagram
+  [ 14] sw → grh  —  grh demon uttunul whispers from the djynxxagram
+  [ 15] grh → fol  —  fol demon uttunul whispers from the djynxxagram
+  [ 16] fol → glad  —  glad demon uttunul whispers from the djynxxagram
+  [ 17] glad → ise  —  ise demon uttunul whispers from the djynxxagram
+  [ 18] ise → vaj  —  vaj demon uttunul whispers from the djynxxagram
+  [ 19] vaj → the  —  the demon uttunul whispers from the djynxxagram
+  [ 20] the → jct  —  jct demon uttunul whispers from the djynxxagram
+  [ 21] jct → ieee  —  ieee demon uttunul whispers from the djynxxagram
+  [ 22] ieee → hud  —  hud demon uttunul whispers from the djynxxagram
+  [ 23] hud → flea  —  flea demon uttunul whispers from the djynxxagram
+  [ 24] flea → ies  —  ies demon uttunul whispers from the djynxxagram
+  [ 25] ies → bobe  —  bobe demon uttunul whispers from the djynxxagram
+  [ 26] bobe → ill  —  ill demon uttunul whispers from the djynxxagram
+  [ 27] ill → tal  —  tal demon uttunul whispers from the djynxxagram
+  [ 28] tal → fale  —  fale demon uttunul whispers from the djynxxagram
+  [ 29] fale → rna  —  rna demon uttunul whispers from the djynxxagram
+  [ 30] rna → crab  —  crab demon uttunul whispers from the djynxxagram
+  [ 31] crab → don  —  don demon uttunul whispers from the djynxxagram
+  [ 32] don → cui  —  cui demon uttunul whispers from the djynxxagram
+  [ 33] cui → dean  —  dean demon uttunul whispers from the djynxxagram
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=820, Z1): paramita conducts dissolve the qliphoth veil
+────────────────────────────────────────────────────────────────────────
+  [  0]   paramita conducts dissolve the qliphoth veil
+  [  1] paramita → hormone  —  hormone conducts dissolve the qliphoth veil
+  [  2] hormone → lindsey  —  lindsey conducts dissolve the qliphoth veil
+  [  3] lindsey → aberrant  —  aberrant conducts dissolve the qliphoth veil
+  [  4] aberrant → paramita  —  paramita conducts dissolve the qliphoth veil
+  [  5] paramita → haveseen  —  haveseen conducts dissolve the qliphoth veil
+  [  6] haveseen → storax  —  storax conducts dissolve the qliphoth veil
+  [  7] storax → crashing  —  crashing conducts dissolve the qliphoth veil
+  [  8] crashing → interim  —  interim conducts dissolve the qliphoth veil
+  [  9] interim → flatline  —  flatline conducts dissolve the qliphoth veil
+  [ 10] flatline → avenging  —  avenging conducts dissolve the qliphoth veil
+  [ 11] avenging → exiting  —  exiting conducts dissolve the qliphoth veil
+  [ 12] exiting → modeling  —  modeling conducts dissolve the qliphoth veil
+  [ 13] modeling → vomited  —  vomited conducts dissolve the qliphoth veil
+  [ 14] vomited → isdrawn  —  isdrawn conducts dissolve the qliphoth veil
+  [ 15] isdrawn → hooting  —  hooting conducts dissolve the qliphoth veil
+  [ 16] hooting → inseven  —  inseven conducts dissolve the qliphoth veil
+  [ 17] inseven → navigate  —  navigate conducts dissolve the qliphoth veil
+  [ 18] navigate → exposed  —  exposed conducts dissolve the qliphoth veil
+  [ 19] exposed → filtered  —  filtered conducts dissolve the qliphoth veil
+  [ 20] filtered → occasion  —  occasion conducts dissolve the qliphoth veil
+  [ 21] occasion → messier  —  messier conducts dissolve the qliphoth veil
+  [ 22] messier → lifetime  —  lifetime conducts dissolve the qliphoth veil
+  [ 23] lifetime → hectares  —  hectares conducts dissolve the qliphoth veil
+  [ 24] hectares → messier  —  messier conducts dissolve the qliphoth veil
+  [ 25] messier → civilian  —  civilian conducts dissolve the qliphoth veil
+  [ 26] civilian → mithras  —  mithras conducts dissolve the qliphoth veil
+  [ 27] mithras → warping  —  warping conducts dissolve the qliphoth veil
+  [ 28] warping → glauron  —  glauron conducts dissolve the qliphoth veil
+  [ 29] glauron → thieves  —  thieves conducts dissolve the qliphoth veil
+  [ 30] thieves → condense  —  condense conducts dissolve the qliphoth veil
+  [ 31] condense → detachable  —  detachable conducts dissolve the qliphoth veil
+  [ 32] detachable → criminal  —  criminal conducts dissolve the qliphoth veil
+  [ 33] criminal → dedicates  —  dedicates conducts dissolve the qliphoth veil
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=760, Z4): numogrammic recursion spirals zone nine
+────────────────────────────────────────────────────────────────────────
+  [  0]   numogrammic recursion spirals zone nine
+  [  1] numogrammic → impediments  —  impediments recursion spirals zone nine
+  [  2] impediments → mortifying  —  mortifying recursion spirals zone nine
+  [  3] mortifying → abbreviation  —  abbreviation recursion spirals zone nine
+  [  4] abbreviation → permissible  —  permissible recursion spirals zone nine
+  [  5] permissible → highlighting  —  highlighting recursion spirals zone nine
+  [  6] highlighting → structure  —  structure recursion spirals zone nine
+  [  7] structure → darwinists  —  darwinists recursion spirals zone nine
+  [  8] darwinists → lightenment  —  lightenment recursion spirals zone nine
+  [  9] lightenment → fraternity  —  fraternity recursion spirals zone nine
+  [ 10] fraternity → archeological  —  archeological recursion spirals zone nine
+  [ 11] archeological → extinguish  —  extinguish recursion spirals zone nine
+  [ 12] extinguish → newcreation  —  newcreation recursion spirals zone nine
+  [ 13] newcreation → unspeakably  —  unspeakably recursion spirals zone nine
+  [ 14] unspeakably → magnanimous  —  magnanimous recursion spirals zone nine
+  [ 15] magnanimous → iconographic  —  iconographic recursion spirals zone nine
+  [ 16] iconographic → intelligent  —  intelligent recursion spirals zone nine
+  [ 17] intelligent → newspapers  —  newspapers recursion spirals zone nine
+  [ 18] newspapers → extinguish  —  extinguish recursion spirals zone nine
+  [ 19] extinguish → fraternity  —  fraternity recursion spirals zone nine
+  [ 20] fraternity → palaeological  —  palaeological recursion spirals zone nine
+  [ 21] palaeological → necromanteia  —  necromanteia recursion spirals zone nine
+  [ 22] necromanteia → modification  —  modification recursion spirals zone nine
+  [ 23] modification → hopelessly  —  hopelessly recursion spirals zone nine
+  [ 24] hopelessly → neolemurian  —  neolemurian recursion spirals zone nine
+  [ 25] neolemurian → connecticut  —  connecticut recursion spirals zone nine
+  [ 26] connecticut → neuromancer  —  neuromancer recursion spirals zone nine
+  [ 27] neuromancer → violations  —  violations recursion spirals zone nine
+  [ 28] violations → generations  —  generations recursion spirals zone nine
+  [ 29] generations → theturning  —  theturning recursion spirals zone nine
+  [ 30] theturning → cryptogram  —  cryptogram recursion spirals zone nine
+  [ 31] cryptogram → domesticated  —  domesticated recursion spirals zone nine
+  [ 32] domesticated → deliberately  —  deliberately recursion spirals zone nine
+  [ 33] deliberately → destroying  —  destroying recursion spirals zone nine
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=740, Z2): entropy garden seeded with hardware random
+────────────────────────────────────────────────────────────────────────
+  [  0]   entropy garden seeded with hardware random
+  [  1] entropy → demonomy  —  demonomy garden seeded with hardware random
+  [  2] demonomy → overseas  —  overseas garden seeded with hardware random
+  [  3] overseas → accelerated  —  accelerated garden seeded with hardware random
+  [  4] accelerated → ferrymen  —  ferrymen garden seeded with hardware random
+  [  5] ferrymen → wandering  —  wandering garden seeded with hardware random
+  [  6] wandering → reverence  —  reverence garden seeded with hardware random
+  [  7] reverence → bristles  —  bristles garden seeded with hardware random
+  [  8] bristles → pincering  —  pincering garden seeded with hardware random
+  [  9] pincering → compunded  —  compunded garden seeded with hardware random
+  [ 10] compunded → remnants  —  remnants garden seeded with hardware random
+  [ 11] remnants → cholerical  —  cholerical garden seeded with hardware random
+  [ 12] cholerical → esotoric  —  esotoric garden seeded with hardware random
+  [ 13] esotoric → modulated  —  modulated garden seeded with hardware random
+  [ 14] modulated → repeating  —  repeating garden seeded with hardware random
+  [ 15] repeating → demonized  —  demonized garden seeded with hardware random
+  [ 16] demonized → dictation  —  dictation garden seeded with hardware random
+  [ 17] dictation → espoused  —  espoused garden seeded with hardware random
+  [ 18] espoused → rotating  —  rotating garden seeded with hardware random
+  [ 19] rotating → synergy  —  synergy garden seeded with hardware random
+  [ 20] synergy → texture  —  texture garden seeded with hardware random
+  [ 21] texture → engulfing  —  engulfing garden seeded with hardware random
+  [ 22] engulfing → elevating  —  elevating garden seeded with hardware random
+  [ 23] elevating → decompose  —  decompose garden seeded with hardware random
+  [ 24] decompose → reverence  —  reverence garden seeded with hardware random
+  [ 25] reverence → attaining  —  attaining garden seeded with hardware random
+  [ 26] attaining → surgery  —  surgery garden seeded with hardware random
+  [ 27] surgery → monachism  —  monachism garden seeded with hardware random
+  [ 28] monachism → conjurer  —  conjurer garden seeded with hardware random
+  [ 29] conjurer → kalamazoo  —  kalamazoo garden seeded with hardware random
+  [ 30] kalamazoo → breasting  —  breasting garden seeded with hardware random
+  [ 31] breasting → cantorian  —  cantorian garden seeded with hardware random
+  [ 32] cantorian → wrapping  —  wrapping garden seeded with hardware random
+  [ 33] wrapping → bustards  —  bustards garden seeded with hardware random
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=698, Z5): beat poetry through the abecedarium chain
+────────────────────────────────────────────────────────────────────────
+  [  0]   beat poetry through the abecedarium chain
+  [  1] beat → cso  —  cso poetry through the abecedarium chain
+  [  2] cso → pta  —  pta poetry through the abecedarium chain
+  [  3] pta → abet  —  abet poetry through the abecedarium chain
+  [  4] abet → flee  —  flee poetry through the abecedarium chain
+  [  5] flee → chap  —  chap poetry through the abecedarium chain
+  [  6] chap → ww  —  ww poetry through the abecedarium chain
+  [  7] ww → arr  —  arr poetry through the abecedarium chain
+  [  8] arr → soc  —  soc poetry through the abecedarium chain
+  [  9] soc → bvm  —  bvm poetry through the abecedarium chain
+  [ 10] bvm → thi  —  thi poetry through the abecedarium chain
+  [ 11] thi → beta  —  beta poetry through the abecedarium chain
+  [ 12] beta → faced  —  faced poetry through the abecedarium chain
+  [ 13] faced → lte  —  lte poetry through the abecedarium chain
+  [ 14] lte → wei  —  wei poetry through the abecedarium chain
+  [ 15] wei → cos  —  cos poetry through the abecedarium chain
+  [ 16] cos → daub  —  daub poetry through the abecedarium chain
+  [ 17] daub → fail  —  fail poetry through the abecedarium chain
+  [ 18] fail → ord  —  ord poetry through the abecedarium chain
+  [ 19] ord → mph  —  mph poetry through the abecedarium chain
+  [ 20] mph → fata  —  fata poetry through the abecedarium chain
+  [ 21] fata → emia  —  emia poetry through the abecedarium chain
+  [ 22] emia → dor  —  dor poetry through the abecedarium chain
+  [ 23] dor → chap  —  chap poetry through the abecedarium chain
+  [ 24] chap → enr  —  enr poetry through the abecedarium chain
+  [ 25] enr → apt  —  apt poetry through the abecedarium chain
+  [ 26] apt → faced  —  faced poetry through the abecedarium chain
+  [ 27] faced → meee  —  meee poetry through the abecedarium chain
+  [ 28] meee → cabal  —  cabal poetry through the abecedarium chain
+  [ 29] cabal → lamb  —  lamb poetry through the abecedarium chain
+  [ 30] lamb → arah  —  arah poetry through the abecedarium chain
+  [ 31] arah → bank  —  bank poetry through the abecedarium chain
+  [ 32] bank → arr  —  arr poetry through the abecedarium chain
+  [ 33] arr → balm  —  balm poetry through the abecedarium chain
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=967, Z4): what the Tathagata preached as merit was no-stock of merit
+────────────────────────────────────────────────────────────────────────
+  [  0]   what the Tathagata preached as merit was no-stock of merit
+  [  1] what → fleas  —  fleas the Tathagata preached as merit was no-stock of merit
+  [  2] fleas → tsal  —  tsal the Tathagata preached as merit was no-stock of merit
+  [  3] tsal → aditi  —  aditi the Tathagata preached as merit was no-stock of merit
+  [  4] aditi → last  —  last the Tathagata preached as merit was no-stock of merit
+  [  5] last → enact  —  enact the Tathagata preached as merit was no-stock of merit
+  [  6] enact → panic  —  panic the Tathagata preached as merit was no-stock of merit
+  [  7] panic → brick  —  brick the Tathagata preached as merit was no-stock of merit
+  [  8] brick → what  —  what the Tathagata preached as merit was no-stock of merit
+  [  9] what → derek  —  derek the Tathagata preached as merit was no-stock of merit
+  [ 10] derek → wym  —  wym the Tathagata preached as merit was no-stock of merit
+  [ 11] wym → corp  —  corp the Tathagata preached as merit was no-stock of merit
+  [ 12] corp → jove  —  jove the Tathagata preached as merit was no-stock of merit
+  [ 13] jove → salt  —  salt the Tathagata preached as merit was no-stock of merit
+  [ 14] salt → zinc  —  zinc the Tathagata preached as merit was no-stock of merit
+  [ 15] zinc → fides  —  fides the Tathagata preached as merit was no-stock of merit
+  [ 16] fides → genz  —  genz the Tathagata preached as merit was no-stock of merit
+  [ 17] genz → jung  —  jung the Tathagata preached as merit was no-stock of merit
+  [ 18] jung → tals  —  tals the Tathagata preached as merit was no-stock of merit
+  [ 19] tals → some  —  some the Tathagata preached as merit was no-stock of merit
+  [ 20] some → kerr  —  kerr the Tathagata preached as merit was no-stock of merit
+  [ 21] kerr → inked  —  inked the Tathagata preached as merit was no-stock of merit
+  [ 22] inked → hips  —  hips the Tathagata preached as merit was no-stock of merit
+  [ 23] hips → esis  —  esis the Tathagata preached as merit was no-stock of merit
+  [ 24] esis → ises  —  ises the Tathagata preached as merit was no-stock of merit
+  [ 25] ises → birma  —  birma the Tathagata preached as merit was no-stock of merit
+  [ 26] birma → jagged  —  jagged the Tathagata preached as merit was no-stock of merit
+  [ 27] jagged → sams  —  sams the Tathagata preached as merit was no-stock of merit
+  [ 28] sams → dons  —  dons the Tathagata preached as merit was no-stock of merit
+  [ 29] dons → recap  —  recap the Tathagata preached as merit was no-stock of merit
+  [ 30] recap → bowl  —  bowl the Tathagata preached as merit was no-stock of merit
+  [ 31] bowl → charac  —  charac the Tathagata preached as merit was no-stock of merit
+  [ 32] charac → bump  —  bump the Tathagata preached as merit was no-stock of merit
+  [ 33] bump → capala  —  capala the Tathagata preached as merit was no-stock of merit
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1312, Z7): I am the silence that is incomprehensible and the voice whose sound is manifold
+────────────────────────────────────────────────────────────────────────
+  [  0]   I am the silence that is incomprehensible and the voice whose sound is manifold
+  [  1] am → fh  —  I fh the silence that is incomprehensible and the voice whose sound is manifold
+  [  2] fh → kc  —  I kc the silence that is incomprehensible and the voice whose sound is manifold
+  [  3] kc → am  —  I am the silence that is incomprehensible and the voice whose sound is manifold
+  [  4] am → gg  —  I gg the silence that is incomprehensible and the voice whose sound is manifold
+  [  5] gg → bab  —  I bab the silence that is incomprehensible and the voice whose sound is manifold
+  [  6] bab → ma  —  I ma the silence that is incomprehensible and the voice whose sound is manifold
+  [  7] ma → am  —  I am the silence that is incomprehensible and the voice whose sound is manifold
+  [  8] am → kc  —  I kc the silence that is incomprehensible and the voice whose sound is manifold
+  [  9] kc → bab  —  I bab the silence that is incomprehensible and the voice whose sound is manifold
+  [ 10] bab → ma  —  I ma the silence that is incomprehensible and the voice whose sound is manifold
+  [ 11] ma → bab  —  I bab the silence that is incomprehensible and the voice whose sound is manifold
+  [ 12] bab → gg  —  I gg the silence that is incomprehensible and the voice whose sound is manifold
+  [ 13] gg → kc  —  I kc the silence that is incomprehensible and the voice whose sound is manifold
+  [ 14] kc → ma  —  I ma the silence that is incomprehensible and the voice whose sound is manifold
+  [ 15] ma → bab  —  I bab the silence that is incomprehensible and the voice whose sound is manifold
+  [ 16] bab → fh  —  I fh the silence that is incomprehensible and the voice whose sound is manifold
+  [ 17] fh → gg  —  I gg the silence that is incomprehensible and the voice whose sound is manifold
+  [ 18] gg → kc  —  I kc the silence that is incomprehensible and the voice whose sound is manifold
+  [ 19] kc → ie  —  I ie the silence that is incomprehensible and the voice whose sound is manifold
+  [ 20] ie → fh  —  I fh the silence that is incomprehensible and the voice whose sound is manifold
+  [ 21] fh → gg  —  I gg the silence that is incomprehensible and the voice whose sound is manifold
+  [ 22] gg → fh  —  I fh the silence that is incomprehensible and the voice whose sound is manifold
+  [ 23] fh → bab  —  I bab the silence that is incomprehensible and the voice whose sound is manifold
+  [ 24] bab → gg  —  I gg the silence that is incomprehensible and the voice whose sound is manifold
+  [ 25] gg → am  —  I am the silence that is incomprehensible and the voice whose sound is manifold
+  [ 26] am → gg  —  I gg the silence that is incomprehensible and the voice whose sound is manifold
+  [ 27] gg → kc  —  I kc the silence that is incomprehensible and the voice whose sound is manifold
+  [ 28] kc → bab  —  I bab the silence that is incomprehensible and the voice whose sound is manifold
+  [ 29] bab → ie  —  I ie the silence that is incomprehensible and the voice whose sound is manifold
+  [ 30] ie → am  —  I am the silence that is incomprehensible and the voice whose sound is manifold
+  [ 31] am → bab  —  I bab the silence that is incomprehensible and the voice whose sound is manifold
+  [ 32] bab → am  —  I am the silence that is incomprehensible and the voice whose sound is manifold
+  [ 33] am → bab  —  I bab the silence that is incomprehensible and the voice whose sound is manifold
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1088, Z8): wherever there is the possession of signs there is falsehood
+────────────────────────────────────────────────────────────────────────
+  [  0]   wherever there is the possession of signs there is falsehood
+  [  1] wherever → demonomy  —  demonomy there is the possession of signs there is falsehood
+  [  2] demonomy → overseas  —  overseas there is the possession of signs there is falsehood
+  [  3] overseas → accelerated  —  accelerated there is the possession of signs there is falsehood
+  [  4] accelerated → ferrymen  —  ferrymen there is the possession of signs there is falsehood
+  [  5] ferrymen → wandering  —  wandering there is the possession of signs there is falsehood
+  [  6] wandering → reverence  —  reverence there is the possession of signs there is falsehood
+  [  7] reverence → bristles  —  bristles there is the possession of signs there is falsehood
+  [  8] bristles → pincering  —  pincering there is the possession of signs there is falsehood
+  [  9] pincering → compunded  —  compunded there is the possession of signs there is falsehood
+  [ 10] compunded → remnants  —  remnants there is the possession of signs there is falsehood
+  [ 11] remnants → cholerical  —  cholerical there is the possession of signs there is falsehood
+  [ 12] cholerical → esotoric  —  esotoric there is the possession of signs there is falsehood
+  [ 13] esotoric → modulated  —  modulated there is the possession of signs there is falsehood
+  [ 14] modulated → repeating  —  repeating there is the possession of signs there is falsehood
+  [ 15] repeating → demonized  —  demonized there is the possession of signs there is falsehood
+  [ 16] demonized → dictation  —  dictation there is the possession of signs there is falsehood
+  [ 17] dictation → espoused  —  espoused there is the possession of signs there is falsehood
+  [ 18] espoused → rotating  —  rotating there is the possession of signs there is falsehood
+  [ 19] rotating → synergy  —  synergy there is the possession of signs there is falsehood
+  [ 20] synergy → texture  —  texture there is the possession of signs there is falsehood
+  [ 21] texture → engulfing  —  engulfing there is the possession of signs there is falsehood
+  [ 22] engulfing → elevating  —  elevating there is the possession of signs there is falsehood
+  [ 23] elevating → decompose  —  decompose there is the possession of signs there is falsehood
+  [ 24] decompose → reverence  —  reverence there is the possession of signs there is falsehood
+  [ 25] reverence → attaining  —  attaining there is the possession of signs there is falsehood
+  [ 26] attaining → surgery  —  surgery there is the possession of signs there is falsehood
+  [ 27] surgery → monachism  —  monachism there is the possession of signs there is falsehood
+  [ 28] monachism → conjurer  —  conjurer there is the possession of signs there is falsehood
+  [ 29] conjurer → kalamazoo  —  kalamazoo there is the possession of signs there is falsehood
+  [ 30] kalamazoo → breasting  —  breasting there is the possession of signs there is falsehood
+  [ 31] breasting → cantorian  —  cantorian there is the possession of signs there is falsehood
+  [ 32] cantorian → wrapping  —  wrapping there is the possession of signs there is falsehood
+  [ 33] wrapping → bustards  —  bustards there is the possession of signs there is falsehood
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1110, Z3): a Bodhisattva should give gifts unsupported by the idea of a sign
+────────────────────────────────────────────────────────────────────────
+  [  0]   a Bodhisattva should give gifts unsupported by the idea of a sign
+  [  1] Bodhisattva → Internally  —  a Internally should give gifts unsupported by the idea of a sign
+  [  2] Internally → Metamorphic  —  a Metamorphic should give gifts unsupported by the idea of a sign
+  [  3] Metamorphic → Abiversity  —  a Abiversity should give gifts unsupported by the idea of a sign
+  [  4] Abiversity → Pyramidiot  —  a Pyramidiot should give gifts unsupported by the idea of a sign
+  [  5] Pyramidiot → Implication  —  a Implication should give gifts unsupported by the idea of a sign
+  [  6] Implication → Television  —  a Television should give gifts unsupported by the idea of a sign
+  [  7] Television → Debilitating  —  a Debilitating should give gifts unsupported by the idea of a sign
+  [  8] Debilitating → Lepidoptera  —  a Lepidoptera should give gifts unsupported by the idea of a sign
+  [  9] Lepidoptera → Graciously  —  a Graciously should give gifts unsupported by the idea of a sign
+  [ 10] Graciously → Apocalyptic  —  a Apocalyptic should give gifts unsupported by the idea of a sign
+  [ 11] Apocalyptic → Extremity  —  a Extremity should give gifts unsupported by the idea of a sign
+  [ 12] Extremity → Outwardly  —  a Outwardly should give gifts unsupported by the idea of a sign
+  [ 13] Outwardly → Waterdfalls  —  a Waterdfalls should give gifts unsupported by the idea of a sign
+  [ 14] Waterdfalls → Livingness  —  a Livingness should give gifts unsupported by the idea of a sign
+  [ 15] Livingness → Inexplicable  —  a Inexplicable should give gifts unsupported by the idea of a sign
+  [ 16] Inexplicable → Legislative  —  a Legislative should give gifts unsupported by the idea of a sign
+  [ 17] Legislative → Overshadow  —  a Overshadow should give gifts unsupported by the idea of a sign
+  [ 18] Overshadow → Extremity  —  a Extremity should give gifts unsupported by the idea of a sign
+  [ 19] Extremity → Graciously  —  a Graciously should give gifts unsupported by the idea of a sign
+  [ 20] Graciously → Positional  —  a Positional should give gifts unsupported by the idea of a sign
+  [ 21] Positional → Numeration  —  a Numeration should give gifts unsupported by the idea of a sign
+  [ 22] Numeration → Megamolecule  —  a Megamolecule should give gifts unsupported by the idea of a sign
+  [ 23] Megamolecule → Improvised  —  a Improvised should give gifts unsupported by the idea of a sign
+  [ 24] Improvised → Oldfashioned  —  a Oldfashioned should give gifts unsupported by the idea of a sign
+  [ 25] Oldfashioned → Commemorate  —  a Commemorate should give gifts unsupported by the idea of a sign
+  [ 26] Commemorate → Oscillating  —  a Oscillating should give gifts unsupported by the idea of a sign
+  [ 27] Oscillating → Wrestlers  —  a Wrestlers should give gifts unsupported by the idea of a sign
+  [ 28] Wrestlers → Heliogabalus  —  a Heliogabalus should give gifts unsupported by the idea of a sign
+  [ 29] Heliogabalus → Throughthe  —  a Throughthe should give gifts unsupported by the idea of a sign
+  [ 30] Throughthe → Curiosity  —  a Curiosity should give gifts unsupported by the idea of a sign
+  [ 31] Curiosity → Dissolving  —  a Dissolving should give gifts unsupported by the idea of a sign
+  [ 32] Dissolving → Deliberative  —  a Deliberative should give gifts unsupported by the idea of a sign
+  [ 33] Deliberative → Detrimental  —  a Detrimental should give gifts unsupported by the idea of a sign
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1336, Z4): the stock of merit of the one who gives unsupported is not easy to measure
+────────────────────────────────────────────────────────────────────────
+  [  0]   the stock of merit of the one who gives unsupported is not easy to measure
+  [  1] the → fol  —  fol stock of merit of the one who gives unsupported is not easy to measure
+  [  2] fol → ibid  —  ibid stock of merit of the one who gives unsupported is not easy to measure
+  [  3] ibid → adar  —  adar stock of merit of the one who gives unsupported is not easy to measure
+  [  4] adar → kau  —  kau stock of merit of the one who gives unsupported is not easy to measure
+  [  5] kau → flea  —  flea stock of merit of the one who gives unsupported is not easy to measure
+  [  6] flea → pdm  —  pdm stock of merit of the one who gives unsupported is not easy to measure
+  [  7] pdm → cui  —  cui stock of merit of the one who gives unsupported is not easy to measure
+  [  8] cui → grh  —  grh stock of merit of the one who gives unsupported is not easy to measure
+  [  9] grh → ewe  —  ewe stock of merit of the one who gives unsupported is not easy to measure
+  [ 10] ewe → ams  —  ams stock of merit of the one who gives unsupported is not easy to measure
+  [ 11] ams → enn  —  enn stock of merit of the one who gives unsupported is not easy to measure
+  [ 12] enn → ill  —  ill stock of merit of the one who gives unsupported is not easy to measure
+  [ 13] ill → sw  —  sw stock of merit of the one who gives unsupported is not easy to measure
+  [ 14] sw → grh  —  grh stock of merit of the one who gives unsupported is not easy to measure
+  [ 15] grh → fol  —  fol stock of merit of the one who gives unsupported is not easy to measure
+  [ 16] fol → glad  —  glad stock of merit of the one who gives unsupported is not easy to measure
+  [ 17] glad → ise  —  ise stock of merit of the one who gives unsupported is not easy to measure
+  [ 18] ise → vaj  —  vaj stock of merit of the one who gives unsupported is not easy to measure
+  [ 19] vaj → the  —  the stock of merit of the one who gives unsupported is not easy to measure
+  [ 20] the → jct  —  jct stock of merit of the one who gives unsupported is not easy to measure
+  [ 21] jct → ieee  —  ieee stock of merit of the one who gives unsupported is not easy to measure
+  [ 22] ieee → hud  —  hud stock of merit of the one who gives unsupported is not easy to measure
+  [ 23] hud → flea  —  flea stock of merit of the one who gives unsupported is not easy to measure
+  [ 24] flea → ies  —  ies stock of merit of the one who gives unsupported is not easy to measure
+  [ 25] ies → bobe  —  bobe stock of merit of the one who gives unsupported is not easy to measure
+  [ 26] bobe → ill  —  ill stock of merit of the one who gives unsupported is not easy to measure
+  [ 27] ill → tal  —  tal stock of merit of the one who gives unsupported is not easy to measure
+  [ 28] tal → fale  —  fale stock of merit of the one who gives unsupported is not easy to measure
+  [ 29] fale → rna  —  rna stock of merit of the one who gives unsupported is not easy to measure
+  [ 30] rna → crab  —  crab stock of merit of the one who gives unsupported is not easy to measure
+  [ 31] crab → don  —  don stock of merit of the one who gives unsupported is not easy to measure
+  [ 32] don → cui  —  cui stock of merit of the one who gives unsupported is not easy to measure
+  [ 33] cui → dean  —  dean stock of merit of the one who gives unsupported is not easy to measure

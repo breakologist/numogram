@@ -1,0 +1,46 @@
+BEAT POEM — AQ-Preserved Seed Chains (2026-05-19 20:40)
+════════════════════════════════════════════════════════════════════════
+Each seed word chains through its AQ bucket.
+Corpus: oracle | Seeds: Cryptolith, Teleoplexy, Paramita, Syzygy, Void
+
+
+────────────────────────────────────────────────────────────────────────
+CHAIN: Cryptolith (AQ=236, Z2)
+────────────────────────────────────────────────────────────────────────
+  Cryptolith → pointround → competitive → superseding → calendrically → sinuously → metatronics → qualitative
+
+
+────────────────────────────────────────────────────────────────────────
+CHAIN: Teleoplexy (AQ=229, Z4)
+────────────────────────────────────────────────────────────────────────
+  Teleoplexy → iconoclasts → thedishness → programmable → tantamount → displacement → editorially → meaningnight
+
+
+────────────────────────────────────────────────────────────────────────
+CHAIN: Paramita (AQ=151, Z7)
+────────────────────────────────────────────────────────────────────────
+  Paramita → tyndall → havewon → allures → germinal → hurtled → herodias → allures
+
+
+────────────────────────────────────────────────────────────────────────
+CHAIN: Syzygy (AQ=181, Z1)
+────────────────────────────────────────────────────────────────────────
+  Syzygy → calendrical → overused → vindicated → telephone → loudness → shredders → automated
+
+
+────────────────────────────────────────────────────────────────────────
+CHAIN: Void (AQ=86, Z5)
+────────────────────────────────────────────────────────────────────────
+  Void → duet → magas → aniel → dunk → arial → away → aetna
+
+
+────────────────────────────────────────────────────────────────────────
+COMPOSED VERSE
+────────────────────────────────────────────────────────────────────────
+  Cryptolith
+  the iconoclasts of pointround tyndall
+  competitive ⟡ thedishness ⟡ havewon
+  vindicated aniel programmable
+  calendrically tantamount germinal telephone dunk
+  sinuously
+  the editorially of metatronics herodias

@@ -294,3 +294,188 @@ Following systematic investigation of the upstream repository (`lumpenspace/ccru
 - [[numogram-gematria]] — multi‑cipher reimplementation
 - [[demon-classification-algorithm]] — TC‑based kind assignment
 
+---
+
+## Source Materials (2026-05-15 — Exploration)
+
+The /numogram page at qliphoth.systems itself cites four sources in its footer. Two are particularly rich and **not yet documented** in the wiki.
+
+### Source 1: OH4 Numogrammaticism (Eric Scrivner)
+
+**URL:** https://oh4.co/site/numogrammaticism.html
+**Author:** Eric Scrivner (releases code as public domain)
+**Relevance:** The most rigorous **formal exposition** of the numogram as a mathematical system, with a complete C reference implementation.
+
+#### Key contributions:
+
+**a) Public Domain C Header (`oh4_numogrammatics.h`)**
+A single-header, zero-dependency C library implementing:
+- Zone/syzygy enumeration
+- Triangular cumulation (T(0)-T(9))
+- Digital root computation
+- Alphanumeric Qabbala (Base-36 AQ) lookup
+- Tic Xenotation encoding/decoding (non-standard prime-factorization notation)
+- Gate/path traversal
+
+Available at: https://oh4.co/site/oh4_numogrammatics.h
+
+**b) Tic Xenotation (TX) Analysis**
+Non-standard, asignifying notation based on the Fundamental Theorem of Arithmetic. Encodes every integer ≥2 by its unique prime factorization:
+- `:` = 2 (first prime)
+- `(:)` = 3 (2nd prime)
+- `:(:)` = 2×3 = 6
+- Proposed extension: `*` = 0 and `(*)` = 1
+
+Base-36 encoding of TX produces compact strings: 125(dec) = `((:))((:))((:))` = `333` (Base-36).
+
+**c) Kantian/Gödelian Framing**
+Nick Land's comment on the Numogram Q&A thread is reproduced:
+> *"A Kantian schema is situated in the 'between' … and it's quite (hence 'crypto-') like a time-map."*
+
+Scrivner traces: Kant's schematism → Gödel numbering → Mécanomie → Numogram. Gödel operationalizes the prime-composite relationship to encode formal statements; Land sees this as "subsuming philosophy into transcendental arithmetic." The **synthetic a priori** becomes an open-ended transcendental process — number as a medium for thinking time itself.
+
+**d) Asymmetry of Effort**
+Multiplication (composite formation) is trivial; factoring is hard. Analogous to differentiation vs. integration. This built-in computational asymmetry is a **core feature** of the numogram as a system — it makes certain relationships hard-won, discoverable only through recursive traversal.
+
+#### Extractable:
+- The C header could be the basis for a lightweight **numogram CLI** in C/Rust (no Python dependency)
+- Tic Xenotation as an alternative numeric representation for zone labeling in the roguelike
+- The asymmetry principle as a game mechanic: some gates are easy to cross, others require proof-of-work
+
+---
+
+### Source 2: The Dark Forest — S.C. Hickman's Numogram Essay
+
+**URL:** https://socialecologies.wordpress.com/2025/08/17/the-numogram-diagram-time-circuits-and-acceleration/
+**Author:** S.C. Hickman
+**Tagline:** "This essay traces the hidden life of the Numogram, the most infamous artifact of the CCRU's Pandemonium System."
+
+A comprehensive historical lineage covering:
+
+**Part I — Origins: Number as Demon**
+- Babylonian fate-script (sexagesimal omens, cuneiform numerals as talismans)
+- Pythagorean tetractys + the horror of √2 (the *alogos*, "unspeakable")
+- Kabbalistic gematria → qliphoth as "husk and refuse" (CCRU location)
+- Gnostic/Hermetic syzygies (Valentinian pleroma → collapse into chaos)
+- Medieval necromancy (Picatrix magic squares = demon-traps; magician as hacker)
+- Renaissance occulture (Ficino, Pico, Agrippa → "total systems of correspondence")
+- Enlightenment irrationals (√-1, non-Euclidean geometry, Cantor → "science multiplied the daemon")
+
+**Part II — Mythic Intrusions: Zones of Entrance**
+A cross-cultural portal table mapping seven traditions onto the numogram's zone structure:
+- Inanna's seven gates → descent circuit 0-9
+- Gnostic syzygies → feedback loops
+- Yggdrasil's nine worlds → zones bound by gates
+- Egyptian weighing of the soul → "scale as early syzygy"
+- Buddhist six realms → "number as cosmic scheduler"
+
+**Key quotes:**
+> *"Numbers were not abstractions but living spirits."*
+> *"The 'scientific revolution' was an occult mutation, a new host for the numogrammatic virus."*
+> *"Numbers do not point; they act. Every algorithm is a gate, every recursive function a syzygy."*
+> *"To encounter the Numogram is to be infected, to participate in its recursion."*
+
+#### Fragment to mine:
+Hickman's essay is the closest thing yet to a **popular historical treatment** of the numogram — it situates the CCRU within the full Western esoteric tradition. Useful as:
+- Citation source for wiki pages (Babylonian → CCRU via Hickman)
+- Inspiration for the roguelike's lore: Inanna's seven gates as a dungeon descent pattern
+- The "number as living spirit" framing for the oracle's voice
+
+---
+
+### Source 3: CCRU Decimal Labyrinth (Original)
+
+**URL:** http://www.ccru.net/declab.htm (may be dead/mirror-only)
+The canonical source. The /numogram layout and data model at qliphoth.systems is a **faithful interactive reimplementation** of this original CCRU diagram. The four layouts (tetractys, labyrinth, ladder, planetary) are interpretations/extensions beyond the original.
+
+---
+
+### Source 4: Google Drive PDF
+
+**URL:** https://drive.google.com/file/d/1ReZnkaZxsdNgEFghEZqDvpDoxhhTWHQ6/view
+Undocumented; appears to be an archival version of CCRU texts or the Land/Negarestani numogram writings. Worth exploring when time permits.
+
+---
+
+## Creator Ecosystem: Lumpenspace
+
+**GitHub:** https://github.com/lumpenspace
+**Bio:** *"immanentising the good part of the eschaton, primarily"*
+**X:** @Lumpenspace
+**Organization:** k-weird
+
+**Pinned repos (relevance to our stack):**
+
+| Repo | Lang | Stars | Relevance |
+|------|------|-------|-----------|
+| **FRAG** | Python | 17 | Flexible generation from unstructured knowledge — could inform oracle output assembly |
+| **RAFT** | Python | 175 | Retrieval-Augmented Fine-Tuning — for fine-tuning our models on numogram/music corpus |
+| **gptcat** | TypeScript | 5 | Chrome plugin rendering LaTeX in Claude — same pattern as the gematria overlay extension |
+| **tikkun-tohu** | Python | 1 | Embeddings for OpenAI dictionary tokens — could feed into AQ dictionary similarity search |
+| **jamall** | Python | 2 | JSON → YAML for llama — light preprocessing for local model prompts |
+
+**Connection to ciphers.news:** `https://github.com/faltz009` (also in InterestingSites) is linked. The Synx cipher — used across both ciphers.news and qliphoth.systems — may be a collaborative design. Investigate Synx's provenance as future work.
+
+---
+
+## Live Page Details (2026-05-15 capture)
+
+From the rendered /numogram page:
+
+**Zone nicknames** (not just planet names — playful folklore names):
+| Zone | Nickname | Current |
+|------|----------|---------|
+| 0 | Solplex | Plex |
+| 1 | Mercuryn/atorque | Torque |
+| 2 | Venus:torque | Torque |
+| 3 | Earth(:)warp | Warp |
+| 4 | Mars::torque | Torque |
+| 5 | Jupiter((:))torque | Torque |
+| 6 | Saturn:(:)warp | Warp |
+| 7 | Uranus(::)torque | Torque |
+| 8 | Neptune:::torque | Torque |
+| 9 | Pluto(:)(:)plex | Plex |
+
+**Time Circuit demon names** from the syzygies:
+- 4::5 → **Katak** (goddess of death)
+- 3::6 → **Djynxx**
+- 2::7 → **Oddubb**
+- 1::8 → **Murrumur**
+- 0::9 → **Uttunul**
+
+**Gate triggers** (the operations, not just the names):
+- Surge: 8→7 (8−1=7)
+- Hold: 2→5 (7−2=5)
+- Sink: 4→1 (4−1=1… no, listed as 5−4=1)
+- Warp: 6→3 (6−3=3)
+- Plex: 9→9 (9−0=9)
+
+**Gate triangle IDs:**
+- Gt-01 (cum=1, 1↻1): zone 1 turning into itself
+- Gt-03 (cum=3, 2→3): Lo-Way to the Crypt
+- Gt-06 (cum=6, 3→6): Gate to the Swirl
+- Gt-10 (cum=10, 4→1): Gate of Submergence
+- Gt-15 (cum=15, 5→6): Fifth Gate — abduction into the Warp
+- Gt-21 (cum=21, 6→3): Sixth Gate — vortex reversal
+- Gt-28 (cum=28, 7→1): Seventh Gate
+- Gt-36 (cum=36, 8→9): "Gt-36. 666. Woah, here we go."
+- Gt-45 (cum=45, 9↻9): The Gate of Pandemonium
+
+**Synx cipher note:** The gematria toolkit description reads: "Anglossic Qabbala Toolkit 444 — Gematria, the practice of crash-numerizing language, converts words into numbers to surface resonances that ordinary reading cannot." The Synx cipher is available as a selectable option alongside AQ. The Chrome plugin ("Operations 222" / Web Gematria Toolkit overlay) allows custom cipher definitions — therefore any future cipher we develop can be loaded.
+
+**Color palette note:** The CSS defines 10 display-P3 colors with hex fallback. The palette is labelled with cyberpunk names (cp-cyan-laser, cp-acid-lime, etc.) — not zone-indexed. The zone colors are defined separately in zones.ts.
+
+---
+
+## Integration Ideas
+
+1. **OH4 C header → Python port** — The single-header C implementation could be compiled via ctypes for a zero-dependency numogram calculator, or translated to Python for the roguelike's game logic.
+
+2. **Tic Xenotation as dungeon cipher** — Zones labeled with TX notation instead of decimals. The player encounters `:(:)` instead of "6". Decoding TX becomes a gameplay mechanic.
+
+3. **Synx cipher provenance** — Investigate whether Synx is a lumpenspace/faltz009 joint design. The Synx value array from ciphers.news should match qliphoth's gematria.ts — verify this.
+
+4. **Lumpenspace's FRAG for oracle text** — FRAG does "flexible, context-aware generation from unstructured knowledge sources." This could be exactly what the oracle needs: generate readings from the wiki corpus + CCRU texts + AQ dictionary.
+
+5. **Dark Forest essay as lore bible** — Hickman's seven traditions cross-cultural portal table could directly inspire the roguelike's seven dungeon themes (Babylonian/Pythagorean/Kabbalistic/Gnostic/Renaissance/CCRU/Lemurian floors).
+

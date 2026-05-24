@@ -22,13 +22,13 @@ tags: [wu-xing, classifier, v080, validation, elements, syzygy, basin]
 
 Five Chinese elements mapped onto five numogram syzygies. 100 tracks per element (50 per zone, N=500 total).
 
-| Element | CN | Syzygy | c | Zones | Accuracy | Notes |
-|---------|-----|--------|---|-------|----------|-------|
-| **WOOD** | 木 | 1::8 | 7 | Z1=100%, Z8=100% | **100%** | Perfect. Square wave, mid BPM, high density. The Surge and Multiplicity are cleanly separable. |
-| **EARTH** | 土 | 0::9 | 9 | Z0=100%, Z9=98% | **99%** | The Void speaks. The Plex nearly perfect. Deep square, subsonic BPM. The 9::0 syzygy — largest current — produces near-perfect self-recognition. |
-| **WATER** | 水 | 4::5 | 1 | Z4=96%, Z5=100% | **98%** | Triangle wave, slow BPM, sparse. Z4↔Z5 adjacent bleed only — the syzygy current (c=1) is visible in the confusion. |
-| **METAL** | 金 | 3::6 | 3 | Z3=90%, Z6=100% | **95%** | Triangle wave, mid BPM. The Warp pair. Z3 bleeds slightly to Z4 (8%). Z6 is perfectly self-contained — Djynxx no longer the attractor, but a clean signal. |
-| **FIRE** | 火 | 2::7 | 5 | Z2=84%, Z7=54% | **69%** | Noise waveform, fast BPM, highest density. The difficult element. Chaos resists clean classification — but 69% is still far above the 10% baseline of v0.7.0. |
+| Element   | CN  | Syzygy | c   | Zones            | Accuracy | Notes                                                                                                                                                         |
+| --------- | --- | ------ | --- | ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **WOOD**  | 木   | 1::8   | 7   | Z1=100%, Z8=100% | **100%** | Perfect. Square wave, mid BPM, high density. The Surge and Multiplicity are cleanly separable.                                                                |
+| **EARTH** | 土   | 0::9   | 9   | Z0=100%, Z9=98%  | **99%**  | The Void speaks. The Plex nearly perfect. Deep square, subsonic BPM. The 9::0 syzygy — largest current — produces near-perfect self-recognition.              |
+| **WATER** | 水   | 4::5   | 1   | Z4=96%, Z5=100%  | **98%**  | Triangle wave, slow BPM, sparse. Z4↔Z5 adjacent bleed only — the syzygy current (c=1) is visible in the confusion.                                            |
+| **METAL** | 金   | 3::6   | 3   | Z3=90%, Z6=100%  | **95%**  | Triangle wave, mid BPM. The Warp pair. Z3 bleeds slightly to Z4 (8%). Z6 is perfectly self-contained — Djynxx no longer the attractor, but a clean signal.    |
+| **FIRE**  | 火   | 2::7   | 5   | Z2=84%, Z7=54%   | **69%**  | Noise waveform, fast BPM, highest density. The difficult element. Chaos resists clean classification — but 69% is still far above the 10% baseline of v0.7.0. |
 
 ## Confusion Matrix
 

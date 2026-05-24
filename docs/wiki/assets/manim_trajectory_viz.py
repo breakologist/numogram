@@ -13,11 +13,10 @@ Usage:
 
 from manim import *
 from math import sqrt
-import json, os
+import json
 
 # ─── Paths ────────────────────────────────────────────────────────────────────
-_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-JSON_PATH = os.path.join(_SCRIPT_DIR, "trajectory_varentropy_both.json")
+JSON_PATH = "/home/etym/numogram/docs/wiki/assets/trajectory_varentropy_both.json"
 
 # ─── Palette ──────────────────────────────────────────────────────────────────
 BG        = "#0A0A0A"   # background

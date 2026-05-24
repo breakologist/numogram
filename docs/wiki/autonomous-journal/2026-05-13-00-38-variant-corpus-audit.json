@@ -1,0 +1,54 @@
+{
+  "per_zone_means": {
+    "Z3": {
+      "rms_dbfs": -19.21,
+      "dom_freq_hz": 2263.8,
+      "centroid_hz": 9845.9,
+      "zcr": 0.136,
+      "duration_s": 15.46,
+      "sample_rate": 48000
+    },
+    "Z4": {
+      "rms_dbfs": -20.003,
+      "dom_freq_hz": 2524.1,
+      "centroid_hz": 10329.9,
+      "zcr": 0.1246,
+      "duration_s": 15.46,
+      "sample_rate": 48000
+    },
+    "Z5": {
+      "rms_dbfs": -21.052,
+      "dom_freq_hz": 2961.7,
+      "centroid_hz": 10225.6,
+      "zcr": 0.1,
+      "duration_s": 15.46,
+      "sample_rate": 48000
+    },
+    "Z8": {
+      "rms_dbfs": -23.908,
+      "dom_freq_hz": 4443.4,
+      "centroid_hz": 9895.2,
+      "zcr": 0.0876,
+      "duration_s": 15.46,
+      "sample_rate": 48000
+    },
+    "Z9": {
+      "rms_dbfs": -25.102,
+      "dom_freq_hz": 6017.5,
+      "centroid_hz": 11031.3,
+      "zcr": 0.0851,
+      "duration_s": 15.46,
+      "sample_rate": 48000
+    }
+  },
+  "fourth_law_rms_r": -0.9992,
+  "fourth_law_freq_r": 0.9689,
+  "n_zones": 5,
+  "zones_measured": [
+    3,
+    4,
+    5,
+    8,
+    9
+  ]
+}

@@ -1,0 +1,731 @@
+{
+  "mode": "single",
+  "parameters": {
+    "text": "spectral flatness monotonic across nine zone voices",
+    "corpus_size": 5057,
+    "generations": 7,
+    "seed": 20260523,
+    "creative": true,
+    "creative_strategy": "varentropy",
+    "bucket_key": "both",
+    "correlate": false
+  },
+  "original_aq": 963,
+  "original_words": [
+    "spectral",
+    "flatness",
+    "monotonic",
+    "across",
+    "nine",
+    "zone",
+    "voices"
+  ],
+  "trajectory": [
+    {
+      "generation": 0,
+      "text": "spectral flatness monotonic across nine zone voices",
+      "words": [
+        "spectral",
+        "flatness",
+        "monotonic",
+        "across",
+        "nine",
+        "zone",
+        "voices"
+      ],
+      "recovery_rate": 0.14285714285714285,
+      "aq_preserved": true,
+      "original_aq": 963,
+      "mutated_aq": 963
+    },
+    {
+      "generation": 1,
+      "text": "radically exhibits sephiroth phobos self share living",
+      "words": [
+        "radically",
+        "exhibits",
+        "sephiroth",
+        "phobos",
+        "self",
+        "share",
+        "living"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 4.020307,
+      "metrics": {
+        "total_edit": 43,
+        "avg_edit": 6.142857,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "radically",
+          "reconstructed": "mechanism",
+          "bucket_key": "AQ=166&len=9",
+          "bucket_size": 5,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "exhibits",
+          "reconstructed": "reserved",
+          "bucket_key": "AQ=168&len=8",
+          "bucket_size": 14,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "sephiroth",
+          "reconstructed": "attention",
+          "bucket_key": "AQ=199&len=9",
+          "bucket_size": 12,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "phobos",
+          "reconstructed": "papers",
+          "bucket_key": "AQ=129&len=6",
+          "bucket_size": 23,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "self",
+          "reconstructed": "seem",
+          "bucket_key": "AQ=78&len=4",
+          "bucket_size": 14,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "share",
+          "reconstructed": "daily",
+          "bucket_key": "AQ=96&len=5",
+          "bucket_size": 20,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "living",
+          "reconstructed": "normal",
+          "bucket_key": "AQ=127&len=6",
+          "bucket_size": 23,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "text": "mechanism different overnight martin rain list flying",
+      "words": [
+        "mechanism",
+        "different",
+        "overnight",
+        "martin",
+        "rain",
+        "list",
+        "flying"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.898945,
+      "metrics": {
+        "total_edit": 40,
+        "avg_edit": 5.714286,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "mechanism",
+          "reconstructed": "endurance",
+          "bucket_key": "AQ=166&len=9",
+          "bucket_size": 5,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "different",
+          "reconstructed": "collapsed",
+          "bucket_key": "AQ=168&len=9",
+          "bucket_size": 8,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "overnight",
+          "reconstructed": "attention",
+          "bucket_key": "AQ=199&len=9",
+          "bucket_size": 12,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "martin",
+          "reconstructed": "oldest",
+          "bucket_key": "AQ=129&len=6",
+          "bucket_size": 23,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "rain",
+          "reconstructed": "ends",
+          "bucket_key": "AQ=78&len=4",
+          "bucket_size": 14,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "list",
+          "reconstructed": "word",
+          "bucket_key": "AQ=96&len=4",
+          "bucket_size": 14,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "flying",
+          "reconstructed": "muscle",
+          "bucket_key": "AQ=127&len=6",
+          "bucket_size": 23,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "text": "unequip prehuman withstand throw tabs undu triadic",
+      "words": [
+        "unequip",
+        "prehuman",
+        "withstand",
+        "throw",
+        "tabs",
+        "undu",
+        "triadic"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.943982,
+      "metrics": {
+        "total_edit": 41,
+        "avg_edit": 5.857143,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "unequip",
+          "reconstructed": "vividly",
+          "bucket_key": "AQ=166&len=7",
+          "bucket_size": 11,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "prehuman",
+          "reconstructed": "february",
+          "bucket_key": "AQ=168&len=8",
+          "bucket_size": 14,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "withstand",
+          "reconstructed": "overnight",
+          "bucket_key": "AQ=199&len=9",
+          "bucket_size": 12,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "throw",
+          "reconstructed": "shows",
+          "bucket_key": "AQ=129&len=5",
+          "bucket_size": 6,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "tabs",
+          "reconstructed": "ends",
+          "bucket_key": "AQ=78&len=4",
+          "bucket_size": 14,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "undu",
+          "reconstructed": "holy",
+          "bucket_key": "AQ=96&len=4",
+          "bucket_size": 14,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "triadic",
+          "reconstructed": "arrange",
+          "bucket_key": "AQ=127&len=7",
+          "bucket_size": 9,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "text": "endurance aptitude downright drones five files common",
+      "words": [
+        "endurance",
+        "aptitude",
+        "downright",
+        "drones",
+        "five",
+        "files",
+        "common"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 4.064921,
+      "metrics": {
+        "total_edit": 43,
+        "avg_edit": 6.142857,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "endurance",
+          "reconstructed": "contained",
+          "bucket_key": "AQ=166&len=9",
+          "bucket_size": 5,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "aptitude",
+          "reconstructed": "prehuman",
+          "bucket_key": "AQ=168&len=8",
+          "bucket_size": 14,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "downright",
+          "reconstructed": "sephiroth",
+          "bucket_key": "AQ=199&len=9",
+          "bucket_size": 12,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "drones",
+          "reconstructed": "clover",
+          "bucket_key": "AQ=129&len=6",
+          "bucket_size": 23,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "five",
+          "reconstructed": "rene",
+          "bucket_key": "AQ=78&len=4",
+          "bucket_size": 14,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "files",
+          "reconstructed": "beset",
+          "bucket_key": "AQ=96&len=5",
+          "bucket_size": 20,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "common",
+          "reconstructed": "flying",
+          "bucket_key": "AQ=127&len=6",
+          "bucket_size": 23,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "text": "believing accounts attention already canada daily around",
+      "words": [
+        "believing",
+        "accounts",
+        "attention",
+        "already",
+        "canada",
+        "daily",
+        "around"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.810685,
+      "metrics": {
+        "total_edit": 45,
+        "avg_edit": 6.428571,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "believing",
+          "reconstructed": "believing",
+          "bucket_key": "AQ=166&len=9",
+          "bucket_size": 5,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "accounts",
+          "reconstructed": "prehuman",
+          "bucket_key": "AQ=168&len=8",
+          "bucket_size": 14,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "attention",
+          "reconstructed": "similarly",
+          "bucket_key": "AQ=199&len=9",
+          "bucket_size": 12,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "already",
+          "reconstructed": "already",
+          "bucket_key": "AQ=129&len=7",
+          "bucket_size": 9,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "canada",
+          "reconstructed": "canada",
+          "bucket_key": "AQ=78&len=6",
+          "bucket_size": 1,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "daily",
+          "reconstructed": "cured",
+          "bucket_key": "AQ=96&len=5",
+          "bucket_size": 20,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "around",
+          "reconstructed": "joseph",
+          "bucket_key": "AQ=127&len=6",
+          "bucket_size": 23,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 6,
+      "text": "relation sunrise similarly pluto self taken monics",
+      "words": [
+        "relation",
+        "sunrise",
+        "similarly",
+        "pluto",
+        "self",
+        "taken",
+        "monics"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.856691,
+      "metrics": {
+        "total_edit": 42,
+        "avg_edit": 6.0,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "relation",
+          "reconstructed": "november",
+          "bucket_key": "AQ=166&len=8",
+          "bucket_size": 11,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "sunrise",
+          "reconstructed": "horizon",
+          "bucket_key": "AQ=168&len=7",
+          "bucket_size": 8,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "similarly",
+          "reconstructed": "withstand",
+          "bucket_key": "AQ=199&len=9",
+          "bucket_size": 12,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "pluto",
+          "reconstructed": "throw",
+          "bucket_key": "AQ=129&len=5",
+          "bucket_size": 6,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "self",
+          "reconstructed": "self",
+          "bucket_key": "AQ=78&len=4",
+          "bucket_size": 14,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "taken",
+          "reconstructed": "elite",
+          "bucket_key": "AQ=96&len=5",
+          "bucket_size": 20,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "monics",
+          "reconstructed": "living",
+          "bucket_key": "AQ=127&len=6",
+          "bucket_size": 23,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 7,
+      "text": "suspect languages propriate throw rare over triadic",
+      "words": [
+        "suspect",
+        "languages",
+        "propriate",
+        "throw",
+        "rare",
+        "over",
+        "triadic"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.880267,
+      "metrics": {
+        "total_edit": 41,
+        "avg_edit": 5.857143,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "suspect",
+          "reconstructed": "vividly",
+          "bucket_key": "AQ=166&len=7",
+          "bucket_size": 11,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "languages",
+          "reconstructed": "different",
+          "bucket_key": "AQ=168&len=9",
+          "bucket_size": 8,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "propriate",
+          "reconstructed": "withstand",
+          "bucket_key": "AQ=199&len=9",
+          "bucket_size": 12,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "throw",
+          "reconstructed": "forty",
+          "bucket_key": "AQ=129&len=5",
+          "bucket_size": 6,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "rare",
+          "reconstructed": "rain",
+          "bucket_key": "AQ=78&len=4",
+          "bucket_size": 14,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "over",
+          "reconstructed": "list",
+          "bucket_key": "AQ=96&len=4",
+          "bucket_size": 14,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "triadic",
+          "reconstructed": "blondel",
+          "bucket_key": "AQ=127&len=7",
+          "bucket_size": 9,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_recovery_rate": 0.0,
+    "aq_preserved": true,
+    "final_text": "suspect languages propriate throw rare over triadic",
+    "final_aq": 963,
+    "original_length": 51,
+    "final_length": 51,
+    "length_ratio": 1.0,
+    "original_entropy": 3.7133390086727722,
+    "final_entropy": 3.880267,
+    "entropy_delta": 0.1669279913272277,
+    "total_edit_distance": 41,
+    "avg_edit_per_word": 5.857143,
+    "max_single_word_edit": 8,
+    "exact_matches": "0/7",
+    "exact_ratio": 0.0
+  }
+}

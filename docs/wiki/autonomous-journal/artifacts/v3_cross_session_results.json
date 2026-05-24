@@ -1,0 +1,91 @@
+{
+  "date": "2026-05-23",
+  "n_train": 270,
+  "n_test": 9,
+  "accuracy_full": 0.1111111111111111,
+  "accuracy_no_rms": 0.1111111111111111,
+  "accuracy_normalized": 0.1111111111111111,
+  "per_zone": [
+    {
+      "zone": 1,
+      "pred_full": 6,
+      "pred_no_rms": 7,
+      "pred_norm": 6,
+      "centroid": 248.4826672016948,
+      "flatness": 0.9627553820610046,
+      "rms_mean": 0.005479288287460804
+    },
+    {
+      "zone": 2,
+      "pred_full": 6,
+      "pred_no_rms": 7,
+      "pred_norm": 7,
+      "centroid": 460.5250926484342,
+      "flatness": 0.9251982569694519,
+      "rms_mean": 0.008910255506634712
+    },
+    {
+      "zone": 3,
+      "pred_full": 6,
+      "pred_no_rms": 6,
+      "pred_norm": 7,
+      "centroid": 780.9395896341475,
+      "flatness": 0.8791040778160095,
+      "rms_mean": 0.01552010141313076
+    },
+    {
+      "zone": 4,
+      "pred_full": 6,
+      "pred_no_rms": 6,
+      "pred_norm": 7,
+      "centroid": 814.8149169421366,
+      "flatness": 0.8775225281715393,
+      "rms_mean": 0.013699756003916264
+    },
+    {
+      "zone": 5,
+      "pred_full": 6,
+      "pred_no_rms": 7,
+      "pred_norm": 7,
+      "centroid": 1192.474652255818,
+      "flatness": 0.8069952726364136,
+      "rms_mean": 0.018281910568475723
+    },
+    {
+      "zone": 6,
+      "pred_full": 6,
+      "pred_no_rms": 7,
+      "pred_norm": 7,
+      "centroid": 1216.1624166000083,
+      "flatness": 0.8008958697319031,
+      "rms_mean": 0.015606040135025978
+    },
+    {
+      "zone": 7,
+      "pred_full": 6,
+      "pred_no_rms": 7,
+      "pred_norm": 7,
+      "centroid": 1183.0160514234344,
+      "flatness": 0.7980733513832092,
+      "rms_mean": 0.014052033424377441
+    },
+    {
+      "zone": 8,
+      "pred_full": 6,
+      "pred_no_rms": 6,
+      "pred_norm": 7,
+      "centroid": 1244.9564561744285,
+      "flatness": 0.7951238751411438,
+      "rms_mean": 0.012968686409294605
+    },
+    {
+      "zone": 9,
+      "pred_full": 6,
+      "pred_no_rms": 6,
+      "pred_norm": 7,
+      "centroid": 1323.6159037723965,
+      "flatness": 0.8033071160316467,
+      "rms_mean": 0.010808001272380352
+    }
+  ]
+}

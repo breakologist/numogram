@@ -1,0 +1,221 @@
+ZONE CUT-UP from Jumped Text (2026-05-21 12:38)
+════════════════════════════════════════════════════════════════════════
+Each zone's fragmentation profile applied to xeno-jumped text.
+Corpus for source text: oracle
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: The cryptolith opens the decimator gate
+JUMPED: Moe martyrdoms kabirs moe rpoison hike
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · moe
+
+  ZONE 1 [SURGE]
+  Moe martyrdoms kabirs moe rpoison hike Moe martyrdoms kabirs moe rpoison hike—
+
+  ZONE 2 [SEPARATION]
+  Moe martyrdoms kabirs moe rpoison hike
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  Moe martyrdoms kabirs moe rpoison hike
+
+  ZONE 5 [PRESSURE]
+  Moe martyrdoms kabirs moe rpoison hike
+
+  ZONE 6 [ABSTRACTION]
+  martyrdoms :: hike
+
+  ZONE 7 [BLOOD]
+  Moe martyrdoms kabirs moe rpoison hike
+
+  ZONE 8 [MULTIPLICITY]
+  hike
+hike
+rpoison
+rpoison
+Moe
+Moe
+moe
+moe
+
+  ZONE 9 [PLEX]
+  martyrdoms (((()))) hike rpo≡on (()) Moe moe
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: hyperstition flows through the triangular syzygy
+JUMPED: principalities rerum rumour moe mysticism hermetics
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · moe
+
+  ZONE 1 [SURGE]
+  principalities rerum rumour moe mysticism hermetics principalities rerum rumour moe mysticism hermetics—
+
+  ZONE 2 [SEPARATION]
+  principalities rerum rumour moe mysticism hermetics
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  principalities rerum rumour moe mysticism hermetics
+
+  ZONE 5 [PRESSURE]
+  principalities rerum rumour moe mysticism hermetics
+
+  ZONE 6 [ABSTRACTION]
+  mystic≡m :: principalities
+
+  ZONE 7 [BLOOD]
+  principalities rerum rumour moe mysticism hermetics
+
+  ZONE 8 [MULTIPLICITY]
+  principalities
+principalities
+rumour
+rumour
+hermetics
+hermetics
+rerum
+rerum
+
+  ZONE 9 [PLEX]
+  rerum ((())) rumour ((())) principalities (()) hermetics moe (((())))
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: Katak and Oddubb coil the plex
+JUMPED: Rift mo Itly gram moe merge
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · gram
+
+  ZONE 1 [SURGE]
+  Rift mo Itly gram moe merge Rift mo Itly gram moe merge—
+
+  ZONE 2 [SEPARATION]
+  Rift mo Itly gram moe merge
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  Rift mo Itly gram moe merge
+
+  ZONE 5 [PRESSURE]
+  Rift mo Itly gram moe merge
+
+  ZONE 6 [ABSTRACTION]
+  Rift :: merge
+
+  ZONE 7 [BLOOD]
+  Rift mo Itly gram moe merge
+
+  ZONE 8 [MULTIPLICITY]
+  merge
+merge
+moe
+moe
+Rift
+Rift
+gram
+gram
+
+  ZONE 9 [PLEX]
+  mo (((()))) merge moe (()) Rift gram
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: teleoplexy accelerates the void circuit
+JUMPED: predisposed lassitude moe nota ranting
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · lassitude
+
+  ZONE 1 [SURGE]
+  predisposed lassitude moe nota ranting predisposed lassitude moe nota ranting—
+
+  ZONE 2 [SEPARATION]
+  predisposed lassitude moe nota ranting
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  predisposed lassitude moe nota ranting
+
+  ZONE 5 [PRESSURE]
+  predisposed lassitude moe nota ranting
+
+  ZONE 6 [ABSTRACTION]
+  ¬a :: pred≡posed
+
+  ZONE 7 [BLOOD]
+  predisposed lassitude moe nota ranting
+
+  ZONE 8 [MULTIPLICITY]
+  nota
+nota
+predisposed
+predisposed
+lassitude
+lassitude
+moe
+moe
+
+  ZONE 9 [PLEX]
+  moe lassitude () ¬a (((()))) pred≡posed
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: the demon uttunul whispers from the djynxxagram
+JUMPED: moe kapala istamatis invaluable mvz moe metaphysical
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · invaluable
+
+  ZONE 1 [SURGE]
+  moe kapala istamatis invaluable mvz moe metaphysical moe kapala istamatis invaluable mvz moe metaphysical—
+
+  ZONE 2 [SEPARATION]
+  moe kapala istamatis invaluable mvz moe metaphysical
+
+  ZONE 3 [WARP]
+  mvz 
+
+  ZONE 4 [GATE]
+  moe kapala istamatis invaluable mvz moe metaphysical
+
+  ZONE 5 [PRESSURE]
+  moe kapala istamatis invaluable mvz moe metaphysical
+
+  ZONE 6 [ABSTRACTION]
+  metaphysical :: kapala
+
+  ZONE 7 [BLOOD]
+  moe kapala istamatis invaluable mvz moe metaphysical
+
+  ZONE 8 [MULTIPLICITY]
+  moe
+moe
+moe
+moe
+metaphysical
+metaphysical
+istamatis
+istamatis
+kapala
+kapala
+
+  ZONE 9 [PLEX]
+  mvz ((())) ≡tamat≡ (()) invaluable metaphysical (((()))) moe kapala

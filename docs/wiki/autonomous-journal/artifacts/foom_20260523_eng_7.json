@@ -1,0 +1,652 @@
+{
+  "mode": "single",
+  "parameters": {
+    "text": "VOID externally vacuum only flammable phase",
+    "corpus_size": 89050,
+    "generations": 7,
+    "seed": 7,
+    "creative": true,
+    "creative_strategy": "varentropy",
+    "bucket_key": "aq",
+    "correlate": false
+  },
+  "original_aq": 789,
+  "original_words": [
+    "VOID",
+    "externally",
+    "vacuum",
+    "only",
+    "flammable",
+    "phase"
+  ],
+  "trajectory": [
+    {
+      "generation": 0,
+      "text": "VOID externally vacuum only flammable phase",
+      "words": [
+        "VOID",
+        "externally",
+        "vacuum",
+        "only",
+        "flammable",
+        "phase"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "original_aq": 789,
+      "mutated_aq": 789
+    },
+    {
+      "generation": 1,
+      "text": "Hung pharmaceutic rearing myth potomac pubs",
+      "words": [
+        "Hung",
+        "pharmaceutic",
+        "rearing",
+        "myth",
+        "potomac",
+        "pubs"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 789,
+      "entropy": 3.963617,
+      "metrics": {
+        "total_edit": 37,
+        "avg_edit": 6.166667,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "VOID",
+          "crumpled": "Hung",
+          "reconstructed": "hung",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "externally",
+          "crumpled": "pharmaceutic",
+          "reconstructed": "spectators",
+          "bucket_key": "AQ=226",
+          "bucket_size": 341,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "vacuum",
+          "crumpled": "rearing",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "only",
+          "crumpled": "myth",
+          "reconstructed": "souk",
+          "bucket_key": "AQ=102",
+          "bucket_size": 334,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "flammable",
+          "crumpled": "potomac",
+          "reconstructed": "console",
+          "bucket_key": "AQ=146",
+          "bucket_size": 620,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "phase",
+          "crumpled": "pubs",
+          "reconstructed": "dour",
+          "bucket_key": "AQ=94",
+          "bucket_size": 276,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "text": "Lore simulcasts strain scrap specify twx",
+      "words": [
+        "Lore",
+        "simulcasts",
+        "strain",
+        "scrap",
+        "specify",
+        "twx"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 789,
+      "entropy": 3.899582,
+      "metrics": {
+        "total_edit": 36,
+        "avg_edit": 6.0,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "VOID",
+          "crumpled": "Lore",
+          "reconstructed": "loin",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "externally",
+          "crumpled": "simulcasts",
+          "reconstructed": "recapitalise",
+          "bucket_key": "AQ=226",
+          "bucket_size": 341,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "vacuum",
+          "crumpled": "strain",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "only",
+          "crumpled": "scrap",
+          "reconstructed": "kinds",
+          "bucket_key": "AQ=102",
+          "bucket_size": 334,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "flammable",
+          "crumpled": "specify",
+          "reconstructed": "unbinds",
+          "bucket_key": "AQ=146",
+          "bucket_size": 620,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "phase",
+          "crumpled": "twx",
+          "reconstructed": "yams",
+          "bucket_key": "AQ=94",
+          "bucket_size": 276,
+          "edit_distance": 4,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "text": "Snob vacationers erasable willa estonia ducat",
+      "words": [
+        "Snob",
+        "vacationers",
+        "erasable",
+        "willa",
+        "estonia",
+        "ducat"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 789,
+      "entropy": 3.779952,
+      "metrics": {
+        "total_edit": 36,
+        "avg_edit": 6.0,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "VOID",
+          "crumpled": "Snob",
+          "reconstructed": "snap",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "externally",
+          "crumpled": "vacationers",
+          "reconstructed": "unspeakably",
+          "bucket_key": "AQ=226",
+          "bucket_size": 341,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "vacuum",
+          "crumpled": "erasable",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "only",
+          "crumpled": "willa",
+          "reconstructed": "deist",
+          "bucket_key": "AQ=102",
+          "bucket_size": 334,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "flammable",
+          "crumpled": "estonia",
+          "reconstructed": "looking",
+          "bucket_key": "AQ=146",
+          "bucket_size": 620,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "phase",
+          "crumpled": "ducat",
+          "reconstructed": "carve",
+          "bucket_key": "AQ=94",
+          "bucket_size": 276,
+          "edit_distance": 4,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "text": "Nobs transcriber sterne tonga walleye tore",
+      "words": [
+        "Nobs",
+        "transcriber",
+        "sterne",
+        "tonga",
+        "walleye",
+        "tore"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 789,
+      "entropy": 3.654372,
+      "metrics": {
+        "total_edit": 37,
+        "avg_edit": 6.166667,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "VOID",
+          "crumpled": "Nobs",
+          "reconstructed": "nobs",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "externally",
+          "crumpled": "transcriber",
+          "reconstructed": "shcharansky",
+          "bucket_key": "AQ=226",
+          "bucket_size": 341,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "vacuum",
+          "crumpled": "sterne",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "only",
+          "crumpled": "tonga",
+          "reconstructed": "snare",
+          "bucket_key": "AQ=102",
+          "bucket_size": 334,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "flammable",
+          "crumpled": "walleye",
+          "reconstructed": "jalapeno",
+          "bucket_key": "AQ=146",
+          "bucket_size": 620,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "phase",
+          "crumpled": "tore",
+          "reconstructed": "rambo",
+          "bucket_key": "AQ=94",
+          "bucket_size": 276,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "text": "Grip orneriness permit lour parring nets",
+      "words": [
+        "Grip",
+        "orneriness",
+        "permit",
+        "lour",
+        "parring",
+        "nets"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 789,
+      "entropy": 3.552656,
+      "metrics": {
+        "total_edit": 38,
+        "avg_edit": 6.333333,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "VOID",
+          "crumpled": "Grip",
+          "reconstructed": "grip",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "externally",
+          "crumpled": "orneriness",
+          "reconstructed": "leukocytes",
+          "bucket_key": "AQ=226",
+          "bucket_size": 341,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "vacuum",
+          "crumpled": "permit",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "only",
+          "crumpled": "lour",
+          "reconstructed": "bury",
+          "bucket_key": "AQ=102",
+          "bucket_size": 334,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "flammable",
+          "crumpled": "parring",
+          "reconstructed": "scoping",
+          "bucket_key": "AQ=146",
+          "bucket_size": 620,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "phase",
+          "crumpled": "nets",
+          "reconstructed": "kebabs",
+          "bucket_key": "AQ=94",
+          "bucket_size": 276,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 6,
+      "text": "Melt statements tonier sited tearful xcvi",
+      "words": [
+        "Melt",
+        "statements",
+        "tonier",
+        "sited",
+        "tearful",
+        "xcvi"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 789,
+      "entropy": 3.74095,
+      "metrics": {
+        "total_edit": 43,
+        "avg_edit": 7.166667,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "VOID",
+          "crumpled": "Melt",
+          "reconstructed": "mamma",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "externally",
+          "crumpled": "statements",
+          "reconstructed": "discreetest",
+          "bucket_key": "AQ=226",
+          "bucket_size": 341,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "vacuum",
+          "crumpled": "tonier",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "only",
+          "crumpled": "sited",
+          "reconstructed": "embeds",
+          "bucket_key": "AQ=102",
+          "bucket_size": 334,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "flammable",
+          "crumpled": "tearful",
+          "reconstructed": "testis",
+          "bucket_key": "AQ=146",
+          "bucket_size": 620,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "phase",
+          "crumpled": "xcvi",
+          "reconstructed": "ribbed",
+          "bucket_key": "AQ=94",
+          "bucket_size": 276,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 7,
+      "text": "Awake childminders bulging boils brights bozo",
+      "words": [
+        "Awake",
+        "childminders",
+        "bulging",
+        "boils",
+        "brights",
+        "bozo"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 789,
+      "entropy": 4.108768,
+      "metrics": {
+        "total_edit": 42,
+        "avg_edit": 7.0,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "VOID",
+          "crumpled": "Awake",
+          "reconstructed": "awake",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "externally",
+          "crumpled": "childminders",
+          "reconstructed": "suggestion",
+          "bucket_key": "AQ=226",
+          "bucket_size": 341,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "vacuum",
+          "crumpled": "bulging",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "only",
+          "crumpled": "boils",
+          "reconstructed": "caning",
+          "bucket_key": "AQ=102",
+          "bucket_size": 334,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "flammable",
+          "crumpled": "brights",
+          "reconstructed": "rifting",
+          "bucket_key": "AQ=146",
+          "bucket_size": 620,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "phase",
+          "crumpled": "bozo",
+          "reconstructed": "edify",
+          "bucket_key": "AQ=94",
+          "bucket_size": 276,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_recovery_rate": 0.0,
+    "aq_preserved": true,
+    "final_text": "Awake childminders bulging boils brights bozo",
+    "final_aq": 789,
+    "original_length": 43,
+    "final_length": 45,
+    "length_ratio": 1.0465116279069768,
+    "original_entropy": 4.087106407598053,
+    "final_entropy": 4.108768,
+    "entropy_delta": 0.021661592401946983,
+    "total_edit_distance": 42,
+    "avg_edit_per_word": 7.0,
+    "max_single_word_edit": 10,
+    "exact_matches": "0/6",
+    "exact_ratio": 0.0
+  }
+}

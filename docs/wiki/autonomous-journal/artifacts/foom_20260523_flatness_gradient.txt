@@ -1,0 +1,15 @@
+FOOM Cycle — Spectral Flatness Gradient (2026-05-23)
+Seed: "spectral flatness monotonic across nine zone voices"
+AQ=963, DR=9
+Corpus: oracle | Strategy: varentropy | Bucket: both | Seed: 20260523
+
+GEN 0: spectral flatness monotonic across nine zone voices
+GEN 1: howison striated monsoonal sigils pate kunda sirrah
+GEN 2: factorial politian indwelling oldest lark gobby nebros
+GEN 3: seducers unformed trustees trunk rode welch untied
+GEN 4: colliding envious demolishes embodied dore conne electra
+GEN 5: anxious averting archetypal ammonia ards atru beatific
+GEN 6: timeout sunrise occulture splash pgen list tarry
+GEN 7: pennfield recordare silliness podarge misa sabean pindika
+
+AQ preservation: True

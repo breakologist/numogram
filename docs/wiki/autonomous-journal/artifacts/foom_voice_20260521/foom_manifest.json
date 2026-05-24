@@ -1,0 +1,111 @@
+{
+  "foom_seed": "The numogram opens beneath the cryptolith crystalline lattice of syncretic zones",
+  "foom_generation": 4,
+  "foom_creative_strategy": "varentropy",
+  "foom_bucket_key": "both",
+  "foom_output": "Kkk yellows robbin onset kkk entitlement downswings dataset cfc pleurisy monacan",
+  "zone_sequence": [
+    6,
+    3,
+    6,
+    1,
+    6,
+    2,
+    3,
+    7,
+    3,
+    8,
+    7
+  ],
+  "total_duration_s": 85.58,
+  "segments": [
+    {
+      "word": "Kkk",
+      "zone": 6,
+      "index": 0,
+      "duration_s": 7.78,
+      "start_frame": 0,
+      "end_frame": 343098
+    },
+    {
+      "word": "yellows",
+      "zone": 3,
+      "index": 1,
+      "duration_s": 7.78,
+      "start_frame": 343098,
+      "end_frame": 686196
+    },
+    {
+      "word": "robbin",
+      "zone": 6,
+      "index": 2,
+      "duration_s": 7.78,
+      "start_frame": 686196,
+      "end_frame": 1029294
+    },
+    {
+      "word": "onset",
+      "zone": 1,
+      "index": 3,
+      "duration_s": 7.78,
+      "start_frame": 1029294,
+      "end_frame": 1372392
+    },
+    {
+      "word": "kkk",
+      "zone": 6,
+      "index": 4,
+      "duration_s": 7.78,
+      "start_frame": 1372392,
+      "end_frame": 1715490
+    },
+    {
+      "word": "entitlement",
+      "zone": 2,
+      "index": 5,
+      "duration_s": 7.78,
+      "start_frame": 1715490,
+      "end_frame": 2058588
+    },
+    {
+      "word": "downswings",
+      "zone": 3,
+      "index": 6,
+      "duration_s": 7.78,
+      "start_frame": 2058588,
+      "end_frame": 2401686
+    },
+    {
+      "word": "dataset",
+      "zone": 7,
+      "index": 7,
+      "duration_s": 7.78,
+      "start_frame": 2401686,
+      "end_frame": 2744784
+    },
+    {
+      "word": "cfc",
+      "zone": 3,
+      "index": 8,
+      "duration_s": 7.78,
+      "start_frame": 2744784,
+      "end_frame": 3087882
+    },
+    {
+      "word": "pleurisy",
+      "zone": 8,
+      "index": 9,
+      "duration_s": 7.78,
+      "start_frame": 3087882,
+      "end_frame": 3430980
+    },
+    {
+      "word": "monacan",
+      "zone": 7,
+      "index": 10,
+      "duration_s": 7.78,
+      "start_frame": 3430980,
+      "end_frame": 3774078
+    }
+  ]
+}

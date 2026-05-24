@@ -1,0 +1,83 @@
+[
+  {
+    "file": "zone1.wav",
+    "true_z": 1,
+    "pred_z": 1,
+    "ood": false,
+    "centroid_hz": 5546.41,
+    "flatness": 0,
+    "bpm": 119.68
+  },
+  {
+    "file": "zone2.wav",
+    "true_z": 2,
+    "pred_z": 2,
+    "ood": false,
+    "centroid_hz": 6316.63,
+    "flatness": 0,
+    "bpm": 119.68
+  },
+  {
+    "file": "zone3.wav",
+    "true_z": 3,
+    "pred_z": 3,
+    "ood": false,
+    "centroid_hz": 7121.59,
+    "flatness": 0,
+    "bpm": 119.68
+  },
+  {
+    "file": "zone4.wav",
+    "true_z": 4,
+    "pred_z": 4,
+    "ood": false,
+    "centroid_hz": 8288.67,
+    "flatness": 0,
+    "bpm": 119.68
+  },
+  {
+    "file": "zone5.wav",
+    "true_z": 5,
+    "pred_z": 5,
+    "ood": false,
+    "centroid_hz": 9229.26,
+    "flatness": 0,
+    "bpm": 119.68
+  },
+  {
+    "file": "zone6.wav",
+    "true_z": 6,
+    "pred_z": 6,
+    "ood": false,
+    "centroid_hz": 6246.81,
+    "flatness": 0,
+    "bpm": 119.68
+  },
+  {
+    "file": "zone7.wav",
+    "true_z": 7,
+    "pred_z": 7,
+    "ood": false,
+    "centroid_hz": 6409.33,
+    "flatness": 0,
+    "bpm": 119.68
+  },
+  {
+    "file": "zone8.wav",
+    "true_z": 8,
+    "pred_z": 8,
+    "ood": false,
+    "centroid_hz": 7197.81,
+    "flatness": 0,
+    "bpm": 119.68
+  },
+  {
+    "file": "zone9.wav",
+    "true_z": 9,
+    "pred_z": 9,
+    "ood": false,
+    "centroid_hz": 9558.48,
+    "flatness": 0,
+    "bpm": 119.68
+  }
+]

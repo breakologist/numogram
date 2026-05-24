@@ -1,0 +1,201 @@
+FIXED AQ CHAIN — oracle (2026-05-21 04:44)
+════════════════════════════════════════════════════════════════════════
+AQ checksum never changes. Vocabulary cascades.
+Corpus: oracle (455 buckets, 42,508 entries)
+Engine: xeno_jump v2, all-word mode, seed 321
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=708, Z6): The cryptolith opens the decimator gate
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ Gay whereabouts vimana gay honesty yap
+  [  2] ✓ Mas initiatives huckle mas prohibit gun
+  [  3] ✓ Sam reproducible robber sam unlooked ool
+  [  4] ✓ Hbw excellently errand hbw kinsfolk enam
+  [  5] ✓ Sam vocabularies verse sam untapped xii
+  ... (35 intermediate steps) ...
+  [ 40] ✓ Dado chronomagical berlin dado confirms blade
+  [ 41] ✓ Fale contemplated castle fale enchanter comb
+  [ 42] ✓ Glad euphrosyne dreams glad ianmerrs elek
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1018, Z1): hyperstition flows through the triangular syzygy
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ informatively hybrid immediate gay gatekeepers stressed
+  [  2] ✓ philostratus plugs raccoons mas melanesians glorifies
+  [  3] ✓ unfrequently virya tothink sam sublimity petulant
+  [  4] ✓ informatively karuna leveraged hbw homoerotic elephants
+  [  5] ✓ squeamishness warns travels sam qualifying strawman
+  ... (35 intermediate steps) ...
+  [ 40] ✓ computronium creeps control dado continuum candlemass
+  [ 41] ✓ firstcentury fancies effectual fale durability conflicted
+  [ 42] ✓ informatively ility impiety glad glittering dropdown
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=465, Z6): Katak and Oddubb coil the plex
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ Hwmi gu These tame gay garage
+  [  2] ✓ Paces lcd Hectic fond mas lays
+  [  3] ✓ Vlra pl Picked ons sam slake
+  [  4] ✓ Jabez gu Duzo cobs hbw greco
+  [  5] ✓ Wait pl Thais svg sam panel
+  ... (35 intermediate steps) ...
+  [ 40] ✓ Decima bel Boxy beard dado candle
+  [ 41] ✓ Flank dna Clung caps fale donna
+  [ 42] ✓ Hyas gu Doesn clio glad gargo
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=712, Z1): teleoplexy accelerates the void circuit
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ imposition svqolomf gay globe issues
+  [  2] ✓ phanerozoic indenture mas melt pompeii
+  [  3] ✓ unigenitus publisher sam span stinks
+  [  4] ✓ infinitudes ereqrueng hbw heine lexemes
+  [  5] ✓ stimulates supplant sam subh struck
+  ... (35 intermediate steps) ...
+  [ 40] ✓ descriptive centrally dado champ crossed
+  [ 41] ✓ experienual creatures fale drew firefox
+  [ 42] ✓ impracticable ecospheric glad gnon jealous
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=925, Z7): the demon uttunul whispers from the djynxxagram
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ gay erein unhindered stations genz gay thesisjust
+  [  2] ✓ mas inman hypersti impressed lvii mas intuitions
+  [  3] ✓ sam reeds recombiner prefixing tut sam ritualistic
+  [  4] ✓ hbw female epitomise exhausts heru hbw expenditure
+  [  5] ✓ sam zone undertow sprinkled roar sam thesisjust
+  ... (35 intermediate steps) ...
+  [ 40] ✓ dado cells charioteer buddhaghosa capala dado attributing
+  [ 41] ✓ fale dacite corporate consisted donee fale confessional
+  [ 42] ✓ glad erein electrons emphasised genz glad envelopment
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=820, Z1): paramita conducts dissolve the qliphoth veil
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ injury subjects kadmillos gay kabalistic gemma
+  [  2] ✓ pukkasi hardwired respects mas respects pagan
+  [  3] ✓ tosses peerless virtues sam virtues tube
+  [  4] ✓ knights endorses marrying hbw marrying gveda
+  [  5] ✓ tripped statist warnings sam warnings uego
+  ... (35 intermediate steps) ...
+  [ 40] ✓ deifying blindborn defiantly dado defiantly budge
+  [ 41] ✓ genocidal conspire foregoing fale foregoing dips
+  [ 42] ✓ inseven drumming knowledge glad knowledge gibil
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=760, Z4): numogrammic recursion spirals zone nine
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ insufferable undertaken separate erect hemp
+  [  2] ✓ profession liberality greekfor inman nein
+  [  3] ✓ uncivilised resistance ouerieu reeds seem
+  [  4] ✓ mentalities hipparchos discuss female hyde
+  [  5] ✓ uncleanness typhonian sentence zone self
+  ... (35 intermediate steps) ...
+  [ 40] ✓ destroying calibration billlion cells ceos
+  [ 41] ✓ fuzziness derbyshire clovers dacite ener
+  [ 42] ✓ intelligent harbouring desisted erein hoar
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=740, Z2): entropy garden seeded with hardware random
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ ringlets work erect erect grenoble hebraica
+  [  2] ✓ fraternal ishim inman inman paranoid philoe
+  [  3] ✓ paralleled robin reeds reeds standon uifted
+  [  4] ✓ divinised garden female female hitting jolly
+  [  5] ✓ reverence west zone zone stellar unmake
+  ... (35 intermediate steps) ...
+  [ 40] ✓ bustling bibles cells cells categori comedy
+  [ 41] ✓ conflates coerce dacite dacite distant etext
+  [ 42] ✓ dictation feudal erein erein guteans hindoo
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=698, Z5): beat poetry through the abecedarium chain
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ daub keyboard immediate gay struggle gende
+  [  2] ✓ hane purest raccoons mas glorifies medal
+  [  3] ✓ pta targets tothink sam petulant weld
+  [  4] ✓ dhy maintain leveraged hbw elephants hive
+  [  5] ✓ let technics travels sam strawman reach
+  ... (35 intermediate steps) ...
+  [ 40] ✓ badge dreamland control dado candlemass chain
+  [ 41] ✓ cabal forgets effectual fale conflicted eccfde
+  [ 42] ✓ daub kurdish impiety glad dropdown gende
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=967, Z4): what the Tathagata preached as merit was no-stock of merit
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ gazed gay Immediate little pd runic rehc ena-zonal fae runic
+  [  2] ✓ lvii mas Raccoons revise eo gents gaddi js-idaeus li gents
+  [  3] ✓ tut sam Tothink warmer ki mills maki ti-scream pe mills
+  [  4] ✓ heru hbw Leveraged message eae dower dst ex-fibers fo dower
+  [  5] ✓ roar sam Travels widely pd roamed rehc no-yesod pe roamed
+  ... (35 intermediate steps) ...
+  [ 40] ✓ capala dado Control demotic bed blends blas cbo-capella bee blends
+  [ 41] ✓ donee fale Effectual goodly cq claimed chin dig-damages ep claimed
+  [ 42] ✓ genz glad Impiety lowly eae domain ding ex-exiled fo domain
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1312, Z7): I am the silence that is incomprehensible and the voice whose sound is manifold
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ I fh gay stream genie gak joiningtogether gu gay yvy surge stone gak iridium
+  [  2] ✓ I gg mas hegemon njfs lcd revalorization lcd mas knock hickey heldto lcd pompeii
+  [  3] ✓ I kc sam pepper tell pl ventriloquism pl sam ryas numog plays pl stinks
+  [  4] ✓ I fh hbw europa herr gu joiningtogether gu hbw gauche enacted elects gu lexemes
+  [  5] ✓ I ie sam storm that pl superficialness pl sam yods stus splice pl struck
+  ... (35 intermediate steps) ...
+  [ 40] ✓ I am dado campania cabbala bel comparativists bel dado cascade blocked burned bel crossed
+  [ 41] ✓ I fh fale curry dogma dna incomprehensible dna fale dayes chubby coward dna firefox
+  [ 42] ✓ I bab glad driver gins gu joiningtogether gu glad flux dorian discon gu jealous
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1088, Z8): wherever there is the possession of signs there is falsehood
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ rhythmic fever gak gay thestarting fae zonal fever gak speakers
+  [  2] ✓ fraternal level lcd mas intuitions li idaeus level lcd grammatic
+  [  3] ✓ paralleled shock pl sam ritualistic pe scream shock pl orbiting
+  [  4] ✓ divinised fresh gu hbw expenditure fo fibers fresh gu entwined
+  [  5] ✓ reverence paper pl sam thesisjust pe yesod paper pl sorcery
+  ... (35 intermediate steps) ...
+  [ 40] ✓ bustling boiled bel dado attributing bee capella boiled bel bracelets
+  [ 41] ✓ conflates didst dna fale confessional ep damages didst dna contained
+  [ 42] ✓ dictation finale gu glad envelopment fo exiled finale gu disregard
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1110, Z3): a Bodhisattva should give gifts unsupported by the idea of a sign
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ a Legislative iolcus pred tanaoa immortalizes qj gay gach fae a genie
+  [  2] ✓ a Samantabhadra poured flip hones physiological ela mas pdh li a njfs
+  [  3] ✓ a Undeciphered tricked laye post unconditional lea sam vo pe a tell
+  [  4] ✓ a Marginalised keynes disk early incrementally dei hbw has fo a herr
+  [  5] ✓ a Unification tweaks pou tackle straightening qj sam vo pe a that
+  ... (35 intermediate steps) ...
+  [ 40] ✓ a Detrimental deludes basic bokor deforestation big dado bya bee a cabbala
+  [ 41] ✓ a Handmaidening figtree cast chump eccentricities cx fale eds ep a dogma
+  [ 42] ✓ a Legislative isabella della downe improbability dei glad gat fo a gins
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1336, Z4): the stock of merit of the one who gives unsupported is not easy to measure
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ gay zonal fae runic fae gay ite xog taniah immortalizes gak tane gnon seb incensed
+  [  2] ✓ mas idaeus li gents li mas ood ides glint physiological lcd gies melt feo questi
+  [  3] ✓ sam scream pe mills pe sam udi robb owns unconditional pl mind span mal tawdry
+  [  4] ✓ hbw fibers fo dower fo hbw kala fold doubt incrementally gu dish heine dog lesous
+  [  5] ✓ sam yesod pe roamed pe sam udi wkab talked straightening pl seek subh sp tensor
+  ... (35 intermediate steps) ...
+  [ 40] ✓ dado capella bee blends bee dado dwg cans benefic deforestation bel bars champ arg delphine
+  [ 41] ✓ fale damages ep claimed ep fale gir desi coffer eccentricities dna canal drew bse flisty
+  [ 42] ✓ glad exiled fo domain fo glad jack feege disks improbability gu cord gnon dog ionized

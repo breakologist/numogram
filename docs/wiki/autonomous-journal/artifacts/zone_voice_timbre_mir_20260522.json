@@ -1,0 +1,254 @@
+{
+  "1": {
+    "original": {
+      "centroid_mean": 1797.7758456322072,
+      "centroid_std": 3177.9217688181966,
+      "bandwidth_mean": 1258.618649666925,
+      "bandwidth_std": 2204.9543467237213,
+      "rolloff_mean": 3250.1337497671384,
+      "rolloff_std": 5709.036414307892,
+      "flatness_mean": 0.7876484394073486,
+      "flatness_std": 0.3771088421344757,
+      "zcr_mean": 0.037843616104694486,
+      "zcr_std": 0.08037361229520042,
+      "rms_mean": 0.033005598932504654
+    },
+    "normalized": {
+      "centroid_mean": 1797.775842475049,
+      "centroid_std": 3177.9217639079466,
+      "bandwidth_mean": 1258.6186470129173,
+      "bandwidth_std": 2204.954342249012,
+      "rolloff_mean": 3250.1337497671384,
+      "rolloff_std": 5709.036414307892,
+      "flatness_mean": 0.7876484394073486,
+      "flatness_std": 0.3771088421344757,
+      "zcr_mean": 0.037843616104694486,
+      "zcr_std": 0.08037361229520042,
+      "rms_mean": 0.011975239031016827
+    }
+  },
+  "2": {
+    "original": {
+      "centroid_mean": 1958.118523215952,
+      "centroid_std": 3486.093713595525,
+      "bandwidth_mean": 1336.215594056341,
+      "bandwidth_std": 2350.4753518219923,
+      "rolloff_mean": 3560.519950400522,
+      "rolloff_std": 6288.92546687669,
+      "flatness_mean": 0.8044402003288269,
+      "flatness_std": 0.35567712783813477,
+      "zcr_mean": 0.03858440643628912,
+      "zcr_std": 0.0855413088646906,
+      "rms_mean": 0.030081044882535934
+    },
+    "normalized": {
+      "centroid_mean": 1958.1185207687067,
+      "centroid_std": 3486.0937095343857,
+      "bandwidth_mean": 1336.2155912806666,
+      "bandwidth_std": 2350.475347048765,
+      "rolloff_mean": 3560.519950400522,
+      "rolloff_std": 6288.92546687669,
+      "flatness_mean": 0.8044402003288269,
+      "flatness_std": 0.35567712783813477,
+      "zcr_mean": 0.03858440643628912,
+      "zcr_std": 0.0855413088646906,
+      "rms_mean": 0.011667372658848763
+    }
+  },
+  "3": {
+    "original": {
+      "centroid_mean": 2027.6910135821004,
+      "centroid_std": 3661.681534709456,
+      "bandwidth_mean": 1380.7433668803378,
+      "bandwidth_std": 2458.9592638691224,
+      "rolloff_mean": 3728.100258476155,
+      "rolloff_std": 6664.258612501884,
+      "flatness_mean": 0.8183968663215637,
+      "flatness_std": 0.34248197078704834,
+      "zcr_mean": 0.0379185683681073,
+      "zcr_std": 0.0859633481159684,
+      "rms_mean": 0.027454793453216553
+    },
+    "normalized": {
+      "centroid_mean": 2027.691013334296,
+      "centroid_std": 3661.681533779279,
+      "bandwidth_mean": 1380.7433654093347,
+      "bandwidth_std": 2458.9592613423406,
+      "rolloff_mean": 3728.100258476155,
+      "rolloff_std": 6664.258612501884,
+      "flatness_mean": 0.8183968663215637,
+      "flatness_std": 0.3424820005893707,
+      "zcr_mean": 0.0379185683681073,
+      "zcr_std": 0.0859633481159684,
+      "rms_mean": 0.011313451454043388
+    }
+  },
+  "4": {
+    "original": {
+      "centroid_mean": 1981.8321131490286,
+      "centroid_std": 3821.6696008343724,
+      "bandwidth_mean": 1307.4364917195285,
+      "bandwidth_std": 2491.741493046948,
+      "rolloff_mean": 3604.581184216654,
+      "rolloff_std": 6898.0519458090785,
+      "flatness_mean": 0.8446473479270935,
+      "flatness_std": 0.3192673623561859,
+      "zcr_mean": 0.03642025079172876,
+      "zcr_std": 0.08679895060065779,
+      "rms_mean": 0.023346100002527237
+    },
+    "normalized": {
+      "centroid_mean": 1981.832114771547,
+      "centroid_std": 3821.6696028976876,
+      "bandwidth_mean": 1307.4364904566057,
+      "bandwidth_std": 2491.7414906930967,
+      "rolloff_mean": 3604.581184216654,
+      "rolloff_std": 6898.0519458090785,
+      "flatness_mean": 0.8446473479270935,
+      "flatness_std": 0.3192673623561859,
+      "zcr_mean": 0.03642025079172876,
+      "zcr_std": 0.08679895060065779,
+      "rms_mean": 0.010708998888731003
+    }
+  },
+  "5": {
+    "original": {
+      "centroid_mean": 1905.8703310558826,
+      "centroid_std": 3859.5669063627092,
+      "bandwidth_mean": 1218.1913154748595,
+      "bandwidth_std": 2439.8765938200327,
+      "rolloff_mean": 3384.8526569485844,
+      "rolloff_std": 6805.303975631658,
+      "flatness_mean": 0.8569119572639465,
+      "flatness_std": 0.3091117739677429,
+      "zcr_mean": 0.033247514204545456,
+      "zcr_std": 0.08131555174616859,
+      "rms_mean": 0.020951304584741592
+    },
+    "normalized": {
+      "centroid_mean": 1905.8703334573656,
+      "centroid_std": 3859.5669104334124,
+      "bandwidth_mean": 1218.191315551505,
+      "bandwidth_std": 2439.876593939686,
+      "rolloff_mean": 3384.8526569485844,
+      "rolloff_std": 6805.303975631658,
+      "flatness_mean": 0.8569119572639465,
+      "flatness_std": 0.3091117739677429,
+      "zcr_mean": 0.033247514204545456,
+      "zcr_std": 0.08131555174616859,
+      "rms_mean": 0.010354182682931423
+    }
+  },
+  "6": {
+    "original": {
+      "centroid_mean": 1470.8081631160032,
+      "centroid_std": 3156.6195555150844,
+      "bandwidth_mean": 963.0939253783268,
+      "bandwidth_std": 2048.0540505794916,
+      "rolloff_mean": 2553.4656325679957,
+      "rolloff_std": 5485.365858686469,
+      "flatness_mean": 0.8562946915626526,
+      "flatness_std": 0.317034512758255,
+      "zcr_mean": 0.022726545035394934,
+      "zcr_std": 0.05651409882322396,
+      "rms_mean": 0.014468797482550144
+    },
+    "normalized": {
+      "centroid_mean": 1470.808162212135,
+      "centroid_std": 3156.6195540121257,
+      "bandwidth_mean": 963.093924266673,
+      "bandwidth_std": 2048.0540484443263,
+      "rolloff_mean": 2553.4656325679957,
+      "rolloff_std": 5485.365858686469,
+      "flatness_mean": 0.8562946915626526,
+      "flatness_std": 0.317034512758255,
+      "zcr_mean": 0.022726545035394934,
+      "zcr_std": 0.05651409882322396,
+      "rms_mean": 0.009886277839541435
+    }
+  },
+  "7": {
+    "original": {
+      "centroid_mean": 1413.4016098711609,
+      "centroid_std": 3102.4547595069816,
+      "bandwidth_mean": 951.7878165464635,
+      "bandwidth_std": 2078.375132356348,
+      "rolloff_mean": 2480.3297608513412,
+      "rolloff_std": 5449.100996928493,
+      "flatness_mean": 0.8637439608573914,
+      "flatness_std": 0.3089544177055359,
+      "zcr_mean": 0.02188023938152012,
+      "zcr_std": 0.05573499586823922,
+      "rms_mean": 0.012634790502488613
+    },
+    "normalized": {
+      "centroid_mean": 1413.4016131303176,
+      "centroid_std": 3102.4547654063854,
+      "bandwidth_mean": 951.7878192122695,
+      "bandwidth_std": 2078.3751375295205,
+      "rolloff_mean": 2480.3297608513412,
+      "rolloff_std": 5449.100996928493,
+      "flatness_mean": 0.8637440800666809,
+      "flatness_std": 0.3089541792869568,
+      "zcr_mean": 0.02188023938152012,
+      "zcr_std": 0.05573499586823922,
+      "rms_mean": 0.009646079502999783
+    }
+  },
+  "8": {
+    "original": {
+      "centroid_mean": 1458.3569339094834,
+      "centroid_std": 3271.989718383095,
+      "bandwidth_mean": 930.7400040033483,
+      "bandwidth_std": 2077.2338852892785,
+      "rolloff_mean": 2551.8931631892697,
+      "rolloff_std": 5705.503678864731,
+      "flatness_mean": 0.8742321729660034,
+      "flatness_std": 0.2961806058883667,
+      "zcr_mean": 0.020940061475409836,
+      "zcr_std": 0.05462449289995683,
+      "rms_mean": 0.01165127195417881
+    },
+    "normalized": {
+      "centroid_mean": 1458.3569311018578,
+      "centroid_std": 3271.989713015079,
+      "bandwidth_mean": 930.7400022956131,
+      "bandwidth_std": 2077.233882075428,
+      "rolloff_mean": 2551.8931631892697,
+      "rolloff_std": 5705.503678864731,
+      "flatness_mean": 0.8742326498031616,
+      "flatness_std": 0.2961800992488861,
+      "zcr_mean": 0.020940061475409836,
+      "zcr_std": 0.05462449289995683,
+      "rms_mean": 0.009418473578989506
+    }
+  },
+  "9": {
+    "original": {
+      "centroid_mean": 1399.926467050824,
+      "centroid_std": 3417.8545994585825,
+      "bandwidth_mean": 839.6701746347143,
+      "bandwidth_std": 2045.0140971421195,
+      "rolloff_mean": 2532.927257009128,
+      "rolloff_std": 6168.176810626349,
+      "flatness_mean": 0.8933302164077759,
+      "flatness_std": 0.2752072811126709,
+      "zcr_mean": 0.018954190340909092,
+      "zcr_std": 0.05208374582825106,
+      "rms_mean": 0.009367556311190128
+    },
+    "normalized": {
+      "centroid_mean": 1399.9264695751733,
+      "centroid_std": 3417.85460529352,
+      "bandwidth_mean": 839.6701752020781,
+      "bandwidth_std": 2045.014098401402,
+      "rolloff_mean": 2532.927257009128,
+      "rolloff_std": 6168.176810626349,
+      "flatness_mean": 0.8933302164077759,
+      "flatness_std": 0.2752072811126709,
+      "zcr_mean": 0.018954190340909092,
+      "zcr_std": 0.05208374582825106,
+      "rms_mean": 0.008914452977478504
+    }
+  }
+}

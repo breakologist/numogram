@@ -1,0 +1,652 @@
+{
+  "mode": "single",
+  "parameters": {
+    "text": "encoder colony array position scan threshold",
+    "corpus_size": 89050,
+    "generations": 7,
+    "seed": 17,
+    "creative": true,
+    "creative_strategy": "varentropy",
+    "bucket_key": "aq",
+    "correlate": false
+  },
+  "original_aq": 825,
+  "original_words": [
+    "encoder",
+    "colony",
+    "array",
+    "position",
+    "scan",
+    "threshold"
+  ],
+  "trajectory": [
+    {
+      "generation": 0,
+      "text": "encoder colony array position scan threshold",
+      "words": [
+        "encoder",
+        "colony",
+        "array",
+        "position",
+        "scan",
+        "threshold"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "original_aq": 825,
+      "mutated_aq": 825
+    },
+    {
+      "generation": 1,
+      "text": "december dipping chancy doxology buck effortful",
+      "words": [
+        "december",
+        "dipping",
+        "chancy",
+        "doxology",
+        "buck",
+        "effortful"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 825,
+      "entropy": 4.211623,
+      "metrics": {
+        "total_edit": 37,
+        "avg_edit": 6.166667,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "encoder",
+          "crumpled": "december",
+          "reconstructed": "december",
+          "bucket_key": "AQ=127",
+          "bucket_size": 521,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "colony",
+          "crumpled": "dipping",
+          "reconstructed": "remits",
+          "bucket_key": "AQ=138",
+          "bucket_size": 620,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "array",
+          "crumpled": "chancy",
+          "reconstructed": "ablated",
+          "bucket_key": "AQ=108",
+          "bucket_size": 403,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "position",
+          "crumpled": "doxology",
+          "reconstructed": "acceptances",
+          "bucket_key": "AQ=189",
+          "bucket_size": 560,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "scan",
+          "crumpled": "buck",
+          "reconstructed": "oboe",
+          "bucket_key": "AQ=73",
+          "bucket_size": 107,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "threshold",
+          "crumpled": "effortful",
+          "reconstructed": "necessary",
+          "bucket_key": "AQ=190",
+          "bucket_size": 578,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "text": "cannier chipper biopic cogitator aux coldblooded",
+      "words": [
+        "cannier",
+        "chipper",
+        "biopic",
+        "cogitator",
+        "aux",
+        "coldblooded"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 825,
+      "entropy": 3.874272,
+      "metrics": {
+        "total_edit": 38,
+        "avg_edit": 6.333333,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "encoder",
+          "crumpled": "cannier",
+          "reconstructed": "cannier",
+          "bucket_key": "AQ=127",
+          "bucket_size": 521,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "colony",
+          "crumpled": "chipper",
+          "reconstructed": "vicarage",
+          "bucket_key": "AQ=138",
+          "bucket_size": 620,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "array",
+          "crumpled": "biopic",
+          "reconstructed": "ablated",
+          "bucket_key": "AQ=108",
+          "bucket_size": 403,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "position",
+          "crumpled": "cogitator",
+          "reconstructed": "acceptances",
+          "bucket_key": "AQ=189",
+          "bucket_size": 560,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "scan",
+          "crumpled": "aux",
+          "reconstructed": "cone",
+          "bucket_key": "AQ=73",
+          "bucket_size": 107,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "threshold",
+          "crumpled": "coldblooded",
+          "reconstructed": "factorised",
+          "bucket_key": "AQ=190",
+          "bucket_size": 578,
+          "edit_distance": 8,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "text": "hymnal hatreds fafnir invalidly dome isinglass",
+      "words": [
+        "hymnal",
+        "hatreds",
+        "fafnir",
+        "invalidly",
+        "dome",
+        "isinglass"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 825,
+      "entropy": 3.880436,
+      "metrics": {
+        "total_edit": 41,
+        "avg_edit": 6.833333,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "encoder",
+          "crumpled": "hymnal",
+          "reconstructed": "hunts",
+          "bucket_key": "AQ=127",
+          "bucket_size": 521,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "colony",
+          "crumpled": "hatreds",
+          "reconstructed": "precise",
+          "bucket_key": "AQ=138",
+          "bucket_size": 620,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "array",
+          "crumpled": "fafnir",
+          "reconstructed": "ablated",
+          "bucket_key": "AQ=108",
+          "bucket_size": 403,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "position",
+          "crumpled": "invalidly",
+          "reconstructed": "acceptances",
+          "bucket_key": "AQ=189",
+          "bucket_size": 560,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "scan",
+          "crumpled": "dome",
+          "reconstructed": "mare",
+          "bucket_key": "AQ=73",
+          "bucket_size": 107,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "threshold",
+          "crumpled": "isinglass",
+          "reconstructed": "purchaser",
+          "bucket_key": "AQ=190",
+          "bucket_size": 578,
+          "edit_distance": 8,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "text": "antwan amicably aladdin ameliorate achy annalists",
+      "words": [
+        "antwan",
+        "amicably",
+        "aladdin",
+        "ameliorate",
+        "achy",
+        "annalists"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 825,
+      "entropy": 3.695773,
+      "metrics": {
+        "total_edit": 38,
+        "avg_edit": 6.333333,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "encoder",
+          "crumpled": "antwan",
+          "reconstructed": "antwan",
+          "bucket_key": "AQ=127",
+          "bucket_size": 521,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "colony",
+          "crumpled": "amicably",
+          "reconstructed": "bovver",
+          "bucket_key": "AQ=138",
+          "bucket_size": 620,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "array",
+          "crumpled": "aladdin",
+          "reconstructed": "ablated",
+          "bucket_key": "AQ=108",
+          "bucket_size": 403,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "position",
+          "crumpled": "ameliorate",
+          "reconstructed": "acceptances",
+          "bucket_key": "AQ=189",
+          "bucket_size": 560,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "scan",
+          "crumpled": "achy",
+          "reconstructed": "take",
+          "bucket_key": "AQ=73",
+          "bucket_size": 107,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "threshold",
+          "crumpled": "annalists",
+          "reconstructed": "shortens",
+          "bucket_key": "AQ=190",
+          "bucket_size": 578,
+          "edit_distance": 8,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "text": "sashay peptide whole resamples vdt regimented",
+      "words": [
+        "sashay",
+        "peptide",
+        "whole",
+        "resamples",
+        "vdt",
+        "regimented"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 825,
+      "entropy": 3.877871,
+      "metrics": {
+        "total_edit": 43,
+        "avg_edit": 7.166667,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "encoder",
+          "crumpled": "sashay",
+          "reconstructed": "sagging",
+          "bucket_key": "AQ=127",
+          "bucket_size": 521,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "colony",
+          "crumpled": "peptide",
+          "reconstructed": "sambaing",
+          "bucket_key": "AQ=138",
+          "bucket_size": 620,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "array",
+          "crumpled": "whole",
+          "reconstructed": "ablated",
+          "bucket_key": "AQ=108",
+          "bucket_size": 403,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "position",
+          "crumpled": "resamples",
+          "reconstructed": "acceptances",
+          "bucket_key": "AQ=189",
+          "bucket_size": 560,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "scan",
+          "crumpled": "vdt",
+          "reconstructed": "jidda",
+          "bucket_key": "AQ=73",
+          "bucket_size": 107,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "threshold",
+          "crumpled": "regimented",
+          "reconstructed": "grenadiers",
+          "bucket_key": "AQ=190",
+          "bucket_size": 578,
+          "edit_distance": 9,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 6,
+      "text": "corner dearths caddies depreciated bleed diagonally",
+      "words": [
+        "corner",
+        "dearths",
+        "caddies",
+        "depreciated",
+        "bleed",
+        "diagonally"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 825,
+      "entropy": 3.767809,
+      "metrics": {
+        "total_edit": 37,
+        "avg_edit": 6.166667,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "encoder",
+          "crumpled": "corner",
+          "reconstructed": "corner",
+          "bucket_key": "AQ=127",
+          "bucket_size": 521,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "colony",
+          "crumpled": "dearths",
+          "reconstructed": "freeload",
+          "bucket_key": "AQ=138",
+          "bucket_size": 620,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "array",
+          "crumpled": "caddies",
+          "reconstructed": "ablated",
+          "bucket_key": "AQ=108",
+          "bucket_size": 403,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "position",
+          "crumpled": "depreciated",
+          "reconstructed": "acceptances",
+          "bucket_key": "AQ=189",
+          "bucket_size": 560,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "scan",
+          "crumpled": "bleed",
+          "reconstructed": "kun",
+          "bucket_key": "AQ=73",
+          "bucket_size": 107,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "threshold",
+          "crumpled": "diagonally",
+          "reconstructed": "epilogues",
+          "bucket_key": "AQ=190",
+          "bucket_size": 578,
+          "edit_distance": 9,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 7,
+      "text": "riders oddment jinks rectifiable hpv rasputin",
+      "words": [
+        "riders",
+        "oddment",
+        "jinks",
+        "rectifiable",
+        "hpv",
+        "rasputin"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 825,
+      "entropy": 4.108768,
+      "metrics": {
+        "total_edit": 36,
+        "avg_edit": 6.0,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "encoder",
+          "crumpled": "riders",
+          "reconstructed": "rhymed",
+          "bucket_key": "AQ=127",
+          "bucket_size": 521,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "colony",
+          "crumpled": "oddment",
+          "reconstructed": "busboy",
+          "bucket_key": "AQ=138",
+          "bucket_size": 620,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "array",
+          "crumpled": "jinks",
+          "reconstructed": "ablated",
+          "bucket_key": "AQ=108",
+          "bucket_size": 403,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "position",
+          "crumpled": "rectifiable",
+          "reconstructed": "acceptances",
+          "bucket_key": "AQ=189",
+          "bucket_size": 560,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "scan",
+          "crumpled": "hpv",
+          "reconstructed": "cwt",
+          "bucket_key": "AQ=73",
+          "bucket_size": 107,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "threshold",
+          "crumpled": "rasputin",
+          "reconstructed": "outreached",
+          "bucket_key": "AQ=190",
+          "bucket_size": 578,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_recovery_rate": 0.0,
+    "aq_preserved": true,
+    "final_text": "riders oddment jinks rectifiable hpv rasputin",
+    "final_aq": 825,
+    "original_length": 44,
+    "final_length": 45,
+    "length_ratio": 1.0227272727272727,
+    "original_entropy": 3.774455130286896,
+    "final_entropy": 4.108768,
+    "entropy_delta": 0.33431286971310437,
+    "total_edit_distance": 36,
+    "avg_edit_per_word": 6.0,
+    "max_single_word_edit": 10,
+    "exact_matches": "0/6",
+    "exact_ratio": 0.0
+  }
+}

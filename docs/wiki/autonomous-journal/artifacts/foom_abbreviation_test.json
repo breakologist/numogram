@@ -1,0 +1,176 @@
+{
+  "abbrev_known": {
+    "seed": "RF classifier overfit to RMS amplitude",
+    "aq": 703,
+    "dr": 1,
+    "generations": [
+      [
+        1,
+        "Adj buxtehude bogeymen aged Aura boogeymen"
+      ],
+      [
+        2,
+        "Heb breezeway upmost meh Label workshy"
+      ],
+      [
+        3,
+        "Baba infielders guesses dim Clay grommets"
+      ],
+      [
+        4,
+        "Heb dynamites wheelies mid Lees disbursed"
+      ],
+      [
+        5,
+        "Gag ructions vacancies meh Label pummelled"
+      ],
+      [
+        6,
+        "Alb compacting canoeist ate Arcs chestnut"
+      ]
+    ],
+    "entropy_delta": 0.053981538798354656,
+    "entropies": [
+      [
+        1,
+        3.8438516504059654
+      ],
+      [
+        2,
+        3.988077434998131
+      ],
+      [
+        3,
+        3.9650255673058683
+      ],
+      [
+        4,
+        3.7180573473284837
+      ],
+      [
+        5,
+        4.118890197651046
+      ],
+      [
+        6,
+        3.89783318920432
+      ]
+    ]
+  },
+  "abbrev_all": {
+    "seed": "MLP CNN LSTM GPU TPU DSP",
+    "aq": 447,
+    "dr": 6,
+    "generations": [
+      [
+        1,
+        "Aldo Aye Axing Audi Aron Amy"
+      ],
+      [
+        2,
+        "Lane Mace Uses Olga Sahib Net"
+      ],
+      [
+        3,
+        "Chiba Cnn Fetes Effed Dips Deli"
+      ],
+      [
+        4,
+        "Leif Nap Wogs Pew Slap Paid"
+      ],
+      [
+        5,
+        "Lane Mace Video Olga Sahib Net"
+      ],
+      [
+        6,
+        "Baked Bane Boars Barn Begged Asia"
+      ]
+    ],
+    "entropy_delta": -0.03814379951028579,
+    "entropies": [
+      [
+        1,
+        3.4816615121017565
+      ],
+      [
+        2,
+        3.8369589098021657
+      ],
+      [
+        3,
+        3.8456631498513816
+      ],
+      [
+        4,
+        3.8524975771042005
+      ],
+      [
+        5,
+        3.919902579793958
+      ],
+      [
+        6,
+        3.4435177125914707
+      ]
+    ]
+  },
+  "control_no_abbrev": {
+    "seed": "The classifier learns from the data",
+    "aq": 584,
+    "dr": 8,
+    "generations": [
+      [
+        1,
+        "App buxtehude avoided apache app bear"
+      ],
+      [
+        2,
+        "Jct breezeway muddied march jct uhf"
+      ],
+      [
+        3,
+        "Defi infielders demands crabs defi game"
+      ],
+      [
+        4,
+        "Kkk dynamites nulls moll kkk dacha"
+      ],
+      [
+        5,
+        "Jct ructions muffin march jct val"
+      ],
+      [
+        6,
+        "Bail compacting befogged baaing bail bode"
+      ]
+    ],
+    "entropy_delta": 0.11511007941623896,
+    "entropies": [
+      [
+        1,
+        3.6636844629286607
+      ],
+      [
+        2,
+        3.9544425746945726
+      ],
+      [
+        3,
+        3.660169450009578
+      ],
+      [
+        4,
+        3.7941049456316014
+      ],
+      [
+        5,
+        3.8818326655220816
+      ],
+      [
+        6,
+        3.7787945423448996
+      ]
+    ]
+  }
+}

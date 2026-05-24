@@ -1,0 +1,499 @@
+{
+  "mode": "single",
+  "parameters": {
+    "text": "Fracture the decimal membrane now",
+    "corpus_size": 89050,
+    "generations": 6,
+    "seed": 303,
+    "creative": true,
+    "creative_strategy": "varentropy",
+    "bucket_key": "aq",
+    "correlate": false
+  },
+  "original_aq": 556,
+  "original_words": [
+    "Fracture",
+    "the",
+    "decimal",
+    "membrane",
+    "now"
+  ],
+  "trajectory": [
+    {
+      "generation": 0,
+      "text": "Fracture the decimal membrane now",
+      "words": [
+        "Fracture",
+        "the",
+        "decimal",
+        "membrane",
+        "now"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "original_aq": 556,
+      "mutated_aq": 556
+    },
+    {
+      "generation": 1,
+      "text": "Peppery flo induce palermo nerf",
+      "words": [
+        "Peppery",
+        "flo",
+        "induce",
+        "palermo",
+        "nerf"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 556,
+      "entropy": 3.652115,
+      "metrics": {
+        "total_edit": 29,
+        "avg_edit": 5.8,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "Fracture",
+          "crumpled": "Peppery",
+          "reconstructed": "pentagon",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "the",
+          "crumpled": "flo",
+          "reconstructed": "ill",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "decimal",
+          "crumpled": "induce",
+          "reconstructed": "boxes",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "membrane",
+          "crumpled": "palermo",
+          "reconstructed": "sundial",
+          "bucket_key": "AQ=143",
+          "bucket_size": 620,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "now",
+          "crumpled": "nerf",
+          "reconstructed": "wane",
+          "bucket_key": "AQ=79",
+          "bucket_size": 147,
+          "edit_distance": 4,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "text": "Grubbers dena dopey gallery ford",
+      "words": [
+        "Grubbers",
+        "dena",
+        "dopey",
+        "gallery",
+        "ford"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 556,
+      "entropy": 3.72641,
+      "metrics": {
+        "total_edit": 24,
+        "avg_edit": 4.8,
+        "max_edit": 7,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "Fracture",
+          "crumpled": "Grubbers",
+          "reconstructed": "grubbers",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "the",
+          "crumpled": "dena",
+          "reconstructed": "hud",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "decimal",
+          "crumpled": "dopey",
+          "reconstructed": "boxes",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "membrane",
+          "crumpled": "gallery",
+          "reconstructed": "gangrene",
+          "bucket_key": "AQ=143",
+          "bucket_size": 620,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "now",
+          "crumpled": "ford",
+          "reconstructed": "book",
+          "bucket_key": "AQ=79",
+          "bucket_size": 147,
+          "edit_distance": 3,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "text": "Pothers fwd josefa potion pecs",
+      "words": [
+        "Pothers",
+        "fwd",
+        "josefa",
+        "potion",
+        "pecs"
+      ],
+      "recovery_rate": 0.2,
+      "aq_preserved": true,
+      "mutated_aq": 556,
+      "entropy": 3.764735,
+      "metrics": {
+        "total_edit": 25,
+        "avg_edit": 5.0,
+        "max_edit": 7,
+        "exact_count": 1,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "Fracture",
+          "crumpled": "Pothers",
+          "reconstructed": "portals",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "the",
+          "crumpled": "fwd",
+          "reconstructed": "the",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 2,
+          "original": "decimal",
+          "crumpled": "josefa",
+          "reconstructed": "gnupg",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "membrane",
+          "crumpled": "potion",
+          "reconstructed": "fraying",
+          "bucket_key": "AQ=143",
+          "bucket_size": 620,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "now",
+          "crumpled": "pecs",
+          "reconstructed": "gish",
+          "bucket_key": "AQ=79",
+          "bucket_size": 147,
+          "edit_distance": 4,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "text": "Bacillary alt ataxia barbells avdp",
+      "words": [
+        "Bacillary",
+        "alt",
+        "ataxia",
+        "barbells",
+        "avdp"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 556,
+      "entropy": 3.488506,
+      "metrics": {
+        "total_edit": 29,
+        "avg_edit": 5.8,
+        "max_edit": 7,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "Fracture",
+          "crumpled": "Bacillary",
+          "reconstructed": "bacillary",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "the",
+          "crumpled": "alt",
+          "reconstructed": "jct",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "decimal",
+          "crumpled": "ataxia",
+          "reconstructed": "carjack",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "membrane",
+          "crumpled": "barbells",
+          "reconstructed": "salvaged",
+          "bucket_key": "AQ=143",
+          "bucket_size": 620,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "now",
+          "crumpled": "avdp",
+          "reconstructed": "medic",
+          "bucket_key": "AQ=79",
+          "bucket_size": 147,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "text": "Compiles bop calcine centavo chick",
+      "words": [
+        "Compiles",
+        "bop",
+        "calcine",
+        "centavo",
+        "chick"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 556,
+      "entropy": 3.741156,
+      "metrics": {
+        "total_edit": 29,
+        "avg_edit": 5.8,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "Fracture",
+          "crumpled": "Compiles",
+          "reconstructed": "communal",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "the",
+          "crumpled": "bop",
+          "reconstructed": "hud",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "decimal",
+          "crumpled": "calcine",
+          "reconstructed": "shore",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "membrane",
+          "crumpled": "centavo",
+          "reconstructed": "juddered",
+          "bucket_key": "AQ=143",
+          "bucket_size": 620,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "now",
+          "crumpled": "chick",
+          "reconstructed": "todd",
+          "bucket_key": "AQ=79",
+          "bucket_size": 147,
+          "edit_distance": 3,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 6,
+      "text": "Template sam zits tragedy wife",
+      "words": [
+        "Template",
+        "sam",
+        "zits",
+        "tragedy",
+        "wife"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 556,
+      "entropy": 3.748394,
+      "metrics": {
+        "total_edit": 29,
+        "avg_edit": 5.8,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "Fracture",
+          "crumpled": "Template",
+          "reconstructed": "telecoms",
+          "bucket_key": "AQ=164",
+          "bucket_size": 650,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "the",
+          "crumpled": "sam",
+          "reconstructed": "bang",
+          "bucket_key": "AQ=60",
+          "bucket_size": 56,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "decimal",
+          "crumpled": "zits",
+          "reconstructed": "lucked",
+          "bucket_key": "AQ=110",
+          "bucket_size": 425,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "membrane",
+          "crumpled": "tragedy",
+          "reconstructed": "desalts",
+          "bucket_key": "AQ=143",
+          "bucket_size": 620,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "now",
+          "crumpled": "wife",
+          "reconstructed": "drat",
+          "bucket_key": "AQ=79",
+          "bucket_size": 147,
+          "edit_distance": 4,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_recovery_rate": 0.0,
+    "aq_preserved": true,
+    "final_text": "Template sam zits tragedy wife",
+    "final_aq": 556,
+    "original_length": 33,
+    "final_length": 30,
+    "length_ratio": 0.9090909090909091,
+    "original_entropy": 3.8360819078152044,
+    "final_entropy": 3.748394,
+    "entropy_delta": -0.08768790781520464,
+    "total_edit_distance": 29,
+    "avg_edit_per_word": 5.8,
+    "max_single_word_edit": 8,
+    "exact_matches": "0/5",
+    "exact_ratio": 0.0
+  }
+}

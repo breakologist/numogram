@@ -1,0 +1,221 @@
+ZONE CUT-UP from Jumped Text (2026-05-16 03:35)
+════════════════════════════════════════════════════════════════════════
+Each zone's fragmentation profile applied to xeno-jumped text.
+Corpus for source text: oracle
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: The cryptolith opens the decimator gate
+JUMPED: Aku acrimonious adantt aku advisers aeale
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · aku
+
+  ZONE 1 [SURGE]
+  Aku acrimonious adantt aku advisers aeale Aku acrimonious adantt aku advisers aeale—
+
+  ZONE 2 [SEPARATION]
+  Aku acrimonious adantt aku advisers aeale
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  Aku acrimonious adantt aku advisers aeale
+
+  ZONE 5 [PRESSURE]
+  Aku acrimonious adantt aku advisers aeale
+
+  ZONE 6 [ABSTRACTION]
+  acrimonious :: adv≡ers
+
+  ZONE 7 [BLOOD]
+  Aku acrimonious adantt aku advisers aeale
+
+  ZONE 8 [MULTIPLICITY]
+  aeale
+aeale
+adantt
+adantt
+advisers
+advisers
+aku
+aku
+
+  ZONE 9 [PLEX]
+  adantt (((()))) aku aeale adv≡ers Aku (())
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: hyperstition flows through the triangular syzygy
+JUMPED: accusativecases afflict affection aku allurement activity
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · aku
+
+  ZONE 1 [SURGE]
+  accusativecases afflict affection aku allurement activity accusativecases afflict affection aku allurement activity—
+
+  ZONE 2 [SEPARATION]
+  accusativecases afflict affection aku allurement activity
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  accusativecases afflict affection aku allurement activity
+
+  ZONE 5 [PRESSURE]
+  accusativecases afflict affection aku allurement activity
+
+  ZONE 6 [ABSTRACTION]
+  ∀urement :: accusativecases
+
+  ZONE 7 [BLOOD]
+  accusativecases afflict affection aku allurement activity
+
+  ZONE 8 [MULTIPLICITY]
+  afflict
+afflict
+allurement
+allurement
+affection
+affection
+activity
+activity
+
+  ZONE 9 [PLEX]
+  affection (((()))) aku activity ∀urement accusativecases (())
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: Katak and Oddubb coil the plex
+JUMPED: Asian abbe Adown accede aku adding
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · accede
+
+  ZONE 1 [SURGE]
+  Asian abbe Adown accede aku adding Asian abbe Adown accede aku adding—
+
+  ZONE 2 [SEPARATION]
+  Asian abbe Adown accede aku adding
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  Asian abbe Adown accede aku adding
+
+  ZONE 5 [PRESSURE]
+  Asian abbe Adown accede aku adding
+
+  ZONE 6 [ABSTRACTION]
+  accede :: Asian
+
+  ZONE 7 [BLOOD]
+  Asian abbe Adown accede aku adding
+
+  ZONE 8 [MULTIPLICITY]
+  abbe
+abbe
+aku
+aku
+Adown
+Adown
+adding
+adding
+
+  ZONE 9 [PLEX]
+  Adown (((()))) accede adding aku Asian (())
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: teleoplexy accelerates the void circuit
+JUMPED: alphanumeric adaptation aku agenda aeinost
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · agenda
+
+  ZONE 1 [SURGE]
+  alphanumeric adaptation aku agenda aeinost alphanumeric adaptation aku agenda aeinost—
+
+  ZONE 2 [SEPARATION]
+  alphanumeric adaptation aku agenda aeinost
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  alphanumeric adaptation aku agenda aeinost
+
+  ZONE 5 [PRESSURE]
+  alphanumeric adaptation aku agenda aeinost
+
+  ZONE 6 [ABSTRACTION]
+  alphanumeric :: agenda
+
+  ZONE 7 [BLOOD]
+  alphanumeric adaptation aku agenda aeinost
+
+  ZONE 8 [MULTIPLICITY]
+  aku
+aku
+agenda
+agenda
+aeinost
+aeinost
+alphanumeric
+alphanumeric
+
+  ZONE 9 [PLEX]
+  adaptation (((()))) aku (((()))) alphanumeric agenda
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: the demon uttunul whispers from the djynxxagram
+JUMPED: aku aelian adversely acherusian altai aku adulterating
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · acherusian
+
+  ZONE 1 [SURGE]
+  aku aelian adversely acherusian altai aku adulterating aku aelian adversely acherusian altai aku adulterating—
+
+  ZONE 2 [SEPARATION]
+  aku aelian adversely acherusian altai aku adulterating
+
+  ZONE 3 [WARP]
+  adversely
+
+  ZONE 4 [GATE]
+  aku aelian adversely acherusian altai aku adulterating
+
+  ZONE 5 [PRESSURE]
+  aku aelian adversely acherusian altai aku adulterating
+
+  ZONE 6 [ABSTRACTION]
+  altai :: aelian
+
+  ZONE 7 [BLOOD]
+  aku aelian adversely acherusian altai aku adulterating
+
+  ZONE 8 [MULTIPLICITY]
+  aelian
+aelian
+adversely
+adversely
+aku
+aku
+altai
+altai
+adulterating
+adulterating
+
+  ZONE 9 [PLEX]
+  aku adversely altai adulterating (()) acherusian aku (((())))

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 620">
+<rect width="450" height="620" fill="#0f172a"/>
+<defs>
+  <linearGradient id="frameG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#fbbf24" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.22"/>
+  </linearGradient>
+  <radialGradient id="haloG" cx="60%" cy="30%" r="60%">
+      <stop offset="0%"   stop-color="#fbbf24" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect x="8"   y="8"   width="434" height="604" fill="#131b33" stroke="url(#frameG)" stroke-width="2.2" rx="12"/>
+<rect x="10"  y="10"  width="430" height="600" fill="none" stroke="#fbbf24" stroke-width="0.4" stroke-opacity="0.28" rx="11"/>
+<rect x="14"  y="12" width="422" height="22" fill="url(#haloG)" rx="4"/>
+<text x="225" y="29" fill="#fbbf24" font-size="9" font-weight="700" text-anchor="middle">ZONE 5  ·  Pressure  ·  AQΣ=137</text>
+<text x="190" y="44" fill="#94a3b8" font-size="8" font-weight="400" text-anchor="middle">Current:</text>
+<text x="246" y="44" fill="#f8fafc" font-size="9" font-weight="600" text-anchor="middle">1   [Hold]</text>
+<text x="190" y="64" fill="#94a3b8" font-size="8" font-weight="400" text-anchor="middle">Gate:</text>
+<text x="246" y="64" fill="#f8fafc" font-size="9" font-weight="600" text-anchor="middle">Gt-6   → Z6</text>
+<text x="190" y="84" fill="#94a3b8" font-size="8" font-weight="400" text-anchor="middle">Syzygy:</text>
+<text x="246" y="84" fill="#f8fafc" font-size="9" font-weight="600" text-anchor="middle">5::4   ★Katak</text>
+<text x="190" y="104" fill="#94a3b8" font-size="8" font-weight="400" text-anchor="middle">Polarity:</text>
+<text x="246" y="104" fill="#f8fafc" font-size="9" font-weight="600" text-anchor="middle">+  —  Process / becoming</text>
+<text x="190" y="124" fill="#94a3b8" font-size="8" font-weight="400" text-anchor="middle">Region:</text>
+<text x="246" y="124" fill="#f8fafc" font-size="9" font-weight="600" text-anchor="middle">Pressure</text>
+<text x="190" y="144" fill="#94a3b8" font-size="8" font-weight="400" text-anchor="middle">Particle:</text>
+<text x="246" y="144" fill="#f8fafc" font-size="9" font-weight="600" text-anchor="middle">KTT</text>
+<circle cx="134" cy="239" r="44" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+  <circle cx="134" cy="239" r="34"   fill="none" stroke="#f97316"   stroke-width="1.5" stroke-opacity="0.55"/>
+  <circle cx="134" cy="239" r="23"   fill="none" stroke="#fbbf24" stroke-width="1"   stroke-opacity="0.3" stroke-dasharray="3,3"/>
+  <circle cx="134" cy="239" r="4"       fill="#fbbf24" opacity="0.85"/>
+  <text x="134" y="245" fill="#f8fafc" font-size="44" font-weight="700" text-anchor="middle">5</text>
+<text x="134" y="296" fill="#94a3b8" font-size="7.5" font-weight="500" text-anchor="middle">KTT</text>
+<image x="170" y="291" width="120" height="120" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAXklEQVR4nH2QCw6AMAxCHzfUk3pETN2qaBbXNFD6SRiAIwkkNbF4xjmMkFRqKt8NUrefC80Lk4tjDu0aW1k3v69suPKvTmdrX9kvl+10hYOn6+aJMy4D6fr1f5K6dwKMcF35wl92vwAAAABJRU5ErkJggg==" />
+<path d="M 134 285 Q 182 290 230 287"
+ stroke="#e879f9" stroke-width="0.8" stroke-opacity="0.3" fill="none" stroke-dasharray="3,3"/>
+<text x="190" y="423" fill="#94a3b8" font-size="7.5" font-weight="400" text-anchor="start">Pressure builds. The hiss</text>
+<text x="190" y="436" fill="#94a3b8" font-size="7.5" font-weight="400" text-anchor="start">with spittle. You were going</text>
+<circle cx="225" cy="520" r="70" fill="none" stroke="#0f172a" stroke-width="5" stroke-opacity="0.9"/>
+<circle cx="225" cy="520" r="65" fill="none" stroke="#334155" stroke-width="1.5" opacity="0.6"/>
+<text x="225" y="468" fill="#94a3b8" font-size="7" font-weight="600" text-anchor="middle">0</text>
+<text x="258" y="479" fill="#fbbf24" font-size="7" font-weight="600" text-anchor="middle">1</text>
+<text x="278" y="507" fill="#34d399" font-size="7" font-weight="600" text-anchor="middle">2</text>
+<text x="278" y="541" fill="#e879f9" font-size="7" font-weight="600" text-anchor="middle">3</text>
+<text x="258" y="569" fill="#00ffff" font-size="7" font-weight="600" text-anchor="middle">4</text>
+<text x="225" y="580" fill="#f97316" font-size="7" font-weight="600" text-anchor="middle">5</text>
+<text x="192" y="569" fill="#60a5fa" font-size="7" font-weight="600" text-anchor="middle">6</text>
+<text x="172" y="541" fill="#fb7185" font-size="7" font-weight="600" text-anchor="middle">7</text>
+<text x="172" y="507" fill="#c084fc" font-size="7" font-weight="600" text-anchor="middle">8</text>
+<text x="192" y="479" fill="#a855f7" font-size="7" font-weight="600" text-anchor="middle">9</text>
+<path d="M 225 520 A 65 65 0 0 1 186 520" stroke="#fbbf24" stroke-width="2.5" stroke-opacity="0.65" fill="none" stroke-dasharray="6,4"/>
+<line x1="225" y1="513" x2="225" y2="527" stroke="#f97316" stroke-width="2.5"/>
+<text x="178" y="510" fill="#22d3ee" font-size="7.5" font-weight="700" text-anchor="middle">↑ Gt-6 → Z6</text>
+<line x1="186" y1="515" x2="186" y2="525" stroke="#22d3ee" stroke-width="2" opacity="0.9"/>
+</svg>

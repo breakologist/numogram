@@ -15,6 +15,9 @@ https://github.com/sentient-agi/EvoSkill - Open-source framework that automatica
 https://docs.mnemosyne.site/ - memory
 https://lmstudio.ai/ - local model management
 https://github.com/warpdotdev/Warp - an agentic development environment
+https://github.com/liftaris/herm
+https://github.com/arm64be/theia
+https://codepen.io/DULA2025/pen/PwbKNJM
 https://benebellwen.com/i-ching-the-oracle/
 https://www.yijing.nl/
 https://www.researchgate.net/publication/260501697_Signature_geometry_and_quantum_engineering

@@ -191,6 +191,7 @@
    195|   195|   195|   195|   195|   195|
    196|   196|   196|   196|   196|   196|- [[phase5-ideas]] — Nine proposed Phase 5 skills (zone-constrained, VAE, live feedback, etc.)
    197|   197|   197|   197|   197|   197|- [[skills-to-explore]] — Interesting skills from Apr 2026 scan: pixel-art (retro palettes), ascii-video (terminal animation), algorithmic-art/p5js (generative), pokemon-player (RAM-based agent research), heartmula (music gen). Combos: heartmula+oracle-voice, pixel-art+numogram-svg, ascii-video+cult.json, pokemon-player+roguelike-agents.
+- [[oracle-visual-ideas]] — Intake bin for oracle output visual layers: pixel-art glyphs (priority), p5.js oracle-viz linkification, SVG zone-cards / syzygy-chords, Manim reading walkthroughs, ASCII zone glyphs. Organized by tier; graduated experiments become standalone pages.
    198|   198|   198|   198|   198|   198|- [[aq-calculator-design]] — Design document and implementation notes for standalone AQ calculators. Minimal core vs themed polished version, colour palette rationale, zone flavour catalog, history schema, extensibility points, and canonical test vectors. From 9B local‑model design session (earlier Hermes instance).
    199|   199|   199|   199|   199|   199|
    200|   200|   200|   200|   200|   200|---

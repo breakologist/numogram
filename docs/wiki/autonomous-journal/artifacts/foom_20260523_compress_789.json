@@ -1,0 +1,573 @@
+{
+  "mode": "single",
+  "parameters": {
+    "text": "vae cluster near zero reconstruction",
+    "corpus_size": 89050,
+    "generations": 7,
+    "seed": 789,
+    "creative": true,
+    "creative_strategy": "varentropy",
+    "bucket_key": "aq",
+    "correlate": false
+  },
+  "original_aq": 710,
+  "original_words": [
+    "vae",
+    "cluster",
+    "near",
+    "zero",
+    "reconstruction"
+  ],
+  "trajectory": [
+    {
+      "generation": 0,
+      "text": "vae cluster near zero reconstruction",
+      "words": [
+        "vae",
+        "cluster",
+        "near",
+        "zero",
+        "reconstruction"
+      ],
+      "recovery_rate": 0.2,
+      "aq_preserved": true,
+      "original_aq": 710,
+      "mutated_aq": 710
+    },
+    {
+      "generation": 1,
+      "text": "ola trackball hing toked lithographically",
+      "words": [
+        "ola",
+        "trackball",
+        "hing",
+        "toked",
+        "lithographically"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 710,
+      "entropy": 3.841967,
+      "metrics": {
+        "total_edit": 29,
+        "avg_edit": 5.8,
+        "max_edit": 11,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "vae",
+          "crumpled": "ola",
+          "reconstructed": "ola",
+          "bucket_key": "AQ=55",
+          "bucket_size": 45,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "cluster",
+          "crumpled": "trackball",
+          "reconstructed": "heritable",
+          "bucket_key": "AQ=161",
+          "bucket_size": 627,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "near",
+          "crumpled": "hing",
+          "reconstructed": "seam",
+          "bucket_key": "AQ=74",
+          "bucket_size": 139,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "zero",
+          "crumpled": "toked",
+          "reconstructed": "madly",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "reconstruction",
+          "crumpled": "lithographically",
+          "reconstructed": "frontierswomen",
+          "bucket_key": "AQ=320",
+          "bucket_size": 35,
+          "edit_distance": 11,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "text": "pic vicious jodi waldo microbiologists",
+      "words": [
+        "pic",
+        "vicious",
+        "jodi",
+        "waldo",
+        "microbiologists"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 710,
+      "entropy": 3.756585,
+      "metrics": {
+        "total_edit": 32,
+        "avg_edit": 6.4,
+        "max_edit": 13,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "vae",
+          "crumpled": "pic",
+          "reconstructed": "phd",
+          "bucket_key": "AQ=55",
+          "bucket_size": 45,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "cluster",
+          "crumpled": "vicious",
+          "reconstructed": "isomers",
+          "bucket_key": "AQ=161",
+          "bucket_size": 627,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "near",
+          "crumpled": "jodi",
+          "reconstructed": "cabala",
+          "bucket_key": "AQ=74",
+          "bucket_size": 139,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "zero",
+          "crumpled": "waldo",
+          "reconstructed": "polka",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "reconstruction",
+          "crumpled": "microbiologists",
+          "reconstructed": "microbiologists",
+          "bucket_key": "AQ=320",
+          "bucket_size": 35,
+          "edit_distance": 13,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "text": "tag gropers grid faxes industrialising",
+      "words": [
+        "tag",
+        "gropers",
+        "grid",
+        "faxes",
+        "industrialising"
+      ],
+      "recovery_rate": 0.2,
+      "aq_preserved": true,
+      "mutated_aq": 710,
+      "entropy": 3.76465,
+      "metrics": {
+        "total_edit": 27,
+        "avg_edit": 5.4,
+        "max_edit": 12,
+        "exact_count": 1,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "vae",
+          "crumpled": "tag",
+          "reconstructed": "rfd",
+          "bucket_key": "AQ=55",
+          "bucket_size": 45,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "cluster",
+          "crumpled": "gropers",
+          "reconstructed": "gropers",
+          "bucket_key": "AQ=161",
+          "bucket_size": 627,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "near",
+          "crumpled": "grid",
+          "reconstructed": "near",
+          "bucket_key": "AQ=74",
+          "bucket_size": 139,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 3,
+          "original": "zero",
+          "crumpled": "faxes",
+          "reconstructed": "bumbag",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "reconstruction",
+          "crumpled": "industrialising",
+          "reconstructed": "disingenuously",
+          "bucket_key": "AQ=320",
+          "bucket_size": 35,
+          "edit_distance": 12,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "text": "ncaa taproom cabala telco fortysomething",
+      "words": [
+        "ncaa",
+        "taproom",
+        "cabala",
+        "telco",
+        "fortysomething"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 710,
+      "entropy": 3.875071,
+      "metrics": {
+        "total_edit": 23,
+        "avg_edit": 4.6,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "vae",
+          "crumpled": "ncaa",
+          "reconstructed": "ncaa",
+          "bucket_key": "AQ=55",
+          "bucket_size": 45,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "cluster",
+          "crumpled": "taproom",
+          "reconstructed": "crosses",
+          "bucket_key": "AQ=161",
+          "bucket_size": 627,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "near",
+          "crumpled": "cabala",
+          "reconstructed": "calla",
+          "bucket_key": "AQ=74",
+          "bucket_size": 139,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "zero",
+          "crumpled": "telco",
+          "reconstructed": "zens",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "reconstruction",
+          "crumpled": "fortysomething",
+          "reconstructed": "retrospectives",
+          "bucket_key": "AQ=320",
+          "bucket_size": 35,
+          "edit_distance": 9,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "text": "fica mission lps khmer nonconformists",
+      "words": [
+        "fica",
+        "mission",
+        "lps",
+        "khmer",
+        "nonconformists"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 710,
+      "entropy": 3.740142,
+      "metrics": {
+        "total_edit": 33,
+        "avg_edit": 6.6,
+        "max_edit": 11,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "vae",
+          "crumpled": "fica",
+          "reconstructed": "fica",
+          "bucket_key": "AQ=55",
+          "bucket_size": 45,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "cluster",
+          "crumpled": "mission",
+          "reconstructed": "stripy",
+          "bucket_key": "AQ=161",
+          "bucket_size": 627,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "near",
+          "crumpled": "lps",
+          "reconstructed": "aggie",
+          "bucket_key": "AQ=74",
+          "bucket_size": 139,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "zero",
+          "crumpled": "khmer",
+          "reconstructed": "nodded",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "reconstruction",
+          "crumpled": "nonconformists",
+          "reconstructed": "ultrasensitive",
+          "bucket_key": "AQ=320",
+          "bucket_size": 35,
+          "edit_distance": 11,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 6,
+      "text": "has petrarch naiad maven reconstituting",
+      "words": [
+        "has",
+        "petrarch",
+        "naiad",
+        "maven",
+        "reconstituting"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 710,
+      "entropy": 3.852728,
+      "metrics": {
+        "total_edit": 31,
+        "avg_edit": 6.2,
+        "max_edit": 12,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "vae",
+          "crumpled": "has",
+          "reconstructed": "gil",
+          "bucket_key": "AQ=55",
+          "bucket_size": 45,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "cluster",
+          "crumpled": "petrarch",
+          "reconstructed": "hillocks",
+          "bucket_key": "AQ=161",
+          "bucket_size": 627,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "near",
+          "crumpled": "naiad",
+          "reconstructed": "bawl",
+          "bucket_key": "AQ=74",
+          "bucket_size": 139,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "zero",
+          "crumpled": "maven",
+          "reconstructed": "panes",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "reconstruction",
+          "crumpled": "reconstituting",
+          "reconstructed": "hypnotherapist",
+          "bucket_key": "AQ=320",
+          "bucket_size": 35,
+          "edit_distance": 12,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 7,
+      "text": "eva impugned incl grady methodologically",
+      "words": [
+        "eva",
+        "impugned",
+        "incl",
+        "grady",
+        "methodologically"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 710,
+      "entropy": 4.008695,
+      "metrics": {
+        "total_edit": 31,
+        "avg_edit": 6.2,
+        "max_edit": 14,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "vae",
+          "crumpled": "eva",
+          "reconstructed": "eva",
+          "bucket_key": "AQ=55",
+          "bucket_size": 45,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "cluster",
+          "crumpled": "impugned",
+          "reconstructed": "jawbones",
+          "bucket_key": "AQ=161",
+          "bucket_size": 627,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "near",
+          "crumpled": "incl",
+          "reconstructed": "earn",
+          "bucket_key": "AQ=74",
+          "bucket_size": 139,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "zero",
+          "crumpled": "grady",
+          "reconstructed": "egghead",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "reconstruction",
+          "crumpled": "methodologically",
+          "reconstructed": "cardiopulmonary",
+          "bucket_key": "AQ=320",
+          "bucket_size": 35,
+          "edit_distance": 14,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_recovery_rate": 0.0,
+    "aq_preserved": true,
+    "final_text": "eva impugned incl grady methodologically",
+    "final_aq": 710,
+    "original_length": 36,
+    "final_length": 40,
+    "length_ratio": 1.1111111111111112,
+    "original_entropy": 3.6077352526221036,
+    "final_entropy": 4.008695,
+    "entropy_delta": 0.40095974737789675,
+    "total_edit_distance": 31,
+    "avg_edit_per_word": 6.2,
+    "max_single_word_edit": 14,
+    "exact_matches": "0/5",
+    "exact_ratio": 0.0
+  }
+}

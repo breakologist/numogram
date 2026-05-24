@@ -1,0 +1,731 @@
+{
+  "mode": "single",
+  "parameters": {
+    "text": "spectral flatness monotonic across nine zone voices",
+    "corpus_size": 42507,
+    "generations": 7,
+    "seed": 20260523,
+    "creative": true,
+    "creative_strategy": "varentropy",
+    "bucket_key": "both",
+    "correlate": false
+  },
+  "original_aq": 963,
+  "original_words": [
+    "spectral",
+    "flatness",
+    "monotonic",
+    "across",
+    "nine",
+    "zone",
+    "voices"
+  ],
+  "trajectory": [
+    {
+      "generation": 0,
+      "text": "spectral flatness monotonic across nine zone voices",
+      "words": [
+        "spectral",
+        "flatness",
+        "monotonic",
+        "across",
+        "nine",
+        "zone",
+        "voices"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "original_aq": 963,
+      "mutated_aq": 963
+    },
+    {
+      "generation": 1,
+      "text": "howison striated monsoonal sigils pate kunda sirrah",
+      "words": [
+        "howison",
+        "striated",
+        "monsoonal",
+        "sigils",
+        "pate",
+        "kunda",
+        "sirrah"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.881087,
+      "metrics": {
+        "total_edit": 40,
+        "avg_edit": 5.714286,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "howison",
+          "reconstructed": "sustain",
+          "bucket_key": "AQ=166&len=7",
+          "bucket_size": 68,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "striated",
+          "reconstructed": "whiplash",
+          "bucket_key": "AQ=168&len=8",
+          "bucket_size": 113,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "monsoonal",
+          "reconstructed": "biorhythm",
+          "bucket_key": "AQ=199&len=9",
+          "bucket_size": 80,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "sigils",
+          "reconstructed": "mirrih",
+          "bucket_key": "AQ=129&len=6",
+          "bucket_size": 121,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "pate",
+          "reconstructed": "qiao",
+          "bucket_key": "AQ=78&len=4",
+          "bucket_size": 97,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "kunda",
+          "reconstructed": "cient",
+          "bucket_key": "AQ=96&len=5",
+          "bucket_size": 91,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "sirrah",
+          "reconstructed": "withal",
+          "bucket_key": "AQ=127&len=6",
+          "bucket_size": 134,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "text": "factorial politian indwelling oldest lark gobby nebros",
+      "words": [
+        "factorial",
+        "politian",
+        "indwelling",
+        "oldest",
+        "lark",
+        "gobby",
+        "nebros"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.990843,
+      "metrics": {
+        "total_edit": 42,
+        "avg_edit": 6.0,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "factorial",
+          "reconstructed": "contained",
+          "bucket_key": "AQ=166&len=9",
+          "bucket_size": 60,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "politian",
+          "reconstructed": "colossal",
+          "bucket_key": "AQ=168&len=8",
+          "bucket_size": 113,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "indwelling",
+          "reconstructed": "argonautic",
+          "bucket_key": "AQ=199&len=10",
+          "bucket_size": 76,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "oldest",
+          "reconstructed": "melvin",
+          "bucket_key": "AQ=129&len=6",
+          "bucket_size": 121,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "lark",
+          "reconstructed": "blew",
+          "bucket_key": "AQ=78&len=4",
+          "bucket_size": 97,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "gobby",
+          "reconstructed": "maith",
+          "bucket_key": "AQ=96&len=5",
+          "bucket_size": 91,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "nebros",
+          "reconstructed": "crises",
+          "bucket_key": "AQ=127&len=6",
+          "bucket_size": 134,
+          "edit_distance": 3,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "text": "seducers unformed trustees trunk rode welch untied",
+      "words": [
+        "seducers",
+        "unformed",
+        "trustees",
+        "trunk",
+        "rode",
+        "welch",
+        "untied"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.734177,
+      "metrics": {
+        "total_edit": 41,
+        "avg_edit": 5.857143,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "seducers",
+          "reconstructed": "thieving",
+          "bucket_key": "AQ=166&len=8",
+          "bucket_size": 106,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "unformed",
+          "reconstructed": "reversed",
+          "bucket_key": "AQ=168&len=8",
+          "bucket_size": 113,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "trustees",
+          "reconstructed": "southest",
+          "bucket_key": "AQ=199&len=8",
+          "bucket_size": 25,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "trunk",
+          "reconstructed": "proto",
+          "bucket_key": "AQ=129&len=5",
+          "bucket_size": 28,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "rode",
+          "reconstructed": "odub",
+          "bucket_key": "AQ=78&len=4",
+          "bucket_size": 97,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "welch",
+          "reconstructed": "beste",
+          "bucket_key": "AQ=96&len=5",
+          "bucket_size": 91,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "untied",
+          "reconstructed": "crafty",
+          "bucket_key": "AQ=127&len=6",
+          "bucket_size": 134,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "text": "colliding envious demolishes embodied dore conne electra",
+      "words": [
+        "colliding",
+        "envious",
+        "demolishes",
+        "embodied",
+        "dore",
+        "conne",
+        "electra"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.802392,
+      "metrics": {
+        "total_edit": 43,
+        "avg_edit": 6.142857,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "colliding",
+          "reconstructed": "belonging",
+          "bucket_key": "AQ=166&len=9",
+          "bucket_size": 60,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "envious",
+          "reconstructed": "tunnels",
+          "bucket_key": "AQ=168&len=7",
+          "bucket_size": 58,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "demolishes",
+          "reconstructed": "rhetorical",
+          "bucket_key": "AQ=199&len=10",
+          "bucket_size": 76,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "embodied",
+          "reconstructed": "lakamand",
+          "bucket_key": "AQ=129&len=8",
+          "bucket_size": 28,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "dore",
+          "reconstructed": "blew",
+          "bucket_key": "AQ=78&len=4",
+          "bucket_size": 97,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "conne",
+          "reconstructed": "price",
+          "bucket_key": "AQ=96&len=5",
+          "bucket_size": 91,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "electra",
+          "reconstructed": "acheron",
+          "bucket_key": "AQ=127&len=7",
+          "bucket_size": 78,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "text": "anxious averting archetypal ammonia ards atru beatific",
+      "words": [
+        "anxious",
+        "averting",
+        "archetypal",
+        "ammonia",
+        "ards",
+        "atru",
+        "beatific"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 4.066767,
+      "metrics": {
+        "total_edit": 44,
+        "avg_edit": 6.285714,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "anxious",
+          "reconstructed": "betwixt",
+          "bucket_key": "AQ=166&len=7",
+          "bucket_size": 68,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "averting",
+          "reconstructed": "thewhole",
+          "bucket_key": "AQ=168&len=8",
+          "bucket_size": 113,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "archetypal",
+          "reconstructed": "thelxiepia",
+          "bucket_key": "AQ=199&len=10",
+          "bucket_size": 76,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "ammonia",
+          "reconstructed": "abstain",
+          "bucket_key": "AQ=129&len=7",
+          "bucket_size": 80,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "ards",
+          "reconstructed": "math",
+          "bucket_key": "AQ=78&len=4",
+          "bucket_size": 97,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "atru",
+          "reconstructed": "cows",
+          "bucket_key": "AQ=96&len=4",
+          "bucket_size": 58,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "beatific",
+          "reconstructed": "exceeded",
+          "bucket_key": "AQ=127&len=8",
+          "bucket_size": 17,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 6,
+      "text": "timeout sunrise occulture splash pgen list tarry",
+      "words": [
+        "timeout",
+        "sunrise",
+        "occulture",
+        "splash",
+        "pgen",
+        "list",
+        "tarry"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.871654,
+      "metrics": {
+        "total_edit": 39,
+        "avg_edit": 5.571429,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "timeout",
+          "reconstructed": "tatters",
+          "bucket_key": "AQ=166&len=7",
+          "bucket_size": 68,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "sunrise",
+          "reconstructed": "squatol",
+          "bucket_key": "AQ=168&len=7",
+          "bucket_size": 58,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "occulture",
+          "reconstructed": "approving",
+          "bucket_key": "AQ=199&len=9",
+          "bucket_size": 80,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "splash",
+          "reconstructed": "rushed",
+          "bucket_key": "AQ=129&len=6",
+          "bucket_size": 121,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "pgen",
+          "reconstructed": "tang",
+          "bucket_key": "AQ=78&len=4",
+          "bucket_size": 97,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "list",
+          "reconstructed": "soft",
+          "bucket_key": "AQ=96&len=4",
+          "bucket_size": 58,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "tarry",
+          "reconstructed": "knows",
+          "bucket_key": "AQ=127&len=5",
+          "bucket_size": 37,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 7,
+      "text": "pennfield recordare silliness podarge misa sabean pindika",
+      "words": [
+        "pennfield",
+        "recordare",
+        "silliness",
+        "podarge",
+        "misa",
+        "sabean",
+        "pindika"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.78184,
+      "metrics": {
+        "total_edit": 47,
+        "avg_edit": 6.714286,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "pennfield",
+          "reconstructed": "helvetica",
+          "bucket_key": "AQ=166&len=9",
+          "bucket_size": 60,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "recordare",
+          "reconstructed": "idiocracy",
+          "bucket_key": "AQ=168&len=9",
+          "bucket_size": 69,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "silliness",
+          "reconstructed": "attention",
+          "bucket_key": "AQ=199&len=9",
+          "bucket_size": 80,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "podarge",
+          "reconstructed": "generap",
+          "bucket_key": "AQ=129&len=7",
+          "bucket_size": 80,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "misa",
+          "reconstructed": "flaw",
+          "bucket_key": "AQ=78&len=4",
+          "bucket_size": 97,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "sabean",
+          "reconstructed": "cables",
+          "bucket_key": "AQ=96&len=6",
+          "bucket_size": 43,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "pindika",
+          "reconstructed": "yielded",
+          "bucket_key": "AQ=127&len=7",
+          "bucket_size": 78,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_recovery_rate": 0.0,
+    "aq_preserved": true,
+    "final_text": "pennfield recordare silliness podarge misa sabean pindika",
+    "final_aq": 963,
+    "original_length": 51,
+    "final_length": 57,
+    "length_ratio": 1.1176470588235294,
+    "original_entropy": 3.7133390086727722,
+    "final_entropy": 3.78184,
+    "entropy_delta": 0.06850099132722764,
+    "total_edit_distance": 47,
+    "avg_edit_per_word": 6.714286,
+    "max_single_word_edit": 9,
+    "exact_matches": "0/7",
+    "exact_ratio": 0.0
+  }
+}

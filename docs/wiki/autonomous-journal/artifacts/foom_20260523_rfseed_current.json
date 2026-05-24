@@ -1,0 +1,567 @@
+{
+  "mode": "single",
+  "parameters": {
+    "text": "RF classifier overfit to RMS amplitude",
+    "corpus_size": 89050,
+    "generations": 6,
+    "seed": 666,
+    "creative": true,
+    "creative_strategy": "varentropy",
+    "bucket_key": "aq",
+    "correlate": false
+  },
+  "original_aq": 703,
+  "original_words": [
+    "RF",
+    "classifier",
+    "overfit",
+    "to",
+    "RMS",
+    "amplitude"
+  ],
+  "trajectory": [
+    {
+      "generation": 0,
+      "text": "RF classifier overfit to RMS amplitude",
+      "words": [
+        "RF",
+        "classifier",
+        "overfit",
+        "to",
+        "RMS",
+        "amplitude"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "original_aq": 703,
+      "mutated_aq": 703
+    },
+    {
+      "generation": 1,
+      "text": "Adj buxtehude bogeymen aged Aura boogeymen",
+      "words": [
+        "Adj",
+        "buxtehude",
+        "bogeymen",
+        "aged",
+        "Aura",
+        "boogeymen"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 703,
+      "entropy": 3.748614,
+      "metrics": {
+        "total_edit": 34,
+        "avg_edit": 5.666667,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "RF",
+          "crumpled": "Adj",
+          "reconstructed": "adj",
+          "bucket_key": "AQ=42",
+          "bucket_size": 13,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "classifier",
+          "crumpled": "buxtehude",
+          "reconstructed": "pardoners",
+          "bucket_key": "AQ=191",
+          "bucket_size": 562,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "overfit",
+          "crumpled": "bogeymen",
+          "reconstructed": "drinking",
+          "bucket_key": "AQ=158",
+          "bucket_size": 638,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "to",
+          "crumpled": "aged",
+          "reconstructed": "ipa",
+          "bucket_key": "AQ=53",
+          "bucket_size": 50,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "RMS",
+          "crumpled": "Aura",
+          "reconstructed": "huge",
+          "bucket_key": "AQ=77",
+          "bucket_size": 128,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "amplitude",
+          "crumpled": "boogeymen",
+          "reconstructed": "redundant",
+          "bucket_key": "AQ=182",
+          "bucket_size": 591,
+          "edit_distance": 9,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "text": "Heb breezeway upmost meh Label workshy",
+      "words": [
+        "Heb",
+        "breezeway",
+        "upmost",
+        "meh",
+        "Label",
+        "workshy"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 703,
+      "entropy": 3.862949,
+      "metrics": {
+        "total_edit": 34,
+        "avg_edit": 5.666667,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "RF",
+          "crumpled": "Heb",
+          "reconstructed": "gag",
+          "bucket_key": "AQ=42",
+          "bucket_size": 13,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "classifier",
+          "crumpled": "breezeway",
+          "reconstructed": "breezeway",
+          "bucket_key": "AQ=191",
+          "bucket_size": 562,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "overfit",
+          "crumpled": "upmost",
+          "reconstructed": "lakewood",
+          "bucket_key": "AQ=158",
+          "bucket_size": 638,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "to",
+          "crumpled": "meh",
+          "reconstructed": "dog",
+          "bucket_key": "AQ=53",
+          "bucket_size": 50,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "RMS",
+          "crumpled": "Label",
+          "reconstructed": "eels",
+          "bucket_key": "AQ=77",
+          "bucket_size": 128,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "amplitude",
+          "crumpled": "workshy",
+          "reconstructed": "catechises",
+          "bucket_key": "AQ=182",
+          "bucket_size": 591,
+          "edit_distance": 9,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "text": "Baba infielders guesses dim Clay grommets",
+      "words": [
+        "Baba",
+        "infielders",
+        "guesses",
+        "dim",
+        "Clay",
+        "grommets"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 703,
+      "entropy": 3.916245,
+      "metrics": {
+        "total_edit": 34,
+        "avg_edit": 5.666667,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "RF",
+          "crumpled": "Baba",
+          "reconstructed": "baba",
+          "bucket_key": "AQ=42",
+          "bucket_size": 13,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "classifier",
+          "crumpled": "infielders",
+          "reconstructed": "spitballs",
+          "bucket_key": "AQ=191",
+          "bucket_size": 562,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "overfit",
+          "crumpled": "guesses",
+          "reconstructed": "revokes",
+          "bucket_key": "AQ=158",
+          "bucket_size": 638,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "to",
+          "crumpled": "dim",
+          "reconstructed": "gar",
+          "bucket_key": "AQ=53",
+          "bucket_size": 50,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "RMS",
+          "crumpled": "Clay",
+          "reconstructed": "joy",
+          "bucket_key": "AQ=77",
+          "bucket_size": 128,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "amplitude",
+          "crumpled": "grommets",
+          "reconstructed": "mutinies",
+          "bucket_key": "AQ=182",
+          "bucket_size": 591,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "text": "Heb dynamites wheelies mid Lees disbursed",
+      "words": [
+        "Heb",
+        "dynamites",
+        "wheelies",
+        "mid",
+        "Lees",
+        "disbursed"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 703,
+      "entropy": 3.620496,
+      "metrics": {
+        "total_edit": 35,
+        "avg_edit": 5.833333,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "RF",
+          "crumpled": "Heb",
+          "reconstructed": "gag",
+          "bucket_key": "AQ=42",
+          "bucket_size": 13,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "classifier",
+          "crumpled": "dynamites",
+          "reconstructed": "dynamites",
+          "bucket_key": "AQ=191",
+          "bucket_size": 562,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "overfit",
+          "crumpled": "wheelies",
+          "reconstructed": "dawdlers",
+          "bucket_key": "AQ=158",
+          "bucket_size": 638,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "to",
+          "crumpled": "mid",
+          "reconstructed": "dog",
+          "bucket_key": "AQ=53",
+          "bucket_size": 50,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "RMS",
+          "crumpled": "Lees",
+          "reconstructed": "adder",
+          "bucket_key": "AQ=77",
+          "bucket_size": 128,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "amplitude",
+          "crumpled": "disbursed",
+          "reconstructed": "muscleman",
+          "bucket_key": "AQ=182",
+          "bucket_size": 591,
+          "edit_distance": 9,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "text": "Gag ructions vacancies meh Label pummelled",
+      "words": [
+        "Gag",
+        "ructions",
+        "vacancies",
+        "meh",
+        "Label",
+        "pummelled"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 703,
+      "entropy": 3.994007,
+      "metrics": {
+        "total_edit": 34,
+        "avg_edit": 5.666667,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "RF",
+          "crumpled": "Gag",
+          "reconstructed": "gag",
+          "bucket_key": "AQ=42",
+          "bucket_size": 13,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "classifier",
+          "crumpled": "ructions",
+          "reconstructed": "royalist",
+          "bucket_key": "AQ=191",
+          "bucket_size": 562,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "overfit",
+          "crumpled": "vacancies",
+          "reconstructed": "masques",
+          "bucket_key": "AQ=158",
+          "bucket_size": 638,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "to",
+          "crumpled": "meh",
+          "reconstructed": "inc",
+          "bucket_key": "AQ=53",
+          "bucket_size": 50,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "RMS",
+          "crumpled": "Label",
+          "reconstructed": "rend",
+          "bucket_key": "AQ=77",
+          "bucket_size": 128,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "amplitude",
+          "crumpled": "pummelled",
+          "reconstructed": "regathers",
+          "bucket_key": "AQ=182",
+          "bucket_size": 591,
+          "edit_distance": 9,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 6,
+      "text": "Alb compacting canoeist ate Arcs chestnut",
+      "words": [
+        "Alb",
+        "compacting",
+        "canoeist",
+        "ate",
+        "Arcs",
+        "chestnut"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 703,
+      "entropy": 3.779425,
+      "metrics": {
+        "total_edit": 31,
+        "avg_edit": 5.166667,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "RF",
+          "crumpled": "Alb",
+          "reconstructed": "alb",
+          "bucket_key": "AQ=42",
+          "bucket_size": 13,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "classifier",
+          "crumpled": "compacting",
+          "reconstructed": "sincerely",
+          "bucket_key": "AQ=191",
+          "bucket_size": 562,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "overfit",
+          "crumpled": "canoeist",
+          "reconstructed": "verbenas",
+          "bucket_key": "AQ=158",
+          "bucket_size": 638,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "to",
+          "crumpled": "ate",
+          "reconstructed": "ibo",
+          "bucket_key": "AQ=53",
+          "bucket_size": 50,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "RMS",
+          "crumpled": "Arcs",
+          "reconstructed": "sila",
+          "bucket_key": "AQ=77",
+          "bucket_size": 128,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "amplitude",
+          "crumpled": "chestnut",
+          "reconstructed": "pleasured",
+          "bucket_key": "AQ=182",
+          "bucket_size": 591,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_recovery_rate": 0.0,
+    "aq_preserved": true,
+    "final_text": "Alb compacting canoeist ate Arcs chestnut",
+    "final_aq": 703,
+    "original_length": 38,
+    "final_length": 41,
+    "length_ratio": 1.0789473684210527,
+    "original_entropy": 3.8103172375727774,
+    "final_entropy": 3.779425,
+    "entropy_delta": -0.030892237572777592,
+    "total_edit_distance": 31,
+    "avg_edit_per_word": 5.166667,
+    "max_single_word_edit": 9,
+    "exact_matches": "0/6",
+    "exact_ratio": 0.0
+  }
+}

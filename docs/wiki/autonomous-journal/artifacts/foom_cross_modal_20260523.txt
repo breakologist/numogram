@@ -1,0 +1,65 @@
+# FOOM Cycles — Autonomous Session 2026-05-23 (Session 36)
+
+Seed: Cross-modal classifier findings
+Parameters: oracle corpus, varentropy strategy, AQ bucket, creative reconstruction
+
+## Cycle 1: "RF classifier overfit to RMS amplitude" (AQ=703, DR=1)
+
+| Gen | Text | Entropy |
+|:---:|:-----|:------:|
+| 0 | RF classifier overfit to RMS amplitude | 4.113 |
+| 1 | Def perturbs misfits eta Madam mothballed | 4.113 |
+| 2 | Ecg quotidian papering gen Flub palestine | 3.964 |
+| 3 | Bid mellowing iodising eat Core indirects | 3.995 |
+| 4 | Icc wildcatted wildfire och Luce unkindly | 3.808 |
+| 5 | Fed subregion schloss inc Hies sikkimese | 3.974 |
+| 6 | Baba gangsters fetuses cub Brat eyeballing | 3.760 |
+
+Δ = -0.318 bits/char (NEGATIVE — abbreviation-driven compression)
+
+## Cycle 2: "Zone voice cannot generalize" (AQ=508, DR=4)
+
+| Gen | Text | Entropy |
+|:---:|:-----|:------:|
+| 0 | Zone voice cannot generalize | 3.553 |
+| 1 | Behind boner barging brobdingnag | 3.553 |
+| 2 | Bedpan blats marlin bouquets | 3.441 |
+| 3 | Glut hafts cranial jeopardise | 3.968 |
+| 4 | Cured deices mulled enormous | 4.004 |
+| 5 | Price prado masker skyboxes | 3.526 |
+| 6 | Callie capped benefice composing | 3.793 |
+
+Δ = +0.240 bits/char (POSITIVE — expansive)
+
+## Cycle 3: "Six sources four augmentations" (AQ=614, DR=2)
+
+| Gen | Text | Entropy |
+|:---:|:-----|:------:|
+| 0 | Six sources four augmentations | 3.873 |
+| 1 | Oman practise ragged inviolability | 3.873 |
+| 2 | Huck magnifier liken grantsmanship | 4.018 |
+| 3 | Six samarkand stat misremembering | 3.718 |
+| 4 | Cyan decathlon damns uninstructed | 3.874 |
+| 5 | Tend skewers vars multicellular | 3.849 |
+| 6 | Batch bluesmen birded commissariats | 3.936 |
+
+Δ = +0.063 bits/char (NEAR-NEUTRAL)
+
+## Cycle 4: "Classifier learns timbre not amplitude" (AQ=693, DR=9)
+
+| Gen | Text | Entropy |
+|:---:|:-----|:------:|
+| 0 | Classifier learns timbre not amplitude | 3.885 |
+| 1 | Coquetted viands upper cabana collation | 3.885 |
+| 2 | Localising doting dankly geom hyperion | 3.987 |
+| 3 | Compacting skits sharpe bore chestnut | 4.018 |
+| 4 | Seafloors howard grandam neil redoubles | 4.000 |
+| 5 | Pathfinder frauds extol itch meadowland | 3.913 |
+| 6 | Tacitness knobby inning rail speedwell | 3.955 |
+
+Δ = +0.070 bits/char (NEAR-NEUTRAL)
+
+## Summary
+
+All cycles: 100% AQ preservation, oracle corpus (535 buckets, 89K words), seed=937/666/999/888.
+1 negative entropy (abbreviation-driven, DR=1), 1 positive, 2 near-neutral.

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 605">
+<rect width="420" height="605" fill="#0f172a"/>
+<defs>
+  <linearGradient id="frameG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#fbbf24" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.35"/>
+  </linearGradient>
+  <linearGradient id="innerG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#312e81" stop-opacity="0.95"/>
+  </linearGradient>
+  <linearGradient id="arcG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f97316"/>
+  </linearGradient>
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="2" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect x="12" y="12" width="396" height="510" fill="url(#innerG)" stroke="url(#frameG)" stroke-width="2" rx="8"/>
+<rect x="14" y="14" width="392" height="506" fill="none" stroke="#fbbf24" stroke-width="0.4" stroke-opacity="0.3" rx="7"/>
+<rect x="16" y="22" width="388" height="18" fill="#fbbf24" opacity="0.1" rx="3"/>
+<text x="210" y="35" fill="#fbbf24" font-size="8.5" font-weight="700" text-anchor="middle">ZONE 0 · Void · AQΣ=137</text>
+<circle cx="130" cy="76" r="38" fill="#0f172a" stroke="#fbbf24" stroke-width="2.5"/>
+  <circle cx="130" cy="76" r="28" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-opacity="0.5"/>
+  <circle cx="130" cy="76" r="19" fill="none" stroke="#fbbf24" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="3,3"/>
+  <circle cx="130" cy="76" r="3" fill="#fbbf24" opacity="0.9"/>
+  <text x="130" y="81" fill="#f8fafc" font-size="38" font-weight="700" text-anchor="middle">0</text>
+<text x="130" y="127" fill="#94a3b8" font-size="8" font-weight="500" text-anchor="middle">eiaoung</text>
+<path d="M 210 502 A 62 62 0 0 1 174 502" stroke="#fbbf24" stroke-width="2.5" stroke-opacity="0.6" fill="none" stroke-dasharray="6,3"/>
+<line x1="210" y1="498" x2="210" y2="506" stroke="#94a3b8" stroke-width="2"/>
+<text x="165" y="496" fill="#22d3ee" font-size="8" font-weight="700" text-anchor="middle">↑Gt-9→Z9</text>
+<line x1="174" y1="499" x2="174" y2="505" stroke="#22d3ee" stroke-width="2"/>
+<text x="184" y="42" fill="#94a3b8" font-size="8" font-weight="400" text-anchor="middle">Current:</text>
+<text x="246" y="42" fill="#f8fafc" font-size="9.5" font-weight="600" text-anchor="middle">9  [Plex]</text>
+<text x="184" y="60" fill="#94a3b8" font-size="8" font-weight="400" text-anchor="middle">Gate:</text>
+<text x="246" y="60" fill="#f8fafc" font-size="9.5" font-weight="600" text-anchor="middle">Gt-9 → Z9</text>
+<text x="184" y="78" fill="#94a3b8" font-size="8" font-weight="400" text-anchor="middle">Syzygy:</text>
+<text x="246" y="78" fill="#f8fafc" font-size="9.5" font-weight="600" text-anchor="middle">0::9  ★Uttunul</text>
+<text x="184" y="96" fill="#94a3b8" font-size="8" font-weight="400" text-anchor="middle">Polarity:</text>
+<text x="246" y="96" fill="#f8fafc" font-size="9.5" font-weight="600" text-anchor="middle">−  —  Substance / inertia</text>
+<text x="184" y="114" fill="#94a3b8" font-size="8" font-weight="400" text-anchor="middle">Region:</text>
+<text x="246" y="114" fill="#f8fafc" font-size="9.5" font-weight="600" text-anchor="middle">Void</text>
+<text x="184" y="142" fill="#94a3b8" font-size="7.5" font-weight="400" text-anchor="start">Silent entry.</text>
+<text x="210.0" y="516" fill="#94a3b8" font-size="7" font-weight="600" text-anchor="middle">0</text>
+<text x="240.5648331192086" y="516" fill="#fbbf24" font-size="7" font-weight="600" text-anchor="middle">1</text>
+<text x="259.454938847348" y="516" fill="#34d399" font-size="7" font-weight="600" text-anchor="middle">2</text>
+<text x="259.454938847348" y="516" fill="#e879f9" font-size="7" font-weight="600" text-anchor="middle">3</text>
+<text x="240.5648331192086" y="516" fill="#00ffff" font-size="7" font-weight="600" text-anchor="middle">4</text>
+<text x="210.0" y="516" fill="#f97316" font-size="7" font-weight="600" text-anchor="middle">5</text>
+<text x="179.4351668807914" y="516" fill="#60a5fa" font-size="7" font-weight="600" text-anchor="middle">6</text>
+<text x="160.545061152652" y="516" fill="#fb7185" font-size="7" font-weight="600" text-anchor="middle">7</text>
+<text x="160.545061152652" y="516" fill="#c084fc" font-size="7" font-weight="600" text-anchor="middle">8</text>
+<text x="179.4351668807914" y="516" fill="#a855f7" font-size="7" font-weight="600" text-anchor="middle">9</text>
+</svg>

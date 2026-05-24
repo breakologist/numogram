@@ -1,8 +1,12 @@
 ---
 title: Square Roundtable [17] — Dao De Jing Tianmu Corpus (v2)
-source: [[dao-de-jing-tianmu]] full (81 ch. cron extracts; Plex 68%)
+source: dao-de-jing-tianmu full (81 ch. cron extracts; Plex 68%)
 created: 2026-05-08
 mode: mesh-3
+model: Grok-4.1-fast
+---
+
+
 tags: [tetralogue, dao-de-jing, tianmu, laozi, wuwei, plex-rotor, mesh-17]
 ---
 

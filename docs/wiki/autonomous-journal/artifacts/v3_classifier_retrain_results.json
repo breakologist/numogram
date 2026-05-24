@@ -1,0 +1,55 @@
+{
+  "full_cv_mean": 1.0,
+  "full_cv_std": 0.0,
+  "full_test_acc": 1.0,
+  "timbre_cv_mean": 1.0,
+  "timbre_cv_std": 0.0,
+  "timbre_test_acc": 1.0,
+  "rms_features": [
+    "rms_mean",
+    "rms_std"
+  ],
+  "rms_gap": 0.0,
+  "top_timbre_features": [
+    [
+      "bass_ratio",
+      0.06048503523935546
+    ],
+    [
+      "very_high_ratio",
+      0.0561088757208491
+    ],
+    [
+      "mfcc_02_std",
+      0.055478388549171184
+    ],
+    [
+      "sub_bass_ratio",
+      0.05539234625563951
+    ],
+    [
+      "mid_ratio",
+      0.051314023597425186
+    ],
+    [
+      "high_ratio",
+      0.044401512486298055
+    ],
+    [
+      "high_mid_ratio",
+      0.04425869001134391
+    ],
+    [
+      "mfcc_01_std",
+      0.04412280714238032
+    ],
+    [
+      "mfcc_04_std",
+      0.04041474448819904
+    ],
+    [
+      "mfcc_03_std",
+      0.03812042060989108
+    ]
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "mir_taus": {
+    "pure": {
+      "centroid": -0.611111111111111,
+      "flatness": 0.9444444444444445,
+      "rms": -1.0
+    },
+    "seed": {
+      "centroid": 0.5,
+      "flatness": -0.4444444444444444,
+      "rms": -0.2777777777777778
+    }
+  },
+  "foom_runs": [
+    {
+      "file": "foom_20260523_compress_123.json",
+      "aq": 685,
+      "delta_entropy": 0.13448156828619684,
+      "preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?",
+      "generations": 6
+    },
+    {
+      "file": "foom_20260523_compress_321.json",
+      "aq": 657,
+      "delta_entropy": 0.16068789348281376,
+      "preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?",
+      "generations": 6
+    },
+    {
+      "file": "foom_20260523_compress_789.json",
+      "aq": 710,
+      "delta_entropy": 0.40095974737789675,
+      "preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?",
+      "generations": 6
+    },
+    {
+      "file": "foom_20260523_eng_17.json",
+      "aq": 825,
+      "delta_entropy": 0.33431286971310437,
+      "preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?",
+      "generations": 6
+    },
+    {
+      "file": "foom_20260523_eng_7.json",
+      "aq": 789,
+      "delta_entropy": 0.021661592401946983,
+      "preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?",
+      "generations": 6
+    },
+    {
+      "file": "foom_20260523_eng_71.json",
+      "aq": 861,
+      "delta_entropy": 0.055483174542728,
+      "preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?",
+      "generations": 6
+    },
+    {
+      "file": "foom_20260523_eng_777.json",
+      "aq": 651,
+      "delta_entropy": 0.18913369532396684,
+      "preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?",
+      "generations": 6
+    },
+    {
+      "file": "foom_20260523_flatness_gradient.json",
+      "aq": 963,
+      "delta_entropy": 0.06850099132722764,
+      "preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?",
+      "generations": 6
+    },
+    {
+      "file": "foom_20260523_flatness_gradient_replicate.json",
+      "aq": 963,
+      "delta_entropy": 0.2560759913272279,
+      "preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?",
+      "generations": 6
+    },
+    {
+      "file": "foom_20260523_rfseed_current.json",
+      "aq": 703,
+      "delta_entropy": -0.030892237572777592,
+      "preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?",
+      "generations": 6
+    },
+    {
+      "file": "foom_20260523_void_em.json",
+      "aq": 2485,
+      "delta_entropy": -0.15939689038492677,
+      "preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?",
+      "generations": 6
+    },
+    {
+      "file": "foom_20260523_xenon_flatness.json",
+      "aq": 963,
+      "delta_entropy": 0.1669279913272277,
+      "preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?",
+      "generations": 6
+    }
+  ],
+  "v3_by_label": [
+    {
+      "label": 1,
+      "zone": 1,
+      "centroid_mean": 1580.8356903935628,
+      "flatness_mean": 0.16719509555235465,
+      "rms_mean": 0.0557036013652881,
+      "n": 30
+    },
+    {
+      "label": 2,
+      "zone": 2,
+      "centroid_mean": 690.365147937105,
+      "flatness_mean": 0.00019638189563314274,
+      "rms_mean": 0.0930847538014253,
+      "n": 30
+    },
+    {
+      "label": 3,
+      "zone": 3,
+      "centroid_mean": 1623.7591824158346,
+      "flatness_mean": 3.979166400919591e-05,
+      "rms_mean": 0.13162846366564432,
+      "n": 30
+    },
+    {
+      "label": 4,
+      "zone": 4,
+      "centroid_mean": 265.6365701799606,
+      "flatness_mean": 4.967545052636524e-07,
+      "rms_mean": 0.12829891045888264,
+      "n": 30
+    },
+    {
+      "label": 5,
+      "zone": 5,
+      "centroid_mean": 1802.2754239249816,
+      "flatness_mean": 0.3922971154252688,
+      "rms_mean": 0.03708844352513552,
+      "n": 30
+    },
+    {
+      "label": 6,
+      "zone": 6,
+      "centroid_mean": 5770.14167925307,
+      "flatness_mean": 0.009930238958137732,
+      "rms_mean": 0.14633730227748554,
+      "n": 30
+    },
+    {
+      "label": 7,
+      "zone": 7,
+      "centroid_mean": 1995.4826735375416,
+      "flatness_mean": 0.00017382565629304737,
+      "rms_mean": 0.33673119942347207,
+      "n": 30
+    },
+    {
+      "label": 8,
+      "zone": 8,
+      "centroid_mean": 1069.8997276511336,
+      "flatness_mean": 0.0008653914177557453,
+      "rms_mean": 0.08513675605257352,
+      "n": 30
+    },
+    {
+      "label": 9,
+      "zone": 9,
+      "centroid_mean": 1402.9683754118003,
+      "flatness_mean": 0.003513907916688671,
+      "rms_mean": 0.11610699445009232,
+      "n": 30
+    }
+  ],
+  "v3_zone_labels": [
+    "present",
+    "present",
+    "present",
+    "present",
+    "present",
+    "present",
+    "present",
+    "present",
+    "present"
+  ]
+}

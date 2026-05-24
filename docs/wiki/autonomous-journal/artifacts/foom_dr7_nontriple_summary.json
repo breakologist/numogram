@@ -1,0 +1,60 @@
+{
+  "analysis": "Cross-pipeline spectral rolloff gradient comparison",
+  "date": "2026-05-22T23:45:00",
+  "v3_pipeline": {
+    "type": "SoftSynth (Protracker MOD via in-memory synth)",
+    "feature_columns": "29-dim: 6 band energies + 4 timbre (centroid/bandwidth/rolloff/dynamic_complexity) + 3 rhythm + 12 key + 3 scale + 1 duration",
+    "col_8_identity": "spectral_rolloff (frequency below which 85% of spectral energy falls)",
+    "col_8_importance": 0.110,
+    "rolloff_by_zone": {
+      "1": 495.26, "2": 559.86, "3": 624.46, "4": 752.80,
+      "5": 839.36, "6": 982.34, "7": 1098.19, "8": 1227.39, "9": 1655.91
+    },
+    "rolloff_gradient_hz": 1160.65,
+    "gradient_direction": "INCREASING (495->1656 Hz, all 8 steps upward)",
+    "spectral_regime": "0.5-1.7 kHz"
+  },
+  "resonator_pipeline": {
+    "type": "Physical modelling (membrane/plate/string/tube resonators)",
+    "source_wavs": "/home/etym/numogram/session_2026-05-09_13-06-30/zone_*_pure_44100.wav",
+    "rolloff_by_zone": {
+      "1": 3250, "2": 3561, "3": 3728, "4": 3605, "5": 3385,
+      "6": 2554, "7": 2480, "8": 2552, "9": 2533
+    },
+    "rolloff_gradient_hz": -717.21,
+    "gradient_direction": "DECREASING (peaks Z3=3728, declines to Z9=2533; bell/hump shape)",
+    "spectral_regime": "2.5-3.7 kHz"
+  },
+  "cross_modal_assessment": {
+    "gradient_comparison": "V3: INCREASING, Resonator: DECREASING — structurally INVERTED",
+    "spectral_overlap_hz": "NONE (V3 max 1656 < Resonator min 2480)",
+    "regime_separation": "~1.0 kHz gap between V3 max and resonator min",
+    "amplitude_normalization_impact": "NONE — spectral features are amplitude-independent in librosa",
+    "cross_modal_classification": "IMPOSSIBLE without domain adaptation — inverted gradients + non-overlapping spectral regimes + different feature dimensions (29 vs 44)"
+  },
+  "foom_cycles": {
+    "experiment": "Non-triple DR=7 test — isolate whether DR=7 or triple-repetition drives negative entropy",
+    "result": "TRIPLE REPETITION is the necessary condition, NOT DR=7",
+    "seeds_tested": [
+      {
+        "text": "Fracture the decimal membrane now",
+        "aq": 556, "dr": 7, "triple": false,
+        "entropy_delta": 0.0963,
+        "trajectory": [3.6521, 3.7264, 3.7647, 3.4885, 3.7412, 3.7484]
+      },
+      {
+        "text": "Abyssal current pulls toward zero",
+        "aq": 664, "dr": 7, "triple": false,
+        "entropy_delta": 0.7537,
+        "trajectory": [3.2608, 3.9931, 3.4104, 3.5981, 3.7212, 4.0144]
+      }
+    ],
+    "empirical_matrix_update": [
+      {"DR": 7, "Structure": "Triple", "Entropy_Delta": -0.196, "Character": "Negative"},
+      {"DR": 7, "Structure": "Non-triple", "Entropy_Delta": 0.096, "Character": "Near-neutral (min)"},
+      {"DR": 7, "Structure": "Non-triple", "Entropy_Delta": 0.754, "Character": "Strongly positive (max)"},
+      {"DR": 3, "Structure": "Non-triple", "Entropy_Delta": 0.347, "Character": "Strongly positive"},
+      {"DR": 3, "Structure": "Triple", "Entropy_Delta": 0.065, "Character": "Near-neutral"}
+    ]
+  }
+}

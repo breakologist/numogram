@@ -1,0 +1,573 @@
+{
+  "mode": "single",
+  "parameters": {
+    "text": "entropy compression avoids cluster collapse",
+    "corpus_size": 89050,
+    "generations": 7,
+    "seed": 71,
+    "creative": true,
+    "creative_strategy": "varentropy",
+    "bucket_key": "aq",
+    "correlate": false
+  },
+  "original_aq": 861,
+  "original_words": [
+    "entropy",
+    "compression",
+    "avoids",
+    "cluster",
+    "collapse"
+  ],
+  "trajectory": [
+    {
+      "generation": 0,
+      "text": "entropy compression avoids cluster collapse",
+      "words": [
+        "entropy",
+        "compression",
+        "avoids",
+        "cluster",
+        "collapse"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "original_aq": 861,
+      "mutated_aq": 861
+    },
+    {
+      "generation": 1,
+      "text": "devolves discontinued brocaded creepers crinkly",
+      "words": [
+        "devolves",
+        "discontinued",
+        "brocaded",
+        "creepers",
+        "crinkly"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 861,
+      "entropy": 3.889043,
+      "metrics": {
+        "total_edit": 34,
+        "avg_edit": 6.8,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "entropy",
+          "crumpled": "devolves",
+          "reconstructed": "devolves",
+          "bucket_key": "AQ=176",
+          "bucket_size": 598,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "compression",
+          "crumpled": "discontinued",
+          "reconstructed": "congratulate",
+          "bucket_key": "AQ=245",
+          "bucket_size": 268,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "avoids",
+          "crumpled": "brocaded",
+          "reconstructed": "tabitha",
+          "bucket_key": "AQ=124",
+          "bucket_size": 501,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "cluster",
+          "crumpled": "creepers",
+          "reconstructed": "postman",
+          "bucket_key": "AQ=161",
+          "bucket_size": 627,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "collapse",
+          "crumpled": "crinkly",
+          "reconstructed": "joyrode",
+          "bucket_key": "AQ=155",
+          "bucket_size": 591,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "text": "retailing songstress sword religion reverse",
+      "words": [
+        "retailing",
+        "songstress",
+        "sword",
+        "religion",
+        "reverse"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 861,
+      "entropy": 3.547335,
+      "metrics": {
+        "total_edit": 37,
+        "avg_edit": 7.4,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "entropy",
+          "crumpled": "retailing",
+          "reconstructed": "resulted",
+          "bucket_key": "AQ=176",
+          "bucket_size": 598,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "compression",
+          "crumpled": "songstress",
+          "reconstructed": "zaporozhye",
+          "bucket_key": "AQ=245",
+          "bucket_size": 268,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "avoids",
+          "crumpled": "sword",
+          "reconstructed": "abjured",
+          "bucket_key": "AQ=124",
+          "bucket_size": 501,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "cluster",
+          "crumpled": "religion",
+          "reconstructed": "romanov",
+          "bucket_key": "AQ=161",
+          "bucket_size": 627,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "collapse",
+          "crumpled": "reverse",
+          "reconstructed": "arranges",
+          "bucket_key": "AQ=155",
+          "bucket_size": 591,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "text": "sections subsections hothead scantier seconder",
+      "words": [
+        "sections",
+        "subsections",
+        "hothead",
+        "scantier",
+        "seconder"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 861,
+      "entropy": 3.612341,
+      "metrics": {
+        "total_edit": 34,
+        "avg_edit": 6.8,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "entropy",
+          "crumpled": "sections",
+          "reconstructed": "scuttled",
+          "bucket_key": "AQ=176",
+          "bucket_size": 598,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "compression",
+          "crumpled": "subsections",
+          "reconstructed": "provisioned",
+          "bucket_key": "AQ=245",
+          "bucket_size": 268,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "avoids",
+          "crumpled": "hothead",
+          "reconstructed": "dangler",
+          "bucket_key": "AQ=124",
+          "bucket_size": 501,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "cluster",
+          "crumpled": "scantier",
+          "reconstructed": "gunners",
+          "bucket_key": "AQ=161",
+          "bucket_size": 627,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "collapse",
+          "crumpled": "seconder",
+          "reconstructed": "minimum",
+          "bucket_key": "AQ=155",
+          "bucket_size": 591,
+          "edit_distance": 8,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "text": "overrun promptness prices murders nicknamed",
+      "words": [
+        "overrun",
+        "promptness",
+        "prices",
+        "murders",
+        "nicknamed"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 861,
+      "entropy": 3.783725,
+      "metrics": {
+        "total_edit": 38,
+        "avg_edit": 7.6,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "entropy",
+          "crumpled": "overrun",
+          "reconstructed": "overrun",
+          "bucket_key": "AQ=176",
+          "bucket_size": 598,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "compression",
+          "crumpled": "promptness",
+          "reconstructed": "beauteously",
+          "bucket_key": "AQ=245",
+          "bucket_size": 268,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "avoids",
+          "crumpled": "prices",
+          "reconstructed": "estate",
+          "bucket_key": "AQ=124",
+          "bucket_size": 501,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "cluster",
+          "crumpled": "murders",
+          "reconstructed": "clearasil",
+          "bucket_key": "AQ=161",
+          "bucket_size": 627,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "collapse",
+          "crumpled": "nicknamed",
+          "reconstructed": "laddering",
+          "bucket_key": "AQ=155",
+          "bucket_size": 591,
+          "edit_distance": 9,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "text": "steadfast underexpose kickoff smother stamper",
+      "words": [
+        "steadfast",
+        "underexpose",
+        "kickoff",
+        "smother",
+        "stamper"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 861,
+      "entropy": 3.933209,
+      "metrics": {
+        "total_edit": 40,
+        "avg_edit": 8.0,
+        "max_edit": 11,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "entropy",
+          "crumpled": "steadfast",
+          "reconstructed": "staunched",
+          "bucket_key": "AQ=176",
+          "bucket_size": 598,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "compression",
+          "crumpled": "underexpose",
+          "reconstructed": "personalised",
+          "bucket_key": "AQ=245",
+          "bucket_size": 268,
+          "edit_distance": 11,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "avoids",
+          "crumpled": "kickoff",
+          "reconstructed": "heathen",
+          "bucket_key": "AQ=124",
+          "bucket_size": 501,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "cluster",
+          "crumpled": "smother",
+          "reconstructed": "permute",
+          "bucket_key": "AQ=161",
+          "bucket_size": 627,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "collapse",
+          "crumpled": "stamper",
+          "reconstructed": "piniest",
+          "bucket_key": "AQ=155",
+          "bucket_size": 591,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 6,
+      "text": "soapiest transcendent jumps simpered soapbox",
+      "words": [
+        "soapiest",
+        "transcendent",
+        "jumps",
+        "simpered",
+        "soapbox"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 861,
+      "entropy": 3.865364,
+      "metrics": {
+        "total_edit": 37,
+        "avg_edit": 7.4,
+        "max_edit": 11,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "entropy",
+          "crumpled": "soapiest",
+          "reconstructed": "soapiest",
+          "bucket_key": "AQ=176",
+          "bucket_size": 598,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "compression",
+          "crumpled": "transcendent",
+          "reconstructed": "thrillingly",
+          "bucket_key": "AQ=245",
+          "bucket_size": 268,
+          "edit_distance": 11,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "avoids",
+          "crumpled": "jumps",
+          "reconstructed": "bogging",
+          "bucket_key": "AQ=124",
+          "bucket_size": 501,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "cluster",
+          "crumpled": "simpered",
+          "reconstructed": "growler",
+          "bucket_key": "AQ=161",
+          "bucket_size": 627,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "collapse",
+          "crumpled": "soapbox",
+          "reconstructed": "streaked",
+          "bucket_key": "AQ=155",
+          "bucket_size": 591,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 7,
+      "text": "censures clannishness wigwag buzzard bollards",
+      "words": [
+        "censures",
+        "clannishness",
+        "wigwag",
+        "buzzard",
+        "bollards"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 861,
+      "entropy": 3.94131,
+      "metrics": {
+        "total_edit": 38,
+        "avg_edit": 7.6,
+        "max_edit": 11,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "entropy",
+          "crumpled": "censures",
+          "reconstructed": "censures",
+          "bucket_key": "AQ=176",
+          "bucket_size": 598,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "compression",
+          "crumpled": "clannishness",
+          "reconstructed": "blacksmithing",
+          "bucket_key": "AQ=245",
+          "bucket_size": 268,
+          "edit_distance": 11,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "avoids",
+          "crumpled": "wigwag",
+          "reconstructed": "grandpa",
+          "bucket_key": "AQ=124",
+          "bucket_size": 501,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "cluster",
+          "crumpled": "buzzard",
+          "reconstructed": "twirly",
+          "bucket_key": "AQ=161",
+          "bucket_size": 627,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "collapse",
+          "crumpled": "bollards",
+          "reconstructed": "ambition",
+          "bucket_key": "AQ=155",
+          "bucket_size": 591,
+          "edit_distance": 8,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_recovery_rate": 0.0,
+    "aq_preserved": true,
+    "final_text": "censures clannishness wigwag buzzard bollards",
+    "final_aq": 861,
+    "original_length": 43,
+    "final_length": 45,
+    "length_ratio": 1.0465116279069768,
+    "original_entropy": 3.885826825457272,
+    "final_entropy": 3.94131,
+    "entropy_delta": 0.055483174542728,
+    "total_edit_distance": 38,
+    "avg_edit_per_word": 7.6,
+    "max_single_word_edit": 11,
+    "exact_matches": "0/5",
+    "exact_ratio": 0.0
+  }
+}

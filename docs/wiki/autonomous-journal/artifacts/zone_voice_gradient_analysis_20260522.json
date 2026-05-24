@@ -1,0 +1,32 @@
+{
+  "pipeline": "zone-voice-mir-gradient-analysis",
+  "date": "2026-05-22",
+  "zone_voice": {
+    "pipeline_type": "physical modelling resonator",
+    "centroid_range_hz": [
+      1797.7758456322072,
+      1399.926467050824
+    ],
+    "gradient_direction": "decreasing",
+    "centroid_delta_hz": -397.8,
+    "gradient_features": {
+      "flatness": "monotonic_increasing (0.79\u21920.89)",
+      "rms": "monotonic_decreasing (0.033\u21920.009)",
+      "centroid": "monotonic_decreasing (1798\u21921400 Hz)",
+      "bandwidth": "monotonic_decreasing (1259\u2192840 Hz)",
+      "rolloff": "monotonic_decreasing (3250\u21922533 Hz)",
+      "zcr": "monotonic_decreasing (0.038\u21920.019)"
+    }
+  },
+  "v3_softsynth": {
+    "pipeline_type": "Protracker MOD via SoftSynth",
+    "centroid_range_hz": [
+      470.2,
+      1163.1
+    ],
+    "gradient_direction": "increasing",
+    "centroid_delta_hz": 692.9
+  },
+  "cross_modal_conclusion": "Incompatible spectral regimes. Zone voice centroid DECREASES with zone number; V3 centroid INCREASES. A unified classifier requires domain adaptation or dual-pipeline training.",
+  "recommendation": "Train separate classifiers for each pipeline, or build a shared-embedding layer that maps both spectral regimes to a common latent space."
+}

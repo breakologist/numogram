@@ -1,0 +1,1519 @@
+{
+  "mode": "single",
+  "parameters": {
+    "text": "VOID externally vacuum only flammable phase caller hex K31 audit chain pressure phonetic void 11 bytes 1x ex-dark-channel nug exterior compression",
+    "corpus_size": 89050,
+    "generations": 6,
+    "seed": 7,
+    "creative": true,
+    "creative_strategy": "varentropy",
+    "bucket_key": "aq",
+    "correlate": false
+  },
+  "original_aq": 2485,
+  "original_words": [
+    "VOID",
+    "externally",
+    "vacuum",
+    "only",
+    "flammable",
+    "phase",
+    "caller",
+    "hex",
+    "audit",
+    "chain",
+    "pressure",
+    "phonetic",
+    "void",
+    "bytes",
+    "ex",
+    "dark",
+    "channel",
+    "nug",
+    "exterior",
+    "compression"
+  ],
+  "trajectory": [
+    {
+      "generation": 0,
+      "text": "VOID externally vacuum only flammable phase caller hex K31 audit chain pressure phonetic void 11 bytes 1x ex-dark-channel nug exterior compression",
+      "words": [
+        "VOID",
+        "externally",
+        "vacuum",
+        "only",
+        "flammable",
+        "phase",
+        "caller",
+        "hex",
+        "audit",
+        "chain",
+        "pressure",
+        "phonetic",
+        "void",
+        "bytes",
+        "ex",
+        "dark",
+        "channel",
+        "nug",
+        "exterior",
+        "compression"
+      ],
+      "recovery_rate": 0.14285714285714285,
+      "aq_preserved": true,
+      "original_aq": 2485,
+      "mutated_aq": 2485
+    },
+    {
+      "generation": 1,
+      "text": "Hung pharmaceutic rearing myth potomac pubs loggia fez K31 paglia lewd integrated potables hung 11 insane 1x lag-plea-gibson herb schoenberg semidarkness",
+      "words": [
+        "Hung",
+        "pharmaceutic",
+        "rearing",
+        "myth",
+        "potomac",
+        "pubs",
+        "loggia",
+        "fez",
+        "paglia",
+        "lewd",
+        "integrated",
+        "potables",
+        "hung",
+        "insane",
+        "lag",
+        "plea",
+        "gibson",
+        "herb",
+        "schoenberg",
+        "semidarkness"
+      ],
+      "recovery_rate": 0.14285714285714285,
+      "aq_preserved": true,
+      "mutated_aq": 2485,
+      "entropy": 4.334769,
+      "metrics": {
+        "total_edit": 116,
+        "avg_edit": 5.52381,
+        "max_edit": 12,
+        "exact_count": 3,
+        "total_words": 21
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "VOID",
+          "crumpled": "Hung",
+          "reconstructed": "hung",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "externally",
+          "crumpled": "pharmaceutic",
+          "reconstructed": "spectators",
+          "bucket_key": "AQ=226",
+          "bucket_size": 341,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "vacuum",
+          "crumpled": "rearing",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "only",
+          "crumpled": "myth",
+          "reconstructed": "souk",
+          "bucket_key": "AQ=102",
+          "bucket_size": 334,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "flammable",
+          "crumpled": "potomac",
+          "reconstructed": "console",
+          "bucket_key": "AQ=146",
+          "bucket_size": 620,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "phase",
+          "crumpled": "pubs",
+          "reconstructed": "dour",
+          "bucket_key": "AQ=94",
+          "bucket_size": 276,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "caller",
+          "crumpled": "loggia",
+          "reconstructed": "labels",
+          "bucket_key": "AQ=105",
+          "bucket_size": 367,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "hex",
+          "crumpled": "fez",
+          "reconstructed": "caph",
+          "bucket_key": "AQ=64",
+          "bucket_size": 107,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 8,
+          "original": "audit",
+          "crumpled": "paglia",
+          "reconstructed": "k31",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 9,
+          "original": "chain",
+          "crumpled": "lewd",
+          "reconstructed": "herbal",
+          "bucket_key": "AQ=80",
+          "bucket_size": 181,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 10,
+          "original": "pressure",
+          "crumpled": "integrated",
+          "reconstructed": "anon",
+          "bucket_key": "AQ=193",
+          "bucket_size": 494,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 11,
+          "original": "phonetic",
+          "crumpled": "potables",
+          "reconstructed": "disunity",
+          "bucket_key": "AQ=162",
+          "bucket_size": 651,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 12,
+          "original": "void",
+          "crumpled": "hung",
+          "reconstructed": "academician",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 13,
+          "original": "bytes",
+          "crumpled": "insane",
+          "reconstructed": "bimbo",
+          "bucket_key": "AQ=116",
+          "bucket_size": 430,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 14,
+          "original": "ex",
+          "crumpled": "lag",
+          "reconstructed": "11",
+          "bucket_key": "AQ=47",
+          "bucket_size": 17,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 15,
+          "original": "dark",
+          "crumpled": "plea",
+          "reconstructed": "peking",
+          "bucket_key": "AQ=70",
+          "bucket_size": 129,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 16,
+          "original": "channel",
+          "crumpled": "gibson",
+          "reconstructed": "1x",
+          "bucket_key": "AQ=120",
+          "bucket_size": 505,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 17,
+          "original": "nug",
+          "crumpled": "herb",
+          "reconstructed": "ado-coke-calmly",
+          "bucket_key": "AQ=69",
+          "bucket_size": 108,
+          "edit_distance": 12,
+          "exact_match": false
+        },
+        {
+          "position": 18,
+          "original": "exterior",
+          "crumpled": "schoenberg",
+          "reconstructed": "ubs",
+          "bucket_key": "AQ=186",
+          "bucket_size": 570,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 19,
+          "original": "compression",
+          "crumpled": "semidarkness",
+          "reconstructed": "unreeling",
+          "bucket_key": "AQ=245",
+          "bucket_size": 268,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "text": "Lore simulcasts strain scrap specify twx port hon K31 shoal pair nurtured skivvy lore 11 mentee 1x nae-teed-junks loo uniformed vociferation",
+      "words": [
+        "Lore",
+        "simulcasts",
+        "strain",
+        "scrap",
+        "specify",
+        "twx",
+        "port",
+        "hon",
+        "shoal",
+        "pair",
+        "nurtured",
+        "skivvy",
+        "lore",
+        "mentee",
+        "nae",
+        "teed",
+        "junks",
+        "loo",
+        "uniformed",
+        "vociferation"
+      ],
+      "recovery_rate": 0.14285714285714285,
+      "aq_preserved": true,
+      "mutated_aq": 2485,
+      "entropy": 4.307346,
+      "metrics": {
+        "total_edit": 111,
+        "avg_edit": 5.285714,
+        "max_edit": 13,
+        "exact_count": 3,
+        "total_words": 21
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "VOID",
+          "crumpled": "Lore",
+          "reconstructed": "loin",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "externally",
+          "crumpled": "simulcasts",
+          "reconstructed": "recapitalise",
+          "bucket_key": "AQ=226",
+          "bucket_size": 341,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "vacuum",
+          "crumpled": "strain",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "only",
+          "crumpled": "scrap",
+          "reconstructed": "kinds",
+          "bucket_key": "AQ=102",
+          "bucket_size": 334,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "flammable",
+          "crumpled": "specify",
+          "reconstructed": "unbinds",
+          "bucket_key": "AQ=146",
+          "bucket_size": 620,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "phase",
+          "crumpled": "twx",
+          "reconstructed": "yams",
+          "bucket_key": "AQ=94",
+          "bucket_size": 276,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "caller",
+          "crumpled": "port",
+          "reconstructed": "larked",
+          "bucket_key": "AQ=105",
+          "bucket_size": 367,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "hex",
+          "crumpled": "hon",
+          "reconstructed": "grab",
+          "bucket_key": "AQ=64",
+          "bucket_size": 107,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 8,
+          "original": "audit",
+          "crumpled": "shoal",
+          "reconstructed": "k31",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 9,
+          "original": "chain",
+          "crumpled": "pair",
+          "reconstructed": "alfred",
+          "bucket_key": "AQ=80",
+          "bucket_size": 181,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 10,
+          "original": "pressure",
+          "crumpled": "nurtured",
+          "reconstructed": "china",
+          "bucket_key": "AQ=193",
+          "bucket_size": 494,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 11,
+          "original": "phonetic",
+          "crumpled": "skivvy",
+          "reconstructed": "consecrate",
+          "bucket_key": "AQ=162",
+          "bucket_size": 651,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 12,
+          "original": "void",
+          "crumpled": "lore",
+          "reconstructed": "academician",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 13,
+          "original": "bytes",
+          "crumpled": "mentee",
+          "reconstructed": "kasai",
+          "bucket_key": "AQ=116",
+          "bucket_size": 430,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 14,
+          "original": "ex",
+          "crumpled": "nae",
+          "reconstructed": "11",
+          "bucket_key": "AQ=47",
+          "bucket_size": 17,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 15,
+          "original": "dark",
+          "crumpled": "teed",
+          "reconstructed": "sabbath",
+          "bucket_key": "AQ=70",
+          "bucket_size": 129,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 16,
+          "original": "channel",
+          "crumpled": "junks",
+          "reconstructed": "1x",
+          "bucket_key": "AQ=120",
+          "bucket_size": 505,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 17,
+          "original": "nug",
+          "crumpled": "loo",
+          "reconstructed": "ado-labs-demigod",
+          "bucket_key": "AQ=69",
+          "bucket_size": 108,
+          "edit_distance": 13,
+          "exact_match": false
+        },
+        {
+          "position": 18,
+          "original": "exterior",
+          "crumpled": "uniformed",
+          "reconstructed": "shea",
+          "bucket_key": "AQ=186",
+          "bucket_size": 570,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 19,
+          "original": "compression",
+          "crumpled": "vociferation",
+          "reconstructed": "promises",
+          "bucket_key": "AQ=245",
+          "bucket_size": 268,
+          "edit_distance": 8,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "text": "Snob vacationers erasable willa estonia ducat zoom pat K31 dough thy ruffianly zealous snob 11 skims 1x cob-enif-phlox shea glaringly guilelessly",
+      "words": [
+        "Snob",
+        "vacationers",
+        "erasable",
+        "willa",
+        "estonia",
+        "ducat",
+        "zoom",
+        "pat",
+        "dough",
+        "thy",
+        "ruffianly",
+        "zealous",
+        "snob",
+        "skims",
+        "cob",
+        "enif",
+        "phlox",
+        "shea",
+        "glaringly",
+        "guilelessly"
+      ],
+      "recovery_rate": 0.14285714285714285,
+      "aq_preserved": true,
+      "mutated_aq": 2485,
+      "entropy": 4.382014,
+      "metrics": {
+        "total_edit": 113,
+        "avg_edit": 5.380952,
+        "max_edit": 10,
+        "exact_count": 3,
+        "total_words": 21
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "VOID",
+          "crumpled": "Snob",
+          "reconstructed": "snap",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "externally",
+          "crumpled": "vacationers",
+          "reconstructed": "unspeakably",
+          "bucket_key": "AQ=226",
+          "bucket_size": 341,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "vacuum",
+          "crumpled": "erasable",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "only",
+          "crumpled": "willa",
+          "reconstructed": "deist",
+          "bucket_key": "AQ=102",
+          "bucket_size": 334,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "flammable",
+          "crumpled": "estonia",
+          "reconstructed": "looking",
+          "bucket_key": "AQ=146",
+          "bucket_size": 620,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "phase",
+          "crumpled": "ducat",
+          "reconstructed": "carve",
+          "bucket_key": "AQ=94",
+          "bucket_size": 276,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "caller",
+          "crumpled": "zoom",
+          "reconstructed": "worm",
+          "bucket_key": "AQ=105",
+          "bucket_size": 367,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "hex",
+          "crumpled": "pat",
+          "reconstructed": "eeoc",
+          "bucket_key": "AQ=64",
+          "bucket_size": 107,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 8,
+          "original": "audit",
+          "crumpled": "dough",
+          "reconstructed": "k31",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 9,
+          "original": "chain",
+          "crumpled": "thy",
+          "reconstructed": "hocked",
+          "bucket_key": "AQ=80",
+          "bucket_size": 181,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 10,
+          "original": "pressure",
+          "crumpled": "ruffianly",
+          "reconstructed": "acrid",
+          "bucket_key": "AQ=193",
+          "bucket_size": 494,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 11,
+          "original": "phonetic",
+          "crumpled": "zealous",
+          "reconstructed": "flotation",
+          "bucket_key": "AQ=162",
+          "bucket_size": 651,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 12,
+          "original": "void",
+          "crumpled": "snob",
+          "reconstructed": "academician",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 13,
+          "original": "bytes",
+          "crumpled": "skims",
+          "reconstructed": "fork",
+          "bucket_key": "AQ=116",
+          "bucket_size": 430,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 14,
+          "original": "ex",
+          "crumpled": "cob",
+          "reconstructed": "11",
+          "bucket_key": "AQ=47",
+          "bucket_size": 17,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 15,
+          "original": "dark",
+          "crumpled": "enif",
+          "reconstructed": "alumna",
+          "bucket_key": "AQ=70",
+          "bucket_size": 129,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 16,
+          "original": "channel",
+          "crumpled": "phlox",
+          "reconstructed": "1x",
+          "bucket_key": "AQ=120",
+          "bucket_size": 505,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 17,
+          "original": "nug",
+          "crumpled": "shea",
+          "reconstructed": "nae-lobe-manuel",
+          "bucket_key": "AQ=69",
+          "bucket_size": 108,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 18,
+          "original": "exterior",
+          "crumpled": "glaringly",
+          "reconstructed": "wade",
+          "bucket_key": "AQ=186",
+          "bucket_size": 570,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 19,
+          "original": "compression",
+          "crumpled": "guilelessly",
+          "reconstructed": "unstably",
+          "bucket_key": "AQ=245",
+          "bucket_size": 268,
+          "edit_distance": 8,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "text": "Nobs transcriber sterne tonga walleye tore score lamb K31 waldo seas plantings tumour nobs 11 phoned 1x gal-iso-matzo mon uncertain urologists",
+      "words": [
+        "Nobs",
+        "transcriber",
+        "sterne",
+        "tonga",
+        "walleye",
+        "tore",
+        "score",
+        "lamb",
+        "waldo",
+        "seas",
+        "plantings",
+        "tumour",
+        "nobs",
+        "phoned",
+        "gal",
+        "iso",
+        "matzo",
+        "mon",
+        "uncertain",
+        "urologists"
+      ],
+      "recovery_rate": 0.14285714285714285,
+      "aq_preserved": true,
+      "mutated_aq": 2485,
+      "entropy": 4.204923,
+      "metrics": {
+        "total_edit": 111,
+        "avg_edit": 5.285714,
+        "max_edit": 12,
+        "exact_count": 3,
+        "total_words": 21
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "VOID",
+          "crumpled": "Nobs",
+          "reconstructed": "nobs",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "externally",
+          "crumpled": "transcriber",
+          "reconstructed": "shcharansky",
+          "bucket_key": "AQ=226",
+          "bucket_size": 341,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "vacuum",
+          "crumpled": "sterne",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "only",
+          "crumpled": "tonga",
+          "reconstructed": "snare",
+          "bucket_key": "AQ=102",
+          "bucket_size": 334,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "flammable",
+          "crumpled": "walleye",
+          "reconstructed": "jalapeno",
+          "bucket_key": "AQ=146",
+          "bucket_size": 620,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "phase",
+          "crumpled": "tore",
+          "reconstructed": "rambo",
+          "bucket_key": "AQ=94",
+          "bucket_size": 276,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "caller",
+          "crumpled": "score",
+          "reconstructed": "recall",
+          "bucket_key": "AQ=105",
+          "bucket_size": 367,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "hex",
+          "crumpled": "lamb",
+          "reconstructed": "imo",
+          "bucket_key": "AQ=64",
+          "bucket_size": 107,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 8,
+          "original": "audit",
+          "crumpled": "waldo",
+          "reconstructed": "k31",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 9,
+          "original": "chain",
+          "crumpled": "seas",
+          "reconstructed": "panes",
+          "bucket_key": "AQ=80",
+          "bucket_size": 181,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 10,
+          "original": "pressure",
+          "crumpled": "plantings",
+          "reconstructed": "seas",
+          "bucket_key": "AQ=193",
+          "bucket_size": 494,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 11,
+          "original": "phonetic",
+          "crumpled": "tumour",
+          "reconstructed": "excusably",
+          "bucket_key": "AQ=162",
+          "bucket_size": 651,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 12,
+          "original": "void",
+          "crumpled": "nobs",
+          "reconstructed": "academician",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 13,
+          "original": "bytes",
+          "crumpled": "phoned",
+          "reconstructed": "yeas",
+          "bucket_key": "AQ=116",
+          "bucket_size": 430,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 14,
+          "original": "ex",
+          "crumpled": "gal",
+          "reconstructed": "11",
+          "bucket_key": "AQ=47",
+          "bucket_size": 17,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 15,
+          "original": "dark",
+          "crumpled": "iso",
+          "reconstructed": "conceal",
+          "bucket_key": "AQ=70",
+          "bucket_size": 129,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 16,
+          "original": "channel",
+          "crumpled": "matzo",
+          "reconstructed": "1x",
+          "bucket_key": "AQ=120",
+          "bucket_size": 505,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 17,
+          "original": "nug",
+          "crumpled": "mon",
+          "reconstructed": "apc-anne-thorn",
+          "bucket_key": "AQ=69",
+          "bucket_size": 108,
+          "edit_distance": 12,
+          "exact_match": false
+        },
+        {
+          "position": 18,
+          "original": "exterior",
+          "crumpled": "uncertain",
+          "reconstructed": "lye",
+          "bucket_key": "AQ=186",
+          "bucket_size": 570,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 19,
+          "original": "compression",
+          "crumpled": "urologists",
+          "reconstructed": "contested",
+          "bucket_key": "AQ=245",
+          "bucket_size": 268,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "text": "Grip orneriness permit lour parring nets koans ems K31 memes ipod horseshoe overhang grip 11 gulls 1x kgb-moo-flocks gobi rebooting recruitment",
+      "words": [
+        "Grip",
+        "orneriness",
+        "permit",
+        "lour",
+        "parring",
+        "nets",
+        "koans",
+        "ems",
+        "memes",
+        "ipod",
+        "horseshoe",
+        "overhang",
+        "grip",
+        "gulls",
+        "kgb",
+        "moo",
+        "flocks",
+        "gobi",
+        "rebooting",
+        "recruitment"
+      ],
+      "recovery_rate": 0.14285714285714285,
+      "aq_preserved": true,
+      "mutated_aq": 2485,
+      "entropy": 4.179082,
+      "metrics": {
+        "total_edit": 112,
+        "avg_edit": 5.333333,
+        "max_edit": 13,
+        "exact_count": 3,
+        "total_words": 21
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "VOID",
+          "crumpled": "Grip",
+          "reconstructed": "grip",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "externally",
+          "crumpled": "orneriness",
+          "reconstructed": "leukocytes",
+          "bucket_key": "AQ=226",
+          "bucket_size": 341,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "vacuum",
+          "crumpled": "permit",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "only",
+          "crumpled": "lour",
+          "reconstructed": "bury",
+          "bucket_key": "AQ=102",
+          "bucket_size": 334,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "flammable",
+          "crumpled": "parring",
+          "reconstructed": "scoping",
+          "bucket_key": "AQ=146",
+          "bucket_size": 620,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "phase",
+          "crumpled": "nets",
+          "reconstructed": "kebabs",
+          "bucket_key": "AQ=94",
+          "bucket_size": 276,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "caller",
+          "crumpled": "koans",
+          "reconstructed": "magpie",
+          "bucket_key": "AQ=105",
+          "bucket_size": 367,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "hex",
+          "crumpled": "ems",
+          "reconstructed": "dix",
+          "bucket_key": "AQ=64",
+          "bucket_size": 107,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 8,
+          "original": "audit",
+          "crumpled": "memes",
+          "reconstructed": "k31",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 9,
+          "original": "chain",
+          "crumpled": "ipod",
+          "reconstructed": "plaice",
+          "bucket_key": "AQ=80",
+          "bucket_size": 181,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 10,
+          "original": "pressure",
+          "crumpled": "horseshoe",
+          "reconstructed": "flay",
+          "bucket_key": "AQ=193",
+          "bucket_size": 494,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 11,
+          "original": "phonetic",
+          "crumpled": "overhang",
+          "reconstructed": "rekindling",
+          "bucket_key": "AQ=162",
+          "bucket_size": 651,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 12,
+          "original": "void",
+          "crumpled": "grip",
+          "reconstructed": "academician",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 13,
+          "original": "bytes",
+          "crumpled": "gulls",
+          "reconstructed": "domed",
+          "bucket_key": "AQ=116",
+          "bucket_size": 430,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 14,
+          "original": "ex",
+          "crumpled": "kgb",
+          "reconstructed": "11",
+          "bucket_key": "AQ=47",
+          "bucket_size": 17,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 15,
+          "original": "dark",
+          "crumpled": "moo",
+          "reconstructed": "guess",
+          "bucket_key": "AQ=70",
+          "bucket_size": 129,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 16,
+          "original": "channel",
+          "crumpled": "flocks",
+          "reconstructed": "1x",
+          "bucket_key": "AQ=120",
+          "bucket_size": 505,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 17,
+          "original": "nug",
+          "crumpled": "gobi",
+          "reconstructed": "cob-dhaka-wolfs",
+          "bucket_key": "AQ=69",
+          "bucket_size": 108,
+          "edit_distance": 13,
+          "exact_match": false
+        },
+        {
+          "position": 18,
+          "original": "exterior",
+          "crumpled": "rebooting",
+          "reconstructed": "gun",
+          "bucket_key": "AQ=186",
+          "bucket_size": 570,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 19,
+          "original": "compression",
+          "crumpled": "recruitment",
+          "reconstructed": "gleefully",
+          "bucket_key": "AQ=245",
+          "bucket_size": 268,
+          "edit_distance": 8,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 6,
+      "text": "Melt statements tonier sited tearful xcvi rarer imo K31 swim pwn outboxes spuming melt 11 nescafe 1x chi-ding-laurie mane visitant disseminates",
+      "words": [
+        "Melt",
+        "statements",
+        "tonier",
+        "sited",
+        "tearful",
+        "xcvi",
+        "rarer",
+        "imo",
+        "swim",
+        "pwn",
+        "outboxes",
+        "spuming",
+        "melt",
+        "nescafe",
+        "chi",
+        "ding",
+        "laurie",
+        "mane",
+        "visitant",
+        "disseminates"
+      ],
+      "recovery_rate": 0.14285714285714285,
+      "aq_preserved": true,
+      "mutated_aq": 2485,
+      "entropy": 4.191167,
+      "metrics": {
+        "total_edit": 119,
+        "avg_edit": 5.666667,
+        "max_edit": 11,
+        "exact_count": 3,
+        "total_words": 21
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "VOID",
+          "crumpled": "Melt",
+          "reconstructed": "mamma",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "externally",
+          "crumpled": "statements",
+          "reconstructed": "discreetest",
+          "bucket_key": "AQ=226",
+          "bucket_size": 341,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "vacuum",
+          "crumpled": "tonier",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "only",
+          "crumpled": "sited",
+          "reconstructed": "embeds",
+          "bucket_key": "AQ=102",
+          "bucket_size": 334,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "flammable",
+          "crumpled": "tearful",
+          "reconstructed": "testis",
+          "bucket_key": "AQ=146",
+          "bucket_size": 620,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "phase",
+          "crumpled": "xcvi",
+          "reconstructed": "ribbed",
+          "bucket_key": "AQ=94",
+          "bucket_size": 276,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "caller",
+          "crumpled": "rarer",
+          "reconstructed": "fossa",
+          "bucket_key": "AQ=105",
+          "bucket_size": 367,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 7,
+          "original": "hex",
+          "crumpled": "imo",
+          "reconstructed": "wei",
+          "bucket_key": "AQ=64",
+          "bucket_size": 107,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 8,
+          "original": "audit",
+          "crumpled": "swim",
+          "reconstructed": "k31",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 9,
+          "original": "chain",
+          "crumpled": "pwn",
+          "reconstructed": "egghead",
+          "bucket_key": "AQ=80",
+          "bucket_size": 181,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 10,
+          "original": "pressure",
+          "crumpled": "outboxes",
+          "reconstructed": "tads",
+          "bucket_key": "AQ=193",
+          "bucket_size": 494,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 11,
+          "original": "phonetic",
+          "crumpled": "spuming",
+          "reconstructed": "crossfire",
+          "bucket_key": "AQ=162",
+          "bucket_size": 651,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 12,
+          "original": "void",
+          "crumpled": "melt",
+          "reconstructed": "academician",
+          "bucket_key": "AQ=86",
+          "bucket_size": 207,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 13,
+          "original": "bytes",
+          "crumpled": "nescafe",
+          "reconstructed": "nacre",
+          "bucket_key": "AQ=116",
+          "bucket_size": 430,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 14,
+          "original": "ex",
+          "crumpled": "chi",
+          "reconstructed": "11",
+          "bucket_key": "AQ=47",
+          "bucket_size": 17,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 15,
+          "original": "dark",
+          "crumpled": "ding",
+          "reconstructed": "mamboed",
+          "bucket_key": "AQ=70",
+          "bucket_size": 129,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 16,
+          "original": "channel",
+          "crumpled": "laurie",
+          "reconstructed": "1x",
+          "bucket_key": "AQ=120",
+          "bucket_size": 505,
+          "edit_distance": 0,
+          "exact_match": true
+        },
+        {
+          "position": 17,
+          "original": "nug",
+          "crumpled": "mane",
+          "reconstructed": "fie-carl-juicer",
+          "bucket_key": "AQ=69",
+          "bucket_size": 108,
+          "edit_distance": 11,
+          "exact_match": false
+        },
+        {
+          "position": 18,
+          "original": "exterior",
+          "crumpled": "visitant",
+          "reconstructed": "aids",
+          "bucket_key": "AQ=186",
+          "bucket_size": 570,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 19,
+          "original": "compression",
+          "crumpled": "disseminates",
+          "reconstructed": "gangrening",
+          "bucket_key": "AQ=245",
+          "bucket_size": 268,
+          "edit_distance": 8,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_recovery_rate": 0.14285714285714285,
+    "aq_preserved": true,
+    "final_text": "Melt statements tonier sited tearful xcvi rarer imo K31 swim pwn outboxes spuming melt 11 nescafe 1x chi-ding-laurie mane visitant disseminates",
+    "final_aq": 2485,
+    "original_length": 146,
+    "final_length": 143,
+    "length_ratio": 0.9794520547945206,
+    "original_entropy": 4.350563890384927,
+    "final_entropy": 4.191167,
+    "entropy_delta": -0.15939689038492677,
+    "total_edit_distance": 119,
+    "avg_edit_per_word": 5.666667,
+    "max_single_word_edit": 11,
+    "exact_matches": "3/21",
+    "exact_ratio": 0.14285714285714285
+  }
+}

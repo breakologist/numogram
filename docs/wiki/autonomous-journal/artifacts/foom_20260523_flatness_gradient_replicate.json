@@ -1,0 +1,635 @@
+{
+  "mode": "single",
+  "parameters": {
+    "text": "spectral flatness monotonic across nine zone voices",
+    "corpus_size": 89050,
+    "generations": 6,
+    "seed": 42,
+    "creative": true,
+    "creative_strategy": "varentropy",
+    "bucket_key": "aq",
+    "correlate": false
+  },
+  "original_aq": 963,
+  "original_words": [
+    "spectral",
+    "flatness",
+    "monotonic",
+    "across",
+    "nine",
+    "zone",
+    "voices"
+  ],
+  "trajectory": [
+    {
+      "generation": 0,
+      "text": "spectral flatness monotonic across nine zone voices",
+      "words": [
+        "spectral",
+        "flatness",
+        "monotonic",
+        "across",
+        "nine",
+        "zone",
+        "voices"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "original_aq": 963,
+      "mutated_aq": 963
+    },
+    {
+      "generation": 1,
+      "text": "disowns employs extirpate dogsled chang damian dinging",
+      "words": [
+        "disowns",
+        "employs",
+        "extirpate",
+        "dogsled",
+        "chang",
+        "damian",
+        "dinging"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.993895,
+      "metrics": {
+        "total_edit": 41,
+        "avg_edit": 5.857143,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "disowns",
+          "reconstructed": "disowns",
+          "bucket_key": "AQ=166",
+          "bucket_size": 658,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "employs",
+          "reconstructed": "shillong",
+          "bucket_key": "AQ=168",
+          "bucket_size": 605,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "extirpate",
+          "reconstructed": "rejoicings",
+          "bucket_key": "AQ=199",
+          "bucket_size": 522,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "dogsled",
+          "reconstructed": "emaciate",
+          "bucket_key": "AQ=129",
+          "bucket_size": 525,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "chang",
+          "reconstructed": "fish",
+          "bucket_key": "AQ=78",
+          "bucket_size": 172,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "damian",
+          "reconstructed": "gulch",
+          "bucket_key": "AQ=96",
+          "bucket_size": 280,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "dinging",
+          "reconstructed": "wodges",
+          "bucket_key": "AQ=127",
+          "bucket_size": 521,
+          "edit_distance": 3,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "text": "turning unsalted pesticides methane stab juno muscle",
+      "words": [
+        "turning",
+        "unsalted",
+        "pesticides",
+        "methane",
+        "stab",
+        "juno",
+        "muscle"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.94355,
+      "metrics": {
+        "total_edit": 40,
+        "avg_edit": 5.714286,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "turning",
+          "reconstructed": "truckled",
+          "bucket_key": "AQ=166",
+          "bucket_size": 658,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "unsalted",
+          "reconstructed": "unsalable",
+          "bucket_key": "AQ=168",
+          "bucket_size": 605,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "pesticides",
+          "reconstructed": "pertinence",
+          "bucket_key": "AQ=199",
+          "bucket_size": 522,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "methane",
+          "reconstructed": "addison",
+          "bucket_key": "AQ=129",
+          "bucket_size": 525,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "stab",
+          "reconstructed": "vfw",
+          "bucket_key": "AQ=78",
+          "bucket_size": 172,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "juno",
+          "reconstructed": "comas",
+          "bucket_key": "AQ=96",
+          "bucket_size": 280,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "muscle",
+          "reconstructed": "dancers",
+          "bucket_key": "AQ=127",
+          "bucket_size": 521,
+          "edit_distance": 4,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "text": "scariest sucrets windowing voyage odin thanh winces",
+      "words": [
+        "scariest",
+        "sucrets",
+        "windowing",
+        "voyage",
+        "odin",
+        "thanh",
+        "winces"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.905501,
+      "metrics": {
+        "total_edit": 43,
+        "avg_edit": 6.142857,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "scariest",
+          "reconstructed": "scariest",
+          "bucket_key": "AQ=166",
+          "bucket_size": 658,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "sucrets",
+          "reconstructed": "changeably",
+          "bucket_key": "AQ=168",
+          "bucket_size": 605,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "windowing",
+          "reconstructed": "bluetooth",
+          "bucket_key": "AQ=199",
+          "bucket_size": 522,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "voyage",
+          "reconstructed": "ladings",
+          "bucket_key": "AQ=129",
+          "bucket_size": 525,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "odin",
+          "reconstructed": "macao",
+          "bucket_key": "AQ=78",
+          "bucket_size": 172,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "thanh",
+          "reconstructed": "layla",
+          "bucket_key": "AQ=96",
+          "bucket_size": 280,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "winces",
+          "reconstructed": "spadix",
+          "bucket_key": "AQ=127",
+          "bucket_size": 521,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "text": "cemetery catchment commentate byblos blame cables buoys",
+      "words": [
+        "cemetery",
+        "catchment",
+        "commentate",
+        "byblos",
+        "blame",
+        "cables",
+        "buoys"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.691034,
+      "metrics": {
+        "total_edit": 38,
+        "avg_edit": 5.428571,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "cemetery",
+          "reconstructed": "cemetery",
+          "bucket_key": "AQ=166",
+          "bucket_size": 658,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "catchment",
+          "reconstructed": "flagrancy",
+          "bucket_key": "AQ=168",
+          "bucket_size": 605,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "commentate",
+          "reconstructed": "reattempt",
+          "bucket_key": "AQ=199",
+          "bucket_size": 522,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "byblos",
+          "reconstructed": "reboot",
+          "bucket_key": "AQ=129",
+          "bucket_size": 525,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "blame",
+          "reconstructed": "eared",
+          "bucket_key": "AQ=78",
+          "bucket_size": 172,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "cables",
+          "reconstructed": "genet",
+          "bucket_key": "AQ=96",
+          "bucket_size": 280,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "buoys",
+          "reconstructed": "users",
+          "bucket_key": "AQ=127",
+          "bucket_size": 521,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "text": "perspex reserved sophistic saying lox pork sergio",
+      "words": [
+        "perspex",
+        "reserved",
+        "sophistic",
+        "saying",
+        "lox",
+        "pork",
+        "sergio"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.856772,
+      "metrics": {
+        "total_edit": 40,
+        "avg_edit": 5.714286,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "perspex",
+          "reconstructed": "perseus",
+          "bucket_key": "AQ=166",
+          "bucket_size": 658,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "reserved",
+          "reconstructed": "primeval",
+          "bucket_key": "AQ=168",
+          "bucket_size": 605,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "sophistic",
+          "reconstructed": "conscious",
+          "bucket_key": "AQ=199",
+          "bucket_size": 522,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "saying",
+          "reconstructed": "suppl",
+          "bucket_key": "AQ=129",
+          "bucket_size": 525,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "lox",
+          "reconstructed": "fish",
+          "bucket_key": "AQ=78",
+          "bucket_size": 172,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "pork",
+          "reconstructed": "racked",
+          "bucket_key": "AQ=96",
+          "bucket_size": 280,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "sergio",
+          "reconstructed": "shrine",
+          "bucket_key": "AQ=127",
+          "bucket_size": 521,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 6,
+      "text": "usenets monogram parroting mauriac tgif jowl mombasa",
+      "words": [
+        "usenets",
+        "monogram",
+        "parroting",
+        "mauriac",
+        "tgif",
+        "jowl",
+        "mombasa"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 963,
+      "entropy": 3.969415,
+      "metrics": {
+        "total_edit": 45,
+        "avg_edit": 6.428571,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 7
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "spectral",
+          "crumpled": "usenets",
+          "reconstructed": "uplifts",
+          "bucket_key": "AQ=166",
+          "bucket_size": 658,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "flatness",
+          "crumpled": "monogram",
+          "reconstructed": "monogram",
+          "bucket_key": "AQ=168",
+          "bucket_size": 605,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "monotonic",
+          "crumpled": "parroting",
+          "reconstructed": "imprecates",
+          "bucket_key": "AQ=199",
+          "bucket_size": 522,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "across",
+          "crumpled": "mauriac",
+          "reconstructed": "enforce",
+          "bucket_key": "AQ=129",
+          "bucket_size": 525,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "nine",
+          "crumpled": "tgif",
+          "reconstructed": "hula",
+          "bucket_key": "AQ=78",
+          "bucket_size": 172,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "zone",
+          "crumpled": "jowl",
+          "reconstructed": "gases",
+          "bucket_key": "AQ=96",
+          "bucket_size": 280,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 6,
+          "original": "voices",
+          "crumpled": "mombasa",
+          "reconstructed": "angling",
+          "bucket_key": "AQ=127",
+          "bucket_size": 521,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_recovery_rate": 0.0,
+    "aq_preserved": true,
+    "final_text": "usenets monogram parroting mauriac tgif jowl mombasa",
+    "final_aq": 963,
+    "original_length": 51,
+    "final_length": 52,
+    "length_ratio": 1.0196078431372548,
+    "original_entropy": 3.7133390086727722,
+    "final_entropy": 3.969415,
+    "entropy_delta": 0.2560759913272279,
+    "total_edit_distance": 45,
+    "avg_edit_per_word": 6.428571,
+    "max_single_word_edit": 9,
+    "exact_matches": "0/7",
+    "exact_ratio": 0.0
+  }
+}

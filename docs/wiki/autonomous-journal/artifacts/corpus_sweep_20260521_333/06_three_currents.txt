@@ -1,0 +1,580 @@
+THREE CURRENTS — oracle — xenon — general (2026-05-21 12:38)
+════════════════════════════════════════════════════════════════════════
+Same seed through all three corpora. The AQ skeleton is identical; the vocabulary diverges.
+Oracle: 42,508 words
+Xenon:  5,057 words
+General: 88,612 words
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: The cryptolith opens the decimator gate  (AQ=708, Z6)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: Don commentator blitz don democrati boy
+  [  1] XEN: Don butterflies battle don destroy find
+  [  1] GEN: Bang dreadfulness busied bang cornrow bus
+  [  2] ORA: Dado testimonial stark dado concerts seed
+  [  2] XEN: Fol incestuous serve fol curious gate
+  [  2] GEN: Mas demonstrable shove mas clattered rack
+  [  3] ORA: Ise futuristic ganiti ise notifies foci
+  [  3] XEN: Ill cephalopodian ghost ill poisoned mit
+  [  3] GEN: Elbe oceanography forks elbe locality fags
+  [  4] ORA: Rna thisdefinite tasked rna tribunal sin
+  [  4] XEN: Rna incestuous serve rna triciens war
+  [  4] GEN: Mgm tambourines sprig mgm shouter raw
+  [  5] ORA: Lta initiatives incite lta prohibit gun
+  [  5] XEN: Ibid zygotriadic happen ibid possible name
+  [  5] GEN: Sam rainstorms hearth sam pandering yap
+  [  6] ORA: Fir cynomorium cloaked fir fathering dabih
+  [  6] XEN: Fol butterflies curve fol gineering gun
+  [  6] GEN: Dane helpfulness cubical dane encircles cox
+  [  7] ORA: Bobe butterflies aways bobe carcasses atka
+  [  7] XEN: Don anglogermanic annoy don century bold
+  [  7] GEN: Auk congregation beaming auk bushelled begs
+  [  8] ORA: Bali archaeological annoy bali bestowal alas
+  [  8] XEN: Fol butterflies aliens fol battlers bird
+  [  8] GEN: App chickenshits backlog app bisecting awed
+  [  9] ORA: Ple oppression malone ple tenacity kali
+  [  9] XEN: Rna ethnography minor rna treatise sin
+  [  9] GEN: Glad straggliest malone glad schooner kali
+  [ 10] ORA: Bali archaeological angelic bali belongeth alas
+  [ 10] XEN: Don anglogermanic aliens don battlers bird
+  [ 10] GEN: App cautiously auxin app besought awed
+  [ 11] ORA: Ws qualitative rhyme ws beekeeping nth
+  [ 11] XEN: The exposition police the atlantean bold
+  [ 11] GEN: Jct butterflies remix jct unblocks mon
+  [ 12] ORA: Fwd entitlement delilah fwd hammering educ
+  [ 12] XEN: Fol butterflies dreams fol mahajionga kali
+  [ 12] GEN: Defi ironworker dorms defi forfeited dell
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: hyperstition flows through the triangular syzygy  (AQ=1018, Z1)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: comutativity denuded davidson don criticizes cathedrals
+  [  1] XEN: authoritative england deriving don dimensions dominates
+  [  1] GEN: everlastingly brickie creamery bang chronicling deterring
+  [  2] ORA: computronium cranks collected dado vanishinsf reprobate
+  [  2] XEN: intercalations divided control fol teleports everyone
+  [  2] GEN: understandably onside whamming mas regathering credential
+  [  3] ORA: monstrosity minoan orderly ise insolvent excavates
+  [  3] XEN: authoritative multi reflects ill mathematics saturday
+  [  3] GEN: lexicographers downs jaybirds elbe glittering mintiest
+  [  4] ORA: soteriological traces thetrue rna vsarisuta satiating
+  [  4] XEN: intercalations terms truths rna teleports unlikely
+  [  4] GEN: unjustifiably pagers zechariah mgm restricted spillages
+  [  5] ORA: ostentatious plugs raccoons lta melanesians wholesale
+  [  5] XEN: authoritative octave serpent ibid mysticism standards
+  [  5] GEN: nonequivalent wallace mopiest sam tolerating pluckily
+  [  6] ORA: functionality gadnus finalised fir enumerates cthulhoid
+  [  6] XEN: intercalations forces geometer fol ingenieurs lightning
+  [  6] GEN: immobilisation charred effectual dane dentifrices frobisher
+  [  7] ORA: centralisation canons busiris bobe carcassonne automated
+  [  7] XEN: authoritative cults classical don continuum cumulated
+  [  7] GEN: counterblasts baulks caseloads auk bicyclists chocoholic
+  [  8] ORA: authoritative brahman begotten bali attraction appertain
+  [  8] XEN: intercalations combina captured fol amethysts activity
+  [  8] GEN: compulsorily awards bluefins app assimilated burnoose
+  [  9] ORA: sleeplessness thuban swatkin ple pictorius katissabha
+  [  9] XEN: authoritative slicer travels rna restricted trickery
+  [  9] GEN: reconfirmation hoarse redeemable glad mediocrity shrewish
+  [ 10] ORA: authoritative beasts basileus bali assimilated antecedent
+  [ 10] XEN: intercalations combina captured don amethysts activity
+  [ 10] GEN: compulsorily aunts birdsong app asperities brittany
+  [ 11] ORA: understandably bacchus assumes ws straighten permadeath
+  [ 11] XEN: authoritative channel barkerian the submergence cumulated
+  [ 11] GEN: sociocultural marker syncope jct physicking waterloo
+  [ 12] ORA: inadvertently hewing hurting fwd filthiness dindymus
+  [ 12] XEN: intercalations lacking messages fol latinizing mentions
+  [ 12] GEN: inexhaustibly copier flashers defi elusively hooligans
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: Katak and Oddubb coil the plex  (AQ=465, Z6)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: Ditch bob Bury belch don city
+  [  1] XEN: Brain dna Differ belt don aware
+  [  1] GEN: Biome bap Chris coach bang binds
+  [  2] ORA: Dante bel Saneha rey dado verba
+  [  2] XEN: Cargo we While sex fol rapid
+  [  2] GEN: Pith babe Cants chug mas nobel
+  [  3] ORA: Many is Fires desk ise infra
+  [  3] XEN: Look is Lost coil ill erase
+  [  3] GEN: Emile egg Herald lags elbe ebbing
+  [  4] ORA: Till om Serif rye rna wyde
+  [  4] XEN: Ones we Xxii sex rna rapid
+  [  4] GEN: Rabin mae Raffle soda mgm oohs
+  [  5] ORA: Paces jr Wheat vice lta lays
+  [  5] XEN: Many is Megami son ibid trade
+  [  5] GEN: Xref fla Lots meta sam swan
+  [  6] ORA: Genii egg Crux cemed fir effaced
+  [  6] XEN: Faith dna Human check fol city
+  [  6] GEN: Cargo cgi Dicier farad dane candle
+  [  7] ORA: Carded and Bigger arbha bobe binds
+  [  7] XEN: Balked and Clubs belt don auto
+  [  7] GEN: Badman apb Bowel bread auk auto
+  [  8] ORA: Bored ame Barred akri bali aswad
+  [  8] XEN: Axis dna Checked aero fol army
+  [  8] GEN: Assad and Binned bhaji app arched
+  [  9] ORA: Sone nn Least its ple oelig
+  [  9] XEN: Octo si Scant its rna noble
+  [  9] GEN: Icier ldc Pooch sara glad hanged
+  [ 10] ORA: Blur ame Bamboo akri bali aroma
+  [ 10] XEN: Axis and Checked aero don army
+  [ 10] GEN: Asian and Bigger bern app arable
+  [ 11] ORA: Betz alf Pcxei oflf ws shoo
+  [ 11] XEN: Skin th Twin pick the plane
+  [ 11] GEN: Mcadam apb Tides belt jct lays
+  [ 12] ORA: Hodel gak Dictu claw fwd fleet
+  [ 12] XEN: Healed dna Ixix check fol cost
+  [ 12] GEN: Cowl dan Essie gram defi cony
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: teleoplexy accelerates the void circuit  (AQ=712, Z1)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: develooment clangours don corn dialogue
+  [  1] XEN: consolidated dramatized don away dialogue
+  [  1] GEN: coruscating dionysian bang blags cratered
+  [  2] ORA: deductively rousseau dado capabi counts
+  [  2] XEN: fulfillment writings fol sics corpus
+  [  2] GEN: transferable cultures mas role cocooned
+  [  3] ORA: mosquitos grammatria ise keber obscure
+  [  3] XEN: pythagorean meteorite ill decked obscure
+  [  3] GEN: irrevocably overloaded elbe facial loggers
+  [  4] ORA: sluggishly sarvathat rna snap sounds
+  [  4] XEN: transducing writings rna sics yellow
+  [  4] GEN: unethically surveyed mgm sacco serapes
+  [  5] ORA: phanerozoic whichindeed lta melt pompeii
+  [  5] XEN: pythagorean pathfinder ibid when pointed
+  [  5] GEN: motorising reassigned sam grip parklet
+  [  6] ORA: gadoradasvara devastated fir easy germany
+  [  6] XEN: geopolitics fashionable fol bufu gematria
+  [  6] GEN: enhancements goaltender dane coned families
+  [  7] ORA: corinthians asceticism bobe baffle centered
+  [  7] XEN: consolidated displayes don asks circuit
+  [  7] GEN: carborundum cockchafers auk away bullish
+  [  8] ORA: compllation apostolic bali armed bhadrapada
+  [  8] XEN: alphanumeric cultures fol ally button
+  [  8] GEN: boondoggling cappuccino app arcade bitchier
+  [  9] ORA: rosicrucian mithraism ple reza shineth
+  [  9] XEN: transducing sincerely rna june warmly
+  [  9] GEN: pneumococcal stroller glad lades rotund
+  [ 10] ORA: communicated answering bali arial beginner
+  [ 10] XEN: alphanumeric cultures don ally button
+  [ 10] GEN: blusterers buxtehude app arabs benelux
+  [ 11] ORA: uncultured prophetic ws arabs attract
+  [ 11] XEN: consolidated tetrakys the resh available
+  [ 11] GEN: skywriter breezeway jct nobs validate
+  [ 12] ORA: householder dispenses fwd gauge infants
+  [ 12] XEN: population framework fol ching lowers
+  [ 12] GEN: generational infielders defi dobbed gigabits
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: the demon uttunul whispers from the djynxxagram  (AQ=925, Z7)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: don chast clockwork caricature charm don bibleauthors
+  [  1] XEN: don fermi composing escalation chance don foregrounded
+  [  1] GEN: bang condo disfigured disgusted bodega bang essentially
+  [  2] ORA: dado soft simplified resilience byte dado strangeness
+  [  2] XEN: fol fates concerning reptiloid well fol underground
+  [  2] GEN: mas chats crocheting crowdfund perm mas disinflation
+  [  3] ORA: ise gobby flatulent fractional kalod ise incessantly
+  [  3] XEN: ill metal formation fractional from ill foundational
+  [  3] GEN: elbe kline originated outracing ember elbe phraseology
+  [  4] ORA: rna svaha southern sacrificial regal rna supplicates
+  [  4] XEN: rna undu sorceries reptiloid well rna underground
+  [  4] GEN: mgm soft treasured synovial poof mgm ultramodern
+  [  5] ORA: lta inman imaginings thebounds lvii lta unprotected
+  [  5] XEN: ibid pure governing weaponry jove ibid uniformity
+  [  5] GEN: sam nudge rickshaws recognised tut sam romanticist
+  [  6] ORA: fir deduce culminated crystals elate fir controvert
+  [  6] XEN: fol gabrie criterion enthralled door fol foregrounded
+  [  6] GEN: dane fatwa handcuffing granduncle clair dane interdicting
+  [  7] ORA: bobe bombs bionically azimuths bhadra bobe arafasamudgata
+  [  7] XEN: don demon competent consisted byte don abominations
+  [  7] GEN: auk burs colonises charitably avon auk containerise
+  [  8] ORA: bali behind authorhas apartment asbil bali antagonistic
+  [  8] XEN: fol deduce anomalous ambivalent blow fol foregrounded
+  [  8] GEN: app beset categorise brigantine apps app circumference
+  [  9] ORA: ple menkh meilichios melissus peop ple pessimistic
+  [  9] XEN: rna thick sapphires millenium mass rna regulations
+  [  9] GEN: glad shear theremins squishes jawed glad timeserving
+  [ 10] ORA: bali befell arresting apartfrom arian bali antagonistic
+  [ 10] XEN: don deduce anomalous ambivalent blow don abominations
+  [ 10] GEN: app behind brobdingnag bookmobile apache app chloroformed
+  [ 11] ORA: ws ragged qabbalists precision tram ws regulations
+  [ 11] XEN: the daily uttunul possibly salt the surprising
+  [ 11] GEN: jct bedpan bouquets biographer march jct catheterises
+  [ 12] ORA: fwd durga dizzying diverting from fwd discontented
+  [ 12] XEN: fol guard dionysos escalation form fol foregrounded
+  [ 12] GEN: defi glut jeopardise inevitable crabs defi millenniums
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: paramita conducts dissolve the qliphoth veil  (AQ=820, Z1)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: diamonds catholics discount don discount cheer
+  [  1] XEN: diamonds ethnomes doctrinal don doctrinal chine
+  [  1] GEN: daguerre conspire daylilies bang daylilies burg
+  [  2] ORA: crypto richelieu curtains dado curtains brew
+  [  2] XEN: demonoid exoteric swiftly fol swiftly decide
+  [  2] GEN: collides cheapness conducive mas conducive wicca
+  [  3] ORA: negativa external olympian ise olympian laps
+  [  3] XEN: material operates installed ill installed lange
+  [  3] GEN: leafleted lutheran nigerians elbe nigerians gilt
+  [  4] ORA: thither scorning undeniable rna undeniable theo
+  [  4] XEN: starts theories swiftly rna swiftly ring
+  [  4] GEN: seaborne skydived subteens mgm subteens xxi
+  [  5] ORA: pukkasi unbearable respects lta respects pagan
+  [  5] XEN: particu options maharagion ibid maharagion live
+  [  5] GEN: orangeade pastors railroaded sam railroaded janie
+  [  6] ORA: guzzle dazzling guangcheng fir guangcheng egoic
+  [  6] XEN: greatly invests fractured fol fractured fabled
+  [  6] GEN: flagrant enthrone floggings dane floggings cues
+  [  7] ORA: cherubim artistic cleansers bobe cleansers beget
+  [  7] XEN: civilian dropping displays don displays bute
+  [  7] GEN: buckling bucksaws cartoons auk cartoons bedeck
+  [  8] ORA: bishops aphorism boroughs bali boroughs balaam
+  [  8] XEN: champion difficult citizens fol citizens angle
+  [  8] GEN: blazoned blousing breadcrumb app breadcrumb awes
+  [  9] ORA: sultana lunatics theworld ple theworld slap
+  [  9] XEN: ryujin subjects numerical rna numerical pole
+  [  9] GEN: rhodium seconding spectres glad spectres lux
+  [ 10] ORA: bhagavann anywhere bewildered bali bewildered baidam
+  [ 10] XEN: champion difficult citizens don citizens angle
+  [ 10] GEN: biopsied blitzing brasserie app brasserie aron
+  [ 11] ORA: beltway parrott bacchanalian ws bacchanalian aron
+  [ 11] XEN: celsius worship results the results tube
+  [ 11] GEN: unmeant wanglers bilirubin jct bilirubin sahib
+  [ 12] ORA: implore difficult intending fwd intending fool
+  [ 12] XEN: infernal journey hexagrams fol hexagrams feeds
+  [ 12] GEN: gumshoe gangrenes hurdlers defi hurdlers dips
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: numogrammic recursion spirals zone nine  (AQ=760, Z4)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: emphasizing charismatic bookends chast cnet
+  [  1] XEN: atmospheric binotriadic coherence female fish
+  [  1] GEN: demobilising calibration connery condo canada
+  [  2] ORA: delusionari solicitate proceeds soft cent
+  [  2] XEN: continental established qabbalism fates five
+  [  2] GEN: woodworms prosecute chorizo chats ymca
+  [  3] ORA: numerizing incursion exclaimed gobby ledge
+  [  3] XEN: intelligent patiently dispute metal rare
+  [  3] GEN: magnanimous fiduciaries mesmeric kline hone
+  [  4] ORA: transcriber statecraft pygmies svaha ror
+  [  4] XEN: syntactical recurrent qabbalism undu tabs
+  [  4] GEN: repressive ransomers soggily soft nov
+  [  5] ORA: profession waveforms violence inman nein
+  [  5] XEN: intelligent pentateuch spirals pure rear
+  [  5] GEN: onslaughts unverified prickly nudge lady
+  [  6] ORA: hhfbwznnlw dissimilar convince deduce fence
+  [  6] XEN: destroying invention cutting gabrie magic
+  [  6] GEN: fibromyalgia contusing felonies fatwa dion
+  [  7] ORA: confidently assistant atgative bombs borg
+  [  7] XEN: atmospheric apocalypse churches demon ends
+  [  7] GEN: collections athanasius bumpers burs belie
+  [  8] ORA: clearerlight angelology apidanus behind bats
+  [  8] XEN: alternative amphibious alchemical deduce canada
+  [  8] GEN: calumniator applauders bloggers beset barge
+  [  9] ORA: superhuman partition irstly menkh rare
+  [  9] XEN: syntactical prediction isolated thick send
+  [  9] GEN: recruiters letterers shoaling shear nash
+  [ 10] ORA: classleaders andtwelfth anunnaki befell barge
+  [ 10] XEN: alternative amphibious alchemical deduce canada
+  [ 10] GEN: briquettes apparatchik blackout behind babble
+  [ 11] ORA: churchiness reordering onwards ragged babble
+  [ 11] XEN: tripartite triplicate pattern daily von
+  [ 11] GEN: towellings overcooked wringer bedpan sago
+  [ 12] ORA: ingularity exercising debugging durga hasn
+  [ 12] XEN: destroying magnitudes debugging guard math
+  [ 12] GEN: hairstyles deodorises greeting glut faun
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: entropy garden seeded with hardware random  (AQ=740, Z2)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: capacities butan chast chast cleanses dactyl
+  [  1] XEN: anamnesis drive female female decision changer
+  [  1] GEN: depressed cloacae condo condo cowpox byroad
+  [  2] ORA: protest stand soft soft calendric clever
+  [  2] XEN: selsyns decoded fates fates cryonic wiley
+  [  2] GEN: crofters chalet chats chats clapping plunk
+  [  3] ORA: espoused guru gobby gobby linkages mcardle
+  [  3] XEN: geological most metal metal humour greys
+  [  3] GEN: monikers harmed kline kline mapmaker fixate
+  [  4] ORA: qfyqirci tafrac svaha svaha slaying termed
+  [  4] XEN: selsyns work undu undu regions wires
+  [  4] GEN: snipping peahen soft soft shingled prize
+  [  5] ORA: trawling itched inman inman paranoid philoe
+  [  5] XEN: tchattuk solu pure pure justice ixidod
+  [  5] GEN: predefined kigali nudge nudge pampered techno
+  [  6] ORA: cultured debased deduce deduce excluded fopgpe
+  [  6] XEN: displayed gilled gabrie gabrie excluded defended
+  [  6] GEN: foreword drive fatwa fatwa fitment cranked
+  [  7] ORA: asterism baboon bombs bombs bespeaks cardano
+  [  7] XEN: alligator coils demon demon burping carter
+  [  7] GEN: centigrade bravo burs burs bourbon because
+  [  8] ORA: apollonai arose behind behind averages beyond
+  [  8] XEN: alignment cloth deduce deduce building broken
+  [  8] GEN: breasting beetle beset beset bewilder baldfaced
+  [  9] ORA: intimated meagre menkh menkh serapis suite
+  [  9] XEN: preferred west thick thick powers point
+  [  9] GEN: sharpers obadiah shear shear scarily jolly
+  [ 10] ORA: aperture arahat befell befell asymbol benoit
+  [ 10] XEN: alignment cloth deduce deduce building broken
+  [ 10] GEN: blushers beards behind behind bendiest badgers
+  [ 11] ORA: overrun reeled ragged ragged assigned beehive
+  [ 11] XEN: resulted bodine daily daily turtle seirei
+  [ 11] GEN: widowing soul bedpan bedpan vestige minted
+  [ 12] ORA: detection enigma durga durga glowing harqil
+  [ 12] XEN: establish hamaya guard guard glottal diving
+  [ 12] GEN: heightens fedora glut glut griddles deimos
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: beat poetry through the abecedarium chain  (AQ=698, Z5)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: bank embracing davidson don caucasians clich
+  [  1] XEN: call emperor deriving don dominates edgar
+  [  1] GEN: beach declarable creamery bang deterring cages
+  [  2] ORA: xv ditions collected dado reprobate catch
+  [  2] XEN: xv standard control fol everyone engr
+  [  2] GEN: mdt copilot whamming mas credential vang
+  [  3] ORA: faced nicholas orderly ise excavates jeon
+  [  3] XEN: fail generals reflects ill saturday pair
+  [  3] GEN: dear leviers jaybirds elbe mintiest hagar
+  [  4] ORA: yu subtly thetrue rna satiating quo
+  [  4] XEN: xv standard truths rna unlikely talk
+  [  4] GEN: moi rosendo zechariah mgm spillages weld
+  [  5] ORA: grab purest raccoons lta wholesale medal
+  [  5] XEN: hex january serpent ibid standards rank
+  [  5] GEN: yak nigerien mopiest sam pluckily ipod
+  [  6] ORA: case haughty finalised fir cthulhoid fades
+  [  6] XEN: faced extended geometer fol lightning hence
+  [  6] GEN: brag fibrous effectual dane frobisher curb
+  [  7] ORA: apt cringing busiris bobe automated begat
+  [  7] XEN: call consume classical don cumulated dodge
+  [  7] GEN: atp caravels caseloads auk chocoholic bicep
+  [  8] ORA: alif champaign begotten bali appertain arte
+  [  8] XEN: adds cathedral captured fol activity divi
+  [  8] GEN: anal bridgehead bluefins app burnoose bahama
+  [  9] ORA: kghb stclpas swatkin ple katissabha peer
+  [  9] XEN: need missing travels rna trickery sum
+  [  9] GEN: gnp renaming redeemable glad shrewish mimi
+  [ 10] ORA: alif cazotte basileus bali antecedent argha
+  [ 10] XEN: adds cathedral captured don activity divi
+  [ 10] GEN: anal boozier birdsong app brittany bagged
+  [ 11] ORA: prc capitals assumes ws permadeath wasa
+  [ 11] XEN: rod reality barkerian the cumulated week
+  [ 11] GEN: lamb tinware syncope jct waterloo seas
+  [ 12] ORA: cum january hurting fwd dindymus fuel
+  [ 12] XEN: faced extreme messages fol mentions hope
+  [ 12] GEN: case gravely flashers defi hooligans ebola
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: what the Tathagata preached as merit was no-stock of merit  (AQ=967, Z4)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: charm don Davidson dynamic br boons bole chi-casket bee boons
+  [  1] XEN: chance don Deriving daruber as carry dark dy-ditto at carry
+  [  1] GEN: bodega bang Creamery deport bah cannes boob cap-buried bee cannes
+  [  2] ORA: byte dado Collected decrease mg pacific owe cbo-tangle bs pacific
+  [  2] XEN: well fol Control message as bobobja fly it-direct dec bobobja
+  [  2] GEN: perm mas Whamming comfier bed rheum lila chi-spill gad rheum
+  [  3] ORA: kalod ise Orderly pandora eae fatted ess gal-glyph il fatted
+  [  3] XEN: from ill Reflects default as hunded heat no-oceanic mh hunded
+  [  3] GEN: ember elbe Jaybirds nanjing fad flirt dst gal-focaccia cfc flirt
+  [  4] ORA: regal rna Thetrue undoes mg pipes papa nae-tinged pe pipes
+  [  4] XEN: well rna Truths message as raised was on-varied of raised
+  [  4] GEN: poof mgm Zechariah undated fda rowed lobe pac-sweep gad rowed
+  [  5] ORA: lvii lta Raccoons revise qc weren zap it-income jk weren
+  [  5] XEN: jove ibid Serpent widely as judaeo heat mp-signs li judaeo
+  [  5] GEN: tut sam Mopiest ravened deb withe tub kfc-hansel cfc withe
+  [  6] ORA: elate fir Finalised holding cq crest clod doa-divina ep crest
+  [  6] XEN: door fol Geometer column as defined free it-fibers dec defined
+  [  6] GEN: clair dane Effectual giveback bed curer clod cpa-crews bia curer
+  [  7] ORA: bhadra bobe Busiris cilician bed beeches baali ara-beriamb bai beeches
+  [  7] XEN: byte don Classical assume as begins dark dy-cipher at begins
+  [  7] GEN: avon auk Caseloads carnies bah bereft axed ara-bedsit bee bereft
+  [  8] ORA: asbil bali Begotten briton as aunit anar ane-bauval at aunit
+  [  8] XEN: blow fol Captured animals as attack but it-charon dec attack
+  [  8] GEN: apps app Bluefins bridles bed bakers anne apc-augur bia bakers
+  [  9] ORA: peop ple Swatkin torso gm izady int mp-melted of izady
+  [  9] XEN: mass rna Travels incense as raging was on-total of raging
+  [  9] GEN: jawed glad Redeemable tipple fda legals geog nae-libels dec legals
+  [ 10] ORA: arian bali Basileus bolfry as attack anar ane-baraduc at attack
+  [ 10] XEN: blow don Captured animals as attack but dy-charon at attack
+  [ 10] GEN: apache app Birdsong bonfire bah baeyer anne apc-atoms bee baeyer
+  [ 11] ORA: tram ws Assumes belching ki midday loeb rk-scales bai midday
+  [ 11] XEN: salt the Barkerian little as today dark it-bonola dec today
+  [ 11] GEN: march jct Syncope binning bed outed iso ara-plats fcc outed
+  [ 12] ORA: from fwd Hurting lesser cq defined dano ean-enhance fo defined
+  [ 12] XEN: form fol Messages daruber as domain hate mp-glyph li domain
+  [ 12] GEN: crabs defi Flashers idiotic deb dishy dark doa-dreamed bia dishy
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: I am the silence that is incomprehensible and the voice whose sound is manifold  (AQ=1312, Z7)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: I bab don cloacina crew ble comparativists bob don chios bruno causas ble diagnose
+  [  1] XEN: I ma don devices ayer and incomprehensible dna don class church crown and counts
+  [  1] GEN: I am bang doozy bilbo babe curvaceousness bap bang cuing bruit caedmon babe crasser
+  [  2] ORA: I ma dado remote bugs bel discriminations bel dado takau pound rouen bel counts
+  [  2] XEN: I am fol derived viii we incomprehensible we fol sure chubby xviii we corpus
+  [  2] GEN: I am mas declaws tow bap courteousness babe mas close rwanda quant bap cocooned
+  [  3] ORA: I fh ise frills lord is philanthropist is ise herds giraffe front is obscure
+  [  3] XEN: I ma ill maharagi fatal is incomprehensible is ill hunt obtain lurgo is obscure
+  [  3] GEN: I am elbe nettle elms egg pennsylvanians egg elbe licks flares fleeces egg loggers
+  [  4] ORA: I ma rna rumor syn om superficialness om rna thank requi saxon om sounds
+  [  4] XEN: I am rna types viii we incomprehensible we rna sure wrath xviii we yellow
+  [  4] GEN: I am mgm tweeds waged mae tatterdemalions mae mgm stack sheath ribeye mae serapes
+  [  5] ORA: I fh lta urging njfs jr quintessential jr lta know using tweet jr pompeii
+  [  5] XEN: I ma ibid master lems is incomprehensible is ibid know ryuo plays is pointed
+  [  5] GEN: I am sam rehired galas fla polypropylene fla sam parade yeager trajan fla parklet
+  [  6] ORA: I bab fir denoted email egg incomprehensible egg fir direr coarse deaddeer egg germany
+  [  6] XEN: I am fol folding born dna incomprehensible dna fol deride hebrew illus dna gematria
+  [  6] GEN: I am dane gorgon chock cgi incomprehensible cgi dane foams clxiv corine cgi families
+  [  7] ORA: I am bobe bleeding blot and circumambulating and bobe bonds asking beneath and centered
+  [  7] XEN: I ma don depends axes and incomprehensible and don butt atomic count and circuit
+  [  7] GEN: I am auk cloves aspca apb correspondents apb auk calais beaning beachhead apb bullish
+  [  8] ORA: I bab bali atives beams ame architecturally ame bali backand anthem basely ame bhadrapada
+  [  8] XEN: I am fol crucial atom dna incomprehensible dna fol bridge apply chosen dna button
+  [  8] GEN: I am app carmelo amgen and confraternities and app bowie badinage badgered and bitchier
+  [  9] ORA: I ie ple ludwig sign nn structuralism nn ple nagwi lifeon lingua nn shineth
+  [  9] XEN: I ma rna twins scale si incomprehensible si rna older women select si warmly
+  [  9] GEN: I am glad tassel kwan ldc supernumerary ldc glad shpt kinder joist ldc rotund
+  [ 10] ORA: I am bali anthro bands ame architecturally ame bali baalit annals barabbas ame beginner
+  [ 10] XEN: I am don crucial atom and incomprehensible and don bridge apply chosen and button
+  [ 10] GEN: I am app calamari allan and confraternities and app boner atomic axons and benelux
+  [ 11] ORA: I kc ws organic yjie alf ventriloquism alf ws rider nommo peoria alf attract
+  [ 11] XEN: I ma the calendar that th incomprehensible th the sets anthem stone th available
+  [ 11] GEN: I am jct budgies prada apb ventriloquism apb jct blats peeler nashua apb validate
+  [ 12] ORA: I bab fwd djedkare foom gak interconnective gak fwd fables deform diadems gak infants
+  [ 12] XEN: I am fol humans damage dna incomprehensible dna fol effect jashin lower dna lowers
+  [ 12] GEN: I am defi itaipu cute dan intrusiveness dan defi hafts dealing decors dan gigabits
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: wherever there is the possession of signs there is falsehood  (AQ=1088, Z8)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: capacities bulbs ble don bibleauthors bee casket bulbs ble category
+  [  1] XEN: anamnesis drink and don foregrounded at ditto drink and contained
+  [  1] GEN: depressed decant babe bang essentially bee buried decant babe decilitre
+  [  2] ORA: protest tired bel dado strangeness bs tangle tired bel rectangle
+  [  2] XEN: selsyns sides we fol underground dec direct sides we typified
+  [  2] GEN: crofters clogs bap mas disinflation gad spill clogs bap contained
+  [  3] ORA: espoused hardy is ise incessantly il glyph hardy is factorial
+  [  3] XEN: geological krako is ill foundational mh oceanic krako is mechanism
+  [  3] GEN: monikers livid egg elbe phraseology cfc focaccia livid egg literati
+  [  4] ORA: qfyqirci ugly om rna supplicates pe tinged ugly om replacing
+  [  4] XEN: selsyns sides we rna underground of varied sides we typified
+  [  4] GEN: snipping smear mae mgm ultramodern gad sweep smear mae rotting
+  [  5] ORA: trawling level jr lta unprotected jk income level jr thieving
+  [  5] XEN: tchattuk ugly is ibid uniformity li signs ugly is november
+  [  5] GEN: predefined oboes fla sam romanticist cfc hansel oboes fla oarlocks
+  [  6] ORA: cultured dutch egg fir controvert ep divina dutch egg custoip
+  [  6] XEN: displayed hindu dna fol foregrounded dec fibers hindu dna exemplar
+  [  6] GEN: foreword fever cgi dane interdicting bia crews fever cgi festival
+  [  7] ORA: asterism asish and bobe arafasamudgata bai beriamb asish and beanstalk
+  [  7] XEN: alligator bound and don abominations at cipher bound and category
+  [  7] GEN: centigrade brawl apb auk containerise bee bedsit brawl apb cavendish
+  [  8] ORA: apollonai anook ame bali antagonistic at bauval anook ame attested
+  [  8] XEN: alignment balance dna fol foregrounded dec charon balance dna believing
+  [  8] GEN: breasting bjork and app circumference bia augur bjork and brickbats
+  [  9] ORA: intimated ninji nn ple pessimistic of melted ninji nn insomnia
+  [  9] XEN: preferred loss si rna regulations of total loss si resident
+  [  9] GEN: sharpers seneca ldc glad timeserving dec libels seneca ldc reprised
+  [ 10] ORA: aperture ammon ame bali antagonistic at baraduc ammon ame atrophy
+  [ 10] XEN: alignment balance and don abominations at charon balance and believing
+  [ 10] GEN: blushers bento and app chloroformed bee atoms bento and boogiemen
+  [ 11] ORA: overrun sewed alf ws regulations bai scales sewed alf obvious
+  [ 11] XEN: resulted seals th the surprising dec bonola seals th spectral
+  [ 11] GEN: widowing bawled apb jct catheterises fcc plats bawled apb tecumseh
+  [ 12] ORA: detection equal gak fwd discontented fo enhance equal gak despicable
+  [ 12] XEN: establish hiten dna fol foregrounded li glyph hiten dna fatality
+  [ 12] GEN: heightens gogol dan defi millenniums bia dreamed gogol dan grapples
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: a Bodhisattva should give gifts unsupported by the idea of a sign  (AQ=1110, Z3)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: a Earthlyfate dioxide behen cabirs determinately big don camb bee a crew
+  [  1] XEN: a Christoffel diffuse basic chirei concentration big don auf at a ayer
+  [  1] GEN: a Disassembled coulis circa ceases disinterested big bang bald bee a bilbo
+  [  2] ORA: a Desultory defender mita rubbed deforestation mn dado bya bs a bugs
+  [  2] XEN: a Syzygetic details now value distribution by fol up dec a viii
+  [  2] GEN: a Unkindness chignon cast unto corrugations ied mas wad gad a tow
+  [  3] ORA: a Painstaking morgue ekaz fledged monopolistic die ise lcm il a lord
+  [  3] XEN: a Lepidoptera orders does layer hypercomplex gt ill etc mh a fatal
+  [  3] GEN: a Lutenists lattice hilda goose monopolistic boa elbe fahd cfc a elms
+  [  4] ORA: a Todiscover thermo moan seems shortcomings mn rna up pe a syn
+  [  4] XEN: a Syzygetic though now value hypothesized ve rna up of a viii
+  [  4] GEN: a Viburnums sinner sigh wolfe sequentially ied mgm lld gad a waged
+  [  5] ORA: a Samantabhadra poured wit wands philosophers sh lta nma jk a njfs
+  [  5] XEN: a Metamorphic ranging six marked eccentricities gt ibid has li a lems
+  [  5] GEN: a Oscillating nicosia micah kasey perpetuation mad sam gil cfc a galas
+  [  6] ORA: a Impiously fugues chaim create exploratory cx fir ein ep a email
+  [  6] XEN: a Formations galilean cast duels distribution can fol ein dec a born
+  [  6] GEN: a Flabbergasts enemies eased dotage fastidiously big dane ddt bia a chock
+  [  7] ORA: a Combustible carefree ataka belies contraceptive az bobe bay bai a blot
+  [  7] XEN: a Christoffel certain ares bliss concentration big don auf at a axes
+  [  7] GEN: a Charlatanry bruegel bogs blames concentration ale auk ash bee a aspca
+  [  8] ORA: a Behaviorism bewitch anew atany communitarian ale bali ave at a beams
+  [  8] XEN: a Apocalyptic bosses anew archaic distribution ahi fol air dec a atom
+  [  8] GEN: a Boycotting blabbers baird bedims cheerlessness adm app aol bia a amgen
+  [  9] ORA: a Thereference strobe giza magus sensibilities hee ple tag of a sign
+  [  9] XEN: a Positional texts hiko prime hypothesized ve rna man of a scale
+  [  9] GEN: a Pythagoras scores salk nines rheumatology dbl glad lcm dec a kwan
+  [ 10] ORA: a Asymmetry berenice anew armit communitarian ale bali ave at a bands
+  [ 10] XEN: a Apocalyptic bosses anew archaic concentration ahi don air at a atom
+  [ 10] GEN: a Borderlines bewailed baddie batted cardiologists adm app aol bee a allan
+  [ 11] ORA: a Astrologer bankers ladle piles typographical lea ws auf bai a yjie
+  [ 11] XEN: a Seamlessly atolls meet smell distribution big the tag dec a that
+  [ 11] GEN: a Stalemating zinger baccy shula unconditional ide jct phd fcc a prada
+  [ 12] ORA: a Iterations indians dart deccdes hypothesized dam fwd gach fo a foom
+  [ 12] XEN: a Formations lowell cats early eccentricities die fol ein li a damage
+  [ 12] GEN: a Gyroscopic fugues flax euler incrementally big defi elk bia a cute
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: the stock of merit of the one who gives unsupported is not easy to measure  (AQ=1336, Z4)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: don casket bee boons bee don ehu cite books determinately ble beads corn ate deselect
+  [  1] XEN: don ditto at carry at don area fold ethno concentration and blue away each departed
+  [  1] GEN: bang buried bee cannes bee bang bend bleed churl disinterested babe celt blags back decadency
+  [  2] ORA: dado tangle bs pacific bs dado dwg suf revel deforestation bel pact capabi ot decreased
+  [  2] XEN: fol direct dec bobobja dec fol one side sense distribution we coded sics eat custom
+  [  2] GEN: mas spill gad rheum gad mas log sgt tacoma corrugations bap canal role pdf clients
+  [  3] ORA: ise glyph il fatted il ise mil hath fawned monopolistic is film keber eng newitt
+  [  3] XEN: ill oceanic mh hunded mh ill few keep gunas hypercomplex is pro decked inc lowered
+  [  3] GEN: elbe focaccia cfc flirt cfc elbe drab exec gender monopolistic egg ideal facial eli lolcats
+  [  4] ORA: rna tinged pe pipes pe rna tie tay samit shortcomings om pain snap pdf sumero
+  [  4] XEN: rna varied of raised of rna one side sense hypothesized we way sics rag selected
+  [  4] GEN: mgm sweep gad rowed gad mgm mach sir tithe sequentially mae raced sacco pee scramble
+  [  5] ORA: lta income jk weren jk lta one ides under philosophers jr vied melt vac questi
+  [  5] XEN: ibid signs li judaeo li ibid tie who zeus eccentricities is reel when inc newton
+  [  5] GEN: sam hansel cfc withe cfc sam veg how iconic perpetuation fla line grip gar offender
+  [  6] ORA: fir divina ep crest ep fir hay dies craved exploratory egg carr easy caaba glasses
+  [  6] XEN: fol fibers dec defined dec fol elec how enter distribution dna lash bufu gen eration
+  [  6] GEN: dane crews bia curer bia dane cabs cry dents fastidiously cgi ebro coned cub firsts
+  [  7] ORA: bobe beriamb bai beeches bai bobe diff asap banish contraceptive and aqua baffle amba charming
+  [  7] XEN: don cipher at begins at don area fold compo concentration and beads asks each clifford
+  [  7] GEN: auk bedsit bee bereft bee auk area asap blush concentration apb bods away api cabinets
+  [  8] ORA: bali bauval at aunit at bali bend akaje attach communitarian ame ante armed aged burials
+  [  8] XEN: fol charon dec attack dec fol elec amida carnap distribution dna based ally back chinery
+  [  8] GEN: app augur bia bakers bia app ans alack baruch cheerlessness and biked arcade aged bombarded
+  [  9] ORA: ple melted of izady of ple tam los killed sensibilities nn iqam reza hoc spirit
+  [  9] XEN: rna total of raging of rna ical mix paired hypothesized si wake june rag rivers
+  [  9] GEN: glad libels dec legals dec glad hake lesa luisa rheumatology ldc pcbs lades ipa rounds
+  [ 10] ORA: bali baraduc at attack at bali bend akaje athene communitarian ame ante arial aged bumping
+  [ 10] XEN: don charon at attack at don area amida carnap concentration and based ally back chinery
+  [ 10] GEN: app atoms bee baeyer bee app ans alack barmen cardiologists and beads arabs aged blowing
+  [ 11] ORA: ws scales bai midday bai ws bedad rand osman typographical alf maya arabs lie bolutu
+  [ 11] XEN: the bonola dec today dec the jio once receded distribution th beads resh each tensor
+  [ 11] GEN: jct plats fcc outed fcc jct ink peek rehang unconditional apb vol nobs meh verily
+  [ 12] ORA: fwd enhance fo defined fo fwd ite esv detain hypothesized gak clip gauge dim idiocies
+  [ 12] XEN: fol glyph li domain li fol elec how ethno eccentricities dna not ching god future
+  [ 12] GEN: defi dreamed bia dishy bia defi cape dies eczema incrementally dan fiche dobbed dim grandees

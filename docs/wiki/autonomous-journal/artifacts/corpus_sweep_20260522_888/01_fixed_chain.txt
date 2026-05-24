@@ -1,0 +1,201 @@
+FIXED AQ CHAIN — oracle (2026-05-22 20:37)
+════════════════════════════════════════════════════════════════════════
+AQ checksum never changes. Vocabulary cascades.
+Corpus: oracle (455 buckets, 42,508 entries)
+Engine: xeno_jump v2, all-word mode, seed 888
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=708, Z6): The cryptolith opens the decimator gate
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ Crab cautiously battle crab cliopers begs
+  [  2] ✓ Hbw excellently encased hbw insiders enam
+  [  3] ✓ Bop thisdefinite washed bop ceaseless sin
+  [  4] ✓ Ofl measureless larisa ofl selector hum
+  [  5] ✓ Jct helpfulness ghost jct ominous gate
+  ... (62 intermediate steps) ...
+  [ 67] ✓ Hip symmetries spite hip iymtyw said
+  [ 68] ✓ Moe intervening jerky moe rpoison hebr
+  [ 69] ✓ Ple oppression malone ple tenacity kali
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1018, Z1): hyperstition flows through the triangular syzygy
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ claustrophobia chimera cherished crab conditioned usurper
+  [  2] ✓ intercalations jfqxfc instant hbw hebrewword drowsing
+  [  3] ✓ claustrophobia chaldean caucasus bop vsarisuta syzygy
+  [  4] ✓ problematising sensed silesian ofl omniscient imputing
+  [  5] ✓ monstrosity multi pittance jct irrelevance exoterica
+  ... (62 intermediate steps) ...
+  [ 67] ✓ intercalations kakudha lastcome hip unmeasured referring
+  [ 68] ✓ principalities rented rumour moe myrmidons healthily
+  [ 69] ✓ sleeplessness thuban swatkin ple pictorius katissabha
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=465, Z6): Katak and Oddubb coil the plex
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ Clock bel Boats asar crab brine
+  [  2] ✓ Itama haj Druma cobs hbw glow
+  [  3] ✓ Ceive babe Twin tis bop wyde
+  [  4] ✓ Saul nad Joram gut ofl mono
+  [  5] ✓ Mast is Frelp duck jct itand
+  ... (62 intermediate steps) ...
+  [ 67] ✓ Jabez haj Sakya regi hip upas
+  [ 68] ✓ Rieu mo Imaum gaze moe megala
+  [ 69] ✓ Sone nn Least its ple oelig
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=712, Z1): teleoplexy accelerates the void circuit
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ culpability bmveuaaaaaaad crab boro conmore
+  [  2] ✓ inaccessibly encrypted hbw grip kronos
+  [  3] ✓ corroborate threatens bop beans chilling
+  [  4] ✓ protassus loosening ofl open retrop
+  [  5] ✓ mystically handmaidens jct khabs openeth
+  ... (62 intermediate steps) ...
+  [ 67] ✓ infinitudes retreading hip heine laurus
+  [ 68] ✓ predisposed inviolable moe nota rampant
+  [ 69] ✓ rosicrucian mithraism ple reza shineth
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=925, Z7): the demon uttunul whispers from the djynxxagram
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ crab cabiri categories varieties bowl crab aspirations
+  [  2] ✓ hbw feast enormous enthralled glyh hbw expenditure
+  [  3] ✓ bop svaha verdigris surplus block bop tribulation
+  [  4] ✓ ofl kunda kuranzon joinville nule ofl misapplying
+  [  5] ✓ jct great foreslope greatness kerr jct indescribably
+  ... (62 intermediate steps) ...
+  [ 67] ✓ hip simia sevenheads reptiloid heru hip stepsister
+  [ 68] ✓ moe jump isometric interlude meos moe limitations
+  [ 69] ✓ ple menkh meilichios melissus peop ple pessimistic
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=820, Z1): paramita conducts dissolve the qliphoth veil
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ coppens banquets confront crab confront bhanda
+  [  2] ✓ jungles ecologies liberally hbw liberally grin
+  [  3] ✓ clarity thatwhen coinciding bop coinciding bekli
+  [  4] ✓ shadowed infusing skeptical ofl skeptical ripe
+  [  5] ✓ nowhere foucault overmuch jct overmuch lish
+  ... (62 intermediate steps) ...
+  [ 67] ✓ khalubes remaining machinist hip machinist gveda
+  [ 68] ✓ rewards iguities scotchman moe scotchman rahu
+  [ 69] ✓ sultana lunatics theworld ple theworld slap
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=760, Z4): numogrammic recursion spirals zone nine
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ cryptogram binotriadic undying cabiri cart
+  [  2] ✓ manifestany hereditary deviates feast hora
+  [  3] ✓ continental unlawfull slippage svaha cabir
+  [  4] ✓ shakspearean monotony humpty kunda pate
+  [  5] ✓ overworked infidelity fiercest great lete
+  ... (62 intermediate steps) ...
+  [ 67] ✓ mentalities sincerity presence simia hyde
+  [ 68] ✓ recreations mechanistic helmsman jump odin
+  [ 69] ✓ superhuman partition irstly menkh rare
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=740, Z2): entropy garden seeded with hardware random
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ templars belloc cabiri cabiri breathes chavez
+  [  2] ✓ directive gaking feast feast hecreated indras
+  [  3] ✓ scattered tafrac svaha svaha bilious carter
+  [  4] ✓ hereabout liner kunda kunda redating repeat
+  [  5] ✓ excalibur haniel great great markets method
+  ... (62 intermediate steps) ...
+  [ 67] ✓ profanum soul simia simia hitching jesus
+  [ 68] ✓ wherever khafre jump jump prints prize
+  [ 69] ✓ interbred meagre menkh menkh serapis suite
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=698, Z5): beat poetry through the abecedarium chain
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ arah desolate cherished crab usurper buta
+  [  2] ✓ dhy libidinal instant hbw drowsing haps
+  [  3] ✓ yu cutoffs caucasus bop syzygy boaz
+  [  4] ✓ ible sellers silesian ofl imputing nona
+  [  5] ✓ fata officers pittance jct exoterica jodo
+  ... (62 intermediate steps) ...
+  [ 67] ✓ ww mainning lastcome hip referring hive
+  [ 68] ✓ hit reviles rumour moe healthily nano
+  [ 69] ✓ kghb stclpas swatkin ple katissabha peer
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=967, Z4): what the Tathagata preached as merit was no-stock of merit
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ bowl crab Cherished conceit sa toric vach cap-budget bai toric
+  [  2] ✓ glyh hbw Instant matches eae doomed dona fdj-feeding gad doomed
+  [  3] ✓ block bop Caucasus coaching pd scribe sama cap-tinged bai scribe
+  [  4] ✓ nule ofl Silesian solemn fad hotage heil lag-larvae ng hotage
+  [  5] ✓ kerr jct Pittance picking eo ficino fair gal-goofy il ficino
+  ... (62 intermediate steps) ...
+  [ 67] ✓ heru hip Lastcome merely mg outr oth fdj-sweep gad outr
+  [ 68] ✓ meos moe Rumour shaking fad hearse hank kr-joses mh hearse
+  [ 69] ✓ peop ple Swatkin torso gm izady int mp-melted of izady
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1312, Z7): I am the silence that is incomprehensible and the voice whose sound is manifold
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ I bab crab bondmen born babe circumambulating bel crab butt yeats breached babe confuse
+  [  2] ✓ I gg hbw elbows hatch haj misapplications haj hbw fundi dyaus dumps haj kronos
+  [  3] ✓ I ma bop thedark boden babe circumambulating babe bop thank thedes synx babe chilling
+  [  4] ✓ I gg ofl jethro riage nad sentimentalized nad ofl lucii kiesel jeshua nad retrop
+  [  5] ✓ I fh jct fusing manu is philanthropist is jct incom goblet gergir is openeth
+  ... (62 intermediate steps) ...
+  [ 67] ✓ I ma hip refugee herr haj misapplications haj hip swat ponte roofs haj laurus
+  [ 68] ✓ I gg moe imaums poem mo sarvabuddhasandar mo moe lends ingrid infant mo rampant
+  [ 69] ✓ I ie ple ludwig sign nn structuralism nn ple nagwi lifeon lingua nn shineth
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1088, Z8): wherever there is the possession of signs there is falsehood
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ telchines belly babe crab aspirations bai budget belly babe untangle
+  [  2] ✓ directive framed haj hbw expenditure gad feeding framed haj dominated
+  [  3] ✓ scattered ugly babe bop tribulation bai tinged ugly babe submits
+  [  4] ✓ hereabout mares nad ofl misapplying ng larvae mares nad howison
+  [  5] ✓ excalibur hydra is jct indescribably il goofy hydra is fatality
+  ... (62 intermediate steps) ...
+  [ 67] ✓ profanum three haj hip stepsister gad sweep three haj ratchets
+  [ 68] ✓ wherever loss mo moe limitations mh joses loss mo helvetica
+  [ 69] ✓ interbred ninji nn ple pessimistic of melted ninji nn insomnia
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1110, Z3): a Bodhisattva should give gifts unsupported by the idea of a sign
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ a Debilitating conifer tick bionic counterpoise ve crab bok bai a born
+  [  2] ✓ a Lovaniensia jalopy deum duchy incrementally dei hbw has gad a hatch
+  [  3] ✓ a Communicati celsus rum traded contribution ri bop beak bai a boden
+  [  4] ✓ a Strengthen scented gasp kevin promiscuous fu ofl rs ng a riage
+  [  5] ✓ a Polynesian murky erik fodder neoplatonist eal jct loa il a manu
+  ... (62 intermediate steps) ...
+  [ 67] ✓ a Marginalised kantian ming riddle individualised mad hip hoe gad a herr
+  [ 68] ✓ a Spinsters repast fuy jorace preservative fic moe pu mh a poem
+  [ 69] ✓ a Thereference strobe giza magus sensibilities hee ple tag of a sign
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE (AQ=1336, Z4): the stock of merit of the one who gives unsupported is not easy to measure
+────────────────────────────────────────────────────────────────────────
+  [  1] ✓ crab budget bai toric bai crab doo bleed beaver counterpoise babe atar boro api crucible
+  [  2] ✓ hbw feeding gad doomed gad hbw kala fold doogu incrementally haj dish grip each kandalika
+  [  3] ✓ bop tinged bai scribe bai bop dika zas ticks contribution babe toad beans to cleaving
+  [  4] ✓ ofl larvae ng hotage ng ofl ry keta hovel promiscuous nad hiva open gar robotic
+  [  5] ✓ jct goofy il ficino il jct nas hell flayed neoplatonist is food khabs eof obsidian
+  ... (62 intermediate steps) ...
+  [ 67] ✓ hip sweep gad outr gad hip kin sri relied individualised haj obeah heine och laxity
+  [ 68] ✓ moe joses mh hearse mh moe rao kadak haply preservative mo harm nota foe rendered
+  [ 69] ✓ ple melted of izady of ple tam los killed sensibilities nn iqam reza hoc spirit

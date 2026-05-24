@@ -1,6 +1,6 @@
 {
   "generated": "2026-05-25",
-  "source": "planchette_svg.py ZONE_HW_PALETTE / _HWPALETTES (verified)",
+  "source": "planchette_svg.py ZONE_HW_PALETTE / _HWPALETTES",
   "zone_map": {
     "0": "MONO_AMBER",
     "1": "GAMEBOY_ORIGINAL",

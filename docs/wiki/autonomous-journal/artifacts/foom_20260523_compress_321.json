@@ -1,0 +1,573 @@
+{
+  "mode": "single",
+  "parameters": {
+    "text": "entropy gradient across nine zones",
+    "corpus_size": 89050,
+    "generations": 7,
+    "seed": 321,
+    "creative": true,
+    "creative_strategy": "varentropy",
+    "bucket_key": "aq",
+    "correlate": false
+  },
+  "original_aq": 657,
+  "original_words": [
+    "entropy",
+    "gradient",
+    "across",
+    "nine",
+    "zones"
+  ],
+  "trajectory": [
+    {
+      "generation": 0,
+      "text": "entropy gradient across nine zones",
+      "words": [
+        "entropy",
+        "gradient",
+        "across",
+        "nine",
+        "zones"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "original_aq": 657,
+      "mutated_aq": 657
+    },
+    {
+      "generation": 1,
+      "text": "humankind haunter inform fish rudder",
+      "words": [
+        "humankind",
+        "haunter",
+        "inform",
+        "fish",
+        "rudder"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 657,
+      "entropy": 3.752715,
+      "metrics": {
+        "total_edit": 29,
+        "avg_edit": 5.8,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "entropy",
+          "crumpled": "humankind",
+          "reconstructed": "housemaid",
+          "bucket_key": "AQ=176",
+          "bucket_size": 598,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "gradient",
+          "crumpled": "haunter",
+          "reconstructed": "frenches",
+          "bucket_key": "AQ=150",
+          "bucket_size": 617,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "across",
+          "crumpled": "inform",
+          "reconstructed": "saggier",
+          "bucket_key": "AQ=129",
+          "bucket_size": 525,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "nine",
+          "crumpled": "fish",
+          "reconstructed": "hone",
+          "bucket_key": "AQ=78",
+          "bucket_size": 172,
+          "edit_distance": 2,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "zones",
+          "crumpled": "rudder",
+          "reconstructed": "teaches",
+          "bucket_key": "AQ=124",
+          "bucket_size": 501,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "text": "predefined pampered recline lady galileo",
+      "words": [
+        "predefined",
+        "pampered",
+        "recline",
+        "lady",
+        "galileo"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 657,
+      "entropy": 3.596439,
+      "metrics": {
+        "total_edit": 31,
+        "avg_edit": 6.2,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "entropy",
+          "crumpled": "predefined",
+          "reconstructed": "practised",
+          "bucket_key": "AQ=176",
+          "bucket_size": 598,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "gradient",
+          "crumpled": "pampered",
+          "reconstructed": "moseys",
+          "bucket_key": "AQ=150",
+          "bucket_size": 617,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "across",
+          "crumpled": "recline",
+          "reconstructed": "ammonia",
+          "bucket_key": "AQ=129",
+          "bucket_size": 525,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "nine",
+          "crumpled": "lady",
+          "reconstructed": "carib",
+          "bucket_key": "AQ=78",
+          "bucket_size": 172,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "zones",
+          "crumpled": "galileo",
+          "reconstructed": "whiffed",
+          "bucket_key": "AQ=124",
+          "bucket_size": 501,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "text": "standbys weston verona self metals",
+      "words": [
+        "standbys",
+        "weston",
+        "verona",
+        "self",
+        "metals"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 657,
+      "entropy": 3.738219,
+      "metrics": {
+        "total_edit": 31,
+        "avg_edit": 6.2,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "entropy",
+          "crumpled": "standbys",
+          "reconstructed": "wrapping",
+          "bucket_key": "AQ=176",
+          "bucket_size": 598,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "gradient",
+          "crumpled": "weston",
+          "reconstructed": "sleeves",
+          "bucket_key": "AQ=150",
+          "bucket_size": 617,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "across",
+          "crumpled": "verona",
+          "reconstructed": "brandied",
+          "bucket_key": "AQ=129",
+          "bucket_size": 525,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "nine",
+          "crumpled": "self",
+          "reconstructed": "ledge",
+          "bucket_key": "AQ=78",
+          "bucket_size": 172,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "zones",
+          "crumpled": "metals",
+          "reconstructed": "jingled",
+          "bucket_key": "AQ=124",
+          "bucket_size": 501,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "text": "keychains indwelt lately ganja deniable",
+      "words": [
+        "keychains",
+        "indwelt",
+        "lately",
+        "ganja",
+        "deniable"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 657,
+      "entropy": 3.798885,
+      "metrics": {
+        "total_edit": 28,
+        "avg_edit": 5.6,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "entropy",
+          "crumpled": "keychains",
+          "reconstructed": "keychains",
+          "bucket_key": "AQ=176",
+          "bucket_size": 598,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "gradient",
+          "crumpled": "indwelt",
+          "reconstructed": "leftest",
+          "bucket_key": "AQ=150",
+          "bucket_size": 617,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "across",
+          "crumpled": "lately",
+          "reconstructed": "kickier",
+          "bucket_key": "AQ=129",
+          "bucket_size": 525,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "nine",
+          "crumpled": "ganja",
+          "reconstructed": "macao",
+          "bucket_key": "AQ=78",
+          "bucket_size": 172,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "zones",
+          "crumpled": "deniable",
+          "reconstructed": "oodles",
+          "bucket_key": "AQ=124",
+          "bucket_size": 501,
+          "edit_distance": 3,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "text": "sterling smarty voyage opt roves",
+      "words": [
+        "sterling",
+        "smarty",
+        "voyage",
+        "opt",
+        "roves"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 657,
+      "entropy": 3.757049,
+      "metrics": {
+        "total_edit": 28,
+        "avg_edit": 5.6,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "entropy",
+          "crumpled": "sterling",
+          "reconstructed": "stemware",
+          "bucket_key": "AQ=176",
+          "bucket_size": 598,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "gradient",
+          "crumpled": "smarty",
+          "reconstructed": "inkiest",
+          "bucket_key": "AQ=150",
+          "bucket_size": 617,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "across",
+          "crumpled": "voyage",
+          "reconstructed": "richly",
+          "bucket_key": "AQ=129",
+          "bucket_size": 525,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "nine",
+          "crumpled": "opt",
+          "reconstructed": "sacs",
+          "bucket_key": "AQ=78",
+          "bucket_size": 172,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "zones",
+          "crumpled": "roves",
+          "reconstructed": "gunman",
+          "bucket_key": "AQ=124",
+          "bucket_size": 501,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 6,
+      "text": "desiderata crafting deflated vfw spayed",
+      "words": [
+        "desiderata",
+        "crafting",
+        "deflated",
+        "vfw",
+        "spayed"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 657,
+      "entropy": 3.789538,
+      "metrics": {
+        "total_edit": 27,
+        "avg_edit": 5.4,
+        "max_edit": 8,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "entropy",
+          "crumpled": "desiderata",
+          "reconstructed": "desiderata",
+          "bucket_key": "AQ=176",
+          "bucket_size": 598,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "gradient",
+          "crumpled": "crafting",
+          "reconstructed": "capacity",
+          "bucket_key": "AQ=150",
+          "bucket_size": 617,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "across",
+          "crumpled": "deflated",
+          "reconstructed": "throw",
+          "bucket_key": "AQ=129",
+          "bucket_size": 525,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "nine",
+          "crumpled": "vfw",
+          "reconstructed": "siam",
+          "bucket_key": "AQ=78",
+          "bucket_size": 172,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "zones",
+          "crumpled": "spayed",
+          "reconstructed": "yahweh",
+          "bucket_key": "AQ=124",
+          "bucket_size": 501,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 7,
+      "text": "tequilas synods meathead pile likens",
+      "words": [
+        "tequilas",
+        "synods",
+        "meathead",
+        "pile",
+        "likens"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 657,
+      "entropy": 3.840083,
+      "metrics": {
+        "total_edit": 27,
+        "avg_edit": 5.4,
+        "max_edit": 7,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "entropy",
+          "crumpled": "tequilas",
+          "reconstructed": "tempting",
+          "bucket_key": "AQ=176",
+          "bucket_size": 598,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "gradient",
+          "crumpled": "synods",
+          "reconstructed": "subfield",
+          "bucket_key": "AQ=150",
+          "bucket_size": 617,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "across",
+          "crumpled": "meathead",
+          "reconstructed": "measly",
+          "bucket_key": "AQ=129",
+          "bucket_size": 525,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "nine",
+          "crumpled": "pile",
+          "reconstructed": "bland",
+          "bucket_key": "AQ=78",
+          "bucket_size": 172,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "zones",
+          "crumpled": "likens",
+          "reconstructed": "xylem",
+          "bucket_key": "AQ=124",
+          "bucket_size": 501,
+          "edit_distance": 4,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_recovery_rate": 0.0,
+    "aq_preserved": true,
+    "final_text": "tequilas synods meathead pile likens",
+    "final_aq": 657,
+    "original_length": 34,
+    "final_length": 36,
+    "length_ratio": 1.0588235294117647,
+    "original_entropy": 3.679395106517186,
+    "final_entropy": 3.840083,
+    "entropy_delta": 0.16068789348281376,
+    "total_edit_distance": 27,
+    "avg_edit_per_word": 5.4,
+    "max_single_word_edit": 7,
+    "exact_matches": "0/5",
+    "exact_ratio": 0.0
+  }
+}

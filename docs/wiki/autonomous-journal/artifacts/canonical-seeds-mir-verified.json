@@ -1,0 +1,82 @@
+[
+  {
+    "file": "zone_0_eiaoung.wav",
+    "true_z": 0,
+    "centroid_hz": 220.14,
+    "flatness": 0,
+    "bpm": 90.67,
+    "key": "A"
+  },
+  {
+    "file": "zone_1_gl.wav",
+    "true_z": 1,
+    "centroid_hz": 220.84,
+    "flatness": 0,
+    "bpm": 156.61,
+    "key": "G#"
+  },
+  {
+    "file": "zone_2_dt.wav",
+    "true_z": 2,
+    "centroid_hz": 746.48,
+    "flatness": 0,
+    "bpm": 87.59,
+    "key": "D"
+  },
+  {
+    "file": "zone_3_zx.wav",
+    "true_z": 3,
+    "centroid_hz": 1104.32,
+    "flatness": 0,
+    "bpm": 143.55,
+    "key": "G"
+  },
+  {
+    "file": "zone_4_skr.wav",
+    "true_z": 4,
+    "centroid_hz": 179.18,
+    "flatness": 0,
+    "bpm": 100.0,
+    "key": "D"
+  },
+  {
+    "file": "zone_5_ktt.wav",
+    "true_z": 5,
+    "centroid_hz": 562.19,
+    "flatness": 0,
+    "bpm": 198.77,
+    "key": "C"
+  },
+  {
+    "file": "zone_6_tch.wav",
+    "true_z": 6,
+    "centroid_hz": 1201.59,
+    "flatness": 0,
+    "bpm": 107.67,
+    "key": "B"
+  },
+  {
+    "file": "zone_7_pb.wav",
+    "true_z": 7,
+    "centroid_hz": 235.61,
+    "flatness": 0,
+    "bpm": 123.05,
+    "key": "G"
+  },
+  {
+    "file": "zone_8_mnm.wav",
+    "true_z": 8,
+    "centroid_hz": 1271.26,
+    "flatness": 0,
+    "bpm": 126.05,
+    "key": "E"
+  },
+  {
+    "file": "zone_9_tn.wav",
+    "true_z": 9,
+    "centroid_hz": 1543.59,
+    "flatness": 0,
+    "bpm": 95.7,
+    "key": "E"
+  }
+]

@@ -1,0 +1,221 @@
+ZONE CUT-UP from Jumped Text (2026-05-22 20:37)
+════════════════════════════════════════════════════════════════════════
+Each zone's fragmentation profile applied to xeno-jumped text.
+Corpus for source text: oracle
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: The cryptolith opens the decimator gate
+JUMPED: Ams suryavarta spink ams approved roi
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · approved
+
+  ZONE 1 [SURGE]
+  Ams suryavarta spink ams approved roi Ams suryavarta spink ams approved roi—
+
+  ZONE 2 [SEPARATION]
+  Ams suryavarta spink ams approved roi
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  Ams suryavarta spink ams approved roi
+
+  ZONE 5 [PRESSURE]
+  Ams suryavarta spink ams approved roi
+
+  ZONE 6 [ABSTRACTION]
+  suryavarta
+
+  ZONE 7 [BLOOD]
+  Ams suryavarta spink ams approved roi
+
+  ZONE 8 [MULTIPLICITY]
+  Ams
+Ams
+spink
+spink
+suryavarta
+suryavarta
+roi
+roi
+
+  ZONE 9 [PLEX]
+  suryavarta approved roi Ams () ams
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: hyperstition flows through the triangular syzygy
+JUMPED: alphaprivative arisen analyzed ams underlines rearranged
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · underlines
+
+  ZONE 1 [SURGE]
+  alphaprivative arisen analyzed ams underlines rearranged alphaprivative arisen analyzed ams underlines rearranged—
+
+  ZONE 2 [SEPARATION]
+  alphaprivative arisen analyzed ams underlines rearranged
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  alphaprivative arisen analyzed ams underlines rearranged
+
+  ZONE 5 [PRESSURE]
+  alphaprivative arisen analyzed ams underlines rearranged
+
+  ZONE 6 [ABSTRACTION]
+  alphaprivative :: ar≡en
+
+  ZONE 7 [BLOOD]
+  alphaprivative arisen analyzed ams underlines rearranged
+
+  ZONE 8 [MULTIPLICITY]
+  underlines
+underlines
+alphaprivative
+alphaprivative
+arisen
+arisen
+analyzed
+analyzed
+
+  ZONE 9 [PLEX]
+  ams underlines () ar≡en rearranged analyzed
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: Katak and Oddubb coil the plex
+JUMPED: Badly adad Saith reek ams ulse
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · ams
+
+  ZONE 1 [SURGE]
+  Badly adad Saith reek ams ulse Badly adad Saith reek ams ulse—
+
+  ZONE 2 [SEPARATION]
+  Badly adad Saith reek ams ulse
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  Badly adad Saith reek ams ulse
+
+  ZONE 5 [PRESSURE]
+  Badly adad Saith reek ams ulse
+
+  ZONE 6 [ABSTRACTION]
+  Badly :: adad
+
+  ZONE 7 [BLOOD]
+  Badly adad Saith reek ams ulse
+
+  ZONE 8 [MULTIPLICITY]
+  ams
+ams
+Badly
+Badly
+adad
+adad
+Saith
+Saith
+
+  ZONE 9 [PLEX]
+  reek ams () adad ulse Saith
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: teleoplexy accelerates the void circuit
+JUMPED: battlemented reticences ams ally aroused
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · aroused
+
+  ZONE 1 [SURGE]
+  battlemented reticences ams ally aroused battlemented reticences ams ally aroused—
+
+  ZONE 2 [SEPARATION]
+  battlemented reticences ams ally aroused
+
+  ZONE 3 [WARP]
+  
+
+  ZONE 4 [GATE]
+  battlemented reticences ams ally aroused
+
+  ZONE 5 [PRESSURE]
+  battlemented reticences ams ally aroused
+
+  ZONE 6 [ABSTRACTION]
+  battlemented :: aroused
+
+  ZONE 7 [BLOOD]
+  battlemented reticences ams ally aroused
+
+  ZONE 8 [MULTIPLICITY]
+  battlemented
+battlemented
+ams
+ams
+reticences
+reticences
+aroused
+aroused
+
+  ZONE 9 [PLEX]
+  reticences ams battlemented ∀y ()
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: the demon uttunul whispers from the djynxxagram
+JUMPED: ams silt security regulates apache ams smithsonian
+────────────────────────────────────────────────────────────────────────
+
+  ZONE 0 [VOID]
+  · security
+
+  ZONE 1 [SURGE]
+  ams silt security regulates apache ams smithsonian ams silt security regulates apache ams smithsonian—
+
+  ZONE 2 [SEPARATION]
+  ams silt security regulates apache ams smithsonian
+
+  ZONE 3 [WARP]
+  amsthsonian
+
+  ZONE 4 [GATE]
+  ams silt security regulates apache ams smithsonian
+
+  ZONE 5 [PRESSURE]
+  ams silt security regulates apache ams smithsonian
+
+  ZONE 6 [ABSTRACTION]
+  silt :: regulates
+
+  ZONE 7 [BLOOD]
+  ams silt security regulates apache ams smithsonian
+
+  ZONE 8 [MULTIPLICITY]
+  silt
+silt
+security
+security
+regulates
+regulates
+ams
+ams
+smithsonian
+smithsonian
+
+  ZONE 9 [PLEX]
+  silt ams smithsonian apache security regulates (((())))

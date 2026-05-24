@@ -1,0 +1,652 @@
+{
+  "mode": "single",
+  "parameters": {
+    "text": "hermetic gate zero limit level channel",
+    "corpus_size": 89050,
+    "generations": 7,
+    "seed": 777,
+    "creative": true,
+    "creative_strategy": "varentropy",
+    "bucket_key": "aq",
+    "correlate": false
+  },
+  "original_aq": 651,
+  "original_words": [
+    "hermetic",
+    "gate",
+    "zero",
+    "limit",
+    "level",
+    "channel"
+  ],
+  "trajectory": [
+    {
+      "generation": 0,
+      "text": "hermetic gate zero limit level channel",
+      "words": [
+        "hermetic",
+        "gate",
+        "zero",
+        "limit",
+        "level",
+        "channel"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "original_aq": 651,
+      "mutated_aq": 651
+    },
+    {
+      "generation": 1,
+      "text": "urumqi new wined ringo dills mining",
+      "words": [
+        "urumqi",
+        "new",
+        "wined",
+        "ringo",
+        "dills",
+        "mining"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 651,
+      "entropy": 3.565596,
+      "metrics": {
+        "total_edit": 33,
+        "avg_edit": 5.5,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "hermetic",
+          "crumpled": "urumqi",
+          "reconstructed": "boneheaded",
+          "bucket_key": "AQ=153",
+          "bucket_size": 647,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "gate",
+          "crumpled": "new",
+          "reconstructed": "neck",
+          "bucket_key": "AQ=69",
+          "bucket_size": 108,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "zero",
+          "crumpled": "wined",
+          "reconstructed": "comes",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "limit",
+          "crumpled": "ringo",
+          "reconstructed": "ablated",
+          "bucket_key": "AQ=108",
+          "bucket_size": 403,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "level",
+          "crumpled": "dills",
+          "reconstructed": "defamed",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "channel",
+          "crumpled": "mining",
+          "reconstructed": "crammed",
+          "bucket_key": "AQ=120",
+          "bucket_size": 505,
+          "edit_distance": 4,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "text": "toughen mon video regor poos marry",
+      "words": [
+        "toughen",
+        "mon",
+        "video",
+        "regor",
+        "poos",
+        "marry"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 651,
+      "entropy": 3.738219,
+      "metrics": {
+        "total_edit": 33,
+        "avg_edit": 5.5,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "hermetic",
+          "crumpled": "toughen",
+          "reconstructed": "boneheaded",
+          "bucket_key": "AQ=153",
+          "bucket_size": 647,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "gate",
+          "crumpled": "mon",
+          "reconstructed": "mon",
+          "bucket_key": "AQ=69",
+          "bucket_size": 108,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "zero",
+          "crumpled": "video",
+          "reconstructed": "oaten",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "limit",
+          "crumpled": "regor",
+          "reconstructed": "ablated",
+          "bucket_key": "AQ=108",
+          "bucket_size": 403,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "level",
+          "crumpled": "poos",
+          "reconstructed": "likes",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "channel",
+          "crumpled": "marry",
+          "reconstructed": "hitched",
+          "bucket_key": "AQ=120",
+          "bucket_size": 505,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "text": "cathedral biog boars bikini bucks bedheads",
+      "words": [
+        "cathedral",
+        "biog",
+        "boars",
+        "bikini",
+        "bucks",
+        "bedheads"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 651,
+      "entropy": 3.880795,
+      "metrics": {
+        "total_edit": 36,
+        "avg_edit": 6.0,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "hermetic",
+          "crumpled": "cathedral",
+          "reconstructed": "boneheaded",
+          "bucket_key": "AQ=153",
+          "bucket_size": 647,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "gate",
+          "crumpled": "biog",
+          "reconstructed": "biog",
+          "bucket_key": "AQ=69",
+          "bucket_size": 108,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "zero",
+          "crumpled": "boars",
+          "reconstructed": "pooed",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "limit",
+          "crumpled": "bikini",
+          "reconstructed": "ablated",
+          "bucket_key": "AQ=108",
+          "bucket_size": 403,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "level",
+          "crumpled": "bucks",
+          "reconstructed": "sauna",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "channel",
+          "crumpled": "bedheads",
+          "reconstructed": "unpack",
+          "bucket_key": "AQ=120",
+          "bucket_size": 505,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "text": "colonial blade bumbag bower carped tonya",
+      "words": [
+        "colonial",
+        "blade",
+        "bumbag",
+        "bower",
+        "carped",
+        "tonya"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 651,
+      "entropy": 3.903702,
+      "metrics": {
+        "total_edit": 35,
+        "avg_edit": 5.833333,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "hermetic",
+          "crumpled": "colonial",
+          "reconstructed": "boneheaded",
+          "bucket_key": "AQ=153",
+          "bucket_size": 647,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "gate",
+          "crumpled": "blade",
+          "reconstructed": "bird",
+          "bucket_key": "AQ=69",
+          "bucket_size": 108,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "zero",
+          "crumpled": "bumbag",
+          "reconstructed": "aspen",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "limit",
+          "crumpled": "bower",
+          "reconstructed": "ablated",
+          "bucket_key": "AQ=108",
+          "bucket_size": 403,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "level",
+          "crumpled": "carped",
+          "reconstructed": "keats",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "channel",
+          "crumpled": "tonya",
+          "reconstructed": "pyjama",
+          "bucket_key": "AQ=120",
+          "bucket_size": 505,
+          "edit_distance": 7,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "text": "highborn eave gables fiery hindu crepes",
+      "words": [
+        "highborn",
+        "eave",
+        "gables",
+        "fiery",
+        "hindu",
+        "crepes"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 651,
+      "entropy": 3.967862,
+      "metrics": {
+        "total_edit": 35,
+        "avg_edit": 5.833333,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "hermetic",
+          "crumpled": "highborn",
+          "reconstructed": "boneheaded",
+          "bucket_key": "AQ=153",
+          "bucket_size": 647,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "gate",
+          "crumpled": "eave",
+          "reconstructed": "dow",
+          "bucket_key": "AQ=69",
+          "bucket_size": 108,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "zero",
+          "crumpled": "gables",
+          "reconstructed": "umiak",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "limit",
+          "crumpled": "fiery",
+          "reconstructed": "ablated",
+          "bucket_key": "AQ=108",
+          "bucket_size": 403,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "level",
+          "crumpled": "hindu",
+          "reconstructed": "salaam",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "channel",
+          "crumpled": "crepes",
+          "reconstructed": "enabler",
+          "bucket_key": "AQ=120",
+          "bucket_size": 505,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 6,
+      "text": "cathedral usb boars yews bucks sample",
+      "words": [
+        "cathedral",
+        "usb",
+        "boars",
+        "yews",
+        "bucks",
+        "sample"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 651,
+      "entropy": 3.892452,
+      "metrics": {
+        "total_edit": 33,
+        "avg_edit": 5.5,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "hermetic",
+          "crumpled": "cathedral",
+          "reconstructed": "boneheaded",
+          "bucket_key": "AQ=153",
+          "bucket_size": 647,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "gate",
+          "crumpled": "usb",
+          "reconstructed": "ufo",
+          "bucket_key": "AQ=69",
+          "bucket_size": 108,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "zero",
+          "crumpled": "boars",
+          "reconstructed": "boars",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "limit",
+          "crumpled": "yews",
+          "reconstructed": "ablated",
+          "bucket_key": "AQ=108",
+          "bucket_size": 403,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "level",
+          "crumpled": "bucks",
+          "reconstructed": "vert",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 4,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "channel",
+          "crumpled": "sample",
+          "reconstructed": "jeeves",
+          "bucket_key": "AQ=120",
+          "bucket_size": 505,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 7,
+      "text": "pointy hike paras ligate radian gimmes",
+      "words": [
+        "pointy",
+        "hike",
+        "paras",
+        "ligate",
+        "radian",
+        "gimmes"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 651,
+      "entropy": 3.837827,
+      "metrics": {
+        "total_edit": 34,
+        "avg_edit": 5.666667,
+        "max_edit": 9,
+        "exact_count": 0,
+        "total_words": 6
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "hermetic",
+          "crumpled": "pointy",
+          "reconstructed": "boneheaded",
+          "bucket_key": "AQ=153",
+          "bucket_size": 647,
+          "edit_distance": 9,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "gate",
+          "crumpled": "hike",
+          "reconstructed": "hike",
+          "bucket_key": "AQ=69",
+          "bucket_size": 108,
+          "edit_distance": 3,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "zero",
+          "crumpled": "paras",
+          "reconstructed": "brigs",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "limit",
+          "crumpled": "ligate",
+          "reconstructed": "ablated",
+          "bucket_key": "AQ=108",
+          "bucket_size": 403,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "level",
+          "crumpled": "radian",
+          "reconstructed": "boiled",
+          "bucket_key": "AQ=101",
+          "bucket_size": 289,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 5,
+          "original": "channel",
+          "crumpled": "gimmes",
+          "reconstructed": "aphasic",
+          "bucket_key": "AQ=120",
+          "bucket_size": 505,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_recovery_rate": 0.0,
+    "aq_preserved": true,
+    "final_text": "pointy hike paras ligate radian gimmes",
+    "final_aq": 651,
+    "original_length": 38,
+    "final_length": 38,
+    "length_ratio": 1.0,
+    "original_entropy": 3.648693304676033,
+    "final_entropy": 3.837827,
+    "entropy_delta": 0.18913369532396684,
+    "total_edit_distance": 34,
+    "avg_edit_per_word": 5.666667,
+    "max_single_word_edit": 9,
+    "exact_matches": "0/6",
+    "exact_ratio": 0.0
+  }
+}

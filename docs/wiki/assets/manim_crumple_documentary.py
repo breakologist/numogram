@@ -23,8 +23,7 @@ from manim import VideoMobject  # for embedded clips
 import json, os
 
 # ─── Asset paths ──────────────────────────────────────────────────────────────
-_ASSET_DIR = os.path.dirname(os.path.abspath(__file__))
-ASSET_DIR = _ASSET_DIR
+ASSET_DIR = "/home/etym/numogram/docs/wiki/assets"
 ZONE_SPIRAL = os.path.join(ASSET_DIR, "ZoneSpiral.mp4")
 SYZYGY_CASCADE = os.path.join(ASSET_DIR, "SyzygyCascade.mp4")
 SINGLE_TRAJ = os.path.join(ASSET_DIR, "crumple_trajectory_animation.mp4")

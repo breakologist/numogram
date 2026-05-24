@@ -1,0 +1,499 @@
+{
+  "mode": "single",
+  "parameters": {
+    "text": "Abyssal current pulls toward zero",
+    "corpus_size": 89050,
+    "generations": 6,
+    "seed": 303,
+    "creative": true,
+    "creative_strategy": "varentropy",
+    "bucket_key": "aq",
+    "correlate": false
+  },
+  "original_aq": 664,
+  "original_words": [
+    "Abyssal",
+    "current",
+    "pulls",
+    "toward",
+    "zero"
+  ],
+  "trajectory": [
+    {
+      "generation": 0,
+      "text": "Abyssal current pulls toward zero",
+      "words": [
+        "Abyssal",
+        "current",
+        "pulls",
+        "toward",
+        "zero"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "original_aq": 664,
+      "mutated_aq": 664
+    },
+    {
+      "generation": 1,
+      "text": "Penning pitcairn ringer rangier noun",
+      "words": [
+        "Penning",
+        "pitcairn",
+        "ringer",
+        "rangier",
+        "noun"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 664,
+      "entropy": 3.260785,
+      "metrics": {
+        "total_edit": 36,
+        "avg_edit": 7.2,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "Abyssal",
+          "crumpled": "Penning",
+          "reconstructed": "peekaboo",
+          "bucket_key": "AQ=142",
+          "bucket_size": 649,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "current",
+          "crumpled": "pitcairn",
+          "reconstructed": "academician",
+          "bucket_key": "AQ=162",
+          "bucket_size": 651,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "pulls",
+          "crumpled": "ringer",
+          "reconstructed": "clayey",
+          "bucket_key": "AQ=125",
+          "bucket_size": 526,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "toward",
+          "crumpled": "rangier",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "zero",
+          "crumpled": "noun",
+          "reconstructed": "suse",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 4,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "text": "Fuzzed greyest heckler hauling flaky",
+      "words": [
+        "Fuzzed",
+        "greyest",
+        "heckler",
+        "hauling",
+        "flaky"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 664,
+      "entropy": 3.993133,
+      "metrics": {
+        "total_edit": 37,
+        "avg_edit": 7.4,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "Abyssal",
+          "crumpled": "Fuzzed",
+          "reconstructed": "fuzzed",
+          "bucket_key": "AQ=142",
+          "bucket_size": 649,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "current",
+          "crumpled": "greyest",
+          "reconstructed": "academician",
+          "bucket_key": "AQ=162",
+          "bucket_size": 651,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "pulls",
+          "crumpled": "heckler",
+          "reconstructed": "wicket",
+          "bucket_key": "AQ=125",
+          "bucket_size": 526,
+          "edit_distance": 6,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "toward",
+          "crumpled": "hauling",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "zero",
+          "crumpled": "flaky",
+          "reconstructed": "bumbag",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "text": "Proper puritan secure reneger pits",
+      "words": [
+        "Proper",
+        "puritan",
+        "secure",
+        "reneger",
+        "pits"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 664,
+      "entropy": 3.410417,
+      "metrics": {
+        "total_edit": 34,
+        "avg_edit": 6.8,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "Abyssal",
+          "crumpled": "Proper",
+          "reconstructed": "proofed",
+          "bucket_key": "AQ=142",
+          "bucket_size": 649,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "current",
+          "crumpled": "puritan",
+          "reconstructed": "academician",
+          "bucket_key": "AQ=162",
+          "bucket_size": 651,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "pulls",
+          "crumpled": "secure",
+          "reconstructed": "padlock",
+          "bucket_key": "AQ=125",
+          "bucket_size": 526,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "toward",
+          "crumpled": "reneger",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "zero",
+          "crumpled": "pits",
+          "reconstructed": "yield",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 4,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "text": "Barents babylonia beerier bearlike ashcan",
+      "words": [
+        "Barents",
+        "babylonia",
+        "beerier",
+        "bearlike",
+        "ashcan"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 664,
+      "entropy": 3.598065,
+      "metrics": {
+        "total_edit": 36,
+        "avg_edit": 7.2,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "Abyssal",
+          "crumpled": "Barents",
+          "reconstructed": "barents",
+          "bucket_key": "AQ=142",
+          "bucket_size": 649,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "current",
+          "crumpled": "babylonia",
+          "reconstructed": "academician",
+          "bucket_key": "AQ=162",
+          "bucket_size": 651,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "pulls",
+          "crumpled": "beerier",
+          "reconstructed": "decoys",
+          "bucket_key": "AQ=125",
+          "bucket_size": 526,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "toward",
+          "crumpled": "bearlike",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "zero",
+          "crumpled": "ashcan",
+          "reconstructed": "robbed",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 6,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "text": "Cheapened colognes crikey cosset chest",
+      "words": [
+        "Cheapened",
+        "colognes",
+        "crikey",
+        "cosset",
+        "chest"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 664,
+      "entropy": 3.72119,
+      "metrics": {
+        "total_edit": 34,
+        "avg_edit": 6.8,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "Abyssal",
+          "crumpled": "Cheapened",
+          "reconstructed": "ceteris",
+          "bucket_key": "AQ=142",
+          "bucket_size": 649,
+          "edit_distance": 7,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "current",
+          "crumpled": "colognes",
+          "reconstructed": "academician",
+          "bucket_key": "AQ=162",
+          "bucket_size": 651,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "pulls",
+          "crumpled": "crikey",
+          "reconstructed": "xterm",
+          "bucket_key": "AQ=125",
+          "bucket_size": 526,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "toward",
+          "crumpled": "cosset",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "zero",
+          "crumpled": "chest",
+          "reconstructed": "jeeps",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 4,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "generation": 6,
+      "text": "Stoker subsidy cutoff upgrade tinge",
+      "words": [
+        "Stoker",
+        "subsidy",
+        "cutoff",
+        "upgrade",
+        "tinge"
+      ],
+      "recovery_rate": 0.0,
+      "aq_preserved": true,
+      "mutated_aq": 664,
+      "entropy": 4.014439,
+      "metrics": {
+        "total_edit": 33,
+        "avg_edit": 6.6,
+        "max_edit": 10,
+        "exact_count": 0,
+        "total_words": 5
+      },
+      "word_details": [
+        {
+          "position": 0,
+          "original": "Abyssal",
+          "crumpled": "Stoker",
+          "reconstructed": "stoical",
+          "bucket_key": "AQ=142",
+          "bucket_size": 649,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 1,
+          "original": "current",
+          "crumpled": "subsidy",
+          "reconstructed": "academician",
+          "bucket_key": "AQ=162",
+          "bucket_size": 651,
+          "edit_distance": 10,
+          "exact_match": false
+        },
+        {
+          "position": 2,
+          "original": "pulls",
+          "crumpled": "cutoff",
+          "reconstructed": "cussed",
+          "bucket_key": "AQ=125",
+          "bucket_size": 526,
+          "edit_distance": 5,
+          "exact_match": false
+        },
+        {
+          "position": 3,
+          "original": "toward",
+          "crumpled": "upgrade",
+          "reconstructed": "alabamian",
+          "bucket_key": "AQ=135",
+          "bucket_size": 590,
+          "edit_distance": 8,
+          "exact_match": false
+        },
+        {
+          "position": 4,
+          "original": "zero",
+          "crumpled": "tinge",
+          "reconstructed": "rides",
+          "bucket_key": "AQ=100",
+          "bucket_size": 317,
+          "edit_distance": 5,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_recovery_rate": 0.0,
+    "aq_preserved": true,
+    "final_text": "Stoker subsidy cutoff upgrade tinge",
+    "final_aq": 664,
+    "original_length": 33,
+    "final_length": 35,
+    "length_ratio": 1.0606060606060606,
+    "original_entropy": 3.884858891889047,
+    "final_entropy": 4.014439,
+    "entropy_delta": 0.12958010811095333,
+    "total_edit_distance": 33,
+    "avg_edit_per_word": 6.6,
+    "max_single_word_edit": 10,
+    "exact_matches": "0/5",
+    "exact_ratio": 0.0
+  }
+}

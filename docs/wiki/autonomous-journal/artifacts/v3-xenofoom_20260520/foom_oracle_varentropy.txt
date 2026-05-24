@@ -1,0 +1,65 @@
+CRUMPLE/RECONSTRUCT PROTOCOL — FOOM ⟪⟫ Cycle
+════════════════════════════════════════════════════════════════════════
+Mode: CREATIVE RECONSTRUCTION [strategy=varentropy, bucket=aq]
+Corpus: oracle
+Seed text: SoftSynth centroid gradient monotonic across nine zones
+Original AQ checksum: 1067
+Corpus size: 89050 words
+Generations: 2
+Seed: 42
+════════════════════════════════════════════════════════════════════════
+
+GEN 0 (ORIGINAL): SoftSynth centroid gradient monotonic across nine zones
+────────────────────────────────────────────────────────────────────────
+
+GEN 1: Devolution dedicator described extirpate dogsled chang caloric
+────────────────────────────────────────────────────────────────────────
+  AQ ✅ | Recovery:   0.0% | Words lost: 7/7
+
+GEN 2: Transpacific tigress plexing pesticides methane stab skylab
+────────────────────────────────────────────────────────────────────────
+  AQ ✅ | Recovery:   0.0% | Words lost: 7/7
+
+════════════════════════════════════════════════════════════════════════
+SUMMARY
+════════════════════════════════════════════════════════════════════════
+  Final recovery rate: 0.0%
+  AQ preserved: ✅ YES
+  Text at gen 2: Transpacific tigress plexing pesticides methane stab skylab
+  Original length: 55 chars
+  Final length: 59 chars
+  Length ratio: 1.07
+  Original Shannon entropy: 3.747 bits/char
+  Final Shannon entropy: 3.990 bits/char
+  Entropy delta: +0.243 bits/char
+  Total edit distance:   46
+  Avg edit/word:         6.57
+  Max single-word edit:  10
+  Exact matches:         0/7
+
+  🔴 TOTAL COMPRESSION: All original words unrecoverable. Checksum only.
+
+────────────────────────────────────────────────────────────────────────
+PER-GENERATION LOSS PROFILE (creative mode, AQ bucket)
+────────────────────────────────────────────────────────────────────────
+ Gen | Words | Recovery |  EntropyΔ | EditTot | AvgEdit | MaxEdit |  Exact
+────────────────────────────────────────────────────────────────────────────────
+   1 |    13 |    0.0% |   +0.201 |      42 |   6.00 |       9 |  0/7
+   2 |    13 |    0.0% |   +0.243 |      46 |   6.57 |      10 |  0/7
+────────────────────────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────────────────
+BUCKET‑SIZE / EDIT DISTANCE CORRELATION (final generation)
+────────────────────────────────────────────────────────────────────────
+Word         | BucketSize | EditDist
+──────────────────────────────────────
+softsynth    |        355 |        9
+centroid     |        699 |        6
+gradient     |        617 |        6
+monotonic    |        522 |       10
+across       |        525 |        6
+nine         |        172 |        4
+zones        |        501 |        5
+
+  Pearson r = 0.165  (bucket size vs edit distance)
+──────────────────────────────────────

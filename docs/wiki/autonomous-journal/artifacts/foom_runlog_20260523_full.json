@@ -1,0 +1,107 @@
+{
+  "summary": {
+    "n": 12,
+    "neg": 1,
+    "neu": 2,
+    "pos": 9,
+    "preserved": 12
+  },
+  "entries": [
+    {
+      "file": "foom_20260523_compress_123.json",
+      "aq": "685",
+      "delta_entropy": 0.13448156828619684,
+      "aq_preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?"
+    },
+    {
+      "file": "foom_20260523_compress_321.json",
+      "aq": "657",
+      "delta_entropy": 0.16068789348281376,
+      "aq_preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?"
+    },
+    {
+      "file": "foom_20260523_compress_789.json",
+      "aq": "710",
+      "delta_entropy": 0.40095974737789675,
+      "aq_preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?"
+    },
+    {
+      "file": "foom_20260523_eng_17.json",
+      "aq": "825",
+      "delta_entropy": 0.33431286971310437,
+      "aq_preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?"
+    },
+    {
+      "file": "foom_20260523_eng_7.json",
+      "aq": "789",
+      "delta_entropy": 0.021661592401946983,
+      "aq_preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?"
+    },
+    {
+      "file": "foom_20260523_eng_71.json",
+      "aq": "861",
+      "delta_entropy": 0.055483174542728,
+      "aq_preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?"
+    },
+    {
+      "file": "foom_20260523_eng_777.json",
+      "aq": "651",
+      "delta_entropy": 0.18913369532396684,
+      "aq_preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?"
+    },
+    {
+      "file": "foom_20260523_flatness_gradient.json",
+      "aq": "963",
+      "delta_entropy": 0.06850099132722764,
+      "aq_preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?"
+    },
+    {
+      "file": "foom_20260523_flatness_gradient_replicate.json",
+      "aq": "963",
+      "delta_entropy": 0.2560759913272279,
+      "aq_preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?"
+    },
+    {
+      "file": "foom_20260523_rfseed_current.json",
+      "aq": "703",
+      "delta_entropy": -0.030892237572777592,
+      "aq_preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?"
+    },
+    {
+      "file": "foom_20260523_void_em.json",
+      "aq": "2485",
+      "delta_entropy": -0.15939689038492677,
+      "aq_preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?"
+    },
+    {
+      "file": "foom_20260523_xenon_flatness.json",
+      "aq": "963",
+      "delta_entropy": 0.1669279913272277,
+      "aq_preserved": true,
+      "recovery_rate": 0,
+      "total_words": "?"
+    }
+  ]
+}
