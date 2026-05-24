@@ -63,8 +63,8 @@ Already planned as Tier 4. Shortest path: build p5.js sketch first (can do witho
 | 1 | **Medallion-as-mask** on tsubuyaki canvases | ~15 LOC + v6 patch | High (visible) | ✓ DONE | cdc6938 |
 | 2 | **Hardware-palette color graft** into tsubuyaki sketches | ~20 LOC + JSON sidecar | High — ties 3 skills | ✓ DONE | 306a2e6 |
 | 3 | **CSS-animated demon cards** (medallion `@keyframes`) | ~40 LOC CSS + base64 | Medium (glossy) | ✓ DONE | 306a2e6 |
-| 4 | **ANSI colored oracle output** (`--tty`) | ~30 LOC | Medium (terminal UX++) | ⏳ Pending | — |
-| 5 | **Zone-grounded noise textures** in tsubuyaki sketches | ~8 LOC per sketch | High (semantic) | ⏳ Pending | — |
+| 4 | **ANSI colored oracle output** (`--tty`) | ~30 LOC | Medium (terminal UX++) | ✓ DONE | 2b40674 |
+| 5 | **Zone-grounded noise textures** in tsubuyaki sketches | ~8 LOC per sketch | High (semantic) | ✓ DONE | 2b40674 |
 | 6 | **p5.js walker → TouchDesigner bridge** | ~2hrs build + TD wrangling | Very high (realtime) | ⏳ Pending | — |
 | 7 | **Stereogram card gallery** | ~200 LOC SVG + dither | Low (skull only) | ⏳ Pending | — |
 
@@ -173,6 +173,6 @@ SVG tarot cards + a pixel-depth map = autostereogram. zone-grounded depth → pi
 
 ## Execution order
 
-**Done:** Thread 1 (mask) ✓ → Thread 2 (palette) ✓ → Thread 3 (CSS demon cards) ✓ → Thread 5 (noise) ✓
-**Next:** Thread 4 (`--tty`) → Thread 6 (TD bridge)
+**Done:** Thread 1 (mask) ✓ → Thread 2 (palette) ✓ → Thread 3 (CSS demon cards) ✓ → Thread 4 (`--tty`) ✓ → Thread 5 (noise) ✓
+**Next:** Thread 6 (TD bridge)
 **Parked:** Thread 7 (stereogram — weekend project)

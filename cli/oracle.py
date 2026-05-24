@@ -18,6 +18,7 @@ Usage:
   python3 oracle.py --taixuan --voice  (with zone sound generation)
   python3 oracle.py --iching --seed 192855  (I Ching from a specific seed)
   python3 oracle.py --seed N --planchette            (zone ASCII planchette)
+  python3 oracle.py --seed N --planchette --tty           (ANSI color terminal)
   python3 oracle.py --seed N --planchette --ascii-glyph (box-art ASCII planchette + glyph channel)
   python3 oracle.py --seed N --planchette --json     (machine-readable JSON for pipes)
   python3 oracle.py --text "NUMOGRAM" --compare (cross-base 2/10/16/22/26/36)
@@ -75,6 +76,20 @@ ZONES = {
         "desc": "Grunt, pleasure/rage, the gate opens",
         "path": "Sudden Flight. Seized from the Heights. One test on the way. Possession.",
         "reading": "The Pandemonium gate opens. Forty-five demons dwell here. One test. You do not walk this path. This path seizes you. Pleasure or rage — indistinguishable. Possession."},
+}
+
+
+_ZONE_TTY_RGB = {
+    0: (122, 87, 0),
+    1: (15, 56, 15),
+    2: (0, 0, 0),
+    3: (124, 124, 124),
+    4: (0, 40, 248),
+    5: (255, 0, 0),
+    6: (255, 0, 0),
+    7: (255, 0, 0),
+    8: (234, 93, 240),
+    9: (29, 43, 83),
 }
 
 # ─── BASE-36 / DJYNXXOGRAM EXTENSION ───
@@ -571,6 +586,12 @@ def generate_reading(seed, source="manual"):
 
 
 
+def _tty_color(r, g, b) -> str:
+    """ANSI 256-color escape — zone-specific zname color."""
+    return f"\x1b[38;2;{r};{g};{b}m"
+
+
+
 def generate_planchette_glyph(zone: int, current: int, gate: int, syzygy: str,
                                reading: str = "") -> str:
     """ASCII box-art planchette — unique glyph per zone, gate-arc ring."""
@@ -767,6 +788,7 @@ if __name__ == "__main__":
     do_voice = False
     do_base36 = False
     do_planchette = False
+    do_tty = False
     do_json = False
     
     if "--ascii-glyph" in args:
@@ -777,7 +799,9 @@ if __name__ == "__main__":
         do_base36 = True
     if "--planchette" in args:
         do_planchette = True
-    
+    if "--tty" in args:
+        do_tty = True
+
     # ── BASE-36 DJYNXXOGRAM MODE ──
     if do_base36:
         if "--text" in args:
@@ -990,6 +1014,7 @@ if __name__ == "__main__":
         print("  python3 oracle.py --compare --text 'TEXT'  (cross-base comparison)")
         print("  python3 oracle.py --compare --seed 174    (from AQ value)")
         print("  python3 oracle.py --seed N --planchette            (zone glyph planchette)")
+        print("  python3 oracle.py --seed N --planchette --tty           (ANSI color terminal)")
         print("  python3 oracle.py --seed N --planchette --ascii-glyph (ASCII box-art planchette)")
         sys.exit(1)
 
@@ -1007,7 +1032,14 @@ if __name__ == "__main__":
         elif do_json:
             print(generate_planchette_json(zone, get_current(zone), get_gate(zone), get_syzygy(zone)))
         else:
-            print(generate_planchette(zone))
+            if do_tty and zone is not None:
+                _colored_lines = []
+                for _l in generate_planchette(zone).split("\n"):
+                    _rgb = _ZONE_TTY_RGB.get(zone)
+                    _colored_lines.append(_tty_color(*_rgb) + _l + "\x1b[0m")
+                print("\n".join(_colored_lines))
+            else:
+                print(generate_planchette(zone))
         print()
 
 
