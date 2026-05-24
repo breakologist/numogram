@@ -100,17 +100,27 @@ tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "ascii-video", "med
 +
 +---
 +
-+## Thread 10b — p5.js Oracle Sketch ⚡ Spec Written
++## Thread 10b — p5.js Oracle Sketch ✓ Done
 +
-+**Status:** Design brief only — not yet implemented.
-+See `oracle-p5js-sketch-spec.md` for full spec.
++**Status:** Implemented — `docs/wiki/assets/oracle-sketch.html`. Committed vault `1e82c73`, export `6b62125`.  
++5 sections: `zone_cycle`, `zone_glyph`, `sprite_pulse`, `reading_overlay`, `signal_trace`.  
++Zone colors from zone-map palette (most-saturated per era), ZONE_RGB inline entry.  
++Seed-locked deterministic rendering; auto-cycles traverse every ~55 frames per zone.  
++See `oracle-sketch.html` (lives at `docs/wiki/assets/oracle-sketch.html`).
 +
-+Five sections in the sketch loop:
-+1. **`zone_cycle`** — deterministic walker with seed-locked noise; zone ring + path lines
-+2. **`zone_glyph`** — V-shaped octagon glyph inspired by planchette glyph encoding
-+3. **`sprite_pulse`** — 10×10 pixel medallion, breath-scaling at `t = sin(freq*t)`
-+4. **`reading_overlay`** — oracle planchette text composited with zone-tint alpha
-+5. **`tty_colours`** — field gradients mapped to `_ZONE_TTY_RGB` tuples; smooth interp on zone change
++**Sections implemented:**
++1. **`zone_cycle`** — 10×5 grid, depth-scaled ·○●■ symbols, diagonal sweep highlight guided by seed; zone-name labels and polarity indicators beneath.
++2. **`zone_glyph`** — large 72pt zone index at canvas center + song ID + Pol / Region / Current line.
++3. **`sprite_pulse`** — 10×10 ASCII glyph per zone (5 Hz breath via `0.55 + 0.45·sin(t)`); translucent grid backing.
++4. **`reading_overlay`** — 11-line reading card bottom-right, top-bar accent = zone RGB, badge shows Z{idx} — {name}.
++5. **`signal_trace`** — thin vertical wave on right edge synced to frame time, zone-coloured.
++
++**Controls:** seed input, zone buttons (0–9), random seed, auto/manual toggle, play/pause.
++
++**Palette (zone-map, most saturated × era):**
++Z0 amber MONO_AMBER, Z1 green GAMEBOY_ORIGINAL, Z2 black GAMEBOY_POCKET, Z3 blue C64,
++Z4 cyan ZX_SPECTRUM, Z5 magenta APPLE_II_HI, Z6 red TELETEXT, Z7 red GAMEBOY_VIRTUALBOY,
++Z8 sky-blue APPLE_II_LO, Z9 hot-pink PICO_8.
 +
 +Priority: standalone first (no TD MCP dep); TD bridge comes once MCP port 40404 is live.
 +
