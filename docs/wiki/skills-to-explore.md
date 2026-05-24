@@ -13,7 +13,7 @@ Interesting skills spotted in the Apr 21 scan. Prioritized for exploration when 
 ## Visual / Generative Art
 
 ### pixel-art
-Convert images into retro pixel art with hardware-accurate palettes (NES, Game Boy, PICO-8, C64, etc.). Animated output. Could produce roguelike sprite sheets, numogram glyph art in retro palettes, or zone-icon sets.
+Convert images into retro pixel art with hardware-accurate palettes (NES, Game Boy, PICO-8, C64, etc.). Animated output. Could produce roguelike sprite sheets, numogram glyph art in retro palettes, or zone-icon sets. **Priority combos:** [[oracle-visual-ideas]] pixel-art tier; pair with `pixel-art+numogram-svg` for glyphs; see `zone-icon-generator` stub proposal.
 
 ### ascii-video
 Full pipeline: video-to-ASCII conversion, audio-reactive visualizers, generative ASCII animations, MP4/GIF output. Imagine numogram current flows as colored ASCII video, or cult.json run histories rendered as terminal-style animation.
@@ -22,7 +22,7 @@ Full pipeline: video-to-ASCII conversion, audio-reactive visualizers, generative
 p5.js with seeded randomness, flow fields, particle systems. Reusable for zone-glyph generation, entropy visualization, procedural map art. Pair with hardware entropy sources.
 
 ### p5js
-Production pipeline: 2D/3D, shaders (GLSL), WebGL, audio-reactive, headless export. Covers the full stack we've hit pitfalls with before (createGraphics P2D default, shader silent failure). Should use this skill for all future p5.js work.
+Production pipeline: 2D/3D, shaders (GLSL), WebGL, audio-reactive, headless export. Covers the full stack we've hit pitfalls with before (createGraphics P2D default, shader silent failure). Should use this skill for all future p5.js work. **For oracle:** see [[oracle-visual-ideas]] Tier 2 — oracle-viz URL-decode, tsubuyaki gallery, Cult Garden shell.
 
 ### tsubuyaki
 Tweet-length p5.js sketches (280 chars). Constraint art. Could chain with AQ calculations to produce tiny generative zone-glyphs. Domain-specific constraint art with iterative refinement.

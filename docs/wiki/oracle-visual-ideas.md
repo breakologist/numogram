@@ -44,6 +44,9 @@ All at `~/numogram/docs/wiki/assets/zone-glyphs/zone-{0-9}.png`.
 | 0    | Planchette box in reading | ✓ Live    | `--planchette` flag, terminal ASCII box        |
 | 1a   | PNG glyph files (×10)     | ✓ Rendered| PICO-8 style, generator script committed       |
 | 1b   | `--glyph` shell output    | TODO      | Embedding PNG in terminal (iTerm2 inline images) |
+| 1c   | Zone pixel sprites (×10)  | ✓ Rendered| Floyd-Steinberg dither, ZONE_HW_PALETTE hardware palette, `zone_pixel_sprites.py`, 1.7–2.7 K each  |
+| 1d   | `--tty` ANSI oracle output| ✓ Live    | `oracle.py --tty`; per-line ANSI 256-color, `_ZONE_TTY_RGB` dict, `cat -v`-verified; commit 2b40674  |
+| 2d   | Noise-grounded sketches   | ✓ Live    | Seed `zone * 7919`, zone-grounded Turbulence; v8 commit 2b40674  |
 || 2    | Syzygy chain SVG          | ✓ Rendered| 5 syzygy cards (1::8,2::7,0::9,3::6,4::5), `scripts/syzygy-card.py`, demo csv generation |
 || 2b   | Demon card SVG            | ✓ Rendered| 45 Pandemonium demon cards, `scripts/demon-cards.py`, per-zone/demo/--carrier filter |
 || 2c   | Planchette SVG hydration | TODO      | Full planchette spec URL→base64, frame-angle arcs, gold/indigo overlay |

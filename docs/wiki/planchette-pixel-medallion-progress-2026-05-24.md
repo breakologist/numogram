@@ -62,3 +62,30 @@ All 10 zones render as 10×10 medallion PNGs embedded in the SVG:
 - [ ] `planchette-gallery` subdirectory cleanup — currently has `planchette-gallery/planchette-gallery/` nest
 - [ ] Pixel-medallion as audio-visual transducer: zones 3/7/9 as spectrogram palettes in TouchDesigner
 - [ ] Wiki pages for every palette key (`pico-8.md`, `zx-spectrum.md`, etc.) — zone→palette references
+
+---
+
+## Post-session updates (2026-05-25)
+
+### Zone pixel sprites — all 10 zones done
+
+`zone_pixel_sprites.py` was created and run. All 10 zone hardware-palette sprites generated:
+
+| Zone | Palette | Block | Sprite (bytes) |
+|------|---------|-------|----------------|
+| Z0 | MONO_AMBER | 6 | 2.3 K |
+| Z1 | GAMEBOY_ORIGINAL | 8 | 2.2 K |
+| Z2 | GAMEBOY_POCKET | 8 | 2.4 K |
+| Z3 | C64 | 8 | 1.7 K |
+| Z4 | ZX_SPECTRUM | 10 | 2.1 K |
+| Z5 | APPLE_II_HI | 10 | 1.7 K |
+| Z6 | TELETEXT | 10 | 1.8 K |
+| Z7 | GAMEBOY_VIRTUALBOY | 8 | 2.2 K |
+| Z8 | APPLE_II_LO | 10 | 2.2 K |
+| Z9 | PICO_8 | 6 | 2.7 K |
+
+**Bug fix:** `GAMEBOY_VIRTUALBOY` exists in `PALETTES` but not in `PRESETS`; zone_pixel_sprites.py now falls back to `preset='c64'` for enhancement tuning, then passes `palette=<UPPERCASE>` as a `**override` kwarg. All 10 zones render successfully.
+
+**Assets:** `~/numogram/docs/wiki/assets/zone-sprites/zone-{0-9}-sprite.png` + `zone-{0-9}-source.png` (256×256 programmatic glyph source).
+
+**State map:** Thread 8 added to `visual-layers-state-map.md`; committed `cf97856`.
