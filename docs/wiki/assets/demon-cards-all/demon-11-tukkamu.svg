@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 500" width="360" height="500" role="img" aria-label="Demon Tukkamu (5::1) Cyclic Chronodemon of Pathogenesis">
+<defs>
+<radialGradient id="dbg" cx="50%" cy="42%" r="62%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></radialGradient>
+<marker id="da-1" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#fc8181"/></marker>
+<marker id="da-2" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#fbbf24"/></marker>
+<marker id="da-3" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#a3e635"/></marker>
+<marker id="da-4" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#38bdf8"/></marker>
+<marker id="da-5" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#a78bfa"/></marker>
+<marker id="da-6" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#fb923c"/></marker>
+<marker id="da-7" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#2dd4bf"/></marker>
+<marker id="da-8" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#9ca3af"/></marker>
+<marker id="da-9" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#f97316"/></marker>
+</defs>
+<path d="M 12 0 L 348 0 Q 360 0 360 12 L 360 488 Q 360 500 348 500 L 12 500 Q 0 500 0 488 L 0 12 Q 0 0 12 0 Z" fill="url(#dbg)" stroke="#1e293b" stroke-width="1.5"/>
+<rect x="16" y="62" width="58" height="36" rx="7" fill="#e11d48" opacity="0.92"/>
+<rect x="286" y="62" width="58" height="36" rx="7" fill="#d97706" opacity="0.92"/>
+<text x="74" y="73" font-size="10" fill="white" font-weight="bold">Z5 — Hinge</text>
+<text x="286" y="81" font-size="10" fill="white" text-anchor="end" font-weight="bold">Z1 — Surge</text>
+<text x="74" y="86" font-size="8" fill="#94a3b8">[ktt]</text>
+<text x="286" y="94" font-size="8" fill="#94a3b8" text-anchor="end">[gl]</text>
+<text x="180" y="17" font-size="16" fill="#e2e8f0" font-weight="bold">Tukkamu</text>
+<text x="180" y="31" font-size="13" fill="#cbd5e1">5::1</text>
+<text x="180" y="44" font-size="9" fill="#64748b">Cyclic Chronodemon of Pathogenesis</text>
+<text x="180" y="57" font-size="9" fill="#94a3b8">Occulturation, optimal maturation, rapid deterioration.</text>
+<path d="M 74 98 Q 180 126 286 98" stroke="#38bdf8" stroke-width="10" fill="none" stroke-opacity="0.10" marker-end="url(#da-4)"/>
+<path d="M 74 106 Q 180 126 286 106" stroke="#38bdf8" stroke-width="10" fill="none" stroke-opacity="0.10" marker-end="url(#da-4)"/>
+<path d="M 74 98 Q 180 126 286 98" stroke="#38bdf8" stroke-width="2.5" fill="none" stroke-opacity="0.88" marker-end="url(#da-4)"/>
+<text x="192" y="118" font-size="18" fill="#38bdf8" font-weight="bold">4</text>
+<circle cx="52" cy="180" r="30" fill="#162032" stroke="#e11d48" stroke-width="2.5"/>
+<image x="22" y="150" width="60" height="60" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA7UlEQVR4nO2WPQrCQBCFvx1sBFvPYI7gLQQbq6B2XslKZCvtPI2Fjb1eQUcsFAn+ZHaTLKJftey+nXlvEkLgz58IxqOBEonENo81ISRGQi4VU8dMQWKbx5oQEiMW8aeUIVMQEiNlhWXTWacgdRS16IVvQz33dHrs6bN9C66MKOTtXq42rrJHsCxZLEQvVRe1mhUSIxbxp3TW9GYDdSDWC69ShqQPMvCsWWjzK63bQj0ZsH04m7ucGU2hnuz6NVNPJ/VP6UE9e/UMaQBX3FBPG1gDfZfTrduAvDF2ogFat4V6JsACOAM7YNqEAX6eCzjLVOc3Sao8AAAAAElFTkSuQmCC"/>
+<circle cx="308" cy="180" r="30" fill="#162032" stroke="#d97706" stroke-width="2.5"/>
+<image x="278" y="150" width="60" height="60" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAnElEQVR4nGNgGAWjgAKgufb/f4aBtlxzIB3x/436wFk+CoYNYCSkgNxUfs1eg0Hr4A2G68GMBO0Ynrnj/0A64v9oCLwZTQPq/we8HICBASkHRsGQAowwxv836hIMDAzPodyNjCI3A+jhACa4S0RuvmAUuQly0F56WIzhgIECTAwj3QGMMMb/N+oCDAwM79HkWRlFbv6hv7MYRhAAALe9OZM5Ot8SAAAAAElFTkSuQmCC"/>
+<line x1="74" y1="98" x2="52" y2="152" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" opacity="0.55"/>
+<line x1="286" y1="98" x2="308" y2="152" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" opacity="0.55"/>
+<rect x="16" y="230" width="328" height="40" rx="6" fill="#162032" stroke="#334155" stroke-width="1"/>
+<text x="180" y="244" font-size="10" fill="#94a3b8">  Z5=69  ⊕  Z1=65  ·  AQΣ=134  DR=8</text>
+<text x="180" y="258" font-size="9" fill="#64748b">Gate: Gt-000 → Z9   ·   Current: 4</text>
+<text x="180" y="272" font-size="13" fill="#8899aacc" opacity="0.8">Δ─────────Δ</text>
+<text x="180" y="300" font-size="9" fill="#64748b">≡  5⊕1  ≡  6  ≡  6  ≡</text>
+<text x="22" y="22" font-size="9" fill="#1e293b" opacity="0.55" text-anchor="middle" font-weight="bold">5</text>
+<text x="338" y="22" font-size="9" fill="#1e293b" opacity="0.55" text-anchor="middle" font-weight="bold">1</text>
+<text x="22" y="478" font-size="9" fill="#1e293b" opacity="0.55" text-anchor="middle" font-weight="bold">4</text>
+<text x="338" y="478" font-size="9" fill="#1e293b" opacity="0.55" text-anchor="middle" font-weight="bold">4</text>
+</svg>

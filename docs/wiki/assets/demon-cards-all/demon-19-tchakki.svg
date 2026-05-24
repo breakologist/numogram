@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 500" width="360" height="500" role="img" aria-label="Demon Tchakki (Chuckles) (6::4) Amphidemon of Combustion">
+<defs>
+<radialGradient id="dbg" cx="50%" cy="42%" r="62%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></radialGradient>
+<marker id="da-1" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#fc8181"/></marker>
+<marker id="da-2" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#fbbf24"/></marker>
+<marker id="da-3" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#a3e635"/></marker>
+<marker id="da-4" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#38bdf8"/></marker>
+<marker id="da-5" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#a78bfa"/></marker>
+<marker id="da-6" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#fb923c"/></marker>
+<marker id="da-7" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#2dd4bf"/></marker>
+<marker id="da-8" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#9ca3af"/></marker>
+<marker id="da-9" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 8,2.5 0,5" fill="#f97316"/></marker>
+</defs>
+<path d="M 12 0 L 348 0 Q 360 0 360 12 L 360 488 Q 360 500 348 500 L 12 500 Q 0 500 0 488 L 0 12 Q 0 0 12 0 Z" fill="url(#dbg)" stroke="#1e293b" stroke-width="1.5"/>
+<rect x="16" y="62" width="58" height="36" rx="7" fill="#2563eb" opacity="0.92"/>
+<rect x="286" y="62" width="58" height="36" rx="7" fill="#ca8a04" opacity="0.92"/>
+<text x="74" y="73" font-size="10" fill="white" font-weight="bold">Z6 — Tractio</text>
+<text x="286" y="81" font-size="10" fill="white" text-anchor="end" font-weight="bold">Z4 — Gate</text>
+<text x="74" y="86" font-size="8" fill="#94a3b8">[tch]</text>
+<text x="286" y="94" font-size="8" fill="#94a3b8" text-anchor="end">[skr]</text>
+<text x="180" y="17" font-size="16" fill="#e2e8f0" font-weight="bold">Tchakki (Chuckles)</text>
+<text x="180" y="31" font-size="13" fill="#cbd5e1">6::4</text>
+<text x="180" y="44" font-size="9" fill="#64748b">Amphidemon of Combustion</text>
+<text x="180" y="57" font-size="9" fill="#94a3b8">Bag of Tricks, quenching accidents, conflagrations.</text>
+<path d="M 74 98 Q 180 126 286 98" stroke="#fbbf24" stroke-width="10" fill="none" stroke-opacity="0.10" marker-end="url(#da-2)"/>
+<path d="M 74 106 Q 180 126 286 106" stroke="#fbbf24" stroke-width="10" fill="none" stroke-opacity="0.10" marker-end="url(#da-2)"/>
+<path d="M 74 98 Q 180 126 286 98" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-opacity="0.88" marker-end="url(#da-2)"/>
+<text x="192" y="118" font-size="18" fill="#fbbf24" font-weight="bold">2</text>
+<circle cx="52" cy="180" r="30" fill="#162032" stroke="#2563eb" stroke-width="2.5"/>
+<image x="22" y="150" width="60" height="60" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA/klEQVR4nO2SsUoDQRRFz7NIlSYfkCJl8CcEK7G02SJgE9JYCpkiiiw2bkpLCaSdxjKkT5da/AJrPyBiGFnZyLC7YHbZnS12TjHMu1zmXd488Hg8bUfi43G6MAfhfj7+1dK6TR0eT2NIWiiyD3fSRaKg9D7EeiZA//Tqz/Dx/ip5eszk8iLTIO357x1bL4VROrdhEaTKpvZ3OMFUNYH+kf9ue+xlelmtcz3HvEPTE/B4Gkfswig9AkJgAGwkCs6cBTBKD4E34BrQEgV7HHBi3c+T+gH4NEpPXQfoJBO5BZ6BJ6N0z2WArXWPg3wDO9dLGAI3wBcwkyhY1h2A1vMD+D9sLXmfQYMAAAAASUVORK5CYII="/>
+<circle cx="308" cy="180" r="30" fill="#162032" stroke="#ca8a04" stroke-width="2.5"/>
+<image x="278" y="150" width="60" height="60" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAuUlEQVR4nO2VKw4CQQxAX8eRkGA5AEdYi0KPRUOyEs9VcKCxXACB5CBYwgFKNtnAZAPs0A2s6VPtJP03HXAcx3E6oESlI2IOft4/gksxN/txHMeRLi3Q6+V5jEZjk6/Q9wyCJ0ADJW6rX06Ji9z5v9JNI1DiDJi2Gb0LZkkiJMEHwAZY8UdCIq+BI3D6ZNBW5bddCIk8AUrgVuvVLhT8GGk+KHFYJ7EUDjtrdbmHSXIdWhYsJ4neD9EdxgQ9CDY5GZwAAAAASUVORK5CYII="/>
+<line x1="74" y1="98" x2="52" y2="152" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" opacity="0.55"/>
+<line x1="286" y1="98" x2="308" y2="152" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" opacity="0.55"/>
+<rect x="16" y="230" width="328" height="40" rx="6" fill="#162032" stroke="#334155" stroke-width="1"/>
+<text x="180" y="244" font-size="10" fill="#94a3b8">  Z6=70  ⊕  Z4=68  ·  AQΣ=138  DR=3</text>
+<text x="180" y="258" font-size="9" fill="#64748b">Gate: Gt-006 → Z6   ·   Current: 2</text>
+<text x="180" y="272" font-size="13" fill="#8899aacc" opacity="0.8">Δ─────────Δ</text>
+<text x="180" y="300" font-size="9" fill="#64748b">≡  6⊕4  ≡  10  ≡  1  ≡</text>
+<text x="22" y="22" font-size="9" fill="#1e293b" opacity="0.55" text-anchor="middle" font-weight="bold">6</text>
+<text x="338" y="22" font-size="9" fill="#1e293b" opacity="0.55" text-anchor="middle" font-weight="bold">4</text>
+<text x="22" y="478" font-size="9" fill="#1e293b" opacity="0.55" text-anchor="middle" font-weight="bold">2</text>
+<text x="338" y="478" font-size="9" fill="#1e293b" opacity="0.55" text-anchor="middle" font-weight="bold">2</text>
+</svg>

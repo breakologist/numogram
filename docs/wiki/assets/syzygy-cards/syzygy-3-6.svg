@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 520" width="360" height="520" role="img" aria-label="Syzygy 3::6 Warp 3 current">
+<defs>
+<path id="cardBg" d="M 14 0 L 346 0 Q 360 0 360 14 L 360 506 Q 360 520 346 520 L 14 520 Q 0 520 0 506 L 0 14 Q 0 0 14 0 Z"/>
+<linearGradient id="bandfc8181" x1="0%" y1="0%" x2="100%" y2="0%">  <stop offset="0%"   stop-color="#fc8181" stop-opacity="0.15"/>  <stop offset="50%"  stop-color="#fc8181" stop-opacity="0.45"/>  <stop offset="100%" stop-color="#fc8181" stop-opacity="0.15"/></linearGradient>
+<linearGradient id="bandfbbf24" x1="0%" y1="0%" x2="100%" y2="0%">  <stop offset="0%"   stop-color="#fbbf24" stop-opacity="0.15"/>  <stop offset="50%"  stop-color="#fbbf24" stop-opacity="0.45"/>  <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.15"/></linearGradient>
+<linearGradient id="banda3e635" x1="0%" y1="0%" x2="100%" y2="0%">  <stop offset="0%"   stop-color="#a3e635" stop-opacity="0.15"/>  <stop offset="50%"  stop-color="#a3e635" stop-opacity="0.45"/>  <stop offset="100%" stop-color="#a3e635" stop-opacity="0.15"/></linearGradient>
+<linearGradient id="band38bdf8" x1="0%" y1="0%" x2="100%" y2="0%">  <stop offset="0%"   stop-color="#38bdf8" stop-opacity="0.15"/>  <stop offset="50%"  stop-color="#38bdf8" stop-opacity="0.45"/>  <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.15"/></linearGradient>
+<linearGradient id="banda78bfa" x1="0%" y1="0%" x2="100%" y2="0%">  <stop offset="0%"   stop-color="#a78bfa" stop-opacity="0.15"/>  <stop offset="50%"  stop-color="#a78bfa" stop-opacity="0.45"/>  <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.15"/></linearGradient>
+<radialGradient id="cardBack" cx="50%" cy="45%" r="65%">  <stop offset="0%" stop-color="#1e293b"/>  <stop offset="100%" stop-color="#0f172a"/></radialGradient>
+<marker id="arrow1" markerWidth="10" markerHeight="6" refX="8" refY="3" orient="auto">  <polygon points="0,0 10,3 0,6" fill="#fc8181"/></marker>
+<marker id="arrow3" markerWidth="10" markerHeight="6" refX="8" refY="3" orient="auto">  <polygon points="0,0 10,3 0,6" fill="#fbbf24"/></marker>
+<marker id="arrow5" markerWidth="10" markerHeight="6" refX="8" refY="3" orient="auto">  <polygon points="0,0 10,3 0,6" fill="#a3e635"/></marker>
+<marker id="arrow7" markerWidth="10" markerHeight="6" refX="8" refY="3" orient="auto">  <polygon points="0,0 10,3 0,6" fill="#38bdf8"/></marker>
+<marker id="arrow9" markerWidth="10" markerHeight="6" refX="8" refY="3" orient="auto">  <polygon points="0,0 10,3 0,6" fill="#a78bfa"/></marker>
+</defs>
+<path d="M 14 0 L 346 0 Q 360 0 360 14 L 360 506 Q 360 520 346 520 L 14 520 Q 0 520 0 506 L 0 14 Q 0 0 14 0 Z" fill="url(#cardBack)" stroke="#1e293b" stroke-width="1.5"></path>
+<rect x="18" y="68" width="62" height="38" rx="7" fill="#16a34a" opacity="0.9"></rect>
+<rect x="280" y="68" width="62" height="38" rx="7" fill="#2563eb" opacity="0.9"></rect>
+<text x="49" y="81" font-size="10" fill="white" text-anchor="middle" font-family="monospace" font-weight="bold" opacity="1.0">
+  Zone 3 — Release
+</text>
+<text x="311" y="89" font-size="10" fill="white" text-anchor="end" font-family="monospace" font-weight="bold" opacity="1.0">
+  Zone 6 — Traction
+</text>
+<text x="49" y="93" font-size="8" fill="#94a3b8" text-anchor="middle" font-family="monospace" font-weight="normal" opacity="1.0">
+  [zx]
+</text>
+<text x="311" y="101" font-size="8" fill="#94a3b8" text-anchor="end" font-family="monospace" font-weight="normal" opacity="1.0">
+  [tch]
+</text>
+<text x="180" y="22" font-size="17" fill="#e2e8f0" text-anchor="middle" font-family="monospace" font-weight="bold" opacity="1.0">
+  3 :: 6
+</text>
+<text x="180" y="40" font-size="11" fill="#94a3b8" text-anchor="middle" font-family="monospace" font-weight="normal" opacity="1.0">
+  Warp — 3 current
+</text>
+<text x="180" y="53" font-size="9" fill="#64748b" text-anchor="middle" font-family="monospace" font-weight="normal" opacity="1.0">
+  Demon · Djynxx
+</text>
+<path d="M 49 94 Q 180 78 311 94" stroke="#fbbf24" stroke-width="12" fill="none" stroke-opacity="0.12" marker-end="url(#arrow3)"></path>
+<path d="M 49 106 Q 180 78 311 106" stroke="#fbbf24" stroke-width="12" fill="none" stroke-opacity="0.12" marker-end="url(#arrow3)"></path>
+<path d="M 49 118 Q 180 78 311 118" stroke="#fbbf24" stroke-width="12" fill="none" stroke-opacity="0.12" marker-end="url(#arrow3)"></path>
+<path d="M 49 106 Q 180 78 311 106" stroke="#fbbf24" stroke-width="3.5" fill="none" stroke-opacity="0.9" marker-end="url(#arrow3)"></path>
+<text x="164.0" y="78.0" font-size="22" fill="#fbbf24" text-anchor="middle" font-family="monospace" font-weight="bold" opacity="1.0">
+  3
+</text>
+<text x="180" y="95.0" font-size="9" fill="#64748b" text-anchor="middle" font-family="monospace" font-weight="normal" opacity="1.0">
+  3 current · Warp
+</text>
+<circle cx="53" cy="166" r="30" fill="#162032" stroke="#16a34a" stroke-width="2.5" opacity="1.0"></circle>
+<image x="21" y="134" width="64" height="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA+0lEQVR4nO2VsQ3CMBBFXxgAOmrGYAkXSCzBBlBRpmYAZqDICkiwACPQQE39ERBEACdywjmiyJNSJIr//5c7x9DR0fGBcCKUdKKqtbW0qoSLYnVEmwf4J/QvVcgiiKe1P9NkNoIEg5L7nseo0heyGLS1OZHHtMzcPJQ8gub9fxJS1Zd5Re+jBFTADHy+FxVFMUtb2FIWlFZuWYACf1Ct9FxtHlBqYFZnTVJYNAZ2+e0RWCZkayLTeyXJ9gnZLdAQuADT2OZvAW4INwdOwAhYmX720B0h3EC4rXCHUmHD7dXzZnhc9/nI2/LOYpOYBxBunld7BvrAzMqkgwquWV6O6mTiRpsAAAAASUVORK5CYII="/>
+<circle cx="307" cy="166" r="30" fill="#162032" stroke="#2563eb" stroke-width="2.5" opacity="1.0"></circle>
+<image x="275" y="134" width="64" height="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA/klEQVR4nO2SsUoDQRRFz7NIlSYfkCJl8CcEK7G02SJgE9JYCpkiiiw2bkpLCaSdxjKkT5da/AJrPyBiGFnZyLC7YHbZnS12TjHMu1zmXd488Hg8bUfi43G6MAfhfj7+1dK6TR0eT2NIWiiyD3fSRaKg9D7EeiZA//Tqz/Dx/ip5eszk8iLTIO357x1bL4VROrdhEaTKpvZ3OMFUNYH+kf9ue+xlelmtcz3HvEPTE/B4Gkfswig9AkJgAGwkCs6cBTBKD4E34BrQEgV7HHBi3c+T+gH4NEpPXQfoJBO5BZ6BJ6N0z2WArXWPg3wDO9dLGAI3wBcwkyhY1h2A1vMD+D9sLXmfQYMAAAAASUVORK5CYII="/>
+<line x1="49" y1="106" x2="53" y2="136" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
+<line x1="311" y1="106" x2="307" y2="136" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
+<line x1="49" y1="87" x2="311" y2="87" stroke="#334155" stroke-width="1" stroke-dasharray="2 5" opacity="0.4"/>
+<rect x="30" y="208" width="300" height="50" rx="7" fill="#162032" stroke="#334155" stroke-width="1"></rect>
+<text x="180" y="222" font-size="9" fill="#64748b" text-anchor="middle" font-family="monospace" font-weight="normal" opacity="1.0">
+  Carrier Demon
+</text>
+<text x="180" y="242" font-size="15" fill="#e2e8f0" text-anchor="middle" font-family="monospace" font-weight="bold" opacity="1.0">
+  Djynxx
+</text>
+<text x="180" y="262" font-size="9" fill="#94a3b8" text-anchor="middle" font-family="monospace" font-weight="normal" opacity="1.0">
+  Gt-003 → Z3
+</text>
+<rect x="18" y="276" width="324" height="36" rx="6" fill="#162032" stroke="#334155" stroke-width="1"></rect>
+<text x="180" y="290" font-size="10" fill="#94a3b8" text-anchor="middle" font-family="monospace" font-weight="normal" opacity="1.0">
+    C=12  ⊕  F=15  ·  AQΣ=27  DR=9
+</text>
+<text x="180" y="316" font-size="13" fill="#8899aacc" text-anchor="middle" font-family="monospace" font-weight="normal" opacity="0.80">
+  Δ─────────Δ
+</text>
+<rect x="60" y="320" width="80" height="13" rx="3" fill="#162032" stroke="#16a34a" stroke-width="1.2"></rect>
+<text x="100" y="329" font-size="9" fill="#64748b" text-anchor="middle" font-family="monospace" font-weight="normal" opacity="1.0">
+  AT
+</text>
+<rect x="220" y="320" width="80" height="13" rx="3" fill="#162032" stroke="#2563eb" stroke-width="1.2"></rect>
+<text x="260" y="329" font-size="9" fill="#64748b" text-anchor="middle" font-family="monospace" font-weight="normal" opacity="1.0">
+  SU
+</text>
+<text x="180" y="360" font-size="9" fill="#64748b" text-anchor="middle" font-family="monospace" font-weight="normal" opacity="1.0">
+  ≡  36  ≡  9  ≡  9  ≡
+</text>
+<text x="180" y="374" font-size="11" fill="#fbbf24" text-anchor="middle" font-family="monospace" font-weight="bold" opacity="1.0">
+    3current · Z3 · Gt-003 → Z3
+</text>
+<text x="22" y="22" font-size="9" fill="#1e293b" text-anchor="middle" font-family="monospace" font-weight="bold" opacity="0.55">
+  3
+</text>
+<text x="338" y="22" font-size="9" fill="#1e293b" text-anchor="middle" font-family="monospace" font-weight="bold" opacity="0.55">
+  6
+</text>
+<text x="22" y="498" font-size="9" fill="#1e293b" text-anchor="middle" font-family="monospace" font-weight="bold" opacity="0.55">
+  3
+</text>
+<text x="338" y="498" font-size="9" fill="#1e293b" text-anchor="middle" font-family="monospace" font-weight="bold" opacity="0.55">
+  3
+</text>
+</svg>
