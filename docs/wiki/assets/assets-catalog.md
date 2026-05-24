@@ -35,6 +35,8 @@ Directory: `wiki/assets/`. Reference in wiki pages via relative paths: `assets/<
 | `endian-rite.html` | **Interactive p5.js** — Rumsfeld Tetrad quadrants, endian flip animation, dungeon tree growth, Diamond Sutra cycle. See [[endian-rite-visualization]] |
 | `bs.jpg` | Barker Spiral original — hand-drawn source (CCRU interview, 1998) |
 | `nb.png` | Barker Spiral original — enhanced digital variant (CCRU interview) |
+| `demon-cards/` (×45) | Pandemonium 45-demon tarot cards — one per entity, zone/current/gate metadata |
+| `syzygy-cards/` (×5) | Syzygy pair tarot cards (1::8,2::7,0::9,3::6,4::5) with gate trajectories and gematria strips |
 
 ## Interactive Assets
 

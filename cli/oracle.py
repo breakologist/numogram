@@ -17,6 +17,9 @@ Usage:
   python3 oracle.py --taixuan  (T'ai Hsuan two-tetragram oracle from hardware)
   python3 oracle.py --taixuan --voice  (with zone sound generation)
   python3 oracle.py --iching --seed 192855  (I Ching from a specific seed)
+  python3 oracle.py --seed N --planchette            (zone ASCII planchette)
+  python3 oracle.py --seed N --planchette --ascii-glyph (box-art ASCII planchette + glyph channel)
+  python3 oracle.py --text "NUMOGRAM" --compare (cross-base 2/10/16/22/26/36)
 """
 
 import sys
@@ -566,6 +569,107 @@ def generate_reading(seed, source="manual"):
     return "\n".join(lines), zone
 
 
+
+def generate_planchette_glyph(zone: int, current: int, gate: int, syzygy: str,
+                               reading: str = "") -> str:
+    """ASCII box-art planchette — unique glyph per zone, gate-arc ring."""
+    import textwrap as _tw
+
+    _Z = ZONES.get(zone,
+                   {"name":"???","particle":"???","region":"???","current":"???","reading":"???"})
+    zregion = _Z.get("region", f"Zone {zone}")
+    zpart   = _Z.get("particle", "???")
+    pol_str = _Z.get("polarity", "+")
+    pol_d   = "Process / becoming" if pol_str == "+" else "Substance / inertia"
+
+    _GLYPH = {
+        0: ["  ◜ ◜ ◜      ◞ ◞ ◞",
+            "   ◜   ∇   ◞",
+            "           "],
+        1: ["  ╱╱ ╱╱ ╱╱ ╱╱ ╱╱   ",
+            " ╱  V V V V  ╲ ",
+            " ╲  ^ ^ ^ ^  ╱",
+            "  ╲╲ ╲╲ ╲╲ ╲╲    "],
+        2: ["  ◜─◝   ╱ ╲   ◞─◞  ",
+            "                "],
+        3: ["  ━━╾━╾┳━┓╾━╾━━━   ",
+            "           ",
+            " ┗━━━┻━━━┻━━━┛ "],
+        4: [">◜       GATE       ◞<",
+            "  ──────────── ",
+            "                "],
+        5: ["  ├─╁─╁─╁─╁─┤  ",
+            " ║ STRESS ║ ",
+            "  ├─╁─╁─╁─╁─┤  "],
+        6: ["  ╱╲  ╱╲  ╱╲   ",
+            "  ││     ││   ",
+            "  ╲╱     ╲╱   ",
+            "  ╱╲  ╱╲  ╱╲   "],
+        7: ["  ┌─♥─┬─♥─┐ ",
+            "  │♥ ⦿ ♥ │ ",
+            "  └─♥─┴─♥─┘ "],
+        8: ["  │ │  ╱  ╲││ ",
+            "  │ │╱      ╲│ "],
+        9: ["  ███████████ ",
+            "  █ P L E X █ ",
+            "  █         █ ",
+            "  ███████████ "],
+    }
+    _PART = {
+        0: "◜◜·◞ ◞·◞", 1: "◁━━━━━━━▶", 2: "║", 3: "🝤", 4: "───►───",
+        5: "├┴┴┴┴┤",  6: "◻◻◻◻",    7: "──●──", 8: "╱╲│╱╲╱", 9: "█╯╰█",
+    }
+
+    W  = 48
+    TT = f"┏{'━'*(W-2)}┓"
+    MD = f"┣{'─'*(W-2)}┫"
+    TB = f"┗{'━'*(W-2)}┛"
+
+    _ZN = ZONES.get(zone, {})
+    zname = _ZN.get("name", f"Z{zone}")
+    gname = ZONES.get(gate, {}).get("name", f"Z{gate}")
+
+    ring = ["  ─"] * 10
+    ring[zone] = f"Z{zone}"
+    ring[gate] = f"↑{gate}"
+    arc_row = "  ═".join(ring).replace("  ─", "──")
+
+    verse_lines = []
+    for rl in _tw.wrap(reading or "", width=34):
+        verse_lines.append(f"  {rl}")
+
+    glyph_lines = _GLYPH.get(zone, [f"  Zone {zone}"])
+    part_d = _PART.get(zone, "     ")
+
+    out = []
+    title = f"  ZONE {zone}  ·  {zregion:<14}  ·  AQΣ={zone+137}"
+    out.append(TT)
+    out.append(f"┃{title:^{W-2}}┃")
+    out.append(MD)
+    out.append(f"┃{' ':^{W-2}}┃")
+    for lbl, val in [
+        ("Current",  f"{current} [{zname}]"),
+        ("Gate",     f"Gt-{gate:02d} → Z{gate}"),
+        ("Syzygy",   syzygy),
+        ("Polarity", f"{pol_str}  —  {pol_d}"),
+        ("Region",   zregion),
+        ("Particle", ZONES.get(zone, {}).get("particle", "?").upper()),
+    ]:
+        out.append(f"┃  {lbl:<10}  {val:<30}┃")
+    out.append(f"┃{' ':^{W-2}}┃")
+    for gl in glyph_lines:
+        out.append(f"┃{gl:^{W-2}}┃")
+    out.append(f"┃  {part_d:^{W-4}}┃")
+    out.append(f"┃{' ':^{W-2}}┃")
+    if verse_lines:
+        for rl in verse_lines:
+            out.append(f"┃{rl:<{W-2}}┃")
+        out.append(f"┃{' ':^{W-2}}┃")
+    out.append(f"┃{arc_row:<{W-2}}┃")
+    out.append(f"┃{' ':^{W-2}}┃")
+    out.append(TB)
+    return "\n".join(out)
+
 def generate_planchette(zone: int) -> str:
     """Planchettte a brief zone-glyph planchette for oracle output."""
     z     = ZONES.get(zone, {"name": "???", "particle": "???", "region": "???"})
@@ -622,12 +726,15 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     seed = None
     source = "manual"
+    do_ascii_glyph = False
     do_voice = False
     do_base36 = False
     do_planchette = False
-    
+
     if "--voice" in args:
         do_voice = True
+    if "--ascii-glyph" in args:
+        do_ascii_glyph = True
     if "--base36" in args or "--djynxxogram" in args:
         do_base36 = True
     if "--planchette" in args:
@@ -841,7 +948,8 @@ if __name__ == "__main__":
         print("  python3 oracle.py --djynxxogram --seed 174  (Djynxxogram from AQ)")
         print("  python3 oracle.py --compare --text 'TEXT'  (cross-base comparison)")
         print("  python3 oracle.py --compare --seed 174    (from AQ value)")
-        print("  python3 oracle.py --seed N --planchette  (zone glyph planchette)")
+        print("  python3 oracle.py --seed N --planchette            (zone glyph planchette)")
+        print("  python3 oracle.py --seed N --planchette --ascii-glyph (ASCII box-art planchette)")
         sys.exit(1)
 
     # Generate reading
@@ -849,7 +957,10 @@ if __name__ == "__main__":
     print(reading)
 
     if do_planchette and zone is not None:
-        print(generate_planchette(zone))
+        if do_ascii_glyph:
+            print(generate_planchette_glyph(zone, get_current(zone), get_gate(zone), get_syzygy(zone)))
+        else:
+            print(generate_planchette(zone))
         print()
 
 

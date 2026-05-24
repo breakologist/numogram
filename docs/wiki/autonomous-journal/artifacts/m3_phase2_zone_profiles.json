@@ -1,0 +1,302 @@
+{
+  "mode": "m3-phase2-zone-profiles",
+  "seed": 42,
+  "dur": 3.0,
+  "n_per_zone": 2,
+  "zones": {
+    "0": {
+      "name": "void",
+      "n": 2,
+      "centroid_hz_mean": 3256.8,
+      "rms_db_mean": -38.445,
+      "bandwidth_hz_mean": 4999.8,
+      "bpm_median": 121.62,
+      "key_common": "C#",
+      "scale_common": "?",
+      "per_sample": [
+        {
+          "centre": 3444.8,
+          "rms_db": -38.68,
+          "bw": 5223.7,
+          "bpm": 123.05,
+          "key": "C#",
+          "scale": "?"
+        },
+        {
+          "centre": 3068.8,
+          "rms_db": -38.21,
+          "bw": 4775.8,
+          "bpm": 120.19,
+          "key": "C#",
+          "scale": "?"
+        }
+      ]
+    },
+    "1": {
+      "name": "surge",
+      "n": 2,
+      "centroid_hz_mean": 2715.5,
+      "rms_db_mean": -44.185,
+      "bandwidth_hz_mean": 4641.1,
+      "bpm_median": 115.15,
+      "key_common": "F",
+      "scale_common": "?",
+      "per_sample": [
+        {
+          "centre": 3330.5,
+          "rms_db": -45.43,
+          "bw": 4963.4,
+          "bpm": 184.57,
+          "key": "F",
+          "scale": "?"
+        },
+        {
+          "centre": 2100.4,
+          "rms_db": -42.94,
+          "bw": 4318.9,
+          "bpm": 45.73,
+          "key": "F",
+          "scale": "?"
+        }
+      ]
+    },
+    "2": {
+      "name": "breaker",
+      "n": 2,
+      "centroid_hz_mean": 1043.4,
+      "rms_db_mean": -43.875,
+      "bandwidth_hz_mean": 1362.8,
+      "bpm_median": 215.33,
+      "key_common": "B",
+      "scale_common": "?",
+      "per_sample": [
+        {
+          "centre": 1416.5,
+          "rms_db": -45.2,
+          "bw": 1577.2,
+          "bpm": 215.33,
+          "key": "B",
+          "scale": "?"
+        },
+        {
+          "centre": 670.3,
+          "rms_db": -42.55,
+          "bw": 1148.5,
+          "bpm": 215.33,
+          "key": "B",
+          "scale": "?"
+        }
+      ]
+    },
+    "3": {
+      "name": "warp",
+      "n": 2,
+      "centroid_hz_mean": 1299.8,
+      "rms_db_mean": -49.25,
+      "bandwidth_hz_mean": 2182.5,
+      "bpm_median": 146.23,
+      "key_common": "G",
+      "scale_common": "?",
+      "per_sample": [
+        {
+          "centre": 1184.6,
+          "rms_db": -48.48,
+          "bw": 2177.3,
+          "bpm": 172.27,
+          "key": "G",
+          "scale": "?"
+        },
+        {
+          "centre": 1415.0,
+          "rms_db": -50.02,
+          "bw": 2187.7,
+          "bpm": 120.19,
+          "key": "G",
+          "scale": "?"
+        }
+      ]
+    },
+    "4": {
+      "name": "gate",
+      "n": 2,
+      "centroid_hz_mean": 3372.8,
+      "rms_db_mean": -46.39,
+      "bandwidth_hz_mean": 3967.0,
+      "bpm_median": 65.48,
+      "key_common": "A#",
+      "scale_common": "?",
+      "per_sample": [
+        {
+          "centre": 3988.7,
+          "rms_db": -47.18,
+          "bw": 4192.1,
+          "bpm": 77.13,
+          "key": "A#",
+          "scale": "?"
+        },
+        {
+          "centre": 2756.8,
+          "rms_db": -45.6,
+          "bw": 3741.9,
+          "bpm": 53.83,
+          "key": "A#",
+          "scale": "?"
+        }
+      ]
+    },
+    "5": {
+      "name": "pressure",
+      "n": 2,
+      "centroid_hz_mean": 855.9,
+      "rms_db_mean": -52.58,
+      "bandwidth_hz_mean": 2095.8,
+      "bpm_median": 128.74,
+      "key_common": "D",
+      "scale_common": "?",
+      "per_sample": [
+        {
+          "centre": 582.8,
+          "rms_db": -52.37,
+          "bw": 1581.2,
+          "bpm": 105.47,
+          "key": "D",
+          "scale": "?"
+        },
+        {
+          "centre": 1129.0,
+          "rms_db": -52.79,
+          "bw": 2610.4,
+          "bpm": 152.0,
+          "key": "D",
+          "scale": "?"
+        }
+      ]
+    },
+    "6": {
+      "name": "abstraction",
+      "n": 2,
+      "centroid_hz_mean": 2820.0,
+      "rms_db_mean": -38.51,
+      "bandwidth_hz_mean": 4669.5,
+      "bpm_median": 161.96,
+      "key_common": "F",
+      "scale_common": "?",
+      "per_sample": [
+        {
+          "centre": 2539.6,
+          "rms_db": -38.39,
+          "bw": 4502.3,
+          "bpm": 191.41,
+          "key": "F",
+          "scale": "?"
+        },
+        {
+          "centre": 3100.4,
+          "rms_db": -38.63,
+          "bw": 4836.7,
+          "bpm": 132.51,
+          "key": "F",
+          "scale": "?"
+        }
+      ]
+    },
+    "7": {
+      "name": "blood",
+      "n": 2,
+      "centroid_hz_mean": 1378.5,
+      "rms_db_mean": -36.875,
+      "bandwidth_hz_mean": 2388.7,
+      "bpm_median": 126.12,
+      "key_common": "D#",
+      "scale_common": "?",
+      "per_sample": [
+        {
+          "centre": 1603.2,
+          "rms_db": -37.87,
+          "bw": 2573.0,
+          "bpm": 129.2,
+          "key": "D#",
+          "scale": "?"
+        },
+        {
+          "centre": 1153.8,
+          "rms_db": -35.88,
+          "bw": 2204.4,
+          "bpm": 123.05,
+          "key": "D#",
+          "scale": "?"
+        }
+      ]
+    },
+    "8": {
+      "name": "multiplicity",
+      "n": 2,
+      "centroid_hz_mean": 3173.5,
+      "rms_db_mean": -36.05,
+      "bandwidth_hz_mean": 5102.6,
+      "bpm_median": 127.26,
+      "key_common": "D",
+      "scale_common": "?",
+      "per_sample": [
+        {
+          "centre": 3143.5,
+          "rms_db": -35.68,
+          "bw": 5021.7,
+          "bpm": 114.84,
+          "key": "D",
+          "scale": "?"
+        },
+        {
+          "centre": 3203.4,
+          "rms_db": -36.42,
+          "bw": 5183.4,
+          "bpm": 139.67,
+          "key": "D",
+          "scale": "?"
+        }
+      ]
+    },
+    "9": {
+      "name": "plex",
+      "n": 2,
+      "centroid_hz_mean": 6303.4,
+      "rms_db_mean": -33.47,
+      "bandwidth_hz_mean": 6569.1,
+      "bpm_median": 57.47,
+      "key_common": "F#",
+      "scale_common": "?",
+      "per_sample": [
+        {
+          "centre": 6337.9,
+          "rms_db": -33.28,
+          "bw": 6541.7,
+          "bpm": 78.3,
+          "key": "F#",
+          "scale": "?"
+        },
+        {
+          "centre": 6268.9,
+          "rms_db": -33.66,
+          "bw": 6596.6,
+          "bpm": 36.65,
+          "key": "F#",
+          "scale": "?"
+        }
+      ]
+    }
+  },
+  "centroid_order": [
+    5,
+    2,
+    3,
+    7,
+    1,
+    6,
+    8,
+    0,
+    4,
+    9
+  ],
+  "centroid_span": 5447.5,
+  "centroid_ratio": 7.364645402500292
+}
