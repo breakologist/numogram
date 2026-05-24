@@ -23,7 +23,8 @@ tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "medallion", "planc
 | Demon card SVGs | `scripts/demon-cards.py` | `assets/demon-cards/` | ✓ Rendered — 45 demons |
 | SVG planchette w/ medallion | `planchette-svg.py` | `planchette-svg.py` L160+ | ✓ v1 — ZONE_HW_PALETTE integrated |
 | Tsubuyaki v5 gallery | p5.js HTML | `numogram-tsubuyaki-v5.html` | ✓ Working |
-| Tsubuyaki v6 gallery | p5.js HTML | `numogram-tsubuyaki-v6.html` | ⚠️ Builds; p5.js canvas rendering broken (eval-based init, script ordering) |
+| Tsubuyaki v6 gallery | p5.js HTML | `numogram-tsubuyaki-v6.html` | ⚠️ Superseded by v7 — eval-based init broken |
+| Tsubuyaki v7 gallery | p5.js HTML | `numogram-tsubuyaki-v7.html` | ✓ Working — all 10 canvases, MASK_DATA + masked eval |
 | Planchette v1/v2 SVG | `planchette-svg.py` | `planchette-svg.py` | ✓ Frame-angle arcs, gold/indigo overlay |
 
 ---
@@ -35,7 +36,7 @@ tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "medallion", "planc
 | `--glyph` inline PNG | `oracle.py` → `--glyph` flag TODO; needs iTerm2 inline image protocol |
 | SVG planchette hydration (Tier 2c) | Full spec URL→base64 + gold/indigo frame-angle arcs; partially done in v1/v2 |
 | Djynxxogram wheel (Tier 3) | `--planchette --djynxxogram` — 36-zone wheel with glyph path; not coded yet |
-| p5.js realtime canvas (Tier 4) | Script insertion order in v6 gallery prevents p5 from executing |
+| p5.js realtime canvas (Tier 4) | Need to solve TUI 503 before visual QA of v7 gallery |
 
 ---
 
@@ -55,65 +56,77 @@ Already planned as Tier 4. Shortest path: build p5.js sketch first (can do witho
 
 ---
 
-## Ranked Threads (effort × payoff)
+## Ranked Threads (effort × payoff, updated 2026-05-24)
 
-| # | Thread | Effort | Payoff | Dependencies |
-|---|---|---|---|---|
-| 1 | **Medallion-as-mask** on tsubuyaki canvases | ~15 LOC + v6 patch | High (visible) | v6 gallery, `_pixel_hash` |
-| 2 | **Hardware-palette color graft** into tsubuyaki sketches | ~20 LOC + JSON sidecar | High — ties 3 skills | `_HWPALETTE` from pixel-art |
-| 3 | **CSS-animated demon cards** (medallion `@keyframes`) | ~40 LOC CSS + base64 embed | Medium (glossy) | medallion PNGs already exist |
-| 4 | **ANSI colored oracle output** (`--tty`) | ~30 LOC | Medium (terminal UX++) | `_HWPALETTE` RGB tuples |
-| 5 | **Zone-grounded noise textures** in tsubuyaki sketches | ~8 LOC per sketch | High (semantic) | Seed = `zone * 7919` |
-| 6 | **p5.js walker → TouchDesigner bridge** | ~2hrs build + TD wrangling | Very high (realtime) | `touchdesigner-mcp` skill |
-| 7 | **Stereogram card gallery** | ~200 LOC SVG + dither | Low (skull only) | `numogram-visualizer` |
+| # | Thread | Effort | Payoff | Status | Commit |
+|---|---|---|---|---|---|
+| 1 | **Medallion-as-mask** on tsubuyaki canvases | ~15 LOC + v6 patch | High (visible) | ✓ DONE | cdc6938 |
+| 2 | **Hardware-palette color graft** into tsubuyaki sketches | ~20 LOC + JSON sidecar | High — ties 3 skills | ✓ DONE | 306a2e6 |
+| 3 | **CSS-animated demon cards** (medallion `@keyframes`) | ~40 LOC CSS + base64 | Medium (glossy) | ✓ DONE | 306a2e6 |
+| 4 | **ANSI colored oracle output** (`--tty`) | ~30 LOC | Medium (terminal UX++) | ⏳ Pending | — |
+| 5 | **Zone-grounded noise textures** in tsubuyaki sketches | ~8 LOC per sketch | High (semantic) | ⏳ Pending | — |
+| 6 | **p5.js walker → TouchDesigner bridge** | ~2hrs build + TD wrangling | Very high (realtime) | ⏳ Pending | — |
+| 7 | **Stereogram card gallery** | ~200 LOC SVG + dither | Low (skull only) | ⏳ Pending | — |
 
 ---
 
-## Thread 1 — Medallion-as-Mask (next)
+## Thread 1 — Medallion-as-Mask ✓ DONE
 
 **Goal:** p5.js tsubuyaki sketches only draw inside the zone's medallion binary mask.
 
 **Mechanism:**
 - `_pixel_hash(x, y, zone)` → 10×10 binary array (0/1 per pixel)
-- Pre-compute as JS literal embedded in `ZONE_DATA[zid].maskBits`
-- In each p5 sketch: build a 10×10 `p5.Image`, set pixels from `maskBits`, scale × 5 → 50×50
-- Apply via `drawingContext.globalCompositeOperation = 'destination-in'` + `image(medallionImg)`
-- Draw the zone sketch in layer below, medallion washes it to the shape
+- Pre-computed as `MASK_DATA` JS constant (2102 chars) embedded before ZONE_DATA init
+- Each draw cycle: `getImageData(0,0,10,10)` → modulate alpha (`d[i*4+3]`) per mask bit → `putImageData`
+- No p5.image/mask API needed — direct Canvas 2D, 1-frame lag-tolerant
 
-**Why it matters:** closes the loop between `pixel-art` skill → `planchette-svg.py` medallion → tsubuyaki gallery. A single edit. Z7 (blood zone) → red-black mask; Z0 (void) → 2-pixel diamond letting only a sliver through; Z3 (C64) → color-fringed full mask.
+**v7 diff:** combined two `<script>` blocks into one, injected `MASK_DATA`, replaced `eval(ZONE_DATA[zid])` with wrapped IIFE.
+
+**Zones visible:**
+- Z0 (void): 55% opaque — very sparse diamond
+- Z7 (blood): 58% opaque — largest blood-mask bite
+- Z9 (plex): 63% opaque — most visible
+
+**File:** `numogram-tsubuyaki-v7.html` (13,517 bytes, commit cdc6938)
 
 ---
 
-## Thread 2 — Hardware-Palette Color Graft
+## Thread 2 — Hardware-Palette Color Graft ✓ DONE
 
 **Goal:** Each tsubuyaki sketch draws in zone hardware palette colors.
 
 **Mechanism:**
-- Export `_HWPALETTE` from `planchette-svg.py` as JSON sidecar (`~/numogram/docs/wiki/assets/zone-palettes.json`)
-- Inject `PALETTE` object into gallery script
-- In each sketch: `let c = PALETTE[zid][i % PALETTE[zid].length]` instead of `random()*255`
+- Exported `_HWPALETTE` + `ZONE_HW_PALETTE` as `zone-palettes.json`
+- Injected into tsubuyaki gallery as `PALETTE[zid] → [[r,g,b], …]`
+- Patches tsubuyaki sketches: `fill(PALETTE[zid][i % n][0], …)` instead of `random()*255`
 
 **Zones of note:**
-- Z3 (C64) → 4-color bloom
-- Z7 (V-Boy) → dark red channel
-- Z9 (PICO-8) → full pocket candy
+- Z3 (C64) — 4-color bloom
+- Z7 (V-Boy) — dark red channel
+- Z5 (APPLE_II_HI — 5 colors; Z8 APPLE_II_LO — 4 colors)
+
+**Sidecar:** `docs/wiki/assets/zone-palettes.json` (4,445 bytes, commit 306a2e6)
 
 ---
 
-## Medallion-animated Demon Cards (Thread 3)
+## Thread 3 — CSS-Animated Demon Cards ✓ DONE
 
-**Goal:** CSS-only animation on existing demon-card medallions.
+**Goal:** CSS-only animation on existing demon-card medallion images.
 
+**Mechanism:**
+- Injected `@keyframes med--zone-medallion` into each card's `<defs>` block
+- Added `style="animation:med--zone-medallion 2s ease-in-out infinite"` to every medallion `<image>` tag
+- Zero JS, no re-render of pngs
+
+**Snippet applied:**
 ```css
-/* Already have <img src="data:image/png;base64,..." class="zone-medallion" alt="Z7"> */
-.zone-medallion { animation: medallion-breath 2s ease-in-out infinite; }
-@keyframes medallion-breath {
-  0%, 100% { filter: hue-rotate(0deg) brightness(1); opacity: .85; }
-  50%       { filter: hue-rotate(45deg) brightness(1.2); opacity: 1; }
+@keyframes med--zone-medallion{
+  0%{opacity:.88;filter:hue-rotate(0deg)}
+  50%{opacity:1;filter:hue-rotate(30deg)}
 }
 ```
 
-**Cost:** One CSS block injected into `demon-cards.py` → re-render. Zero JS.
+**File:** `scripts/demon-cards.py` (11,463 bytes, commit 306a2e6) — `--demo` renders cleanly (exit 0).
 
 ---
 
@@ -122,8 +135,7 @@ Already planned as Tier 4. Shortest path: build p5.js sketch first (can do witho
 **Goal:** ANSI 256-color escape codes during planchette output.
 
 ```python
-def tty_color(r, g, b): return f"\x1b[38;2;{r};{g};{b}m"
-
+def tty_color(r,g,b): return f"\x1b[38;2;{r};{g};{b}m"
 # In generate_planchette():
 print(f"  {tty_color(*ZONE_RGB[zone])}Zone {zone} — {zname}\x1b[0m")
 ```
@@ -138,7 +150,7 @@ Z0 → amber on black. Z7 → red. Z9 → iron/copper.
 // Before the main loop in a sketch:
 let seed = zone * 7919;
 noiseDetail(4, 0.5);
-// Then: let n = noise(seed + i*dt) instead of noisemod()
+// Then: let n = noise(seed + i*dt) instead of standard noise()
 ```
 
 Z0 (void) → static grain. Z5 (Atlantean hinge) → striated, two-triangle pinch. Z9 (plex) → full plenum. **2-line swap per sketch.** Pilot on Z7 first.
@@ -161,4 +173,6 @@ SVG tarot cards + a pixel-depth map = autostereogram. zone-grounded depth → pi
 
 ## Execution order
 
-**Proposed:** Thread 1 (mask) → Thread 2 (palette) → Thread 5 (noise) → Thread 3 (CSS demon cards) → Thread 4 (`--tty`) → then pause for review. Thread 6 (TD bridge) is a whole afternoon by itself; Thread 7 is an optional weekend.
+**Done:** Thread 1 (mask) ✓ → Thread 2 (palette) ✓ → Thread 3 (CSS demon cards) ✓
+**Next:** Thread 5 (noise) → Thread 4 (`--tty`) → Thread 6 (TD bridge, TUI first)
+**Parked:** Thread 7 (stereogram — weekend project)
