@@ -4,7 +4,7 @@ created: 2026-05-24
 updated: 2026-05-25
 status: active
 category: reference
-tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "medallion", "planchette"]
+tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "ascii-video", "medallion", "planchette"]
 ---
 
 # Visual Layers — State Map & Thread Ranking
@@ -27,7 +27,8 @@ tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "medallion", "planc
 | Tsubuyaki v7 gallery | p5.js HTML | `numogram-tsubuyaki-v7.html` | ✓ Working — all 10 canvases, MASK_DATA + masked eval |
 | Planchette SVG v1/v2 | `planchette-svg.py` | `planchette-svg.py` | ✓ Frame-angle arcs, gold/indigo overlay |
 | Noise-grounded sketches | p5.js | tsubuyaki sketches | ✓ v8 commit — seed = zone × 7919 |
-| **Pixel-art zone sprites** | `zone_pixel_sprites.py` | `assets/zone-sprites/zone-N-sprite.png` | ✓ All 10 zones done |
+|| **Pixel-art zone sprites** | `zone_pixel_sprites.py` | `assets/zone-sprites/zone-N-sprite.png` | ✓ All 10 zones done |
+|| **Oracle ASCII GIF** | `oracle-ascii-video.py` | `/tmp/oracle_{seed}.gif` | ✓ Prototype — 8-zone traverse → coloured ASCII stack, tonemap+encode, commit pending |
 
 ---
 
@@ -46,8 +47,8 @@ tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "medallion", "planc
 
 | Bug | Status |
 |---|---|
-| Z0 medallion: 16 colors (expected 2, MONO_AMBER) | Traced to `_HWPALETTES` fallback path; fix deferred |
-| Z5 medallion: 6 colors (expected 16, APPLE_II_LO) | Same fallback path; fix deferred |
+|| Z0 medallion: 16 colors (expected 2, MONO_AMBER) | `_HWPALETTES` fallback path; **FIXED** (commit 79fa78e) |
+|| Z5 medallion: 6 colors (expected 16, APPLE_II_LO) | Same fallback path; **FIXED** (commit 79fa78e) |
 | TUI 503 | `nousresearch/openrouter` Step 3.5 Flash OAuth failure — blocks all TUI requests; workarounds: `execute_code` / `terminal` |
 
 ---
@@ -60,11 +61,62 @@ tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "medallion", "planc
 | 6 | p5.js walker → TouchDesigner OSC bridge | ~2hrs | Very high (realtime scrying) | ⏳ Next |
 | 7 | Stereogram card gallery | ~200 LOC | Low (skull only) | ⏳ Weekend |
 | 8 | Pixel-art zone sprites | ~30 LOC gen script | Medium — hardware-authentic | ✓ Done |
-| 9 | Escalating zone frames (planchette SVG Tier 2c) | ~40 LOC | Medium | ✓ Partial |
-
+|| 10a | Oracle ASCII GIF / ascii-video pipeline | ~80 LOC prototype | Medium — zone traversal as live ASCII cinema | ✓ Prototype |
+|| 10b | p5.js Oracle Sketch | complex | High — interactive planchette-reading rendering | ⚡ `oracle-p5js-sketch-spec.md` written |
 ---
++
 
-## Thread 1-2 — Medallion-as-mask + Palette Graft ✓ DONE
++## Thread 10a — Oracle ASCII GIF ✓ Prototype
++
++**Goal:** map `oracle.py --traverse` zone sequence → ASCII frame-per-step → animated GIF.
++
++**Prototype:** `~/numogram/cli/oracle-ascii-video.py` (6 KB, 0 external deps beyond numpy + pillow)
++
++| Parameter | Value |
++|-----------|-------|
++| Frames | 1 per zone step (`traverse(seed, 8)`) |
++| Resolution | 720×400 px @ 1 fps |
++| Grid | ~50×28 fixed cells, size-11px monospace |
++| Colour | `oracle._ZONE_TTY_RGB` per zone; luminance↔field |
++| Glyph | 10 `CHAR_RAMPS` dicts, one per zone |
++| Tonemap | Percentile-based, 1%/99.5%, gamma 0.75 |
++| ENCODE | Pillow `save_all=True`, optimize GIF |
++
++**Confirmed output:** 8-frame, 582 KB, rc=0. Frame 0 = Z3_Warp bracket-dense gold on dark. Frame 4 = Z8_Lullaby diamond chars in purple. Zones visually distinguishable.
++
++### Entry points
++| Mode | Command | Status |
++|------|---------|--------|
++| A — Traverse → GIF | `python3 oracle-ascii-video.py 174 out.gif` | ✓ Working |
++| B — TTS WAV → audio-reactor | `oracle.py --voice text → WAV` → ascii-video audio mode | ⬜ TTS deps absent (pydub, soundfile) |
++| C — sys.stdin pipe | `oracle.py --traverse 174 --json \| ascii-video stdin→frames` | ⬜ pipe path untested |
++
++### Gap vs full ascii-video spec
++- Stage 5 SHADER → `FeedbackBuffer` + `ShaderChain` (vignette, grain, bloom)
++- Audio-analysis stage (pydub/ffmpeg FFT)
++- Parallel frame rendering
++- Scene dispatcher / section-based editing
++- sys.stdin pipe (Mode C)
++
++---
++
++## Thread 10b — p5.js Oracle Sketch ⚡ Spec Written
++
++**Status:** Design brief only — not yet implemented.
++See `oracle-p5js-sketch-spec.md` for full spec.
++
++Five sections in the sketch loop:
++1. **`zone_cycle`** — deterministic walker with seed-locked noise; zone ring + path lines
++2. **`zone_glyph`** — V-shaped octagon glyph inspired by planchette glyph encoding
++3. **`sprite_pulse`** — 10×10 pixel medallion, breath-scaling at `t = sin(freq*t)`
++4. **`reading_overlay`** — oracle planchette text composited with zone-tint alpha
++5. **`tty_colours`** — field gradients mapped to `_ZONE_TTY_RGB` tuples; smooth interp on zone change
++
++Priority: standalone first (no TD MCP dep); TD bridge comes once MCP port 40404 is live.
++
++---
++
+ ## Thread 1-2 — Medallion-as-mask + Palette Graft ✓ DONE
 
 **Docs:** `references/medallion-mask-and-palette-graft.md`
 
