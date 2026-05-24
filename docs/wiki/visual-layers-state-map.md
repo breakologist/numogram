@@ -1,6 +1,7 @@
 |---
 title: Visual Layers — State Map & Thread Ranking (2026-05-24)
 created: 2026-05-24
+updated: 2026-05-25
 status: active
 category: reference
 tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "medallion", "planchette"]
@@ -22,10 +23,11 @@ tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "medallion", "planc
 | Syzygy SVG cards | `scripts/syzygy-card.py` | `assets/syzygy-cards/` | ✓ Rendered — 5 pairs |
 | Demon card SVGs | `scripts/demon-cards.py` | `assets/demon-cards/` | ✓ Rendered — 45 demons |
 | SVG planchette w/ medallion | `planchette-svg.py` | `planchette-svg.py` L160+ | ✓ v1 — ZONE_HW_PALETTE integrated |
-| Tsubuyaki v5 gallery | p5.js HTML | `numogram-tsubuyaki-v5.html` | ✓ Working |
-| Tsubuyaki v6 gallery | p5.js HTML | `numogram-tsubuyaki-v6.html` | ⚠️ Superseded by v7 — eval-based init broken |
+| `--tty` ANSI oracle output | `oracle.py --tty` | `oracle.py` L80-85 / L23097 | ✓ v1 |
 | Tsubuyaki v7 gallery | p5.js HTML | `numogram-tsubuyaki-v7.html` | ✓ Working — all 10 canvases, MASK_DATA + masked eval |
-| Planchette v1/v2 SVG | `planchette-svg.py` | `planchette-svg.py` | ✓ Frame-angle arcs, gold/indigo overlay |
+| Planchette SVG v1/v2 | `planchette-svg.py` | `planchette-svg.py` | ✓ Frame-angle arcs, gold/indigo overlay |
+| Noise-grounded sketches | p5.js | tsubuyaki sketches | ✓ v8 commit — seed = zone × 7919 |
+| **Pixel-art zone sprites** | `zone_pixel_sprites.py` | `assets/zone-sprites/zone-N-sprite.png` | ✓ All 10 zones done |
 
 ---
 
@@ -34,145 +36,146 @@ tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "medallion", "planc
 | Layer | Block |
 |---|---|
 | `--glyph` inline PNG | `oracle.py` → `--glyph` flag TODO; needs iTerm2 inline image protocol |
-| SVG planchette hydration (Tier 2c) | Full spec URL→base64 + gold/indigo frame-angle arcs; partially done in v1/v2 |
-| Djynxxogram wheel (Tier 3) | `--planchette --djynxxogram` — 36-zone wheel with glyph path; not coded yet |
-| p5.js realtime canvas (Tier 4) | Need to solve TUI 503 before visual QA of v7 gallery |
+| SVG planchette hydration Tier 2c | Full spec URL→base64 + gold/indigo frame-angle arcs; partially done in v1/v2 |
+| Djynxxogram wheel | `--planchette --djynxxogram` — 36-zone wheel with glyph path; not coded yet |
+| p5.js realtime canvas QA | TUI 503 blocks browser_vision; work via execute_code/terminal |
 
 ---
 
-## Known bugs
+## Known bugs (2026-05-25)
 
 | Bug | Status |
 |---|---|
-| Z0 medallion: 16 colors (expected 2, `MONO_AMBER`) | Traced to `_HWPALETTES` fallback path; fix deferred |
-| Z5 medallion: 6 colors (expected 16, `APPLE_II_LO`) | Same fallback path; fix deferred |
+| Z0 medallion: 16 colors (expected 2, MONO_AMBER) | Traced to `_HWPALETTES` fallback path; fix deferred |
+| Z5 medallion: 6 colors (expected 16, APPLE_II_LO) | Same fallback path; fix deferred |
 | TUI 503 | `nousresearch/openrouter` Step 3.5 Flash OAuth failure — blocks all TUI requests; workarounds: `execute_code` / `terminal` |
 
 ---
 
-## Zone-Walker / TouchDesigner bridge
+## Ranked Visual Threads (effort × payoff)
 
-Already planned as Tier 4. Shortest path: build p5.js sketch first (can do without TUI, terminal-only), verify it runs, then add MCP call to TouchDesigner. This is the real-time audio-visual scrying loop described in Soul v2.0.
-
----
-
-## Ranked Threads (effort × payoff, updated 2026-05-24)
-
-| # | Thread | Effort | Payoff | Status | Commit |
-|---|---|---|---|---|---|
-| 1 | **Medallion-as-mask** on tsubuyaki canvases | ~15 LOC + v6 patch | High (visible) | ✓ DONE | cdc6938 |
-| 2 | **Hardware-palette color graft** into tsubuyaki sketches | ~20 LOC + JSON sidecar | High — ties 3 skills | ✓ DONE | 306a2e6 |
-| 3 | **CSS-animated demon cards** (medallion `@keyframes`) | ~40 LOC CSS + base64 | Medium (glossy) | ✓ DONE | 306a2e6 |
-| 4 | **ANSI colored oracle output** (`--tty`) | ~30 LOC | Medium (terminal UX++) | ✓ DONE | 2b40674 |
-| 5 | **Zone-grounded noise textures** in tsubuyaki sketches | ~8 LOC per sketch | High (semantic) | ✓ DONE | 2b40674 |
-| 6 | **p5.js walker → TouchDesigner bridge** | ~2hrs build + TD wrangling | Very high (realtime) | ⏳ Pending | — |
-| 7 | **Stereogram card gallery** | ~200 LOC SVG + dither | Low (skull only) | ⏳ Pending | — |
+| # | Thread | Effort | Payoff | Status |
+|---|---|---|---|---|
+| 1-5 | Medallion-as-mask / palette / CSS demon cards / --tty / noise | past | High | ✓ A set |
+| 6 | p5.js walker → TouchDesigner OSC bridge | ~2hrs | Very high (realtime scrying) | ⏳ Next |
+| 7 | Stereogram card gallery | ~200 LOC | Low (skull only) | ⏳ Weekend |
+| 8 | Pixel-art zone sprites | ~30 LOC gen script | Medium — hardware-authentic | ✓ Done |
+| 9 | Escalating zone frames (planchette SVG Tier 2c) | ~40 LOC | Medium | ✓ Partial |
 
 ---
 
-## Thread 1 — Medallion-as-Mask ✓ DONE
+## Thread 1-2 — Medallion-as-mask + Palette Graft ✓ DONE
 
-**Goal:** p5.js tsubuyaki sketches only draw inside the zone's medallion binary mask.
+**Docs:** `references/medallion-mask-and-palette-graft.md`
+
+**Goal:** p5.js tsubuyaki sketches draw inside zone medallion binary mask, using zone hardware palette.
 
 **Mechanism:**
-- `_pixel_hash(x, y, zone)` → 10×10 binary array (0/1 per pixel)
-- Pre-computed as `MASK_DATA` JS constant (2102 chars) embedded before ZONE_DATA init
-- Each draw cycle: `getImageData(0,0,10,10)` → modulate alpha (`d[i*4+3]`) per mask bit → `putImageData`
-- No p5.image/mask API needed — direct Canvas 2D, 1-frame lag-tolerant
+- `_pixel_hash(x, y, zone)` → 10×10 binary array → pre-computed `MASK_DATA` JS constant (2102 chars)
+- Each draw cycle: `getImageData` → modulate alpha per mask bit → `putImageData`
+- Palette graft: `zone-palettes.json` sidecar → `PALETTE[zid]` injected into gallery JS
 
-**v7 diff:** combined two `<script>` blocks into one, injected `MASK_DATA`, replaced `eval(ZONE_DATA[zid])` with wrapped IIFE.
-
-**Zones visible:**
-- Z0 (void): 55% opaque — very sparse diamond
-- Z7 (blood): 58% opaque — largest blood-mask bite
-- Z9 (plex): 63% opaque — most visible
-
-**File:** `numogram-tsubuyaki-v7.html` (13,517 bytes, commit cdc6938)
-
----
-
-## Thread 2 — Hardware-Palette Color Graft ✓ DONE
-
-**Goal:** Each tsubuyaki sketch draws in zone hardware palette colors.
-
-**Mechanism:**
-- Exported `_HWPALETTE` + `ZONE_HW_PALETTE` as `zone-palettes.json`
-- Injected into tsubuyaki gallery as `PALETTE[zid] → [[r,g,b], …]`
-- Patches tsubuyaki sketches: `fill(PALETTE[zid][i % n][0], …)` instead of `random()*255`
-
-**Zones of note:**
-- Z3 (C64) — 4-color bloom
-- Z7 (V-Boy) — dark red channel
-- Z5 (APPLE_II_HI — 5 colors; Z8 APPLE_II_LO — 4 colors)
-
-**Sidecar:** `docs/wiki/assets/zone-palettes.json` (4,445 bytes, commit 306a2e6)
+**Commits:** cdc6938, 306a2e6
 
 ---
 
 ## Thread 3 — CSS-Animated Demon Cards ✓ DONE
 
-**Goal:** CSS-only animation on existing demon-card medallion images.
+**Goal:** CSS-only hue-rotate + opacity animation on medallion images.
 
 **Mechanism:**
-- Injected `@keyframes med--zone-medallion` into each card's `<defs>` block
-- Added `style="animation:med--zone-medallion 2s ease-in-out infinite"` to every medallion `<image>` tag
-- Zero JS, no re-render of pngs
-
-**Snippet applied:**
 ```css
 @keyframes med--zone-medallion{
   0%{opacity:.88;filter:hue-rotate(0deg)}
   50%{opacity:1;filter:hue-rotate(30deg)}
 }
 ```
+Injected into every demon-card `<defs>` block, applied to every medallion `<image>`.
 
-**File:** `scripts/demon-cards.py` (11,463 bytes, commit 306a2e6) — `--demo` renders cleanly (exit 0).
+**File:** `scripts/demon-cards.py` (11,463 bytes), commit 306a2e6.
 
 ---
 
-## Oracle `--tty` mode (Thread 4)
+## Thread 4 — ANSI colored oracle output ✓ DONE
 
-**Goal:** ANSI 256-color escape codes during planchette output.
+**Goal:** `oracle.py --tty` emits per-line ANSI 256-color escapes on the planchette channel.
 
 ```python
 def tty_color(r,g,b): return f"\x1b[38;2;{r};{g};{b}m"
-# In generate_planchette():
-print(f"  {tty_color(*ZONE_RGB[zone])}Zone {zone} — {zname}\x1b[0m")
+_ZONE_TTY_RGB = {
+    0:(222,180,16), 1:(140,180,40), 2:(70,160,40),
+    3:(124,124,124), 4:(210,100,230), 5:(0,130,180),
+    6:(200,200,200), 7:(220,0,0), 8:(100,100,80), 9:(60,30,0),
+}
 ```
 
-Z0 → amber on black. Z7 → red. Z9 → iron/copper.
+Each planchette line wrapped individually; `\x1b[0m` resets per line. Confirmed via `cat -v`.
+
+**Commit:** 2b40674.
 
 ---
 
-## Zone-grounded noise textures (Thread 5)
+## Thread 5 — Zone-grounded noise ✓ DONE
 
 ```javascript
-// Before the main loop in a sketch:
-let seed = zone * 7919;
+let _z_seed = zone * 7919;   // prime multiplier gives non-overlapping seed per zone
 noiseDetail(4, 0.5);
-// Then: let n = noise(seed + i*dt) instead of standard noise()
+let n = noise(_z_seed + i * dt);
 ```
 
-Z0 (void) → static grain. Z5 (Atlantean hinge) → striated, two-triangle pinch. Z9 (plex) → full plenum. **2-line swap per sketch.** Pilot on Z7 first.
+Z0 (void) → static grain. Z5 (Atlantean hinge) → striated, two-triangle pinch. Z9 (plex) → full plenum. 2-line swap per sketch.
+
+**Commit:** 2b40674 (v8).
 
 ---
 
-## TouchDesigner p5.js walker bridge (Thread 6)
+## Thread 6 — p5.js walker → TouchDesigner OSC bridge ⏳ Pending
 
-p5.js zone-walker sketch → OSC `{'zone':3,'frame':1200}` → TD TOP shader → realtime numogram visualizer. Skill: `touchdesigner-mcp`.
+**Goal:** Real-time audio-visual scrying loop. p5.js sketch walks zones deterministically → sends OSC `{'zone':N,'frame':M}` → TD TOP shader resizes/warps → realtime numogram visualizer.
 
-Shortest path: build the p5.js sketch first (terminal works fine), verify zone transitions feel right, then drop in the MCP sender.
+**Prerequisites:** p5.js zone-walker sketch built first (terminal-verified). Then MCP call into TouchDesigner via `touchdesigner-mcp` skill exposes 36 native tools.
+
+**Minimum viable:** zone transitions → RGB→zone groovy=> ONE zone-constrained per-step render → 10-zone demo ARC. 6 zones → 3 frames → 1 frame per zone.
+
+**Shortest path:** build p5 sketch → zone-constrained render → MCP → TD composer → 5-miner shift preset → automated 10-zone shift render loop.
+
+## Thread 7 — Stereogram card gallery ⏳ Weekend
+
+SVG tarot cards + pixel-depth map → autostereogram. zone-grounded depth → pixel-art dither → base64 SVG. ~200 LOC.
 
 ---
 
-## Stereogram card gallery (Thread 7)
+## Thread 8 — Pixel-art Zone Sprites ✓ Done (2026-05-25)
 
-SVG tarot cards + a pixel-depth map = autostereogram. zone-grounded depth → pixel-art dither → base64 SVG. ~200 LOC. Low priority; fun if you have a day to kill.
+**Goal:** Generate hardware-authentic zone glyph sprites using ZONE_HW_PALETTE zone→palette mapping from planchette-svg.py.
+
+**Script:** `~/numogram/cli/scripts/zone_pixel_sprites.py` (~200 LOC)  
+**Output:** `~/numogram/docs/wiki/assets/zone-sprites/`
+
+All 10 zones generated with Floyd-Steinberg dithering:
+
+| Zone | Palette | Block | Sprite size |
+|---|---|---|---|
+| Z0 | MONO_AMBER (2 color) | 6 | 2.3K |
+| Z1 | GAMEBOY_ORIGINAL (4) | 8 | 2.2K |
+| Z2 | GAMEBOY_POCKET (4) | 8 | 2.4K |
+| Z3 | C64 (16) | 8 | 1.7K |
+| Z4 | ZX_SPECTRUM (8) | 10 | 2.1K |
+| Z5 | APPLE_II_HI (6) | 10 | 1.7K |
+| Z6 | TELETEXT (8) | 10 | 1.8K |
+| Z7 | GAMEBOY_VIRTUALBOY (4) | 8 | 2.2K |
+| Z8 | APPLE_II_LO (16) | 10 | 2.2K |
+| Z9 | PICO_8 (16) | 6 | 2.7K |
+
+**Bug fix:** zonal zones without a direct PRESETS entry (Z1, Z4, Z5, Z7, Z8, Z9) fell back to `preset='c64'` for the enhancement curve, then passed `palette=<UPPERCASE>` as a kwarg override past the preset lookup. `pixel_art()` merges `{**PRESETS[preset], **overrides}` — palette string overrides the preset's default palette before processing.
+
+**Also generated:** `zone-N-source.png` (256×256 programmatic zone glyphs) alongside each sprite.
 
 ---
 
-## Execution order
+## TouchDesigner p5.js walker bridge (Thread 6 detail)
 
-**Done:** Thread 1 (mask) ✓ → Thread 2 (palette) ✓ → Thread 3 (CSS demon cards) ✓ → Thread 4 (`--tty`) ✓ → Thread 5 (noise) ✓
-**Next:** Thread 6 (TD bridge)
-**Parked:** Thread 7 (stereogram — weekend project)
+Build in this order:
+1. p5.js zone-walker sketch (terminal, no TD) — verify deterministic zone transitions feel right
+2. MCP OSC sender wired to skill (36 tools: createParam, set, cookFrom, exec / cook Parm)
+3. TD reader patch: zone → R/GB shader mult → vis field
