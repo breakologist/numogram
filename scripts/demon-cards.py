@@ -106,6 +106,7 @@ def build_card(d, glyph_dir, CW=360, CH=500):
         L.append(f'<marker id="da-{ci}" markerWidth="8" markerHeight="5" '
                  f'refX="7" refY="2.5" orient="auto">'
                  f'<polygon points="0,0 8,2.5 0,5" fill="{cv}"/></marker>')
+    L.append('<style>@keyframes med--zone-medallion{0%{opacity:.88;filter:hue-rotate(0deg)}50%{opacity:1;filter:hue-rotate(30deg)}}</style>')
     L.append("</defs>")
     L.append(f'<path d="{rrect(0,0,CW,CH,12)}" fill="url(#dbg)" '
              f'stroke="#1e293b" stroke-width="1.5"/>')
@@ -153,7 +154,7 @@ def build_card(d, glyph_dir, CW=360, CH=500):
             b64 = base64.b64encode(png.read_bytes()).decode()
             L.append(f'<image x="{gx-SR-2}" y="{gy-SR-2}" '
                      f'width="{SR*2+4}" height="{SR*2+4}" '
-                     f'xlink:href="data:image/png;base64,{b64}"/>')
+                     f'style="animation:med--zone-medallion 2s ease-in-out infinite" xlink:href="data:image/png;base64,{b64}"/>')
         else:
             L.append(f'<text x="{gx}" y="{gy+6}" font-size="20" fill="{zc}" '
                      f'font-weight="bold" text-anchor="middle">{zn}</text>')
