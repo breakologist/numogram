@@ -97,8 +97,8 @@ def predict_audio(path: str) -> dict:
         feats = MIRFeatureExtractor().extract(wav, use_all=False)
         
         # OOD detection: check spectral centroid against training range [4817, 9683]
-        TRAINING_CENTROID_MIN = 4817
-        TRAINING_CENTROID_MAX = 9683
+        TRAINING_CENTROID_MIN = 1782
+        TRAINING_CENTROID_MAX = 4527
         centroid = feats.get('lowlevel', {}).get('spectral_centroid_hz', 0.0) or 0.0
         is_ood = centroid < TRAINING_CENTROID_MIN or centroid > TRAINING_CENTROID_MAX
         

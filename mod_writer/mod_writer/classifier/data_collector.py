@@ -25,9 +25,13 @@ if str(_audio_renderer_path) not in sys.path:
     sys.path.insert(0, str(_audio_renderer_path))
 
 # Use SoftSynth renderer (in-memory, produces rich 452+ Hz centroids)
-# The ffmpeg path (renderer.py) was found to produce sub-bass-only 70 Hz output
-# See autonomous-journal/session-2026-05-19_2041 for post-mortem.
-from synth import render_mod_to_wav  # SoftSynth: takes (mod_object, wav_path)
+# The ffmpeg path (renderer.py) was found to produce sub-bass-only ~70 Hz output
+# See autonomous-journal session-2026-05-19 for post-mortem.
+# CRITICAL: use `import synth as _synth_module` then assign to avoid
+# name collision with the renderer module (which may be imported
+# transitively and overwrite the local binding).
+import synth as _synth_module
+render_mod_to_wav = _synth_module.render_mod_to_wav
 
 # Local mod-writer packages
 sys.path.insert(0, str(_skill_root))

@@ -60,7 +60,7 @@ class Sample:
         name_b = (name_b + b'\x00' * SAMPLE_NAME_LEN)[:SAMPLE_NAME_LEN]
         length_words = len(self.data) // 2  # counts 16-bit words
         return struct.pack(
-            '<22s H B B H H',
+            '>22s H B B H H',
             name_b,
             length_words & 0xFFFF,
             self.finetune & 0xF,

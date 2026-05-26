@@ -11,6 +11,17 @@ import joblib
 from .data_collector import load_dataset
 
 
+def _dataset_slug(path: str | Path | None) -> str:
+    """Derive a short slug from a dataset path for tagged filenames."""
+    if path is None:
+        return "default"
+    p = Path(path)
+    stem = p.stem  # e.g. "dataset_balanced_900" or "dataset_softsynth_ss_100pz"
+    # Shorten common prefixes
+    slug = stem.replace("dataset_", "ds_").replace("_balanced_", "_b_").replace("_softsynth_", "_ss_")
+    return slug[:48]
+
+
 def train(dataset_path=None, test_size=0.2, random_state=42):
     """
     Load synthetic dataset, train MLPRegressor, evaluate, save artifacts.
@@ -156,7 +167,7 @@ def train_zone_classifier(
     joblib.dump(scaler, artifacts_dir / "zone_scaler.joblib")
     joblib.dump(clf,   artifacts_dir / "zone_clf.joblib")
 
-    report_path = artifacts_dir / "phase4.3_report.json"
+    report_path = artifacts_dir / f"phase4.3_report_{_dataset_slug(dataset_path)}.json"
     import json
     with open(report_path, "w") as f:
         json.dump({
