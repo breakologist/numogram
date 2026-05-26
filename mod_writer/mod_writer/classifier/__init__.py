@@ -96,7 +96,8 @@ def predict_audio(path: str) -> dict:
     try:
         feats = MIRFeatureExtractor().extract(wav, use_all=False)
         
-        # OOD detection: check spectral centroid against training range [4817, 9683]
+        # OOD detection: check spectral centroid against training range [1782, 4527]
+        # (SoftSynth-trained zone classifier, 2026-05-26; range derived from dataset_softsynth_ss_100pz.npz)
         TRAINING_CENTROID_MIN = 1782
         TRAINING_CENTROID_MAX = 4527
         centroid = feats.get('lowlevel', {}).get('spectral_centroid_hz', 0.0) or 0.0

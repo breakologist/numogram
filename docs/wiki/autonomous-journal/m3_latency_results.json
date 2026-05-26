@@ -1,0 +1,128 @@
+{
+  "per_zone": {
+    "1": {
+      "compose_s": 0.0011,
+      "render_s": 0.1453,
+      "mir_extract_s": 2.5539,
+      "classify_s": 0.0006,
+      "total_s": 2.701,
+      "centroid_hz": 1781.7,
+      "predicted_zone": 1,
+      "max_probability": 0.999455,
+      "ood": true,
+      "wav_bytes": 338732
+    },
+    "2": {
+      "compose_s": 0.0011,
+      "render_s": 0.1447,
+      "mir_extract_s": 0.1376,
+      "classify_s": 0.0006,
+      "total_s": 0.2841,
+      "centroid_hz": 1979.9,
+      "predicted_zone": 2,
+      "max_probability": 0.999377,
+      "ood": false,
+      "wav_bytes": 338732
+    },
+    "3": {
+      "compose_s": 0.0011,
+      "render_s": 0.1378,
+      "mir_extract_s": 0.1288,
+      "classify_s": 0.0006,
+      "total_s": 0.2684,
+      "centroid_hz": 2193.4,
+      "predicted_zone": 3,
+      "max_probability": 0.998822,
+      "ood": false,
+      "wav_bytes": 338732
+    },
+    "4": {
+      "compose_s": 0.0011,
+      "render_s": 0.1347,
+      "mir_extract_s": 0.1288,
+      "classify_s": 0.0006,
+      "total_s": 0.2651,
+      "centroid_hz": 2431.0,
+      "predicted_zone": 4,
+      "max_probability": 0.998769,
+      "ood": false,
+      "wav_bytes": 338732
+    },
+    "5": {
+      "compose_s": 0.0011,
+      "render_s": 0.1321,
+      "mir_extract_s": 0.1289,
+      "classify_s": 0.0006,
+      "total_s": 0.2627,
+      "centroid_hz": 2613.2,
+      "predicted_zone": 5,
+      "max_probability": 0.999579,
+      "ood": false,
+      "wav_bytes": 338732
+    },
+    "6": {
+      "compose_s": 0.0012,
+      "render_s": 0.1298,
+      "mir_extract_s": 0.127,
+      "classify_s": 0.0006,
+      "total_s": 0.2585,
+      "centroid_hz": 3083.2,
+      "predicted_zone": 6,
+      "max_probability": 0.999395,
+      "ood": false,
+      "wav_bytes": 338732
+    },
+    "7": {
+      "compose_s": 0.0011,
+      "render_s": 0.128,
+      "mir_extract_s": 0.1294,
+      "classify_s": 0.0006,
+      "total_s": 0.2591,
+      "centroid_hz": 3335.3,
+      "predicted_zone": 7,
+      "max_probability": 0.997614,
+      "ood": false,
+      "wav_bytes": 338732
+    },
+    "8": {
+      "compose_s": 0.0011,
+      "render_s": 0.1261,
+      "mir_extract_s": 0.1295,
+      "classify_s": 0.0006,
+      "total_s": 0.2572,
+      "centroid_hz": 3673.7,
+      "predicted_zone": 8,
+      "max_probability": 0.996912,
+      "ood": false,
+      "wav_bytes": 338732
+    },
+    "9": {
+      "compose_s": 0.0011,
+      "render_s": 0.1249,
+      "mir_extract_s": 0.1259,
+      "classify_s": 0.0006,
+      "total_s": 0.2524,
+      "centroid_hz": 4109.1,
+      "predicted_zone": 9,
+      "max_probability": 0.999779,
+      "ood": false,
+      "wav_bytes": 338732
+    }
+  },
+  "_summary": {
+    "n_zones": 9,
+    "correct": 9,
+    "accuracy_pct": 100.0,
+    "mean_total_latency_s": 0.5343,
+    "min_total_latency_s": 0.2524,
+    "max_total_latency_s": 2.701,
+    "mean_compose_s": 0.0011,
+    "mean_render_s": 0.1337,
+    "mean_mir_s": 0.3989,
+    "mean_classify_s": 0.0006,
+    "centroid_range": [
+      1781.7,
+      4109.1
+    ]
+  }
+}

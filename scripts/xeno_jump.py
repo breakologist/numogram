@@ -154,6 +154,8 @@ def jump_word(word, index, strategy='random', seed=None, zone_filter=None):
     
     # Apply zone filter if specified
     if zone_filter:
+        if not isinstance(zone_filter, (list, tuple)):
+            zone_filter = [zone_filter]
         options = [o for o in options if zone_from_aq(val) in zone_filter]
         if not options:
             return word, False, val
