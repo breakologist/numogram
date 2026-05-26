@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+<rect width="600" height="600" fill="#080a0a"/>
+<defs>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="2" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="glow-thick" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="4" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<polygon points="550.0,300.0 370.71067811865476,370.71067811865476 300.0,550.0 229.28932188134524,370.71067811865476 50.0,300.00000000000006 229.28932188134524,229.28932188134524 299.99999999999994,50.0 370.71067811865476,229.28932188134524" fill="none" stroke="#A0C4E0" stroke-width="0.8" opacity="0.15"/><line x1="540.0" y1="300.0" x2="60.0" y2="300.00000000000006" stroke="#A0C4E0" stroke-width="0.8" opacity="0.15"/><line x1="300.0" y1="540.0" x2="299.99999999999994" y2="60.0" stroke="#A0C4E0" stroke-width="0.8" opacity="0.15"/><polygon points="441.4213562373095,441.4213562373095 158.57864376269052,441.4213562373095 158.57864376269046,158.57864376269052 441.4213562373095,158.57864376269046" fill="none" stroke="#A0C4E0" stroke-width="0.6" opacity="0.18"/><polygon points="406.06601717798213,406.06601717798213 193.93398282201787,406.06601717798213 193.93398282201787,193.93398282201787 406.0660171779821,193.93398282201787" fill="none" stroke="#A0C4E0" stroke-width="0.6" opacity="0.07999999999999999"/><polygon points="370.71067811865476,370.71067811865476 229.28932188134524,370.71067811865476 229.28932188134524,229.28932188134524 370.71067811865476,229.28932188134524" fill="none" stroke="#A0C4E0" stroke-width="0.6" opacity="0.03"/><circle cx="300" cy="300" r="7" fill="none" stroke="#C8E0F0" stroke-width="1" opacity="0.3" filter="url(#glow)"/><text x="300" y="304" fill="#A0C4E0" font-size="14" font-family="monospace" text-anchor="middle" font-weight="bold" opacity="0.7">ix</text><text x="300" y="570" fill="#203040" font-size="10" font-family="monospace" text-anchor="middle" letter-spacing="4" opacity="0.5">ZONE 4 · CLEAVING</text><text x="300" y="30" fill="#203040" font-size="9" font-family="monospace" text-anchor="middle" letter-spacing="6" opacity="0.3">0161</text></svg>

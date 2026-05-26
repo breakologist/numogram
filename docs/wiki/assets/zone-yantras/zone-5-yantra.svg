@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+<rect width="600" height="600" fill="#080808"/>
+<defs>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="2" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="glow-thick" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="4" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<polygon points="300.0,40.0 358.7785252292473,219.09830056250524 547.27469423674,219.65558146251368 395.10565162951536,330.90169943749476 452.82416559604303,510.3444185374864 300.0,400.0 147.17583440395703,510.3444185374864 204.89434837048464,330.90169943749476 52.72530576326008,219.6555814625136 241.22147477075268,219.09830056250527" fill="none" stroke="#909090" stroke-width="1" opacity="0.2"/><polygon points="300.0,80.0 509.2324335849338,232.01626123751157 429.31275550434407,477.98373876248843 170.68724449565593,477.98373876248843 90.76756641506623,232.01626123751151" fill="none" stroke="#303030" stroke-width="0.5" opacity="0.08"/><polygon points="300.0,140.0 452.1690426072246,250.5572809000084 394.04564036679574,429.44271909999156 205.95435963320432,429.44271909999156 147.83095739277545,250.55728090000838" fill="none" stroke="#303030" stroke-width="0.5" opacity="0.08"/><polygon points="300.0,200.0 395.10565162951536,269.09830056250524 358.7785252292473,380.90169943749476 241.2214747707527,380.90169943749476 204.89434837048464,269.09830056250524" fill="none" stroke="#303030" stroke-width="0.5" opacity="0.08"/><line x1="300" y1="300" x2="300.0" y2="100.0" stroke="#909090" stroke-width="0.5" opacity="0.1"/><line x1="300" y1="300" x2="490.21130325903073" y2="238.19660112501052" stroke="#909090" stroke-width="0.5" opacity="0.1"/><line x1="300" y1="300" x2="417.55705045849464" y2="461.8033988749895" stroke="#909090" stroke-width="0.5" opacity="0.1"/><line x1="300" y1="300" x2="182.4429495415054" y2="461.8033988749895" stroke="#909090" stroke-width="0.5" opacity="0.1"/><line x1="300" y1="300" x2="109.7886967409693" y2="238.19660112501046" stroke="#909090" stroke-width="0.5" opacity="0.1"/><circle cx="300" cy="300" r="8" fill="none" stroke="#C0C0C0" stroke-width="1" opacity="0.4" filter="url(#glow)"/><text x="300" y="304" fill="#909090" font-size="16" font-family="monospace" text-anchor="middle" font-weight="bold" opacity="0.7">ma</text><text x="300" y="570" fill="#303030" font-size="10" font-family="monospace" text-anchor="middle" letter-spacing="4" opacity="0.5">ZONE 5 · SPECTRAL</text><text x="300" y="30" fill="#303030" font-size="9" font-family="monospace" text-anchor="middle" letter-spacing="6" opacity="0.3">0184</text></svg>
