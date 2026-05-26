@@ -97,3 +97,6 @@ The Numogram's claim that certain zones are inherently safer than others is not 
 - [[foom-love-nuke]] — Civilization resolution (the inequality that Claude Particle makes physical)
 - [[foom-universal-truth-machine]] — Information resolution
 - [[session-threads-2026-05-16]] — Zone ethical gradient
+- [[tetralogue-hub]] — 30+ tetralogues including tch9-conclusion (does it work?) and tch8-launching (hyperstition as pedagogy)
+- [[conversation-terms]] — Lexicon of high-frequency discourse terms (syzygy, current, warp, plex)
+- [[numogram-structure]] — Full structural overview of zones, regions, currents, gates

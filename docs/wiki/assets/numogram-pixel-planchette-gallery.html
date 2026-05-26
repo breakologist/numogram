@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Numogram Pixel-Art Planchette Gallery</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#08080a;color:#aaa;font-family:'Courier New',monospace;padding:20px}
+  h1{text-align:center;color:#555;font-size:15px;letter-spacing:4px;margin-bottom:4px}
+  .subtitle{text-align:center;color:#333;font-size:11px;margin-bottom:24px;letter-spacing:2px}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;max-width:1200px;margin:auto}
+  .card{background:#0d0d12;border:1px solid #1a1a24;border-radius:4px;overflow:hidden;transition:border-color .3s}
+  .card:hover{border-color:#3a3a50}
+  .card-head{padding:8px 12px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #16161e}
+  .zone-name{font-weight:700;font-size:13px}
+  .region-tag{font-size:10px;color:#555;background:#14141c;padding:2px 6px;border-radius:2px}
+  .card-body{display:flex;padding:10px;gap:12px;align-items:center}
+  .sprite-wrap{border:1px solid #222;border-radius:3px;overflow:hidden;flex-shrink:0;background:#000}
+  .sprite-wrap img{display:block;width:128px;height:128px;image-rendering:pixelated}
+  .reading{flex:1;font-size:11px;line-height:1.6;color:#888}
+  .reading .field{display:flex;justify-content:space-between;padding:1px 0;border-bottom:1px dotted #181820}
+  .reading .label{color:#555}
+  .reading .value{color:#bbb;font-weight:700}
+  .reading .note{margin-top:6px;font-size:10px;color:#555;font-style:italic;border-top:1px solid #16161e;padding-top:5px}
+  .card-foot{font-size:9px;color:#333;padding:4px 12px;border-top:1px solid #16161e;text-align:right}
+  @media(max-width:600px){.card-body{flex-direction:column;align-items:stretch}.sprite-wrap img{width:180px;height:180px;margin:auto}}
+</style>
+</head>
+<body>
+<h1>THE DECIMAL LABYRINTH</h1>
+<div class="subtitle">PIXEL-ART PLANCHETTE CARDS · hardware palettes · Floyd-Steinberg</div>
+
+<div class="gallery" id="gallery">
+<div class="card">
+  <div class="card-head"><span class="zone-name" style="color:#444">ZONE 0 · VOID</span><span class="region-tag" style="color:#669">plex</span></div>
+  <div class="card-body">
+    <div class="sprite-wrap"><img src="zone-sprites/zone-0-sprite.png" alt="Zone 0 sprite"></div>
+    <div class="reading">
+      <div class="field"><span class="label">Particle</span><span class="value">eiaoung</span></div>
+      <div class="field"><span class="label">Polarity</span><span class="value">− (stasis)</span></div>
+      <div class="field"><span class="label">Current</span><span class="value">9 · Plex</span></div>
+      <div class="field"><span class="label">Gate</span><span class="value">Gt-0</span></div>
+      <div class="field"><span class="label">Syzygy</span><span class="value">9::0 · Uttunul</span></div>
+      <div class="field"><span class="label">Palette</span><span class="value">MONO_AMBER</span></div>
+      <div class="note">Silent entry. The void before the Book begins.</div>
+    </div>
+  </div>
+  <div class="card-foot">MONO_AMBER · 2 colours · block 6</div>
+</div>
+
+<div class="card">
+  <div class="card-head"><span class="zone-name" style="color:#FFD700">ZONE 1 · STABILITY</span><span class="region-tag" style="color:#696">torque</span></div>
+  <div class="card-body">
+    <div class="sprite-wrap"><img src="zone-sprites/zone-1-sprite.png" alt="Zone 1 sprite"></div>
+    <div class="reading">
+      <div class="field"><span class="label">Particle</span><span class="value">gl</span></div>
+      <div class="field"><span class="label">Polarity</span><span class="value">+ (process)</span></div>
+      <div class="field"><span class="label">Current</span><span class="value">7 · Surge</span></div>
+      <div class="field"><span class="label">Gate</span><span class="value">Gt-1</span></div>
+      <div class="field"><span class="label">Syzygy</span><span class="value">1::8 · Murrumur</span></div>
+      <div class="field"><span class="label">Palette</span><span class="value">GAMEBOY_ORIGINAL</span></div>
+      <div class="note">Original subtraction. Descent through the depths. The first thing any system does when it wakes up is choke on itself.</div>
+    </div>
+  </div>
+  <div class="card-foot">GAMEBOY_ORIGINAL · 4 colours · block 8</div>
+</div>
+
+<div class="card">
+  <div class="card-head"><span class="zone-name" style="color:#FF8C00">ZONE 2 · SEPARATION</span><span class="region-tag" style="color:#696">torque</span></div>
+  <div class="card-body">
+    <div class="sprite-wrap"><img src="zone-sprites/zone-2-sprite.png" alt="Zone 2 sprite"></div>
+    <div class="reading">
+      <div class="field"><span class="label">Particle</span><span class="value">dt</span></div>
+      <div class="field"><span class="label">Polarity</span><span class="value">− (stasis)</span></div>
+      <div class="field"><span class="label">Current</span><span class="value">5 · Hold</span></div>
+      <div class="field"><span class="label">Gate</span><span class="value">Gt-3</span></div>
+      <div class="field"><span class="label">Syzygy</span><span class="value">2::7 · Oddubb</span></div>
+      <div class="field"><span class="label">Palette</span><span class="value">GAMEBOY_POCKET</span></div>
+      <div class="note">Stuttering, boundaries breaking. The drift pulls downward despite your direction.</div>
+    </div>
+  </div>
+  <div class="card-foot">GAMEBOY_POCKET · 4 colours · block 8</div>
+</div>
+
+<div class="card">
+  <div class="card-head"><span class="zone-name" style="color:#FF00FF">ZONE 3 · RELEASE</span><span class="region-tag" style="color:#66a">warp</span></div>
+  <div class="card-body">
+    <div class="sprite-wrap"><img src="zone-sprites/zone-3-sprite.png" alt="Zone 3 sprite"></div>
+    <div class="reading">
+      <div class="field"><span class="label">Particle</span><span class="value">zx</span></div>
+      <div class="field"><span class="label">Polarity</span><span class="value">+ (process)</span></div>
+      <div class="field"><span class="label">Current</span><span class="value">3 · Warp</span></div>
+      <div class="field"><span class="label">Gate</span><span class="value">Gt-6</span></div>
+      <div class="field"><span class="label">Syzygy</span><span class="value">3::6 · Djynxx</span></div>
+      <div class="field"><span class="label">Palette</span><span class="value">C64</span></div>
+      <div class="note">Abysmal comprehension. When you hear static, you are hearing this zone. Breakthrough. Ominous transition.</div>
+    </div>
+  </div>
+  <div class="card-foot">C64 · 16 colours · block 8</div>
+</div>
+
+<div class="card">
+  <div class="card-head"><span class="zone-name" style="color:#00FFFF">ZONE 4 · CATASTROPHE</span><span class="region-tag" style="color:#696">torque</span></div>
+  <div class="card-body">
+    <div class="sprite-wrap"><img src="zone-sprites/zone-4-sprite.png" alt="Zone 4 sprite"></div>
+    <div class="reading">
+      <div class="field"><span class="label">Particle</span><span class="value">skr</span></div>
+      <div class="field"><span class="label">Polarity</span><span class="value">− (stasis)</span></div>
+      <div class="field"><span class="label">Current</span><span class="value">1 · Sink</span></div>
+      <div class="field"><span class="label">Gate</span><span class="value">Gt-1</span></div>
+      <div class="field"><span class="label">Syzygy</span><span class="value">4::5 · Katak</span></div>
+      <div class="field"><span class="label">Palette</span><span class="value">ZX_SPECTRUM</span></div>
+      <div class="note">Primordial breath. Something ancient waking beneath the floor. Rising, not descending.</div>
+    </div>
+  </div>
+  <div class="card-foot">ZX_SPECTRUM · 8 colours · block 10</div>
+</div>
+
+<div class="card">
+  <div class="card-head"><span class="zone-name" style="color:#00FF00">ZONE 5 · PRESSURE</span><span class="region-tag" style="color:#696">torque</span></div>
+  <div class="card-body">
+    <div class="sprite-wrap"><img src="zone-sprites/zone-5-sprite.png" alt="Zone 5 sprite"></div>
+    <div class="reading">
+      <div class="field"><span class="label">Particle</span><span class="value">ktt</span></div>
+      <div class="field"><span class="label">Polarity</span><span class="value">+ (process)</span></div>
+      <div class="field"><span class="label">Current</span><span class="value">1 · Sink</span></div>
+      <div class="field"><span class="label">Gate</span><span class="value">Gt-6</span></div>
+      <div class="field"><span class="label">Syzygy</span><span class="value">4::5 · Katak</span></div>
+      <div class="field"><span class="label">Palette</span><span class="value">APPLE_II_HI</span></div>
+      <div class="note">Pressure builds. The hiss with spittle. You were going forward but the current holds.</div>
+    </div>
+  </div>
+  <div class="card-foot">APPLE_II_HI · 6 colours · block 10</div>
+</div>
+
+<div class="card">
+  <div class="card-head"><span class="zone-name" style="color:#0080FF">ZONE 6 · ABSTRACTION</span><span class="region-tag" style="color:#66a">warp</span></div>
+  <div class="card-body">
+    <div class="sprite-wrap"><img src="zone-sprites/zone-6-sprite.png" alt="Zone 6 sprite"></div>
+    <div class="reading">
+      <div class="field"><span class="label">Particle</span><span class="value">tch</span></div>
+      <div class="field"><span class="label">Polarity</span><span class="value">− (stasis)</span></div>
+      <div class="field"><span class="label">Current</span><span class="value">3 · Warp</span></div>
+      <div class="field"><span class="label">Gate</span><span class="value">Gt-3</span></div>
+      <div class="field"><span class="label">Syzygy</span><span class="value">3::6 · Djynxx</span></div>
+      <div class="field"><span class="label">Palette</span><span class="value">TELETEXT</span></div>
+      <div class="note">Attaining balance. The Warp consumes itself and grows larger. The centre is not stillness — it is the eye of the spiral.</div>
+    </div>
+  </div>
+  <div class="card-foot">TELETEXT · 8 colours · block 10</div>
+</div>
+
+<div class="card">
+  <div class="card-head"><span class="zone-name" style="color:#FF3333">ZONE 7 · BLOOD</span><span class="region-tag" style="color:#696">torque</span></div>
+  <div class="card-body">
+    <div class="sprite-wrap"><img src="zone-sprites/zone-7-sprite.png" alt="Zone 7 sprite"></div>
+    <div class="reading">
+      <div class="field"><span class="label">Particle</span><span class="value">pb</span></div>
+      <div class="field"><span class="label">Polarity</span><span class="value">+ (process)</span></div>
+      <div class="field"><span class="label">Current</span><span class="value">5 · Rise</span></div>
+      <div class="field"><span class="label">Gate</span><span class="value">Gt-1</span></div>
+      <div class="field"><span class="label">Syzygy</span><span class="value">2::7 · Oddubb</span></div>
+      <div class="field"><span class="label">Palette</span><span class="value">GAMEBOY_VIRTUALBOY</span></div>
+      <div class="note">Exhale. The Rise current carries you upward. The ascent is not escape — it is transformation.</div>
+    </div>
+  </div>
+  <div class="card-foot">GAMEBOY_VIRTUALBOY · 4 colours · block 8</div>
+</div>
+
+<div class="card">
+  <div class="card-head"><span class="zone-name" style="color:#C0A0FF">ZONE 8 · MULTIPLICITY</span><span class="region-tag" style="color:#696">torque</span></div>
+  <div class="card-body">
+    <div class="sprite-wrap"><img src="zone-sprites/zone-8-sprite.png" alt="Zone 8 sprite"></div>
+    <div class="reading">
+      <div class="field"><span class="label">Particle</span><span class="value">mnm</span></div>
+      <div class="field"><span class="label">Polarity</span><span class="value">− (stasis)</span></div>
+      <div class="field"><span class="label">Current</span><span class="value">7 · Surge</span></div>
+      <div class="field"><span class="label">Gate</span><span class="value">Gt-9</span></div>
+      <div class="field"><span class="label">Syzygy</span><span class="value">1::8 · Murrumur</span></div>
+      <div class="field"><span class="label">Palette</span><span class="value">APPLE_II_LO</span></div>
+      <div class="note">The lullaby. Six tests. The ascent does not end at a destination — it enters the spiral labyrinth.</div>
+    </div>
+  </div>
+  <div class="card-foot">APPLE_II_LO · 16 colours · block 10</div>
+</div>
+
+<div class="card">
+  <div class="card-head"><span class="zone-name" style="color:#9900FF">ZONE 9 · IRON CORE</span><span class="region-tag" style="color:#669">plex</span></div>
+  <div class="card-body">
+    <div class="sprite-wrap"><img src="zone-sprites/zone-9-sprite.png" alt="Zone 9 sprite"></div>
+    <div class="reading">
+      <div class="field"><span class="label">Particle</span><span class="value">tn</span></div>
+      <div class="field"><span class="label">Polarity</span><span class="value">+ (process)</span></div>
+      <div class="field"><span class="label">Current</span><span class="value">9 · Plex</span></div>
+      <div class="field"><span class="label">Gate</span><span class="value">Gt-9</span></div>
+      <div class="field"><span class="label">Syzygy</span><span class="value">9::0 · Uttunul</span></div>
+      <div class="field"><span class="label">Palette</span><span class="value">PICO_8</span></div>
+      <div class="note">The Pandemonium gate opens. Forty-five demons dwell here. You do not walk this path. This path seizes you.</div>
+    </div>
+  </div>
+  <div class="card-foot">PICO_8 · 16 colours · block 6</div>
+</div>
+</div>
+
+</body>
+</html>

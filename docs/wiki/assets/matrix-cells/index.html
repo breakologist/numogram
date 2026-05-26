@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cross-Palette Matrix — Zone × Palette</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#08080a;color:#999;font-family:'Courier New',monospace;padding:20px}
+  h1{text-align:center;color:#555;font-size:14px;letter-spacing:4px;margin-bottom:4px}
+  .sub{text-align:center;color:#333;font-size:10px;letter-spacing:2px;margin-bottom:20px}
+  table{border-collapse:collapse;margin:auto;font-size:10px}
+  th,td{border:1px solid #1a1a26;padding:4px;text-align:center;background:#0d0d14}
+  th{background:#111;color:#555;writing-mode:vertical-lr;text-orientation:mixed;height:100px;font-size:9px;letter-spacing:1px;font-weight:400}
+  th.pal{writing-mode:horizontal-tb;height:auto;padding:6px 4px;font-size:9px;color:#444}
+  td{min-width:96px;vertical-align:middle}
+  td img{display:block;margin:auto;width:72px;height:72px;image-rendering:pixelated}
+  td .label{font-size:7px;color:#444;margin-top:2px}
+  td.hw{border-color:#2a2a3a}
+  td.art{border-color:#1a2a2a}
+  .legend{text-align:center;margin:16px auto;font-size:9px;color:#444;display:flex;gap:16px;justify-content:center}
+  .legend span{padding:2px 8px;border:1px solid #1a1a26;border-radius:2px}
+  .legend .hw{background:#111;border-color:#2a2a3a}
+  .legend .art{background:#0d1414;border-color:#1a2a2a}
+</style>
+</head>
+<body>
+<h1>CROSS-PALETTE MATRIX</h1>
+<div class="sub">10 zones × 1 palettes · pixel-art Floyd-Steinberg dither</div>
+<div class="legend">
+  <span class="hw">Hardware palettes</span>
+  <span class="art">Artistic / custom palettes</span>
+</div>
+<table>
+<tr><th></th><th class="pal art">HILMA_AF_KLINT</th></tr>
+<tr><th>0 · Void</th><td class="art"><img src="z0_hilma_af_klint.png" alt="Z0 HILMA_AF_KLINT"></td></tr>
+<tr><th>1 · Stability</th><td class="art"><img src="z1_hilma_af_klint.png" alt="Z1 HILMA_AF_KLINT"></td></tr>
+<tr><th>2 · Separation</th><td class="art"><img src="z2_hilma_af_klint.png" alt="Z2 HILMA_AF_KLINT"></td></tr>
+<tr><th>3 · Release</th><td class="art"><img src="z3_hilma_af_klint.png" alt="Z3 HILMA_AF_KLINT"></td></tr>
+<tr><th>4 · Catastrophe</th><td class="art"><img src="z4_hilma_af_klint.png" alt="Z4 HILMA_AF_KLINT"></td></tr>
+<tr><th>5 · Pressure</th><td class="art"><img src="z5_hilma_af_klint.png" alt="Z5 HILMA_AF_KLINT"></td></tr>
+<tr><th>6 · Abstraction</th><td class="art"><img src="z6_hilma_af_klint.png" alt="Z6 HILMA_AF_KLINT"></td></tr>
+<tr><th>7 · Blood</th><td class="art"><img src="z7_hilma_af_klint.png" alt="Z7 HILMA_AF_KLINT"></td></tr>
+<tr><th>8 · Multiplicity</th><td class="art"><img src="z8_hilma_af_klint.png" alt="Z8 HILMA_AF_KLINT"></td></tr>
+<tr><th>9 · Iron Core</th><td class="art"><img src="z9_hilma_af_klint.png" alt="Z9 HILMA_AF_KLINT"></td></tr>
+</table>
+</body>
+</html>

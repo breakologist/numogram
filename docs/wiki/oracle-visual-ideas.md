@@ -34,7 +34,7 @@ All at `~/numogram/docs/wiki/assets/zone-glyphs/zone-{0-9}.png`.
 | 5    | ktt      | gold/pink   | **Atlantean Hinge** — diamond constriction, two triangles pinching, gold centre thread, self-decadence golden ratio |
 | 6    | tch      | navy        | Tch / dt astronomical scratches, zonal turbulence, portail-â-worm occlusions |
 | 7    | bsigh    | cyan        | Lips-flap-ascent, sigh-swallow, breath-wisp trailing upward           |
-| 8    | mn       | moonlight white | Moan / pleasure-blow, three-fold blooming petals, Lukh/Shuplu spirit-diffraction |
+| 8    | mnm       | moonlight white | Moan / pleasure-blow, three-fold blooming petals, Lukh/Shuplu spirit-diffraction |
 | 9    | tn       | iron/copper | Plex grunt-peak, Iron Core, Cthellloid forty-five aperture, plutonium peak near completion — half of a ternary spoon |
 
 ### Visual tiers roadmap
@@ -52,4 +52,9 @@ All at `~/numogram/docs/wiki/assets/zone-glyphs/zone-{0-9}.png`.
 || 2b   | Demon card SVG            | ✓ Rendered| 45 Pandemonium demon cards, `scripts/demon-cards.py`, per-zone/demo/--carrier filter |
 || 2c   | Planchette SVG hydration | TODO      | Full planchette spec URL→base64, frame-angle arcs, gold/indigo overlay |
 | 3    | Djynxxogram planchette    | TODO      | 36-zone wheel with glyph path + reading anchor |
-|| 4    | Realtime canvas / p5.js Oracle Sketch | ⚡ Spec written | See `oracle-p5js-sketch-spec.md`; no TD dependency; standalone first, TD bridge once MCP 40404 live |
+| 4    | Realtime canvas / p5.js Oracle Sketch | ⚡ Spec written | See `oracle-p5js-sketch-spec.md`; no TD dependency; standalone first, TD bridge once MCP 40404 live |
+| 5    | Pixel-art planchette gallery | ✓ **New** | `assets/numogram-pixel-planchette-gallery.html` — 10 Floyd-Steinberg sprite cards + oracle metadata |
+| 5b   | Syzygy pair gallery       | ✓ **New** | `assets/numogram-syzygy-pair-gallery.html` — 5 pair cards, dual sprites + cross-addition |
+| 5c   | Pixel-art traversal GIFs  | ✓ **New** | `scripts/oracle_pixel_traversal.py` — 4 GIFs (seeds 42/137/174/666), 400×400 animated traversals |
+| 5d   | Cross-palette matrix      | ✓ **New** | `scripts/cross_palette_matrix.py` — 10 zones × 28 palettes, 280 cells, `assets/matrix-cells/` |
+| 6    | Tetralogue-17             | ✓ Written | [[tetralogue-17-pixel-art-labyrinth]] — palettes as bandwidth, debug path as traversal, Mesh-17 |

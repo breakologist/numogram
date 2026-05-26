@@ -25,10 +25,16 @@ tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "ascii-video", "med
 | SVG planchette w/ medallion | `planchette-svg.py` | `planchette-svg.py` L160+ | ✓ v1 — ZONE_HW_PALETTE integrated |
 | `--tty` ANSI oracle output | `oracle.py --tty` | `oracle.py` L80-85 / L23097 | ✓ v1 |
 | Tsubuyaki v7 gallery | p5.js HTML | `numogram-tsubuyaki-v7.html` | ✓ Working — all 10 canvases, MASK_DATA + masked eval |
+| Tsubuyaki v7-rich gallery | p5.js HTML | `numogram-tsubuyaki-v7-rich.html` | ✓ Working — debug test bed, full function bodies, no eval |
 | Planchette SVG v1/v2 | `planchette-svg.py` | `planchette-svg.py` | ✓ Frame-angle arcs, gold/indigo overlay |
 | Noise-grounded sketches | p5.js | tsubuyaki sketches | ✓ v8 commit — seed = zone × 7919 |
-|| **Pixel-art zone sprites** | `zone_pixel_sprites.py` | `assets/zone-sprites/zone-N-sprite.png` | ✓ All 10 zones done |
-|| **Oracle ASCII GIF** | `oracle-ascii-video.py` | `/tmp/oracle_{seed}.gif` | ✓ Prototype — 8-zone traverse → coloured ASCII stack, tonemap+encode, commit pending |
+| | **Pixel-art zone sprites** | `assets/zone-sprites/zone-N-sprite.png` | ✓ All 10 zones done |
+| | **Oracle ASCII GIF** | `oracle-ascii-video.py` | ✓ Prototype — 8-zone traverse |
+| **Pixel-art planchette gallery** | static HTML | `assets/numogram-pixel-planchette-gallery.html` | ✓ **New** — 10 cards, Floyd-Steinberg sprites + oracle metadata |
+| **Syzygy pair gallery** | static HTML | `assets/numogram-syzygy-pair-gallery.html` | ✓ **New** — 5 pair cards, dual sprites + cross-addition arithmetic |
+| **Pixel-art traversal GIFs** | `scripts/oracle_pixel_traversal.py` | `assets/traversal-gifs/` | ✓ **New** — 4 seeds (42/137/174/666), animated 50+ frame GIFs |
+| **Cross-palette matrix** | `scripts/cross_palette_matrix.py` | `assets/matrix-cells/` | ✓ **New** — 10 zones × 28 palettes, 280 cells |
+| Tetralogue 17 | tetralogue-roundtable | `wiki/tetralogue-17-pixel-art-labyrinth.md` | ✓ **New** — palettes-as-bandwidth, debug-path-as-traversal |
 
 ---
 
@@ -39,7 +45,7 @@ tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "ascii-video", "med
 | `--glyph` inline PNG | `oracle.py` → `--glyph` flag TODO; needs iTerm2 inline image protocol |
 | SVG planchette hydration Tier 2c | Full spec URL→base64 + gold/indigo frame-angle arcs; partially done in v1/v2 |
 | Djynxxogram wheel | `--planchette --djynxxogram` — 36-zone wheel with glyph path; not coded yet |
-| p5.js realtime canvas QA | TUI 503 blocks browser_vision; work via execute_code/terminal |
+| Demon card gallery | 45 SVGs exist in `assets/demon-cards/`; needs filter/browse UI |
 
 ---
 

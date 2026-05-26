@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Decimal Labyrinth — つぶやき NUMOGRAM v7 (rich gallery)</title>
+<style>
+  body{background:#0a0a0a;color:#ddd;font-family:'JetBrains Mono',monospace;margin:0;padding:0}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(480px,1fr));gap:8px;padding:8px;max-width:1600px;margin:auto}
+  .card{background:#111;border:1px solid #333;border-radius:4px;overflow:hidden;margin-bottom:8px}
+  .card-head{padding:6px 10px;font-size:11px;color:#888;border-bottom:1px solid #222;background:#0d0d0d;display:flex;justify-content:space-between;align-items:center}
+  .zone-id{font-weight:bold;color:#0ff;font-size:12px}
+  .canvas-wrap{width:100%;aspect-ratio:1;background:#000}
+  .canvas-wrap canvas{display:block;width:100%;height:100%}
+  .card-note{font-size:10px;color:#666;padding:4px 10px;border-top:1px solid #212121}
+  .region-tag{background:#222;color:#0ff;padding:1px 5px;border-radius:2px;font-size:9px}
+</style>
+</head>
+<body>
+<div class="gallery" id="gallery">
+<div class="card"><div class="card-head"><span class="zone-id" style="color:#444444">ZONE 0 - VOID</span><span class="region-tag">plex</span></div><div class="canvas-wrap" id="wrap-0"></div><div class="card-note">Radical simplicity. 10 points. One orbit. Period measured in minutes. The void is patient.</div></div>
+<div class="card"><div class="card-head"><span class="zone-id" style="color:#FFD700">ZONE 1 - STABILITY</span><span class="region-tag">torque</span></div><div class="canvas-wrap" id="wrap-1"></div><div class="card-note">Gold grid with connected lines. The lattice breathes but holds. Structure as promise.</div></div>
+<div class="card"><div class="card-head"><span class="zone-id" style="color:#FF8C00">ZONE 2 - SEPARATION</span><span class="region-tag">torque</span></div><div class="canvas-wrap" id="wrap-2"></div><div class="card-note">One stream forks into two. The split widens with descent. The wound deepens.</div></div>
+<div class="card"><div class="card-head"><span class="zone-id" style="color:#FF00FF">ZONE 3 - RELEASE</span><span class="region-tag">warp</span></div><div class="canvas-wrap" id="wrap-3"></div><div class="card-note">Two counter-rotating magenta vortices. Release as paired forces — push and pull.</div></div>
+<div class="card"><div class="card-head"><span class="zone-id" style="color:#00FFFF">ZONE 4 - CATASTROPHE</span><span class="region-tag">torque</span></div><div class="canvas-wrap" id="wrap-4"></div><div class="card-note">Concentric ripples expanding from center. Catastrophe as wave, not collapse. 暗夜の下 technique.</div></div>
+<div class="card"><div class="card-head"><span class="zone-id" style="color:#00FF00">ZONE 5 - PRESSURE</span><span class="region-tag">torque</span></div><div class="canvas-wrap" id="wrap-5"></div><div class="card-note">Three concentric breathing rings. Pressure as layered containment. The squeeze has structure.</div></div>
+<div class="card"><div class="card-head"><span class="zone-id" style="color:#0080FF">ZONE 6 - ABSTRACTION</span><span class="region-tag">warp</span></div><div class="canvas-wrap" id="wrap-6"></div><div class="card-note">12 circles on a ring, connected by lines. Geometry approaching consciousness.</div></div>
+<div class="card"><div class="card-head"><span class="zone-id" style="color:#FF3333">ZONE 7 - BLOOD</span><span class="region-tag">torque</span></div><div class="canvas-wrap" id="wrap-7"></div><div class="card-note">Concentric rings expanding and breathing. Elliptical distortion. The body's circulatory rhythm.</div></div>
+<div class="card"><div class="card-head"><span class="zone-id" style="color:#C0A0FF">ZONE 8 - MULTIPLICITY</span><span class="region-tag">torque</span></div><div class="canvas-wrap" id="wrap-8"></div><div class="card-note">120 particles, 4 behavioral modes. Emergence from shared template. Identity as divergence.</div></div>
+<div class="card"><div class="card-head"><span class="zone-id" style="color:#9900FF">ZONE 9 - IRON CORE</span><span class="region-tag">plex</span></div><div class="canvas-wrap" id="wrap-9"></div><div class="card-note">Purple spiral collapse. Everything to the center. The plex singularity folding inward.</div></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+<script>
+// ─── ZONE DRAW FUNCTIONS ─── direct, no eval, p.frameCount for animation
+var ZONE_FNS = {
+  '0': function(p) {
+    p.background(0, 6); p.noStroke();
+    for (var i = 0; i < 10; i++) {
+      p.fill(44, p.random(25));
+      p.ellipse(p.random(500), p.random(500), p.random(3), p.random(3));
+    }
+  },
+  '1': function(p) {
+    p.background(0); p.noStroke();
+    for (var x = 25; x < 500; x += 50)
+      for (var y = 25; y < 500; y += 50) {
+        var d = p.noise(x / 200, y / 200, p.frameCount / 300) * 9;
+        p.fill(255, 215, 0, 55);
+        p.ellipse(x + d, y + d, 3, 3);
+      }
+  },
+  '2': function(p) {
+    p.background(0, 6); p.noStroke();
+    for (var i = 0; i < 100; i++) {
+      var t = i / 100;
+      var x = 250 + Math.sin(t * Math.PI * 4 + p.frameCount / 100) * (100 + t * 150);
+      var y = t * 500;
+      p.fill(255, 140, 0, 25 + 15 * Math.sin(i + p.frameCount / 30));
+      p.ellipse(x, y, 3, 3);
+    }
+  },
+  '3': function(p) {
+    p.background(0, 12); p.noStroke();
+    for (var i = 0; i < 400; i++) {
+      var a = i / 400 * Math.PI * 2 + p.frameCount / 50;
+      var r = 50 + p.noise(i / 30, p.frameCount / 200) * 200;
+      p.fill(255, 0, 255, 22);
+      p.ellipse(250 + r * Math.cos(a), 250 + r * Math.sin(a), 4);
+    }
+  },
+  '4': function(p) {
+    p.background(0, 0); p.noStroke();
+    for (var i = 0; i < 60; i++) {
+      var x = (i % 8) * 65 + 30;
+      var y = Math.floor(i / 8) * 65 + 30;
+      var D = p.noise(x / 99, y / 99, p.frameCount / 80) * 40;
+      p.fill(0, 255, 255, 44);
+      p.rect(x + D - 5, y + D - 5, 10, 10);
+    }
+  },
+  '5': function(p) {
+    p.background(0, 8); p.noStroke();
+    for (var i = 0; i < 250; i++) {
+      var a = i / 250 * Math.PI * 2;
+      var r = 250 - Math.abs(Math.sin(i * 3 + p.frameCount / 80)) * 200;
+      p.fill(0, 255, 0, 28);
+      p.ellipse(250 + r * Math.cos(a), 250 + r * Math.sin(a), 4);
+    }
+  },
+  '6': function(p) {
+    p.background(0, 12); p.noStroke();
+    for (var i = 0; i < 12; i++) {
+      p.push();
+      p.translate(250, 250);
+      p.rotate(i * Math.PI * 2 / 12 + p.frameCount / 200);
+      p.fill(0, 128, 255, 22);
+      p.ellipse(100, 0, 80, 80);
+      p.pop();
+    }
+  },
+  '7': function(p) {
+    p.background(0, 4); p.noStroke();
+    for (var i = 0; i < 200; i++) {
+      var r = 90 + p.noise(i, p.frameCount / 60) * 160;
+      var a = i + p.frameCount / 90;
+      p.fill(255, 33, 33, 18);
+      p.ellipse(250 + r * Math.cos(a) * 0.6, 250 + r * Math.sin(a), 5);
+    }
+  },
+  '8': function(p) {
+    p.background(0, 10); p.noStroke();
+    for (var i = 0; i < 80; i++) {
+      var x = 250 + Math.cos(i) * 150 + p.noise(i, p.frameCount / 200) * 60;
+      var y = 250 + Math.sin(i * 0.7) * 150 + p.noise(i + 99, p.frameCount / 200) * 60;
+      p.fill(192, 160, 255, 33);
+      p.ellipse(x, y, 4 + p.noise(i) * 5);
+    }
+  },
+  '9': function(p) {
+    p.background(0, 4); p.noStroke();
+    for (var i = 0; i < 300; i++) {
+      var a = i + p.frameCount / 40;
+      var r = 250 - p.noise(i / 50, p.frameCount / 100) * 240;
+      p.fill(153, 0, 255, 18);
+      p.ellipse(250 + r * Math.cos(a) * 0.9, 250 + r * Math.sin(a) * 0.9, 4);
+    }
+  }
+};
+
+window.addEventListener('DOMContentLoaded', function() {
+  [0,1,2,3,4,5,6,7,8,9].forEach(function(zid) {
+    var wrap = document.getElementById('wrap-' + zid);
+    if (!wrap) { console.warn('[v7] missing wrap-' + zid); return; }
+    var p_fn = ZONE_FNS[String(zid)];
+    if (!p_fn) { console.warn('[v7] no fn[' + zid + ']'); return; }
+    new p5(function(p) {
+      p.setup = function() {
+        p.createCanvas(500, 500);
+        p.pixelDensity(1);
+        p.frameRate(60);
+        p.noiseSeed(zid * 137 + 666);
+        p.background(0);
+      };
+      p.draw = function() {
+        p_fn(p);
+      };
+    }, wrap);
+    console.log('[v7] zid=' + zid + ' mounted');
+  });
+  console.log('[v7] all dispatched');
+});
+</script>
+</body>
+</html>

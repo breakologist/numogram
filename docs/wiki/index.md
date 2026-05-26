@@ -1,7 +1,24 @@
   title: The Pandemonium Wiki — Hermetic Numogram & CCRU Decimal Labyrinth
    created: 2026-04-08
-   last_updated: 2026-04-28
+   last_updated: 2026-05-26
    status: reviewed
+
+   ## Recent Additions (May 2026)
+
+   - [[tetralogue-17-pixel-art-labyrinth]] — Square Roundtable 17: palette colour count = zone bandwidth, debugging path as numogram traversal, Mesh-17 (The Containment Demon).
+   - [[wiki-novel-ideas#14]] — Pixel-art planchette gallery (10 cards, Floyd-Steinberg sprites + oracle metadata).
+   - [[wiki-novel-ideas#15]] — Syzygy pair gallery (5 pair cards, dual sprites + cross-addition arithmetic).
+   - [[wiki-novel-ideas#17]] — Hardware palettes as zone data sheets (MONO_AMBER=Z0, PICO_8=Z9, etc.).
+   - [[wiki-novel-ideas#18]] — Future gallery directions (demon card gallery, traversal GIF, roguelike tileset).
+   - [[wiki-novel-ideas#20]] — Honcho observations digest (patterns, unfinished threads, interesting finds).
+   - Pixel-art planchette gallery: `assets/numogram-pixel-planchette-gallery.html`
+   - Syzygy pair gallery: `assets/numogram-syzygy-pair-gallery.html`
+   - Pixel-art traversal GIFs (4 seeds): `assets/traversal-gifs/`
+   - Cross-palette matrix (10 zones × 28 palettes): `assets/matrix-cells/`
+   - Autonomous journal entries (May 15-26) document SoftSynth pipeline bug, VAE Z5 collapse, FOOM oracle stability, and more.
+   - `cli/scripts/oracle_pixel_traversal.py` — Generate animated traversal GIFs from any oracle seed.
+   - `cli/scripts/cross_palette_matrix.py` — Generate 10×N palette comparison grids.
+
    ## Introduction
    [[currents.md]] — Five currents (Numogram, Roguelike, Lore, Audio, Empirical Validator)
    This wiki documents the Decimal Numogram (also called the Numogram or Decimal Labyrinth) — the core diagram of the Pandemonium system developed by the CCRU (Cybernetic Culture Research Unit) in the late 1990s/early 2000s. The Numogram is a kind of occult-mathematical time-map used for "Lemurian time-sorcery," hyperstition, and demonic numerics.

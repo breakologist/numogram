@@ -25,6 +25,8 @@ A canon of reproducible runs, exploratory sessions, failure conditions and subse
 | **Demon gematria suite + MOD / WAV verification** | Audio | 2026-05-11 |
 | **SHAP driver signatures — real resonators — V3** | Emp.Emp. | 2026-05-21/22 |
 | **Cmd sample code / talk / tools** | Tertiary | Ongoing |
+| **SoftSynth 64-row bug FIXED** | Audio/Pipeline | 2026-05-26 |
+| **→ NEXT: `build_dataset()` clean rerun** | Audio/Pipeline | Pending |
 
 ## Structural convention
 

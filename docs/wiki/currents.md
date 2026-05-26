@@ -42,6 +42,12 @@ category: meta
 
 - [[phase5-roadmap]] — Phase 5 roadmap for mod-writer with empirical validation projects
 - [[zone_classifier_phase4.5_findings]] — Classifier validation results and analysis
+- [[tetralogue-17-pixel-art-labyrinth]] — Pixel-art gallery tetralogue, palettes as zone bandwidth
+- [[visual-layers-state-map]] — Current visual gallery state map
+- [[autonomous-journal/README]] — Autonomous journal index: SoftSynth fix, VAE Z5 collapse, FOOM stability
+- [[wiki-novel-ideas#14]] — Pixel-art planchette gallery
+- [[wiki-novel-ideas#15]] — Syzygy pair gallery
+- [[wiki-novel-ideas#20]] — Honcho observations digest
 - [[aq-dictionary-augmented]] — Expanded AQ dictionary with augmentation pipeline
 - [[mod-writer-ml-interpretability]] — Machine learning interpretability for MOD generation
 - [[hermes-aq-codebase-refactoring]] — Codebase refactoring for AQ calculations

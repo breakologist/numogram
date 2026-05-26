@@ -56,4 +56,4 @@ Syzygies are **pairwise demonic carriers**. Each is carried by a named entity (K
 
 ---
 
-*See also:* `current`, `zone`, `warp`, `plex`, `demon`, `pandemonium-matrix`, `numogram-calculator`
+*See also:* `current`, `zone`, `warp`, `plex`, `demon`, `pandemonium-matrix`, `numogram-calculator` , [[syzygy-arithmetic]]

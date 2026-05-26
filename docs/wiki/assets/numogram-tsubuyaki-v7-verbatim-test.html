@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+</head><body>
+<!-- v7 EXACT structure but only Z0 body + verbatim dispatch -->
+<canvas id="c0" width="500" height="500"></canvas>
+<canvas id="c1" width="500" height="500"></canvas>
+<canvas id="c2" width="500" height="500"></canvas>
+<span id="log"></span>
+<script>
+// ── VERBATIM ZONE_FNS block from v7 (first 3 zones) ──
+var ZONE_FNS = {};
+ZONE_FNS['0'] = function(p) {
+    f++;
+    p.background(0,6);
+    p.noStroke();
+    for(i=0;
+    i<10;
+    i++){p.fill(44,p.random(25));
+    x=p.random(500);
+    y=p.random(500);
+    s=p.random(3);
+    p.ellipse(x,y,s,s)
+  };
+};
+ZONE_FNS['1'] = function(p) {
+    f++;
+    p.background(0);
+    p.noStroke();
+    for(x=25;
+    x<500;
+    x+=50)for(y=25;
+    y<500;
+    y+=50){
+    p.fill(44,i<25?p.random(4):p.random(25));
+    p.rect(x,y,40,80);
+    };
+};
+ZONE_FNS['2'] = function(p) {
+    f++;
+    p.background(0,6);
+    p.noStroke();
+    for(i=0;
+    i<100;
+    i++){
+    t=i/100;
+    x=250+Math.sin(t*Math.PI*2)*250;
+    y=250+Math.cos(t*Math.PI*2)*250;
+    p.fill(44,p.random(25));
+    p.ellipse(x,y,s=10+p.random(25),s)
+  };
+};
+
+// ── VERBATIM DISPATCH from v7 ──
+document.querySelectorAll("canvas[id^=c]").forEach(function(cv){
+  var zid = cv.id.slice(1);
+  new p5(function(p){
+    p.setup = function() { p.createCanvas(500, 500); p.pixelDensity(1); };
+    p.draw  = function() { ZONE_FNS[zid](p); };
+  }, cv.parentElement);
+});
+
+// Log pixel sample
+setTimeout(function() {
+  var c0 = document.querySelector('#c0');
+  if (c0) {
+    var ctx = c0.getContext('2d');
+    var px = ctx.getImageData(250,250,5,5).data;
+    var logEl = document.getElementById('log');
+    logEl.textContent = 'c0 center (250,250): R='+px[0]+' G='+px[1]+' B='+px[2];
+    logEl.style.cssText = 'position:fixed;top:0;right:0;background:rgba(0,0,0,0.8);color:#0f0;padding:8px;font:12px monospace;z-index:9999;white-space:pre;';
+  }
+}, 3000);
+</script></body></html>

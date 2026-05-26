@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Syzygy Pair Gallery — The Five Bonds</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#08080e;color:#999;font-family:'Courier New',monospace;padding:20px}
+  h1{text-align:center;color:#555;font-size:14px;letter-spacing:5px;margin-bottom:4px}
+  .sub{text-align:center;color:#333;font-size:10px;letter-spacing:2px;margin-bottom:24px}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(560px,1fr));gap:14px;max-width:1200px;margin:auto}
+  .card{background:#0d0d14;border:1px solid #1a1a26;border-radius:5px;overflow:hidden;transition:border-color .3s}
+  .card:hover{border-color:#3a3a55}
+  .card-head{padding:10px 14px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #161620}
+  .szg-title{font-weight:700;font-size:13px}
+  .szg-meta{font-size:10px;color:#555}
+  .card-body{padding:14px;display:flex;gap:14px;align-items:stretch}
+  .zone-col{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+  .zone-img{border:1px solid #222;border-radius:3px;overflow:hidden;background:#000}
+  .zone-img img{display:block;width:96px;height:96px;image-rendering:pixelated}
+  .zone-label{font-size:11px;font-weight:700;color:#aaa}
+  .zone-sub{font-size:9px;color:#555}
+  .mid-col{width:60px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;flex-shrink:0}
+  .arrow{font-size:28px;color:#666;line-height:1}
+  .cval{font-size:22px;font-weight:700}
+  .cdir{font-size:8px;color:#555;letter-spacing:1px;text-transform:uppercase}
+  .details{padding:10px 14px;border-top:1px solid #161620;display:flex;gap:20px;font-size:10px;color:#666;flex-wrap:wrap}
+  .det-item{display:flex;align-items:center;gap:6px}
+  .det-label{color:#444;white-space:nowrap}
+  .det-val{color:#aaa;font-weight:700}
+  .det-note{flex:1;text-align:right;font-style:italic;color:#444;font-size:9px;min-width:120px}
+  .cross{margin-top:6px;padding-top:6px;border-top:1px solid #14141f;font-size:9px;color:#444;line-height:1.5}
+  @media(max-width:600px){.card-body{flex-direction:column;align-items:center}}
+</style>
+</head>
+<body>
+<h1>THE FIVE BONDS</h1>
+<div class="sub">syzygy pairs · nine-sum twinings · decimal complementarity</div>
+
+<div class="gallery">
+
+<!-- ─── 0::9 — PLEX ─── -->
+<div class="card">
+  <div class="card-head"><span class="szg-title" style="color:#a78bfa">0 :: 9 — PLEX</span><span class="szg-meta">current 9 · Uttunul</span></div>
+  <div class="card-body">
+    <div class="zone-col">
+      <div class="zone-img"><img src="zone-sprites/zone-0-sprite.png" alt="Zone 0"></div>
+      <div class="zone-label" style="color:#666">0 · VOID</div>
+      <div class="zone-sub">eiaoung · − · MONO_AMBER</div>
+    </div>
+    <div class="mid-col">
+      <div class="arrow" style="color:#a78bfa">⟲</div>
+      <div class="cval" style="color:#a78bfa">9</div>
+      <div class="cdir">self-loop</div>
+    </div>
+    <div class="zone-col">
+      <div class="zone-img"><img src="zone-sprites/zone-9-sprite.png" alt="Zone 9"></div>
+      <div class="zone-label" style="color:#c084fc">9 · IRON CORE</div>
+      <div class="zone-sub">tn · + · PICO_8</div>
+    </div>
+  </div>
+  <div class="details">
+    <span class="det-item"><span class="det-label">Demon</span><span class="det-val">Uttunul</span></span>
+    <span class="det-item"><span class="det-label">Type</span><span class="det-val">Xenodemon</span></span>
+    <span class="det-item"><span class="det-label">Mesh</span><span class="det-val">36</span></span>
+    <span class="det-item"><span class="det-label">Region</span><span class="det-val">Plex</span></span>
+    <span class="det-note">Abyssal boundary — the circuit's terminus and origin folded into one.</span>
+  </div>
+  <div class="details" style="border-top-color:#0d0d18">
+    <span class="cross">Cross-addition: 3::6 (Warp) + 3::6 (Warp) = 9 → Plex. The vortex collapses into the abyss through self-addition. The syzygy of absolute closure — 9::0 Uttunul closes the numogram.</span>
+  </div>
+</div>
+
+<!-- ─── 1::8 — SURGE ─── -->
+<div class="card">
+  <div class="card-head"><span class="szg-title" style="color:#38bdf8">1 :: 8 — SURGE</span><span class="szg-meta">current 7 · Murrumur</span></div>
+  <div class="card-body">
+    <div class="zone-col">
+      <div class="zone-img"><img src="zone-sprites/zone-1-sprite.png" alt="Zone 1"></div>
+      <div class="zone-label" style="color:#fbbf24">1 · STABILITY</div>
+      <div class="zone-sub">gl · + · GAMEBOY_ORIGINAL</div>
+    </div>
+    <div class="mid-col">
+      <div class="arrow" style="color:#38bdf8">⟳</div>
+      <div class="cval" style="color:#38bdf8">7</div>
+      <div class="cdir">surge</div>
+    </div>
+    <div class="zone-col">
+      <div class="zone-img"><img src="zone-sprites/zone-8-sprite.png" alt="Zone 8"></div>
+      <div class="zone-label" style="color:#c4b5fd">8 · MULTIPLICITY</div>
+      <div class="zone-sub">mnm · − · APPLE_II_LO</div>
+    </div>
+  </div>
+  <div class="details">
+    <span class="det-item"><span class="det-label">Demon</span><span class="det-val">Murrumur</span></span>
+    <span class="det-item"><span class="det-label">Type</span><span class="det-val">Chronodemon</span></span>
+    <span class="det-item"><span class="det-label">Mesh</span><span class="det-val">28</span></span>
+    <span class="det-item"><span class="det-label">Region</span><span class="det-val">Time-Circuit</span></span>
+    <span class="det-note">First pair — the initiating current that sets the circuit in motion.</span>
+  </div>
+  <div class="details" style="border-top-color:#0d0d18">
+    <span class="cross">Cross-addition: 5::4 (Sink) + 7::2 (Hold) = 1::8 (Surge). The largest current (7) drives the Time-Circuit rotor anticlockwise. Stability and Multiplicity: the grid's seed and its fractal bloom.</span>
+  </div>
+</div>
+
+<!-- ─── 2::7 — HOLD ─── -->
+<div class="card">
+  <div class="card-head"><span class="szg-title" style="color:#a3e635">2 :: 7 — HOLD</span><span class="szg-meta">current 5 · Oddubb</span></div>
+  <div class="card-body">
+    <div class="zone-col">
+      <div class="zone-img"><img src="zone-sprites/zone-2-sprite.png" alt="Zone 2"></div>
+      <div class="zone-label" style="color:#fb923c">2 · SEPARATION</div>
+      <div class="zone-sub">dt · − · GAMEBOY_POCKET</div>
+    </div>
+    <div class="mid-col">
+      <div class="arrow" style="color:#a3e635">⟳</div>
+      <div class="cval" style="color:#a3e635">5</div>
+      <div class="cdir">hold</div>
+    </div>
+    <div class="zone-col">
+      <div class="zone-img"><img src="zone-sprites/zone-7-sprite.png" alt="Zone 7"></div>
+      <div class="zone-label" style="color:#f87171">7 · BLOOD</div>
+      <div class="zone-sub">pb · + · GAMEBOY_VIRTUALBOY</div>
+    </div>
+  </div>
+  <div class="details">
+    <span class="det-item"><span class="det-label">Demon</span><span class="det-val">Oddubb</span></span>
+    <span class="det-item"><span class="det-label">Type</span><span class="det-val">Chronodemon</span></span>
+    <span class="det-item"><span class="det-label">Mesh</span><span class="det-val">20</span></span>
+    <span class="det-item"><span class="det-label">Region</span><span class="det-val">Time-Circuit</span></span>
+    <span class="det-note">Middle pair — separation creates the wound; blood flows through it.</span>
+  </div>
+  <div class="details" style="border-top-color:#0d0d18">
+    <span class="cross">Cross-addition: 5::4 (Sink) + 1::8 (Surge) → 7::2 (Hold). Separation's stutter-fracture and Blood's organic pulse: wound and flow, bound by Oddubb. The Hold current (5) is the torque that keeps the circuit in tension.</span>
+  </div>
+</div>
+
+<!-- ─── 3::6 — WARP ─── -->
+<div class="card">
+  <div class="card-head"><span class="szg-title" style="color:#fbbf24">3 :: 6 — WARP</span><span class="szg-meta">current 3 · Djynxx</span></div>
+  <div class="card-body">
+    <div class="zone-col">
+      <div class="zone-img"><img src="zone-sprites/zone-3-sprite.png" alt="Zone 3"></div>
+      <div class="zone-label" style="color:#f472b6">3 · RELEASE</div>
+      <div class="zone-sub">zx · + · C64</div>
+    </div>
+    <div class="mid-col">
+      <div class="arrow" style="color:#fbbf24">⟲</div>
+      <div class="cval" style="color:#fbbf24">3</div>
+      <div class="cdir">self-fold</div>
+    </div>
+    <div class="zone-col">
+      <div class="zone-img"><img src="zone-sprites/zone-6-sprite.png" alt="Zone 6"></div>
+      <div class="zone-label" style="color:#60a5fa">6 · ABSTRACTION</div>
+      <div class="zone-sub">tch · − · TELETEXT</div>
+    </div>
+  </div>
+  <div class="details">
+    <span class="det-item"><span class="det-label">Demon</span><span class="det-val">Djynxx</span></span>
+    <span class="det-item"><span class="det-label">Type</span><span class="det-val">Xenodemon</span></span>
+    <span class="det-item"><span class="det-label">Mesh</span><span class="det-val">12</span></span>
+    <span class="det-item"><span class="det-label">Region</span><span class="det-val">Warp</span></span>
+    <span class="det-note">Chaotic outer-time vortex. Self-folding loop. The current reinforces itself.</span>
+  </div>
+  <div class="details" style="border-top-color:#0d0d18">
+    <span class="cross">Cross-addition: 5::4 (Sink) + 7::2 (Hold) = 3::6 (Warp). The Warp is a consequence of Sink + Hold — it doesn't need to be placed independently. Triangular by nature: T₂=3, T₃=6. The 1-3-6 orbit of triangular numbers IS the Warp current.</span>
+  </div>
+</div>
+
+<!-- ─── 4::5 — SINK ─── -->
+<div class="card">
+  <div class="card-head"><span class="szg-title" style="color:#fc8181">4 :: 5 — SINK</span><span class="szg-meta">current 1 · Katak</span></div>
+  <div class="card-body">
+    <div class="zone-col">
+      <div class="zone-img"><img src="zone-sprites/zone-4-sprite.png" alt="Zone 4"></div>
+      <div class="zone-label" style="color:#22d3ee">4 · CATASTROPHE</div>
+      <div class="zone-sub">skr · − · ZX_SPECTRUM</div>
+    </div>
+    <div class="mid-col">
+      <div class="arrow" style="color:#fc8181">⟳</div>
+      <div class="cval" style="color:#fc8181">1</div>
+      <div class="cdir">sink</div>
+    </div>
+    <div class="zone-col">
+      <div class="zone-img"><img src="zone-sprites/zone-5-sprite.png" alt="Zone 5"></div>
+      <div class="zone-label" style="color:#4ade80">5 · PRESSURE</div>
+      <div class="zone-sub">ktt · + · APPLE_II_HI</div>
+    </div>
+  </div>
+  <div class="details">
+    <span class="det-item"><span class="det-label">Demon</span><span class="det-val">Katak</span></span>
+    <span class="det-item"><span class="det-label">Type</span><span class="det-val">Chronodemon</span></span>
+    <span class="det-item"><span class="det-label">Mesh</span><span class="det-val">00</span></span>
+    <span class="det-item"><span class="det-label">Region</span><span class="det-val">Time-Circuit</span></span>
+    <span class="det-note">Unifying spark. The Sink at the bottom pulls everything down.</span>
+  </div>
+  <div class="details" style="border-top-color:#0d0d18">
+    <span class="cross">Cross-addition: Sink + Hold → Warp. Sink + Surge → Warp (again). Primary generative syzygy: 4::5 Katak is the initiating spark of the entire Time-Circuit. Cross-add with any other pair; you always get a canonical result. The most arithmetic syzygy.</span>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

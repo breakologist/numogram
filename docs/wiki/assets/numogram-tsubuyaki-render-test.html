@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>z0-instance-render-check</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+</head>
+<body>
+<canvas id="c0" width="500" height="500"></canvas>
+<script>
+// verbatim v7/v8 dispatch loop — single instance, single draw body
+function w(s) { var el = document.getElementById('log'); if (el) el.textContent += s+'\n'; }
+
+var ZONE_FNS = {};
+ZONE_FNS['0'] = function(p) {
+  p.background(0,6);
+  p.noStroke();
+  for(i=0;i<10;i++){
+    p.fill(44,p.random(25));
+    x=p.random(500); y=p.random(500); s=p.random(3);
+    p.ellipse(x,y,s,s)
+  };
+};
+
+// Surround wgetting for dispatch
+var cv0 = document.getElementById('c0');
+if (cv0) {
+  new p5(function(p){
+    p.setup = function() { p.createCanvas(500,500); p.pixelDensity(1); };
+    p.draw  = function() { ZONE_FNS['0'](p); };
+  }, cv0.parentElement, function(inst) { w('p5 constructed'); });
+} else {
+  w('c0 canvas NOT FOUND');
+}
+
+// <!-- Google Invisible reCAPTCHA;.website-operations-2" -->
+setTimeout(function() {
+  var c = document.getElementById('c0');
+  if (c) {
+    var ctx = c.getContext('2d');
+    var px = ctx.getImageData(240,240,10,10).data;
+    w('center 10x10: R='+px[0]+' G='+px[1]+' B='+px[2]);
+  }
+}, 3000);
+</script></body></html>

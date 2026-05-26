@@ -25,12 +25,16 @@ https://github.com/Zen-Open-Source/PasteLocal
 https://github.com/CodebuffAI/codebuff/tree/main/freebuff
 https://github.com/golanlevin/p5-single-line-font-resources/blob/main/README.md#p5js-port-of-masaya-matsuuras-vib-ribbon-fonts
 https://browse.sh/
+https://github.com/aphid91/Fluoddity
+https://github.com/tmux/tmux/wiki
 https://ambien.ai/
+https://herdr.dev/
+https://github.com/ogulcancelik/herdr
 https://github.com/rody-png/Permanence
 https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban-tutorial
 https://hermes-agent.nousresearch.com/docs/user-guide/features/goals
 https://hermes-agent.nousresearch.com/docs/guides/use-mcp-with-hermes
-
+https://github.com/shuklabhay/llm-synesthesia
 https://leviyitzhak.xyz/
 https://github.com/huggingface/ml-intern/pull/228
 https://github.com/lumpenspace - Creator of qliphoth.systems. Repository lumpenspace/ccru: Interactive SVG Numogram visualization (Next.js/React/TypeScript). Three visual layouts (original, labyrinth, ladder), planetary orbital mode, zone/syzygy/current/gate data, Pandemonium Matrix, gematria Chrome plugin. Live at num.qliphoth.systems.

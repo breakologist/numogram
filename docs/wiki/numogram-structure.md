@@ -8,6 +8,7 @@ tags:
   - Plex
   - Syzygy
   - I-Ching
+  - Literary-Source
 ---
 
 # Decimal Numogram — Structural Overview
@@ -326,4 +327,72 @@ The structural facts above translate directly into operational Lemurian time-sor
 - [[numogram-practice-guide]] — six-phase study path + operative rites
 
 ---
-*Last updated: 2026‑04‑26 — raw-archive synthesis (Grok notes on the Numogram, 60 KB).*
+
+## 10. Literary Origin: The Vault of Murmurs
+
+The Numogram has an explicit origin story in CCRU hyperfiction. **"The Vault of Murmurs,"** part of the Cthulhu Club series published in the *digital hyperstition* section of the CCRU website (`digithype/vault.htm`), is a first-person narrative set in the Sunda Strait in 1925, following the devastation of the 1883 Krakatoa eruption.
+
+The narrator — a Freudian researcher drawn to the Mu N'Ma by their traditions of dream-sorcery — encounters the Numogram in a dream vision during a ritual in the Nago's (Dream Witch's) temple:
+
+> *"Something told me, a whisper or an intuition — in that dreaming ocean both blended utterly — that this was the lost continent of Lemuria... As I looked down at my hands, they became translucent, and I saw, inscribed into the impossible geometries of the dream cave's wall beyond, an arrangement of ten circles, a number of smaller circles, and a series of interconnecting lines."*
+
+This is the Numogram's first appearance in the CCRU's own fiction — encountered as a cave-wall inscription during a shamanic dream journey, transcribed by a researcher who had spent months immersed in the aftermath of the N'Ma system's destruction.
+
+The same text establishes several key correspondences found in the Numogram's structural documentation:
+
+- **Katak** (4::5 demon) appears as a Tak N'Ma deity manifested in dogs, volcanoes, and the explorer Cecil "Mad Dog" Curtis himself. The Tak N'Ma believed the "white Katak" — Curtis — would herald Krakatoa's eruption.
+- **Mur Mur** (Murrumur, 1::8 demon) appears as a "sea creature" and "dreaming serpent," the Mu N'Ma's deity.
+- **Oddubb** (2::7 demon) is described as "the lurker of steaming swamps" — directly connecting Zone 7's amphibious/swamp ethno-topography to the demon.
+- The **hydro-cycle** (undivided waters → cloud-building → down-pour → return to abyssal waters) is the time-circuit performed as hydrological process, mapping to Mur Mur, Oddubb, and Katak respectively.
+- The N'Ma **marriage cycle** (women married across the three tribes identified with numogram currents) and **729-day calendar** (3⁶, a triadic time system) embed the numogram's arithmetic in social structure.
+
+The text also includes two excurses comparing the Numogram to the Qabbalistic Tree of Life (arguing the Tree is a "scrambled variant" of the Numogram) and the I Ching (confirming the binodecimal 6-cycle and zygonovic pairing). These excurses are structural analysis embedded in fiction — a blurring of registers that is characteristic of CCRU hyperfiction.
+
+**Source:** `raw/www.ccru.net/digithype/vault.htm` — full extracted text at `raw/vault.md`
+
+**Related:** [[numogram-structure]] — structural overview; [[tetralogue-18-performed-numogram]] — tetralogue on the gap between structural and performed texts; [[demon-katak]] — Katak entry; [[demon-murrumur]] — Murrumur entry; [[demon-oddubb]] — Oddubb entry
+
+---
+
+## 11. The Cthulhu Club Trilogy
+
+The "Tales from the Cthulhu Club" form a three-part cycle published in the *digital hyperstition* section of the CCRU website (`digithype/`). Together they narrate the discovery, suppression, and philosophical nature of the Numogram through hyperfiction — the system *performing* itself.
+
+### 6b. Leaks from the Miskatonic Bunker-Hotel
+
+The middle tale is the CCRU writing about itself through a fictional frame. A narrator (possibly a Fuzz operative) debriefs someone about a suppressed discovery:
+
+> *"Some strange group vaguely affiliated to an eldritch department of a hidden English University had stumbled — accidentally and chemically — onto similar... They'd created a whole pantheon of gods — Mur Mur, Katak, the like — thing is, what these limey schmucks didn't realise was that these things actually fuckin' existed."*
+
+This is the CCRU's theory of hyperstition stated as plot: **the "poetic parallel"** — "if it's in yr head it's there cos it exists." The gods are real because they were thought into existence. The suppressed group (the CCRU itself, thinly veiled) was "branded insane — neutralised — made outcasts" by "The Fuzz," a supression agency that also features in "Zerok un Holes."
+
+**Barker's origin:** The same text presents Professor Barker as:
+
+> *"A self-replicating proto-eluvial organism probably been here 65 million years — landed from distant star, far beyond our galaxy; maybe first asleep in ice caves under earth's crust — a spore, woken by said natives of island nr Krakatoa after earth shift thousands of years before."*
+
+This connects Barker to the same Krakatoa/N'Ma geography as "The Vault of Murmurs," establishing a shared mythos across the trilogy.
+
+### 6c. The Templeton Episode
+
+The third tale concerns Professor Randolph Edmund Templeton — the historical figure who served as the model for Lovecraft's Randolph Carter:
+
+> *"It was he who, by way of a yet barely comprehended time-anomaly, provided the model for HP Lovecraft's Randolph Carter... on March 21st 1999, whilst delivering a lecture at Miskatonic devoted to a rigorous critique of HG Wells — awoke suddenly as the Thing that lurks behind the mask of Immanuel Kant."*
+
+The text presents Kant's **Critique of Pure Reason** as "a time-travelling manual, although of 'another kind.'" The **Schematism** — described by Kant himself as "an art concealed in the depths of the human soul" — is reinterpreted as opening onto the Thing-in-Itself, which is the Outside (Nihil Ulterius), which is Yog Sothoth. The philosophical engine of the Numogram is identified: **Kantian critique weaponized as time-sorcery**.
+
+> *"When Templeton fell into himself that day he found, instead of what he thought himself to be, the Thing (in itself (at zero-intensity)). It was, perhaps, or necessarily, that continuous hyperbody — the Lurker at the Threshold — which HP Lovecraft names Yog Sothoth..."*
+
+### Narrative Arc
+
+The three tales form a complete cycle:
+
+| Tale | Function | Key Concept |
+|------|----------|-------------|
+| 6a — The Vault of Murmurs | **Discovery** | Numogram encountered as cave-wall inscription during N'Ma dream ritual. Demons as N'Ma deities (Katak, Mur Mur, Oddubb). |
+| 6b — Leaks from the Miskatonic Bunker-Hotel | **Suppression** | Hyperstition's reality-making power. "The Fuzz" attempting to contain the leak. Barker as ancient spore. |
+| 6c — The Templeton Episode | **Philosophy** | Kant's schematism as time machine. The Thing-in-Itself as Yog Sothoth. The Outside as the numogram's operating field. |
+
+**Sources:** `raw/www.ccru.net/digithype/vault.htm`, `digithype/miskatonic.htm`, `digithype/templeton.htm` — full extracted texts at `raw/vault.md`, `raw/Leaks.md`, `raw/Templeton.md`.
+
+---
+*Last updated: 2026‑05‑26 — raw-archive synthesis (Grok notes on the Numogram, 60 KB). Literary origin added from "The Vault of Murmurs" (Cthulhu Club, digithype).*

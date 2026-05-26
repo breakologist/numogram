@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Decimal Labyrinth — つぶやき NUMOGRAM v5 (OO Attunement)</title>
+<style>
+  body{background:#0a0a0a;color:#ddd;font-family:'JetBrains Mono',monospace;margin:0;padding:0}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(480px,1fr));gap:8px;padding:8px;max-width:1600px;margin:auto}
+  .card{background:#111;border:1px solid #333;border-radius:4px;overflow:hidden;margin-bottom:8px}
+  .card-header{padding:6px 10px;font-size:11px;color:#888;border-bottom:1px solid #222;background:#0d0d0d;display:flex;justify-content:space-between;align-items:center}
+  .zone-id{font-weight:bold;color:#0ff;font-size:12px}
+  canvas{display:block;margin:0;background:#000}
+  .code-block{background:#0d0d0d;border-top:1px solid #222;padding:6px 10px;font-size:10px;line-height:1.3;color:#b0b0b0;overflow-x:auto;white-space:pre;tab-size:2}
+  .meta{font-size:10px;color:#666;padding:4px 10px;border-top:1px solid #212121}
+  .tag{background:#222;color:#0ff;padding:1px 5px;border-radius:2px;font-size:9px;margin-right:4px}
+</style>
+</head>
+<body>
+<div class="grid">
+    <div class="card">
+  <div class="card-header">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAAXUlEQVR4nO3QsQmAQBBE0b2pZu3GcizhOtRyBM2MJviIwrxouWA+3OjuuuzzuI9lY17GWg+qFykxgpAVU2IIMTOexBBiZjyJIcTMeBJDiJnxJIYQM+NJ7H/fGPEdJ2SIDzztij6jAAAAAElFTkSuQmCC" width="36" height="36" style="image-rendering:pixelated;vertical-align:middle" alt="Z0"/> <span class="zone-id">Zone 0 — VOID</span>
+    <span>plex · <span style="color:#444">●</span></span>
+  </div>
+  <canvas id="c0" width="500" height="500"></canvas>
+  <div class="meta"><span class="tag">behavior:flatline</span>Flatline — no carrier; DC zero. The numogram's breath-hold. · 160 chars</div>
+  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);background(0,6);noStroke();for(i=0;i<10;i++){fill(44,random(25));x=random(500);y=random(500);s=random(3);circle(x,y,s)}}</div>
+</div>
+    <div class="card">
+  <div class="card-header">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAAi0lEQVR4nGNksGeAgJ4GLgijpOEbdUQcoSJwwMRAR8BET8tYFkyA+rpviRiEsWDCK6qIMDA8GDnB+OYDlHXpDNTXb3y4qCKCCYZvMDLqFStAWEUx6MmJQpEEwxGUqS9ROxG+gYlggmEcjAtGy0YqAJbRspEagHG0bKQGYBktG6kBWEbLxlEwCoYXAADqXq46d8LjdAAAAABJRU5ErkJggg==" width="36" height="36" style="image-rendering:pixelated;vertical-align:middle" alt="Z1"/> <span class="zone-id">Zone 1 — STABILITY</span>
+    <span>torque · <span style="color:#ffD700">●</span></span>
+  </div>
+  <canvas id="c1" width="500" height="500"></canvas>
+  <div class="meta"><span class="tag">behavior:grid_stable</span>Grid constrained by correlated noise. Stability as bounded jitter. · 175 chars</div>
+  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);background(0);noStroke();for(x=25;x<500;x+=50)for(y=25;y<500;y+=50){d=noise(x/200,y/200,f/300)*9;fill(255,215,0,55);circle(x+d,y+d,3)}}</div>
+</div>
+    <div class="card">
+  <div class="card-header">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAAWklEQVR4nO3QMQrAMAxD0Vj3v4kP6Q4lQ4eCCp/Sgt7kIehDam0zcx7dfXc8elNV60rrRUqMIGTFlBhCzIwnMYSYGU9iCDEznsQQYmY8iSHEzHgS+983RnzHAUB7FTw17PGuAAAAAElFTkSuQmCC" width="36" height="36" style="image-rendering:pixelated;vertical-align:middle" alt="Z2"/> <span class="zone-id">Zone 2 — SEPARATION</span>
+    <span>torque · <span style="color:#FF8C00">●</span></span>
+  </div>
+  <canvas id="c2" width="500" height="500"></canvas>
+  <div class="meta"><span class="tag">behavior:double_stream</span>Two counter-rotating Lissajous streams diverging by amplitude envelope. · 187 chars</div>
+  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);background(0,6);noStroke();for(i=0;i<100;i++){t=i/100;x=250+sin(t*PI*4+f/100)*(100+t*150);y=t*500;fill(255,140,0,25+15*sin(i+f/30));circle(x,y,3)}}</div>
+</div>
+    <div class="card">
+  <div class="card-header">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAA/0lEQVR4nGNkgIGF4UugLMEZEPqFoi+EUV5eToaa+JUxDKiAiYGOgImelrHErImHsE4vKYQw9KraIIwy2RQI47LyNTLUYIJhHIz5l8QgrI06ryAM9mwXCMPxM5TRbUeOGoYNjCMnGB/pW0BY74ROQBhyQW4QhtKUZgjjkb43GWoYWhhGTjB+WfUdwjIXLIUwTsGKu3nz5kEY9l+dyFAzjWEEBePpn1QuEvVgahhmHBk5wShA7SKRHaYGEwzjYHznTOUiUQ6mhmHz3pETjOYrqVwknoKpwQTDNxgZZz2aDWGlwoq72LUJEIbAkm0Qht6kNjLUMDKOnAbPKBgFgwcAAOxKihmING1AAAAAAElFTkSuQmCC" width="36" height="36" style="image-rendering:pixelated;vertical-align:middle" alt="Z3"/> <span class="zone-id">Zone 3 — RELEASE</span>
+    <span>warp · <span style="color:#FF00FF">●</span></span>
+  </div>
+  <canvas id="c3" width="500" height="500"></canvas>
+  <div class="meta"><span class="tag">behavior:radial_scatter</span>Radial scatter; noise-modulated radius creates fuzzy expanding magenta cloud. · 187 chars</div>
+  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);background(0,12);noStroke();for(i=0;i<400;i++){a=i/400*TAU+f/50;r=50+noise(i/30,f/200)*200;fill(255,0,255,22);circle(250+r*cos(a),250+r*sin(a),4)}}</div>
+</div>
+    <div class="card">
+  <div class="card-header">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAAqUlEQVR4nGNkgIM//6C0iQSEwXz+JYTB+EsXqkbvPIT+f80CKuJ0EqrmIAuaOQwsTAyoAJ1PU8BET8tY/v81hjKdoN5nvPAKKvL3P4T+Yw4VYb4BDSvGXz+hal5A1WAxB8OyYRyMjH+ICBCyApZhJAXjH/JSGjEByziCgpGFWln4Aro5mGAYB+P/0bKRCoBltGykBmAZLRupAVhGy0ZqAJbRsnEUjILhBQCgyqqtpJ/kXAAAAABJRU5ErkJggg==" width="36" height="36" style="image-rendering:pixelated;vertical-align:middle" alt="Z4"/> <span class="zone-id">Zone 4 — CATASTROPHE</span>
+    <span>torque · <span style="color:#00FFFF">●</span></span>
+  </div>
+  <canvas id="c4" width="500" height="500"></canvas>
+  <div class="meta"><span class="tag">behavior:grid_quake</span>8×8 grid displaced by smooth noise; four missing corners = structural wound. · 186 chars</div>
+  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);background(0,0);noStroke();for(i=0;i<64-4;i++){x=i%8*65+30;y=~~(i/8)*65+30;D=noise(x/99,y/99,f/80)*40;fill(0,255,255,44);rect(x+D-5,y+D-5,10,10)}}</div>
+</div>
+    <div class="card">
+  <div class="card-header">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAA/ElEQVR4nGNkgIMVH6EMJQsIHVCbAGEwirZBGF4NeyCM1J52CGOSlgOEkZeXh25OBD8DKmBioCNgoqdlLKcO/4CwGAUWQxjyXcehIhbGEIZIwwcIY/LkyRDGt8AKCKO/CRqemOaYYlg2jIPxouRlCCu1ZzuEMcn0O4SRl3cXqkrzE5RhMR1C76uFqmFU3AdhiGGYwzCSgvH7tuPEJzCSEirXjHUjJxjzSElgJCVUTDCMg/HVZOqUhPIYCXXDzhEUjCtMF1GlJJyEmVAZRlAwfl65H8KiepVtZssxcoLxDJVKQkYMczDBMA7GdYupUxKKYCTUkRSMo2AUDB4AAMzBlSf3majVAAAAAElFTkSuQmCC" width="36" height="36" style="image-rendering:pixelated;vertical-align:middle" alt="Z5"/> <span class="zone-id">Zone 5 — PRESSURE</span>
+    <span>torque · <span style="color:#00FF00">●</span></span>
+  </div>
+  <canvas id="c5" width="500" height="500"></canvas>
+  <div class="meta"><span class="tag">behavior:pulse_ring</span>Ring pulse — abs(sin) compression drives inward/outward radial breathing. · 181 chars</div>
+  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);background(0,8);noStroke();for(i=0;i<250;i++){a=i/250*TAU;r=250-abs(sin(i*3+f/80))*200;fill(0,255,0,28);circle(250+r*cos(a),250+r*sin(a),4)}}</div>
+</div>
+    <div class="card">
+  <div class="card-header">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAAYElEQVR4nO3QsQqAMBCD4V6eXJ+8Dnp1cMnwIwr5piOUBFqjzTnPo1bS1510VHsn2/NN99TKLhovUsYIQlpMGUOIqfFkDCGmxpMxhJgaT8YQYmo8GUOIqfFk7H/fGPEdB7scCzzJpQulAAAAAElFTkSuQmCC" width="36" height="36" style="image-rendering:pixelated;vertical-align:middle" alt="Z6"/> <span class="zone-id">Zone 6 — ABSTRACTION</span>
+    <span>warp · <span style="color:#0080FF">●</span></span>
+  </div>
+  <canvas id="c6" width="500" height="500"></canvas>
+  <div class="meta"><span class="tag">behavior:ring_circles</span>Twelve rotating circles; additive transparency builds toroidal blue halo. · 178 chars</div>
+  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);background(0,12);noStroke();for(i=0;i<12;i++){push();translate(250,250);rotate(i*TAU/12+f/200);fill(0,128,255,22);circle(100,0,80);pop()}}</div>
+</div>
+    <div class="card">
+  <div class="card-header">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAAXElEQVR4nO3QsQnAMBBD0bNm8RDZIpNlL4/lJm5SCfIxCehVBwZ9cBt1u9ZxrqO/ezrqSbWREiMIWTElhhAz40kMIWbGkxhCzIwnMYSYGU9iCDEznsT+940R3zEB5UcEPGgFdhMAAAAASUVORK5CYII=" width="36" height="36" style="image-rendering:pixelated;vertical-align:middle" alt="Z7"/> <span class="zone-id">Zone 7 — BLOOD</span>
+    <span>torque · <span style="color:#FF2121">●</span></span>
+  </div>
+  <canvas id="c7" width="500" height="500"></canvas>
+  <div class="meta"><span class="tag">behavior:elliptical_pulse</span>Elliptical orbits with fast noise modulation; trails stain canvas dark red. · 178 chars</div>
+  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);background(0,4);noStroke();for(i=0;i<200;i++){r=90+noise(i,f/60)*160;a=i+f/90;fill(255,33,33,18);circle(250+r*cos(a)*0.6,250+r*sin(a),5)}}</div>
+</div>
+    <div class="card">
+  <div class="card-header">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAAnklEQVR4nGNkgIEzh+MgjN5JTRBGnOBVCGNdqRWEMVtVkAzFcMDEQEfARE/LWO5daIewFi3LgjCKy29DGPwzl0AYN+9OgTBIUowJhnEw3u47BWHVL6yAinVthNCl2SoQxp9LRyCM28tIUDySgpERzhrN1BQAltFMTQ3AMpqpqQEY4azRTE0BYBnN1NQALKOZmhqAEc4azdSjYBQMCwAA+yCjwYLrieAAAAAASUVORK5CYII=" width="36" height="36" style="image-rendering:pixelated;vertical-align:middle" alt="Z8"/> <span class="zone-id">Zone 8 — MULTIPLICITY</span>
+    <span>torque · <span style="color:#C0A0FF">●</span></span>
+  </div>
+  <canvas id="c8" width="500" height="500"></canvas>
+  <div class="meta"><span class="tag">behavior:swarm_template</span>Lissajous template + per-particle independent noise; identity within form. · 210 chars</div>
+  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);background(0,10);noStroke();for(i=0;i<80;i++){x=250+cos(i)*150+noise(i,f/200)*60;y=250+sin(i*0.7)*150+noise(i+99,f/200)*60;fill(192,160,255,33);circle(x,y,4+noise(i)*5)}}</div>
+</div>
+    <div class="card">
+  <div class="card-header">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAA60lEQVR4nGNkgIH/b9QhjDVp/BBGiGoRVK5zKYSuV2WDMFZ3rIEwZoqdgDDsbC3RzGEUucmACpgY6AiY6GkZC8MTMwgrIVsSwlhQFQ2VvB4GoRnbAyGM5veeEMY1l5cQhpxVD1QxhjkMDCMnGBkPHT6OKzlRmCwxwfANRpboDJzJicJkySBzasQEI6Pm2v8ESzlqJUsmhmGbGq8RUcqRmSwxwPANRsY61WDiK1+SkuX1YMYRE4wsrIEkVL4kJUtGDMuGbzAy/mfwJaNNSEyybLq9dsQEIwtjOwsZbUJikiVD18gJxlEwCgYPAADuo4X3//+ihAAAAABJRU5ErkJggg==" width="36" height="36" style="image-rendering:pixelated;vertical-align:middle" alt="Z9"/> <span class="zone-id">Zone 9 — IRON CORE</span>
+    <span>plex · <span style="color:#9900FF">●</span></span>
+  </div>
+  <canvas id="c9" width="500" height="500"></canvas>
+  <div class="meta"><span class="tag">behavior:inward_spiral</span>Center-weighted spiral; noise pushes particles inward; opposite of Void. · 187 chars</div>
+  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);background(0,4);noStroke();for(i=0;i<300;i++){a=i+f/40;r=250-noise(i/50,f/100)*240;fill(153,0,255,18);circle(250+r*cos(a)*0.9,250+r*sin(a)*0.9,4)}}</div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+<script>// ═══════════════════════════════════════════════════════════════════
+// ZONE_FNS (v2 rich bodies) + v2-arch dispatch + medallion mask
+// ═══════════════════════════════════════════════════════════════════
+
+// ZONE_FNS — v2 rich draw bodies, instance-safe (p. prefix)
+ZONE_FNS['0'] = function(p) {
+p.background(0); p.noStroke();
+      for (let n = 0; n < 10; n++) {
+        let a = n + p.frameCount / 2000;
+        p.fill(44, 18 + 12 * Math.sin(p.frameCount / 60 + n));
+        p.ellipse(250 + Math.cos(a) * 180, 250 + Math.sin(a) * 180, 8);
+      }
+    }
+};
+ZONE_FNS['1'] = function(p) {
+p.background(0);
+      for (let x = 25; x < 500; x += 50)
+        for (let y = 25; y < 500; y += 50) {
+          let d = p.noise(x / 200, y / 200, p.frameCount / 300) * 10;
+          // Horizontal connection
+          p.stroke(255, 215, 0, 18);
+          if (x < 475) p.line(x + d, y + d, x + 50 + d, y + d);
+          // Node
+          p.stroke(255, 215, 0, 44);
+          p.noFill();
+          p.ellipse(x + d, y + d, 5);
+        }
+    }
+};
+ZONE_FNS['2'] = function(p) {
+p.background(0, 4); p.noStroke();
+      for (let n = 0; n < 100; n++) {
+        let t = n / 100;
+        let d = t * 150 * Math.abs(Math.sin(t * Math.PI + p.frameCount / 200));
+        p.fill(255, 140, 0, 30 + t * 30);
+        p.ellipse(250 + d, t * 500, 4);
+        p.ellipse(250 - d, t * 500, 4);
+      }
+    }
+};
+ZONE_FNS['3'] = function(p) {
+p.background(0, 15); p.noStroke();
+      for (let n = 0; n < 200; n++) {
+        let a = n / 200 * Math.PI * 2 + p.frameCount / 40;
+        let r = 30 + p.noise(n / 25, p.frameCount / 180) * 130;
+        p.fill(255, 0, 255, 15);
+        // Left vortex (clockwise)
+        p.ellipse(200 + r * Math.cos(a), 250 + r * Math.sin(a), 4);
+        // Right vortex (counter-clockwise)
+        p.ellipse(300 - r * Math.cos(a), 250 - r * Math.sin(a), 4);
+      }
+    }
+};
+ZONE_FNS['4'] = function(p) {
+p.background(0); p.noFill();
+      for (let n = 0; n < 25; n++) {
+        let F = (p.frameCount + n * 9) % 225;
+        p.stroke(0, 255, 255, 225 - F);
+        p.strokeWeight(2);
+        p.ellipse(250, 250, F * F / 100);
+      }
+    }
+};
+ZONE_FNS['5'] = function(p) {
+p.background(0, 6); p.noStroke();
+      for (let n = 0; n < 3; n++) {
+        let r = 80 + n * 65 + Math.sin(p.frameCount / 40 + n) * 25;
+        for (let i = 0; i < 80; i++) {
+          let a = i / 80 * Math.PI * 2;
+          p.fill(0, 255, 0, 14);
+          p.ellipse(250 + r * Math.cos(a), 250 + r * Math.sin(a), 3);
+        }
+      }
+    }
+};
+ZONE_FNS['6'] = function(p) {
+p.background(0, 12);
+      for (let n = 0; n < 12; n++) {
+        let a = n * Math.PI * 2 / 12 + p.frameCount / 200;
+        let x = 250 + Math.cos(a) * 130;
+        let y = 250 + Math.sin(a) * 130;
+        // Line to next
+        p.stroke(0, 128, 255, 12);
+        let b = ((n + 1) % 12) * Math.PI * 2 / 12 + p.frameCount / 200;
+        p.line(x, y, 250 + Math.cos(b) * 130, 250 + Math.sin(b) * 130);
+        // Circle
+        p.noStroke();
+        p.fill(0, 128, 255, 22);
+        p.ellipse(x, y, 50);
+      }
+    }
+};
+ZONE_FNS['7'] = function(p) {
+p.background(0, 5); p.noFill();
+      for (let n = 0; n < 30; n++) {
+        let F = (p.frameCount + n * 4) % 300;
+        let r = F / 2 + p.noise(F / 99, p.frameCount / 100) * 40;
+        let alpha = Math.max(0, 60 - F / 5);
+        p.stroke(255, 33, 33, alpha);
+        p.strokeWeight(1.5);
+        // Elliptical — wider than tall, like a vessel cross-section
+        p.ellipse(250, 250, r * 1.4, r);
+      }
+    }
+};
+ZONE_FNS['8'] = function(p) {
+p.background(0, 10); p.noStroke();
+      for (let n = 0; n < 120; n++) {
+        let m = n % 4;  // mode: 0,1,2,3
+        let t = n / 120;
+        let orbitR = 80 + m * 40;
+        let x = 250 + Math.cos(t * Math.PI * 2 * m + p.frameCount / 80) * orbitR
+                + p.noise(n, p.frameCount / 200) * 40;
+        let y = 250 + Math.sin(t * Math.PI * 2 * m + p.frameCount / 60) * orbitR
+                + p.noise(n + 50, p.frameCount / 200) * 40;
+        let s = 2 + m + p.noise(n) * 3;
+        // Each mode has slightly different color
+        p.fill(192 - m * 15, 160 + m * 10, 255, 18 + m * 4);
+        p.ellipse(x, y, s);
+      }
+    }
+};
+ZONE_FNS['9'] = function(p) {
+p.background(0, 4); p.noStroke();
+      for (let n = 0; n < 300; n++) {
+        let a = n + p.frameCount / 40;
+        let r = 250 - p.noise(n / 50, p.frameCount / 100) * 240;
+        p.fill(153, 0, 255, 18);
+        p.ellipse(250 + r * Math.cos(a) * 0.9, 250 + r * Math.sin(a) * 0.9, 4);
+      }
+    }
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+  const ZD = [
+  { id:0, name:'Void', hex:'#444444', region:'plex',
+    note:'Radical simplicity. 10 points. One orbit. Period measured in minutes. The void is patient.',
+    tsub:'f=0;draw=_=>{f++||createCanvas(500,500);background(0,4);noStroke();for(i=0;i<10;i++){fill(44,random(25));x=random(500);y=random(500);s=random(3);circle(x,y,s)}}',
+    glyph:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABh0lEQVR4nM1XO07EMBBNzAFoaSJoEEV6eo6wRCC4AhdA20R0bqCBpaBCQnQrxBk4BA2i22aAAs0FeMhsIoVs7IwTEzKSFSmeee/5Nx5H8/1dRDbTE3ufxBzxTt4g5J1xtDsg385QfstW/e+DuzoLDvIqWWcf5+B0c6eE2CvGZ0lyT+Lu8XpVlS04STPYmljELz7tT+7b1y6ixdkFLvW1iVASQPNdPD/EEgGln0jw9DEWjV5CLIlbwde1Zag7dCW3xTtPRd5AHkKAl4iq9SWX4qhQSUdqdR7VBwxMvUWrPsHx+oboaHayZAx7IAl8DG08/5oHVFta7ZMJW9O3briQQiQknwSkgl4uvpeXNjMwinpATwAmBaYrMH2C6eX2eDpQRVQYmDIwfYEpBdMlmBZnOwcD1YRRFJ0/3ZtZeC/EHJo0C6atwapiMF18vL3+dILpqBCwKQKV+rhKciyXAOnNiSG+NksAprUmkj95GWG5CWflJty7Ox3mbTgfy+vYKqQEkYpp8a/zfAMEdIGEobx3YQAAAABJRU5ErkJggg==' },
+  { id:1, name:'Stability', hex:'#FFD700', region:'torque',
+    note:'Gold grid with connected lines. The lattice breathes but holds. Structure as promise.',
+    tsub:'f=0;draw=_=>{f++||createCanvas(500,500);background(0,6);noStroke();for(i=0;i<10;i++){fill(44,random(25));x=random(500);y=random(500);s=random(3);circle(x,y,s)}}',
+    glyph:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAnElEQVR4nGNgGAWjgAKgufb/f4aBtlxzIB3x/436wFk+CoYNYCSkgNxUfs1eg0Hr4A2G68GMBO0Ynrnj/0A64v9oCLwZTQPq/we8HICBASkHRsGQAowwxv836hIMDAzPodyNjCI3A+jhACa4S0RuvmAUuQly0F56WIzhgIECTAwj3QGMMMb/N+oCDAwM79HkWRlFbv6hv7MYRhAAALe9OZM5Ot8SAAAAAElFTkSuQmCC' },
+  { id:2, name:'Separation', hex:'#FF8C00', region:'torque',
+    note:'One stream forks into two. The split widens with descent. The wound deepens.',
+    tsub:'f=0;draw=_=>{f++||createCanvas(500,500);background(0,8);noStroke();for(i=0;i<10;i++){fill(44,random(25));x=random(500);y=random(500);s=random(3);circle(x,y,s)}}',
+    glyph:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAuklEQVR4nO3SMQrCMBTG8X97A50cFFxchK7ZXNx0jAS8gzdwcPAyDsHuCg7ilrWjIIKLF3DQQcVCF2sXoSno+0F44WV4H0lACCGE+HVWq8drFZ2HVCx4b8w6o8K034iiU1qTpJXW+X6Zm1npEwghKhdkG6vVGFgAd+AATEzs1t4CZKxWNWADXEzsepQs/NBrAG3AlT08F8Bq1QRWwBaY+v4DdWAHnIGBid3N9w0MgS7QB65Wq6OPAPy9J5WbKdyQaIVEAAAAAElFTkSuQmCC' },
+  { id:3, name:'Release', hex:'#FF00FF', region:'warp',
+    note:'Two counter-rotating magenta vortices. Release as paired forces — push and pull.',
+    tsub:'f=0;draw=_=>{f++||createCanvas(500,500);background(0,10);noStroke();for(i=0;i<10;i++){fill(44,random(25));x=random(500);y=random(500);s=random(3);circle(x,y,s)}}',
+    glyph:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA+0lEQVR4nO2VsQ3CMBBFXxgAOmrGYAkXSCzBBlBRpmYAZqDICkiwACPQQE39ERBEACdywjmiyJNSJIr//5c7x9DR0fGBcCKUdKKqtbW0qoSLYnVEmwf4J/QvVcgiiKe1P9NkNoIEg5L7nseo0heyGLS1OZHHtMzcPJQ8gub9fxJS1Zd5Re+jBFTADHy+FxVFMUtb2FIWlFZuWYACf1Ct9FxtHlBqYFZnTVJYNAZ2+e0RWCZkayLTeyXJ9gnZLdAQuADT2OZvAW4INwdOwAhYmX720B0h3EC4rXCHUmHD7dXzZnhc9/nI2/LOYpOYBxBunld7BvrAzMqkgwquWV6O6mTiRpsAAAAASUVORK5CYII=' },
+  { id:4, name:'Catastrophe', hex:'#00FFFF', region:'torque',
+    note:'Concentric ripples expanding from center. Catastrophe as wave, not collapse. 暗夜の下 technique.',
+    tsub:'f=0;draw=_=>{f++||createCanvas(500,500);background(0,12);noStroke();for(i=0;i<10;i++){fill(44,random(25));x=random(500);y=random(500);s=random(3);circle(x,y,s)}}',
+    glyph:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAuUlEQVR4nO2VKw4CQQxAX8eRkGA5AEdYi0KPRUOyEs9VcKCxXACB5CBYwgFKNtnAZAPs0A2s6VPtJP03HXAcx3E6oESlI2IOft4/gksxN/txHMeRLi3Q6+V5jEZjk6/Q9wyCJ0ADJW6rX06Ji9z5v9JNI1DiDJi2Gb0LZkkiJMEHwAZY8UdCIq+BI3D6ZNBW5bddCIk8AUrgVuvVLhT8GGk+KHFYJ7EUDjtrdbmHSXIdWhYsJ4neD9EdxgQ9CDY5GZwAAAAASUVORK5CYII=' },
+  { id:5, name:'Pressure', hex:'#00FF00', region:'torque',
+    note:'Three concentric breathing rings. Pressure as layered containment. The squeeze has structure.',
+    tsub:'f=0;draw=_=>{f++||createCanvas(500,500);background(0,14);noStroke();for(i=0;i<10;i++){fill(44,random(25));x=random(500);y=random(500);s=random(3);circle(x,y,s)}}',
+    glyph:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA7UlEQVR4nO2WPQrCQBCFvx1sBFvPYI7gLQQbq6B2XslKZCvtPI2Fjb1eQUcsFAn+ZHaTLKJftey+nXlvEkLgz58IxqOBEonENo81ISRGQi4VU8dMQWKbx5oQEiMW8aeUIVMQEiNlhWXTWacgdRS16IVvQz33dHrs6bN9C66MKOTtXq42rrJHsCxZLEQvVRe1mhUSIxbxp3TW9GYDdSDWC69ShqQPMvCsWWjzK63bQj0ZsH04m7ucGU2hnuz6NVNPJ/VP6UE9e/UMaQBX3FBPG1gDfZfTrduAvDF2ogFat4V6JsACOAM7YNqEAX6eCzjLVOc3Sao8AAAAAElFTkSuQmCC' },
+  { id:6, name:'Abstraction', hex:'#0080FF', region:'warp',
+    note:'12 circles on a ring, connected by lines. Geometry approaching consciousness.',
+    tsub:'f=0;draw=_=>{f++||createCanvas(500,500);background(0,16);noStroke();for(i=0;i<10;i++){fill(44,random(25));x=random(500);y=random(500);s=random(3);circle(x,y,s)}}',
+    glyph:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA/klEQVR4nO2SsUoDQRRFz7NIlSYfkCJl8CcEK7G02SJgE9JYCpkiiiw2bkpLCaSdxjKkT5da/AJrPyBiGFnZyLC7YHbZnS12TjHMu1zmXd488Hg8bUfi43G6MAfhfj7+1dK6TR0eT2NIWiiyD3fSRaKg9D7EeiZA//Tqz/Dx/ip5eszk8iLTIO357x1bL4VROrdhEaTKpvZ3OMFUNYH+kf9ue+xlelmtcz3HvEPTE/B4Gkfswig9AkJgAGwkCs6cBTBKD4E34BrQEgV7HHBi3c+T+gH4NEpPXQfoJBO5BZ6BJ6N0z2WArXWPg3wDO9dLGAI3wBcwkyhY1h2A1vMD+D9sLXmfQYMAAAAASUVORK5CYII=' },
+  { id:7, name:'Blood', hex:'#FF3333', region:'torque',
+    note:'Concentric rings expanding and breathing. Elliptical distortion. The body\'s circulatory rhythm.',
+    tsub:'f=0;draw=_=>{f++||createCanvas(500,500);background(0,18);noStroke();for(i=0;i<10;i++){fill(44,random(25));x=random(500);y=random(500);s=random(3);circle(x,y,s)}}',
+    glyph:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAvElEQVR4nO2UMQoCMRBFX8JewCvYBdvcwNZuIeglrL2BdwkIXsJG01tYeAVvMGKxsEVgXdYkyOZVySTh/z8MgYKYkwizxZRMb2YrXhxT05fC1KmfggQvU1o/9F6TkHur1NAdXXrwdCrxb9InMTBGPImBMeI/p/711Nb/I6pbSPAH4Ng7eynrFtkMdEjwn7/hAdyUdVsS00RqG2AJ7MiAjtT2wEVZd81hoOlvJPgVsAZaMqEj6Z/AOZcBZs8bewFInxLHRNQAAAAASUVORK5CYII=' },
+  { id:8, name:'Multiplicity', hex:'#C0A0FF', region:'torque',
+    note:'120 particles, 4 behavioral modes. Emergence from shared template. Identity as divergence.',
+    tsub:'f=0;draw=_=>{f++||createCanvas(500,500);background(0,20);noStroke();for(i=0;i<10;i++){fill(44,random(25));x=random(500);y=random(500);s=random(3);circle(x,y,s)}}',
+    glyph:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABt0lEQVR4nMVXO04DMRD1WkE0NJHoKecY3IAr0KSiJxWpoMpegQNwBXoajkBJRTOiQzSIh7xaL4Pj8Xq9Thgp8m/mvedZ/2JMpoEJNf2yDYWAs4Wg0kyqZ0SChmUVgwLm+seIUj7FIhEEShJZxvxmEWnjt+v7ofQ/2Z+L4836SnP60mjOrnTjjmSzXXWl9JP9zi+1NkIeG3P0bQ/myVMzk2JkXAq/40iBTSWX5jIiRWhmNXVzyJ2NfQ7ftprCOeShCA2/K2ODTt3d9rpLoweaSi5jb9atusibnY6ChTcmJMSV440WWINcitDGrGzs5WxP4Lq2jS6Mka0z1TRc11YzkEpbyRqQ+NIWMaXyePX1EuLf2HYH3wtqwkC5UmvtghA3eRJ6q/EZZPpDG+4b8993gcm4DWUmtKyEPrm3ofVE0kEGxkTkzlxOJIb/x/pn1ROYPsHEYNoc4kU0GJguehHnYHoA0+uh34RHYHruwb7BdKkR7+VVDKYVmL7AdAamFkzvYFqkwGrcHVbUTxyWMea4PyGX2jYNz/bUVssWB6YlmB7B9AGmNzBdTQIoJTaVAffyX1Aj0OpT7AcAER11FScHpAAAAABJRU5ErkJggg==' },
+  { id:9, name:'Iron Core', hex:'#9900FF', region:'plex',
+    note:'Purple spiral collapse. Everything to the center. The plex singularity folding inward.',
+    tsub:'f=0;draw=_=>{f++||createCanvas(500,500);background(0,22);noStroke();for(i=0;i<10;i++){fill(44,random(25));x=random(500);y=random(500);s=random(3);circle(x,y,s)}}',
+    glyph:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABYElEQVR4nO2WPU7EMBCFvxlBAzR0cAYahGgoQoWoyB0o4QocgENQU1HQ5AabgpYDUNJwBCSEkVGMrMiOncTRFuyTokyc+Xl+8YwCG4zEqn0x/GusOgXs3V1z8unYgPPqTHJ9c8gpC8KSTZHQ0GIqqP9+6DmlmM6VeW68smbo2AArb1Xd/z07264b6sFPE4KkHGxSoRF3H0rqpHe+RRSQLlFuQt/XKdJXZhSBOd3hk7ckQvFbTIR/Diza9m7Q/5dEhSkyB6YiRFKXmAOxDfVVixIoDbuhWGfI2GQ5bRhr4VCMpgrmtFIsJqeFNZUslCQ0CUOFcyBMQOgzTD24ypqh6/4BFWcY6j3gEbgA3oBroXnNITdnbqhn3wKXwBHwATzECpaEevZu792Jod7u/9+VJiLOMNQHwDNw3ClwCOwIzXfJglECDoZ6H3gCPoXmioWhXuHTbpC8A1/AzdLFN7AK/ABTGbHsyBHEuQAAAABJRU5ErkJggg==' }
+  ];
+  const ZF = {
+  '0': ZONE_FNS['0'],
+  '1': ZONE_FNS['1'],
+  '2': ZONE_FNS['2'],
+  '3': ZONE_FNS['3'],
+  '4': ZONE_FNS['4'],
+  '5': ZONE_FNS['5'],
+  '6': ZONE_FNS['6'],
+  '7': ZONE_FNS['7'],
+  '8': ZONE_FNS['8'],
+  '9': ZONE_FNS['9']
+  };
+  const gallery = document.getElementById('gallery');
+  ZD.forEach(z => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `<div class='card-head'><span class='card-title' style='color:${z.hex}'>ZONE ${z.id} — ${z.name.toUpperCase()}</span><span class='card-meta'>${z.region}</span></div><div class='card-canvas' id='canvas-${z.id}'></div><div class='card-code'><pre>${z.tsub}</pre></div><div class='card-note'>${z.note}</div>`;
+    gallery.appendChild(card);
+    new p5(function(p) {
+      p.setup = function() {
+        p.createCanvas(500, 500); p.pixelDensity(1); p.frameRate(60);
+        p.noiseSeed(z.id * 137 + 666);
+        if (z.glyph) p.loadImage(z.glyph, function(img) { window._glyphs = window._glyphs || {}; window._glyphs[z.id] = img; });
+      };
+      p.draw = function() {
+        var g = window._glyphs;
+        if (g && g[z.id]) { p.push(); p.tint(255,255,255,38); p.imageMode(p.CENTER); p.image(g[z.id], 250, 250, 500, 500); p.pop(); }
+        ZF[z.id](p);
+      };
+    }, document.getElementById('canvas-' + z.id));
+  });
+});
+
+</script>

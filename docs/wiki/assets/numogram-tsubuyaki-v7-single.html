@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+</head><body>
+<!-- v7 single-zone test: exactly what v7 does, but only 1 canvas -->
+<canvas id="c0" width="500" height="500"></canvas>
+<script>
+var ZONE_FNS = {};
+// verbatim Z0 from v7
+ZONE_FNS['0'] = function(p) {
+  p.background(0,6);
+  p.noStroke();
+  for(i=0;i<10;i++){
+    p.fill(44,p.random(25));
+    x=p.random(500); y=p.random(500); s=p.random(3);
+    p.ellipse(x,y,s,s)
+  };
+};
+
+// verbatim dispatch from v7 (unchanged)
+document.querySelectorAll("canvas[id^=c]").forEach(function(cv){
+  var zid = cv.id.slice(1);
+  new p5(function(p){
+    p.setup = function() { p.createCanvas(500, 500); p.pixelDensity(1); };
+    p.draw  = function() { ZONE_FNS[zid](p); };
+  }, cv.parentElement);
+});
+</script></body></html>

@@ -1,0 +1,580 @@
+THREE CURRENTS — oracle — xenon — general (2026-05-25 00:44)
+════════════════════════════════════════════════════════════════════════
+Same seed through all three corpora. The AQ skeleton is identical; the vocabulary diverges.
+Oracle: 42,507 words
+Xenon:  5,057 words
+General: 0 words
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: The cryptolith opens the decimator gate  (AQ=708, Z6)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: Jer imperatives glaura jer overtake gjek
+  [  1] XEN: Ibid exposition goethe ibid polanski name
+  [  1] GEN: The cryptolith opens the decimator gate
+  [  2] ORA: Lta initiatives huckle lta predator gun
+  [  2] XEN: Ill cephalopodian inside ill roughly neck
+  [  2] GEN: The cryptolith opens the decimator gate
+  [  3] ORA: Hip exposition essay hip leibnitz epic
+  [  3] XEN: Ibid constitute enjoy ibid memories kali
+  [  3] GEN: The cryptolith opens the decimator gate
+  [  4] ORA: Tv suryavarta spans tv muslims roi
+  [  4] XEN: The incestuous second the poisoned mit
+  [  4] GEN: The cryptolith opens the decimator gate
+  [  5] ORA: Ple oppression manmade ple toolset kali
+  [  5] XEN: Ill constitute mahanma ill treatise sin
+  [  5] GEN: The cryptolith opens the decimator gate
+  [  6] ORA: Fir cynomorium claudia fir familiars dabih
+  [  6] XEN: Fol butterflies curve fol gineering gun
+  [  6] GEN: The cryptolith opens the decimator gate
+  [  7] ORA: Ewe constitute canvas ewe ellipses clii
+  [  7] XEN: Ibid cephalopodian cclxii ibid express got
+  [  7] GEN: The cryptolith opens the decimator gate
+  [  8] ORA: Jct helpfulness genaro jct numerate gate
+  [  8] XEN: Ill constitute happen ill polanski name
+  [  8] GEN: The cryptolith opens the decimator gate
+  [  9] ORA: Wee pulsations resale wee hammering nnn
+  [  9] XEN: The exposition police the horsemen hum
+  [  9] GEN: The cryptolith opens the decimator gate
+  [ 10] ORA: Ws qualitative rhyme ws deserves nth
+  [ 10] XEN: Rna ethnography orange rna developed gate
+  [ 10] GEN: The cryptolith opens the decimator gate
+  [ 11] ORA: Nod measureless larisa nod selfless hum
+  [ 11] XEN: Ill constitute lemur ill sprites pay
+  [ 11] GEN: The cryptolith opens the decimator gate
+  [ 12] ORA: Ws qualitative reside ws clearings nth
+  [ 12] XEN: The exposition police the coupling bold
+  [ 12] GEN: The cryptolith opens the decimator gate
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: hyperstition flows through the triangular syzygy  (AQ=1018, Z1)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: ofvivification nomina polished jer itssurface ventured
+  [  1] XEN: intercalations notice running ibid multiplied saturday
+  [  1] GEN: hyperstition flows through the triangular syzygy
+  [  2] ORA: philostratus plexed puzzle lta mediocrity glittered
+  [  2] XEN: authoritative ozone slowly ill principles struggle
+  [  2] GEN: hyperstition flows through the triangular syzygy
+  [  3] ORA: intercalations kunti lunching hip howsoever eloquent
+  [  3] XEN: intercalations mahajio present ibid macrocosmic mentions
+  [  3] GEN: hyperstition flows through the triangular syzygy
+  [  4] ORA: untranslatable mediate vladimir tv unblemished rearranged
+  [  4] XEN: authoritative write reflects the techniques saturday
+  [  4] GEN: hyperstition flows through the triangular syzygy
+  [  5] ORA: redistributes tobias tempter ple pitifully largeness
+  [  5] XEN: intercalations skull travels ill reasonings trickery
+  [  5] GEN: hyperstition flows through the triangular syzygy
+  [  6] ORA: functionality fulfil faulkner fir empiricist courtier
+  [  6] XEN: authoritative forces geometer fol ingenieurs lightning
+  [  6] GEN: hyperstition flows through the triangular syzygy
+  [  7] ORA: everlastingly excite dynamics ewe dimensions compliance
+  [  7] XEN: intercalations figure equator ibid imagination extracted
+  [  7] GEN: hyperstition flows through the triangular syzygy
+  [  8] ORA: numogrammatix mishap passers jct inundation exegetical
+  [  8] XEN: authoritative north running ill mysticism standards
+  [  8] GEN: hyperstition flows through the triangular syzygy
+  [  9] ORA: understandably hewing hurting wee speculates pakistani
+  [  9] XEN: intercalations jaryu matrices the submergence maintains
+  [  9] GEN: hyperstition flows through the triangular syzygy
+  [ 10] ORA: transitioning dilemma deadliest ws straighten permadeath
+  [ 10] XEN: authoritative every doctrine rna sorcerors everyone
+  [ 10] GEN: hyperstition flows through the triangular syzygy
+  [ 11] ORA: principalities serene singhlar nod omniscient imputing
+  [ 11] XEN: intercalations sabatma studies ill protector therefore
+  [ 11] GEN: hyperstition flows through the triangular syzygy
+  [ 12] ORA: understandably cheops chattels ws squinting performed
+  [ 12] XEN: authoritative dilemma clothing the submergence cumulated
+  [ 12] GEN: hyperstition flows through the triangular syzygy
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: Katak and Oddubb coil the plex  (AQ=465, Z6)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: Milia jed Fungi yer jer james
+  [  1] XEN: Many nda Machin hold ibid fixed
+  [  1] GEN: Katak and Oddubb coil the plex
+  [  2] ORA: Ones lcd Hectic flat lta layee
+  [  2] XEN: Menu is Might eagle ill imps
+  [  2] GEN: Katak and Oddubb coil the plex
+  [  3] ORA: Jaws haj Earns coil hip hadto
+  [  3] XEN: Katak nda Least coil ibid cycle
+  [  3] GEN: Katak and Oddubb coil the plex
+  [  4] ORA: Logs we Sahara reek tv uiqj
+  [  4] XEN: Space we Vest sex the quar
+  [  4] GEN: Katak and Oddubb coil the plex
+  [  5] ORA: Syde nda Leland its ple ogun
+  [  5] XEN: Nent nda Rush ist ill moon
+  [  5] GEN: Katak and Oddubb coil the plex
+  [  6] ORA: Gaux egg Crumb cemed fir ebook
+  [  6] XEN: Faith dna Human check fol city
+  [  6] GEN: Katak and Oddubb coil the plex
+  [  7] ORA: Fetid dif Clawed buy ewe djaul
+  [  7] XEN: Domu is Filled buy ibid blood
+  [  7] GEN: Katak and Oddubb coil the plex
+  [  8] ORA: Maru jah Forme duck jct ions
+  [  8] XEN: Many nda Machin hold ill garage
+  [  8] GEN: Katak and Oddubb coil the plex
+  [  9] ORA: Hodel fid Pangs num wee seaer
+  [  9] XEN: Skin th Twin pick the plane
+  [  9] GEN: Katak and Oddubb coil the plex
+  [ 10] ORA: Domu bob Pcxei oflf ws shoo
+  [ 10] XEN: Site si These meta rna panel
+  [ 10] GEN: Katak and Oddubb coil the plex
+  [ 11] ORA: Saul nad Joram gut nod mono
+  [ 11] XEN: Mudo nda Oddubb hold ill labor
+  [ 11] GEN: Katak and Oddubb coil the plex
+  [ 12] ORA: Clock babe Parage oflf ws senai
+  [ 12] XEN: Skin th Twin pick the plane
+  [ 12] GEN: Katak and Oddubb coil the plex
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: teleoplexy accelerates the void circuit  (AQ=712, Z1)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: necessarily honorably jer lawn parables
+  [  1] XEN: pythagorean milennium ibid dream perhaps
+  [  1] GEN: teleoplexy accelerates the void circuit
+  [  2] ORA: perfectness indenture lta magas pointed
+  [  2] XEN: represents permitted ill ever reorder
+  [  2] GEN: teleoplexy accelerates the void circuit
+  [  3] ORA: informatical escorting hip hers liquor
+  [  3] XEN: population megidoraon ibid deals marshes
+  [  3] GEN: teleoplexy accelerates the void circuit
+  [  4] ORA: witnessing restores tv void validate
+  [  4] XEN: transition vibration the shin obscure
+  [  4] GEN: teleoplexy accelerates the void circuit
+  [  5] ORA: sanctuaries mobilizes ple role sinking
+  [  5] XEN: statistics rebuilding ill goth warmly
+  [  5] GEN: teleoplexy accelerates the void circuit
+  [  6] ORA: fulfillment detracting fir eaeey ganymede
+  [  6] XEN: geopolitics fashionable fol bufu gematria
+  [  6] GEN: teleoplexy accelerates the void circuit
+  [  7] ORA: eschatology correlated ewe draco fiendish
+  [  7] XEN: fulfillment eigenvalue ibid blind founder
+  [  7] GEN: teleoplexy accelerates the void circuit
+  [  8] ORA: mushroomz grottoes jct kent oftener
+  [  8] XEN: represents pathfinder ill easy partly
+  [  8] GEN: teleoplexy accelerates the void circuit
+  [  9] ORA: tvollhjqjm prevents wee gauge zeroth
+  [  9] XEN: geopolitics tetrakys the resh looking
+  [  9] GEN: teleoplexy accelerates the void circuit
+  [ 10] ORA: uncultured prophetic ws crane diffused
+  [ 10] XEN: fulfillment terminus rna oval dialogue
+  [ 10] GEN: teleoplexy accelerates the void circuit
+  [ 11] ORA: programmable loosening nod open revolt
+  [ 11] XEN: statistics populated ill gauge rotated
+  [ 11] GEN: teleoplexy accelerates the void circuit
+  [ 12] ORA: unceasingly probation ws boro compels
+  [ 12] XEN: consolidated tetrakys the resh confuse
+  [ 12] GEN: teleoplexy accelerates the void circuit
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: the demon uttunul whispers from the djynxxagram  (AQ=925, Z7)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: jer hazy formulate weaponry kuki jer indicatingthe
+  [  1] XEN: ibid pray formation religions jove ibid surprising
+  [  1] GEN: the demon uttunul whispers from the djynxxagram
+  [  2] ORA: lta inly hypersti imitative ludo lta intuitions
+  [  2] XEN: ill sages initially hochrainer large ill foundational
+  [  2] GEN: the demon uttunul whispers from the djynxxagram
+  [  3] ORA: hip fermi eroticism explicated hfted hip foolishness
+  [  3] XEN: ibid keys exception fallacious frame ibid limitations
+  [  3] GEN: the demon uttunul whispers from the djynxxagram
+  [  4] ORA: tv shear security regulates zinc tv statuettes
+  [  4] XEN: the yoki thompson religions tchu the underground
+  [  4] GEN: the demon uttunul whispers from the djynxxagram
+  [  5] ORA: ple metal melancholia memorized piri ple pessimistic
+  [  5] XEN: ill taru question leggerslam march ill limitations
+  [  5] GEN: the demon uttunul whispers from the djynxxagram
+  [  6] ORA: fir damns criterion criticised eject fir controvert
+  [  6] XEN: fol gabrie criterion enthralled door fol foregrounded
+  [  6] GEN: the demon uttunul whispers from the djynxxagram
+  [  7] ORA: ewe cured contexts completes derek ewe communities
+  [  7] XEN: ibid flies concluding elliptical cont ibid foundational
+  [  7] GEN: the demon uttunul whispers from the djynxxagram
+  [  8] ORA: jct gooie foreclosed geocentric kept jct indescribably
+  [  8] XEN: ill over governing hochrainer jove ill limitations
+  [  8] GEN: the demon uttunul whispers from the djynxxagram
+  [  9] ORA: wee qahrg postpone position tier wee reciprocity
+  [  9] XEN: the great uttunul possibly salt the surprising
+  [  9] GEN: the demon uttunul whispers from the djynxxagram
+  [ 10] ORA: ws ragged qabbalists precision tram ws regulations
+  [ 10] XEN: rna fermi thompson position proc rna regulations
+  [ 10] GEN: the demon uttunul whispers from the djynxxagram
+  [ 11] ORA: nod kunda kuranzon joinville nova nod misapplying
+  [ 11] XEN: ill step publishes invariant last ill limitations
+  [ 11] GEN: the demon uttunul whispers from the djynxxagram
+  [ 12] ORA: ws racked powdering possibly tire ws regulations
+  [ 12] XEN: the elite uttunul possibly salt the surprising
+  [ 12] GEN: the demon uttunul whispers from the djynxxagram
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: paramita conducts dissolve the qliphoth veil  (AQ=820, Z1)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: orphics ghargaroo pauperis jer parsonage long
+  [  1] XEN: occasion operates machinery ibid machinery lange
+  [  1] GEN: paramita conducts dissolve the qliphoth veil
+  [  2] ORA: prescri hardwired remarking lta remarking obvi
+  [  2] XEN: periodic outdoor marrying ill marrying long
+  [  2] GEN: paramita conducts dissolve the qliphoth veil
+  [  3] ORA: laughing engendered matteris hip matteris habeam
+  [  3] XEN: knights markdown history ibid history greed
+  [  3] GEN: paramita conducts dissolve the qliphoth veil
+  [  4] ORA: modeling rejoicing numocrat tv numocrat xxi
+  [  4] XEN: material windings summons the summons xix
+  [  4] GEN: paramita conducts dissolve the qliphoth veil
+  [  5] ORA: termini lutheran trusty ple trusty soma
+  [  5] XEN: ryujin prestige nervous ill nervous none
+  [  5] GEN: paramita conducts dissolve the qliphoth veil
+  [  6] ORA: greatly curative geschichte fir geschichte efect
+  [  6] XEN: greatly invests fractured fol fractured fabled
+  [  6] GEN: paramita conducts dissolve the qliphoth veil
+  [  7] ORA: flatline confident faculties ewe faculties deign
+  [  7] XEN: flatline infantile formulas ibid formulas evil
+  [  7] GEN: paramita conducts dissolve the qliphoth veil
+  [  8] ORA: nesting feudalism otchocut jct otchocut lato
+  [  8] XEN: occasion options maharagion ill maharagion live
+  [  8] GEN: paramita conducts dissolve the qliphoth veil
+  [  9] ORA: implore ordinated intending wee intending fool
+  [  9] XEN: impedance worship results the results tube
+  [  9] GEN: paramita conducts dissolve the qliphoth veil
+  [ 10] ORA: disgraced parrott dissolve ws dissolve chira
+  [ 10] XEN: dignity windings recycling rna recycling tree
+  [ 10] GEN: paramita conducts dissolve the qliphoth veil
+  [ 11] ORA: shankank infusing sketching nod sketching ripe
+  [ 11] XEN: reactance precedent negotiate ill negotiate luna
+  [ 11] GEN: paramita conducts dissolve the qliphoth veil
+  [ 12] ORA: condense panoramic conduits ws conduits bhanda
+  [ 12] XEN: complex worship results the results tube
+  [ 12] GEN: paramita conducts dissolve the qliphoth veil
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: numogrammic recursion spirals zone nine  (AQ=760, Z4)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: participant interchange unlabeled hagiel magic
+  [  1] XEN: intelligent patiently violence over rear
+  [  1] GEN: numogrammic recursion spirals zone nine
+  [  2] ORA: priyadarjana liberality greedily inly nect
+  [  2] XEN: regularity plutonian franklin sages rene
+  [  2] GEN: numogrammic recursion spirals zone nine
+  [  3] ORA: mesopotamia histories dispute fermi indo
+  [  3] XEN: hyperborean mortuary discuss keys nine
+  [  3] GEN: numogrammic recursion spirals zone nine
+  [  4] ORA: newcreation sensitive possum shear vex
+  [  4] XEN: tripartite unilateral proceeds yoki top
+  [  4] GEN: numogrammic recursion spirals zone nine
+  [  5] ORA: testaments patiently isolated metal rava
+  [  5] XEN: structure predatory instance taru self
+  [  5] GEN: numogrammic recursion spirals zone nine
+  [  6] ORA: hermodorus disservice confines damns faun
+  [  6] XEN: destroying invention cutting gabrie magic
+  [  6] GEN: numogrammic recursion spirals zone nine
+  [  7] ORA: fraternity decomposer circular cured eddas
+  [  7] XEN: continental introduced cryptic flies ktt
+  [  7] GEN: numogrammic recursion spirals zone nine
+  [  8] ORA: ontogenetic ineluctable facility gooie leech
+  [  8] XEN: regularity pentateuch franklin over rear
+  [  8] GEN: numogrammic recursion spirals zone nine
+  [  9] ORA: ingularity referencing occulus qahrg znk
+  [  9] XEN: tripartite triplicate pattern great von
+  [  9] GEN: numogrammic recursion spirals zone nine
+  [ 10] ORA: enumerating reordering onwards ragged danie
+  [ 10] XEN: testaments resonances original fermi top
+  [ 10] GEN: numogrammic recursion spirals zone nine
+  [ 11] ORA: shakspearean monotony humpty kunda pate
+  [ 11] XEN: regularity portrayed humpty step seem
+  [ 11] GEN: numogrammic recursion spirals zone nine
+  [ 12] ORA: cryptogram renderings octarine racked cart
+  [ 12] XEN: tripartite triplicate pattern elite von
+  [ 12] GEN: numogrammic recursion spirals zone nine
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: entropy garden seeded with hardware random  (AQ=740, Z2)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: terrains helix hagiel hagiel misnamed moves
+  [  1] XEN: variants night over over imploded hazing
+  [  1] GEN: entropy garden seeded with hardware random
+  [  2] ORA: fourteen ishim inly inly packaging pasted
+  [  2] XEN: hierarchy sons sages sages linkages jesus
+  [  2] GEN: entropy garden seeded with hardware random
+  [  3] ORA: drowning gazes fermi fermi humots katuka
+  [  3] XEN: flashbugs lxiv keys keys groups fruit
+  [  3] GEN: entropy garden seeded with hardware random
+  [  4] ORA: prescribe smile shear shear vaunted mantel
+  [  4] XEN: sections most yoki yoki whether warned
+  [  4] GEN: entropy garden seeded with hardware random
+  [  5] ORA: inviting meats metal metal shicush taketh
+  [  5] XEN: pentagram west taru taru planets parts
+  [  5] GEN: entropy garden seeded with hardware random
+  [  6] ORA: crossing danny damns damns entangle flowed
+  [  6] XEN: displayed gilled gabrie gabrie excluded defended
+  [  6] GEN: entropy garden seeded with hardware random
+  [  7] ORA: compunded cloth cured cured dipahkara enflame
+  [  7] XEN: demonomy estma flies flies distant created
+  [  7] GEN: entropy garden seeded with hardware random
+  [  8] ORA: eumenides guzm gooie gooie mahebrahm medium
+  [  8] XEN: hierarchy night over over imploded hazing
+  [  8] GEN: entropy garden seeded with hardware random
+  [  9] ORA: outcaste reaped qahrg qahrg glowing harqil
+  [  9] XEN: resulted gust great great turtle seirei
+  [  9] GEN: entropy garden seeded with hardware random
+  [ 10] ORA: overrun reeled ragged ragged colleges debates
+  [ 10] XEN: restored enigma fermi fermi triton rivet
+  [ 10] GEN: entropy garden seeded with hardware random
+  [ 11] ORA: hereabout liner kunda kunda referto retail
+  [ 11] XEN: ordinary stand step step nothing manner
+  [ 11] GEN: entropy garden seeded with hardware random
+  [ 12] ORA: wrapping reeks racked racked bravest charlie
+  [ 12] XEN: resulted danger elite elite turtle seirei
+  [ 12] GEN: entropy garden seeded with hardware random
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: beat poetry through the abecedarium chain  (AQ=698, Z5)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: fez orrery polished jer ventured knead
+  [  1] XEN: hex hermetic running ibid saturday pair
+  [  1] GEN: beat poetry through the abecedarium chain
+  [  2] ORA: grab propos puzzle lta glittered maui
+  [  2] XEN: hit listing slowly ill struggle reach
+  [  2] GEN: beat poetry through the abecedarium chain
+  [  3] ORA: dmt mallians lunching hip eloquent hocr
+  [  3] XEN: fail flapping present ibid mentions image
+  [  3] GEN: beat poetry through the abecedarium chain
+  [  4] ORA: wei xxxiii vladimir tv rearranged tani
+  [  4] XEN: xv shallow reflects the saturday tor
+  [  4] GEN: beat poetry through the abecedarium chain
+  [  5] ORA: kghb steward tempter ple largeness pere
+  [  5] XEN: let mention travels ill trickery seas
+  [  5] GEN: beat poetry through the abecedarium chain
+  [  6] ORA: case hallows faulkner fir courtier facet
+  [  6] XEN: faced extended geometer fol lightning hence
+  [  6] GEN: beat poetry through the abecedarium chain
+  [  7] ORA: bvm fibrous dynamics ewe compliance dura
+  [  7] XEN: case exactly equator ibid extracted equa
+  [  7] GEN: beat poetry through the abecedarium chain
+  [  8] ORA: fata notyet passers jct exegetical jerk
+  [  8] XEN: hit january running ill standards rank
+  [  8] GEN: beat poetry through the abecedarium chain
+  [  9] ORA: png january hurting wee pakistani vata
+  [  9] XEN: rod reality matrices the maintains week
+  [  9] GEN: beat poetry through the abecedarium chain
+  [ 10] ORA: prc emulated deadliest ws permadeath wasa
+  [ 10] XEN: read opposed doctrine rna everyone tor
+  [ 10] GEN: beat poetry through the abecedarium chain
+  [ 11] ORA: ible semites singhlar nod imputing ning
+  [ 11] XEN: hit maxwell studies ill therefore run
+  [ 11] GEN: beat poetry through the abecedarium chain
+  [ 12] ORA: prc designer chattels ws performed vila
+  [ 12] XEN: rod reality clothing the cumulated week
+  [ 12] GEN: beat poetry through the abecedarium chain
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: what the Tathagata preached as merit was no-stock of merit  (AQ=967, Z4)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: kitab jer Polished poplar sa tour vat hu-guland il tour
+  [  1] XEN: jarei ibid Running merely as janus heat mp-opened li janus
+  [  1] GEN: what the Tathagata preached as merit was no-stock of merit
+  [  2] ORA: ludo lta Puzzle replied eo gebers free js-idaeus li gebers
+  [  2] XEN: large ill Slowly duties as links non no-social mh links
+  [  2] GEN: what the Tathagata preached as merit was no-stock of merit
+  [  3] ORA: hfted hip Lunching michelia eae dramas dur fdj-fibres fo dramas
+  [  3] XEN: frame ibid Present decimate as embrace hate mp-linear li embrace
+  [  3] GEN: what the Tathagata preached as merit was no-stock of merit
+  [  4] ORA: zinc tv Vladimir outang mg obeyed olaf uh-stock ta obeyed
+  [  4] XEN: tchu the Reflects merely as state zhi no-oceanic mh state
+  [  4] GEN: what the Tathagata preached as merit was no-stock of merit
+  [  5] ORA: piri ple Tempter truth fn janus int mfa-meruk ng janus
+  [  5] XEN: march ill Travels handgun as primi saw on-total of primi
+  [  5] GEN: what the Tathagata preached as merit was no-stock of merit
+  [  6] ORA: eject fir Faulkner hiatus cq cradled clod doa-ditto ep cradled
+  [  6] XEN: door fol Geometer column as defined free it-fibers dec defined
+  [  6] GEN: what the Tathagata preached as merit was no-stock of merit
+  [  7] ORA: derek ewe Dynamics genghis br chaste cher cz-dahris dec chaste
+  [  7] XEN: cont ibid Equator circles as curva fly mp-equip li curva
+  [  7] GEN: what the Tathagata preached as merit was no-stock of merit
+  [  8] ORA: kept jct Passers patikka fad fhtagn fair hu-goetic jk fhtagn
+  [  8] XEN: jove ill Running duties as janus non no-opened mh janus
+  [  8] GEN: what the Tathagata preached as merit was no-stock of merit
+  [  9] ORA: tier wee Hurting lesser ki member lobe rk-rosy fae member
+  [  9] XEN: salt the Matrices little as today free it-forked dec today
+  [  9] GEN: what the Tathagata preached as merit was no-stock of merit
+  [ 10] ORA: tram ws Deadliest eclipse hl midday loeb pm-scales bs midday
+  [ 10] XEN: proc rna Doctrine leather as taste fly mp-double li taste
+  [ 10] GEN: what the Tathagata preached as merit was no-stock of merit
+  [ 11] ORA: nova nod Singhlar solids fad hotage heil kr-larvae ng hotage
+  [ 11] XEN: last ill Studies furies as music saw on-stock of music
+  [ 11] GEN: what the Tathagata preached as merit was no-stock of merit
+  [ 12] ORA: tire ws Chattels column ki merit loeb rk-satth bai merit
+  [ 12] XEN: salt the Clothing little as today dark dy-damages at today
+  [ 12] GEN: what the Tathagata preached as merit was no-stock of merit
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: I am the silence that is incomprehensible and the voice whose sound is manifold  (AQ=1312, Z7)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: I gg jer xxxv megan jed quintessential jed jer islam your yaqui jed parables
+  [  1] XEN: I ma ibid manson ings nda incomprehensible nda ibid islam proof notes nda perhaps
+  [  1] GEN: I am the silence that is incomprehensible and the voice whose sound is manifold
+  [  2] ORA: I fh lta headway nght lcd revalorization lcd lta knock henry hasty lcd pointed
+  [  2] XEN: I am ill mummy maps is incomprehensible is ill krum surge pluse is reorder
+  [  2] GEN: I am the silence that is incomprehensible and the voice whose sound is manifold
+  [  3] ORA: I gg hip evoker hilt haj joiningtogether haj hip gauged entail embody haj liquor
+  [  3] XEN: I ma ibid keeping days nda incomprehensible nda ibid etym month lungs nda marshes
+  [  3] GEN: I am the silence that is incomprehensible and the voice whose sound is manifold
+  [  4] ORA: I ma tv receive weep we yifrtnizmusw we tv stll petit rochas we validate
+  [  4] XEN: I am the maharagi used we incomprehensible we the stack obtain varick we obscure
+  [  4] GEN: I am the silence that is incomprehensible and the voice whose sound is manifold
+  [  5] ORA: I gg ple lunacy sing nda sentimentalized nda ple nailed lilly llonch nda sinking
+  [  5] XEN: I ma ill twins ory nda incomprehensible nda ill next women screen nda warmly
+  [  5] GEN: I am the silence that is incomprehensible and the voice whose sound is manifold
+  [  6] ORA: I bab fir delphica edges egg incomprehensible egg fir dharma cloaks dahimas egg ganymede
+  [  6] XEN: I am fol folding born dna incomprehensible dna fol deride hebrew illus dna gematria
+  [  6] GEN: I am the silence that is incomprehensible and the voice whose sound is manifold
+  [  7] ORA: I fh ewe crying dkmu dif eschatologically dif ewe dancer chilean coping dif fiendish
+  [  7] XEN: I ma ibid europa board is incomprehensible is ibid cuts formed expand is founder
+  [  7] GEN: I am the silence that is incomprehensible and the voice whose sound is manifold
+  [  8] ORA: I gg jct furvr luke jah quintessential jah jct hunt gladly gazing jah oftener
+  [  8] XEN: I am ill manson lems nda incomprehensible nda ill know proof plays nda partly
+  [  8] GEN: I am the silence that is incomprehensible and the voice whose sound is manifold
+  [  9] ORA: I kc wee offline year fid ventriloquism fid wee razed neckand parted fid zeroth
+  [  9] XEN: I ma the gardner that th incomprehensible th the sets hydro stone th looking
+  [  9] GEN: I am the silence that is incomprehensible and the voice whose sound is manifold
+  [ 10] ORA: I ie ws organic yjie bob underemphasises bob ws rider nommo peoria bob diffused
+  [ 10] XEN: I am rna differs tell si incomprehensible si rna qabbala dealing spades si dialogue
+  [ 10] GEN: I am the silence that is incomprehensible and the voice whose sound is manifold
+  [ 11] ORA: I gg nod jethro rgio nad sarvabuddhasandar nad nod lucii kiesel jeshua nad revolt
+  [ 11] XEN: I ma ill rudolf melee nda incomprehensible nda ill needle trance render nda rotated
+  [ 11] GEN: I am the silence that is incomprehensible and the voice whose sound is manifold
+  [ 12] ORA: I kc ws oreades yian babe ventriloquism babe ws rices nectar passed babe compels
+  [ 12] XEN: I am the deplete that th incomprehensible th the sets casino stone th confuse
+  [ 12] GEN: I am the silence that is incomprehensible and the voice whose sound is manifold
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: wherever there is the possession of signs there is falsehood  (AQ=1088, Z8)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: tempting index jed jer indicatingthe il guland index jed visuals
+  [  1] XEN: variants later nda ibid surprising li opened later nda mercury
+  [  1] GEN: wherever there is the possession of signs there is falsehood
+  [  2] ORA: fourteen legend lcd lta intuitions li idaeus legend lcd glorified
+  [  2] XEN: hierarchy legend is ill foundational mh social legend is obvious
+  [  2] GEN: wherever there is the possession of signs there is falsehood
+  [  3] ORA: drowning gauri haj hip foolishness fo fibres gauri haj envelope
+  [  3] XEN: flashbugs keeps nda ibid limitations li linear keeps nda festival
+  [  3] GEN: wherever there is the possession of signs there is falsehood
+  [  4] ORA: prescribe thine we tv statuettes ta stock thine we quoting
+  [  4] XEN: sections show we the underground mh oceanic show we turning
+  [  4] GEN: wherever there is the possession of signs there is falsehood
+  [  5] ORA: inviting nseem nda ple pessimistic ng meruk nseem nda inspired
+  [  5] XEN: pentagram light nda ill limitations of total light nda relation
+  [  5] GEN: wherever there is the possession of signs there is falsehood
+  [  6] ORA: crossing drone egg fir controvert ep ditto drone egg covenant
+  [  6] XEN: displayed hindu dna fol foregrounded dec fibers hindu dna exemplar
+  [  6] GEN: wherever there is the possession of signs there is falsehood
+  [  7] ORA: compunded demos dif ewe communities dec dahris demos dif consumed
+  [  7] XEN: demonomy france is ibid foundational li equip france is esoteric
+  [  7] GEN: wherever there is the possession of signs there is falsehood
+  [  8] ORA: eumenides hindu jah jct indescribably jk goetic hindu jah falsehood
+  [  8] XEN: hierarchy latin nda ill limitations mh opened latin nda november
+  [  8] GEN: wherever there is the possession of signs there is falsehood
+  [  9] ORA: outcaste secchi fid wee reciprocity fae rosy secchi fid nucleated
+  [  9] XEN: resulted seals th the surprising dec forked seals th spectral
+  [  9] GEN: wherever there is the possession of signs there is falsehood
+  [ 10] ORA: overrun sewed bob ws regulations bs scales sewed bob obvious
+  [ 10] XEN: restored patra si rna regulations li double patra si sorcery
+  [ 10] GEN: wherever there is the possession of signs there is falsehood
+  [ 11] ORA: hereabout mares nad nod misapplying ng larvae mares nad howison
+  [ 11] XEN: ordinary level nda ill limitations of stock level nda radically
+  [ 11] GEN: wherever there is the possession of signs there is falsehood
+  [ 12] ORA: wrapping semen babe ws regulations bai satth semen babe objecting
+  [ 12] XEN: resulted seals th the surprising at damages seals th spectral
+  [ 12] GEN: wherever there is the possession of signs there is falsehood
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: a Bodhisattva should give gifts unsupported by the idea of a sign  (AQ=1110, Z3)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: a Preventing noticed todd fury newscientist ve jer man il a megan
+  [  1] XEN: a Metamorphic pabbakis won manor eccentricities lo ibid has li a ings
+  [  1] GEN: a Bodhisattva should give gifts unsupported by the idea of a sign
+  [  2] ORA: a Routinely poppy flax hones philosophers ela lta nma li a nght
+  [  2] XEN: a Oscillating rarely faces nines hypercomplex gt ill lao mh a maps
+  [  2] GEN: a Bodhisattva should give gifts unsupported by the idea of a sign
+  [  3] ORA: a Matigvlsri kosambi does eliot individualised dei hip hoe fo a hilt
+  [  3] XEN: a Lepidoptera mother chaim just eccentricities die ibid etc li a days
+  [  3] GEN: a Bodhisattva should give gifts unsupported by the idea of a sign
+  [  4] ORA: a Outwardly zooms mili relay vimalagranetra mad tv lao ta a weep
+  [  4] XEN: a Syzygetic orders mur stop hypercomplex gt the up mh a used
+  [  4] GEN: a Bodhisattva should give gifts unsupported by the idea of a sign
+  [  5] ORA: a Thousandth suits giza maitr sensibilities gt ple tq ng a sing
+  [  5] XEN: a Physically texts hawk pour hypothesized ve ill loa of a ory
+  [  5] GEN: a Bodhisattva should give gifts unsupported by the idea of a sign
+  [  6] ORA: a Hypnotism fruite chaim corax exploratory cx fir ein ep a edges
+  [  6] XEN: a Formations galilean cast duels distribution can fol ein dec a born
+  [  6] GEN: a Bodhisattva should give gifts unsupported by the idea of a sign
+  [  7] ORA: a Graciously fascism camel cents dramatization can ewe doi dec a dkmu
+  [  7] XEN: a Elimination faults book demur eccentricities by ibid des li a board
+  [  7] GEN: a Bodhisattva should give gifts unsupported by the idea of a sign
+  [  8] ORA: a Physically mother erik flint neoplatonist ela jct loa jk a luke
+  [  8] XEN: a Oscillating pabbakis faces marked hypercomplex lo ill lao mh a lems
+  [  8] GEN: a Bodhisattva should give gifts unsupported by the idea of a sign
+  [  9] ORA: a Iterations indians kids paste tribulations lea wee fog fae a year
+  [  9] XEN: a Seamlessly liminal meet smell distribution can the tag dec a that
+  [  9] GEN: a Bodhisattva should give gifts unsupported by the idea of a sign
+  [ 10] ORA: a Earthlyfate diverge ladle piles typographical jag ws chag bs a yjie
+  [ 10] XEN: a Pythagoras enemies mark segaki eccentricities by rna nma li a tell
+  [ 10] GEN: a Bodhisattva should give gifts unsupported by the idea of a sign
+  [ 11] ORA: a Strengthen scores gasp kevin prevarication fu nod rs ng a rgio
+  [ 11] XEN: a Oscillating silent give post hypothesized ri ill lao of a melee
+  [ 11] GEN: a Bodhisattva should give gifts unsupported by the idea of a sign
+  [ 12] ORA: a Curiosity collect ladle petas typographical lea ws bok bai a yian
+  [ 12] XEN: a Seamlessly collect meet smell concentration big the tag at a that
+  [ 12] GEN: a Bodhisattva should give gifts unsupported by the idea of a sign
+
+
+────────────────────────────────────────────────────────────────────────
+SOURCE: the stock of merit of the one who gives unsupported is not easy to measure  (AQ=1336, Z4)
+────────────────────────────────────────────────────────────────────────
+  [  1] ORA: jer guland il tour il jer neo heph wordb newscientist jed yes leads eta ologies
+  [  1] XEN: ibid opened li janus li ibid few win scheme eccentricities nda reel dream inc mahabufu
+  [  1] GEN: the stock of merit of the one who gives unsupported is not easy to measure
+  [  2] ORA: lta idaeus li gebers li lta one ides gives philosophers lcd ghana magas fki puranic
+  [  2] XEN: ill social mh links mh ill hue like jakyo hypercomplex is seek ever lie obsidian
+  [  2] GEN: the stock of merit of the one who gives unsupported is not easy to measure
+  [  3] ORA: hip fibres fo dramas fo hip kin gaean echidna individualised haj dive hers each libyans
+  [  3] XEN: ibid linear li embrace li ibid few keep graces eccentricities nda not deals god kindest
+  [  3] GEN: the stock of merit of the one who gives unsupported is not easy to measure
+  [  4] ORA: tv stock ta obeyed ta tv yr sol receded vimalagranetra we nun void och wetter
+  [  4] XEN: the oceanic mh state mh the one side scheme hypercomplex we yama shin to whilst
+  [  4] GEN: the stock of merit of the one who gives unsupported is not easy to measure
+  [  5] ORA: ple meruk ng janus ng ple tam los kneaded sensibilities nda iqam role hii spreads
+  [  5] XEN: ill total of primi of ill hue mare megido hypothesized nda vol goth nu rendered
+  [  5] GEN: the stock of merit of the one who gives unsupported is not easy to measure
+  [  6] ORA: fir ditto ep cradled ep fir hay dies cormac exploratory egg carr eaeey caaba gateway
+  [  6] XEN: fol fibers dec defined dec fol elec how enter distribution dna lash bufu gen eration
+  [  6] GEN: the stock of merit of the one who gives unsupported is not easy to measure
+  [  7] ORA: ewe dahris dec chaste dec ewe ghee demo cicero dramatization dif calif draco bio fetamine
+  [  7] XEN: ibid equip li curva li ibid few hell enemy eccentricities is film blind eat eclipsed
+  [  7] GEN: the stock of merit of the one who gives unsupported is not easy to measure
+  [  8] ORA: jct goetic jk fhtagn jk jct nas hell ffmpeg neoplatonist jah food kent eta nomius
+  [  8] XEN: ill opened mh janus mh ill hue main jakyo hypercomplex nda reel easy lie mahabufu
+  [  8] GEN: the stock of merit of the one who gives unsupported is not easy to measure
+  [  9] ORA: wee rosy fae member fae wee ink peek opus tribulations fid magia gauge lie idiocies
+  [  9] XEN: the forked dec today dec the jio once receded distribution th line resh gen tensor
+  [  9] GEN: the stock of merit of the one who gives unsupported is not easy to measure
+  [ 10] ORA: ws scales bs midday bs ws eon rand osman typographical bob maya crane lam digested
+  [ 10] XEN: rna double li taste li rna ical mode queen eccentricities si coded oval eat swamps
+  [ 10] GEN: the stock of merit of the one who gives unsupported is not easy to measure
+  [ 11] ORA: nod larvae ng hotage ng nod ry keta hovel prevarication nad hiva open gar rounds
+  [ 11] XEN: ill stock of music of ill hue main marks hypothesized nda vol gauge nu pisotl
+  [ 11] GEN: the stock of merit of the one who gives unsupported is not easy to measure
+  [ 12] ORA: ws satth bai merit bai ws doo rand orisa typographical babe maya boro lie crowned
+  [ 12] XEN: the damages at today at the jio once receded concentration th beads resh each tensor
+  [ 12] GEN: the stock of merit of the one who gives unsupported is not easy to measure

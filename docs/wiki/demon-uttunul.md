@@ -96,3 +96,17 @@ Zone-9 is allotted the Sarkonian Mesh-Tag **0511**.
 > "Lemurian subcultures associate Zone-9 with the Cthellloid metallic ocean of the earth's iron core."
 
 [Source: CCRU Writings 1997-2003, Zone-9 description]
+
+---
+
+## Literary Sources
+
+Uttunul appears by name in CCRU hyperfiction, notably in **"Zerok un Holes"** by Kathy Hacker (*Syzygy* journal, CCRU):
+
+> *"Endless unraveling towards the body of Uttunul Which never comes. But it's close... Just... Outside... Always... Turning itself on... Sucking... Feeding..."*
+
+The text (at `raw/www.ccru.net/syzygy/zerok.htm`) presents Uttunul as an asymptotic horizon — a body that is approached but never arrived at, a zero-point of differentiation that the text's own "wheel turning round and around" perpetually gestures toward. This is the Plex carrier rendered as literary affect rather than structural node: the abyssal terminus as erotic-intellectual horizon, ceaselessly deferred.
+
+The same hyperfiction embeds a surge/hold/sink table (8:1-7:2, 7:2-5:4, 5:4-8:1) with demon name variants (murmerge, overdoublings, odd dub, kataclysm) alongside the Uttunul passage — grounding the Plex's terminal figure within the same syzygy network that the wiki treats structurally.
+
+Also referenced: **"Amphibious Maidens"** (S. Livingstone, L. Parisi, A. Greenspan, *Swarm 3*) closes with I Ching hexagram 24 (Fu/Return) on the seventh day — the seventh day as return maps onto the 7::2 syzygy's folding-back dynamic, complementary to Uttunul's terminal closure. Together the two texts bracket the numogram's outer limits: the amphibious return (Zone 7 :: 2) and the abyssal approach (Zone 9 :: 0).

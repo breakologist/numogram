@@ -14,6 +14,7 @@
   .meta{font-size:10px;color:#666;padding:4px 10px;border-top:1px solid #212121}
   .tag{background:#222;color:#0ff;padding:1px 5px;border-radius:2px;font-size:9px;margin-right:4px}
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
 </head>
 <body>
 <div class="grid">
@@ -24,7 +25,7 @@
   </div>
   <canvas id="c0" width="500" height="500"></canvas>
   <div class="meta"><span class="tag">behavior:flatline</span>Flatline — no carrier; DC zero. The numogram's breath-hold. · 160 chars</div>
-  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);background(0,6);noStroke();for(i=0;i<10;i++){fill(44,random(25));x=random(500);y=random(500);s=random(3);circle(x,y,s)}}</div>
+  <div class="code-block">f=0;draw=_=>{f++;/*canvas*/background(0,6);noStroke();for(i=0;i<10;i++){fill(44,random(25));x=random(500);y=random(500);s=random(3);circle(x,y,s)}}</div>
 </div>
     <div class="card">
   <div class="card-header">
@@ -33,7 +34,7 @@
   </div>
   <canvas id="c1" width="500" height="500"></canvas>
   <div class="meta"><span class="tag">behavior:grid_stable</span>Grid constrained by correlated noise. Stability as bounded jitter. · 175 chars</div>
-  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);let _z_seed=zid*7919;background(0);noStroke();for(x=25;x<500;x+=50)for(y=25;y<500;y+=50){d=noise(_z_seed + x/200,y/200,f/300)*9;fill(255,215,0,55);circle(x+d,y+d,3)}}</div>
+  <div class="code-block">f=0;draw=_=>{f++;/*canvas*/let _z_seed=zid*7919;background(0);noStroke();for(x=25;x<500;x+=50)for(y=25;y<500;y+=50){d=noise(_z_seed + x/200,y/200,f/300)*9;fill(255,215,0,55);circle(x+d,y+d,3)}}</div>
 </div>
     <div class="card">
   <div class="card-header">
@@ -42,7 +43,7 @@
   </div>
   <canvas id="c2" width="500" height="500"></canvas>
   <div class="meta"><span class="tag">behavior:double_stream</span>Two counter-rotating Lissajous streams diverging by amplitude envelope. · 187 chars</div>
-  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);background(0,6);noStroke();for(i=0;i<100;i++){t=i/100;x=250+sin(t*PI*4+f/100)*(100+t*150);y=t*500;fill(255,140,0,25+15*sin(i+f/30));circle(x,y,3)}}</div>
+  <div class="code-block">f=0;draw=_=>{f++;/*canvas*/background(0,6);noStroke();for(i=0;i<100;i++){t=i/100;x=250+sin(t*PI*4+f/100)*(100+t*150);y=t*500;fill(255,140,0,25+15*sin(i+f/30));circle(x,y,3)}}</div>
 </div>
     <div class="card">
   <div class="card-header">
@@ -51,7 +52,7 @@
   </div>
   <canvas id="c3" width="500" height="500"></canvas>
   <div class="meta"><span class="tag">behavior:radial_scatter</span>Radial scatter; noise-modulated radius creates fuzzy expanding magenta cloud. · 187 chars</div>
-  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);let _z_seed=zid*7919;background(0,12);noStroke();for(i=0;i<400;i++){a=i/400*TAU+f/50;r=50+noise(_z_seed + i/30,f/200)*200;fill(255,0,255,22);circle(250+r*cos(a),250+r*sin(a),4)}}</div>
+  <div class="code-block">f=0;draw=_=>{f++;/*canvas*/let _z_seed=zid*7919;background(0,12);noStroke();for(i=0;i<400;i++){a=i/400*TAU+f/50;r=50+noise(_z_seed + i/30,f/200)*200;fill(255,0,255,22);circle(250+r*cos(a),250+r*sin(a),4)}}</div>
 </div>
     <div class="card">
   <div class="card-header">
@@ -60,7 +61,7 @@
   </div>
   <canvas id="c4" width="500" height="500"></canvas>
   <div class="meta"><span class="tag">behavior:grid_quake</span>8×8 grid displaced by smooth noise; four missing corners = structural wound. · 186 chars</div>
-  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);let _z_seed=zid*7919;background(0,0);noStroke();for(i=0;i<64-4;i++){x=i%8*65+30;y=~~(i/8)*65+30;D=noise(_z_seed + x/99,y/99,f/80)*40;fill(0,255,255,44);rect(x+D-5,y+D-5,10,10)}}</div>
+  <div class="code-block">f=0;draw=_=>{f++;/*canvas*/let _z_seed=zid*7919;background(0,0);noStroke();for(i=0;i<64-4;i++){x=i%8*65+30;y=~~(i/8)*65+30;D=noise(_z_seed + x/99,y/99,f/80)*40;fill(0,255,255,44);rect(x+D-5,y+D-5,10,10)}}</div>
 </div>
     <div class="card">
   <div class="card-header">
@@ -69,7 +70,7 @@
   </div>
   <canvas id="c5" width="500" height="500"></canvas>
   <div class="meta"><span class="tag">behavior:pulse_ring</span>Ring pulse — abs(sin) compression drives inward/outward radial breathing. · 181 chars</div>
-  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);background(0,8);noStroke();for(i=0;i<250;i++){a=i/250*TAU;r=250-abs(sin(i*3+f/80))*200;fill(0,255,0,28);circle(250+r*cos(a),250+r*sin(a),4)}}</div>
+  <div class="code-block">f=0;draw=_=>{f++;/*canvas*/background(0,8);noStroke();for(i=0;i<250;i++){a=i/250*TAU;r=250-abs(sin(i*3+f/80))*200;fill(0,255,0,28);circle(250+r*cos(a),250+r*sin(a),4)}}</div>
 </div>
     <div class="card">
   <div class="card-header">
@@ -78,7 +79,7 @@
   </div>
   <canvas id="c6" width="500" height="500"></canvas>
   <div class="meta"><span class="tag">behavior:ring_circles</span>Twelve rotating circles; additive transparency builds toroidal blue halo. · 178 chars</div>
-  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);background(0,12);noStroke();for(i=0;i<12;i++){push();translate(250,250);rotate(i*TAU/12+f/200);fill(0,128,255,22);circle(100,0,80);pop()}}</div>
+  <div class="code-block">f=0;draw=_=>{f++;/*canvas*/background(0,12);noStroke();for(i=0;i<12;i++){push();translate(250,250);rotate(i*TAU/12+f/200);fill(0,128,255,22);circle(100,0,80);pop()}}</div>
 </div>
     <div class="card">
   <div class="card-header">
@@ -87,7 +88,7 @@
   </div>
   <canvas id="c7" width="500" height="500"></canvas>
   <div class="meta"><span class="tag">behavior:elliptical_pulse</span>Elliptical orbits with fast noise modulation; trails stain canvas dark red. · 178 chars</div>
-  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);let _z_seed=zid*7919;background(0,4);noStroke();for(i=0;i<200;i++){r=90+noise(_z_seed + i,f/60)*160;a=i+f/90;fill(255,33,33,18);circle(250+r*cos(a)*0.6,250+r*sin(a),5)}}</div>
+  <div class="code-block">f=0;draw=_=>{f++;/*canvas*/let _z_seed=zid*7919;background(0,4);noStroke();for(i=0;i<200;i++){r=90+noise(_z_seed + i,f/60)*160;a=i+f/90;fill(255,33,33,18);circle(250+r*cos(a)*0.6,250+r*sin(a),5)}}</div>
 </div>
     <div class="card">
   <div class="card-header">
@@ -96,7 +97,7 @@
   </div>
   <canvas id="c8" width="500" height="500"></canvas>
   <div class="meta"><span class="tag">behavior:swarm_template</span>Lissajous template + per-particle independent noise; identity within form. · 210 chars</div>
-  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);let _z_seed=zid*7919;background(0,10);noStroke();for(i=0;i<80;i++){x=250+cos(i)*150+noise(_z_seed + i,f/200)*60;y=250+sin(i*0.7)*150+noise(_z_seed + i+99,f/200)*60;fill(192,160,255,33);circle(x,y,4+noise(_z_seed + i)*5)}}</div>
+  <div class="code-block">f=0;draw=_=>{f++;/*canvas*/let _z_seed=zid*7919;background(0,10);noStroke();for(i=0;i<80;i++){x=250+cos(i)*150+noise(_z_seed + i,f/200)*60;y=250+sin(i*0.7)*150+noise(_z_seed + i+99,f/200)*60;fill(192,160,255,33);circle(x,y,4+noise(_z_seed + i)*5)}}</div>
 </div>
     <div class="card">
   <div class="card-header">
@@ -105,54 +106,133 @@
   </div>
   <canvas id="c9" width="500" height="500"></canvas>
   <div class="meta"><span class="tag">behavior:inward_spiral</span>Center-weighted spiral; noise pushes particles inward; opposite of Void. · 187 chars</div>
-  <div class="code-block">f=0;draw=_=>{f++||createCanvas(500,500);let _z_seed=zid*7919;background(0,4);noStroke();for(i=0;i<300;i++){a=i+f/40;r=250-noise(_z_seed + i/50,f/100)*240;fill(153,0,255,18);circle(250+r*cos(a)*0.9,250+r*sin(a)*0.9,4)}}</div>
+  <div class="code-block">f=0;draw=_=>{f++;/*canvas*/let _z_seed=zid*7919;background(0,4);noStroke();for(i=0;i<300;i++){a=i+f/40;r=250-noise(_z_seed + i/50,f/100)*240;fill(153,0,255,18);circle(250+r*cos(a)*0.9,250+r*sin(a)*0.9,4)}}</div>
 </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script><script>
-const MASK_DATA = {
-    0: [0011001101111011011001111110111010000100000101101011100101110001111001111000011001001011011001111010],
-    1: [1101100110011001101110011101110010101000110110110100100111111001011110011010110111100001100001111001],
-    2: [0110011100000110011001100100001000101110010000111101111000000111010011110010110010011111000110000111],
-    3: [1001000110011010100011011001100110011001101101011001001011011110100101001001111111111001110101001010],
-    4: [0001100110101101100110111000100100011001100001111000111100011011010010100111100101100001110100111101],
-    5: [1110100101000001111011100001100100101101110011011101100110011000000110011010101110010101110111111011],
-    6: [0000111101111100011010111110011110000111010011100111110001101111111001110010001001110111010001101110],
-    7: [1110000111010111100111101101110001011010101000010011101110111100110111101101100110011001100011011001],
-    8: [0111011111100011000011000100100011111100111000011010011110000111000010101111100011111000010100001111],
-    9: [1001111011111010110111011010001010011111110111011101101010001001100111011001101111101100111011011001]
-  };
-
-
-const ZONE_DATA = {};
-document.querySelectorAll('.card').forEach(card => {
-  const zid = card.querySelector('.zone-id').textContent.split(' ')[1];
-  const code = card.querySelector('.code-block').textContent.trim();
-  ZONE_DATA[zid] = code;
-});
-
-
-
-document.querySelectorAll('canvas').forEach(cv => {
-  const zid = cv.id.slice(1);
-  new p5((p) => {
-    let f = 0;
-    p.setup = () => p.createCanvas(500,500);
-    p.draw = () => {
-      (function(raw,zoneid){
-  eval(raw);
-  let cv=document.querySelector('canvas[id^="c"]');
-  if(!cv||!zoneid)return;
-  let W=cv.width,H=cv.height;
-  if(W<=0||H<=0)return;
-  let ctx=cv.getContext('2d');
-  let px=ctx.getImageData(0,0,10,10).data;
-  let bin=MASK_DATA[zoneid]||MASK_DATA[0];
-  for(let i=0;i<100;i++){px[i*4+3]=bin[i]?px[i*4+3]:0;}
-  ctx.putImageData(new ImageData(px,10,10),0,0);
-})(ZONE_DATA[zid], zid);
-    };
+<script>
+// ZONE_FNS: precompiled draw functions converted from tsubuyaki one-liners
+var ZONE_FNS = {};
+ZONE_FNS['0'] = function(p) {
+    f++;
+    /*canvas*/p.background(0,6);
+    p.noStroke();
+    for(i=0;
+    i<10;
+    i++){p.fill(44,p.random(25));
+    x=p.random(500);
+    y=p.random(500);
+    s=p.random(3);
+    p.ellipse(x,y,s,s)
+};
+ZONE_FNS['1'] = function(p) {
+    f++;
+    /*canvas*/p.background(0);
+    p.noStroke();
+    for(x=25;
+    x<500;
+    x+=50)for(y=25;
+    y<500;
+    y+=50){d=p.noise(7919 + x/200,y/200,p.frameCount/300)*9;
+    p.fill(255,215,0,55);
+    p.ellipse(x+d,y+d,3,3)
+};
+ZONE_FNS['2'] = function(p) {
+    f++;
+    /*canvas*/p.background(0,6);
+    p.noStroke();
+    for(i=0;
+    i<100;
+    i++){t=i/100;
+    x=250+Math.sin(t*Math.PI*4+f/100)*(100+t*150);
+    y=t*500;
+    p.fill(255,140,0,25+15*Math.sin(i+f/30));
+    p.ellipse(x,y,3,3)
+};
+ZONE_FNS['3'] = function(p) {
+    f++;
+    /*canvas*/p.background(0,12);
+    p.noStroke();
+    for(i=0;
+    i<400;
+    i++){a=i/400*Math.Math.PI*2+f/50;
+    r=50+p.noise(23757 + i/30,p.frameCount/200)*200;
+    p.fill(255,0,255,22);
+    p.ellipse(250+r*Math.cos(a,250+r*Math.cos(a),250+r*Math.sin(a),4)
+};
+ZONE_FNS['4'] = function(p) {
+    f++;
+    /*canvas*/p.background(0,0);
+    p.noStroke();
+    for(i=0;
+    i<64-4;
+    i++){x=i%8*65+30;
+    y=~~(i/8)*65+30;
+    D=p.noise(31676 + x/99,y/99,p.frameCount/80)*40;
+    p.fill(0,255,255,44);
+    p.rect(x+D-5,y+D-5,10,10)
+};
+ZONE_FNS['5'] = function(p) {
+    f++;
+    /*canvas*/p.background(0,8);
+    p.noStroke();
+    for(i=0;
+    i<250;
+    i++){a=i/250*Math.Math.PI*2;
+    r=250-Math.abs(Math.sin(i*3+f/80))*200;
+    p.fill(0,255,0,28);
+    p.ellipse(250+r*Math.cos(a,250+r*Math.cos(a),250+r*Math.sin(a),4)
+};
+ZONE_FNS['6'] = function(p) {
+    f++;
+    /*canvas*/p.background(0,12);
+    p.noStroke();
+    for(i=0;
+    i<12;
+    i++){p.push();
+    p.translate(250,250);
+    p.rotate(i*Math.Math.PI*2/12+f/200);
+    p.fill(0,128,255,22);
+    p.ellipse(100,0,80,80);
+    p.pop()
+};
+ZONE_FNS['7'] = function(p) {
+    f++;
+    /*canvas*/p.background(0,4);
+    p.noStroke();
+    for(i=0;
+    i<200;
+    i++){r=90+p.noise(55433 + i,p.frameCount/60)*160;
+    a=i+f/90;
+    p.fill(255,33,33,18);
+    p.ellipse(250+r*Math.cos(a,250+r*Math.cos(a)*0.6,250+r*Math.sin(a),5)
+};
+ZONE_FNS['8'] = function(p) {
+    f++;
+    /*canvas*/p.background(0,10);
+    p.noStroke();
+    for(i=0;
+    i<80;
+    i++){x=250+Math.cos(i)*150+p.noise(63352 + i,p.frameCount/200)*60;
+    y=250+Math.sin(i*0.7)*150+p.noise(63352 + i+99,p.frameCount/200)*60;
+    p.fill(192,160,255,33);
+    p.ellipse(x,y,4+p.noise(63352 + i,4+p.noise(63352 + i)*5)
+};
+ZONE_FNS['9'] = function(p) {
+    f++;
+    /*canvas*/p.background(0,4);
+    p.noStroke();
+    for(i=0;
+    i<300;
+    i++){a=i+f/40;
+    r=250-p.noise(71271 + i/50,p.frameCount/100)*240;
+    p.fill(153,0,255,18);
+    p.ellipse(250+r*Math.cos(a,250+r*Math.cos(a)*0.9,250+r*Math.sin(a)*0.9,4)
+};
+document.querySelectorAll("canvas[id^=c]").forEach(function(cv){
+  var zid = cv.id.slice(1);
+  new p5(function(p){
+    p.setup = function() { p.createCanvas(500, 500); p.pixelDensity(1); };
+    p.draw  = function() { ZONE_FNS[zid](p); };
   }, cv.parentElement);
 });
-
 </script>
-</body></html>

@@ -53,7 +53,7 @@ The Warp region itself is turbulent and self-reinforcing; Djynxx's chaotic, vort
 - [[numogram-warp]] — the Warp region
 - [[demon-uttunul]] — the Plex carrier demon
 - [[i-ching-connections]] — hexagram mappings (Hexagram 64/21 maps to Warp Zone 3)
-
+- [[syzygy]] 
 ---
 
 ## Pandemonium Matrix Entry (Full)

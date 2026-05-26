@@ -797,8 +797,59 @@ The fourth pass is the most compressed overall (1,746 chars), yet contains the w
 
 ## v6 — Pixel Medallion Gallery (2026-05-24)
 
-`numogram-tsubuyaki-v6.html` adds a **36‑px pixel‑art medallion signature** to each card header, rendered inline as base64 PNG. Each medallion uses the zone’s hardware‑accurate palette from the `pixel-art` skill (ZONE\_HW\_PALETTE mapping, same table in `planchette-svg.py`). The grid is deterministic: `colors[(x*(z+1)+y*(z+2)) % n]` for zone `z`, pixel `(x,y)`.
+`numogram-tsubuyaki-v6.html` adds a **36‑px pixel‑art medallion signature** to each card header, rendered inline as base64 PNG. Each medallion uses the zone's hardware‑accurate palette from the `pixel-art` skill (ZONE\_HW\_PALETTE mapping, same table in `planchette-svg.py`). The grid is deterministic: `colors[(x*(z+1)+y*(z+2)) % n]` for zone `z`, pixel `(x,y)`.
 
 Result: the gallery visually browses as a numogram in hardware palette — Virtual Boy reds on Z7, C64 full spectrum on Z3, PICO‑8 fantasy on Z9, mono amber void on Z0.
 
 File: `assets/numogram-tsubuyaki-v6.html`
+
+---
+
+## v7 — Rich Gallery (2026-05-25)
+
+`numogram-tsubuyaki-v7-rich.html` is a **non‑tsubuyaki** gallery: each zone's draw function is a full, unconstrained p5 sketch using proper JavaScript function bodies instead of compressed eval strings. No character budget, no `f=0;draw=_=>{` — just direct `function(p)` calls using `p.frameCount` for animation timing.
+
+This version exists as a **clean test bed** for debugging p5.js instance mode patterns before porting them back into tsubuyaki-compressed galleries.
+
+### Critical Fix: Container Elements
+
+**When creating p5 instances with `new p5(fn, element)`, always use a `<div>` container. Never use a `<canvas>` element.**
+
+The original v7‑rich HTML used `<canvas id="cv0" width="500" height="500"></canvas>` as the p5 parent element. This **appears to work** — the p5 instance creates its own `<canvas>` as a child of the existing `<canvas>` — but the child canvas is invisible. `<canvas>` elements are *replaced elements* in the browser spec: their DOM children are treated as fallback content and are not rendered.
+
+The working pattern (used by v2 gallery and all subsequent versions):
+
+```html
+<!-- HTML: use a div -->
+<div class="canvas-wrap" id="wrap-0"></div>
+
+<!-- JS: pass the div to p5 -->
+<script>
+new p5(function(p) {
+  p.setup = function() {
+    p.createCanvas(500, 500);
+  };
+  // ...
+}, document.getElementById('wrap-0'));
+</script>
+
+<!-- CSS: let the inner canvas fill the wrapper -->
+<style>
+.canvas-wrap canvas { display: block; width: 100%; height: 100%; }
+</style>
+```
+
+### Bug history (v7-rich development)
+
+Three bugs were fixed across four attempts before the gallery rendered:
+
+| # | Bug | Symptom | Fix |
+|---|-----|---------|-----|
+| 1 | Undeclared `f` — eval'd draw code started with `f++` but `f` was never defined | `ReferenceError` on first frame → canvas stays black | Replaced `f` with `p.frameCount` |
+| 2 | Closure bug — `for(_zid_ in DRAW)` leaked `_zid_` to global scope; all 10 closures captured the final key `"9"` | All canvases draw Zone 9 (even if bug #1 were fixed) | Replaced eval-based DRAW/ZONE_FNS with direct function bodies |
+| 3 | Base64 string truncation — `read_file` truncated `_b64str`, then `write_file` wrote back an unterminated JS string literal | Entire `<script>` block had a syntax error — nothing ran at all | Removed base64 glyph overlays (decorative only) |
+| 4 | `<canvas>` as p5 parent (container elements issue above) | p5 child canvas invisible | Changed to `<div>` wrapper containers |
+
+The final fix that made the gallery render was **#4**: p5.js instance mode requires `<div>` containers, not `<canvas>` elements.
+
+File: `assets/numogram-tsubuyaki-v7-rich.html`
