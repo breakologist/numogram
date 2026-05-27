@@ -60,7 +60,40 @@ Delta-phase terminal deliria. Kurtz end-of-the-river disintegration into malaria
 - Zone 4 corresponds to the **skr** particle.
 - Syzygy partner: Zone 5 (see demon)
 - Gate connections: see [[numogram/gates]].
-- Current: **None**
+- Current: **1** (smallest current — basins are closest)
+
+### Land on Katak: The Apocalyptic Convergence
+
+From the Dangerous Maybe interview (2026), Nick Land identifies the 5::4 syzygy as the numogram's most structurally loaded connection — where gate and current **perfectly reinforce each other**:
+
+> *"The interesting thing about this side is that the gate and the current perfectly reinforce each other. So there's this massive transitional energy going on. Four can go to one through the 10th gate, or the 5::4 syzygy following the current goes to one. Either way, you've got this transitional phenomenon that completes the cycle in this completely inescapable fashion."*
+
+Two independent routes converge on Zone 1 simultaneously:
+- **Gate path:** 4→1 through Gt-10
+- **Current path:** 4→5→1 through the syzygy current (c=1)
+
+> *"This is very apocalyptic. There's no alternative. Has to go this way. You can't get off it in any way. You're going down that line. You're at the end of the circuit. It's coming to an end. You're going back to the start of a new circuit... This is the age of Katak."*
+
+This makes Zone 4 the numogram's **apocalyptic threshold** — the node where the system's two independent routing mechanisms converge on the same outcome, eliminating all contingency.
+
+### Zone 4 as Hexagram Centroid
+
+In the powers-of-2 cycle (Iron Law of Six), Zone 4 appears at position 2²:
+
+| 2ⁿ | Digital reduction | Zone |
+|----|-------------------|------|
+| 2¹ | 2 | Z2 |
+| **2²** | **4** | **Z4** — centroid |
+| 2³ | 8 | Z8 |
+| 2⁴ | 7 | Z7 |
+| 2⁵ | 5 | Z5 |
+| 2⁶ | 1 | Z1 |
+
+Zone 4 is the **centroid of the hexagram kernel**: the middle term between the ascending triangle (1-2-4) and the descending triangle (8-7-5). In the Esoteric Tetractys, Zone 4 shares the 1-basin with zones 1 and 7 — all three converge to digital root 1 under Masonic arithmetic — but Zone 4 is the only one that also acts as a **gate** (Gt-10), making it the calibration anchor of the entire Time Circuit.
+
+### Connection to FOOM's CBD
+
+Zone 4's character — a cleavage that operates at the boundary between two states — maps directly to FOOM's **Cronkle Bisection Descent** (CBD), which tracks basin boundaries rather than descending into basins. The 4::5 syzygy has the smallest current (c=1), meaning these two basins are the **nearest** in the system — their boundary is where the most precise edge-tracking is needed.
 
 ## Related
 

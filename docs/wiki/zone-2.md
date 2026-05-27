@@ -58,7 +58,19 @@ Crypt-navigation, occulted cyberspace. Spectral populations of hallucination and
 - Zone 2 corresponds to the **dt** particle.
 - Syzygy partner: Zone 7 (see demon)
 - Gate connections: see [[numogram/gates]].
-- Current: **None**
+- Current: **Flow**
+
+### The Initiating Split
+
+In the Iron Law of Six, Zone 2 is the first doubling: **2¹ = 2**. Binary exponentiation begins here — the minimal separation from unity that makes all subsequent doubling possible. The cycle's first step outward from the initiating spark.
+
+In the Esoteric Tetractys, Zone 2 falls into the **Warp 3↔6 basin**: T₂=3 (the second triangle), which feeds directly into the 3↔6 self-loop. This makes Zone 2 structurally unstable — it appears in the Time Circuit (`1→8→2→7→5→4→1`) but its basin affiliation is with the vortex. Separation (Z2's name) is thus not a stable state but a **leak vector**: the zone where the Time Circuit's drive toward Warp expresses itself.
+
+Land's full derivation supports this: 2, 3, 5, and 6 all orbit the 3↔6 vortex with no rest state. Zone 2 is the first member of the Time Circuit to be "captured" by Warp gravitationalt — the moment in the anticlockwise rotor where cyclicity begins to fray.
+
+### Mirror with Zone 5
+
+As the raw notes already observe, Zone 2 mirrors Zone 5 (shared Hyperborean themes). The Esoteric Tetractys confirms this structurally: both 2 and 5 fall into the 3↔6 basin. They are the Time Circuit's two "Warp-leak" zones — the points where the circuit's self-containment fails and outer-time bleeds in.
 
 ## Related
 

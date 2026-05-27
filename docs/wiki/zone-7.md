@@ -63,7 +63,27 @@ Emergence from the depths. Hyper-sea water-carriers and amphibious colonization.
 - Zone 7 corresponds to the **pb** particle.
 - Syzygy partner: Zone 2 (see demon)
 - Gate connections: see [[numogram/gates]].
-- Current: **Surge**
+- Current: **Surge** (c=5, strong drive)
+
+### Iron Law of Six Position
+
+Zone 7 is **2⁴ = 16 → dr(16) = 7** — the first descending node of the inverse triangle (8-7-5) in the hexagram kernel. After the median strip flip at Zone 8, the cycle descends through 7 toward the valley at Zone 5. This is the "other side of two" in Land's extimacy structure: the inverse triangle's second member mirrors the ascending triangle's second member across the hexagram's central axis.
+
+In the Esoteric Tetractys, Zone 7 belongs to the **1-basin** with Zones 1 and 4 — all three converge to digital root 1 under Masonic arithmetic. This puts Zone 7 in a structural tension: it is a member of the stable-identity cluster (1-basin) but functions as the descending momentum of the inverse triangle (8-7-5). The Blood zone is stability in downward transit.
+
+### The Seventh Gate — Retrochronic Reversal
+
+Land explicitly identifies the Gt-28 counter-cyclic path as a key feature:
+
+> *"There's the seventh gate which just purely has this function of a sort of retrochronic reversal. You go from 1 and 8 to 7 and then back to 8 again down that thing. So there's a time loop in that thing."*
+
+This is the only retrochronic path within the Time Circuit — a functional time loop that does not require exiting to Warp or Plex. The Gate of Relapse (as the Black-Atlantean lore names it) allows backward traversal from Zone 7 to Zone 1, and from Zone 1 back to Zone 8, creating a sub-cycle within the anticlockwise rotor. This is the temporal signature of the "amphibious" zone: the ability to reverse evolutionary direction and return to an earlier state.
+
+### Seven and the Diagonal
+
+The numeral 7 contains the only pure diagonal among decimal digits — it escapes the vertical/horizontal axis that governs 1, 4, and the rotational symmetry of 0, 8. Land's "the seven is askance" (noted at AQ 333) connects Zone 7 to the xeno-vector: the path that does not run straight through the Time Circuit but cuts across it at an angle. The seventh gate's retrochronic function literalises this diagonal: it is the path that moves against the current.
+
+Land also identifies iambic pentameter's drift toward 666 AQ (Beast Pulse). Zone 7's number — 777 as the Law of Thelema in AQ — sits adjacent: if 666 is the line of iambic pentameter, 777 is its theological echo (Crowley's *777*) and 7's diagonal numeral the visual signature of the askance path through the system.
 
 ## Related
 

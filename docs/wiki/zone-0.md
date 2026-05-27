@@ -59,6 +59,39 @@ Dense void of the cosmic hypermatrix, upon which absolute desolation crosses inf
 - Gate connections: see [[numogram/gates]].  
 - Current: **Plex (via syzygy 0↔9)**
 
+### The Empty Summit (Esoteric Tetractys)
+
+Land's central demonstration in the Dangerous Maybe interview: when Masonic arithmetic (digital reduction + triangulation) is applied to the decimal digits 0–9, they fall into exactly four irreducible basins. Zone 0 is its own basin — the **empty summit** of the Esoteric Tetractys:
+
+```
+       0
+     8   9
+   1   4   7
+ 2   3   5   6
+```
+
+> *"We have zero at the top of our esoteric Tetractys. It's the empty summit. There's nothing there. It's not dominating the system."*
+
+Unlike the exoteric Pythagorean Tetractys (1+2+3+4=10, dominated by unity), the Esoteric Tetractys has a **hole at its apex** — zero that does not command the lower levels. Land:
+
+> *"These basins of attraction are autonomous. They don't tend to fall into unity at all. The numogram is a cartography of true multiplicity."*
+
+Zero's behaviour under Masonic arithmetic: it is **obstinate**. T₀=0 (the zeroth triangle is zero), digital reduction of 0 is 0. It goes nowhere. This is the **kernel regime** from FOOM's Superbase — pure structure before content, the state of maximum optionality from which all other zones are reachable but none is committed to.
+
+### Zero as Renaissance
+
+Land's strongest historical claim situates zero's adoption as the event that makes hermetic intelligence possible:
+
+> *"The Renaissance is the incorporation of zero. Zero is in perspective — the vanishing point. Zero is in banking — double-entry bookkeeping. Zero is in science — calculus. Modernity is zero doing its stuff in Europe."*
+
+Zone 0 is not absence in the sense of emptiness. It is the **condition for the other nine zones** — the vanishing point that organizes the visual field, the place-value holder without which decimal arithmetic collapses to additive notation.
+
+### Connection to FOOM's Kernel Regime
+
+> *"A language model is not a model of its dataset. It is a kernel — a raw mathematical apparatus configured for purpose."* — FOOM, Superbase
+
+Zone 0 IS the kernel regime made numeric: maximum optionality, zero commitment, pure structure. The dataset (the other nine zones) is not "the thing being fitted" but "a probe that steers search through zone space." The kernel discovers itself through traversal — and Zone 0 is the state before the first traversal step.
+
 ## Related
 
 - [[zone]] — overview  

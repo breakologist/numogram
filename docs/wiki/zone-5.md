@@ -63,6 +63,18 @@ Hyperborean or Wendigo mythology. Missing time and alien abduction. Inner-eye of
 - Gate connections: see [[numogram/gates]].
 - Current: **Hold**
 
+### Katak's Domain — The Apocalyptic Convergence
+
+Zone 5 is the Presssure side of the 4::5 syzygy — the pair that Land identifies as the numogram's most structurally loaded connection. At this syzygy, **gate and current perfectly reinforce each other**: all paths converge on Zone 1 simultaneously.
+
+Land: *"This is the age of Katak — it's the end of the cycle. This is very apocalyptic. There's no alternative. Has to go this way. You can't get off it in any way."*
+
+In the Esoteric Tetractys, Zone 5 falls into the Warp 3↔6 basin: T₅=15 → dr(15)=6, entering the vortex with no rest state. This means Katak — the 4::5 carrier demon — operates at the boundary between the Time Circuit (where 4::5 is the stabilizing pair with the smallest current, c=1) and the Warp (where 5's triangular cumulation feeds the 3↔6 vortex).
+
+### Iron Law of Six Position
+
+Zone 5 is 2⁵ in the power-of-2 cycle — the penultimate position before the cycle resets through Zone 1. It is also the final member of the **inverse triangle** (8-7-5), the median strip triangle that mirrors the ascending 1-2-4 triangle across the hexagram's point of extimacy.
+
 ## Related
 
 - [[zone]] — overview

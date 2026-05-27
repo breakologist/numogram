@@ -10,7 +10,7 @@ tags:
   - Vedic
 ---
 
-# Interesting Sites - Add a small description to any that don't have one yet + append any interesting sites you find, write to new or append to old wiki articles, some of these might require a proper browser view to appreciate.
+# Interesting Sites - Add a small description to any that don't have one yet + append any interesting sites you find, write to new or append to old wiki articles, some of these might require a proper browser view to appreciate. Although something may be already described, repeated readings may lead to different takes depending on context.
 https://github.com/NousResearch/hermes-agent
 https://github.com/breakologist?tab=stars - some interesting projects here
 https://github.com/trycua/cua - agentic computer use, could be a powerful basis for future, check it out
@@ -25,11 +25,14 @@ https://github.com/Zen-Open-Source/PasteLocal
 https://github.com/CodebuffAI/codebuff/tree/main/freebuff
 https://github.com/golanlevin/p5-single-line-font-resources/blob/main/README.md#p5js-port-of-masaya-matsuuras-vib-ribbon-fonts
 https://browse.sh/
+https://github.com/monistowl/enoch
 https://github.com/aphid91/Fluoddity
 https://github.com/tmux/tmux/wiki
 https://ambien.ai/
 https://herdr.dev/
+https://github.com/modaic-ai/gepa-viz
 https://github.com/ogulcancelik/herdr
+https://github.com/monistowl/rainbowrogue
 https://github.com/rody-png/Permanence
 https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban-tutorial
 https://hermes-agent.nousresearch.com/docs/user-guide/features/goals

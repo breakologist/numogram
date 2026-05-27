@@ -63,7 +63,23 @@ Occulted dimensions of Undu. Turbular erosion and the dead eye of the cyclone. S
 - Syzygy partner: Zone 3 (see demon)
 - Gate connections: see [[numogram/gates]].
 <! ---> The V3 real-resonator SHAP driver: *very_high_ratio dominates (0.0849)*, confirming Z6's acoustic signature as the tube/bow friction zone — extended highs (>8 kHz) + spectral rolloff. [[numogram-audio/real-resonator-shap-driver-signatures]] [[numogram-audio/zone-mapping-consistency]] for full analysis table.
-- Current: **None**
+- Current: **Warp** (c=3, self-folding vortex)
+
+### The Other Side of the Vortex
+
+Zone 6 is the Warp partner to Zone 3 — together they form the 3↔6 self-loop that is the only basin in the Esoteric Tetractys with **no fixed point**. Land:
+
+> *"There's no rest state in that basin at all. Once you're in the vortex, that's it. The terminus is the vortex."*
+
+Land on the chaotic xenodemon problem (demons crossing 6::9, 9::6):
+
+> *"Six cannot get out of the 63 vortex. Nine can cross over to zero. It can go through a gate to itself. It can't climb its way up into the time circuit. Nothing can get into the time circuit from the outside. And there's no routes outside the time circuit between the two different outer zones."*
+
+The 64 phases (from the frontmatter) connect to the 64 hexagrams of the I Ching — Land's demonstration that the I Ching's 6-line structure IS the Iron Law of Six (powers of 2 digitally reduce to the 1-2-4-8-7-5 cycle). Zone 6, as Saturn, carries the "permanent hexagon" of the Saturnian pole — the geometric figure that stabilizes the vortex into a visible form.
+
+### Audio Signature
+
+V3 real-resonator SHAP analysis confirms Z6's acoustic identity as the tube/bow friction zone — extended highs (>8 kHz) with spectral rolloff. This is the sound of **turbular erosion**: the vortex chewing through static time.
 
 ## Related
 

@@ -5,6 +5,8 @@
 
    ## Recent Additions (May 2026)
 
+   - [[zone-character-portraits]] — Three visual angles explored (zone-scenes, zone-schematics, zone-as-character) via JuggernautXL txt2img. Full 10-zone entity set generated. Per-zone pages: [[zone-0-void-portrait]], [[zone-1-surge-portrait]], [[zone-2-double-portrait]], [[zone-3-warp-portrait]], [[zone-4-gate-portrait]], [[zone-5-pressure-portrait]], [[zone-6-hinge-portrait]], [[zone-7-cut-portrait]], [[zone-8-exile-portrait]], [[zone-9-plex-portrait]]. Assets: `~/Pictures/Wall/zone-characters/`.
+
    - [[tetralogue-17-pixel-art-labyrinth]] — Square Roundtable 17: palette colour count = zone bandwidth, debugging path as numogram traversal, Mesh-17 (The Containment Demon).
    - [[wiki-novel-ideas#14]] — Pixel-art planchette gallery (10 cards, Floyd-Steinberg sprites + oracle metadata).
    - [[wiki-novel-ideas#15]] — Syzygy pair gallery (5 pair cards, dual sprites + cross-addition arithmetic).
@@ -210,6 +212,7 @@
    197|   197|   197|   197|   197|   197|- [[skills-to-explore]] — Interesting skills from Apr 2026 scan: pixel-art (retro palettes), ascii-video (terminal animation), algorithmic-art/p5js (generative), pokemon-player (RAM-based agent research), heartmula (music gen). Combos: heartmula+oracle-voice, pixel-art+numogram-svg, ascii-video+cult.json, pokemon-player+roguelike-agents.
 - [[oracle-visual-ideas]] — Intake bin for oracle output visual layers: pixel-art glyphs (priority), p5.js oracle-viz linkification, SVG zone-cards / syzygy-chords, Manim reading walkthroughs, ASCII zone glyphs. Organized by tier; graduated experiments become standalone pages.
    198|   198|   198|   198|   198|   198|- [[aq-calculator-design]] — Design document and implementation notes for standalone AQ calculators. Minimal core vs themed polished version, colour palette rationale, zone flavour catalog, history schema, extensibility points, and canonical test vectors. From 9B local‑model design session (earlier Hermes instance).
+- [[local-models-to-try]] — Qwen3.5-derived 9B GGUF quants to test locally: Jackrong DeepSeek V4 Flash MTP, armand0e Opus Agent, Jackrong Qwopus Coder MTP. VRAM budget table, import commands, and link to testing protocol ([[local-model-testing]] skill).
    199|   199|   199|   199|   199|   199|
    200|   200|   200|   200|   200|   200|---
    201|   201|   201|   201|   201|   201|

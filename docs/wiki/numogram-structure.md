@@ -13,7 +13,7 @@ tags:
 
 # Decimal Numogram — Structural Overview
 
-**Source:** Raw synthesis from Grok notes on the Numogram (2026-04-26 session). Covers core architecture, three-region topology, I Ching integration, triangular syzygies, and gate mechanics.
+**Source:** Raw synthesis from Grok notes on the Numogram (2026-04-26 session). **Primary audio source:** Nick Land, *The Dangerous Maybe* interview (2026) — the most complete single exposition of the Numogram from its co-creator. See [[land-numogram-explained-dangerous-maybe]] for the full synthesis. Covers core architecture, three-region topology, I Ching integration, triangular syzygies, and gate mechanics.
 
 ---
 

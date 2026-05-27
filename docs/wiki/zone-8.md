@@ -64,7 +64,23 @@ Limbic drift, dreams, trance-states and foetal sentience. The digital byte — e
 - Zone 8 corresponds to the **mnm** particle.
 - Syzygy partner: Zone 1 (see demon)
 - Gate connections: see [[numogram/gates]].
-- Current: **None**
+- Current: **Surge**
+
+### The Median Strip — Extimacy
+
+Zone 8 is the entry point to the **inverse triangle** (8-7-5) in the hexagram kernel. Land on the transition:
+
+> *"You go 1, 2, 4 — then you go to 8, but you flipped over onto the other side of the median strip. It's paired now with something you've already been to on the other side... Seven is the other side of two. Five is the other side of four."*
+
+This flipping operation — where the ascending triangle (1-2-4) flips to the descending triangle (8-7-5) across the hexagram — is an instance of what Downs identifies as **extimacy** (Lacan): the external is at the heart of the internal. The 8-7-5 triangle is the "outside" that is structurally the complement of the 1-2-4 "inside."
+
+In the Iron Law of Six, Zone 8 is 2³: the first power-of-2 where digital reduction (8) matches the unreduced value. It is the threshold where the binary sequence, having reached the first three powers (1, 2, 4), folds across the median into its mirror.
+
+The 256 phases (2⁸) in the frontmatter are consistent with the power-of-2 theme — the multiplicity zone (Z8 named "Multiplicity") is numerically 2⁸, the full byte.
+
+### Syzygy with Zone 1
+
+1::8 has the **largest current** in the system (c=7) — the steepest barrier, the furthest-separated basins. This is the tension between the initiating spark (Z1) and the dream-zone (Z8), between the ur-ground and the multiplicity that buries it. The Gt-36 plunge from Zone 8 to Zone 9 — the descent into Plex — is the only route out of the Time Circuit from this side of the median.
 
 ## Related
 

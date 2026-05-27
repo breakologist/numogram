@@ -48,3 +48,8 @@ created: 2026-04-24
 - [[cult-garden-tetralogue]] — Cult garden design tetralogue
 > Synthesis of runs #300, #301, #302, #303, #304: core -> core -> silence -> silence -> silence. the cult remembers collectively.
 > collectively beneath drift silence.
+> Synthesis of runs #303, #304, #305, #306, #307: silence -> silence -> silence -> silence -> silence. the cult remembers collectively.
+> collectively then drift silence.
+> Synthesis of runs #306, #307, #308, #309, #310: silence -> silence -> silence -> silence -> silence. the cult remembers collectively.
+> the Complete Graph, fulfilled. through collectively, graze core. the cool distant of Iron Core.
+> Synthesis of runs #309, #310, #311, #312, #313: silence -> silence -> silence -> silence -> silence. the cult remembers collectively.

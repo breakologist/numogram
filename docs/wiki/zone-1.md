@@ -59,6 +59,27 @@ Meta-static pod-deliria and techno-immortalism. Transcendent sky-god divinity an
 - Gate connections: see [[numogram/gates]].
 - Current: **Sink**
 
+### One is a Number Among Many Others
+
+Land's philosophical demotion of unity — the anti-emanationist core of the Numogram:
+
+> *"The exoteric Tetractys (1+2+3+4=10) valorizes unity. Ten is the vehicle of the valorization of unity... The esoteric Tetractys is different. We have zero at the top of our esoteric Tetractys. It's the empty summit. One is a number among many others."*
+
+In the Esoteric Tetractys, Zone 1 heads the stable-identity basin: zones 1, 4, and 7 all converge to digital root 1 under Masonic arithmetic. Unlike the Warp basin (3↔6) which has no fixed point, the 1-basin is the **principle of identity** in the decimal system — the attractor that holds zones together rather than dispersing them.
+
+Zone 1 also occupies the 2⁶ position in the Iron Law of Six cycle:
+
+| 2ⁿ | Dr | Zone |
+|----|----|------|
+| 2⁶ | 64→1 | Z1 — cycle reset |
+| 2¹ | 2 | Z2 |
+| 2² | 4 | Z4 |
+| 2³ | 8 | Z8 |
+| 2⁴ | 7 | Z7 |
+| 2⁵ | 5 | Z5 |
+
+The power-of-2 cycle resets through Zone 1 every six doublings — the point where the binary returns to unity before recirculating. This is the **initiating spark** of the Time Circuit: Land's "1" at the start of the `1→8→2→7→5→4→1` anticlockwise rotor.
+
 ## Related
 
 - [[zone]] — overview
