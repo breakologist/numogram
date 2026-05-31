@@ -16,7 +16,7 @@ With a validated zone classifier and TouchDesigner integration designed, we can 
 ## The Fifth Current
 
 > **Empirical Validation** — a meta-current that subjects all claims to data-driven scrutiny.
-> *\"Let the data speak; then let it correct the glyph.\"*
+> *"Let the data speak; then let it correct the glyph."*
 
 Every Phase 5 item should articulate its validation strategy.
 
@@ -38,36 +38,15 @@ Every Phase 5 item should articulate its validation strategy.
 
 ### M1 — Zone-Constrained Composition (May 3)
 - **96.4%** overall accuracy (434/450 tracks, 50×9 zones)
-- All zones ≥92% (Z4, Z6, Z8 at 100%)
-- Real-world slice: 10/10 on artist-labelled zones 2 & 7
-- Results: [[phase5-results/zone-constrain-compose-run-1]]
 
-### M2 — VAE Hallucination of Empty Zones (May 6)
-- **92%** target-zone accuracy across all five gap zones
-- Z3=95%, Z4=90%, Z5=88%, Z8=95%, Z9=92%
-- Ear test: 4.2/5 coherence
-- Method: syzygy-walk latent sampling + iterative projection in scaled feature space
-- Skills: `numogram-hallucination-pipeline`, `vae-hallucination`
-- Results: [[phase5-results/phase5-m2-vae-hallucination]]
+### M2 — VAE Hallucination (May 6)
+- 92% target accuracy on gap zones; all five empty zones now synthesizable.
 
-## Next Steps
+## 2026-05-25 Empirical Findings (post-M1/M2)
 
-1. ~~Prioritise 1–2 items for immediate scaffolding~~ — DONE (M1, M2)
-2. ~~Create detailed skill proposals (via `skill-creator`)~~ — DONE (5 skills created)
-3. **Current priority**: M3 — Live Audio → Zone → MOD Feedback (real-time closed-loop instrument)
-4. M4 batch (oracle linking, spectrogram CNN, discography drift) can run in parallel
-5. M5 (GUI, dataset, auto-release) — post-M3 polish pass
+- **Endian bug resolved** (actual fix date May 25, not May 9). Both `writer.py` copies updated; 9/9 ZoneComposer files now audible.
+- **ZoneComposer spectral gap identified**: Single-section output is too thin vs. training corpus → classifier accuracy drops to 22.2% on real generated files.
+- **Corpus centroid statistics** now available (global mean ~6924 Hz). `ZONE_DEFAULTS` require recalibration.
+- M3 (live loop) remains blocked until composition density is increased to match corpus statistics.
 
-## See also
-
-- [[zone_classifier_phase4.5_findings]] — Phase 4.5 validation results and classifier analysis
-- [[phase5-validation-summary]] — Summary of Phase 5 validation runs
-- [[tetralogue-phase4-review-phase5-direction]] — Tetralogue on Phase 4 review and Phase 5 direction
-- [[mod-writer-validation]] — Mod-writer validation results
-- [[zonecomposer-production]] — ZoneComposer production workflow
-- [[mod-writer-gap-analysis]] — Analysis of gaps in MOD generation
-- [[aq-augmentation-pipeline]] — AQ dictionary augmentation pipeline
-- [[phase5-ideas]] — Directory of Phase 5 project ideas
-
----
-*The Fifth Current demands empirical validation—let every claim be tested, every glyph corrected by data.*
+These findings reinforce the Fifth Current: every autonomous session should escalate from symbolic to empirical verification as quickly as possible.

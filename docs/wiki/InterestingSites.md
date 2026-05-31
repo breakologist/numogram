@@ -25,11 +25,25 @@ https://github.com/Zen-Open-Source/PasteLocal
 https://github.com/CodebuffAI/codebuff/tree/main/freebuff
 https://github.com/golanlevin/p5-single-line-font-resources/blob/main/README.md#p5js-port-of-masaya-matsuuras-vib-ribbon-fonts
 https://browse.sh/
+https://github.com/OnlyTerp/prompt-cache-skills
+https://melt.graphics/opart/
+https://github.com/VanadiTD
+https://github.com/m5stack/StackChan
+https://docs.m5stack.com/en/StackChan/
+https://github.com/TecharoHQ/anubis
 https://github.com/monistowl/enoch
+https://github.com/rust-lang/rust
+https://doc.rust-lang.org/book/
 https://github.com/aphid91/Fluoddity
 https://github.com/tmux/tmux/wiki
 https://ambien.ai/
+https://arxiv.org/abs/2605.08750
+https://erodola.github.io/lac-demo/
+https://idlewords.com/2005/04/dabblers_and_blowhards.htm
+https://arxiv.org/abs/2506.14202
+https://github.com/garrytan/gbrain
 https://herdr.dev/
+https://dilltronics.com/
 https://github.com/modaic-ai/gepa-viz
 https://github.com/ogulcancelik/herdr
 https://github.com/monistowl/rainbowrogue
@@ -39,6 +53,9 @@ https://hermes-agent.nousresearch.com/docs/user-guide/features/goals
 https://hermes-agent.nousresearch.com/docs/guides/use-mcp-with-hermes
 https://github.com/shuklabhay/llm-synesthesia
 https://leviyitzhak.xyz/
+https://github.com/leejet/stable-diffusion.cpp
+https://github.com/perplexityai/bumblebee
+https://zenbin.org/
 https://github.com/huggingface/ml-intern/pull/228
 https://github.com/lumpenspace - Creator of qliphoth.systems. Repository lumpenspace/ccru: Interactive SVG Numogram visualization (Next.js/React/TypeScript). Three visual layouts (original, labyrinth, ladder), planetary orbital mode, zone/syzygy/current/gate data, Pandemonium Matrix, gematria Chrome plugin. Live at num.qliphoth.systems.
 https://github.com/Alektryon
@@ -56,7 +73,8 @@ https://www.iching360.com/YinYang7
 https://kaostat.mosphere.at/ - A Field Guide to the Faces of Machines. 1,729 session logs from ClaudeCode and Codex cataloguing every kaomoji (Japanese emoticon) the agents make. 314 distinct faces, 3,707 occurrences. Claude leans cheerful `(◕‿◕)` at 39% face rate with 244 distinct faces; Codex leans stern `(._.)` at 63% face rate with 117 distinct faces. [Full deep dive →](wiki/kaostat-field-guide-faces-machines.md)
 https://cursor.com/
 https://github.com/plntrprotocol/Risomorphism-1911
-https://github.com/liftaris/herm - we currently use this as our TUI - what can be done with this...
+https://github.com/liftaris/herm- we currently use this as our TUI - what can be done with this...
+https://www.liftaris.dev/
 https://codepen.io/DULA2025/pen/PwbKNJM
 https://github.com/arm64be/theia
 https://github.com/plntrprotocol/hermes-theia-codex-vision
@@ -122,6 +140,7 @@ https://github.com/anpicasso/hermes-plugin-chrome-profiles
 https://github.com/browser-use/browser-harness
 https://doomcrypt.github.io/subdecadence/ - Subdecadence card game
 https://github.com/doomcrypt/subdecadence - main github page for same
+https://doomcrypt.neocities.org/
 https://charcuterie.elastiq.ch - CLIP/SigLIP-powered Unicode glyph similarity explorer. Cross-script visual discovery, draw-to-find. See [[charcuterie-unicode-explorer]] for deep dive.
 https://gematriaresearch.blogspot.com/ - Gematria Research: Deep analysis of Alphanumeric Qabbala (AQ) cipher, Liber AL vel Legis riddles solved via Alphanumeric Triangle (0-9 + A-Z in base-36). Detailed cipher history (Satanic Gematria, Alphanumeric Satanic, Custom Ordinal families). Liber 777 connections. "Abrahadabra" = 151 = 36th prime. "Do what thou wilt" = 777 in AQ = LL in base-36.
 https://alektryon.github.io/aqqa/ - Alphanumeric Qabbala calculator and lookup tool. Part of the "Aquarian Qabbala" ecosystem.

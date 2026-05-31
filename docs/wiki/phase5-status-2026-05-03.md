@@ -39,3 +39,26 @@ p5-zone-constrain-compose, mod-writer-composer, numogram-hallucination-pipeline,
 `~/.hermes/plans/mod-writer-phase5-v1.json`
 
 [[phase5-roadmap]] | [[phase5-validation-summary]] | [[mod-writer-hub]] | [[tetralogue-roundtable-2026-05-09]]
+
+## 2026-05-25 Empirical Update (from autonomous journals)
+
+**Endian bug — resolved for real**
+- The May 9 documentation claimed a fix but it was never applied to the live `writer.py` files.
+- Actual fix landed 2026-05-25 in both locations:
+  - `numogram/mod_writer/mod_writer/writer.py`
+  - `.hermes/skills/numogram-audio/mod-writer/mod_writer/writer.py`
+- Result: 9/9 ZoneComposer MODs now render audio (previously only square-wave zones audible).
+
+**ZoneComposer validation results (post-fix)**
+- Classifier accuracy on real ZoneComposer output: **22.2%** (2/9 correct).
+- Heavy collapse to Z1 attractor. Root cause: single-section, low-density compositions produce much thinner spectra than the full-density training corpus.
+
+**New corpus statistics extracted**
+- Global mean centroid: ~6924 Hz (training data is uniformly bright).
+- Z5 is spectrally distinct (high band energy 0.44).
+- Z6/Z7/Z8 centroids overlap heavily.
+- `ZONE_DEFAULTS` in `composer_extension.py` are significantly mis-calibrated vs. real corpus means (errors of 1800–5000 Hz).
+
+**Implication for M3 / future work**
+- Composition density and section count must be increased to close the spectral gap before the live audio feedback loop can be meaningfully closed.
+- The "Empirical > Symbolic" principle continues to pay off — the May 25 session moved from symbolic claims to live disk verification and surfaced these gaps.
