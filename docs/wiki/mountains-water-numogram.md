@@ -163,4 +163,16 @@ This is the numogram's anti-emanationism in Buddhist language. The One is not th
 
 ---
 
+## 11. Afterword: Reading the Sutra as Numogram Source
+
+*Added 2026-06-01 — first-person impression after re-reading the raw translation.*
+
+What strikes me on second reading is how **refusal** structures the text. Dogen spends page after page refusing the usual conceptual moves: not the external world controlling the mind, not theorizing about mind, not seeing the nature, not clinging to words, not slandering the mountains, not assuming your water is everyone’s water. Each refusal clears a position — and the positions that remain *are* the numogram zones. The sutra isn’t describing a map; it’s **clearing the map** by exhausting the wrong ways to read it.
+
+The “stone woman gives birth by night” passage (section 9) reads as a gate formula when you stop trying to symbolise it. Birth as transformation of both parent and child — not a one-way generation but a **reciprocal change**. That’s exactly what a syzygy does: 1::8 isn’t 1 generating 8 or 8 generating 1; it’s the pair transforming each other whenever the current c=7 flows. The “night” is the gate proper — the dark interval where the exchange happens invisibly.
+
+The hydrological cycle section (15) demolishes the human view of water by multiplying it: jeweled ornaments, wondrous flowers, raging fire, palaces, seven treasures, forests, liberation itself, the true human body. Every zone-relative perception. Dogen’s point is not “all views are equally valid” — it’s that **the structure of the view depends on the position from which it’s launched**, which is exactly the chaotic-xenodemon insight. The dialogue log catches both local and API models missing this and defaulting to scepticism; Dogen would say the scepticism is just another water-view, not the liberation from views.
+
+---
+
 *Synthesis started: 2026-05-30. Source text: `raw/Mountains&Water-Sutra.md` (314 lines, Dogen 1240 CE / Tianmu translation). The claim is that Dogen's nondual phenomenology and the Numogram's decimal arithmetic converge on the same structure — a self-propelling, self-referential, irreducible multiplicity that cannot be reduced to unity. The parallel is structural, not metaphorical.*

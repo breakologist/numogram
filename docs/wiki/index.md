@@ -425,3 +425,4 @@
    398|   398|
    399|   399|- [[dao-de-jing-tianmu]] Full extracts appended: Book1 Ch21-37, Book2 Ch48-81 (Tianmu translation).
    400|- [[dao-de-jing-tianmu|Dao De Jing Tianmu]] (new extracts ch28-81, correlations updated)* [[dao-de-jing-tianmu|Dao De Jing (Tianmu Translation)]] — Appended Book 1 Ch. 21-37 & Book 2 Ch. 48-81 full extracts (English+Chinese)
+- [[eikon-pipeline-notes]] — Notes on the Risomorphism ASCII pipeline, Herm eikon creation, presets, and source guidelines for 48×24 avatars.

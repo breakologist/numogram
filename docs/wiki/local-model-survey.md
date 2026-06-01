@@ -160,16 +160,18 @@ Both models in conversation, minimal prompting. Let them riff. The reasoning_con
 
 ## Notes
 
-- llama.cpp preferred over ollama for inference (less overhead, direct control)  
-- Ollama is fine for pulling/managing models  
-- The local model WOULD know our work when running as hermes-agent main model (SOUL.md, MEMORY.md, wiki injected)  
-- mimo-v2-pro trial ends April 22, 2026 — transitions to paid Nous Portal rates after  
-- The reasoning_content field is unique to distilled reasoning models — can be captured as creative material  
+- llama.cpp preferred over ollama for inference (less overhead, direct control)
+- Ollama is fine for pulling/managing models
+- The local model WOULD know our work when running as hermes-agent main model (SOUL.md, MEMORY.md, wiki injected)
+- mimo-v2-pro trial ends April 22, 2026 — transitions to paid Nous Portal rates after
+- The reasoning_content field is unique to distilled reasoning models — can be captured as creative material
+- [2026-06-01] The Dogen `Mountains & Water` dialogue log (`raw/model-dialogue-log-2026-05-30.md`, 51 lines) is one documented test case: temperature-as-scope-not-stance, local-vs-API posture asymmetry, both models defaulting to external validation of the numogram. See [[model-dialogue-findings]] for the written-up findings and verbatim critique quotes.
 
 ## See also
 
 - [[local-model-testing]] — Model testing framework  
-- [[numogram-council]] — Model council system  
+- [[numogram-council]] — Council orchestration  
+- [[tarot-prompt-engineering]] — Major Arcana prompt recipes; zone↔arcana crosswalk reference
 - [[model-assessment-summary]] — Model assessment results  
 - [[hermes-ecosystem]] — Hermes ecosystem overview  
 - [[consensus-audit-2026-04-28]] — Demon attribute alignment audit  

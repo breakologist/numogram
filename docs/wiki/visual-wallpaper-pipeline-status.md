@@ -266,7 +266,17 @@ The Four Symbols encode **directionality** — they are not static states but tr
 - `creative/p5js` — Alternative procedural generation
 - `creative/manim-numogram` — Animated numogram diagrams
 
-## Key Unresolved Challenges
+## Raw Reference Notes Index
+
+*Added 2026-06-01 — pointers into `raw/SD/` for the detailed model/usage notes underlying the findings above.*
+
+- `raw/SD/NoobAI-XL.md` — NoobAI model card. Key: it is a **v-prediction** model requiring Euler, CFG 4–5, 832×1216 native aspect. Explains the anime-base-model constraint that shapes our anti-character negative prompts.
+- `raw/SD/Illustrious XL 3.0-3.5-vpred, 2048 Resolution and Natural Language.md` — vpred training dynamics, color collapse issue in v3.0, v3.5 stabilization, natural-language prompt strength comparisons. Justifies our sampler/FG choices (dpmpp_2m + karras, ddim, euler+normal).
+- `raw/SD/Lora.md` — Tarot-card prompt recipe list; useful as a structured prompt-engineering reference for zone-specific archetype rendering.
+- `raw/SD/How to generate good images with NoobAI vpred, illustrious.md` — prompt engineering guide; cross-referenced from NoobAI-XL card above.
+- `raw/SD/ComfyUI.md` — minimal launch notes; superseded by `~/.hermes/skills/creative/comfyui/` skill and this page.
+
+---
 
 ### Multi-Figure Composition
 Diffusion models (Illustrious/NoobAI) reliably render single-figure scenes but struggle with precise multi-figure compositions:
@@ -312,3 +322,6 @@ Both NoobAI and Illustrious are fundamentally anime-trained. Neo-Nihonga LoRA pr
 - **Animation**: AnimateDiff or Stable Video Diffusion wallpaper animation
 - **IPAdapter**: Reference image style transfer from existing art
 - **LLM prompt generator**: Chain LLM call to prompt to generation for automated ideation
+
+## Related Creative Pipelines
+- [[eikon-pipeline-notes]] — ASCII eikon creation for Herm TUI using the Risomorphism pipeline

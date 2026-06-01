@@ -119,6 +119,7 @@ The endgame: matter-scale civilizations compress themselves into substrate-level
 | [[foom-universal-truth-machine]] | Civilization-scale compression oracle — reflexive prediction, Bach-Assange Faucet |
 | [[foom-claude-particle]] | Substrate-level compression — programmable physics, 128k codebook, Inward Landing |
 | [[transq-training-prototype]] | Implements CBD/CBI for transformer LoRA training; references FOOM for kernel-regime theory |
+| [[salt-and-oil-residual-memory]] | Maps residual memory to the six-slot tuple: salt = State/Precision, oil = Uncertainty/Scheduler; committor as recurrence pressure; CBI/CBD as the salt/oil training loop |
 | [[tetralogue-2026-05-16-current-state]] | Tetralogue exploring FOOM's Ground Path, Plex invisibility, τ-readiness as game mechanic |
 | [[333]] | 333 = 3×3×37 — the 37 appears in FOOM's Claude Particle as the first milestone (M1) |
 | [[zone-audio-classifier-empirical-audit]] | Tests FOOM abbreviation cycles (DR=1 + RF/RMS tokens) for negative entropy; FOOM cycle 666 |

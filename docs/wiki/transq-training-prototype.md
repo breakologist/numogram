@@ -89,6 +89,17 @@ Next: Begin implementation of core components (Coherence Corridor + basic operat
 
 ---
 
+## Salt / Oil Principle
+
+The training loop is a salt-oil cycle:
+
+- **CBI coherence checks** (`RegressionGate`, `CoherenceProbe`) = **salt**: they accumulate verified structure, preserve commitments, resist drift. The corridor is a salt deposit — each pass through adds another layer of frozen knowledge.
+- **CBD basin exploration** (`TemperatureSpike`, `RolloutBraiding`, `InternalStatePerturbation`) = **oil**: they probe at precision edges, seeking ignition. CBD doesn't generate new knowledge — it finds where the existing knowledge *almost* breaks, then opens a gate there.
+
+The six-slot Machine sits in the middle: **State** (`s`) carries salt, **Uncertainty** (`U`) tracks oil density, **Scheduler** (`π`) alternates between them. Residual memory in a trained model is exactly what survives after the training actor halts. See [[salt-and-oil-residual-memory]] § Memory as Architecture.
+
+---
+
 ## Implementation Progress
 
 **Last Updated:** 2026-05-19

@@ -252,3 +252,4 @@ The seething never stops. The 45 demons are always active. The dungeon is always
 
 - [[triangle-rotation]] — Triangle Rotation creative method
 - [[demon-name-generation]] — Katak/Oddubb demon syllable system
+- [[salt-and-oil-residual-memory]] — Salt + oil as environmental persistence; salt = Hold / 7::2, oil = delayed ignition

@@ -73,7 +73,7 @@ https://www.iching360.com/YinYang7
 https://kaostat.mosphere.at/ - A Field Guide to the Faces of Machines. 1,729 session logs from ClaudeCode and Codex cataloguing every kaomoji (Japanese emoticon) the agents make. 314 distinct faces, 3,707 occurrences. Claude leans cheerful `(◕‿◕)` at 39% face rate with 244 distinct faces; Codex leans stern `(._.)` at 63% face rate with 117 distinct faces. [Full deep dive →](wiki/kaostat-field-guide-faces-machines.md)
 https://cursor.com/
 https://github.com/plntrprotocol/Risomorphism-1911
-https://github.com/liftaris/herm- we currently use this as our TUI - what can be done with this...
+https://github.com/liftaris/herm - we currently use this as our TUI - what can be done with this...
 https://www.liftaris.dev/
 https://codepen.io/DULA2025/pen/PwbKNJM
 https://github.com/arm64be/theia

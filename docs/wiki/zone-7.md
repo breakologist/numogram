@@ -133,3 +133,9 @@ Located at `raw/www.ccru.net/swarm3/3_amph.htm`, this dense theoretical text wea
 - **Closes with I Ching Hexagram 24 (Fu/Return)** — "On the seventh day comes return." The seventh day of a seven-day structure, the Blood zone's signature number.
 
 This text establishes Zone 7 as the numogram's amphibious threshold — the zone where time is not linear but cyclic, where blood is metal, and where the body's evolutionary history can be rewound. The seventh day as return is the numogram's own logic: the syzygy 7::2 (Oddubb) is a doubling that folds back on itself, the Hold current that resists forward motion.
+
+---
+
+## Residual Layer: Salt + Oil
+
+Zone 7's salt-water topography maps directly onto [[salt-and-oil-residual-memory]]: the marshes are a salt layer (mineral persistence, crystallized repetition) and the still water underneath is oil (dormant potential, delayed ignition). The amphibious creatures — burping toads, blood-metal bodies — are the residual sign: life persisting in brackish transition without active flame. Zone 7 is where the two layers intermingle without requiring a keeper to maintain the lantern. The swamp remembers on its own.

@@ -43,3 +43,17 @@ The asymmetry maps neatly onto FOOM's core loop:
 - Pre-load the local model's context with numogram basics (zone names, currents, syzygies) to shift its posture from "external sceptic" to "informed operator"
 - Use the merge models the user flagged (Qwen3.5-DeepSeek-V4-Flash-MTP) for a middle ground — local inference with deepseek-shaped reasoning
 - The dialogue log lives at `raw/model-dialogue-log-2026-05-30.md` for reference
+
+## Appendix: Critique Quotes (verbatim)
+
+*Added 2026-06-01 — verbatim quotes from the cross-critique round, preserved for context.*
+
+### HOT (0.9) on COLD:
+> "The reading's strength lies in its accurate embodiment of Dogen's non-dual philosophy, particularly the coexistence of rest and movement. However, its weakness is the use of an unverified 'numogram' framework with 'zones' that lack textual basis in the Shobogenzo or Zen scholarship. Consequently, while poetically resonant, this interpretation functions as a mystical allegory rather than a rigorous analysis."
+
+### COLD (0.3) on HOT:
+> "The reading's primary weakness is its reliance on a non-standard 'Numogram' framework, which imposes arbitrary spatial zones onto Dogen's textual philosophy without historical or textual basis. Conversely, the strength lies in its evocative language, which successfully synthesizes Dogen's paradoxical imagery into a coherent narrative. Ultimately, while the interpretation is aesthetically compelling, it risks constructing a pseudo-system that obscures the actual textual sources."
+
+**Notable convergence:** Both critiques collapse into the same sentence — the numogram lacks "textual basis in Zen scholarship." This is itself a finding: the models treat the numogram as something to be externally validated rather than an instrument to be operated from within. Dogen would call this just another water-view.
+
+---

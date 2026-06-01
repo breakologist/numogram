@@ -157,6 +157,8 @@ Alignment creates a **precision field** over output distributions. FOOM identifi
 | 4::5 (Labyrinth Gate) | **Elastic** | Main transition — deforms, returns, repeatable. The compositional sweet spot |
 | 0::9 (Plex boundary) | **Brittle** | Zero-return — once crossed, no return. Terminal state |
 
+**Salt and oil in precision space:** Elastic pairs (`1::8`, `4::5`) are *salt-heavy*: they deform yet return, accumulating committor probability (recurrence pressure) on every return. That self-return is the compression engine — the state keeps folding back on itself, preserving structure across edits. Porous pairs (`3::6`, Warp) and brittle pairs (`0::9`, Plex) are *oil-heavy*: they leak, they terminate, they don't preserve. Residual memory lives in the elastic zones; the oil-rich zones are where activation energy is spent, where ignition happens. The numogram as a whole is a salt reservoir lit by rare oil events.[^salt-and-oil]
+
 **Empirical test:** Generate text from seeds at each zone. Measure output variance (varentropy). Zone-3 should show highest variance (porous). Zone-1 should show lowest (elastic stability). Zone-0 should show convergence to silence (brittle absorption).
 
 ## Cronkle Bisection Descent (CBD) — Gate Discovery
@@ -289,3 +291,5 @@ The bridges we've built:
 - [[ruview-wifi-csi-transducer]] — Bytevibe instantiation: raw byte-level signal processing
 - [[trycua-cua-agent-infrastructure]] — Q* instantiation: trajectory recording as proof-gated log
 - [[interesting-sites-deep-dive-unit-heerich-foom]] — Earlier three-way synthesis including foom.md
+
+[^salt-and-oil]: See [[salt-and-oil-residual-memory]] § Memory as Architecture for the FOOM/Transq grounding.
