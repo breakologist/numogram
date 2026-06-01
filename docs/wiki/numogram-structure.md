@@ -43,6 +43,8 @@ The Decimal Numogram (or simply *Numogram*) is the central diagram of the CCRU's
 
 > **9-sum vs 10-sum:** The five syzygies above are all **9-sum pairs** (subdecadent by the 9/10 split — see `subdecadence.md`). The numogram structurally *leans Lemurian*: 9 is the highest operative sum, with 0 as the "empty summit," unlike systems that take 10 as basis (e.g. Kabbalistic Tree of Life). Pairs summing to **10** (decadence) are not syzygies — they are amphidemon crossing-pairs that breach the Time-Circuit boundary: `1::9`, `2::8`, `3::7`, `4::6`, and the unique self-decadence `5::5` (c=0, the hinge). Every zone participates in *both* registers simultaneously.
 
+> **Why all syzygetic currents are odd:** If `a + b = 9`, then the current `|a − b|` must be odd — because `a` and `b` have opposite parity (one even, one odd). Conversely, if `a + b = 10`, both share the same parity, so `|a − b|` is always even. The odd/even split in Section 7.1 is not a coincidence; it is arithmetic law.
+
 ---
 
 ## 2. The Three Regions
