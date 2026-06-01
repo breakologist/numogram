@@ -45,7 +45,7 @@ For each zone *n*, sum all integers from *n* down to 1 (cumulation), then repeat
 
 Gt-45 is the most significant gate: 9+8+...+1 = 45 = 9. The gate from Zone 9 points back at Zone 9. This is the closed loop, the mouth that swallows itself. The **45 demons** of the Pandemonium Matrix are attuned to this gate. T₉=45.
 
-See also: [[numogram-plex]], [[triangular-numbers]], [[subdecadence]]
+See also: [[numogram-plex]], [[triangular-numbers]], [[subdecadence]], [[gate-mechanics]]
 
 ## Application: Roguelike Shortcuts
 

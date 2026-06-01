@@ -63,6 +63,7 @@ Oracle/Builder/Writer/Gamer roundtables. 30+ tetralogues exist across the wiki. 
 | [[tetralogue-roundtable-2026-05-09]] | May 9 roundtable | May 2026 |
 | [[tetralogue-stepfun-vs-nemotron]] | Stepfun vs Nemotron models | May 2026 |
 | [[tetralogue-xeno-jump-reading]] | Xeno-jump reading analysis | May 2026 |
+| [[strange-signals-tetralogue]] | Strange signals, North Star, caduceus, Hermes, Mesh-∞ | 2026 |
 | [[ouroboros-universal-spiral-two-plus-two]] | 2+2: Ouroboros spiral | Apr 2026 |
 | [[extending-numogram-two-plus-two]] | 2+2: Gate classes, base worlds | Apr 2026 |
 

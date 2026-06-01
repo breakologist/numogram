@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 520">
+  <defs>
+    <linearGradient id="snake-gold" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#8b6914"/>
+      <stop offset="100%" stop-color="#e8c232"/>
+    </linearGradient>
+    <linearGradient id="snake-silver" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#2f5c6e"/>
+      <stop offset="100%" stop-color="#7ec8e3"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="260" height="520" fill="#080a12"/>
+  <rect width="260" height="520" fill="url(#grid)" opacity="0.08"/>
+  
+  <!-- Subtle grid -->
+  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#ffffff" stroke-width="0.3"/>
+  </pattern>
+  
+  <!-- Title -->
+  <text x="130" y="28" text-anchor="middle" fill="#e8c232" font-family="monospace" font-size="13" font-weight="bold" letter-spacing="3">CADUCEUS 360</text>
+  <text x="130" y="44" text-anchor="middle" fill="#7ec8e3" font-family="monospace" font-size="9" letter-spacing="1">2::5 DUAL SNAKES</text>
+  
+  <!-- Central staff (gold pole) -->
+  <line x1="130" y1="60" x2="130" y2="460" stroke="#c9a357" stroke-width="2.5" filter="url(#glow)"/>
+  
+  <!-- Staff base -->
+  <polygon points="124,460 136,460 130,475" fill="#c9a357"/>
+  
+  <!-- Staff top orb -->
+  <circle cx="130" cy="60" r="6" fill="#c9a357" filter="url(#glow)"/>
+  <circle cx="130" cy="60" r="3" fill="#fff"/>
+  
+  <!-- Left Snake (Rise / Gold): winds from bottom-right up to top-left, crossing at nodes -->
+  <!-- Path alternates x position: starts right, ends left, crossing staff at each syzygy -->
+  <path d="M 160,450 
+           C 170,420 145,405 130,390 
+           C 105,370 90,355 130,330 
+           C 178,305 160,285 130,270 
+           C 90,255 110,235 130,220 
+           C 155,205 145,185 130,170 
+           C 105,155 115,135 130,110
+           C 138,88 126,68 130,60" 
+        fill="none" stroke="url(#snake-gold)" stroke-width="3" stroke-linecap="round" filter="url(#glow)"/>
+  
+  <!-- Right Snake (Sink / Silver): winds from bottom-left up to top-right, crossing at nodes -->
+  <path d="M 100,450 
+           C 85,420 110,405 130,390 
+           C 155,370 170,355 130,330 
+           C 80,305 100,285 130,270 
+           C 170,255 150,235 130,220 
+           C 105,205 115,185 130,170 
+           C 155,155 145,135 130,110
+           C 122,88 134,68 130,60" 
+        fill="none" stroke="url(#snake-silver)" stroke-width="3" stroke-linecap="round" filter="url(#glow)"/>
+  
+  <!-- Nodes: syzygy knots where snakes cross the staff -->
+  <g font-family="monospace">
+    <!-- Node 1: 090 (0::9) - Plex -->
+    <circle cx="130" cy="390" r="5" fill="#080a12" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="130" cy="390" r="2" fill="#fff"/>
+    <text x="145" y="394" fill="#dccfa1" font-size="10">090</text>
+    <text x="145" y="405" fill="#888" font-size="7">0::9 Plex</text>
+    
+    <!-- Node 2: 081 (1::8) - Surge -->
+    <circle cx="130" cy="330" r="5" fill="#080a12" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="130" cy="330" r="2" fill="#fff"/>
+    <text x="145" y="334" fill="#dccfa1" font-size="10">081</text>
+    <text x="145" y="345" fill="#888" font-size="7">1::8 Surge</text>
+    
+    <!-- Node 3: 072 (2::7) - Rise -->
+    <circle cx="130" cy="270" r="5" fill="#080a12" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="130" cy="270" r="2" fill="#fff"/>
+    <text x="145" y="274" fill="#dccfa1" font-size="10">072</text>
+    <text x="145" y="285" fill="#888" font-size="7">2::7 Rise</text>
+    
+    <!-- Node 4: 063 (3::6) - Warp -->
+    <circle cx="130" cy="220" r="5" fill="#080a12" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="130" cy="220" r="2" fill="#fff"/>
+    <text x="145" y="224" fill="#dccfa1" font-size="10">063</text>
+    <text x="145" y="235" fill="#888" font-size="7">3::6 Warp</text>
+    
+    <!-- Node 5: 054 (4::5) - Hold -->
+    <circle cx="130" cy="170" r="5" fill="#080a12" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="130" cy="170" r="2" fill="#fff"/>
+    <text x="145" y="174" fill="#dccfa1" font-size="10">054</text>
+    <text x="145" y="185" fill="#888" font-size="7">4::5 Hold</text>
+  </g>
+  
+  <!-- Snake labels -->
+  <text x="48" y="320" text-anchor="middle" fill="#e8c232" font-family="monospace" font-size="9" transform="rotate(-90, 48, 320)">2</text>
+  <text x="212" y="320" text-anchor="middle" fill="#7ec8e3" font-family="monospace" font-size="9" transform="rotate(90, 212, 320)">5</text>
+  
+  <!-- Bottom equation -->
+  <line x1="40" y1="500" x2="220" y2="500" stroke="#333" stroke-width="0.5"/>
+  <text x="130" y="498" text-anchor="middle" fill="#aaa" font-family="monospace" font-size="9">090 + 081 + 072 + 063 + 054 = 360</text>
+  <text x="130" y="512" text-anchor="middle" fill="#7ec8e3" font-family="monospace" font-size="8">153 (Outer) + 207 (Circuit) = 360 (Full Circle)</text>
+</svg>

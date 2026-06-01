@@ -126,6 +126,7 @@ Ultimately: T₉=45 behaves as a Plex-attracting culmination on the Numogram —
 - [[demon-djynxx]] — the warp demon
 - [[demon-uttunul]] — the plex demon
 - [[i-ching-connections]] — hexagram mappings
+- [[gate-mechanics]] — gate indexing formulas, Gt-36 & Gt-45 ritual protocols
 
 ---
 

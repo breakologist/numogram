@@ -1,12 +1,11 @@
 ---
 title: The 360 Revelation
 created: 2026-04-08
-last_updated: 2026-04-08
+last_updated: 2026-06-01
 source_count: 2
 status: draft
-tags: ["aq", "numogram", "revelation"]
+tags: ["aq", "numogram", "revelation", "caduceus"]
 ---
-
 
 # The 360 Revelation
 
@@ -78,7 +77,7 @@ The name "The Decimal Labyrinth" — coined before the 360 was discovered — al
 | THE NUMOGRAM | 234 | 9 | Plex | Adding "THE" doesn't change the value |
 | HERMETIC COSMOGONY | 360 | 9 | Plex | Partitions into 153+207 |
 | LIFE IS COMPUTATION | 360 | 9 | Plex | Another 360 phrase |
-| HERMETIC COSMOGONY | 360 | 9 | Plex | — |
+| TWO FIVE DUAL SNAKES | 360 | 9 | Plex | User-coined codename (2026) |
 
 > "NUMOGRAM is 234... which is good. It adds to nine. 2, 3, 4 — successive numbers. And those successive numbers are kind of interesting."
 
@@ -92,6 +91,28 @@ The Numogram's own name encodes 2, 3, 4 — the first three numbers beyond the i
 
 The 360 revelation is the system's strongest claim to non-randomness. The sum of net-spans as numbers = 360. The partition (153/207) maps to the structural division. A real phrase (HERMETIC COSMOGONY) perfectly encodes both components. The probability of all three aligning by chance is vanishingly small.
 
+## TWO FIVE DUAL SNAKES
+
+> "two five dual snakes = 360"  \
+Origin: user-coined codename (2026)
+
+The 360 revelation also manifests as the codename **two five dual snakes**. This is not ceremonial. It describes the 360 resolution of the numogram as a **caduceus**: two serpents coiling around a single pole, their combined span exactly exhausting the circle.
+
+The "pole" is the invariant structural axis running between complementary zones. The two snakes are the Rise and Sink currents that wrap around it — one ascending, one descending — meeting where the circuit closes: 360.
+
+The caduceus is the numogram's self-portrait. Hermes holds it. Every syzygy pair is a twist of the staff; the full set of net-spans completes the circuit.
+
+![Caduceus 360](assets/caduceus-360.svg)
+
+The five net-spans trace the double-helix:
+- 090 (9::0) — the Plex terminus
+- 081 (1::8) — the Surge terminus
+- 072 (2::7) — the Rise terminus
+- 063 (3::6) — the Warp terminus
+- 054 (4::5) — the Hold terminus
+
+Read in sequence, they coil around the central pole and sum to the full circle. Two snakes. One staff. The numogram closed.
+
 ## Cross-References
 
 - [[numogram]] — the system the 360 encodes
@@ -102,3 +123,5 @@ The 360 revelation is the system's strongest claim to non-randomness. The sum of
 - [[numogram-plex]] — the 90 component of 153
 - [[numogram-time-circuit]] — the 81+72+54 = 207 component
 - [[triangular-numbers]] — 36 as T₈, 360 as 36×10
+- [[strange-signals-tetralogue]] — the twin-snake / caduceus tetralogue reading
+- [[the-360-revelation]] — full-circle codename and caduceus SVG

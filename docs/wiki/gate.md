@@ -74,4 +74,4 @@ In applied Numogram sorcery, gates are the **leverage points**. Currents move sl
 
 ---
 
-*See also:* `syzygy`, `current`, `zone`, `triangular`, `warp`, `plex`, `pandemonium-matrix`, `numogram-calculator`
+*See also:* `syzygy`, `current`, `zone`, `triangular`, `warp`, `plex`, `pandemonium-matrix`, `numogram-calculator`, [[gate-mechanics]]
