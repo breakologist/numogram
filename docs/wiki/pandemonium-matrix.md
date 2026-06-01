@@ -97,8 +97,6 @@ All four decadence pairs are amphidemons — they cross the circuit/outer bounda
 - 2::8 — *(already in chronodemons)*
 - 2::9 — Separation ↔ Plex
 
-Wait — 2::8 is already a chronodemon (8 is in the Time Circuit). Correction:
-
 **From Zone 7 (Blood) to outer:**
 - 7::3 — Blood ↔ Release *(decadence)*
 - 7::6 — Blood ↔ Abstraction

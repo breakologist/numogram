@@ -139,3 +139,48 @@ The **Book of Paths** is the canonical 47-entry Alphanumeric Qabbala dictionary 
 ## Editorial notes
 
 *This page consolidates the AQ dictionary into ceremonial format. The raw phrases are canonical; the ceremonial framing (paths, gates, rituals) is derived from Aamodt’s editorial method in* Unleashing the Numogram. *Entries are expected to acquire expanded glosses over time.*
+
+---
+
+## Primary Source: The 84-Path Book of Paths
+
+The 47-entry AQ dictionary above is one layer of the Book of Paths. The **primary CCRU text** (`raw/www.ccru.net/occultures/bookofpaths.htm`) contains a distinct 84-path divinatory corpus — numbered paths 1–84, each with a title, description, "path favours" mechanic, superior subtlety line, compliance/resistance verdict, test count, and outcome reading.
+
+**Provenance:** The Ccru received the complete text in 2003 from the Vysparov estate, as a photocopy of Chaim Horowitz's February 1949 English translation from the Tibetan ("B Manuscript"). Horowitz's letter to Peter Vysparov accompanies it. The text was considered "profoundly archaic" by Tang-era sources — possibly predating the I Ching. See also: `[[barkerspeaks]]` for Stillwell's Lemurian context and `[[vault-of-murmurs]]` for the Cthulhu Club discovery narrative.
+
+**Live source:** `http://127.0.0.1:8080/occultures/bookofpaths.htm`
+
+**Sample paths (first 14 — verified):**
+
+| Path | Title | Tests | Outcome |
+|------|-------|-------|---------|
+| 1 | Original Subtraction | 3 | Difficulties annihilated in the end |
+| 2 | Extreme Regression | 5 | Escaping the quagmire through strategic withdrawal |
+| 3 | Abysmal Comprehension | 7 | Burning excitement provokes breakthrough into immersive nightmares |
+| 5 | Slipping Backwards | 2 | Escaping the quagmire through strategic withdrawal |
+| 6 | Attaining Balance | 4 | Attainments consumed in burning excitement. Breakthrough |
+| 7 | Progressive Levitation | 4 | Fluid evolution triggers possession |
+| 8 | Eternal Digression | 6 | Lucid delirium |
+| 9 | Sudden Flight | 1 | Possession |
+| 13 | Cyclic Perfection | 5 | Dubious inheritance consumed in burning excitement |
+| 14 | Tranquil Drowning | 1 | Breakthrough |
+
+**Verified structural observations (1–14 + terminal cluster 77–84):**
+- "Difficulties annihilated in the end" recurs across paths 1,2,3,11,12,43,44,58,76 — terminal outcome archetype
+- "Fluid evolution triggers possession" appears in paths 7, 19, 21, 39 — Warp-current signature
+- "Superior subtlety" has four distinct modes: "opens the first hidden road," "opens the three hidden roads," "enters the spiral labyrinth," and crucially "leads nowhere" (paths 7, 9, 16, 26) — null/gate-blocking variant
+- "Pure compliance" / "Pure resistance" appear only at terminal nodes
+- Terminal cluster 77–83: every entry opens **"the first two hidden roads,"** shares **"Ominous transition"** as penultimate line, and verdict is always resistance. Path 84 appendix ("Compressed Termination") opens **"the second hidden road"** — suggesting a final gate-shift at the boundary
+
+**Manual observations only — full tabulated extraction pending verified parser.**
+
+**See also:** `[[barkerspeaks]]` for Stillwell's Lemurian context and `[[vault-of-murmurs]]` for the Cthulhu Club discovery narrative.
+
+Wiki cross-references:
+- [[decadence-triangle]] — Book of Paths entries read as numogram trajectories
+- [[book-of-paths-triangle]] — Triangle rotation on the 84 paths
+- [[numogram-oracle-litprog]] — How the oracle pipeline reads Book of Paths entries
+- [[numogram-divination]] — Step 5 uses Book of Paths for the reading
+- [[subdecadence]] — 9-sum pattern
+- [[decadence-subdecadence-comparison]] — odd/even structural split
+- [[numogram-structure]] — syzygy/current parity
