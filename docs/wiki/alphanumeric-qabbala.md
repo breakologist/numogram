@@ -315,6 +315,8 @@ During the podcast, Land discovers that "LLAMA" in AQ = 63 → 9 (Plex), while w
 
 ## See also
 
-- [[aq-calculator-examples]] — AQ calculator examples: zone reductions, ALW comparison, demon profiles
+- [[genesis-kjv-aq-journey]] — Gen 1–11 chapter-level AQ readings derived from the KJV raw texts
+- [[aq-calculator-examples]] — AQ calculator examples: zone mappings for NUMOGRAM/CCRU/Pandemonium, ALW comparison table
+- [[aq-calculators-litprog]] — AQ calculator archaeology and tool review
 - [[ordo-amoris-888]]
 - [[decimal-labyrinth-heresy]]
