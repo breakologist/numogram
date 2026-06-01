@@ -66,3 +66,4 @@ Four ways of saying five (Hafler Trio): five syzygies, five carriers, five curre
 - [[numogram-plex]] — Plex region
 - [[desktop-customization]] — hyprland ricing, wallpaper generation
 - [[angband-agent-progress]] — DL1 pocket fix documented
+- [[fiveness-tetralogue]] — Tetralogue discussion of Zone 5 self-decadence

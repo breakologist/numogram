@@ -26,15 +26,13 @@ Example: AQ value of "TEMURAH" = 142. Digital root: 1+4+2 = 7. Zone 7.
 
 Each zone pairs with its complement to 9. The syzygy partner reveals what *completes* the querent.
 
-| Zone | Syzygy Partner |
-|------|------------
-- [[geomancy-api-design]] — Plug-in engine: geomancy perfection analysis for zone-specific readings
----|
-| 0 | 9 |
-| 1 | 8 |
-| 2 | 7 |
-| 3 | 6 |
-| 4 | 5 |
+|| Zone | Syzygy Partner |
+||------|------------|
+|| 0 | 9 |
+|| 1 | 8 |
+|| 2 | 7 |
+|| 3 | 6 |
+|| 4 | 5 |
 
 Zone 7 pairs with Zone 2. The querent at 7 is completed by 2.
 
@@ -60,27 +58,24 @@ Zone 7: 7+6+5+4+3+2+1 = 28 → 2+8 = 10 → 1+0 = 1. Gate Gt-28 opens from Zone 
 
 The complete reading:
 
-> Querent at Zone 7 (+, Rise current). Completed by Zone 2 (−, Horizon). Current flows as Hold (5) — stabilization. Gate opens toward Zone 1 (Anamnesis, memories and dreams). The path goes from ascent into remembrance.
+> Querent at Zone 3 (+, Process current, rising phase). Querent is entering becomings. Completed by Zone 6 (−, Abstraction). Current flows as Warp (3) — spiralling outward, chaotic. Gate opens toward Zone 6 (Abstraction, idea-space and risk). The path goes from surge into chaotic coherence.
 
-## Reading Example: Random Seed
+## Comparison: Decadence vs Subdecadence Readings
 
-Seed from random.org: **192855**
+Any querent can be read in both registers simultaneously:
 
-Digital root: 1+9+2+8+5+5 = 30 → 3+0 = 3. Zone 3.
+| Register | Pairing rule | What it reveals |
+|---|---|---|
+| **Syzygy (subdecadence)** | Pairs sum to 9 | What *completes* the querent (the twin) |
+| **Decadence** | Pairs sum to 10 | What the querent *transcends* or crosses toward |
 
-- Syzygy: 3::6 (Warp)
-- Current: 3 (Warp — spiralling outward, chaotic)
-- Polarity: + (Process, becoming)
-- Sound: *zx* (buzz-cutter, static, insectoid)
-- Gate: Gt-6 (3→6, ascending into the Warp itself)
+For seed `192855` (Zone 3):
+- **Syzygy partner:** Zone 6 (Warp, c=3) — the zone that mirrors 3 across the 9-sum.
+- **Decadence partner:** Zone 7 (3+7=10, c=4) — Blood, the zone 3 crosses toward at the Atlantean threshold.
 
-Reading: *The seed lands in the Warp. The current spirals outward. The gate ascends from chaos into deeper chaos. The map will be turbulent, recursive, and expanding.*
+The two readings tell different stories: completion vs crossing, mirror vs threshold. Holding both at once is the full divination.
 
-This seed is ideal for generating a dungeon with expanding rooms, increasing complexity, and no stable centre.
-
-## Comparison: Atlantean Cross
-
-The [[subdecadence]] system uses a different spread — the Atlantean Cross — which draws five cards/values and maps them to syzygy positions. The divination method above is simpler (single-number) but less nuanced.
+> See [[decadence-subdecadence-comparison]] for the complete zone-by-zone table.
 
 ## Implementation: `numogram-oracle` CLI
 

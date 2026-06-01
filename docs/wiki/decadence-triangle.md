@@ -145,3 +145,8 @@ Next rotation: the Builder reads the 0(rphan) d(rift>) tables (Katak THE DESOLAT
 ## See also
 
 - [[syzygy-arithmetic]] — Syzygy arithmetic foundation
+- [[subdecadence]] — Lemurian structural base, current derivation
+- [[decadence]] — Atlantean half, gameplay and ritual
+- [[decadence-subdecadence-comparison]] — Systematic 9/10 split across all zones
+- [[c-ten-fortyfive-fiveness]] — Combinatorial and geometric exploration of Zone 5 self-decadence
+- [[fiveness-tetralogue]] — Four-voice discussion of Zone 5 as the non-pairing hinge
