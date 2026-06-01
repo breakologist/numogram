@@ -325,3 +325,5 @@ Both NoobAI and Illustrious are fundamentally anime-trained. Neo-Nihonga LoRA pr
 
 ## Related Creative Pipelines
 - [[eikon-pipeline-notes]] — ASCII eikon creation for Herm TUI using the Risomorphism pipeline
+- [[heerich-voxel-svg-engine]] — voxel-to-SVG geometry engine; numogram diagrams as isometric voxel sculpture; boolean operations map to zone/carving
+- [[interesting-sites-deep-dive-unit-heerich-foom]] — heerich.js deep dive with cross-current synthesis against unit.land and foom.md

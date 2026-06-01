@@ -2,7 +2,7 @@
 zone: 2
 name: Separation
 region: torque
-syzygy: 
+syzygy: 2↔7
 particle: dt
 spinal: —
 meshTag: 0003
@@ -44,9 +44,6 @@ Crypt-navigation, occulted cyberspace. Spectral populations of hallucination and
 
 *Coordinates from `positions.ts` (qliphoth.systems, 2026-04-30).*
 
-
-## Visual
-
 ![Zone 2 glyph](assets/zone-glyphs/zone-2.png) { .zone-glyph }
 
 > Imploded fricative, stutter fracture, angle tick — the Shperer fracture vertical. A break that never quite closes.
@@ -77,6 +74,5 @@ As the raw notes already observe, Zone 2 mirrors Zone 5 (shared Hyperborean them
 - [[zone]] — overview
 - [[numogram-calculator]] — ZONE_DATA
 - [[pandemonium-matrix-45-demons]] — demon assignments
-
 
 **Pentagram coordinate:** **Outer ring right** (0° vertex in chord-pentagram)

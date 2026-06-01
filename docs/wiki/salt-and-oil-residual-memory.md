@@ -134,6 +134,8 @@ In the katak-oddubb rotation, **7::2** (salt) is the Hold current — stable sub
 
 Zone 7 — the coastal swamps of the Dib Nma, amphibious threshold, chubby batrachians burping in the marsh salt. The salt-water environment maps directly: salt as mineral persistence, oil as the murky potential under still water. Zone 7 is where the two layers intermingle without active flame. The amphibious creatures *are* the residual sign — life persisting in brackish transition.[^zone-7]
 
+See also: [[dht-dht-sybil-attack]] (distributed Sybil attacks share this slow-burn infiltration structure — observe → measure → escalate).
+
 ---
 
 ## Terminal Observation

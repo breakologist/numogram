@@ -2,7 +2,7 @@
 title: Pandemonium Matrix
 created: 2026-04-27
 source: pandemonium-matrix.json + numogram-source.txt
-status: stub
+status: reviewed
 tags: [pandemonium, demon, matrix, netspan, gate-45, 45]
 ---
 

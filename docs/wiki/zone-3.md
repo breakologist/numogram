@@ -2,7 +2,7 @@
 zone: 3
 name: Release
 region: warp
-syzygy: 
+syzygy: 3↔6
 particle: zx
 spinal: Third-eye plane
 meshTag: 0007
@@ -44,7 +44,6 @@ Swirling nebulae, cosmic dust clouds and alien pattern. Vortical involvement wit
 - Ladder: (260, 275)
 
 *Coordinates from `positions.ts` (qliphoth.systems, 2026-04-30).*
-
 
 ## Visual
 

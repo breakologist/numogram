@@ -2,7 +2,7 @@
 title: "Demon: Tokhatto (Old Toker)"
 created: 2026-04-27
 last_updated: 2026-04-27
-status: stub
+status: reviewed
 tags:
   - demon
   - amphidemon

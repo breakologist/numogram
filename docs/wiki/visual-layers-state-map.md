@@ -32,6 +32,7 @@ tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "ascii-video", "med
 | | **Oracle ASCII GIF** | `oracle-ascii-video.py` | ✓ Prototype — 8-zone traverse |
 | **Pixel-art planchette gallery** | static HTML | `assets/numogram-pixel-planchette-gallery.html` | ✓ **New** — 10 cards, Floyd-Steinberg sprites + oracle metadata |
 | **Syzygy pair gallery** | static HTML | `assets/numogram-syzygy-pair-gallery.html` | ✓ **New** — 5 pair cards, dual sprites + cross-addition arithmetic |
+| **heext/SVG export via heerich.js** | JS / browser | `heerich-voxel-svg-engine.md` | ⬜ Candidate — voxel geometry → semantic SVG for diagrams |
 | **Pixel-art traversal GIFs** | `scripts/oracle_pixel_traversal.py` | `assets/traversal-gifs/` | ✓ **New** — 4 seeds (42/137/174/666), animated 50+ frame GIFs |
 | **Cross-palette matrix** | `scripts/cross_palette_matrix.py` | `assets/matrix-cells/` | ✓ **New** — 10 zones × 28 palettes, 280 cells |
 | Tetralogue 17 | tetralogue-roundtable | `wiki/tetralogue-17-pixel-art-labyrinth.md` | ✓ **New** — palettes-as-bandwidth, debug-path-as-traversal |

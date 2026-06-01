@@ -15,11 +15,13 @@ tags: ["demon", "numogram", "syzygy", "xenodemon"]
 **Current:** 3 (from 6 to 3)  
 **Net-Span:** 3 (stays entirely within the Warp loop)
 
-**See also:** [[numogram]], [[numogram-warp]], [[demon-uttunul]], [[i-ching-connections]]
+**See also:** [[numogram]], [[numogram-warp]], [[demon-uttunul]], [[i-ching-connections]], [[apoc-apocalypse-been-in-effect]]
 
 ## Description
 
 Djynxx is the xenodemon (extraneous demon) that carries the Warp current in the Decimal Numogram. As a "xenodemon," Djynxx exists outside the standard Pandemonium classification — a liminal entity that operates at the boundary of the known system.
+
+From the CCRU Pentazygon account (`apoc.htm`): **Djynxx is a "changeling figure, defined by a jinking (erratic or zig-zagging) movement, a sudden cutting in or out."** One of the two entities "outside sequential time," associated with old mythologies of **child abduction** and Hell.
 
 ## Functions and Associations
 
@@ -56,11 +58,10 @@ The Warp region itself is turbulent and self-reinforcing; Djynxx's chaotic, vort
 - [[syzygy]] 
 ---
 
-## Pandemonium Matrix Entry (Full)
-
+From the CCRU Pandemonium Matrix (full entry):
 > "Mesh-18. Djynxx (Ching, The Jinn). Child Stealer. Pitch Null. Net-Span 6::3. Syzygetic Xenodemon of Time-Lapse. Feeds and Prowls Warp-Current. Ciphers Gt-36. Haunts Gt-06, Gt-21. Rt-0:[X] Abstract cyclones, dust spirals (nomad war-machine). [+2 sub-Rt]."
 
-[Source: CCRU Writings 1997-2003, Pandemonium Matrix]
+From the Pentazygon (`apoc.htm`): **Djynxx is the "changeling figure" — sudden cutting in or out, jinking movement. Outside sequential time. Associated with child abduction and Hell.**
 
 ### Key Facts
 

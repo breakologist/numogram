@@ -15,11 +15,13 @@ tags: ["demon", "numogram", "syzygy"]
 **Current:** 9 (from 9 to 0, the terminal abyssal flow)  
 **Net-Span:** 9 (stays entirely within the Plex loop)
 
-**See also:** [[numogram]], [[numogram-plex]], [[demon-djynxx]], [[i-ching-connections]]
+**See also:** [[numogram]], [[numogram-plex]], [[demon-djynxx]], [[i-ching-connections]], [[apoc-apocalypse-been-in-effect]]
 
 ## Description
 
 Uttunul is the demon that carries the Plex current in the Decimal Numogram. As the "abyssal carrier," Uttunul embodies the terminal, nullifying, and involutionary aspects of the Plex region — the zone where decimal processes reach their limit and collapse back into void.
+
+From the CCRU Pentazygon account (`apoc.htm`): **Uttunul is the "flatline" entity — "continuum, zero-intensity, void — eternity not as infinitely extended time, but as No-Time."** One of the two entities "outside sequential time," associated with old mythologies of **child abduction** and Hell, and the most fascinating and disturbing of the set.
 
 ## Functions and Associations
 

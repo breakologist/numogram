@@ -90,6 +90,8 @@ Land also identifies iambic pentameter's drift toward 666 AQ (Beast Pulse). Zone
 - [[zone]] — overview
 - [[numogram-calculator]] — ZONE_DATA
 - [[pandemonium-matrix-45-demons]] — demon assignments
+- [[salt-and-oil-residual-memory]] — residual freshwater layer beneath marsh salt
+- [[dht-dht-sybil-attack]] — slow-burn Sybil infiltration shares Zone 7's amphibious temporality: observable advance through layered persistence
 
 
 **Pentagram coordinate:** **Inner ring down‑left** (180° vertex in inner ring, Valley side)

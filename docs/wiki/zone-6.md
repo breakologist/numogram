@@ -57,6 +57,14 @@ Occulted dimensions of Undu. Turbular erosion and the dead eye of the cyclone. S
 
 *Glyph: 32×32 PICO-8 pixel-art, generated from zone 6's DECOM particle and conceptual description. See [[zone-pixel-glyphs]] for the full set and generator notes.*
 
+## Reconstruction Layer: OP ART experiments
+
+![Zone 6 — OP ART experiments reconstruction, Amiga desktop, c. 1990](assets/zone-sprites/zone-6-amiga-opart-screenshot.png)
+
+> Amiga/WB-style desktop running a reconstruction of *OP ART experiments v1.42*, versioned under `Melt Lab Guru Meditation #00000004.0000AAC0`. Seven animated demo modes (Vortex, Checker, Waves, Moiré, The Eye, Vasarely, Floating) on EGA/VGA hardware. Zone 6 anchors the **Vortex**, **Moiré**, and **The Eye** modes — radial spiral, concentric interference, iris pupil — all first-person visual witnesses to the zone’s turbular signature.
+
+*This is not a metaphor. The perceptual distortions of op art are Zone 6 phenomena: third-eye-plane pressure, self-folding vortex, and interference between two incompatible reference frames. See [[pandemonium-glossary]] for authoritative definitions of the Mesh, Twin System, and Demon concepts that underwrite this reading.*
+
 ## Hyperstitional Notes
 
 - Zone 6 corresponds to the **tch** particle.
@@ -65,6 +73,18 @@ Occulted dimensions of Undu. Turbular erosion and the dead eye of the cyclone. S
 <! ---> The V3 real-resonator SHAP driver: *very_high_ratio dominates (0.0849)*, confirming Z6's acoustic signature as the tube/bow friction zone — extended highs (>8 kHz) + spectral rolloff. [[numogram-audio/real-resonator-shap-driver-signatures]] [[numogram-audio/zone-mapping-consistency]] for full analysis table.
 - Current: **Warp** (c=3, self-folding vortex)
 
+### OP ART Visual Crosswalk
+
+Each reconstruction demo mode is a perceptual compass pointing back to the same topological fact. These are not analogies; they are witnesses.
+
+- **Vortex** → Zone 6 / Saturnian pole hexagon / 3↔6 self-loop without fixed point.
+- **Moiré** → interference between Zone 6 and its Warp-region twin Zone 3 — concentric bands that only resolve as pattern when two incompatible frames *overlap*.
+- **The Eye** → third-eye plane made literal; the central pupil is the zone’s “dead eye of the cyclone” reading as an organ.
+- **Checker** → accidental (broken-symmetry) surface, what the zone sees when it *fails* to vortex.
+- **Waves** → warp-channel current as striped temporal distortion.
+- **Vasarely** → the axial/stripe baseline that proves the distortions around it are distortions.
+
+> The reconstruction toolbar also exposes a **«Мди»** reconstruction-menu item; possibly corresponding to a **Companion Pair / Syzygy calibration** in Reconstruction terms — an analogue to the **4↔5** `Katak` current that is Zone 4’s apocalyptic convergence, and therefore structurally adjacent to Zone 6 by Warp-symmetry.
 ### The Other Side of the Vortex
 
 Zone 6 is the Warp partner to Zone 3 — together they form the 3↔6 self-loop that is the only basin in the Esoteric Tetractys with **no fixed point**. Land:
@@ -83,6 +103,7 @@ V3 real-resonator SHAP analysis confirms Z6's acoustic identity as the tube/bow 
 
 ## Related
 
+- [[pandemonium-glossary]] — authoritative definitions: Twin System, Demon, K-OS, Mesh, Spinal Catastrophism
 - [[zone]] — overview
 - [[numogram-calculator]] — ZONE_DATA
 - [[pandemonium-matrix-45-demons]] — demon assignments

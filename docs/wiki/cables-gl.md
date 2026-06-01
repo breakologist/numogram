@@ -224,3 +224,4 @@ Full MIDI support: Clock, Notes, CC, NRPN. This bridges directly to:
 - [[p5js]] — Code-driven generative art (complementary to cables)
 - [[numogram-audio/mod-writer]] — Tracker module generator (audio side)
 - [[quadrium-motif-triads-reference]] — mod-writer triad motifs (music theory)
+- [[dht-dht-sybil-attack]] — Sybil attack on hash-routed coordination layers; node-graph visual programming environments could be attack surface if registry/discovery is hash-based
