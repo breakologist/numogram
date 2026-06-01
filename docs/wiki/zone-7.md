@@ -3,6 +3,7 @@ zone: 7
 name: Blood
 region: torque
 syzygy: oddubb
+current: hold-c5
 particle: pb
 spinal: —
 meshTag: 0127
@@ -11,13 +12,24 @@ planetFull: Uranus (Sol-7)
 door: Puppo — Tracts of Dobo
 phaseCount: 128
 lemurs: ["7::0 Puppo", "7::1 Bubbamu", "7::2 Oddubb", "7::3 Pabbakis", "7::4 Ababbatok", "7::5 Papatakoo", "7::6 Bobobja"]
-source: qliphoth.systems zones.ts (2026-04-30)
+source: qliphoth.systems zones.ts (2026-04-30); raw/www.ccru.net/zones/Zn7.htm
 status: canonical
 ---
 
 # Zone 7 — Blood (Torque)
 
-> **Planet:** Uranus (Sol-7) | **Spinal:** — | **Mesh Tag:** `0127` | **Phase Doors:** Puppo — Tracts of Dobo (128 phases)
+> **Planet:** Uranus (Sol-7) | **Spinal:** — | **Mesh Tag:** `0127` | **Phase Doors:** Puppo — Tracts of Dobo (128 phases) | **Current:** Hold (c=5)
+
+## Numeral
+
+The figure **7** contains the only true **diagonal** among the single numerals — the decisive 'L' stroke that breaks the vertical/horizontal axis. It is ideographically a lightning-stroke cutting across the digital grid.
+
+**Keypad direction:** North-West.  
+**Digital cumulation:** 7 → 15 → dr(15) = 6.  
+**Triangular cumulation:** T₇ = 28 (Gate number of Gt-28, the counter-cyclic Relapse gate).
+
+> Seven's structural ambivalence in popular Christianity — both seven cardinal virtues AND seven deadly sins — maps onto its diagonal character: it cannot be resolved into a single axis. Crowley's *777* (AQ gematria of the Law of Thelema) sits adjacent to the 666 Beast Pulse identified by Land; the two sevens (Crowley's and the numeral) flank the line of iambic pentameter that drifts toward 666.
+> Blavatsky's seven root races are the key intermediary between biblical and Lemurian uses of the number.
 
 ## Description
 
@@ -84,6 +96,18 @@ This is the only retrochronic path within the Time Circuit — a functional time
 The numeral 7 contains the only pure diagonal among decimal digits — it escapes the vertical/horizontal axis that governs 1, 4, and the rotational symmetry of 0, 8. Land's "the seven is askance" (noted at AQ 333) connects Zone 7 to the xeno-vector: the path that does not run straight through the Time Circuit but cuts across it at an angle. The seventh gate's retrochronic function literalises this diagonal: it is the path that moves against the current.
 
 Land also identifies iambic pentameter's drift toward 666 AQ (Beast Pulse). Zone 7's number — 777 as the Law of Thelema in AQ — sits adjacent: if 666 is the line of iambic pentameter, 777 is its theological echo (Crowley's *777*) and 7's diagonal numeral the visual signature of the askance path through the system.
+
+### Decadence Topology: 7::2 (Subdecadence) and 7::3 (Decadence)
+
+Zone 7 participates in two structurally distinct crossing-pairs:
+
+| Pair | Sum | Designation | Logic | Partner | Character |
+|---|---|---|---|---|---|
+| 7::2 (Oddubb) | 9 | **Subdecadence** | **Lemurian** — "falls short" of the module by 1; open pairing that marks absence. Carried by Hold current (c=5). | Zone 2 (Separation) | Mirror recursion, amphibious doubling, the amphibian's lungs splitting the undivided waters. |
+| 7::3 | 10 | **Decadence** | **Atlantean** — full crossing of the module threshold; closed 10-sum pair that completes a threshold. | Zone 3 (Release) | Amphidemon crossing the Time Circuit → Outer boundary; the gate that touches the Threshold. |
+
+> The 9/10 split maps the **decadence / subdecadence** distinction captured in the matrix: subdecadence (9-sum = Lemurian, openended) vs decadence (10-sum = Atlantean, closed).
+> Zone 5's self-decadence (5+5=10) is the hinge — the only zone that reaches the threshold without leaving itself. Zone 7's decadence partner is therefore **Zone 3** (7+3=10): Blood reaching Release through the amphibian gate. This is the circuit-crossing structure that marks Zone 7's outer contact.
 
 ## Related
 
