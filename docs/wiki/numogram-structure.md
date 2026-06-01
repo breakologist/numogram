@@ -33,13 +33,15 @@ The Decimal Numogram (or simply *Numogram*) is the central diagram of the CCRU's
 
 ### Syzygy → Current Table
 
-| Syzygy | Pair | Current | Notes |
-|---|---|---|---|
-| 1st | `4::5` | `1` | Initiating spark; feeds Time-Circuit |
-| 2nd | `3::6` | `3` | Self-folding vortex; forms Warp loop |
-| 3rd | `2::7` | `5` | Strong drive; central to Time-Circuit |
-| 4th | `1::8` | `7` | Largest current; drives Time-Circuit rotation |
-| 5th | `0::9` | `9` | Terminal boundary; forms Plex loop |
+| Syzygy | Pair   | Current | Notes                                         |
+| ------ | ------ | ------- | --------------------------------------------- |
+| 1st    | `4::5` | `1`     | Initiating spark; feeds Time-Circuit          |
+| 2nd    | `3::6` | `3`     | Self-folding vortex; forms Warp loop          |
+| 3rd    | `2::7` | `5`     | Strong drive; central to Time-Circuit         |
+| 4th    | `1::8` | `7`     | Largest current; drives Time-Circuit rotation |
+|| 5th    | `0::9` | `9`     | Terminal boundary; forms Plex loop            |
+
+> **9-sum vs 10-sum:** The five syzygies above are all **9-sum pairs** (subdecadent by the 9/10 split — see `subdecadence.md`). The numogram structurally *leans Lemurian*: 9 is the highest operative sum, with 0 as the "empty summit," unlike systems that take 10 as basis (e.g. Kabbalistic Tree of Life). Pairs summing to **10** (decadence) are not syzygies — they are amphidemon crossing-pairs that breach the Time-Circuit boundary: `1::9`, `2::8`, `3::7`, `4::6`, and the unique self-decadence `5::5` (c=0, the hinge). Every zone participates in *both* registers simultaneously.
 
 ---
 
