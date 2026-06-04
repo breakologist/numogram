@@ -10,6 +10,8 @@ tags: ["subdecadence", "lemurian", "barker-spiral", "sum-to-9", "game", "numerol
 
 The Lemurian half of the [[barker-spiral]]: the occulted variation whose sum-to-9 twinings reveal the *subdecadent underworld*. In Barker's narrative, Subdecadence was the "casually mentioned" variation that unlocked the crisis.
 
+A live playable implementation exists: [doomcrypt/subdecadence](https://doomcrypt.github.io/subdecadence/) — a single-file browser card game governed by the great lemur Tokhatto. See also: [[Angelic Index]] and [[pandemonium-matrix]].
+
 > "Subdecadence introduces zeroes, and nine-zero twins. It works by zygonovic numerism."
 >
 > — Daniel Charles Barker, *Barker Speaks* (CCRU interview, Autumn 1998)
@@ -94,3 +96,59 @@ The 9/10 split maps the **decadence / subdecadence** distinction: subdecadence (
 ![Barker Spiral Lemurian half (sum-to-9)](../assets/barker-spiral.svg)
 
 *Shown: right‐hand (counter‐clockwise) Lemurian bands. The central 4⊕5 pair sums to nine; arms radiate outward through 9‐sum complementarity.*
+
+---
+
+## Live Specimen
+
+### Implementation
+
+The playable live specimen is [doomcrypt/subdecadence](https://doomcrypt.github.io/subdecadence/), hosted as a single-file browser implementation. Its source repository is [`doomcrypt/subdecadence`](https://github.com/doomcrypt/subdecadence) (MIT, pure HTML+CSS+JS, no build step, Web Audio procedural sound). Lady reviewers have suggested it as the authoritative instantiation of the Lemurian game mechanics.
+
+### Deck
+
+40 cards from four suits (♠ ♥ ♦ ♣) × values 0–9. Aces count as **1**, 10s count as **0**, face cards are removed. Every revealed card is secretly bound to a Lemurian demon from the [[pandemonium-matrix]]; the implementation surfaces entity name + Mesh coordinates on hover.
+
+### Atlantean Cross Positions
+
+| Position | Meaning |
+|----------|---------|
+| I — CENTER | Memories and Dreams |
+| II — WEST | Destructive Influences |
+| III — EAST | Creative Influences |
+| IV — NORTH | Far Future |
+| V — SOUTH | Deep Past |
+
+### Round Structure
+
+1. **DEAL** — 5 cards face-up into the Atlantean Cross (Set One)
+2. **DRAW** — 5 cards from the deck into the player’s hand (Set Two)
+3. **PAIR** — match hand cards to cross cards whose **values sum to exactly 9**
+   - valid pairs: 1+8, 3+6, 4+5, 0+9
+   - greedy `AUTO-PAIR` button available, but manual pairing yields higher scores
+4. **RESOLVE** — score is calculated; round ends
+
+### Scoring
+
+| Outcome | Value |
+|---------|-------|
+| Valid pair | **+difference** between the two card values |
+| Unpaired cross card | **−its face value** |
+
+Examples: 7+2 → +5; 0+9 → +9; 4+5 → +1. An unpaired 9 costs −9; an unpaired 0 costs −0.
+
+### End Game
+
+- **Round score ≥ 0**: the aeon continues — draw another set of 5 and add to running total
+- **Round score < 0**: the aeon closes; game over
+- **Deck exhausted** (fewer than 10 cards remaining): aeon closes
+
+Your final round score maps to one of **45 Lemurian entities**; the implementer’s canonical mapping is the [[pandemonium-matrix]] 45-demon database. The result screen shows demon name, type, occult attributes, Mesh number / Net-span, and the associated card.
+
+### References to Add
+
+- [[Angelic Index]] — implemented as the *Angelic Index* metric tracking cumulative positive score across all rounds
+- [[decadence-subdecadence-comparison]] — 9/10 structural split and zone-by-zone table
+- [[gates-and-plexing]] — gate protocols and plexing mechanics
+- [[numogram-plex]] — Zone-9 territory and the Plex terminus
+- [[pandemonium-matrix]] — the 45-demon set that resolves your final negative score

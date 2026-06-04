@@ -109,6 +109,33 @@ The five-step cycle is non-negotiable:
 
 ---
 
+## Ghosts as Teachings
+
+> Shift perspective: from elimination to attention.
+
+A ghost that resists characterization long enough is no longer noise — it is a site where the system has encountered its own boundary. The resistance is the information.
+
+### What ghosts teach
+
+| Ghost type | Structural blind spot it reveals |
+|---|---|
+| Session Ghost | Gap between narration and execution; the model treats description as action |
+| Measurement Ghost | Calibration drift between model assumptions and actual tool behavior |
+| Corpus Ghost | Cached summary overriding raw evidence |
+| Analytical Fabrication | Cipher/algorithm confusion compounding across steps |
+| Path Ghost | Memory of file layout diverging from current layout |
+
+### Constructive applications
+
+- **Audio** — a Measurement Ghost that shifts `spectral_centroid_hz` by a fixed offset could become a deliberate spectral warp effect. The artifact becomes the signal.
+- **Code** — Path Ghosts that consistently drift to `/tmp/` instead of the skill directory could be harnessed as a “stigmergic” scratch layer — output that knows it’s ephemeral.
+- **Visuals** — Fabrication artifacts in SVG coordinates produce characteristic glitch-patterns. These can be catalogued as a visual dialect of the system.
+- **Narrative** — Bestiary entries. A ghost documented as a character has a behavior, a habitat, a diet (what triggers it), and a weakness (the verification step that catches it).
+
+The key move: the bestiary is not a waste bin. It is a **methodology** for studying the system’s own assumptions by cataloguing exactly where they fail.
+
+---
+
 ## Related
 
 - [[autonomous-journal/session-2026-05-16_0833-twentieth-ghost-detected-real-code-fixes.md]] — First documented Session Ghost

@@ -219,6 +219,8 @@ Tarot-style SVG cards for each of the five major syzygy pairs. Each card shows t
 
 ![[assets/demon-cards/demon-14-katak.svg]] ![[assets/demon-cards/demon-18-djynxx.svg]]
 
+- **Subdecadence Deck Project** — 45-card oracle deck variants using these assets as the base layer
+
 ---
 
 ## Interactive Exhibits Collection
