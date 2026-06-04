@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 360 520" width="360" height="520" role="img" aria-label="Subdecadence deck prototype: demon-10-tokhatto with zone-glyph, micro-ledger, and 9-sum strip">
+<defs>
+<path id="cardBg" d="M 14 0 L 346 0 Q 360 0 360 14 L 360 506 Q 360 520 346 520 L 14 520 Q 0 520 0 506 L 0 14 Q 0 0 14 0 Z"/>
+<linearGradient id="band5" x1="0%" y1="0%" x2="100%" y2="0%">
+  <stop offset="0%"   stop-color="#a78bfa" stop-opacity="0.15"/>
+  <stop offset="50%"  stop-color="#a78bfa" stop-opacity="0.45"/>
+  <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.15"/>
+</linearGradient>
+<radialGradient id="cardBack" cx="50%" cy="45%" r="65%">
+  <stop offset="0%" stop-color="#1e293b"/>
+  <stop offset="100%" stop-color="#0f172a"/>
+</radialGradient>
+</defs>
+
+<!-- Card base -->
+<path d="M 14 0 L 346 0 Q 360 0 360 14 L 360 506 Q 360 520 346 520 L 14 520 Q 0 520 0 506 L 0 14 Q 0 0 14 0 Z" fill="url(#cardBack)" stroke="#1e293b" stroke-width="1.5"/>
+
+<!-- Top zone pills (primary + partner) -->
+<rect x="18" y="56" width="72" height="32" rx="7" fill="#7c3aed" opacity="0.9"/>
+<text x="54" y="69" font-size="10" fill="white" text-anchor="middle" font-family="monospace" font-weight="bold">Zone 5</text>
+<text x="54" y="81" font-size="8" fill="#94a3b8" text-anchor="middle" font-family="monospace">Pressure</text>
+
+<rect x="270" y="56" width="72" height="32" rx="7" fill="#991b1b" opacity="0.9"/>
+<text x="306" y="69" font-size="10" fill="white" text-anchor="middle" font-family="monospace" font-weight="bold">Zone 0</text>
+<text x="306" y="81" font-size="8" fill="#94a3b8" text-anchor="middle" font-family="monospace">Void</text>
+
+<!-- Pair header -->
+<text x="180" y="24" font-size="17" fill="#e2e8f0" text-anchor="middle" font-family="monospace" font-weight="bold">5 :: 0</text>
+<text x="180" y="40" font-size="11" fill="#94a3b8" text-anchor="middle" font-family="monospace">Hold — 5 current</text>
+<text x="180" y="52" font-size="9" fill="#64748b" text-anchor="middle" font-family="monospace">Amphidemon · Tokhatto</text>
+
+<!-- Micro-ledger (new) -->
+<rect x="30" y="100" width="300" height="22" rx="4" fill="#162032" stroke="#334155" stroke-width="0.8"/>
+<text x="180" y="114" font-size="9" fill="#94a3b8" text-anchor="middle" font-family="monospace">Mesh:10  ·  Net:5::0  ·  DR:7  ·  AQΣ:133</text>
+
+<!-- Central band (pair arc) -->
+<path d="M 54 124 Q 180 108 306 124" stroke="#a78bfa" stroke-width="10" fill="none" stroke-opacity="0.15"/>
+<path d="M 54 136 Q 180 108 306 136" stroke="#a78bfa" stroke-width="10" fill="none" stroke-opacity="0.15"/>
+<path d="M 54 124 Q 180 108 306 124" stroke="#a78bfa" stroke-width="2.5" fill="none" stroke-opacity="0.9"/>
+<text x="180" y="122" font-size="22" fill="#a78bfa" text-anchor="middle" font-family="monospace" font-weight="bold">5</text>
+
+<!-- Zone glyph circles (partner glyph placeholder on right) -->
+<circle cx="54" cy="176" r="26" fill="#162032" stroke="#7c3aed" stroke-width="2"/>
+<text x="54" y="180" font-size="9" fill="#64748b" text-anchor="middle" font-family="monospace">Z5</text>
+
+<circle cx="306" cy="176" r="26" fill="#162032" stroke="#991b1b" stroke-width="2"/>
+<text x="306" y="180" font-size="9" fill="#64748b" text-anchor="middle" font-family="monospace">Z0</text>
+
+<!-- Dashed connectors -->
+<line x1="54" y1="136" x2="54" y2="150" stroke="#334155" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.7"/>
+<line x1="306" y1="136" x2="306" y2="150" stroke="#334155" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.7"/>
+<line x1="54" y1="130" x2="306" y2="130" stroke="#334155" stroke-width="0.8" stroke-dasharray="2 5" opacity="0.4"/>
+
+<!-- Demon name block -->
+<rect x="30" y="218" width="300" height="48" rx="7" fill="#162032" stroke="#334155" stroke-width="1"/>
+<text x="180" y="232" font-size="9" fill="#64748b" text-anchor="middle" font-family="monospace">Governor of Subdecadence</text>
+<text x="180" y="252" font-size="15" fill="#e2e8f0" text-anchor="middle" font-family="monospace" font-weight="bold">Tokhatto</text>
+<text x="180" y="270" font-size="9" fill="#94a3b8" text-anchor="middle" font-family="monospace">Gt-028 → Z5</text>
+
+<!-- Separator -->
+<text x="180" y="296" font-size="11" fill="#8899aacc" text-anchor="middle" font-family="monospace">Δ─────────Δ</text>
+
+<!-- 9-sum strip (new) -->
+<rect x="30" y="304" width="300" height="28" rx="5" fill="#162032" stroke="#334155" stroke-width="0.8"/>
+<text x="180" y="318" font-size="9" fill="#94a3b8" text-anchor="middle" font-family="monospace">9-SUM PAIR  ⇄  COMPLEMENT</text>
+<text x="180" y="330" font-size="11" fill="#e2e8f0" text-anchor="middle" font-family="monospace" font-weight="bold">5 + 4 = 9   ⇄   4</text>
+
+<!-- Footer identity -->
+<text x="180" y="370" font-size="9" fill="#64748b" text-anchor="middle" font-family="monospace">≡  50  ≡  5  ≡  5  ≡</text>
+<text x="180" y="384" font-size="11" fill="#a78bfa" text-anchor="middle" font-family="monospace" font-weight="bold">Hold · ZPressure · Gt-028 → Z5</text>
+
+<!-- Corner numerals -->
+<text x="22" y="22" font-size="9" fill="#1e293b" text-anchor="middle" font-family="monospace" font-weight="bold" opacity="0.55">5</text>
+<text x="338" y="22" font-size="9" fill="#1e293b" text-anchor="middle" font-family="monospace" font-weight="bold" opacity="0.55">0</text>
+<text x="22" y="498" font-size="9" fill="#1e293b" text-anchor="middle" font-family="monospace" font-weight="bold" opacity="0.55">5</text>
+<text x="338" y="498" font-size="9" fill="#1e293b" text-anchor="middle" font-family="monospace" font-weight="bold" opacity="0.55">0</text>
+
+<!-- Deck tag (new) -->
+<rect x="140" y="490" width="80" height="14" rx="3" fill="#7c3aed" opacity="0.85"/>
+<text x="180" y="501" font-size="8" fill="white" text-anchor="middle" font-family="monospace" font-weight="bold">SUBDECADENCE</text>
+</svg>
