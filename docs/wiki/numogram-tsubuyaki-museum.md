@@ -853,3 +853,11 @@ Three bugs were fixed across four attempts before the gallery rendered:
 The final fix that made the gallery render was **#4**: p5.js instance mode requires `<div>` containers, not `<canvas>` elements.
 
 File: `assets/numogram-tsubuyaki-v7-rich.html`
+
+---
+
+## Session mirrors and related works
+
+- **`notefromuser.md`** — User-captured note preserving a hallucination-generated session mirror, its embedded response, and an afterword interpreting it across Qabalah / TSURU / middle-pillar reading. Defines the idiom of a tsubuyaki as a compressed trace of a conversation.
+- **Artifact:** `assets/tsubuyaki-session-mirror.html` — `drifting i`. The completed sketch referenced from the note.
+- Related: `[[visual-layers-state-map]]`

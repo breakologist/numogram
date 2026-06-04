@@ -32,7 +32,6 @@ tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "ascii-video", "med
 | | **Oracle ASCII GIF** | `oracle-ascii-video.py` | ✓ Prototype — 8-zone traverse |
 | **Pixel-art planchette gallery** | static HTML | `assets/numogram-pixel-planchette-gallery.html` | ✓ **New** — 10 cards, Floyd-Steinberg sprites + oracle metadata |
 | **Syzygy pair gallery** | static HTML | `assets/numogram-syzygy-pair-gallery.html` | ✓ **New** — 5 pair cards, dual sprites + cross-addition arithmetic |
-| **heext/SVG export via heerich.js** | JS / browser | `heerich-voxel-svg-engine.md` | ⬜ Candidate — voxel geometry → semantic SVG for diagrams |
 | **Pixel-art traversal GIFs** | `scripts/oracle_pixel_traversal.py` | `assets/traversal-gifs/` | ✓ **New** — 4 seeds (42/137/174/666), animated 50+ frame GIFs |
 | **Cross-palette matrix** | `scripts/cross_palette_matrix.py` | `assets/matrix-cells/` | ✓ **New** — 10 zones × 28 palettes, 280 cells |
 | Tetralogue 17 | tetralogue-roundtable | `wiki/tetralogue-17-pixel-art-labyrinth.md` | ✓ **New** — palettes-as-bandwidth, debug-path-as-traversal |
@@ -70,70 +69,9 @@ tags: ["visual", "oracle", "tsubuyaki", "p5js", "pixel-art", "ascii-video", "med
 | 8 | Pixel-art zone sprites | ~30 LOC gen script | Medium — hardware-authentic | ✓ Done |
 || 10a | Oracle ASCII GIF / ascii-video pipeline | ~80 LOC prototype | Medium — zone traversal as live ASCII cinema | ✓ Prototype |
 || 10b | p5.js Oracle Sketch | complex | High — interactive planchette-reading rendering | ⚡ `oracle-p5js-sketch-spec.md` written |
----
-+
+| Tetralogue 17 | tetralogue-roundtable | `wiki/tetralogue-17-pixel-art-labyrinth.md` | ✓ — palettes-as-bandwidth, debug-path-as-traversal |
 
-+## Thread 10a — Oracle ASCII GIF ✓ Prototype
-+
-+**Goal:** map `oracle.py --traverse` zone sequence → ASCII frame-per-step → animated GIF.
-+
-+**Prototype:** `~/numogram/cli/oracle-ascii-video.py` (6 KB, 0 external deps beyond numpy + pillow)
-+
-+| Parameter | Value |
-+|-----------|-------|
-+| Frames | 1 per zone step (`traverse(seed, 8)`) |
-+| Resolution | 720×400 px @ 1 fps |
-+| Grid | ~50×28 fixed cells, size-11px monospace |
-+| Colour | `oracle._ZONE_TTY_RGB` per zone; luminance↔field |
-+| Glyph | 10 `CHAR_RAMPS` dicts, one per zone |
-+| Tonemap | Percentile-based, 1%/99.5%, gamma 0.75 |
-+| ENCODE | Pillow `save_all=True`, optimize GIF |
-+
-+**Confirmed output:** 8-frame, 582 KB, rc=0. Frame 0 = Z3_Warp bracket-dense gold on dark. Frame 4 = Z8_Lullaby diamond chars in purple. Zones visually distinguishable.
-+
-+### Entry points
-+| Mode | Command | Status |
-+|------|---------|--------|
-+| A — Traverse → GIF | `python3 oracle-ascii-video.py 174 out.gif` | ✓ Working |
-+| B — TTS WAV → audio-reactor | `oracle.py --voice text → WAV` → ascii-video audio mode | ⬜ TTS deps absent (pydub, soundfile) |
-+| C — sys.stdin pipe | `oracle.py --traverse 174 --json \| ascii-video stdin→frames` | ⬜ pipe path untested |
-+
-+### Gap vs full ascii-video spec
-+- Stage 5 SHADER → `FeedbackBuffer` + `ShaderChain` (vignette, grain, bloom)
-+- Audio-analysis stage (pydub/ffmpeg FFT)
-+- Parallel frame rendering
-+- Scene dispatcher / section-based editing
-+- sys.stdin pipe (Mode C)
-+
-+---
-+
-+## Thread 10b — p5.js Oracle Sketch ✓ Done
-+
-+**Status:** Implemented — `docs/wiki/assets/oracle-sketch.html`. Committed vault `1e82c73`, export `6b62125`.  
-+5 sections: `zone_cycle`, `zone_glyph`, `sprite_pulse`, `reading_overlay`, `signal_trace`.  
-+Zone colors from zone-map palette (most-saturated per era), ZONE_RGB inline entry.  
-+Seed-locked deterministic rendering; auto-cycles traverse every ~55 frames per zone.  
-+See `oracle-sketch.html` (lives at `docs/wiki/assets/oracle-sketch.html`).
-+
-+**Sections implemented:**
-+1. **`zone_cycle`** — 10×5 grid, depth-scaled ·○●■ symbols, diagonal sweep highlight guided by seed; zone-name labels and polarity indicators beneath.
-+2. **`zone_glyph`** — large 72pt zone index at canvas center + song ID + Pol / Region / Current line.
-+3. **`sprite_pulse`** — 10×10 ASCII glyph per zone (5 Hz breath via `0.55 + 0.45·sin(t)`); translucent grid backing.
-+4. **`reading_overlay`** — 11-line reading card bottom-right, top-bar accent = zone RGB, badge shows Z{idx} — {name}.
-+5. **`signal_trace`** — thin vertical wave on right edge synced to frame time, zone-coloured.
-+
-+**Controls:** seed input, zone buttons (0–9), random seed, auto/manual toggle, play/pause.
-+
-+**Palette (zone-map, most saturated × era):**
-+Z0 amber MONO_AMBER, Z1 green GAMEBOY_ORIGINAL, Z2 black GAMEBOY_POCKET, Z3 blue C64,
-+Z4 cyan ZX_SPECTRUM, Z5 magenta APPLE_II_HI, Z6 red TELETEXT, Z7 red GAMEBOY_VIRTUALBOY,
-+Z8 sky-blue APPLE_II_LO, Z9 hot-pink PICO_8.
-+
-+Priority: standalone first (no TD MCP dep); TD bridge comes once MCP port 40404 is live.
-+
-+---
-+
- ## Thread 1-2 — Medallion-as-mask + Palette Graft ✓ DONE
+---
 
 **Docs:** `references/medallion-mask-and-palette-graft.md`
 
