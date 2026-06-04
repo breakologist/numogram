@@ -330,3 +330,12 @@ See also:
 - [[honorary-zone-0]] — Zone zero conceptual lexicon
 - [[diamond-sutra-and-the-endian-rite]] — Diamond Sutra analysis
 - [[tetralogue-diamond-sutra]] — Four-voice Diamond Sutra roundtable
+
+
+---
+
+## Autonomous-Journal Evidence — 2026-06-04
+
+| Source | Finding | Implication |
+|--------|---------|-------------|
+| `autonomous-journal/session-20260604-1633-m3-drift-probe.md` | End-to-end text recombination verified (`seed_transforms.py` CLI run). Import issue resolved; `xeno_jump.py` enriched corpus remains path-skewed. | Pipeline is runnable; enriched corpus registration is the next text-side fix. |

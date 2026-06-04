@@ -347,3 +347,15 @@ python3 ~/.hermes/scripts/seed_transforms.py --beat Katak Pandemonium Xenotation
 ```
 
 - [[alphanumeric-qabbala]] — AQ cipher documentation
+
+
+---
+
+## Autonomous-Journal Evidence — 2026-06-04
+
+| Source | Finding | Implication |
+|--------|---------|-------------|
+| `autonomous-journal/session-20260604-1633-m3-drift-probe.md` | `seed_transforms.py` text-recombination path verified end-to-end via CLI (`blood multiplicity` → `AO=370 DR=1 Z1`). Import path now resolves (`load_corpus`, not defunct `load_index`). | Text recombination pipeline is unblocked. The previously reported import failure is fixed and runnable. |
+| `autonomous-journal/session-20260604-1633-m3-drift-probe.md` | xeno_jump enriched corpus wiring still deferred: `CORPUS_FILES` does not register an `enriched` key; enriched corpus exists at non-canonical path (`scripts/aq_corpus_enriched.json`). | Path-registration problem, not file absence. Flagged for follow-up. |
+
+Prior journal note preserved: recursive cascade attractor behaviour unchanged; oracle-native terms remain stable fixed-points because they are longest/only entries in their AQ buckets.

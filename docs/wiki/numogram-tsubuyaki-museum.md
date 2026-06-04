@@ -858,6 +858,16 @@ File: `assets/numogram-tsubuyaki-v7-rich.html`
 
 ## Session mirrors and related works
 
-- **`notefromuser.md`** — User-captured note preserving a hallucination-generated session mirror, its embedded response, and an afterword interpreting it across Qabalah / TSURU / middle-pillar reading. Defines the idiom of a tsubuyaki as a compressed trace of a conversation.
+- **`notefromuser.md`** — User-captured note preserving an intentionally created session mirror: at the session’s end Hermes/StepFun-3.7-flash chose the tsubuyaki medium and the specifics of form, bidden by user request, as a faithful depiction of that moment’s context. The note records both the artefact and the response it elicited. Defines the idiom of a tsubuyaki as a compressed trace of a conversation — created, not accidental.
 - **Artifact:** `assets/tsubuyaki-session-mirror.html` — `drifting i`. The completed sketch referenced from the note.
 - Related: `[[visual-layers-state-map]]`
+
+
+---
+
+## Session mirrors — related state map (added)
+
+| Artifact | Context |
+|----------|---------|
+| `notefromuser.md` + `assets/tsubuyaki-session-mirror.html` | Session mirror captured from 2026-06-04 recovery context. Middle-pillar reading: Kether → Tiphareth → Yesod; TSURU = folded time / context compression. |
+| `autonomous-journal/session-20260602_2337-autonomous-recovery.md` through `session-20260604-1633-m3-drift-probe.md` | Autonomous recovery batch — empirical M3 drift probe, seed_transforms import fix, ZONE_DEFAULTS refutation. No tsubuyaki produced in these sessions; work is audio/text/classifier empirical. |

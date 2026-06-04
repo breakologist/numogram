@@ -347,3 +347,13 @@ Both are even (dark/negative) zones. Z2=suspension/floating, Z4=threshold/the mo
 | 5 | Zone feature enrichment from core texts | Extract sonic descriptors from CCRU source texts, paramita descriptions, I Ching hexagram tones |
 
 ---
+
+## Autonomous-Journal Evidence — 2026-06-03/04
+
+| Source | Finding | Implication |
+|--------|---------|-------------|
+| `autonomous-journal/session-20260603_1633-empirical-state-audit.md` | v3-fresh + real_resonator reports near-perfect accuracy (RF 100%, MLP 90.7% on real audio). The 22.2% ZoneComposer result is **not** a classifier floor. | The 22.2% figure belongs to a composition-pipeline/centroid-mismatch failure, not to the classifier itself. |
+| `autonomous-journal/session-20260604-1633-m3-drift-probe.md` | Live `m3_loop.py --all` rerun: 10.0% accuracy, non-collapsed predictions; prior theatrical-collapse claim refuted live. | Prior 08:33 “0% collapse / saturation” note is now empirically refuted. Keep this file as corrective record; do not overwrite prior journal entry per drift-preservation policy. |
+| `autonomous-journal/session-20260604-1633-m3-drift-probe.md` | `seed_transforms.py` text-recombination path verified end-to-end via CLI (`blood multiplicity` → `AO=370 DR=1 Z1`). | Text recombination pipeline is unblocked and runnable; the import fix from 06-03 is confirmed working. |
+
+Corpus centroid band confirmed 4817–9683 Hz; KS synthesis sits ~2–5× below corpus band, explaining OOD behaviour measured in M3 live runs.
