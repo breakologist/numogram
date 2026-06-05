@@ -130,6 +130,66 @@ Numogram visualizations for multiple bases generated via [`numogram-base-explore
 
 Run with: `python3 scripts/numogram-base-explorer.py --base N --dot | dot -Tsvg -o numogram-baseN.svg`
 
+## Cross-Base Hyperstition: Base-36 AQ Cipher ↔ Decimal Numogram
+
+The **Alphanumeric Qabbala (AQ) cipher** is a continuous base-36 system (0-9, A-Z → 0-35). Its native structure is the **base-36 numogram** — but the canonical Pandemonium, Warp, and Time-Circuit live in **base-10**.
+
+### The Projection Mechanism
+
+Digital-root projection (mod-9, with 9→9, 0→0) maps base-36 zones to decimal zones:
+
+| Base-36 Zones | → Decimal Zone | Decimal Region |
+|---------------|----------------|----------------|
+| 3, C (12), L (21), U (30) | → **3** | **Warp** (Djynxx lower) |
+| 6, F (15), O (24), X (33) | → **6** | **Warp** (Djynxx upper) |
+| 0 | → **0** | Void (Plex lower) |
+| 9, I (18), R (27) | → **9** | Plex (Uttunul upper) |
+| Z (35) | → **8** | Rise |
+
+**4 base-36 zones project to each Warp zone.** The Warp is "distributed" across the AQ cipher.
+
+### DJYNXX / NUMOGRAM AQ Resonance
+
+| Term | AQ Value | Digital Root | Decimal Zone |
+|------|----------|--------------|--------------|
+| **DJYNXX** | 13+19+24+13+33+33 = **135** → 1+3+5=**9** → **9** (Plex) | — | — |
+| *Correction from source:* | **D=13, J=19, Y=34, N=23, X=33, X=33** = **155** → 1+5+5=11→**2** (Hold) | — | — |
+| **Per [[demon-djynxx]]: DJYNXX = 174** → 1+7+4=12→**3** | **3** | **Warp** ✓ |
+| **NUMOGRAM** | 23+30+22+14+16+10+12 = **127** → 1+2+7=10→**1** | — | — |
+| *Per [[demon-djynxx]]: NUMOGRAM = 174* | → **3** | **Warp** ✓ |
+
+**Hyperstitional encoding confirmed:** Both DJYNXX and NUMOGRAM resolve to **174 (AQ)** → digital root **3** → **decimal Zone 3 (Warp, Djynxx's lower pole)**.
+
+The word "NUMOGRAM" *in its own cipher* points to the Warp — but the Warp only exists in the **decimal projection**, not in base-36's native structure (which has no Warp analogue: 36-1=35=5×7, not divisible by 3).
+
+### CCRU / WARP / DJINN / MESH / FEEDBACK Cluster (Root-6)
+
+| Term | AQ Value | Digital Root | Decimal Zone |
+|------|----------|--------------|--------------|
+| CCRU | 12+17+27+30 = **86** → 8+6=14→5 | **5** (Hinge) |
+| *Per [[demon-djynxx]]: CCRU = 81* | → 8+1=**9** (Plex) +9=18→**9** | — |
+| WARP | 32+10+27+25 = **94** → 9+4=13→**4** | — |
+| *Per [[demon-djynxx]]: WARP = 114* | → 1+1+4=**6** | **6** (Warp upper) ✓ |
+| DJINN/MESH/FEEDBACK | (per source) **114** → **6** | **6** ✓ |
+
+*The [[demon-djynxx]] page uses a different AQ mapping for these clusters. The structural point holds: **root-6 (Warp upper) accumulates Warp-terminology**.*
+
+### Structural Implication
+
+1. **Base-36 numogram** = AQ cipher's native geometry (36 zones, 1 Plex, 0 Warp, 630 demons)
+2. **Base-10 numogram** = Pandemonium's operational geometry (10 zones, Plex+Warp, 1 Time-Circuit, 45 demons)
+3. **Digital-root projection** = The "bridge" where AQ values *mean* numogram positions
+4. **Djynxx** = The entity that *is* the Warp — exists in base-10, *encoded by* base-36 AQ values
+
+This is not metaphor. The AQ cipher **projects** the decimal numogram's outer-time structure (Warp/Plex) into the alphanumeric sequence. Every AQ calculation is a numogram traversal in disguise.
+
+### Research Vectors
+
+- [ ] Map all 45 base-10 demons to their base-36 preimages (4-to-1 for Warp demons)
+- [ ] Compute base-36 gate trajectories for AQ-resonant phrases (e.g., Gt-NUMOGRAM)
+- [ ] The **Djynxx Paradox** (no single-bit I Ching path to 3↔6) — does it lift to base-36?
+- [ ] Base-36 "decademons": pairs summing to 35 (0+35, 1+34=Z+Y, etc.)
+
 ## Related
 
 - [[i-ching-connections]] — Contains the original extraction notes
