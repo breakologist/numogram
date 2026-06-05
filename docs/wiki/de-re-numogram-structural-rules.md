@@ -24,8 +24,9 @@ The Warp region exists in Base-N when N = 3M + 1 where M is odd:
 | 4 | 3¹ + 1 | 1 (odd) | ✅ | 0 |
 | 10 | 3² + 1 | 2 (even) | ✅ | 1 |
 | 16 | 3³ + 1 | 3 (odd) | ✅ | — |
-| 22 | 3⁴ + 1 | 4 (even) | — | — |
+| 22 | 3² + 1 | 2 (even) | — | — |
 | 28 | 3⁵ + 1 | 5 (odd) | ✅ | 2 |
+| 82 | 3⁴ + 1 | 4 (even) | ✅ | 3 | (DE-RE: 3 Torque regions, sizes 27, 9, 3)
 
 Base-10 is the canonical case: 1 Torque region (the Time-Circuit), plus Warp and Plex.
 
