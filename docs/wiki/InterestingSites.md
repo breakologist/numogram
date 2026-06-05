@@ -10,7 +10,8 @@ tags:
   - Vedic
 ---
 
-# Interesting Sites - Add a small description to any that don't have one yet + append any interesting sites you find, write to new or append to old wiki articles, some of these might require a proper browser view to appreciate. Although something may be already described, repeated readings may lead to different takes depending on context.
+## Interesting Sites - Add a small description to any that don't have one yet, link to any relevant articles in the wiki + append any interesting sites you find, write to new or append to old wiki articles, some of these might require a proper browser view to appreciate. Although something may be already described, repeated readings may lead to different takes depending on context.
+
 https://github.com/NousResearch/hermes-agent
 https://github.com/breakologist?tab=stars - some interesting projects here
 https://github.com/trycua/cua - agentic computer use, could be a powerful basis for future, check it out
@@ -145,8 +146,8 @@ https://charcuterie.elastiq.ch - CLIP/SigLIP-powered Unicode glyph similarity ex
 https://gematriaresearch.blogspot.com/ - Gematria Research: Deep analysis of Alphanumeric Qabbala (AQ) cipher, Liber AL vel Legis riddles solved via Alphanumeric Triangle (0-9 + A-Z in base-36). Detailed cipher history (Satanic Gematria, Alphanumeric Satanic, Custom Ordinal families). Liber 777 connections. "Abrahadabra" = 151 = 36th prime. "Do what thou wilt" = 777 in AQ = LL in base-36.
 https://alektryon.github.io/aqqa/ - Alphanumeric Qabbala calculator and lookup tool. Part of the "Aquarian Qabbala" ecosystem.
 https://alektryon.github.io/aq-io/ - and again
-https://www.ccru.cc/ - 14 ciphers, 665K+ phrases, discovery badges, advanced querying, workspace table
-https://qliphoth.systems/ - interactive numogram + AQ toolkit, decimal labyrinth, syzygies/gates/demons visualization, scripture corpus
+https://www.ccru.cc/ - 14 ciphers, 665K+ phrases, discovery badges, advanced querying, workspace table. Live audit → [[ccru-gematria-calculator]] (Synx verified, AL=31 tri-cipher convergence). Nemotron tetralogue reference → [[nemotron-first-tetralogue-2026-06-05]] (Judge synthesis: human = routing table auditor, provenance tags on every artifact).
+https://qliphoth.systems/ - interactive numogram + AQ toolkit, decimal labyrinth, syzygies/gates/demons visualization, scripture corpus. [Full deep dive →](wiki/qliphoth-systems.md)
 https://federatedindustrial.com/tracker - HTML/Web Audio based tracker interface for composing music in the browser. Relevant to the Audio Alchemist current — tracker workflows without native software.
 https://github.com/alchaincyf/hermes-agent-orange-book - guide to hermes-agent
 
