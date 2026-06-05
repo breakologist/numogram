@@ -117,6 +117,19 @@ The DE-RE text provides an alternative demon classification beyond the standard 
 
 "DE-RE-Mystifying The CCRU's Numogram" (epub, ~56K chars). Internet Archive OCR scan. Multiple structural rules not documented elsewhere in the wiki.
 
+## Generated Visualizations
+
+Numogram visualizations for multiple bases generated via [`numogram-base-explorer.py`](../../scripts/numogram-base-explorer.py):
+
+| Base | Visualization | Key Features |
+|------|---------------|--------------|
+| 10 | [[assets/numogram-base10.svg]] | Canonical: 10 zones, 2 outer regions (Plex + Warp), 1 Time-Circuit (6 zones), 45 demons |
+| 12 | [[assets/numogram-base12.svg]] | 12 zones, 1 outer region (Plex), no Warp analogue, 66 demons |
+| 28 | [[assets/numogram-base28.svg]] | 28 zones, 2 outer regions, 2 Time-Circuits, 378 demons |
+| 36 | [[assets/numogram-base36.svg]] | 36 zones (AQ cipher base), 1 outer region, 630 demons |
+
+Run with: `python3 scripts/numogram-base-explorer.py --base N --dot | dot -Tsvg -o numogram-baseN.svg`
+
 ## Related
 
 - [[i-ching-connections]] — Contains the original extraction notes
