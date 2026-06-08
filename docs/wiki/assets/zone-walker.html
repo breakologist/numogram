@@ -19,8 +19,7 @@ canvas { display:block; }
 <script>
 // ── zone data ──────────────────────────────────────────────────────────────
 const ZONE_COLORS  = JSON.parse('{"0": [[122, 87, 0], [187, 136, 0]], "1": [[15, 56, 15], [155, 188, 15]], "2": [[0, 0, 0], [85, 85, 85]], "3": [[0, 0, 0], [124, 124, 124], [0, 0, 252], [148, 0, 132]], "4": [[0, 0, 0], [0, 40, 248], [255, 36, 20], [255, 255, 255]], "5": [[0, 0, 0], [255, 0, 0], [0, 255, 0], [255, 255, 255], [0, 175, 255]], "6": [[0, 0, 0], [255, 0, 0], [255, 255, 0], [0, 255, 0]], "7": [[255, 0, 0], [164, 0, 0], [85, 0, 0], [0, 0, 0]], "8": [[0, 0, 0], [234, 93, 240], [0, 104, 82], [0, 145, 80]], "9": [[0, 0, 0], [29, 43, 83], [126, 37, 83], [171, 82, 54]]}');
-const ZONE_NAMES   = ["VOID","FIRST","DOUBLING","ACCELERANDO",
-                      "DECELERANDO","ATTENTION","ABJECTIVE","PUNCTURE","BLOOD","PLEX"];
+const ZONE_NAMES   = ["Void","Surge","Hold","Warp","Sink","Hinge","Abyss","Blood","Multiplicity","Plex"];
 const ZONE_FRAMES  = 90;    // 1.5 s per zone  (@60fps)
 const FADE_FRAMES  = 18;    // 0.3 s transition
 let activeZone = null;
