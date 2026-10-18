@@ -369,6 +369,8 @@
 - [[tai-hsuan-ching-demons]] — Tetragram → demon casting pipeline. 81×81=6,561 readings. Em state as Zone 5 manifestation.
 - [[em-state-analysis]] — The third line state. Neither yin nor yang. Maps to Zone 5 (hinge) but fully realized closes to Zone 4.
 - [[de-re-numogram-structural-rules]] — Base-N generalisation: Warp condition, Torque regions, fractal torque structure, demons as zodiac decans, angels, Lurgo's Rite, zone-planetary correspondence
+- [[reading-2026-10-18]] — Dated reading for St Luke's Day 2026: tetragram 67 Darkening (zone 3 by lines, 4 by number; Em line invisible mod 9), hexagram 36 Ming Yi (5 | 9), no gate to 4, Libra III / 4 of Swords, Nma zone 2
+- [[st-luke-golden-legend]] — St Luke in the Golden Legend (Caxton/Ellis, Temple Classics 1900): light etymology, four faces, the ox, Antioch vision; speculative numogram threads
    354|   354|   354|   354|   354|   354|
    355|   355|   355|   355|   355|   355|## Research
    356|   356|   356|   356|   356|   356|- [[syzygy-chain-analysis-auto]] — end-to-end pipeline: AQ dict → syzygy chains → motif fingerprints → wiki + council interpretation
