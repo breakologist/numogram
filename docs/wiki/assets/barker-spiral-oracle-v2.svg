@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap");
         text { font-family: "JetBrains Mono", monospace; fill: #e2e8f0; }
         .label, .pair { font-size: 11px; fill: #94a3b8; }
         .title { font-size: 18px; font-weight: 700; fill: #f8fafc; }

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&amp;display=swap");
     text {{ font-family: "Crimson Text", serif; fill: #e2e8f0; }}
     .label {{ font-size: 12px; fill: #d1d5d9; }}
     .title {{ font-size: 20px; font-weight: 600; fill: #f8fafc; text-shadow: 0 0 10px rgba(0,0,0,0.5); }}

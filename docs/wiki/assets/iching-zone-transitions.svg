@@ -123,21 +123,20 @@
   <text class="center-text" x="450" y="470">Spans 0, 3, 6 missing</text>
   <text class="center-text" x="450" y="490">Fu Xi: 3↔6 BLOCKED (Djynxx)</text>
   <text class="center-text" x="450" y="510">King Wen: ALL syzygies reachable</text>
-  <text class="legend" x="50" y="770">Legend (King Wen edge counts):
+  <text class="legend" x="50" y="770">Legend (King Wen edge counts):</text>
   <line x1="50" y1="780" x2="75" y2="780" stroke="#4ecdc4" stroke-width="2"/>
-  <text class="legend" x="80" y="784">Span 1: 210 edges (1-bit)
+  <text class="legend" x="80" y="784">Span 1: 210 edges (1-bit)</text>
   <line x1="50" y1="798" x2="75" y2="798" stroke="#45b7d1" stroke-width="2"/>
-  <text class="legend" x="80" y="802">Span 2: 170 edges (1-bit)
+  <text class="legend" x="80" y="802">Span 2: 170 edges (1-bit)</text>
   <line x1="50" y1="834" x2="75" y2="834" stroke="#96ceb4" stroke-width="2"/>
-  <text class="legend" x="80" y="838">Span 4: 102 edges (1-bit)
+  <text class="legend" x="80" y="838">Span 4: 102 edges (1-bit)</text>
   <line x1="50" y1="852" x2="75" y2="852" stroke="#ffeaa7" stroke-width="2"/>
-  <text class="legend" x="80" y="856">Span 5: 82 edges (1-bit)
+  <text class="legend" x="80" y="856">Span 5: 82 edges (1-bit)</text>
   <line x1="50" y1="888" x2="75" y2="888" stroke="#fd79a8" stroke-width="2"/>
-  <text class="legend" x="80" y="892">Span 7: 50 edges (1-bit)
+  <text class="legend" x="80" y="892">Span 7: 50 edges (1-bit)</text>
   <line x1="50" y1="906" x2="75" y2="906" stroke="#e17055" stroke-width="2"/>
-  <text class="legend" x="80" y="910">Span 8: 28 edges (1-bit)
+  <text class="legend" x="80" y="910">Span 8: 28 edges (1-bit)</text>
   <line x1="50" y1="888" x2="75" y2="888" stroke="#ff0000" stroke-width="2" stroke-dasharray="4,2"/>
   <text class="legend" x="80" y="892">Span 3,6: BLOCKED (Fu Xi)</text>
   <text class="legend" x="50" y="910">— syzygy pairs (green dashed)</text>
-  </text>
 </svg>

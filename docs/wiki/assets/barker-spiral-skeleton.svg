@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap");
     text { font-family: "JetBrains Mono", monospace; fill: #e2e8f0; }
     .zone-arc { fill: none; stroke: #60a5fa; stroke-width: 1.5; opacity: 0.4; }
     .center-circle { fill: #1e293b; stroke: #fbbf24; stroke-width: 2; }
