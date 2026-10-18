@@ -13,6 +13,8 @@ sources: [tai-hsuan-ching.md, tai-hsuan-ching-demons.md, polarities.md, katak-od
 
 ## What Is Em?
 
+> **Sourcing note:** "Em" is project vocabulary, not a traditional term; the classical line states are Heaven (天), Earth (地) and Man (人). See the note on "Em" in [[tai-hsuan-ching|T'ai Hsuan Ching]].
+
 The Em (壹, "one" or "unity") is the third line state in the [[tai-hsuan-ching|T'ai Hsuan Ching]]. Where the [[i-ching-connections|I Ching]] has two states — yin (broken) and yang (solid) — the T'ai Hsuan Ching adds a third:
 
 - **—** Solid (yang, value 2) — active, expansive, light

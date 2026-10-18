@@ -14,6 +14,10 @@ The T'ai Hsuan Ching (太玄經) is an ancient Chinese divination text featuring
 - The "King" numbers (multiples of 9) form a warp grid  
 - Used as an oracle mode in the numogram system (--taixuan flag)
 
+## A note on "Em"
+
+The classical sources (for example Michael Nylan's translation of the *Taixuan jing*) name the three line states Heaven (天), Earth (地) and Man (人). "Em", used here for the third, twice-broken line (Man, the mediator), is not a traditional term. It is a project coinage that arose in earlier research conversations between the project's author and an LLM (via hermes-agent, running a different model) while studying the Tai Xuan; it is plausibly a clipped "mediator". It persists in some project SVGs (e.g. `assets/tetragram-three-states.svg`) and in the `Man/Em` label in `cli/taixuan.py`. It is kept deliberately, as a record of the human–LLM collaboration this project explores: the numogram as a frame for asking what can be done with LLMs, including agentically. Read "Em" as project vocabulary, not as a term from the tradition.
+
 ## See also
 
 - [[tai-hsuan-ching-demons]] — Tetragram-to-demon mapping  
