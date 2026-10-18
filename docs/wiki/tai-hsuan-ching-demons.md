@@ -11,6 +11,8 @@ sources: [tai-hsuan-ching.md, hexagram-demon-mapping.md, pandemonium-matrix.md]
 
 # T'ai Hsuan Ching × Demons: The Tetragram Casting Pipeline
 
+> **Errata (2026-10-17):** the zone table here (Zone 0: 1 tetragram, Zone 9: 8) is the DR of the 0-based index, i.e. of the base-3 line value (`cli/taixuan.py --zone-from value`, the default). DR of the head number 1–81 gives 9 per zone 1–9 (`--zone-from number`). "ALL 45 demons reachable" needs Zone 0; see [[hexagram-demon-mapping]]. The "Em" line state is not in Nylan/Cottrell/Liu, where the three line types are Heaven, Earth and Man.
+
 ## Overview
 
 The [[tai-hsuan-ching|T'ai Hsuan Ching]] (81 tetragrams, 3⁴) distributes across 10 zones more evenly than the [[i-ching-connections|I Ching]] (64 hexagrams, 2⁶). The same casting pipeline that maps hexagrams to [[pandemonium-matrix|demons]] works for tetragrams — but with a richer, more evenly distributed oracle.

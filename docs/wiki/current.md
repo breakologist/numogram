@@ -8,6 +8,8 @@ tags: [current, syzygy, flow, region, warp, plex, time-circuit]
 
 # Current
 
+> **Errata (2026-10-17):** 1::8 is the **Surge** current (CCRU [glossary](http://www.ccru.net/id%28entity%29/glossary.htm)); "Rise" is not a CCRU current name.
+
 A **current** is the directed flow produced by a syzygy. It is the absolute difference between the paired zones and determines the character of movement through that region of the Numogram.
 
 ## The Five Currents
@@ -16,7 +18,7 @@ A **current** is the directed flow produced by a syzygy. It is the absolute diff
 |---------|--------|-------|--------|-----------|
 | Sink | `4::5` | 1 | Time-Circuit | Descent, original subtraction |
 | Hold | `2::7` | 5 | Time-Circuit | Stasis, waiting in the rising drift |
-| Rise | `1::8` | 7 | Time-Circuit | Ascent, progressive levitation |
+| Surge | `1::8` | 7 | Time-Circuit | Ascent, progressive levitation |
 | Warp | `3::6` | 3 | Warp | Turbulence, spiralling outward |
 | Plex | `0::9` | 9 | Plex | Abyssal return, sudden flight |
 

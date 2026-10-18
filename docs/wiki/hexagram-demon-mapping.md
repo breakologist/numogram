@@ -13,6 +13,8 @@ related:
 
 # Hexagram → Demon Mapping
 
+> **Errata (2026-10-17):** "ALL 45 demons are reachable" holds only if Zone 0 can occur. Under King Wen DR no hexagram is in Zone 0, so the nine 0-pole demons (Lurgo 1::0 … Uttunul 9::0) are unreachable: 36 maximum. Line-value mappings reach Zone 0 only through #2 Kun.
+
 > **STUB.** Pipeline for mapping single or two-hexagram I Ching readings to the 45-demon Pandemonium Matrix.
 
 ## Single Hexagram → 5 Carrier Demons

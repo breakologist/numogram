@@ -25,7 +25,7 @@ sources: [i-ching-tai-hsuan-comparison.md]
 | Nine Palaces / Lo Shu | 3^2 | 9 numbers | China, pre‑Han | 3×3 magic square; spatial layout for dungeon zoning; directional correspondences |
 | Subdecadence (CCRU) | 10 choose 2 | 45 pairs | CCRU, 1990s | **Pandemonium Matrix**; the demon taxonomy the game already uses |
 | Ifá | 16^2 | 256 odu | Yoruba, ~1200 CE | Binary tree with 16 top‑level signs each containing 16 sub‑odu; could extend beyond 45 demons |
-| Geomancy (ʿIlm al‑Raml) | 4^4 | 256 charts | Arabic, ~900 CE | 16 figures × 16 = 256; algorithmic generation similar to Brogue room accretion |
+| Geomancy (ʿIlm al‑Raml) | 16^4 | 65,536 charts (16 figures) | Arabic, ~900 CE | 16 figures × 16 = 256; algorithmic generation similar to Brogue room accretion |
 | Elder Futhark | 24 runes | 24 | Germanic, ~150 CE | 24 = 3×8; could tessellate Time‑Circuit with *rune‑zones*; Uthark variant adds 3 = 27 = 3³ |
 | Runes (Uthark) | 24+3 | 27 | Nordic, medieval | Ternary 27 = 3³; direct bridge to T'ai Hsuan's 81 (3⁴) |
 | Tarot Major Arcana | 22 trumps + Fool | 23 | Europe, ~1400s | 22 paths on the Kabbalistic tree; could map to **extended gates** (Gt‑22, Gt‑23, Gt‑45) |
@@ -59,8 +59,8 @@ sources: [i-ching-tai-hsuan-comparison.md]
 
 ### 4. Arabic Geomancy (ʿIlm al‑Raml)
 
-- **Base**: 16 geomantic figures × 4 *mothers* → 256 *charts*
-- **Structure**: Four *mothers* (primary figures) generate 12 *witnesses* + 4 *judges* = 16‑figure chart.
+- **Base**: 2^4 = 16 geomantic figures; 4 *mothers* → 16^4 = 65,536 *charts*
+- **Structure**: Four *mothers* generate 4 *daughters*, 4 *nieces*, 2 *witnesses*, a *judge* and a *reconciler* ([Digital Ambler](https://digitalambler.com/2013/06/24/geomantic-mathematics/)).
 - **Why**: Algorithmic *figure generation* mirrors Brogue's room accretion. The four mothers could become the *four voices* (Oracle/Builder/Writer/Gamer) each contributing a line to a tetragram.
 
 ---

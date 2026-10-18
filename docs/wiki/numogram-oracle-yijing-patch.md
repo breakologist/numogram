@@ -74,7 +74,7 @@ LINE_GATES = {1: 'Gt-01', 2: 'Gt-03', 3: 'Gt-06', 4: 'Gt-10', 5: 'Gt-15', 6: 'Gt
 def iching_hexagram(lines):  # lines=[6,7,8,9]x6
     primary_trigram = trigram_from_lines(lines[:3])
     lower_trigram = trigram_from_lines(lines[3:])
-    hex_id = binary_to_hex(lines)  # 000000=1 Qian
+    hex_id = binary_to_hex(lines)  # 111111 = 1 Qian (000000 = 2 Kun) [erratum]
     corpus = HEX_CORPUS[hex_id]
     return {'primary': primary_trigram, 'lower': lower_trigram, 'name': corpus['name'], ...}
 

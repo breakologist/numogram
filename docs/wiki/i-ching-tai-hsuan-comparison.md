@@ -14,6 +14,8 @@ related:
 
 # I Ching vs T'ai Hsuan Ching
 
+> **Errata (2026-10-17):** "Em (夷)" is a repo-internal label, not found in the sources checked (Nylan, Cottrell, [Liu, JPACT 2021](https://hilo.hawaii.edu/jpact/issues/volume-4-2021/taixuan-jing.php)): the twice-broken line is *Man* (人). Keep "Em → Zone 5" as a project hypothesis.
+
 Structural comparison of the two Chinese oracular systems mapped to the numogram.
 
 ## Core Parameters

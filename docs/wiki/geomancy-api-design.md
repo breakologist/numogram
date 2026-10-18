@@ -9,6 +9,8 @@ tags: ["geomancy", "api", "fastapi", "design", "implementation", "divination", "
 
 # Geomancy API — Complete Implementation Design
 
+> **Errata (2026-10-17):** the traditional perfection modes are Occupation (same figure in both significator houses), Conjunction (one significator in a house adjacent to the other), Mutation (both appear side by side elsewhere) and Translation (one figure adjacent to both) ([Moderately Quick Silver](https://moderatelyquicksilver.com/2023/10/23/the-four-modes-of-geomantic-perfection/)). This page's "Conjunction" is Occupation, and "Mutation = mobile figures" is not a perfection mode.
+
 > FastAPI-based geomancy service with full perfection algorithm, SVG talisman rendering, planetary/lunar timing layer, and Hermes agent integration. Four-phase modular rollout concept; Phase 4 delivers complete production-ready system.
 
 *This page documents a self-contained geomancy engine designed for both human divination and automated agent consumption. It builds on the 16 geomantic figures data (already present in `divination-entropy-source.md`) and adds traditional interpretation logic (perfection), visual talisman generation, and web API endpoints.*

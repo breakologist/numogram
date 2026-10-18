@@ -13,6 +13,8 @@ related:
 
 # Hexagram → Zone Mapping
 
+> **Errata (2026-10-17):** the *Zone (DR)* column of the 64-hexagram table is the digital root of the **Dec** (binary) value in this page's bit order (upper trigram first), not Method A (King Wen DR). Corrected: #2 Kun → Zone 0 (value 0), #31 → Zone 4 (value 49); #7 Shi (☷ over ☵) and #8 Bi (☵ over ☷) had swapped rows; #41 is Sun 損, #42 is Yi 益 ([Wikipedia](https://en.wikipedia.org/wiki/List_of_hexagrams_of_the_I_Ching)). `cli/iching.py` defaults to a third ordering, line value with line 1 = weight 1 (`--zone-method fuxi`).
+
 Complete reference: all 64 King Wen hexagrams mapped to numogram zones via digital root.
 
 ## Zone Derivation
@@ -60,13 +62,13 @@ Derived from trigram pairs: `binary = (upper_trigram << 3) | lower_trigram`. Sou
 | # | Name | Upper | Lower | Binary | Dec | Zone (DR) | Syzygy | Demon |
 |---|------|-------|-------|--------|-----|-----------|--------|-------|
 | 1 | Qian | ☰ | ☰ | 111111 | 63 | 9 | 0 | Uttunul |
-| 2 | Kun | ☷ | ☷ | 000000 | 0 | 1 | 8 | Murrumur |
+| 2 | Kun | ☷ | ☷ | 000000 | 0 | 0 | 9 | Uttunul |
 | 3 | Zhun | ☵ | ☳ | 010100 | 20 | 2 | 7 | Oddubb |
 | 4 | Meng | ☶ | ☵ | 001010 | 10 | 1 | 8 | Murrumur |
 | 5 | Xu | ☵ | ☰ | 010111 | 23 | 5 | 4 | Katak |
 | 6 | Song | ☰ | ☵ | 111010 | 58 | 4 | 5 | Katak |
-| 7 | Shi | ☵ | ☷ | 010000 | 16 | 7 | 2 | Oddubb |
-| 8 | Bi | ☷ | ☵ | 000010 | 2 | 2 | 7 | Oddubb |
+| 7 | Shi | ☷ | ☵ | 000010 | 2 | 2 | 7 | Oddubb |
+| 8 | Bi | ☵ | ☷ | 010000 | 16 | 7 | 2 | Oddubb |
 | 9 | Xiao Chu | ☴ | ☰ | 011111 | 31 | 4 | 5 | Katak |
 | 10 | Lu | ☰ | ☱ | 111110 | 62 | 8 | 1 | Murrumur |
 | 11 | Tai | ☷ | ☰ | 000111 | 7 | 7 | 2 | Oddubb |
@@ -89,7 +91,7 @@ Derived from trigram pairs: `binary = (upper_trigram << 3) | lower_trigram`. Sou
 | 28 | Da Guo | ☱ | ☴ | 110011 | 51 | 6 | 3 | Djynxx |
 | 29 | Kan | ☵ | ☵ | 010010 | 18 | 9 | 0 | Uttunul |
 | 30 | Li | ☲ | ☲ | 101101 | 45 | 9 | 0 | Uttunul |
-| 31 | Xian | ☱ | ☶ | 110001 | 49 | 7 | 2 | Oddubb |
+| 31 | Xian | ☱ | ☶ | 110001 | 49 | 4 | 5 | Katak |
 | 32 | Heng | ☳ | ☴ | 100011 | 35 | 8 | 1 | Murrumur |
 | 33 | Dun | ☰ | ☶ | 111001 | 57 | 3 | 6 | Djynxx |
 | 34 | Da Zhuang | ☳ | ☰ | 100111 | 39 | 3 | 6 | Djynxx |
@@ -99,8 +101,8 @@ Derived from trigram pairs: `binary = (upper_trigram << 3) | lower_trigram`. Sou
 | 38 | Kui | ☲ | ☱ | 101110 | 46 | 1 | 8 | Murrumur |
 | 39 | Jian | ☵ | ☶ | 010001 | 17 | 8 | 1 | Murrumur |
 | 40 | Jie (Delivery) | ☳ | ☵ | 100010 | 34 | 7 | 2 | Oddubb |
-| 41 | Xin (Decrease) | ☶ | ☱ | 001110 | 14 | 5 | 4 | Katak |
-| 42 | Sheng (Increase) | ☴ | ☳ | 011100 | 28 | 1 | 8 | Murrumur |
+| 41 | Sun 損 (Decrease) | ☶ | ☱ | 001110 | 14 | 5 | 4 | Katak |
+| 42 | Yi 益 (Increase) | ☴ | ☳ | 011100 | 28 | 1 | 8 | Murrumur |
 | 43 | Guai | ☱ | ☰ | 110111 | 55 | 1 | 8 | Murrumur |
 | 44 | Gou | ☰ | ☴ | 111011 | 59 | 5 | 4 | Katak |
 | 45 | Cui | ☱ | ☷ | 110000 | 48 | 3 | 6 | Djynxx |
@@ -152,7 +154,7 @@ When hexagrams are numbered by their binary value (Fu Xi/prior heaven), `2^k mod
 
 - [[i-ching-connections]] — Theory, twin serpents, Time-Circuit as hexagram kernel, hardware entropy
 - [[iching-numogram-casting]] — Skill: complete casting pipeline
-- [[hexagram-demon-mapping]] — Two-hexagram → demon casting (all 45 demons reachable)
+- [[hexagram-demon-mapping]] — Two-hexagram → demon casting (36 reachable under a DR mapping; see errata)
 - [[wu-xing-numogram]] — Trigram elemental associations
 - [[numogram-audio-empirical-findings]] — Audio measurement results (I Ching zone traversal)
 - [[tai-hsuan-ching-demons]] — 81 tetragram counterpart

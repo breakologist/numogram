@@ -9,6 +9,8 @@ tags: ["i-ching", "numogram", "theory"]
 
 # I Ching Connections
 
+> **Errata (2026-10-17):** line pairs are 1&4, 2&5, 3&6 (CCRU [declab](http://ccru.net/declab.htm); Wilhelm), weights 1+8, 2+16, 4+32 → 1::8, 2::7, 4::5. Single-line edges under King Wen DR: 1↔8 = 5, 2↔7 = 5 (were 7, 6). Zone pairs: 45, not 16. No hexagram reaches Zone 0 under a DR mapping, so at most 36 demons are reachable, not 45.
+
 The Decimal Numogram (specifically its Time-Circuit) is explicitly linked by the CCRU to the I Ching (Yijing, or Book of Changes). The Time-Circuit is positioned as a hypercultural successor to the Yijing's time-mapping functions, taking up the chrono-numeric roles in a decimal, demonic mode.
 
 ## Core Parallel: Time-Circuit as Hexagram Kernel
@@ -34,9 +36,9 @@ Both systems use a pairing criterion based on 9-twinning (zygonovism):
 
 | I Ching Line Pair | 9-Twin | Syzygy | Current |
 |-------------------|--------|--------|---------|
-| Lines 1 & 6 | 8::1 | 1::8 | 7 |
+| Lines 1 & 4 | 8::1 | 1::8 | 7 |
 | Lines 2 & 5 | 7::2 | 2::7 | 5 |
-| Lines 3 & 4 | 5::4 | 4::5 | 1 |
+| Lines 3 & 6 | 5::4 | 4::5 | 1 |
 
 This reinforces the cycle's interlocking without hierarchy.
 
@@ -165,8 +167,8 @@ Each hexagram has 6 single-line transformations. Total: 64 × 6 / 2 = 192 edges.
 
 | Syzygy | Single-bit edges | Status |
 |--------|-----------------|--------|
-| 1↔8 (Murrumur) | 7 | ✅ |
-| 2↔7 (Oddubb) | 6 | ✅ |
+| 1↔8 (Murrumur) | 5 | ✅ |
+| 2↔7 (Oddubb) | 5 | ✅ |
 | **3↔6 (Djynxx)** | **7** | ✅ **Accessible** |
 | 4↔5 (Katak) | 4 | ✅ |
 
@@ -186,7 +188,7 @@ In Fu Xi numbering (hex value = its 6-bit binary):
 
 ## Non-Syzygy Paths — The Unmediated Transitions
 
-Not all two-hexagram transformations map to a named carrier demon. Of 16 non-identity zone pairs (from 10 zones), only 5 are syzygy pairs. The remaining **11 are unmediated** — the querent walks without a demon escort.
+Not all two-hexagram transformations map to a named carrier demon. Of 45 non-identity zone pairs (from 10 zones; 36 among zones 1–9), only 5 are syzygy pairs. The remaining **40 are unmediated** — the querent walks without a demon escort.
 
 **Examples:**
 
@@ -297,7 +299,7 @@ The Time-Circuit is the Numogram's "hexagram kernel" — a decimal-binary hybrid
 - [[numogram-time-circuit]] — The 6-zone anticlockwise rotor
 - [[numogram-warp]] — The Warp vortex (zones 3, 6) — home of Djynxx
 - [[hexagram-zone-mapping]] — **Full 64-hexagram reference table with zone, syzygy, demon**
-- [[hexagram-demon-mapping]] — Two-hexagram → demon pipeline (all 45 reachable)
+- [[hexagram-demon-mapping]] — Two-hexagram → demon pipeline (36 reachable under a DR mapping; see errata)
 - [[iching-game]] — Hexadence divination game (stub)
 - [[i-ching-tai-hsuan-comparison]] — I Ching vs T'ai Hsuan Ching structural contrast
 - [[tai-hsuan-ching-demons]] — 81 tetragram-to-demon mapping
