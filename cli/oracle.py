@@ -7,6 +7,13 @@ Now with --base36 Djynxxogram traversal.
 I Ching lives in the sibling program iching.py (standalone + importable).
 oracle.py delegates --iching / --iching --seed to it.
 
+[review fixes 2026-10-17, marked "# [fix]"]: --voice never set do_voice; --taixuan ignored
+--single/--unicode/--em-stats/--voice/--hardware; --hardware fallback never ran the external
+collector (local `import os`); current labels now follow CCRU (1::8 Surge, 2::7 Hold, 4::5 Sink).
+Base-36 gate default is now the digital root (--gate-rule dr, mod 35), matching the decimal
+CCRU rule; --gate-rule mod restores the old last-digit target (T mod 36). Decimal gates are
+always the digital root. New option (default unchanged): --path legacy|hash.
+
 Enriched (2026 per grorakleconvo + philosophies + ccru-zone-voice):
 - Poetic full_names + epithets (Void Resonance, Blood for Z7, Iron Core for Z9, etc.)
 - CCRU voice_quality strings surfaced in readings + JSON + shadows
@@ -64,7 +71,7 @@ ZONES = {
         "philosophy": "The silence before computation. Particles exist but barely — drifting at the edge of visibility, occasionally flickering into coherence before dissolving.",
     },
     1: {
-        "name": "gl", "polarity": "+", "current": "Sink", "region": "Time-Circuit",
+        "name": "gl", "polarity": "+", "current": "Surge", "region": "Time-Circuit",  # [fix] 1::8 = Surge (was Sink)
         "desc": "Gulp, glottal spasm, beginnings",
         "path": "Original Subtraction. Ultimate descent through the Depths. The path favours repeated patience linked by subtlety.",
         "reading": "Descent. The first thing any system does when it wakes up is choke on itself. Patience. Subtlety. Three tests on the way. Difficulties annihilated in the end.",
@@ -104,7 +111,7 @@ ZONES = {
         "philosophy": "Something ancient. Particles spawned in clusters that move as coordinated groups — schools, swarms, herds. The field has a downward gradient — everything sinks.",
     },
     5: {
-        "name": "ktt", "polarity": "+", "current": "Hold", "region": "Time-Circuit",
+        "name": "ktt", "polarity": "+", "current": "Sink", "region": "Time-Circuit",  # [fix] 4::5 = Sink (was Hold)
         "desc": "Hiss, pressure, spittle",
         "path": "Slipping Backwards. Waiting in the Rising Drift precedes return.",
         "reading": "Pressure builds. The hiss with spittle. You were going forward but the current holds. Two tests. Escaping the quagmire through strategic withdrawal. You must go back to go forward.",
@@ -124,7 +131,7 @@ ZONES = {
         "philosophy": "The Warp eating itself. A flow field that curves back on itself — particles that exit the right edge enter from the left, top to bottom. Moebius quality.",
     },
     7: {
-        "name": "pb", "polarity": "+", "current": "Rise", "region": "Time-Circuit",
+        "name": "pb", "polarity": "+", "current": "Hold", "region": "Time-Circuit",  # [fix] 2::7 = Hold (was Rise)
         "desc": "Sigh, lips flapping, ascent",
         "path": "Progressive Levitation. Ascent from the Lesser Depths. Fluid evolution triggers possession.",
         "reading": "Exhale. The Rise current carries you upward. Four tests. Promising developments. The ascent is not escape — it is transformation. The destination possesses you.",
@@ -134,7 +141,7 @@ ZONES = {
         "philosophy": "Rise. Particles born at the bottom, propelled upward by a gentle but persistent force. The field has a slight turbulence that causes lateral drift — organic vertical trails.",
     },
     8: {
-        "name": "mnm", "polarity": "−", "current": "Rise", "region": "Time-Circuit",
+        "name": "mnm", "polarity": "−", "current": "Surge", "region": "Time-Circuit",  # [fix] 1::8 = Surge (was Rise)
         "desc": "Moan, lullaby, forgetting",
         "path": "Eternal Digression. Prolonged ascent reaches the Twin Heavens. Lucid delirium.",
         "reading": "The lullaby. The moan of pleasure. Six tests. The ascent does not end at a destination — it enters the spiral labyrinth. Dubious inheritance. Lucid delirium. You have been here before.",
@@ -335,8 +342,18 @@ def get_gate_details(zone: int) -> dict:
     }
 
 
-def traverse(seed, steps=8):
-    """Walk the numogram from a seed, producing a zone path"""
+PATH_MODE = "legacy"   # [fix] set by --path legacy|hash
+
+
+def traverse(seed, steps=8, mode=None):
+    """Walk the numogram from a seed, producing a zone path.
+    [fix] "legacy" (default): n -> n*zone + 1. Since dr(n*z + 1) = dr(z*z + 1), every path
+    falls into 2 -> 5 -> 8 within three steps. "hash": step k is the digital root of
+    SHA-256(f"{seed}:{k}"), so later steps carry information."""
+    if (mode or PATH_MODE) == "hash":
+        import hashlib
+        return [digital_root(int.from_bytes(hashlib.sha256(f"{seed}:{k}".encode()).digest()[:8], "big"))
+                for k in range(steps)]
     path = []
     n = seed
     for _ in range(steps):
@@ -347,6 +364,9 @@ def traverse(seed, steps=8):
 
 
 # ─── BASE-36 / DJYNXXOGRAM FUNCTIONS ───
+
+GATE_RULE = "dr"    # [fix] default: digital root (mod base-1); --gate-rule mod = last digit
+
 
 def compute_base36_char(char: str) -> dict:
     """Compute Djynxxogram data for a single character.
@@ -374,9 +394,13 @@ def compute_base36_char(char: str) -> dict:
     # Current
     current = abs(zone - syzygy)
     
-    # Gate (triangular number, reduced mod 36)
+    # Gate (triangular number)
     gate_tri = zone * (zone + 1) // 2
-    gate_target = gate_tri % 36
+    # [fix] default: base-36 digital root (mod 35), the analogue of the decimal gate rule
+    # (decimal uses dr = mod 9, not the last digit). --gate-rule mod = old T mod 36.
+    gate_target = 0 if gate_tri == 0 else 1 + (gate_tri - 1) % 35
+    if GATE_RULE == "mod":
+        gate_target = gate_tri % 36
     
     # Region classification
     is_self_folding = (current == zone or current == syzygy)
@@ -433,6 +457,7 @@ def generate_base36_reading(text: str) -> str:
     lines.append("")
     lines.append(f"  Source:  {text}")
     lines.append(f"  Chars:   {len(steps)} AQ-carrying characters")
+    lines.append(f"  Gate rule: {'T(z) mod 36' if GATE_RULE == 'mod' else 'T(z) digital root base 36 (mod 35)'}")  # [fix]
     dr = digital_root(total_aq)
     lines.append(f"  Total AQ: {total_aq} → Decimal attractor Zone {dr} ({DECIMAL_ZONE_DISPLAY.get(dr, 'Plex' if dr in (0,9) else '?')})")
     lines.append("")
@@ -611,6 +636,18 @@ except Exception:
 
 TAIXUAN_SCRIPT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "taixuan.py")
 
+def _iching_opts(args):
+    """[fix] pass iching.py's --method / --zone-method through. Defaults come from iching.py /
+    taixuan.py: zones from LINE VALUES in both (fuxi / value); sequence numbers via
+    --zone-method kw (I Ching) or --zone-from number (Tai Xuan)."""
+    o = {}
+    if "--method" in args:
+        o["method"] = args[args.index("--method") + 1]
+    if "--zone-method" in args:
+        o["zone_method"] = args[args.index("--zone-method") + 1]
+    return o
+
+
 def fetch_iching(seed=None):
     """Delegate to iching.py (preferred) or fallback."""
     if ICHING_MODULE is not None:
@@ -728,7 +765,7 @@ def fetch_hardware():
 
     # Robust local fallback (no external script needed)
     try:
-        import glob, time, os, hashlib
+        import glob, time, hashlib  # [fix] no local `import os` (it shadowed the module above)
         parts = []
         for p in glob.glob("/sys/class/thermal/thermal_zone*/temp"):
             try: parts.append(open(p).read().strip().encode())
@@ -1053,7 +1090,14 @@ if __name__ == "__main__":
     source = "manual"
     do_ascii_glyph = False
     do_sprite = False
-    do_voice = False
+    do_voice = "--voice" in args          # [fix] was always False
+    if "--gate-rule" in args:
+        GATE_RULE = args[args.index("--gate-rule") + 1]
+    if "--path" in args:
+        PATH_MODE = args[args.index("--path") + 1]
+    if GATE_RULE not in ("dr", "mod") or PATH_MODE not in ("legacy", "hash"):
+        print("--gate-rule must be dr|mod; --path legacy|hash")
+        sys.exit(2)
     do_base36 = False
     do_planchette = False
     do_tty = False
@@ -1137,8 +1181,8 @@ if __name__ == "__main__":
         if "--iching" in args:
             try:
                 if ICHING_MODULE is not None:
-                    ich = ICHING_MODULE.cast_iching(seed=seed, source=f"seed:{seed}")
-                    print(ICHING_MODULE.format_iching(ich))
+                    ich = ICHING_MODULE.cast_iching(seed=seed, source=f"seed:{seed}", **_iching_opts(args))
+                    print(ICHING_MODULE.format_iching(ich, full="--full" in args))  # [fix] pass --full
                 else:
                     # fallback: use our thin delegate + manual minimal print
                     hexagram = fetch_iching(seed=seed)
@@ -1173,7 +1217,8 @@ if __name__ == "__main__":
     elif "--earthquake" in args:
         seed = fetch_earthquake()
         source = "USGS"
-    elif "--hardware" in args:
+    elif "--hardware" in args and "--iching" not in args and "--taixuan" not in args:
+        # [fix] --taixuan/--iching --hardware used to fall through to a plain reading
         seed = fetch_hardware()
         source = "hardware"
     elif "--iching" in args:
@@ -1186,10 +1231,10 @@ if __name__ == "__main__":
                     s = int(args[idx + 1])
                     src = f"seed:{s}"
                 full = "--full" in args
-                ich = ICHING_MODULE.cast_iching(seed=s, source=src)
+                ich = ICHING_MODULE.cast_iching(seed=s, source=src, **_iching_opts(args))
                 print(ICHING_MODULE.format_iching(ich, full=full))
             else:
-                hexagram = fetch_iching()
+                hexagram = fetch_iching(seed=s)  # [fix] fallback ignored --seed
                 ich = enrich_iching(hexagram)
                 print("══════════════════════════════════════")
                 print("  I CHING FROM NUMOGRAM ENTROPY (fallback)")
@@ -1205,8 +1250,30 @@ if __name__ == "__main__":
                 s = int(args[idx + 1])
             if TAIXUAN_MODULE is not None:
                 full = "--full" in args
-                data = TAIXUAN_MODULE.cast_taixuan(seed=s, two=True)
-                print(TAIXUAN_MODULE.format_taixuan(data, full=full))
+                # [fix] honour the flags CLI-README documents for oracle.py --taixuan
+                if "--zone-from" in args:
+                    TAIXUAN_MODULE.ZONE_FROM = args[args.index("--zone-from") + 1]
+                TAIXUAN_MODULE.NETSPAN = "--netspan" in args
+                two = "--single" not in args and "--one" not in args
+                data = TAIXUAN_MODULE.cast_taixuan(seed=s, two=two)
+                if "--em-stats" in args or "--em-profile" in args:
+                    tetras = [data["upper"], data["lower"]] if two else [data["tetragram"]]
+                    print("Em-state Profile:")
+                    print(json.dumps(TAIXUAN_MODULE.em_profile(tetras), indent=2))
+                print(TAIXUAN_MODULE.format_taixuan(data, full=full,
+                                                    use_unicode="--unicode" in args or "--uni" in args))
+                if do_voice:  # [fix] restored from the pre-refactor version
+                    zones = [str(data["upper_zone"]), str(data["lower_zone"])] if two else [str(data["zone"])]
+                    vs = os.path.expanduser("~/numogram-voices/oracle_sentences.py")
+                    if os.path.exists(vs):
+                        res = subprocess.run(["python3", vs, "--zones"] + zones, capture_output=True, text=True)
+                        for line in res.stdout.splitlines():
+                            if "oracle_sentence" in line and ".wav" in line:
+                                print(f"  [Voice] {line.strip()}")
+                        if res.returncode != 0:
+                            print(f"  [Voice] oracle_sentences.py failed (exit {res.returncode})")
+                    else:
+                        print(f"  [Voice] {vs} not found")
             else:
                 cmd = [sys.executable, TAIXUAN_SCRIPT, "--taixuan"]
                 if s is not None:
@@ -1253,6 +1320,7 @@ if __name__ == "__main__":
         print("  python3 oracle.py --synx 'TEXT'  (Synx/Yxshh cipher)")
         print("  python3 oracle.py --traverse 192855")
         print("  python3 oracle.py --base36 --text 'TEXT'  (Djynxxogram traversal)")
+        print("    --gate-rule dr|mod   base-36 gate: digital root mod 35 (default) | last digit T mod 36")  # [fix]
         print("  python3 oracle.py --djynxxogram --seed 174  (Djynxxogram from AQ)")
         print("  python3 oracle.py --compare --text 'TEXT'  (cross-base comparison)")
         print("  python3 oracle.py --compare --seed 174    (from AQ value)")

@@ -12,6 +12,9 @@ Usage:
   python3 iching.py --cast                  # yarrow-stalk simulation (authentic probs)
   python3 iching.py --cast --seed 42
   python3 iching.py --iching --hardware
+  python3 iching.py --iching --method yarrow   # [fix] line odds: flat (default) | yarrow | coins
+  python3 iching.py --cast --coins             # [fix] three-coin odds instead of yarrow
+  python3 iching.py --iching --zone-method kw    # [fix] fuxi (default) | kw | curated
 
 Features:
 - Full 64 King Wen names + judgments (loaded from tianmu corpus when available)
@@ -22,8 +25,17 @@ Features:
 
 Pulls from: table.csv, yijing-expansion-v1.1.md (probs, line-gates, trigrams), tianmu-yijing-corpus.json (full judgments)
 
-Companion: T'ai Hsuan Ching (ternary, Em-mediator) lives in oracle.py --taixuan for now.
-Best time to extract taixuan.py: after iching stabilizes, or when we want full ternary casting parity.
+Companion: T'ai Hsuan Ching lives in taixuan.py (oracle.py --taixuan delegates to it).
+
+[review fixes 2026-10-17, marked "# [fix]" in the code]
+- King Wen identification no longer depends on the corpus's bit order (the corpus
+  'binary' field is written top line first; this file builds bottom line first, so 56 of
+  64 hexagrams were identified as their upside-down partner). Embedded KW table added.
+- format_iching crashed (ch_lines used before assignment).
+- Hardware entropy path never ran (a local `import os` shadowed the module).
+- Line odds are selectable (default flat, unchanged). Zone method is selectable; the
+  default is now "fuxi" (line value mod 9), matching taixuan.py's "value" default.
+  The old default is --zone-method curated; --zone-method kw = King Wen sequence DR.
 """
 
 import sys
@@ -151,6 +163,24 @@ KING_WEN = {
 def get_hex_name(num: int) -> str:
     return KING_WEN.get(num, f"Hexagram {num}")
 
+# [fix] King Wen number indexed by line value v = sum(yang_k << (k-1)), line 1 (bottom) = bit 0.
+# Built from Wikipedia's "List of hexagrams of the I Ching" trigram data
+# (https://en.wikipedia.org/wiki/List_of_hexagrams_of_the_I_Ching). e.g. v=1 (only line 1 yang) = 24 Fu.
+KW_BY_VALUE = [2, 24, 7, 19, 15, 36, 46, 11, 16, 51, 40, 54, 62, 55, 32, 34, 8, 3, 29, 60, 39, 63,
+               48, 5, 45, 17, 47, 58, 31, 49, 28, 43, 23, 27, 4, 41, 52, 22, 18, 26, 35, 21, 64, 38,
+               56, 30, 50, 14, 20, 42, 59, 61, 53, 37, 57, 9, 12, 25, 6, 10, 33, 13, 44, 1]
+
+
+def binary_to_kw(bin_bottom_first: str) -> int:
+    """[fix] '100010' (line 1 first) -> King Wen number, independent of any corpus."""
+    return KW_BY_VALUE[sum(int(c) << i for i, c in enumerate(bin_bottom_first))]
+
+
+def fuxi_zone(value: int) -> int:
+    """[fix] Structural zone: line value mod 9 (0 only for Kun). Line k has weight 2^(k-1),
+    which reduces mod 9 to the Time-Circuit 1,2,4,8,7,5 (CCRU, ccru.net/declab.htm)."""
+    return 0 if value == 0 else 1 + (value - 1) % 9
+
 # Line gates (from yijing-expansion-v1.1.md)
 LINE_GATES = {
     1: "Gt-01",
@@ -184,8 +214,10 @@ CURATED_HEX_MAP: Dict[int, Dict[str, Any]] = {
     64: {"name": "Wei Ji (Before Completion)", "zone": 1, "syzygy": "1::8", "demon": "Murrumur", "note": "Highest transformation potential in the set", "insight": "Almost there; changing lines frequently open multiple gates at once"},
 }
 
+# [fix] Ummnu (Om, Omni, Amen, Omen) is a different demon: Mesh-44, net-span 9::8.
+# Uttunul is Mesh-36, 9::0 (http://www.ccru.net/digithype/pandemonium.htm).
 DEMON_MAP = {
-    (0,9): "Uttunul (Ummnu / Om, Amen, Omen)", (9,0): "Uttunul (Ummnu / Om, Amen, Omen)",
+    (0,9): "Uttunul", (9,0): "Uttunul",
     (1,8): "Murrumur", (8,1): "Murrumur",
     (2,7): "Oddubb", (7,2): "Oddubb",
     (3,6): "Djynxx", (6,3): "Djynxx",
@@ -203,6 +235,9 @@ def find_tianmu_corpus() -> Optional[str]:
         "/home/etym/.hermes/obsidian/hermetic/wiki/assets/tianmu-yijing-corpus.json",
         os.path.expanduser("~/numogram/docs/wiki/assets/tianmu-yijing-corpus.json"),
         os.path.join(os.path.dirname(__file__), "tianmu-yijing-corpus.json"),
+        # [fix] repo layout: cli/iching.py -> docs/wiki/assets/
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "docs", "wiki", "assets",
+                     "tianmu-yijing-corpus.json"),
         "/home/etym/numogram/docs/wiki/assets/tianmu-yijing-corpus.json",
     ]
     for p in candidates:
@@ -242,6 +277,9 @@ def load_hex_info(num: int) -> Dict[str, Any]:
             for tstr, hh in hexs.items():
                 b = hh.get("binary")
                 if b:
+                    # [fix] corpus 'binary' is written top line first (verified against
+                    # Wikipedia for all 64); this module uses line 1 first, so reverse it.
+                    b = b[::-1]
                     t = int(tstr)
                     BINARY_TO_TRAD[b] = t
                     TRAD_TO_BINARY[t] = b
@@ -259,7 +297,7 @@ def lines_to_binary_str(hex_lines: List[Dict]) -> str:
 
 # ─── CORE I CHING CASTING ───
 
-def fetch_iching(seed: Optional[int] = None) -> List[Dict[str, Any]]:
+def fetch_iching(seed: Optional[int] = None, method: str = "flat") -> List[Dict[str, Any]]:
     """I Ching hexagram from seed or hardware entropy.
 
     Lines use traditional values (6/7/8/9). Changing lines (6/9) noted.
@@ -279,8 +317,8 @@ def fetch_iching(seed: Optional[int] = None) -> List[Dict[str, Any]]:
                 data = os.urandom(6)
             except Exception:
                 # robust local jitter fallback (same sources as hardware_entropy.py)
-                import time, glob, os
-                parts = []
+                import time, glob  # [fix] no local `import os`: it made `os` local to the
+                parts = []          # whole function, so hardware_entropy.py/urandom never ran
                 for p in glob.glob("/sys/class/thermal/thermal_zone*/temp"):
                     try: parts.append(open(p).read().strip().encode())
                     except: pass
@@ -300,10 +338,29 @@ def fetch_iching(seed: Optional[int] = None) -> List[Dict[str, Any]]:
                 data = hashlib.sha256(b"".join(parts)).digest()[:6]
     else:
         data = hashlib.sha256(str(seed).encode()).digest()[:6]
+    return lines_from_bytes(data, method)
 
+
+# [fix] Selectable line odds. "flat" is the original byte % 4 (each of 6/7/8/9 = 1/4,
+# not a traditional method). "coins": three coins, 6/7/8/9 = 1/8, 3/8, 3/8, 1/8.
+# "yarrow": 1/16, 5/16, 7/16, 3/16 via a 4-bit lookup (Cottrell's 16-outcome method,
+# https://russellcottrell.com/VirtualYarrowStalks/coins.htm). Odds: https://www.biroco.com/yijing/prob.htm
+YARROW16 = [6] + [7] * 5 + [8] * 7 + [9] * 3
+LINE_METHODS = ("flat", "coins", "yarrow")
+
+
+def _line_value(b: int, method: str) -> int:
+    if method == "coins":
+        return 6 + bin(b & 7).count("1")      # heads = 3, tails = 2
+    if method == "yarrow":
+        return YARROW16[b & 15]
+    return (6, 7, 8, 9)[b % 4]                # flat (original)
+
+
+def lines_from_bytes(data: bytes, method: str = "flat") -> List[Dict[str, Any]]:
     hexagram = []
     for i, b in enumerate(data):
-        val = b % 4
+        val = _line_value(b, method) - 6      # keep the original 0..3 branches below
         if val == 0:
             hexagram.append({"pos": i + 1, "symbol": "--- ---", "value": 6, "changing": True})
         elif val == 1:
@@ -319,13 +376,14 @@ def cast_yarrow_lines(seed: Optional[int] = None) -> List[Dict[str, Any]]:
 
     6: 1/16, 7: 5/16, 8: 7/16, 9: 3/16
     """
-    import random
+    import random as _random
+    # [fix] private RNG: the old code reseeded the global `random` module, a side effect
+    # on any importer (e.g. oracle.py). Same seed -> same sequence as before.
     if seed is not None:
-        # deterministic from seed
         seed_int = int(hashlib.sha256(str(seed).encode()).hexdigest()[:16], 16)
-        random.seed(seed_int)
+        random = _random.Random(seed_int)
     else:
-        random.seed()  # system entropy
+        random = _random.Random()  # system entropy
 
     # cumulative for fast choice
     intervals = [
@@ -349,7 +407,7 @@ def cast_yarrow_lines(seed: Optional[int] = None) -> List[Dict[str, Any]]:
                 break
     return hexagram
 
-def enrich_iching(hexagram: List[Dict[str, Any]]) -> Dict[str, Any]:
+def enrich_iching(hexagram: List[Dict[str, Any]], zone_method: str = "fuxi") -> Dict[str, Any]:
     """Add derived fields + numogram bridge + changing line details + judgments.
 
     Uses curated table + full corpus when available.
@@ -361,11 +419,8 @@ def enrich_iching(hexagram: List[Dict[str, Any]]) -> Dict[str, Any]:
     primary_bin = lines_to_binary_str(hexagram)
 
     # Get traditional hex number from corpus mapping (fixes previous bits+1 bug)
-    hex_num = BINARY_TO_TRAD.get(primary_bin)
-    if hex_num is None:
-        # fallback (rare)
-        bits = sum( (1 << i) for i, line in enumerate(hexagram) if line.get("value") in (7,9) )
-        hex_num = bits + 1
+    # [fix] the embedded table is authoritative; the corpus map (now reversed) must agree.
+    hex_num = binary_to_kw(primary_bin)
 
     # Keep internal bit pattern for display
     bits = sum( (1 << i) for i, line in enumerate(hexagram) if line.get("value") in (7,9) )
@@ -386,7 +441,13 @@ def enrich_iching(hexagram: List[Dict[str, Any]]) -> Dict[str, Any]:
 
     # Prefer curated data
     curated = CURATED_HEX_MAP.get(hex_num, {})
-    if curated and curated.get("zone") is not None:
+    # [fix] zone_method: "fuxi" (DEFAULT: line value mod 9; structural, reaches Zone 0; same
+    # convention as taixuan.py --zone-from value), "kw" (KW digital root only),
+    # "curated" (old default: table.csv zone, else KW digital root).
+    if zone_method == "fuxi":
+        primary_zone = fuxi_zone(hex_val)
+        g, syz = get_gate(primary_zone), get_syzygy(primary_zone)
+    if zone_method == "curated" and curated and curated.get("zone") is not None:
         try:
             primary_zone = int(curated["zone"])
             g = get_gate(primary_zone)
@@ -421,7 +482,7 @@ def enrich_iching(hexagram: List[Dict[str, Any]]) -> Dict[str, Any]:
                 "symbol_old": line.get("symbol", "")
             })
         rel_bin = ''.join(rel_list)
-        relating_num = BINARY_TO_TRAD.get(rel_bin)
+        relating_num = binary_to_kw(rel_bin)  # [fix]
         if relating_num:
             relating_name = get_hex_name(relating_num)
 
@@ -447,7 +508,12 @@ def enrich_iching(hexagram: List[Dict[str, Any]]) -> Dict[str, Any]:
         "alt_dr_shadow": dr_shadow,
         "curated_note": note,
         "curated_insight": insight,
-        "mapping_note": "curated + canonical DR (Method A) + tianmu corpus",
+        "mapping_note": {"curated": "curated + canonical DR (Method A) + tianmu corpus",
+                         "kw": "King Wen number digital root (sequence zone)",
+                         "fuxi": "line value mod 9 (structural zone)"}.get(zone_method, zone_method),
+        "zone_method": zone_method,
+        "kw_zone": zone,                     # [fix] always report both zone readings
+        "fuxi_zone": fuxi_zone(hex_val),
         "judgment": hex_info.get("judgment"),
         "relating_hex": relating_num,
         "relating_name": relating_name,
@@ -456,16 +522,19 @@ def enrich_iching(hexagram: List[Dict[str, Any]]) -> Dict[str, Any]:
     }
     return result
 
-def cast_iching(seed: Optional[int] = None, source: str = "hardware", use_yarrow: bool = False) -> Dict[str, Any]:
-    """High-level cast."""
+def cast_iching(seed: Optional[int] = None, source: str = "hardware", use_yarrow: bool = False,
+                method: str = "flat", zone_method: str = "fuxi") -> Dict[str, Any]:
+    """High-level cast. [fix] method = flat | coins | yarrow line odds (default flat, as before)."""
     if use_yarrow or source == "yarrow":
         hexagram = cast_yarrow_lines(seed)
         src = f"yarrow:{seed}" if seed is not None else "yarrow"
+        method = "yarrow (random module)"
     else:
-        hexagram = fetch_iching(seed)
+        hexagram = fetch_iching(seed, method)
         src = source if seed is None else f"seed:{seed}"
-    enriched = enrich_iching(hexagram)
+    enriched = enrich_iching(hexagram, zone_method)
     enriched["source"] = src
+    enriched["line_method"] = method
     return enriched
 
 # ─── PRETTY PRINTING ───
@@ -490,6 +559,9 @@ def format_iching(ich: Dict[str, Any], compact: bool = False, full: bool = False
             lines.append(f"  Judgment: {short}")
 
     lines.append(f"  Value sum: {ich['total_value']}  (pattern bits {ich['hex_val']})")
+    if ich.get("line_method"):
+        lines.append(f"  Line odds: {ich['line_method']}")
+    ch_lines = ich.get("changing_lines", [])  # [fix] was assigned after first use -> crash
     lines.append("")
 
     # Visual hexagram: printed from top (Line 6) to bottom (Line 1) so the text block
@@ -511,22 +583,22 @@ def format_iching(ich: Dict[str, Any], compact: bool = False, full: bool = False
         9: "━━━━━━━━━ ○", # old yang (changing)
     }
     lines.append("")
-    lines.append("  Hexagram figure (inverted for traditional visual appearance):")
+    lines.append("  Hexagram figure (line 6 at top):")
     figure_syms = []
     for pos in range(6, 0, -1):
         line = next((l for l in ich["hexagram"] if l["pos"] == pos), {})
         val = line.get("value", 7)
         s = sym_map.get(val, "?????????")
         figure_syms.append(s)
-    # Invert the symbol stack visually so hex like 60/Jie appears correctly
-    # instead of looking like its inverse 59/Huan. Matches user request for visual invert.
-    for s in reversed(figure_syms):
+    # [fix] No inversion. The old inversion compensated for the bit-order bug (the name was
+    # that of the upside-down hexagram, so the drawing was flipped to match it).
+    for s in figure_syms:
         lines.append(f"    {s}")
 
     # If there are changing lines, also show the full relating hexagram figure (inverted)
     if ch_lines:
         lines.append("")
-        lines.append("  Relating hexagram figure (inverted for traditional visual appearance):")
+        lines.append("  Relating hexagram figure (line 6 at top):")
         rel_figure_syms = []
         for pos in range(6, 0, -1):
             line = next((l for l in ich["hexagram"] if l["pos"] == pos), {})
@@ -538,10 +610,9 @@ def format_iching(ich: Dict[str, Any], compact: bool = False, full: bool = False
                     val = 8
             s = sym_map.get(val, "?????????")
             rel_figure_syms.append(s)
-        for s in reversed(rel_figure_syms):
+        for s in rel_figure_syms:  # [fix] no inversion
             lines.append(f"    {s}")
 
-    ch_lines = ich.get("changing_lines", [])
     if ch_lines:
         lines.append(f"  Changing lines: {ch_lines}")
     else:
@@ -568,6 +639,8 @@ def format_iching(ich: Dict[str, Any], compact: bool = False, full: bool = False
     if ich.get("curated_insight"):
         lines.append(f"    Changing-line insight: {ich['curated_insight']}")
     lines.append(f"  ({ich.get('mapping_note', '')}; alt DR shadow zone {ich.get('alt_dr_shadow')})")
+    if "fuxi_zone" in ich:
+        lines.append(f"  (zones: King Wen DR {ich['kw_zone']} · line-value mod 9 {ich['fuxi_zone']})")
 
     if full and jud:
         lines.append("")
@@ -581,22 +654,32 @@ def format_iching(ich: Dict[str, Any], compact: bool = False, full: bool = False
 # ─── CLI ───
 
 def main(argv: Optional[List[str]] = None):
-    args = argv or sys.argv[1:]
+    args = sys.argv[1:] if argv is None else argv  # [fix] main([]) no longer reads sys.argv
     seed = None
     do_json = "--json" in args
     use_cast = "--cast" in args
-    use_yarrow = use_cast  # default for --cast is yarrow
+    use_yarrow = use_cast and "--coins" not in args  # default for --cast is yarrow
+    # [fix] judgement calls exposed as options; defaults reproduce the old behaviour
+    method = args[args.index("--method") + 1] if "--method" in args else ("coins" if "--coins" in args else "flat")
+    zone_method = args[args.index("--zone-method") + 1] if "--zone-method" in args else "fuxi"  # [fix] default: line values
+    if method not in LINE_METHODS or zone_method not in ("curated", "kw", "fuxi"):
+        print("--method must be flat|coins|yarrow; --zone-method fuxi|kw|curated")
+        sys.exit(2)
 
     if "--seed" in args:
         try:
             idx = args.index("--seed")
-            seed = int(args[idx + 1])
+            a = args[idx + 1]
+            seed = int(a, 16) if a.lower().startswith("0x") else int(a)  # [fix] 0x-hex accepted
         except Exception:
-            pass
+            # [fix] used to fall back silently to a hardware cast
+            print(f"--seed needs an integer (decimal or 0x-hex), got {args[idx + 1:idx + 2]}")
+            sys.exit(2)
 
     if use_cast:
         # --cast mode (yarrow simulation). --coins for alternative if wanted later
-        ich = cast_iching(seed=seed, source="yarrow" if use_yarrow else "hardware", use_yarrow=True)
+        ich = cast_iching(seed=seed, source="yarrow" if use_yarrow else "hardware", use_yarrow=use_yarrow,
+                          method=method, zone_method=zone_method)
     else:
         # traditional --iching path (entropy or seed)
         source = "hardware"
@@ -605,7 +688,7 @@ def main(argv: Optional[List[str]] = None):
         if "--hardware" in args:
             seed = None
             source = "hardware"
-        ich = cast_iching(seed=seed, source=source)
+        ich = cast_iching(seed=seed, source=source, method=method, zone_method=zone_method)
 
     do_full = "--full" in args
 

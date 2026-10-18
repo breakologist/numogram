@@ -31,6 +31,19 @@ Integrates with numogram zones (digital root), syzygies (demon carriers), and th
 Companion to iching.py (binary Time-Circuit) — this is the ternary mediator layer.
 
 Sources: taixuanjingrok.md, visualizer-v7.html, Yuandong Jing diagram + translation, Nylan/Walters etc.
+
+[review notes 2026-10-17, code changes marked "# [fix]"]
+- Sourced: three line types unbroken / once-broken / twice-broken = Heaven / Earth / Man
+  (Liu, JPACT 4, 2021: https://hilo.hawaii.edu/jpact/issues/volume-4-2021/taixuan-jing.php);
+  hierarchy 3 fang / 9 zhou / 27 bu / 81 jia (same source; chinaknowledge.org Taixuanjing page).
+- NOT in those sources (repo-internal / speculative, kept as features): the label "Em",
+  the Sulfur/Salt/Mercury alchemy layer, the nine appraisal phase names, quasiphonic names.
+- The 27 "Yuandong" phases are the 27 figures of the Dongji zhenjing 洞極真經
+  (Gujin tushu title 擬元洞極真經, "imitating the [Tai]xuan"), attributed to Guan Lang 關朗
+  (courtesy name Ziming 子明), author uncertain per Hu Yigui. Three ji: 生 birth (Luoshu 1,4,7),
+  育 nurture (2,5,8), 資 material (3,6,9), nine figures each = 27.
+  https://www.eee-learning.com/book/4933 ; https://www.eee-learning.com/book/5344
+  Identifying them with the Tai Xuan's 27 departments (bu) is this tool's own mapping.
 """
 
 import sys
@@ -49,49 +62,53 @@ STATE_NAMES = {HEAVEN: "Heaven", EARTH: "Earth", MAN: "Man/Em (mediator)"}
 STATE_SYMBOLS = {
     HEAVEN: "━━━━━━━",      # solid
     EARTH: "━━━   ━━━",     # broken
-    MAN:   "━━━ ● ━━━",     # Em / triple (simplified)
+    MAN:   "━━ ━━ ━━",      # [fix] twice-broken (was "━━━ ● ━━━", the I Ching old-yin mark)
 }
 
 STATE_UNICODE = {
     HEAVEN: "⚊",   # Heaven (unbroken)
     EARTH: "⚋",   # Earth (once-broken)
-    MAN: "𝌀",     # Man/Em (twice-broken)
+    MAN: "𝌀",     # Man/Em (twice-broken; Unicode names U+1D300 "MONOGRAM FOR EARTH")
 }
 
 # ─── YUANDONG JING / GUANZIMING 27-PHASE TRIGRAM SYSTEM ───
+# [fix] "zh" added from the Dongji zhenjing sequence 生萌息華茂止安燠實 / 育和塞作煥幾抑冥通 /
+# 資用達興紊悖靜平序 (eee-learning.com/book/4933; the source's own 次為 order puts 資 before 育).
+# The "formula" strings are UNVERIFIED: only 20 of 27 are distinct and several disagree with
+# the group (e.g. #4, #6-#8 are in the 生 group but start "One nurture/material").
 # From the provided diagram + translation (27 phases, 3^3, birth/nurture/material).
 # These are the "27 departments (pu)" in the Tai Xuan cosmological hierarchy
 # (3 regions/fang → 9 provinces/chou → 27 departments/pu → 81 families/jia).
 # Each department corresponds to 3 tetragram "families".
 
 YUANDONG_PHASES: List[Dict[str, Any]] = [
-    {"num": 1, "name": "Birth", "formula": "One birth, two births, three births"},
-    {"num": 2, "name": "Sprout", "formula": "One birth, two nurtures, three nurtures"},
-    {"num": 3, "name": "Breath", "formula": "One birth, two materials, three materials"},
-    {"num": 4, "name": "Essence", "formula": "One nurture, two births, three births"},
-    {"num": 5, "name": "Profuse", "formula": "One birth, two materials, three births"},
-    {"num": 6, "name": "End", "formula": "One nurture, two materials, three nurtures"},
-    {"num": 7, "name": "Quiet", "formula": "One nurture, two nurtures, three births"},
-    {"num": 8, "name": "Scatter", "formula": "One material, two births, three births"},
-    {"num": 9, "name": "Reality", "formula": "One birth, two nurtures, three births"},
-    {"num": 10, "name": "Nurture", "formula": "One nurture, two nurtures, three nurtures"},
-    {"num": 11, "name": "Harmony", "formula": "One nurture, two nurtures, three births"},
-    {"num": 12, "name": "Obstruction", "formula": "One material, two nurtures, three nurtures"},
-    {"num": 13, "name": "Work", "formula": "One material, two materials, three births"},
-    {"num": 14, "name": "Warmth", "formula": "One nurture, two births, three births"},
-    {"num": 15, "name": "Some", "formula": "One nurture, two births, three materials"},
-    {"num": 16, "name": "Suppression", "formula": "One birth, two materials, three materials"},
-    {"num": 17, "name": "Dark", "formula": "One nurture, two materials, three materials"},
-    {"num": 18, "name": "Through", "formula": "One birth, two materials, three materials"},
-    {"num": 19, "name": "Material", "formula": "One material, two materials, three materials"},
-    {"num": 20, "name": "Use", "formula": "One material, two births, three materials"},
-    {"num": 21, "name": "Smooth", "formula": "One birth, two births, three materials"},
-    {"num": 22, "name": "Prosperous", "formula": "One birth, two births, three nurtures"},
-    {"num": 23, "name": "Disorderly", "formula": "One material, two births, three births"},
-    {"num": 24, "name": "Contrary", "formula": "One material, two births, three nurtures"},
-    {"num": 25, "name": "Tranquil", "formula": "One nurture, two nurtures, three nurtures"},
-    {"num": 26, "name": "Even", "formula": "One material, two materials, three nurtures"},
-    {"num": 27, "name": "Order", "formula": "One material, two materials, three births"},
+    {"num": 1, "zh": "生", "name": "Birth", "formula": "One birth, two births, three births"},
+    {"num": 2, "zh": "萌", "name": "Sprout", "formula": "One birth, two nurtures, three nurtures"},
+    {"num": 3, "zh": "息", "name": "Breath", "formula": "One birth, two materials, three materials"},
+    {"num": 4, "zh": "華", "name": "Essence", "formula": "One nurture, two births, three births", "gloss_note": "華 = flowering"},
+    {"num": 5, "zh": "茂", "name": "Profuse", "formula": "One birth, two materials, three births"},
+    {"num": 6, "zh": "止", "name": "End", "formula": "One nurture, two materials, three nurtures"},
+    {"num": 7, "zh": "安", "name": "Quiet", "formula": "One nurture, two nurtures, three births"},
+    {"num": 8, "zh": "燠", "name": "Warmth", "formula": "One material, two births, three births", "gloss_note": "[fix] 燠 = warmth (was \"Scatter\")"},
+    {"num": 9, "zh": "實", "name": "Reality", "formula": "One birth, two nurtures, three births"},
+    {"num": 10, "zh": "育", "name": "Nurture", "formula": "One nurture, two nurtures, three nurtures"},
+    {"num": 11, "zh": "和", "name": "Harmony", "formula": "One nurture, two nurtures, three births"},
+    {"num": 12, "zh": "塞", "name": "Obstruction", "formula": "One material, two nurtures, three nurtures"},
+    {"num": 13, "zh": "作", "name": "Work", "formula": "One material, two materials, three births"},
+    {"num": 14, "zh": "煥", "name": "Brilliance", "formula": "One nurture, two births, three births", "gloss_note": "[fix] 煥 = brilliance; variant 渙 = scatter (was \"Warmth\")"},
+    {"num": 15, "zh": "幾", "name": "Some", "formula": "One nurture, two births, three materials", "gloss_note": "幾 = incipience / subtle onset"},
+    {"num": 16, "zh": "抑", "name": "Suppression", "formula": "One birth, two materials, three materials"},
+    {"num": 17, "zh": "冥", "name": "Dark", "formula": "One nurture, two materials, three materials"},
+    {"num": 18, "zh": "通", "name": "Through", "formula": "One birth, two materials, three materials"},
+    {"num": 19, "zh": "資", "name": "Material", "formula": "One material, two materials, three materials"},
+    {"num": 20, "zh": "用", "name": "Use", "formula": "One material, two births, three materials"},
+    {"num": 21, "zh": "達", "name": "Smooth", "formula": "One birth, two births, three materials"},
+    {"num": 22, "zh": "興", "name": "Prosperous", "formula": "One birth, two births, three nurtures"},
+    {"num": 23, "zh": "紊", "name": "Disorderly", "formula": "One material, two births, three births"},
+    {"num": 24, "zh": "悖", "name": "Contrary", "formula": "One material, two births, three nurtures"},
+    {"num": 25, "zh": "靜", "name": "Tranquil", "formula": "One nurture, two nurtures, three nurtures"},
+    {"num": 26, "zh": "平", "name": "Even", "formula": "One material, two materials, three nurtures"},
+    {"num": 27, "zh": "序", "name": "Order", "formula": "One material, two materials, three births"},
 ]
 
 # ─── 81 TETRAGRAM NAMES (from Nylan, The Canon of Supreme Mystery) ───
@@ -104,16 +121,17 @@ TETRAGRAM_NAMES = [
     "Purity", "Fullness", "Residence", "Law or Model", "Response", "Going to Meet", "Encounters", "Stove", "Greatness",
     "Enlargement", "Pattern", "Ritual", "Flight", "Vastness or Wasting", "Constancy", "Measure", "Eternity", "Unity",
     "Diminishment", "Closed Mouth", "Guardedness", "Gathering in", "Massing", "Accumulation", "Embellishment", "Doubt", "Watch",
-    "Sinking", "Inner", "Departure", "Darkening", "Dimming", "Exhaustation", "Severance", "Stoppage", "Hardness",
+    "Sinking", "Inner", "Departure", "Darkening", "Dimming", "Exhaustion", "Severance", "Stoppage", "Hardness",
     "Completion", "Closure", "Failure", "Aggravation", "Compliance", "On the verge", "Difficulties", "Labouring", "Fostering"
 ]
 
 def get_yuandong_phase(idx: int) -> Dict[str, Any]:
-    """0-26 or 1-27 -> phase data."""
+    """1-27 -> phase data (a copy). [fix] Index 0 is treated as 0-based for backward
+    compatibility only; callers below pass 1-27."""
     if 1 <= idx <= 27:
-        return YUANDONG_PHASES[idx-1]
-    if 0 <= idx < 27:
-        return YUANDONG_PHASES[idx]
+        return dict(YUANDONG_PHASES[idx-1])
+    if idx == 0:
+        return dict(YUANDONG_PHASES[0])
     return {"num": idx, "name": f"Phase {idx}", "formula": ""}
 
 def get_tetragram_hierarchy(n: int) -> Dict[str, Any]:
@@ -146,18 +164,12 @@ def get_tetragram_hierarchy(n: int) -> Dict[str, Any]:
 
 def cast_yuandong_phase(seed: Optional[int] = None) -> Dict[str, Any]:
     """Cast a single 27-phase using ternary (3 positions)."""
-    if seed is None:
-        # simple hardware-ish fallback
-        import time, random
-        random.seed(int(time.time_ns()) % (2**32))
-        trits = [random.randint(0, 2) for _ in range(3)]
-    else:
-        h = hashlib.sha256(str(seed).encode()).digest()
-        trits = [(b % 3) for b in h[:3]]
-    # Map trit 0/1/2 to birth/nurture/material conceptually (order per source)
-    # For now just index into the 27 as a flat ternary number
-    phase_idx = trits[0] * 9 + trits[1] * 3 + trits[2]
-    phase = get_yuandong_phase(phase_idx)
+    # [fix] old cast: 0-26 index fed to a 1-27 lookup, so index 0 and 1 both gave #1 and
+    # #27 never appeared; it also wrote into the shared table. Unseeded now uses _get_entropy.
+    h = hashlib.sha256(str(seed).encode()).digest() if seed is not None else _get_entropy(4)
+    phase_idx = int.from_bytes(h[:4], "big") % 27          # 0-26, uniform to 1e-9
+    trits = [phase_idx // 9, phase_idx // 3 % 3, phase_idx % 3]
+    phase = get_yuandong_phase(phase_idx + 1)
     phase["trits"] = trits
     phase["seed"] = seed
     return phase
@@ -225,7 +237,7 @@ def _get_entropy(nbytes: int) -> bytes:
         pass
 
     # 3. Local collector inspired by the skills (no external deps)
-    import time, glob, os
+    import time, glob  # [fix] no local `import os` (it shadowed the module: steps 1-2 never ran)
     parts = []
     # thermals (3 zones)
     for p in glob.glob('/sys/class/thermal/thermal_zone*/temp'):
@@ -328,11 +340,21 @@ def render_tetragram(n: int, label: str = "", use_unicode: bool = False) -> str:
         sym = syms.get(s, "???")
         name = STATE_NAMES.get(s, "")
         lines_out.append(f"  {sym}  {name}")
-    title = f"{label} #{n}" if label else f"Tetragram #{n}"
+    title = f"{label} #{n + 1}" if label else f"Tetragram #{n + 1}"  # [fix] head number
     return f"{title}\n" + "\n".join(lines_out)
 
-def taixuan_zone(n: int) -> int:
-    """Tetragram 0-80 -> decimal zone (0-9, 0 allowed for Void)."""
+ZONE_FROM = "value"   # [fix] default = line values (same convention as iching.py fuxi); --zone-from number
+
+
+def taixuan_zone(n: int, zone_from: Optional[str] = None) -> int:
+    """Tetragram index 0-80 -> decimal zone.
+    "value" (default, unchanged): digital root of the base-3 line value (= index), 0 only for
+    Centre. Same convention as iching.py's default "fuxi" zone (binary weights 1,2,4,...,
+    here ternary 1,3,9,27): all-heaven/all-yin figure -> 0, other multiples of 9 -> 9.
+    "number": digital root of the head number 1-81 (Centre = 1); nine heads per zone 1-9.
+    """
+    if (zone_from or ZONE_FROM) == "number":
+        n = n + 1
     if n == 0:
         return 0
     while n >= 10:
@@ -350,6 +372,8 @@ def enrich_taixuan(upper: int, lower: int) -> Dict[str, Any]:
     syz = f"{zu}::{zl}"
     is_syzygy = (zu + zl) == 9
     demon = demon_from_zones(zu, zl) if is_syzygy else None
+    if demon is None and NETSPAN:      # [fix] opt-in: --netspan names every distinct pair
+        demon = netspan_demon(zu, zl)
 
     emu = get_em_count(upper)
     eml = get_em_count(lower)
@@ -378,13 +402,18 @@ def enrich_taixuan(upper: int, lower: int) -> Dict[str, Any]:
         "mediation_level": mediation,
         "upper_hierarchy": upper_h,
         "lower_hierarchy": lower_h,
+        "upper_number": upper + 1,       # [fix] head number 1-81 (names are indexed 0-80)
+        "lower_number": lower + 1,
+        "zone_from": ZONE_FROM,
         "upper_render": represent_tetragram(upper),
         "lower_render": represent_tetragram(lower),
     }
 
 # Demon map (shared with oracle / iching for consistency)
+# [fix] Ummnu (Om, Omni, Amen, Omen) is Mesh-44, net-span 9::8, not an alias of Uttunul (9::0)
+# (http://www.ccru.net/digithype/pandemonium.htm).
 TAIXUAN_DEMON_MAP = {
-    (0,9): "Uttunul (Ummnu / Om, Amen, Omen)", (9,0): "Uttunul (Ummnu / Om, Amen, Omen)",
+    (0,9): "Uttunul", (9,0): "Uttunul",
     (1,8): "Murrumur", (8,1): "Murrumur",
     (2,7): "Oddubb", (7,2): "Oddubb",
     (3,6): "Djynxx", (6,3): "Djynxx",
@@ -393,6 +422,24 @@ TAIXUAN_DEMON_MAP = {
 
 def demon_from_zones(a: int, b: int) -> str:
     return TAIXUAN_DEMON_MAP.get((a, b), "Unknown")
+
+
+# [fix] Full 45-demon net-span lookup, ordered by mesh number (mesh = T(hi-1) + lo).
+# Names as in http://www.ccru.net/digithype/pandemonium.htm (via repo pandemonium-matrix.md).
+NETSPAN_DEMONS = [
+    "Lurgo", "Duoddod", "Doogu", "Ixix", "Ixigool", "Ixidod", "Krako", "Sukugool", "Skoodu",
+    "Skarkix", "Tokhatto", "Tukkamu", "Kuttadid", "Tikkitix", "Katak", "Tchu", "Djungo",
+    "Djuddha", "Djynxx", "Tchakki", "Tchattuk", "Puppo", "Bubbamu", "Oddubb", "Pabbakis",
+    "Ababbatok", "Papatakoo", "Bobobja", "Minommo", "Murrumur", "Nammamad", "Mummumix",
+    "Numko", "Muntuk", "Mommoljo", "Mombbo", "Uttunul", "Tutagool", "Unnunddo", "Ununuttix",
+    "Ununak", "Tukutu", "Unnutchi", "Nuttubab", "Ummnu",
+]
+
+
+def netspan_demon(a: int, b: int) -> Optional[str]:
+    """Demon for any pair of distinct zones 0-9 (None for a == b)."""
+    hi, lo = max(a, b), min(a, b)
+    return None if hi == lo else NETSPAN_DEMONS[hi * (hi - 1) // 2 + lo]
 
 # Single tetragram -> primary demon via its zone (from tai-hsuan-ching-demons.md)
 ZONE_PRIMARY_DEMON = {
@@ -484,6 +531,8 @@ def taixuan_demon_quasiphonic(zone_a: int, zone_b: int) -> str:
     # Simple blend; could be more sophisticated like base36
     return f"{p1}{p2}"  # e.g. "glktt" style for Katak etc.
 
+NETSPAN = False   # [fix] set by --netspan
+
 # ─── CAST + OUTPUT ───
 
 def cast_taixuan(seed: Optional[int] = None, two: bool = True) -> Dict[str, Any]:
@@ -498,6 +547,8 @@ def cast_taixuan(seed: Optional[int] = None, two: bool = True) -> Dict[str, Any]
         h = get_tetragram_hierarchy(t)
         return {
             "tetragram": t,
+            "number": t + 1,                 # [fix]
+            "zone_from": ZONE_FROM,
             "zone": taixuan_zone(t),
             "name": h["name"],
             "render": represent_tetragram(t),
@@ -518,8 +569,9 @@ def format_taixuan(data: Dict[str, Any], full: bool = False, use_unicode: bool =
 
     if data.get("mode") == "two-tetragram":
         lines.append(f"  Seed: {data.get('seed', 'hardware')}")
-        lines.append(f"  Upper: #{data['upper']} {data.get('upper_name', '')} → Zone {data['upper_zone']}")
-        lines.append(f"  Lower: #{data['lower']} {data.get('lower_name', '')} → Zone {data['lower_zone']}")
+        # [fix] show the head number (1-81); "#26 Duties" was index 26 = head 27 Duties
+        lines.append(f"  Upper: #{data['upper'] + 1} {data.get('upper_name', '')} → Zone {data['upper_zone']}")
+        lines.append(f"  Lower: #{data['lower'] + 1} {data.get('lower_name', '')} → Zone {data['lower_zone']}")
         lines.append(f"  Syzygies: {data['syzygy']}")
         if data.get("demon"):
             lines.append(f"  Net-span demon: {data['demon']}")
@@ -548,7 +600,7 @@ def format_taixuan(data: Dict[str, Any], full: bool = False, use_unicode: bool =
             lines.append(render_tetragram(data['lower'], "LOWER", use_unicode=use_unicode))
     else:
         # Single tetragram mode
-        lines.append(f"  Tetragram: #{data['tetragram']} {data.get('name','')} → Zone {data['zone']}")
+        lines.append(f"  Tetragram: #{data['tetragram'] + 1} {data.get('name','')} → Zone {data['zone']}")  # [fix]
         lines.append(f"  Demon: {data.get('demon', 'Unknown')} (quasiphonic: {taixuan_demon_quasiphonic(data['zone'], data['zone'])})")
         lines.append(f"  Em lines: {data['em_count']}/4")
         lines.append(f"  Hierarchy: Dept {data['hierarchy']['department']} ({data['hierarchy']['phase']['name']}) family {data['hierarchy']['family_in_dept']}")
@@ -568,7 +620,13 @@ def format_taixuan(data: Dict[str, Any], full: bool = False, use_unicode: bool =
 # ─── CLI ───
 
 def main(argv: Optional[List[str]] = None):
-    args = argv or sys.argv[1:]
+    global ZONE_FROM, NETSPAN
+    args = sys.argv[1:] if argv is None else argv  # [fix]
+    if "--zone-from" in args:
+        ZONE_FROM = args[args.index("--zone-from") + 1]
+        if ZONE_FROM not in ("value", "number"):
+            print("--zone-from must be value or number"); sys.exit(2)
+    NETSPAN = "--netspan" in args
     seed = None
     do_json = "--json" in args
     do_full = "--full" in args
@@ -578,21 +636,25 @@ def main(argv: Optional[List[str]] = None):
     if "--seed" in args:
         try:
             idx = args.index("--seed")
-            seed = int(args[idx + 1])
+            a = args[idx + 1]
+            seed = int(a, 16) if a.lower().startswith("0x") else int(a)  # [fix] 0x-hex accepted
         except Exception:
-            pass
+            # [fix] used to fall back silently to a hardware cast
+            print(f"--seed needs an integer (decimal or 0x-hex), got {args[idx + 1:idx + 2]}")
+            sys.exit(2)
 
     if do_phase:
         if "--list" in args or "--phases" in args and "--cast" not in args:
             print("Yuandong Jing / Guanziming 27 Phases (from diagram + translation):")
+            print("  (Dongji zhenjing 洞極真經; formula column unverified, see source notes)")
             for p in YUANDONG_PHASES:
-                print(f"  {p['num']:2d}. {p['name']}: {p['formula']}")
+                print(f"  {p['num']:2d}. {p.get('zh', '')} {p['name']}: {p['formula']}")
             return
         ph = cast_yuandong_phase(seed)
         print("══════════════════════════════════════")
         print("  YUANDONG JING — 27-PHASE CAST")
         print("══════════════════════════════════════")
-        print(f"  Phase {ph['num']}: {ph['name']}")
+        print(f"  Phase {ph['num']}: {ph.get('zh', '')} {ph['name']}")
         print(f"  Formula: {ph['formula']}")
         print(f"  Trits: {ph.get('trits')}")
         print("══════════════════════════════════════")
