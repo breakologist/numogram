@@ -1,0 +1,238 @@
+"""Unit tests for geomancy.py. Run: python3 -m unittest -v test_geomancy"""
+import itertools, json, os, subprocess, sys, tempfile, unittest
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # cli/
+sys.path.insert(0, HERE)
+import geomancy as G
+
+
+def run(script, *a):
+    env = dict(os.environ, HOME=tempfile.mkdtemp())
+    return subprocess.run([sys.executable, os.path.join(HERE, script), *a],
+                          capture_output=True, text=True, env=env, timeout=60)
+
+
+def chart(*names):
+    return {h + 1: G.figure(n) for h, n in enumerate(names)}
+
+
+class Figures(unittest.TestCase):
+    def test_sixteen_distinct_patterns(self):
+        self.assertEqual(len({f["bits"] for f in G.FIGURES}), 16)
+        self.assertEqual(sorted(f["value"] for f in G.FIGURES), list(range(16)))
+
+    def test_known_patterns(self):  # 1 = single point, Fire (head) first
+        for n, b in {"Populus": "0000", "Via": "1111", "Albus": "0010", "Rubeus": "0100",
+                     "Puer": "1101", "Puella": "1011", "Laetitia": "1000", "Tristitia": "0001",
+                     "Carcer": "1001", "Conjunctio": "0110", "Acquisitio": "0101", "Amissio": "1010",
+                     "Fortuna Major": "0011", "Fortuna Minor": "1100", "Caput Draconis": "0111",
+                     "Cauda Draconis": "1110"}.items():
+            self.assertEqual(G.figure(b)["name"], n)
+        self.assertEqual(G.figure("Albus")["value"], 2)          # user JSON had 11 (clash with Puella)
+        self.assertEqual(G.figure("Cauda Draconis")["value"], 14)  # user JSON had 6 (clash with Conjunctio)
+        self.assertIs(G.figure("Coniunctio"), G.figure("Conjunctio"))
+        self.assertIs(G.figure("Fortuna Maior"), G.figure("Fortuna Major"))
+
+    def test_operations_digital_ambler_2018(self):
+        self.assertEqual(G.name(G.invert("Albus")), "Puer")
+        self.assertEqual(G.name(G.reverse("Albus")), "Rubeus")
+        self.assertEqual(G.name(G.convert("Albus")), "Puella")
+        self.assertEqual(G.name(G.reverse("Fortuna Major")), "Fortuna Minor")
+        for f in G.FIGURES:
+            self.assertIs(G.invert(G.invert(f)), f)
+            self.assertIs(G.convert(G.convert(f)), f)
+            self.assertEqual(G.base16_view(f)["syzygy"], G.name(G.invert(f)))
+
+    def test_opposites_greer(self):
+        pairs = {("Populus", "Via"), ("Carcer", "Conjunctio"), ("Fortuna Major", "Fortuna Minor"),
+                 ("Acquisitio", "Amissio"), ("Tristitia", "Laetitia"), ("Albus", "Rubeus"),
+                 ("Puella", "Puer"), ("Caput Draconis", "Cauda Draconis")}
+        for a, b in pairs:
+            self.assertEqual(G.name(G.opposite(a)), b)
+            self.assertEqual(G.name(G.opposite(b)), a)
+
+    def test_schemes(self):
+        self.assertEqual(G.attributions("Puella")["sign"], "Libra")
+        self.assertEqual(G.attributions("Puella", "agrippa")["sign"], "Taurus")
+        self.assertEqual(G.attributions("Acquisitio", "agrippa")["sign"], "Pisces")
+        self.assertEqual(G.attributions("Acquisitio", "gerard")["sign"], "Aries")
+        self.assertIsNone(G.attributions("Caput Draconis")["sign"])
+        self.assertEqual(G.attributions("Fortuna Minor")["element"], "air")
+        for sc in G.SCHEMES:
+            self.assertEqual(sum(1 for f in G.FIGURES if G.attributions(f, sc)["element"]),
+                             16)
+        for f in G.FIGURES:
+            self.assertTrue(f["da"].startswith("https://digitalambler.wordpress.com/201"))
+            self.assertEqual(len(f["gd_houses"]), 12)
+
+    def test_planets_pairs(self):
+        from collections import Counter
+        c = Counter(f["planet"] for f in G.FIGURES)
+        for p in ("Sun", "Moon", "Mercury", "Venus", "Mars", "Jupiter", "Saturn"):
+            self.assertEqual(c[p], 2)
+
+
+class Shield(unittest.TestCase):
+    def test_transposition_and_derivation(self):
+        s = G.shield_from_mothers(["Via", "Acquisitio", "Conjunctio", "Laetitia"])
+        for i in range(4):
+            for j in range(4):
+                self.assertEqual(s[f"D{i + 1}"]["bits"][j], s[f"M{j + 1}"]["bits"][i])
+        self.assertIs(s["N1"], G.add(s["M1"], s["M2"]))
+        self.assertIs(s["J"], G.add(s["RW"], s["LW"]))
+        self.assertIs(s["S"], G.add(s["J"], s["M1"]))
+
+    def test_all_charts_valid_and_judges_even(self):
+        from collections import Counter
+        judges = Counter()
+        unique15 = 0
+        for bits in range(0, 65536, 7):   # a sample; the full census is tested below
+            s = G.shield_from_mothers(G.mothers_from_bits(bits))
+            v = G.validate(s)
+            self.assertTrue(v["valid"], bits)
+            judges[s["J"]["name"]] += 1
+        self.assertEqual(set(judges), {f["name"] for f in G.FIGURES if f["points"] % 2 == 0})
+
+    def test_validate_catches_hand_errors(self):
+        s = dict(G.shield_from_mothers(["Puer", "Via", "Albus", "Carcer"]))
+        s["N2"] = G.invert(s["N2"])
+        v = G.validate(s)
+        self.assertFalse(v["valid"])
+        self.assertIn("N2", v["derivation_errors"])
+
+    def test_via_puncti(self):
+        for bits in range(0, 65536, 13):
+            s = G.shield_from_mothers(G.mothers_from_bits(bits))
+            vp = G.via_puncti(s)
+            if s["J"]["bits"][0] == 1:
+                self.assertEqual(vp["kind"], "single")
+                self.assertEqual(len(vp["paths"]), 1)
+                self.assertEqual(len(vp["paths"][0]), 4)          # J → witness → niece → mother/daughter
+                self.assertIn(vp["paths"][0][-1][0], "MD")
+            else:
+                self.assertIn(vp["kind"], ("none", "branching"))
+
+
+class Houses(unittest.TestCase):
+    def test_placements(self):
+        s = G.shield_from_mothers(["Puer", "Via", "Albus", "Carcer"])
+        seq, ast = G.house_chart(s), G.house_chart(s, "astrological")
+        self.assertIs(seq[1], s["M1"]); self.assertIs(seq[12], s["N4"])
+        self.assertIs(ast[10], s["M1"]); self.assertIs(ast[1], s["M2"]); self.assertIs(ast[9], s["N4"])
+        self.assertEqual(sorted(ast), list(range(1, 13)))
+
+    def test_perfection_modes(self):
+        base = ["Populus", "Albus", "Rubeus", "Carcer", "Tristitia", "Laetitia",
+                "Puer", "Puella", "Amissio", "Via", "Conjunctio", "Acquisitio"]
+        h = list(base); h[6] = "Populus"
+        self.assertEqual(G.perfection(chart(*h))["modes"], ["occupation"])
+        h = list(base); h[7] = "Populus"                   # querent's figure next to house 7
+        self.assertEqual(G.perfection(chart(*h))["modes"], ["conjunction"])
+        h = list(base); h[2], h[3] = "Populus", "Puer"     # both meet in 3–4
+        self.assertEqual(G.perfection(chart(*h))["modes"], ["mutation"])
+        h = list(base); h[1] = h[5] = "Fortuna Major"      # third figure beside both (2 and 6)
+        self.assertEqual(G.perfection(chart(*h))["modes"], ["translation"])
+        self.assertEqual(G.perfection(chart(*base))["modes"], ["denial"])
+
+    def test_abano_adjacency(self):
+        h = ["Populus", "Albus", "Rubeus", "Carcer", "Tristitia", "Laetitia",
+             "Puer", "Puella", "Amissio", "Via", "Conjunctio", "Puer"]   # Puer in 12, next to 1
+        self.assertEqual(G.perfection(chart(*h))["modes"], ["conjunction"])
+        self.assertEqual(G.perfection(chart(*h), abano=True)["modes"], ["denial"])
+
+    def test_company(self):
+        self.assertEqual(G.company(chart("Puer", "Puer", *["Via"] * 10), 1)["company"], "simple")
+        self.assertEqual(G.company(chart("Puer", "Rubeus", *["Via"] * 10), 2)["company"], "demi-simple")
+        self.assertEqual(G.company(chart("Puer", "Puella", *["Via"] * 10), 1)["company"], "compound")
+        self.assertEqual(G.company(chart("Puer", "Laetitia", *["Via"] * 10), 1)["company"], "capitular")
+        self.assertIsNone(G.company(chart("Puer", "Albus", *["Via"] * 10), 1)["company"])
+
+    def test_part_of_fortune_and_topics(self):
+        s = G.shield_from_mothers(["Populus"] * 4)          # all double: 12 × 8 = 96 points → 12
+        pf = G.part_of_fortune(s)
+        self.assertEqual((pf["points"], pf["figure_number"], pf["house"]), (96, 12, 12))
+        self.assertEqual(G.part_of_fortune(s, "astrological")["house"], 9)
+        self.assertEqual(G.house_for_topic("Will I get the job?"), 10)
+        self.assertEqual(G.house_for_topic("marriage"), 7)
+
+
+class Numogram(unittest.TestCase):
+    def test_zone_maps(self):
+        self.assertEqual(G.zone("Via"), 6); self.assertEqual(G.zone("Populus"), 0)
+        self.assertEqual(G.zone("Via", "points"), 4); self.assertEqual(G.zone("Populus", "points"), 8)
+        self.assertEqual(G.zone("Laetitia", "dr-line"), 1)
+        for f in G.FIGURES:   # a base-16 syzygy never lands on a decimal syzygy (sum ≡ 6 mod 9)
+            self.assertEqual((G.zone(f) + G.zone(G.invert(f))) % 9, 6)
+
+    def test_base16_gate_rule(self):
+        self.assertEqual(G.base16_view("Via")["gate_tri"], 120)
+        self.assertEqual(G.base16_view("Via")["gate_target16"], 15)          # 120 ≡ 0 (mod 15) → 15
+        self.assertEqual(G.base16_view("Via", "mod")["gate_target16"], 120 % 16)
+        self.assertEqual(G.base16_view("Populus")["gate_target16"], 0)
+
+    def test_nuclear_iching(self):
+        self.assertEqual(G.name(G.figure_from_hexagram(1)), "Via")
+        self.assertEqual(G.name(G.figure_from_hexagram(2)), "Populus")
+        self.assertEqual(G.name(G.figure_from_hexagram(63)), "Amissio")       # lines 2–5: yin yang yin yang
+        allhex = sorted(itertools.chain.from_iterable(G.hexagrams_for_figure(f) for f in G.FIGURES))
+        self.assertEqual(allhex, list(range(1, 65)))
+        import iching
+        self.assertEqual(G.KW_BY_VALUE, iching.KW_BY_VALUE)
+
+    def test_census(self):
+        c = G.census()
+        self.assertEqual(c["charts"], 65536)
+        self.assertEqual(set(c["judge"].values()), {8192})
+        self.assertEqual(len(c["judge"]), 8)
+        self.assertEqual(c["charts_with_15_unique_figures"], 16)
+        self.assertEqual(c["impeded_charts"], 8192)
+        self.assertEqual(c["odd_total_single_points"]["first_15"], 0)   # Grok's "rule" rejects nothing
+        self.assertEqual(c["odd_total_single_points"]["first_12"], 0)
+        self.assertTrue(all(h % 2 == 0 for h in c["part_of_fortune_house"]))
+        self.assertEqual(sum(c["via_puncti"].values()), 65536)
+        self.assertEqual(c["via_puncti"]["single"], 32768)
+        self.assertEqual(sum(c["zone_all_16_positions"].values()), 16 * 65536)
+
+
+class CLI(unittest.TestCase):
+    def test_json_seed_deterministic(self):
+        a, b = run("geomancy.py", "--seed", "192855", "--json"), run("geomancy.py", "--seed", "192855", "--json")
+        self.assertEqual(a.returncode, 0, a.stderr)
+        self.assertEqual(a.stdout, b.stdout)
+        d = json.loads(a.stdout)
+        self.assertTrue(d["validation"]["valid"])
+        self.assertEqual(len(d["houses"]), 12)
+        self.assertTrue(d["numogram"]["speculative"])
+        self.assertEqual(run("geomancy.py", "--seed", "0xff", "--json").returncode, 0)
+
+    def test_bad_inputs_exit_2(self):
+        self.assertEqual(run("geomancy.py", "--seed", "nope").returncode, 2)
+        self.assertEqual(run("geomancy.py", "--dots", "1 2 3").returncode, 2)
+        self.assertEqual(run("geomancy.py", "--mothers", "Puer,Bogus,Via,Via").returncode, 2)
+        self.assertEqual(run("geomancy.py", "--scheme", "x").returncode, 2)
+        self.assertEqual(run("geomancy.py", "--house", "1").returncode, 2)
+
+    def test_dots_and_mothers(self):
+        dots = "13 7 8 9  10 10 10 10  3 3 3 3  4 5 6 6"
+        ms = G.mothers_from_dots([int(x) for x in dots.split()])
+        self.assertEqual([m["name"] for m in ms], ["Puer", "Populus", "Via", "Rubeus"])
+        d = json.loads(run("geomancy.py", "--dots", dots, "--json").stdout)
+        self.assertEqual(d["shield"]["M1"]["name"], "Puer")
+        d = json.loads(run("geomancy.py", "--mothers", "Puer,Populus,Via,Rubeus", "--json").stdout)
+        self.assertEqual(d["shield"]["M4"]["name"], "Rubeus")
+        self.assertEqual(d["source"], "manual mothers")
+
+    def test_text_render(self):
+        out = run("geomancy.py", "--seed", "7", "--plain", "--full").stdout
+        self.assertIn("Judge:", out); self.assertIn("speculative", out); self.assertIn("* *", out.replace("   ", " "))
+        self.assertIn("non-historical", out)
+        self.assertEqual(run("geomancy.py", "--figures").returncode, 0)
+
+    def test_oracle_delegation(self):
+        r = run("oracle.py", "--geomancy", "--seed", "192855", "--json")
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertEqual(json.loads(r.stdout), json.loads(run("geomancy.py", "--seed", "192855", "--json").stdout))
+        self.assertEqual(run("oracle.py", "--geomancy", "--seed", "bad").returncode, 2)
+
+
+if __name__ == "__main__":
+    unittest.main()

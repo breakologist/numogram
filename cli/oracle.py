@@ -636,6 +636,15 @@ except Exception:
 
 TAIXUAN_SCRIPT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "taixuan.py")
 
+# ─── GEOMANCY DELEGATION (modular, see geomancy.py) ───
+GEOMANCY_MODULE = None
+try:
+    import geomancy as GEOMANCY_MODULE
+except Exception:
+    GEOMANCY_MODULE = None
+
+GEOMANCY_SCRIPT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "geomancy.py")
+
 def _iching_opts(args):
     """[fix] pass iching.py's --method / --zone-method through. Defaults come from iching.py /
     taixuan.py: zones from LINE VALUES in both (fuxi / value); sequence numbers via
@@ -1098,6 +1107,12 @@ if __name__ == "__main__":
     if GATE_RULE not in ("dr", "mod") or PATH_MODE not in ("legacy", "hash"):
         print("--gate-rule must be dr|mod; --path legacy|hash")
         sys.exit(2)
+    if "--geomancy" in args:
+        # every other flag (--seed, --hardware, --json, --house, --scheme, --gate-rule …) passes through
+        gargs = [x for x in args if x != "--geomancy"]
+        if GEOMANCY_MODULE is not None:
+            sys.exit(GEOMANCY_MODULE.main(gargs))
+        sys.exit(subprocess.run([sys.executable, GEOMANCY_SCRIPT] + gargs).returncode)
     do_base36 = False
     do_planchette = False
     do_tty = False
@@ -1317,6 +1332,8 @@ if __name__ == "__main__":
         print("  python3 oracle.py --taixuan")
         print("  python3 taixuan.py --taixuan          (standalone Tai Xuan + 27-phase)")
         print("  python3 taixuan.py --phase            (Yuandong/Guanziming 27)")
+        print("  python3 oracle.py --geomancy [--seed N] [--house 10] [--json]  (geomantic shield + house chart)")
+        print("  python3 geomancy.py --figures | --census   (standalone; see CLI-README)")
         print("  python3 oracle.py --synx 'TEXT'  (Synx/Yxshh cipher)")
         print("  python3 oracle.py --traverse 192855")
         print("  python3 oracle.py --base36 --text 'TEXT'  (Djynxxogram traversal)")

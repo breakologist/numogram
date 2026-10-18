@@ -14,6 +14,7 @@ Now with Djynxxogram (base-36) traversal mode.
 - `--taixuan` — T'ai Hsuan two-tetragram oracle (delegates to taixuan.py)
 - `--taixuan --single` — single tetragram (best for 9 zan/appraisals)
 - `--taixuan --em-stats` — Em-profile for the cast
+- `--geomancy` — geomantic shield + house chart (delegates to geomancy.py; all its flags pass through, e.g. `--seed`, `--hardware`, `--json`, `--house`)
 - `--synx "TEXT"` — dual-cipher mode (AQ + Synx/Yxshh)
 - `--traverse N` — numogram zone path traversal
 - `--taixuan` also takes `--unicode`, `--full`, `--voice`, `--hardware`, `--zone-from value|number`, `--netspan`
@@ -111,6 +112,7 @@ New capabilities:
 | Rich output with voice                    | `oracle.py --seed N --voice`<br>`oracle.py --taixuan --full --voice` | Formant synthesis (not wired for `--iching`) |
 | Cross-base / Djynxxogram exploration      | `oracle.py --base36 --text "NUMOGRAM"`<br>`oracle.py --compare --text "YOUR NAME"` | 10/16/22/26/36 |
 | Pure physical entropy (no network)        | `hardware_entropy.py --bytes 8`<br>then `--seed <that-hex>` to oracle/iching/taixuan | 12 local sources + jitter |
+| Geomantic shield + house chart            | `geomancy.py --seed 192855 --house 10`<br>`oracle.py --geomancy --hardware --json`     | Judge, Via Puncti, perfection, company |
 | Full end-to-end ritual reading            | `oracle.py --taixuan --single --full --unicode --voice --hardware`                  | Everything in one go |
 
 ### Djynxxogram mode (v1.2.0):
@@ -130,6 +132,30 @@ These appear in readings, planchettes, JSON, and I Ching shadows.
 
 ### Companion tool:
 `../numogram-base-explorer.py` — multi-base numogram constructor supporting any base N (2-36). Computes syzygy/gate/current/region tables, decimal projection clusters, DOT graph output. Gates default to the base-N digital root (mod N−1; in base 10 this is the CCRU rule, e.g. Gt-36: 8 → 9); `--gate-rule mod` gives the last-digit rule (T mod N).
+
+## geomancy.py
+Western geomancy (16 figures, shield chart, 12 houses). Stdlib only; every public function returns plain dicts (`cast_geomancy()` is the one-call reading), so a FastAPI wrapper can come later.
+
+```bash
+python3 geomancy.py                                   # entropy cast (hardware-entropy path, else os.urandom)
+python3 geomancy.py --seed 192855 --house 10          # quesited house 10 (career); default 7
+python3 geomancy.py --seed 192855 --topic marriage    # topic word → house (marriage 7, job 10, money 2 …)
+python3 geomancy.py --dots "13 7 8 9 10 10 10 10 3 3 3 3 4 5 6 6"   # 16 hand-made rows: M1 fire…M4 earth, odd = •
+python3 geomancy.py --mothers Puer,Via,Albus,Carcer --plain        # names, or 4-bit strings like 1101
+python3 geomancy.py --seed 7 --json                   # full dict (shield, houses, validation, perfection …)
+python3 geomancy.py --figures --scheme agrippa        # reference table
+python3 geomancy.py --census --zone-map points        # exact census of all 65,536 charts (≈3 s)
+python3 oracle.py --geomancy --seed 7 --full          # same tool through oracle.py (all flags pass through)
+```
+
+- Figures: 4 lines Fire/Air/Water/Earth, 1 = single point. `value` is Fire-high (Populus 0, Albus 2, Puer 13, Cauda 14, Via 15).
+- Shield: Daughters by transposition, Nieces, Witnesses, Judge, Sentence (Judge + 1st Mother); the GD Reconciler (Judge + quesited figure) is also given. Checks: Judge even, repetition, both sets of inseparables, and every derivation (catches hand-calculation slips).
+- Via Puncti on the Fire line (a double-point Judge is reported as "branching"/"none", not as a traditional path).
+- Houses: `--houses sequential` (M1–N4 → 1–12; Greer, Digital Ambler, default) or `astrological` (GD paper: 1st figure → 10th house, 2nd → 1st …).
+- Perfection: occupation, conjunction, mutation, translation, else denial (`--querent N`, `--abano` drops 12–1 adjacency). Company of the significator houses: simple / demi-simple / compound / capitular. GD Part of Fortune; the GD "Rubeus or Cauda in the 1st" impediment is flagged.
+- `--scheme golden-dawn|agrippa|gerard`: sign + attributed element. The structural element (Digital Ambler) is always shown. Per-figure notes are paraphrased from Digital Ambler's "De Geomanteia" posts, URL per figure.
+- Numogram hooks (labelled speculative): `--zone-map dr|dr-line|points` figure → decimal zone; base-16 view where syzygy = inversion (15 − n) and the gate follows `--gate-rule dr|mod`; I Ching hexagrams sharing the figure as lines 2–5 (non-historical).
+- Bad `--seed`, `--dots`, `--mothers` or option values exit with status 2. Sources and the error list for earlier drafts: `geomancy-notes.md`.
 
 ## aq_calculator_canonical.py
 Verified canonical AQ calculator. Tests: AQ=36, CODE=63, HYPERSTITION=286, NUMOGRAM=174, CCRU=81.
