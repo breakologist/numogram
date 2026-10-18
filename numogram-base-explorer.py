@@ -6,7 +6,8 @@ Builds numograms in any base N (2-100), computes:
   - Zone tables with colors, quasiphonic particles, demon counts
   - Syzygy pairs (summing to N-1)
   - Currents (difference of syzygy partners)
-  - Gates (triangular cumulation, reduced mod N)
+  - Gates (triangular cumulation; default: digital root in base N, i.e. mod N-1;
+    --gate-rule mod gives the last-digit rule, T mod N)
   - Region classification (self-folding vs transitive syzygies)
   - Digital root projection from any base → decimal numogram
   - DOT graph output for visualization
@@ -14,6 +15,7 @@ Builds numograms in any base N (2-100), computes:
 Usage:
   python3 numogram-base-explorer.py --base 36
   python3 numogram-base-explorer.py --base 36 --dot
+  python3 numogram-base-explorer.py --base 36 --gate-rule mod   (last-digit gates)
   python3 numogram-base-explorer.py --compare 10,36,28
   python3 numogram-base-explorer.py --all-known  (bases 0-10,16,22,26,36)
 """
@@ -168,9 +170,12 @@ def zone_color(z: int, base: int) -> Tuple[int, int, int]:
 class NumogramBase:
     """A numogram constructed in a given base."""
 
-    def __init__(self, base: int, phoneme_method: str = "combinatorial"):
+    def __init__(self, base: int, phoneme_method: str = "combinatorial", gate_rule: str = "dr"):
         if base < 2:
             raise ValueError(f"Base must be >= 2, got {base}")
+        if gate_rule not in ("dr", "mod"):
+            raise ValueError(f"gate_rule must be dr|mod, got {gate_rule}")
+        self.gate_rule = gate_rule
         self.base = base
         self.N = base
         self.N1 = base - 1  # N-1 (syzygy sum)
@@ -239,7 +244,10 @@ class NumogramBase:
             # Gate target: triangular number reduced to zone range
             # For base-10: digital root (mod 9, with 9→9, 0→0)
             # For general base: reduce triangular number to range [0, base-1]
-            target = tri % self.base
+            if self.gate_rule == "mod":
+                target = tri % self.base  # last digit in base N (old behaviour, opt-in)
+            else:
+                target = 0 if tri == 0 else 1 + (tri - 1) % (self.base - 1)  # digital root in base N (default)
             gates[z] = {
                 'zone': z,
                 'zone_char': zone_char(z, self.base),
@@ -591,6 +599,9 @@ def main():
     parser.add_argument("--phoneme", choices=["combinatorial", "letter"], default="combinatorial",
                        help="Phoneme generation method for extended zones")
     parser.add_argument("--json", action="store_true", help="Output as JSON")
+    parser.add_argument("--gate-rule", choices=["dr", "mod"], default="dr",
+                        help="Gate target: dr = digital root in base N, mod N-1 (default; CCRU rule in base 10); "
+                             "mod = last digit, T mod N")
     args = parser.parse_args()
     
     if args.all_known:
@@ -604,13 +615,14 @@ def main():
         print(compare_bases(bases, args.phoneme))
         return
     
-    ng = NumogramBase(args.base, args.phoneme)
+    ng = NumogramBase(args.base, args.phoneme, args.gate_rule)
     
     if args.dot:
         print(ng.dot_output())
     elif args.json:
         print(json.dumps({
             "base": args.base,
+            "gate_rule": args.gate_rule,
             "zones": len(ng.zones),
             "syzygies": ng.syzygies,
             "currents": ng.currents,
