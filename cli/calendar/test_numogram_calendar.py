@@ -413,6 +413,15 @@ class TaiXuan(unittest.TestCase):
         self.assertEqual(nc.tetragram_lines(81), "3333")
         self.assertEqual(nc.tetragram_name(81), "Fostering")
 
+    def test_both_zones_tetragram_67(self):
+        z = nc.tetragram_zones(67)                   # i = 66 = lines 0,1,1,2 bottom→top
+        self.assertEqual((z["line_value"], z["zone_lines"], z["zone_number"]), (66, 3, 4))
+        self.assertEqual(nc.fmt_zones(z), "zone 3 by lines · zone 4 by number")
+        self.assertEqual(nc.tetragram_zones(1)["zone_lines"], 0)       # Centre: only 0 by lines
+        self.assertEqual(nc.tetragram_zones(10)["zone_lines"], 9)      # i = 9 → 9, not 0
+        r = nc.taixuan_overlay(nc.build_context("2026-10-17"))
+        self.assertEqual((r["head"], r["zone_lines"], r["zone_number"], r["zone"]), (67, 3, 4, 4))
+
 
 class GuaQi(unittest.TestCase):
     def test_sequence(self):
@@ -431,6 +440,27 @@ class GuaQi(unittest.TestCase):
         self.assertEqual(nc.guaqi_overlay(ctx)["hexagram"], "復")
         ctx = nc.build_context("2025-12-21", "12:00", "UTC")       # before the instant
         self.assertEqual(nc.guaqi_overlay(ctx)["hexagram"], "頤")
+
+    def test_both_zones_hexagram_36(self):
+        self.assertEqual(sorted(nc.KW_BY_VALUE), list(range(1, 65)))
+        z = nc.hexagram_zones(36)                    # 明夷: lines 1 and 3 yang → v = 5
+        self.assertEqual((z["line_value"], z["zone_lines"], z["zone_number"]), (5, 5, 9))
+        self.assertEqual(nc.fmt_zones(z), "zone 5 by lines · zone 9 by number")
+        self.assertEqual(nc.hexagram_zones(2)["zone_lines"], 0)        # Kun
+        self.assertEqual(nc.fmt_zones({"zone_lines": 5, "zone_number": 5}), "zone 5 (lines and number)")
+        r = nc.guaqi_overlay(nc.build_context("2026-10-17"))
+        self.assertEqual((r["king_wen"], r["zone_lines"], r["zone_number"], r["zone"]), (36, 5, 9, 9))
+
+    def test_daily_shows_both_zones(self):
+        r = nc.run(nc.build_context("2026-10-17"), [n for n, o in nc.OVERLAYS.items() if o["enabled"]])
+        txt = nc.format_daily(r)
+        self.assertIn("Tai Xuan 𝍈 67 Darkening · 次七 · zone 3 by lines · zone 4 by number", txt)
+        self.assertIn("zone 5 by lines · zone 9 by number", txt)
+        asc = nc.format_daily(r, "ascii")
+        self.assertIn("zone 3 by lines | zone 4 by number", asc)
+        self.assertIn("zone 5 by lines | zone 9 by number", asc)
+        p = nc.run(nc.build_context("2026-10-18"), [n for n, o in nc.OVERLAYS.items() if o["enabled"]])
+        self.assertIn("tetragram zone 3 by lines, zone 4 by number", p["research_prompt"]["text"])
 
 
 class Registry(unittest.TestCase):

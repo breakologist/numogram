@@ -47,8 +47,8 @@ Every output field carries one of four tags:
 | Overlay | Sourced | Approximation or convention |
 |---|---|---|
 | **Nma** | 729-day "double-year" written as 6 base-3 digits; 3 intercalary days every second cycle (4 years) ([CCRU, Decimal Numogram](http://ccru.net/declab.htm); [CCRU glossary, "Zygotriadic Calendar"](http://www.ccru.net/id%28entity%29/glossary.htm)) | **CCRU gives no epoch.** Default 1970-01-01 follows the only published implementation I found, the [xeno.cx zygotriadic calendar](https://xeno.cx/posts/zygofaq), which is a modern reconstruction, not CCRU. Alternatives: `krakatau` 1883-08-27 and `ktime` 1900-01-01 (both [spec]), or any date. The 3 intercalary days are placed at the end of each 1461-day supercycle [conv]; xeno.cx spreads its leap days differently, so the indices won't match theirs. Zone = digital root of the index, and the (head, appraisal) address = upper 4 / lower 2 digits [spec]. |
-| **Tai Xuan** | 81 heads × 9 appraisals; two appraisals per day (one day, one night) = 364½ days; Head 1 中, appraisal 初一, starts at the winter solstice; 踦 Ji and 嬴 Ying make up the remaining ¾ day, ½ + ¼ (永樂大典 太玄敘錄, [shidianguji](https://www.shidianguji.com/book/YLDD00001/chapter/1lmfjnpcpo9pm); 東園叢說 論太玄踦贏二贊). Head names: Unicode Tai Xuan Jing Symbols block. | **Approximations:** the year starts on the local civil date of the astronomical solstice in `--tz`, whereas Han practice used mean reckoning and Chinese time. Ji = night of day 364; Ying = whatever civil day remains before the next solstice day, so it appears only in some years. **Conventions:** day/night split at 06:00/18:00 local; zone = digital root of the head number [spec]. |
-| **Gua qi** | Meng Xi's 六日七分 scheme: 60 hexagrams × 6 7/80 days from 中孚 at the winter solstice to 頤; the order (易緯稽覽圖; [iqing.net](http://www.iqing.net/zltt/822.html)); ranks 公辟侯大夫卿; 坎震離兌 one line per solar term (24 qi) ([chinakongzi 卦气](https://www.chinakongzi.org/baike/MINGCI/zhexue/201708/t20170825_142768.htm)) | **Approximations:** uses the true solstice instant, and solar terms by true longitude (定氣) rather than Han mean terms (平氣). Jing Fang's variant (cardinal hexagrams get 73/80 day) is not implemented. **Convention:** zone = 1+(KW−1) mod 9. |
+| **Tai Xuan** | 81 heads × 9 appraisals; two appraisals per day (one day, one night) = 364½ days; Head 1 中, appraisal 初一, starts at the winter solstice; 踦 Ji and 嬴 Ying make up the remaining ¾ day, ½ + ¼ (永樂大典 太玄敘錄, [shidianguji](https://www.shidianguji.com/book/YLDD00001/chapter/1lmfjnpcpo9pm); 東園叢說 論太玄踦贏二贊). Head names: Unicode Tai Xuan Jing Symbols block. | **Approximations:** the year starts on the local civil date of the astronomical solstice in `--tz`, whereas Han practice used mean reckoning and Chinese time. Ji = night of day 364; Ying = whatever civil day remains before the next solstice day, so it appears only in some years. **Conventions:** day/night split at 06:00/18:00 local; two zones, shown line-value first: **by lines** = digital root of the 0-based index *i* = head − 1 (the base-3 line value, lines bottom→top weighted 1, 3, 9, 27; 0 only for 中 Centre) and **by number** = digital root of the head; e.g. 67 Darkening → zone 3 by lines · zone 4 by number [spec]. See *Two zones* below. |
+| **Gua qi** | Meng Xi's 六日七分 scheme: 60 hexagrams × 6 7/80 days from 中孚 at the winter solstice to 頤; the order (易緯稽覽圖; [iqing.net](http://www.iqing.net/zltt/822.html)); ranks 公辟侯大夫卿; 坎震離兌 one line per solar term (24 qi) ([chinakongzi 卦气](https://www.chinakongzi.org/baike/MINGCI/zhexue/201708/t20170825_142768.htm)) | **Approximations:** uses the true solstice instant, and solar terms by true longitude (定氣) rather than Han mean terms (平氣). Jing Fang's variant (cardinal hexagrams get 73/80 day) is not implemented. **Convention:** two zones, shown line-value first: **by lines** = digital root of the binary line value *v* (line *k* weighted 2^(k−1), line 1 at the bottom; 0 only for 坤 Kun) and **by number** = 1+(KW−1) mod 9; e.g. KW 36 明夷 (v = 5) → zone 5 by lines · zone 9 by number [conv]. |
 | **Decan** | 36 × 10° signs; Chaldean rulers starting with Mars at Aries I; Golden Dawn *Book T* minor arcana 2–10 by element ([Book T](https://hermeticcloud.com/library/book-t/); [Wikipedia: Decan](https://en.wikipedia.org/wiki/Decan)) | **Approximations:** solar longitude uses Meeus, *Astronomical Algorithms* ch. 25 low-accuracy formula (tests: within 0.01° at 6 JPL equinox/solstice instants; Example 25.a matches to 0.0001°). ΔT uses the Espenak–Meeus polynomial for 2005–2050, otherwise 69 s. **Speculative hooks:** zone = digital root of the decan number; Book T rank −1 = Decadence rank; 36 = T(8) = Gt-36. |
 | **'Pataphysical** | Era from 8 Sep 1873 vulg. = 1 Absolu 1. Twelve months of 28 days plus Gidouille of 29; 29 Gueules exists only in leap years; the 29ths are outside the week ("hunyadi", "hunyadi gras"); 1/8/15/22 are Sundays and every 13th a Friday. Month names and start dates as in the sources ([Wikipedia: Pataphysics](https://en.wikipedia.org/wiki/Pataphysics#Pataphysical_calendar); [fr.wikipedia: Calendrier pataphysique](https://fr.wikipedia.org/wiki/Calendrier_pataphysique)). | **Saint/feast list:** now in `--pata-saints` (see below). **Convention:** dates before the era give year ≤ 0. |
 
@@ -66,8 +66,8 @@ Every output field carries one of four tags:
 ☉♎ Libra III 24° · ♃ Jupiter · 🜁 Air · 🂤 4 of Swords · zone 3
   🃫 XI Justice ♎ (trad. VIII) · 🃪 X Wheel of Fortune ♃ · 🂾 Prince of Cups 20°♎–20°♏
 Nma A-290 101201 · zone 1 · 𝌦 Closeness /2
-Tai Xuan 𝍈 67 Darkening · 次七 · zone 4
-Gua qi ䷣ 明夷 Darkening of the Light (KW 36) · 寒露 · ☱ 兌 2
+Tai Xuan 𝍈 67 Darkening · 次七 · zone 3 by lines · zone 4 by number
+Gua qi ䷣ 明夷 Darkening of the Light (KW 36) · 寒露 · ☱ 兌 2 · zone 5 by lines · zone 9 by number
 ✠ St Ignatius of Antioch (memorial)
 ⛤ 'Pata: jeudi 12 Haha 154 E.P. · St Cosinus, savant
 ⁂ Prompt: Trace a thread from XI Justice (Libra) to the hexagram 'Darkening of the Light': does anything in the life or cult of St Ignatius of Antioch sit on that thread?
@@ -80,13 +80,15 @@ For 1 March 2026 (St David's Day falls on the 2nd Sunday of Lent, so in Wales th
 ☉♓ Pisces II 11° · ♃ Jupiter · 🜄 Water · 🂹 9 of Cups · zone 8
   🃲 XVIII The Moon ♓ · 🃪 X Wheel of Fortune ♃ · 🂼 Knight of Cups 20°♒–20°♓
 Nma A-60 002012 · zone 5 · 𝌌 Ascent /6
-Tai Xuan 𝌕 16 Contact · 次六 · zone 7
-Gua qi ䷊ 泰 Peace (KW 11) · 雨水 · ☵ 坎 5
+Tai Xuan 𝌕 16 Contact · 次六 · zone 6 by lines · zone 7 by number
+Gua qi ䷊ 泰 Peace (KW 11) · 雨水 · ☵ 坎 5 · zone 7 by lines · zone 2 by number
 ✠ 2nd Sunday of Lent · St David (Dewi Sant) (solemnity; → Mon 2 Mar) [W]; St David (feast; impeded: Sunday) [E]
 ⛤ 'Pata: samedi 7 Pédale 153 E.P. · St Gavroche, forain
 ☘ Folk: Saint David's Day (Dydd Gŵyl Dewi Sant)
 ⁂ Prompt: Trace a thread from XVIII The Moon (Pisces) to the hexagram 'Peace': does anything in the life or cult of St David (Dewi Sant) sit on that thread?
 ```
+
+**Two zones.** Tai Xuan and gua qi lines show both zones, line-value zone first: `zone 3 by lines · zone 4 by number` (`|` instead of `·` in `--ascii`), or `zone 5 (lines and number)` when they agree. The conventions match `cli/taixuan.py` `taixuan_zone(i, "value"|"number")` and `cli/iching.py` `fuxi_zone(v)` / digital root of the King Wen number. JSON has `zone_lines`, `zone_number` and `line_value`; the older `zone` key is kept and equals `zone_number`.
 
 Line by line: header (∴); ☉ with sign, decan, degree, ruler, element and the Book T minor card; the sign's trump, the ruler's trump and the court card (with its 20°–20° span); Nma; Tai Xuan; gua qi with the cardinal trigram; ✠ the Catholic day (Sunday name if any, national entries tagged `[W]` Wales / `[E]` England, then GRC); ⛤ 'Pataphysical; ☘ folk (only on days that have one); ⁂ the research prompt.
 

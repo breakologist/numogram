@@ -57,8 +57,34 @@ def digital_root(n: int) -> int:
 
 
 def kw_zone(kw: int) -> int:
-    """Canonical King Wen zone (wiki Method A): 1 + (KW−1) mod 9."""
+    """Number zone of a hexagram (wiki Method A): 1 + (KW−1) mod 9 = digital_root(KW)."""
     return 1 + (kw - 1) % 9
+
+
+# King Wen number by line value v = Σ yang_k·2^(k−1), line 1 (bottom) = bit 0
+# (same table as cli/iching.py KW_BY_VALUE; e.g. v=1 → 24 Fu, v=5 → 36).
+KW_BY_VALUE = [2, 24, 7, 19, 15, 36, 46, 11, 16, 51, 40, 54, 62, 55, 32, 34, 8, 3, 29, 60, 39, 63,
+               48, 5, 45, 17, 47, 58, 31, 49, 28, 43, 23, 27, 4, 41, 52, 22, 18, 26, 35, 21, 64, 38,
+               56, 30, 50, 14, 20, 42, 59, 61, 53, 37, 57, 9, 12, 25, 6, 10, 33, 13, 44, 1]
+
+
+def hexagram_zones(kw: int) -> dict:
+    """Both hexagram zones: by lines = iching.py fuxi_zone(v) (0 only for Kun), by number = DR(KW)."""
+    v = KW_BY_VALUE.index(kw)
+    return {"line_value": v, "zone_lines": digital_root(v), "zone_number": kw_zone(kw)}
+
+
+def tetragram_zones(head: int) -> dict:
+    """Both tetragram zones: by lines = taixuan.py taixuan_zone(i, "value") with i = head−1
+    (base-3 line value, 0 only for Centre); by number = DR(head)."""
+    return {"line_value": head - 1, "zone_lines": digital_root(head - 1),
+            "zone_number": digital_root(head)}
+
+
+def fmt_zones(x: dict) -> str:
+    """'zone 3 by lines · zone 4 by number', or 'zone 5 (lines and number)' if equal."""
+    a, b = x["zone_lines"], x["zone_number"]
+    return f"zone {a} (lines and number)" if a == b else f"zone {a} by lines · zone {b} by number"
 
 
 def to_trits(n: int, width: int = 6) -> str:
@@ -310,8 +336,9 @@ def taixuan_overlay(ctx):
         out.update({"head": h, "glyph": chr(0x1D306 + h - 1), "name": tetragram_name(h),
                     "lines": tetragram_lines(h), "appraisal": a,
                     "appraisal_name": APPRAISAL_NAMES[a - 1],
-                    "zone": digital_root(h),
-                    "zone_note": "zone = digital root of head number [spec]"})
+                    **tetragram_zones(h), "zone": digital_root(h),
+                    "zone_note": "zone_lines = DR of base-3 line value (head−1); zone_number = "
+                                 "DR of head; 'zone' = zone_number (legacy) [spec]"})
     else:
         out["extra"] = pos["extra"]
         out["note"] = ("Ji = night of day 364 (½ day); Ying = any civil remainder before the "
@@ -360,7 +387,9 @@ def guaqi_overlay(ctx):
         "scheme": "Meng Xi 六日七分 (60 hexagrams × 6 7/80 d from the winter solstice) [src]",
         "position": i + 1, "hexagram": name, "king_wen": kw, "glyph": chr(0x4DC0 + kw - 1),
         "rank": RANKS[i % 5], "day_in_hexagram": round(elapsed - i * GUAQI_DAYS, 2),
-        "zone": kw_zone(kw), "zone_note": "canonical 1+(KW−1)%9 [conv]",
+        **hexagram_zones(kw), "zone": kw_zone(kw),
+        "zone_note": "zone_lines = DR of binary line value (line 1 = 1); zone_number = "
+                     "1+(KW−1)%9; 'zone' = zone_number (legacy) [conv]",
         "hexagram_en": hexagram_en(kw),
         "solar_term": SOLAR_TERMS[q], "solar_term_en": SOLAR_TERMS_EN[q], "cardinal": cname, "cardinal_king_wen": ckw,
         "cardinal_line": q % 6 + 1,
@@ -827,7 +856,7 @@ PROMPT_TEMPLATES = [
     "Trace a thread from {sign_trump} ({sign}) to the hexagram '{hexagram}': does anything "
     "in the life or cult of {saint} sit on that thread?",
     "Set the {minor} beside tetragram {head} '{tetragram}': where do {card_rank} and {head} "
-    "meet on the numogram (zones {decan_zone} and {tx_zone})?",
+    "meet on the numogram (decan zone {decan_zone}; tetragram {tx_zones})?",
     "What links the {court}, '{hexagram}' and {saint}? Look for a source before trusting "
     "the link.",
     "Read {ruler_trump} against '{tetragram}' and the day's solar term {solar_term}: one "
@@ -856,7 +885,7 @@ def research_prompt(r) -> dict:
     slots = {
         "ruler": d["ruler"], "ruler_trump": f"{rt['roman']} {rt['title']}",
         "sign": d["sign"], "sign_trump": f"{st['roman']} {st['title']}",
-        "tetragram": t["name"], "head": t["head"], "tx_zone": t["zone"],
+        "tetragram": t["name"], "head": t["head"], "tx_zone": t["zone"], "tx_zones": fmt_zones(t).replace(" · ", ", "),
         "hexagram": g.get("hexagram_en", g["hexagram"]), "solar_term": g.get("solar_term_en", g["solar_term"]),
         "minor": d["card"], "card_rank": d["card_rank"], "decan_zone": d["zone"],
         "court": d["court"]["card"], "saint": saint or "the day's saint",
@@ -982,7 +1011,7 @@ def format_text(r, style="glyph") -> str:
             app = t["appraisal_name"] if S.cjk else f"appraisal {t['appraisal']}"
             half = t["half"] if S.cjk else t["half"].split()[1]
             L.append(f"  Head {S.g(t['glyph'])}{t['head']} {t['name']} (lines {t['lines']}) · "
-                     f"{app} · {half} · zone {t['zone']} [spec]")
+                     f"{app} · {half} · {fmt_zones(t)} [spec]")
         else:
             L.append(f"  {t['extra']} — {t['note']}")
         L.append(f"  day {t['day_since_solstice']} since solstice [approx]")
@@ -992,7 +1021,7 @@ def format_text(r, style="glyph") -> str:
         hz = f"{g['hexagram']} " if S.cjk else ""
         L.append(f"  {S.g(g['glyph'])}{hz}{g['hexagram_en']} (KW {g['king_wen']}) #{g['position']}/60 · "
                  f"{g['rank'] if S.cjk else g['rank'].split()[1]} · day {g['day_in_hexagram']} of 6.09 · "
-                 f"zone {g['zone']}")
+                 f"{fmt_zones(g)}")
         st = f"{g['solar_term']} {g['solar_term_en']}" if S.cjk else g["solar_term_en"]
         card = g["cardinal"] if S.cjk else CARDINAL_PINYIN[g["cardinal"]]
         L.append(f"  Solar term {st} → {S.g(CARDINAL_GLYPH[g['cardinal']])}{card} line "
@@ -1069,7 +1098,7 @@ def format_daily(r, style="glyph") -> str:
         x = r["taixuan"]
         if "head" in x:
             app = x["appraisal_name"] if S.cjk else f"/{x['appraisal']}"
-            L.append(f"Tai Xuan {S.g(x['glyph'])}{x['head']} {x['name']} · {app} · zone {x['zone']}")
+            L.append(f"Tai Xuan {S.g(x['glyph'])}{x['head']} {x['name']} · {app} · {fmt_zones(x)}")
         else:
             L.append(f"Tai Xuan {x['extra']}")
     if "guaqi" in r:
@@ -1078,7 +1107,8 @@ def format_daily(r, style="glyph") -> str:
         term = x["solar_term"] if S.cjk else x["solar_term_en"]
         card = x["cardinal"] if S.cjk else CARDINAL_PINYIN[x["cardinal"]]
         L.append(f"Gua qi {S.g(x['glyph'])}{hz}{x['hexagram_en']} (KW {x['king_wen']}) · {term} · "
-                 f"{S.g(CARDINAL_GLYPH[x['cardinal']])}{card} {x['cardinal_line']}")
+                 f"{S.g(CARDINAL_GLYPH[x['cardinal']])}{card} {x['cardinal_line']} · "
+                 f"{fmt_zones(x)}")
     if "saints" in r:
         sa = r["saints"]
         parts = [fmt_national(n, S, short=True) for n in sa.get("national", [])]
