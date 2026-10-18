@@ -25,9 +25,10 @@ python3 oracle.py --geomancy --seed 7 --full          # same tool through oracle
 ## Options
 | flag | values (default first) | sources |
 |---|---|---|
-| `--scheme` | golden-dawn, greer, agrippa, gerard | GD paper; Greer 2009 pp.36-37 (Caput Virgo, Cauda Sagittarius); Agrippa's preferred element list; Gerard p.1 |
+| `--scheme` | golden-dawn, greer, farrell, agrippa, gerard | GD paper; Greer 2009 pp.36-37 (Caput Virgo, Cauda Sagittarius); Farrell 2009 p.49 (Caput Capricorn, Cauda Scorpio); Agrippa's preferred element list; Gerard p.1 |
 | `--houses` | sequential, astrological, angular, agrippa | Greer / DA; GD paper; Skinner App. III; Agrippa's "true figure" (cadents recomputed) |
-| `--halt-rule` | gd, skinner, skinner-strict, greer, greer-stranger, digital-ambler, agrippa, gerard, none | see below |
+| `--halt-rule` | gd, skinner, skinner-strict, greer, greer-stranger, farrell, farrell-m4, digital-ambler, agrippa, gerard, none | see below |
+| `--planet` | saturn … moon | Farrell pp.8-12: the planet of the question and the archangel, intelligence and spirit he invokes |
 | `--pof-rule` | gd, greer, index, agrippa | GD paper; Greer 2009 p.128 (points, or single points = Index); Agrippa (all dots, needs `--dots`) |
 | `--aspects` | off | Greer's sextile/trine as a fifth mode of perfection; square/opposition listed as unfavourable |
 
@@ -35,11 +36,13 @@ python3 oracle.py --geomancy --seed 7 --full          # same tool through oracle
 `halting` reports the rule used, what fired, why, and the source; `halting_all_rules` gives the verdict under every variant.
 - gd: Rubeus or Cauda Draconis in house 1, destroy the chart. skinner: the same, plus wait hours or a day before re-asking. skinner-strict also counts Carcer, from his figure chapter.
 - greer: no halt. The same figures are read as warnings about the querent (hidden motives, withholding information, a different real question, a fake question, a mind already made up, will not take advice). greer-stranger halts on any of those warnings, as he advises when reading for strangers.
+- farrell: Carcer or Cauda in house 1 (Farrell pp.41, 45). Rubeus is not a halt for him. farrell-m4 takes his gloss of house 1 as the fourth Mother literally and checks the Fourth Mother.
 - digital-ambler, agrippa, gerard, none: no halt. Gerard's only conditions are about the weather, the diviner's state of mind and the questioner.
-- Census of all 65,536 charts, sequential houses: gd and skinner each halt 8,192 charts (12.5%); skinner-strict 12,288 (18.75%); greer-stranger 28,312 (43.2%; 17,171 of them from the 7th-house test).
+- Census of all 65,536 charts, sequential houses: gd and skinner each halt 8,192 charts (12.5%); skinner-strict 12,288 (18.75%); farrell and farrell-m4 8,192 each; greer-stranger 28,312 (43.2%; 17,171 of them from the 7th-house test).
 
 ## Interpretation
 - Perfection: occupation, conjunction (Greer's effort note: the querent's figure moving means they must work for it), mutation, translation, optional aspects; else denial. `--querent N`; `--abano` drops 12–1 adjacency. Company: simple / demi-simple (planet sets include the nodes' two planets each) / compound / capitular.
+- Always reported: `witness_verdict`, Farrell's yes/no rules from the Judge and Witnesses (p.21; Right Witness = querent, Left = situation), and `sign_wheel`, the house-1 figure's sign as Ascendant with the other signs following in order (p.49).
 - `remediation`: a "what to do" line for the querent's house, the quesited house and the Judge, plus advice when the chart is halted. **Interpretive**: our own wording, figure-led and house by house after Cummins's approach. It is not traditional text.
 - Numogram hooks (labelled speculative): `--zone-map dr|dr-line|points`, base-16 view (`--gate-rule dr|mod`), I Ching hexagrams sharing lines 2–5.
 - Bad option values exit with status 2. Sources, page references and the discrepancy log are in `geomancy-notes.md` and `geomancy-notes-2.md` (local).

@@ -363,3 +363,59 @@ class RoundTwo(unittest.TestCase):
         self.assertEqual(run("geomancy.py", "--halt-rule", "bogus").returncode, 2)
         j = json.loads(run("geomancy.py", "--seed", "4", "--json", "--houses", "agrippa").stdout)
         self.assertEqual(j["options"]["houses"], "agrippa")
+
+
+class Farrell(unittest.TestCase):
+    """Farrell, Notes on Geomancy (2009): halting variants, witness verdict, sign wheel, planet names."""
+
+    def test_halting_farrell(self):
+        C = chart("Carcer", *ALL12[1:])
+        R = chart("Rubeus", *ALL12[1:])
+        self.assertTrue(G.halting(C, "farrell")["halted"])
+        self.assertFalse(G.halting(R, "farrell")["halted"])          # Rubeus is not a halt for him
+        sh = G.shield_from_mothers(["Puer", "Via", "Albus", "Cauda Draconis"])
+        H = G.house_chart(sh)
+        h = G.halting(H, "farrell-m4", shield=sh)
+        self.assertTrue(h["halted"])
+        self.assertIn("Fourth Mother", h["fired"][0])
+        self.assertFalse(G.halting(H, "farrell", shield=sh)["halted"])
+        with self.assertRaises(ValueError):
+            G.halting(H, "farrell-m4")
+        self.assertNotIn("farrell-m4", G.all_halting(H))
+        self.assertIn("farrell-m4", G.all_halting(H, shield=sh))
+
+    def test_census_farrell(self):
+        c = G.census()["halted_by_rule"]
+        self.assertEqual(c["farrell"], 8192)
+        self.assertEqual(c["farrell-m4"], 8192)
+
+    def test_witness_verdict(self):
+        self.assertEqual(G.witness_verdict("Fortuna Major", "Acquisitio", "Laetitia")["verdict"], "yes")
+        self.assertEqual(G.witness_verdict("Carcer", "Rubeus", "Amissio")["verdict"], "no")
+        self.assertEqual(G.witness_verdict("Carcer", "Puella", "Fortuna Minor")["rule"], 3)
+        self.assertEqual(G.witness_verdict("Puella", "Carcer", "Populus")["rule"], 4)
+        self.assertEqual(G.witness_verdict("Carcer", "Puella", "Populus")["rule"], 5)
+        self.assertIsNone(G.witness_verdict("Via", "Populus", "Populus")["rule"])
+        self.assertEqual(set(G.FARRELL_POLARITY), {f["name"] for f in G.FIGURES})
+
+    def test_sign_wheel_and_scheme(self):
+        H = chart("Fortuna Major", *ALL12[1:])
+        w = G.sign_wheel(H)
+        self.assertEqual((w["ascendant"], w["houses"][2], w["houses"][3]), ("Leo", "Virgo", "Libra"))  # p.49 example
+        self.assertEqual(G.sign_wheel(chart("Populus", *ALL12[1:]))["houses"][2], "Leo")
+        self.assertEqual(G.sign_wheel(chart("Caput Draconis", *ALL12[1:]), "golden-dawn")["ascendant"], "Capricorn")
+        self.assertEqual(G.attributions("Cauda Draconis", "farrell")["sign"], "Scorpio")
+        self.assertEqual(G.attributions("Rubeus", "farrell")["element"], "water")   # GD elements kept
+
+    def test_question_planet(self):
+        d = G.cast_geomancy(seed=3, planet="Jupiter")
+        q = d["question_planet"]
+        self.assertEqual((q["archangel"], q["intelligence"], q["spirit"]), ("Sachiel", "Iophiel", "Hismael"))
+        self.assertTrue(all(n in ("Acquisitio", "Laetitia", "Caput Draconis") for n in q["figures_in_houses"].values()))
+        self.assertIsNone(G.cast_geomancy(seed=3)["question_planet"])
+        with self.assertRaises(ValueError):
+            G.cast_geomancy(seed=3, planet="pluto")
+        r = run("geomancy.py", "--seed", "3", "--planet", "moon", "--scheme", "farrell", "--halt-rule", "farrell-m4")
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertIn("Shelachel", r.stdout)
+        self.assertIn("Witness verdict", r.stdout)

@@ -17,12 +17,13 @@ Usage:
   python3 geomancy.py --census [--zone-map dr|dr-line|points]
   python3 geomancy.py --seed 7 --svg shield.svg   # shield drawn like the user's blank template
 Options:
-  --scheme golden-dawn|greer|agrippa|gerard   zodiac + attributed element (default golden-dawn)
+  --scheme golden-dawn|greer|farrell|agrippa|gerard   zodiac + attributed element (default golden-dawn)
   --houses sequential|astrological|angular|agrippa   shield → house placement (default sequential)
-  --halt-rule gd|skinner|skinner-strict|greer|greer-stranger|digital-ambler|agrippa|gerard|none
+  --halt-rule gd|skinner|skinner-strict|greer|greer-stranger|farrell|farrell-m4|digital-ambler|agrippa|gerard|none
                                         "not to be judged" rule (default gd); all are reported in --json
   --pof-rule gd|greer|index|agrippa     Part of Fortune / Index rule (default gd; agrippa needs --dots)
   --aspects                             Greer's favourable aspects count as perfection; lists bad ones
+  --planet saturn|jupiter|mars|sun|venus|mercury|moon   planet of the question (Farrell): names to invoke
   --gate-rule dr|mod                    base-16 gate: digital root mod 15 (default) | T mod 16
   --zone-map dr|dr-line|points          SPECULATIVE figure → decimal zone map (default dr)
   --abano                               houses 12 and 1 are not adjacent (Peter of Abano)
@@ -38,7 +39,8 @@ Conventions
   Greer and Skinner call J + first-house figure the Reconciler (same as the Sentence with sequential
   houses); the Golden Dawn "Reconciler" is Judge + the figure in the quesited house (GD paper).
 - Halting: the GD paper and Skinner destroy a chart with Rubeus or Cauda Draconis in house 1; Greer
-  reads the same figures as warnings about the querent instead. See HALT_RULES.
+  reads the same figures as warnings about the querent instead; Farrell halts on Carcer or Cauda.
+  See HALT_RULES. Farrell's witness yes/no rules and zodiac sign wheel are always reported.
 - "What to do" (remediation) text is our own interpretive wording, marked as such in the output.
 - Perfection (Moderately Quick Silver 2023; Digital Ambler 2014): occupation, conjunction,
   mutation, translation; otherwise denial. Company of houses: pairs 1-2, 3-4, … 11-12; simple,
@@ -76,6 +78,7 @@ BOOKS = {
     "agrippa1655": "pseudo-Agrippa, Of Geomancy (Fourth Book, tr. Turner 1655; Peterson ed.)",
     "gerard1655": "Gerard of Cremona, Of Astronomical Geomancy (tr. Turner 1655; Peterson ed.)",
     "gd": "Golden Dawn, Geomancy (knowledge-lecture text)",
+    "farrell2009": "N. Farrell, Notes on Geomancy (Rome, 2009)",
 }
 
 # ─── THE SIXTEEN FIGURES ───
@@ -268,6 +271,14 @@ SCHEMES: Dict[str, Dict[str, Any]] = {
         "Fortuna Major": "Leo", "Fortuna Minor": "Leo", "Conjunctio": "Virgo", "Caput Draconis": "Virgo",
         "Puella": "Libra", "Rubeus": "Scorpio", "Acquisitio": "Sagittarius", "Cauda Draconis": "Sagittarius",
         "Carcer": "Capricorn", "Tristitia": "Aquarius", "Laetitia": "Pisces"}, elements="golden-dawn"),
+    # farrell: GD signs; for the Ascendant conversion he gives Caput → Capricorn, Cauda → Scorpio (p.49).
+    # His per-figure elements (pp.22-47) are not a consistent scheme (six Fire figures), so GD elements are used.
+    "farrell": dict(source=BOOKS["farrell2009"] + ", p.49", signs={
+        "Puer": "Aries", "Amissio": "Taurus", "Albus": "Gemini", "Populus": "Cancer", "Via": "Cancer",
+        "Fortuna Major": "Leo", "Fortuna Minor": "Leo", "Conjunctio": "Virgo", "Puella": "Libra",
+        "Rubeus": "Scorpio", "Cauda Draconis": "Scorpio", "Acquisitio": "Sagittarius",
+        "Carcer": "Capricorn", "Caput Draconis": "Capricorn", "Tristitia": "Aquarius", "Laetitia": "Pisces"},
+        elements="golden-dawn"),
     # gerard: the sign Gerard puts on the Ascendant for each figure (Of Astronomical Geomancy, p.1);
     # Gerard's own method uses no shield, Witnesses or Judge.
     "gerard": dict(source=URL_DA_ZODIAC, note="elements derived from the sign", signs={
@@ -748,6 +759,19 @@ HALT_RULES: Dict[str, Dict[str, Any]] = {
     "greer-stranger": dict(figures=(), halts=True, source=BOOKS["greer2009"] + ", p.168",
                            rule="Reading for a stranger: if a deceptive-question pattern appears, end the "
                                 "reading, return any fee, and say the question cannot be answered."),
+    "farrell": dict(figures=("Carcer", "Cauda Draconis"), halts=True,
+                    source=BOOKS["farrell2009"] + ", pp.41, 45",
+                    rule="Carcer in the first house (a GD rule, he says): destroy the chart and do not ask a "
+                         "similar question for some hours, if ever; Saturn hides the querent and the answer is "
+                         "not to be known yet. Cauda in the first: stop at once (traditional). Rubeus in the "
+                         "first is not a halt for him. Exception he allows: the reading is about someone who "
+                         "really fits Agrippa's Carcer description."),
+    "farrell-m4": dict(figures=("Carcer", "Cauda Draconis"), halts=True, position="M4",
+                       source=BOOKS["farrell2009"] + ", pp.41, 45",
+                       rule="As 'farrell', but reading his gloss literally: he equates the first house with the fourth "
+                            "Mother (fourth figure of the spread), so the Fourth Mother is checked. (His layout "
+                            "runs right to left, so he may mean the First Mother; his own house table, p.48, puts "
+                            "figure 2 in house 1.)"),
     "digital-ambler": dict(figures=(), halts=False,
                            source=DA_POST + "2013/01/15/de-geomanteia-cauda-draconis-he-ceased-his-fearless-roar/",
                            rule="No halt: Cauda in the first house usually means the querent's mind is made up, "
@@ -804,6 +828,17 @@ def halting(houses: Dict[int, Any], rule: str = "gd", quesited: int = 7,
     of the chart actually used (with sequential houses that is the First Mother)."""
     r = HALT_RULES[rule]
     f1 = figure(houses[1])["name"]
+    if r.get("position"):
+        if shield is None:
+            raise ValueError(f"halt rule {rule} needs the shield")
+        pos = r["position"]
+        fp = figure(shield[pos])["name"]
+        label = (["First", "Second", "Third", "Fourth"][int(pos[1]) - 1] + " " + POSITION_NAMES[pos[0]]
+                 if len(pos) == 2 and pos[0] in "MDN" else POSITION_NAMES.get(pos, pos))
+        fired = [f"{fp} as {label}"] if fp in r["figures"] else []
+        return {"rule": rule, "halted": bool(fired), "fired": fired, "house1": f1, "explanation": r["rule"],
+                "source": r["source"], "warnings": querent_warnings(houses, quesited),
+                "first_mother": figure(shield["M1"])["name"]}
     warnings = querent_warnings(houses, quesited)
     if rule == "greer-stranger":
         halted = bool(warnings)
@@ -822,8 +857,77 @@ def halting(houses: Dict[int, Any], rule: str = "gd", quesited: int = 7,
     return out
 
 
-def all_halting(houses: Dict[int, Any], quesited: int = 7) -> Dict[str, bool]:
-    return {r: halting(houses, r, quesited)["halted"] for r in HALT_RULES}
+def all_halting(houses: Dict[int, Any], quesited: int = 7,
+                shield: Optional[Dict[str, Any]] = None) -> Dict[str, bool]:
+    return {r: halting(houses, r, quesited, shield)["halted"] for r in HALT_RULES
+            if shield is not None or not HALT_RULES[r].get("position")}
+
+
+# ─── FARRELL (Notes on Geomancy, 2009): witness verdict, sign wheel, planet of the question ───
+# Good / bad / mixed as his figure headings put it (pp.22-47); "mixed" = Populus, Via (neutral),
+# Puer (good only for love or conquest), Conjunctio and Albus (two-sided).
+FARRELL_POLARITY = {
+    "Fortuna Major": "good", "Fortuna Minor": "good", "Acquisitio": "good", "Laetitia": "good",
+    "Puella": "good", "Caput Draconis": "good", "Rubeus": "bad", "Amissio": "bad", "Carcer": "bad",
+    "Tristitia": "bad", "Cauda Draconis": "bad", "Populus": "mixed", "Via": "mixed", "Puer": "mixed",
+    "Conjunctio": "mixed", "Albus": "mixed"}
+
+
+def witness_verdict(rw: Any, lw: Any, judge: Any) -> Dict[str, Any]:
+    """Farrell p.21: yes/no from the Judge and Witnesses (Right = querent, Left = situation, p.20).
+    If no rule applies, he says to build the Reconciler with the First Mother, then with the quesited figure (p.47)."""
+    r, l, j = (FARRELL_POLARITY[figure(x)["name"]] for x in (rw, lw, judge))
+    if j == "good" and r == l == "good":
+        v, rule = "yes", 1
+    elif j == "bad" and r == l == "bad":
+        v, rule = "no", 2
+    elif j == "good" and {r, l} == {"good", "bad"}:
+        v, rule = "yes, after a while (delays and problems)", 3
+    elif r == "good" and l == "bad":
+        v, rule = "doubtful", 4
+    elif l == "good" and r == "bad":
+        v, rule = "problems at first, then better", 5
+    else:
+        v, rule = "unclear: read the Reconciler (Judge + First Mother, then Judge + quesited figure)", None
+    return {"verdict": v, "rule": rule, "polarity": {"right": r, "left": l, "judge": j},
+            "source": BOOKS["farrell2009"] + ", pp.20-21, 47"}
+
+
+ZODIAC = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius",
+          "Capricorn", "Aquarius", "Pisces"]
+
+
+def sign_wheel(houses: Dict[int, Any], scheme: str = "farrell") -> Dict[str, Any]:
+    """Farrell p.49: the sign of the figure in house 1 is the Ascendant; the other houses follow in
+    zodiac order, and each figure is read like a planet in that sign. Schemes without node signs
+    fall back to Farrell's (Caput Capricorn, Cauda Scorpio)."""
+    f1 = figure(houses[1])["name"]
+    asc = SCHEMES[scheme]["signs"].get(f1) or SCHEMES["farrell"]["signs"][f1]
+    i = ZODIAC.index(asc)
+    return {"ascendant": asc, "scheme": scheme, "source": BOOKS["farrell2009"] + ", p.49",
+            "houses": {h: ZODIAC[(i + h - 1) % 12] for h in range(1, 13)}}
+
+
+# Planet of the question → names Farrell invokes (archangel, intelligence, spirit; pp.8-12).
+PLANET_NAMES = {
+    "saturn": ("Cassiel", "Agiel", "Zazel"), "jupiter": ("Sachiel", "Iophiel", "Hismael"),
+    "mars": ("Zamael", "Graphiel", "Bartzabel"), "sun": ("Michael", "Nakhiel", "Sorath"),
+    "venus": ("Anael", "Hagiel", "Qedemel"), "mercury": ("Raphael", "Tiriel", "Taphthartharath"),
+    "moon": ("Gabriel", "Shelachel", "Chashmodai")}
+
+
+def question_planet(planet: str, houses: Dict[int, Any]) -> Dict[str, Any]:
+    """Farrell assigns each question to a planet and invokes its angel, intelligence and spirit
+    (after Adonai ha-Aretz, Uriel and the Ashim, p.11). Listing where that planet's figures fall is
+    this tool's addition, not his rule."""
+    pl = planet.lower()
+    if pl not in PLANET_NAMES:
+        raise ValueError("planet: " + "|".join(PLANET_NAMES))
+    a, i, s = PLANET_NAMES[pl]
+    found = {h: figure(f)["name"] for h, f in houses.items() if pl.capitalize() in planets(f)}
+    return {"planet": pl, "archangel": a, "intelligence": i, "spirit": s,
+            "figures_in_houses": found, "source": BOOKS["farrell2009"] + ", pp.8-12",
+            "note": "figure placement list is an addition of this tool"}
 
 
 # ─── WHAT TO DO (interpretive; our own wording) ───
@@ -968,7 +1072,7 @@ def census(zone_map: str = "dr", method: str = "sequential", gate_rule: str = "d
                 odd_total[n] += 1
         if impediment(H):
             impeded += 1
-        for r, v in all_halting(H).items():
+        for r, v in all_halting(H, shield=sh).items():
             halts[r] += v
         for w in querent_warnings(H):
             warn[w["pattern"]] += 1
@@ -1000,8 +1104,8 @@ def cast_geomancy(seed: Optional[int] = None, hardware: bool = False, dots: Opti
                   mothers: Optional[Sequence[Any]] = None, quesited: int = 7, querent: int = 1,
                   scheme: str = "golden-dawn", houses: str = "sequential", zone_map: str = "dr",
                   gate_rule: str = "dr", abano: bool = False, question: Optional[str] = None,
-                  halt_rule: str = "gd", pof_rule: str = "gd", use_aspects: bool = False
-                  ) -> Dict[str, Any]:
+                  halt_rule: str = "gd", pof_rule: str = "gd", use_aspects: bool = False,
+                  planet: Optional[str] = None) -> Dict[str, Any]:
     """One complete reading as a JSON-safe dict (the shape a future /geomancy endpoint returns)."""
     if scheme not in SCHEMES:
         raise ValueError(f"scheme: {'|'.join(SCHEMES)}")
@@ -1035,7 +1139,10 @@ def cast_geomancy(seed: Optional[int] = None, hardware: bool = False, dots: Opti
         "part_of_fortune": part_of_fortune(sh, houses, pof_rule, dots),
         "index_greer": part_of_fortune(sh, houses, "index"),
         "impediment": impediment(H),
-        "halting": halt, "halting_all_rules": all_halting(H, quesited),
+        "halting": halt, "halting_all_rules": all_halting(H, quesited, sh),
+        "witness_verdict": witness_verdict(sh["RW"], sh["LW"], j),
+        "sign_wheel": sign_wheel(H, scheme),
+        "question_planet": question_planet(planet, H) if planet else None,
         "remediation": remediation(H, querent, quesited, j, halt),
         "numogram": {
             "speculative": True,
@@ -1117,6 +1224,9 @@ def format_geomancy(data: Dict[str, Any], style: str = "unicode", full: bool = F
     other = [r for r, v in data["halting_all_rules"].items() if v and r != hl["rule"]]
     if other:
         out.append(f"  Would halt under: {', '.join(other)} (--halt-rule)")
+    wv = data["witness_verdict"]
+    out.append(f"  Witness verdict (Farrell rule {wv['rule'] or '–'}): {wv['verdict']}  "
+               f"[RW {wv['polarity']['right']}, LW {wv['polarity']['left']}, J {wv['polarity']['judge']}]")
     for w in hl.get("warnings", []):
         out.append(f"  ⚠ {w['pattern']}: {w['meaning']} ({w['source']})")
     v = data["validation"]
@@ -1149,6 +1259,14 @@ def format_geomancy(data: Dict[str, Any], style: str = "unicode", full: bool = F
     if pf.get("available", True):
         out.append(f"  Part of Fortune ({pf['rule']}): {pf['points']} points → house {pf['house']} ({pf['figure']})"
                    f"   Index (singles): house {data['index_greer']['house']} ({data['index_greer']['figure']})")
+    sw = data["sign_wheel"]
+    out.append(f"  Sign wheel (Farrell p.49): Ascendant {sw['ascendant']}; house 4 {sw['houses'][4]}, "
+               f"7 {sw['houses'][7]}, 10 {sw['houses'][10]}")
+    qp = data.get("question_planet")
+    if qp:
+        out.append(f"  Planet of the question: {qp['planet']} (archangel {qp['archangel']}, intelligence "
+                   f"{qp['intelligence']}, spirit {qp['spirit']}); its figures in houses "
+                   f"{', '.join(f'{h} {n}' for h, n in qp['figures_in_houses'].items()) or 'none'}")
     rm = data["remediation"]
     out += ["", "  What to do [interpretive — our wording, not traditional text]:"]
     if rm.get("halted"):
@@ -1251,7 +1369,7 @@ def main(argv: Optional[List[str]] = None) -> int:
                              quesited=quesited, querent=querent, scheme=scheme, houses=houses,
                              zone_map=zone_map, gate_rule=gate_rule, abano="--abano" in args,
                              question=question, halt_rule=halt_rule, pof_rule=pof_rule,
-                             use_aspects="--aspects" in args)
+                             use_aspects="--aspects" in args, planet=_opt(args, "--planet"))
     except ValueError as e:
         print(f"geomancy: {e}"); return 2
     if "--svg" in args:
