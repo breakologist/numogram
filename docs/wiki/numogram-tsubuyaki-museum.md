@@ -794,6 +794,7 @@ The fourth pass is the most compressed overall (1,746 chars), yet contains the w
 
 - [[tsubuyaki-oo-gallery]] — OO tsubuyaki gallery
 - [[zone-mapping]] — Zone mapping system
+- [[numogram-tsubuyaki-off-by-one]] — The Off-by-One Wing: five tweets on tetragram/hexagram zone conventions and the gate rule (2026-10-18; gallery `assets/numogram-tsubuyaki-off-by-one.html`)
 
 ## v6 — Pixel Medallion Gallery (2026-05-24)
 

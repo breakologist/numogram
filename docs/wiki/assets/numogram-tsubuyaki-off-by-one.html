@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Numogram Tsubuyaki — The Off-by-One Wing</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #08080c; color: #888; font: 13px 'Courier New', monospace; }
+    h1 { text-align: center; padding: 28px 20px 4px; color: #444; font-size: 16px; letter-spacing: 5px; }
+    .subtitle { text-align: center; color: #333; font-size: 11px; margin-bottom: 24px; letter-spacing: 2px; }
+    #gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; padding: 0 16px 40px; max-width: 1100px; margin: 0 auto; }
+    @media (max-width: 900px) { #gallery { grid-template-columns: 1fr; } }
+    .card { background: #0b0b10; border: 1px solid #181820; border-radius: 5px; overflow: hidden; }
+    .card-head { padding: 10px 14px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #14141a; }
+    .card-title { font-weight: bold; font-size: 13px; }
+    .card-meta { font-size: 10px; color: #444; }
+    .card-canvas { width: 100%; aspect-ratio: 1; border: 0; display: block; background: #000; }
+    .card-code { padding: 10px 14px; border-top: 1px solid #14141a; }
+    .card-code pre { font-size: 10.5px; color: #555; white-space: pre-wrap; word-break: break-all; line-height: 1.5; }
+    .card-note { font-size: 10px; color: #444; margin-top: 6px; line-height: 1.5; }
+    .charcount { font-size: 10px; margin-top: 4px; color: #3a6; }
+  </style>
+</head>
+<body>
+<h1>THE OFF-BY-ONE WING</h1>
+<div class="subtitle">5 tweets · off-by-one · つぶやき NUMOGRAM</div>
+<div id="gallery"></div>
+<script>
+// Each sketch runs VERBATIM in p5 global mode inside its own iframe (no hand-expanded copy),
+// so what you read is exactly what draws.
+const P5 = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js";
+const SKETCHES = [
+ {
+  "id": "darkening",
+  "code": "f=0;draw=_=>{f++||createCanvas(W=500,W);background(0);for(k=4;k--;){s=[1,2,2,3][k];m=300/s;y=410-k*90;stroke(W,0,W,k>1?(1+sin(f/40))*120:W);strokeWeight(16);for(j=s;j--;)line(j*m+112,y,j*m+m+88,y)}noStroke();textSize(48);fill(W,0,W);text(3,190,80);fill(0,W,W);text(4,290,80)}",
+  "title": "DARKENING #67",
+  "hex": "#FF00FF",
+  "note": "3 by lines, 4 by number; the top two lines (weights 9, 27) weigh nothing mod 9."
+ },
+ {
+  "id": "two-clocks",
+  "code": "f=0;draw=_=>{f++||createCanvas(W=500,W)+colorMode(HSB,10);background(0);z=n=>n&&1+(n-1)%9;c=~~(f/20)%81;for(n=0;n<162;n++){i=n%81;o=n>80;a=i*.0776-1.57;r=150+o*40;fill(z(i+o),8,i-c?4:10);circle(250+r*cos(a),250+r*sin(a),12)}fill(10);textSize(24);text([c+1,z(c),z(c+1)],205,258)}",
+  "title": "TWO CLOCKS",
+  "hex": "#88CCFF",
+  "note": "Value zone and number zone: one tick apart on all 81 tetragrams."
+ },
+ {
+  "id": "ming-yi",
+  "code": "f=0;draw=_=>{f++||createCanvas(W=500,W);background(0);textSize(20);noStroke();for(k=0;k<6;k++){a=k*1.047-1.57;x=250+150*cos(a);y=250+150*sin(a);fill(0,W,0,k%2<1&k<3?W:(f+k*20)%120);circle(x,y,50);fill(99);text(2**k%9,x-6,y+7)}fill(W);text('1+4=5 | 36:9',190,258)}",
+  "title": "MING YI #36",
+  "hex": "#00FF00",
+  "note": "Line weights 2^k mod 9 = 1,2,4,8,7,5. Yang at 1 and 4: zone 5. King Wen 36: zone 9."
+ },
+ {
+  "id": "no-gate-to-4",
+  "code": "f=0;draw=_=>{f++||createCanvas(W=500,W);background(0);noFill();T=[];for(z=1;z<10;z++){g=1+(z*z+z-2)/2%9;T[g]=1;d=47*abs(z-g)||20;stroke(0,W,W,99);arc(47*(z+g)/2+40,250,d,d+sin(f/20+z)*20,PI,TAU)}for(z=0;z<10;z++)fill(0,W,W,T[z]?W:0),circle(47*z+40,250,24)}",
+  "title": "NO GATE TO FOUR",
+  "hex": "#00FFFF",
+  "note": "Gate targets are only 1, 3, 6, 9."
+ },
+ {
+  "id": "katak-descent",
+  "code": "f=0;draw=_=>{f++||createCanvas(W=500,W);background(0,14);noStroke();for(z=0;z<10;z++)fill(60),circle(47*z+40,250,24);q=s=>s<2?4+s:s%2?3:6;s=~~(f/60)%12;t=f%60/60;a=q(s);b=q(s+1);fill(s<2?0:W,s<2?W:0,W);circle(47*(a+(b-a)*t)+40,250-sin(t*PI)*25*abs(b-a),14)}",
+  "title": "KATAK DESCENT",
+  "hex": "#FF00FF",
+  "note": "4 → 5 (Sink) → 6 (Gt-15) → 3 (Gt-21), then 3 ↔ 6 for ever."
+ }
+];
+window.addEventListener('DOMContentLoaded', () => {
+  const g = document.getElementById('gallery');
+  SKETCHES.forEach((s) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = '<div class="card-head"><span class="card-title"></span><span class="card-meta"></span></div>'
+      + '<iframe class="card-canvas" scrolling="no"></iframe>'
+      + '<div class="card-code"><pre></pre><div class="charcount"></div><div class="card-note"></div></div>';
+    card.querySelector('.card-title').textContent = s.title;
+    card.querySelector('.card-title').style.color = s.hex;
+    card.querySelector('.card-meta').textContent = s.id;
+    card.querySelector('pre').textContent = s.code;
+    card.querySelector('.charcount').textContent = s.code.length + '/280';
+    card.querySelector('.card-note').textContent = s.note;
+    const css = '<style>html,body{margin:0;background:#000;overflow:hidden}canvas{width:100vw!important;height:100vw!important;display:block}</style>';
+    card.querySelector('iframe').srcdoc = '<!doctype html>' + css + '<script src="' + P5 + '"><\/script><script>' + s.code + '<\/script>';
+    g.appendChild(card);
+  });
+});
+</script>
+</body>
+</html>

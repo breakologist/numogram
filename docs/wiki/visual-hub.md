@@ -99,6 +99,7 @@ The Tsubuyaki technique generates particle-based visualizations of numogram conc
 - **Tsubuyaki v4** - Optimized for performance
 - **Tsubuyaki v5** - Final refined version
 - **Tsubuyaki v7-rich** - Debug test bed, full function bodies, no eval
+- **Off-by-One Wing** - Five tweets on zone conventions and gates ([[numogram-tsubuyaki-off-by-one]], `assets/numogram-tsubuyaki-off-by-one.html`)
 
 [Tsubuyaki Museum →](numogram-tsubuyaki-museum.md)
 
