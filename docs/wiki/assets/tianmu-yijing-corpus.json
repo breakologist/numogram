@@ -67,18 +67,18 @@
       "binary": "010001",
       "binary_repr": "010/001",
       "lower_trigram": {
-        "bin": "010",
-        "name": "坎",
-        "pinyin": "Kǎn",
-        "en": "Water",
-        "symbol": "☵"
-      },
-      "upper_trigram": {
         "bin": "001",
         "name": "震",
         "pinyin": "Zhèn",
         "en": "Thunder",
         "symbol": "☳"
+      },
+      "upper_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
       },
       "name_cn": "屯",
       "pinyin": "Zhūn",
@@ -96,18 +96,18 @@
       "binary": "100010",
       "binary_repr": "100/010",
       "lower_trigram": {
-        "bin": "100",
-        "name": "艮",
-        "pinyin": "Gèn",
-        "en": "Mountain",
-        "symbol": "☶"
-      },
-      "upper_trigram": {
         "bin": "010",
         "name": "坎",
         "pinyin": "Kǎn",
         "en": "Water",
         "symbol": "☵"
+      },
+      "upper_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
       },
       "name_cn": "蒙",
       "pinyin": "Méng",
@@ -125,18 +125,18 @@
       "binary": "010111",
       "binary_repr": "010/111",
       "lower_trigram": {
-        "bin": "010",
-        "name": "坎",
-        "pinyin": "Kǎn",
-        "en": "Water",
-        "symbol": "☵"
-      },
-      "upper_trigram": {
         "bin": "111",
         "name": "乾",
         "pinyin": "Qián",
         "en": "Heaven",
         "symbol": "☰"
+      },
+      "upper_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
       },
       "name_cn": "需",
       "pinyin": "Xū",
@@ -154,18 +154,18 @@
       "binary": "111010",
       "binary_repr": "111/010",
       "lower_trigram": {
-        "bin": "111",
-        "name": "乾",
-        "pinyin": "Qián",
-        "en": "Heaven",
-        "symbol": "☰"
-      },
-      "upper_trigram": {
         "bin": "010",
         "name": "坎",
         "pinyin": "Kǎn",
         "en": "Water",
         "symbol": "☵"
+      },
+      "upper_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
       },
       "name_cn": "訟",
       "pinyin": "Sòng",
@@ -183,18 +183,18 @@
       "binary": "000010",
       "binary_repr": "000/010",
       "lower_trigram": {
-        "bin": "000",
-        "name": "坤",
-        "pinyin": "Kūn",
-        "en": "Earth",
-        "symbol": "☷"
-      },
-      "upper_trigram": {
         "bin": "010",
         "name": "坎",
         "pinyin": "Kǎn",
         "en": "Water",
         "symbol": "☵"
+      },
+      "upper_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
       },
       "name_cn": "師",
       "pinyin": "Shī",
@@ -212,18 +212,18 @@
       "binary": "010000",
       "binary_repr": "010/000",
       "lower_trigram": {
-        "bin": "010",
-        "name": "坎",
-        "pinyin": "Kǎn",
-        "en": "Water",
-        "symbol": "☵"
-      },
-      "upper_trigram": {
         "bin": "000",
         "name": "坤",
         "pinyin": "Kūn",
         "en": "Earth",
         "symbol": "☷"
+      },
+      "upper_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
       },
       "name_cn": "比",
       "pinyin": "Bǐ",
@@ -241,18 +241,18 @@
       "binary": "110111",
       "binary_repr": "110/111",
       "lower_trigram": {
-        "bin": "110",
-        "name": "巽",
-        "pinyin": "Xùn",
-        "en": "Wind",
-        "symbol": "☴"
-      },
-      "upper_trigram": {
         "bin": "111",
         "name": "乾",
         "pinyin": "Qián",
         "en": "Heaven",
         "symbol": "☰"
+      },
+      "upper_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
       },
       "name_cn": "小畜",
       "pinyin": "Xiǎo Chù",
@@ -270,18 +270,18 @@
       "binary": "111011",
       "binary_repr": "111/011",
       "lower_trigram": {
-        "bin": "111",
-        "name": "乾",
-        "pinyin": "Qián",
-        "en": "Heaven",
-        "symbol": "☰"
-      },
-      "upper_trigram": {
         "bin": "011",
         "name": "兌",
         "pinyin": "Duì",
         "en": "Lake",
         "symbol": "☱"
+      },
+      "upper_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
       },
       "name_cn": "履",
       "pinyin": "Lǚ",
@@ -299,18 +299,18 @@
       "binary": "000111",
       "binary_repr": "000/111",
       "lower_trigram": {
-        "bin": "000",
-        "name": "坤",
-        "pinyin": "Kūn",
-        "en": "Earth",
-        "symbol": "☷"
-      },
-      "upper_trigram": {
         "bin": "111",
         "name": "乾",
         "pinyin": "Qián",
         "en": "Heaven",
         "symbol": "☰"
+      },
+      "upper_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
       },
       "name_cn": "泰",
       "pinyin": "Tài",
@@ -328,18 +328,18 @@
       "binary": "111000",
       "binary_repr": "111/000",
       "lower_trigram": {
-        "bin": "111",
-        "name": "乾",
-        "pinyin": "Qián",
-        "en": "Heaven",
-        "symbol": "☰"
-      },
-      "upper_trigram": {
         "bin": "000",
         "name": "坤",
         "pinyin": "Kūn",
         "en": "Earth",
         "symbol": "☷"
+      },
+      "upper_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
       },
       "name_cn": "否",
       "pinyin": "Pǐ",
@@ -357,18 +357,18 @@
       "binary": "111101",
       "binary_repr": "111/101",
       "lower_trigram": {
-        "bin": "111",
-        "name": "乾",
-        "pinyin": "Qián",
-        "en": "Heaven",
-        "symbol": "☰"
-      },
-      "upper_trigram": {
         "bin": "101",
         "name": "離",
         "pinyin": "Lí",
         "en": "Fire",
         "symbol": "☲"
+      },
+      "upper_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
       },
       "name_cn": "同人",
       "pinyin": "Tóng Rén",
@@ -386,18 +386,18 @@
       "binary": "101111",
       "binary_repr": "101/111",
       "lower_trigram": {
-        "bin": "101",
-        "name": "離",
-        "pinyin": "Lí",
-        "en": "Fire",
-        "symbol": "☲"
-      },
-      "upper_trigram": {
         "bin": "111",
         "name": "乾",
         "pinyin": "Qián",
         "en": "Heaven",
         "symbol": "☰"
+      },
+      "upper_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
       },
       "name_cn": "大有",
       "pinyin": "Dà Yǒu",
@@ -415,18 +415,18 @@
       "binary": "000100",
       "binary_repr": "000/100",
       "lower_trigram": {
-        "bin": "000",
-        "name": "坤",
-        "pinyin": "Kūn",
-        "en": "Earth",
-        "symbol": "☷"
-      },
-      "upper_trigram": {
         "bin": "100",
         "name": "艮",
         "pinyin": "Gèn",
         "en": "Mountain",
         "symbol": "☶"
+      },
+      "upper_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
       },
       "name_cn": "謙",
       "pinyin": "Qiān",
@@ -444,18 +444,18 @@
       "binary": "001000",
       "binary_repr": "001/000",
       "lower_trigram": {
-        "bin": "001",
-        "name": "震",
-        "pinyin": "Zhèn",
-        "en": "Thunder",
-        "symbol": "☳"
-      },
-      "upper_trigram": {
         "bin": "000",
         "name": "坤",
         "pinyin": "Kūn",
         "en": "Earth",
         "symbol": "☷"
+      },
+      "upper_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
       },
       "name_cn": "豫",
       "pinyin": "Yù",
@@ -473,18 +473,18 @@
       "binary": "011001",
       "binary_repr": "011/001",
       "lower_trigram": {
-        "bin": "011",
-        "name": "兌",
-        "pinyin": "Duì",
-        "en": "Lake",
-        "symbol": "☱"
-      },
-      "upper_trigram": {
         "bin": "001",
         "name": "震",
         "pinyin": "Zhèn",
         "en": "Thunder",
         "symbol": "☳"
+      },
+      "upper_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
       },
       "name_cn": "隨",
       "pinyin": "Suí",
@@ -502,18 +502,18 @@
       "binary": "100110",
       "binary_repr": "100/110",
       "lower_trigram": {
-        "bin": "100",
-        "name": "艮",
-        "pinyin": "Gèn",
-        "en": "Mountain",
-        "symbol": "☶"
-      },
-      "upper_trigram": {
         "bin": "110",
         "name": "巽",
         "pinyin": "Xùn",
         "en": "Wind",
         "symbol": "☴"
+      },
+      "upper_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
       },
       "name_cn": "蠱",
       "pinyin": "Gǔ",
@@ -531,18 +531,18 @@
       "binary": "000011",
       "binary_repr": "000/011",
       "lower_trigram": {
-        "bin": "000",
-        "name": "坤",
-        "pinyin": "Kūn",
-        "en": "Earth",
-        "symbol": "☷"
-      },
-      "upper_trigram": {
         "bin": "011",
         "name": "兌",
         "pinyin": "Duì",
         "en": "Lake",
         "symbol": "☱"
+      },
+      "upper_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
       },
       "name_cn": "臨",
       "pinyin": "Lín",
@@ -560,18 +560,18 @@
       "binary": "110000",
       "binary_repr": "110/000",
       "lower_trigram": {
-        "bin": "110",
-        "name": "巽",
-        "pinyin": "Xùn",
-        "en": "Wind",
-        "symbol": "☴"
-      },
-      "upper_trigram": {
         "bin": "000",
         "name": "坤",
         "pinyin": "Kūn",
         "en": "Earth",
         "symbol": "☷"
+      },
+      "upper_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
       },
       "name_cn": "觀",
       "pinyin": "Guān",
@@ -589,18 +589,18 @@
       "binary": "101001",
       "binary_repr": "101/001",
       "lower_trigram": {
-        "bin": "101",
-        "name": "離",
-        "pinyin": "Lí",
-        "en": "Fire",
-        "symbol": "☲"
-      },
-      "upper_trigram": {
         "bin": "001",
         "name": "震",
         "pinyin": "Zhèn",
         "en": "Thunder",
         "symbol": "☳"
+      },
+      "upper_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
       },
       "name_cn": "噬嗑",
       "pinyin": "Shì Kè",
@@ -618,18 +618,18 @@
       "binary": "100101",
       "binary_repr": "100/101",
       "lower_trigram": {
-        "bin": "100",
-        "name": "艮",
-        "pinyin": "Gèn",
-        "en": "Mountain",
-        "symbol": "☶"
-      },
-      "upper_trigram": {
         "bin": "101",
         "name": "離",
         "pinyin": "Lí",
         "en": "Fire",
         "symbol": "☲"
+      },
+      "upper_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
       },
       "name_cn": "賁",
       "pinyin": "Bì",
@@ -647,18 +647,18 @@
       "binary": "100000",
       "binary_repr": "100/000",
       "lower_trigram": {
-        "bin": "100",
-        "name": "艮",
-        "pinyin": "Gèn",
-        "en": "Mountain",
-        "symbol": "☶"
-      },
-      "upper_trigram": {
         "bin": "000",
         "name": "坤",
         "pinyin": "Kūn",
         "en": "Earth",
         "symbol": "☷"
+      },
+      "upper_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
       },
       "name_cn": "剝",
       "pinyin": "Bō",
@@ -676,18 +676,18 @@
       "binary": "000001",
       "binary_repr": "000/001",
       "lower_trigram": {
-        "bin": "000",
-        "name": "坤",
-        "pinyin": "Kūn",
-        "en": "Earth",
-        "symbol": "☷"
-      },
-      "upper_trigram": {
         "bin": "001",
         "name": "震",
         "pinyin": "Zhèn",
         "en": "Thunder",
         "symbol": "☳"
+      },
+      "upper_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
       },
       "name_cn": "復",
       "pinyin": "Fù",
@@ -705,18 +705,18 @@
       "binary": "111001",
       "binary_repr": "111/001",
       "lower_trigram": {
-        "bin": "111",
-        "name": "乾",
-        "pinyin": "Qián",
-        "en": "Heaven",
-        "symbol": "☰"
-      },
-      "upper_trigram": {
         "bin": "001",
         "name": "震",
         "pinyin": "Zhèn",
         "en": "Thunder",
         "symbol": "☳"
+      },
+      "upper_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
       },
       "name_cn": "無妄",
       "pinyin": "Wú Wàng",
@@ -734,18 +734,18 @@
       "binary": "100111",
       "binary_repr": "100/111",
       "lower_trigram": {
-        "bin": "100",
-        "name": "艮",
-        "pinyin": "Gèn",
-        "en": "Mountain",
-        "symbol": "☶"
-      },
-      "upper_trigram": {
         "bin": "111",
         "name": "乾",
         "pinyin": "Qián",
         "en": "Heaven",
         "symbol": "☰"
+      },
+      "upper_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
       },
       "name_cn": "大畜",
       "pinyin": "Dà Chù",
@@ -763,18 +763,18 @@
       "binary": "100001",
       "binary_repr": "100/001",
       "lower_trigram": {
-        "bin": "100",
-        "name": "艮",
-        "pinyin": "Gèn",
-        "en": "Mountain",
-        "symbol": "☶"
-      },
-      "upper_trigram": {
         "bin": "001",
         "name": "震",
         "pinyin": "Zhèn",
         "en": "Thunder",
         "symbol": "☳"
+      },
+      "upper_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
       },
       "name_cn": "頤",
       "pinyin": "Yí",
@@ -792,18 +792,18 @@
       "binary": "011110",
       "binary_repr": "011/110",
       "lower_trigram": {
-        "bin": "011",
-        "name": "兌",
-        "pinyin": "Duì",
-        "en": "Lake",
-        "symbol": "☱"
-      },
-      "upper_trigram": {
         "bin": "110",
         "name": "巽",
         "pinyin": "Xùn",
         "en": "Wind",
         "symbol": "☴"
+      },
+      "upper_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
       },
       "name_cn": "大過",
       "pinyin": "Dà Guò",
@@ -879,18 +879,18 @@
       "binary": "011100",
       "binary_repr": "011/100",
       "lower_trigram": {
-        "bin": "011",
-        "name": "兌",
-        "pinyin": "Duì",
-        "en": "Lake",
-        "symbol": "☱"
-      },
-      "upper_trigram": {
         "bin": "100",
         "name": "艮",
         "pinyin": "Gèn",
         "en": "Mountain",
         "symbol": "☶"
+      },
+      "upper_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
       },
       "name_cn": "咸",
       "pinyin": "Xián",
@@ -908,18 +908,18 @@
       "binary": "001110",
       "binary_repr": "001/110",
       "lower_trigram": {
-        "bin": "001",
-        "name": "震",
-        "pinyin": "Zhèn",
-        "en": "Thunder",
-        "symbol": "☳"
-      },
-      "upper_trigram": {
         "bin": "110",
         "name": "巽",
         "pinyin": "Xùn",
         "en": "Wind",
         "symbol": "☴"
+      },
+      "upper_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
       },
       "name_cn": "恆",
       "pinyin": "Héng",
@@ -937,18 +937,18 @@
       "binary": "111100",
       "binary_repr": "111/100",
       "lower_trigram": {
-        "bin": "111",
-        "name": "乾",
-        "pinyin": "Qián",
-        "en": "Heaven",
-        "symbol": "☰"
-      },
-      "upper_trigram": {
         "bin": "100",
         "name": "艮",
         "pinyin": "Gèn",
         "en": "Mountain",
         "symbol": "☶"
+      },
+      "upper_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
       },
       "name_cn": "遯",
       "pinyin": "Dùn",
@@ -966,18 +966,18 @@
       "binary": "001111",
       "binary_repr": "001/111",
       "lower_trigram": {
-        "bin": "001",
-        "name": "震",
-        "pinyin": "Zhèn",
-        "en": "Thunder",
-        "symbol": "☳"
-      },
-      "upper_trigram": {
         "bin": "111",
         "name": "乾",
         "pinyin": "Qián",
         "en": "Heaven",
         "symbol": "☰"
+      },
+      "upper_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
       },
       "name_cn": "大壯",
       "pinyin": "Dà Zhuàng",
@@ -995,18 +995,18 @@
       "binary": "101000",
       "binary_repr": "101/000",
       "lower_trigram": {
-        "bin": "101",
-        "name": "離",
-        "pinyin": "Lí",
-        "en": "Fire",
-        "symbol": "☲"
-      },
-      "upper_trigram": {
         "bin": "000",
         "name": "坤",
         "pinyin": "Kūn",
         "en": "Earth",
         "symbol": "☷"
+      },
+      "upper_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
       },
       "name_cn": "晉",
       "pinyin": "Jìn",
@@ -1024,18 +1024,18 @@
       "binary": "000101",
       "binary_repr": "000/101",
       "lower_trigram": {
-        "bin": "000",
-        "name": "坤",
-        "pinyin": "Kūn",
-        "en": "Earth",
-        "symbol": "☷"
-      },
-      "upper_trigram": {
         "bin": "101",
         "name": "離",
         "pinyin": "Lí",
         "en": "Fire",
         "symbol": "☲"
+      },
+      "upper_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
       },
       "name_cn": "明夷",
       "pinyin": "Míng Yí",
@@ -1053,18 +1053,18 @@
       "binary": "110101",
       "binary_repr": "110/101",
       "lower_trigram": {
-        "bin": "110",
-        "name": "巽",
-        "pinyin": "Xùn",
-        "en": "Wind",
-        "symbol": "☴"
-      },
-      "upper_trigram": {
         "bin": "101",
         "name": "離",
         "pinyin": "Lí",
         "en": "Fire",
         "symbol": "☲"
+      },
+      "upper_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
       },
       "name_cn": "家人",
       "pinyin": "Jiā Rén",
@@ -1082,18 +1082,18 @@
       "binary": "101011",
       "binary_repr": "101/011",
       "lower_trigram": {
-        "bin": "101",
-        "name": "離",
-        "pinyin": "Lí",
-        "en": "Fire",
-        "symbol": "☲"
-      },
-      "upper_trigram": {
         "bin": "011",
         "name": "兌",
         "pinyin": "Duì",
         "en": "Lake",
         "symbol": "☱"
+      },
+      "upper_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
       },
       "name_cn": "睽",
       "pinyin": "Kuí",
@@ -1111,18 +1111,18 @@
       "binary": "010100",
       "binary_repr": "010/100",
       "lower_trigram": {
-        "bin": "010",
-        "name": "坎",
-        "pinyin": "Kǎn",
-        "en": "Water",
-        "symbol": "☵"
-      },
-      "upper_trigram": {
         "bin": "100",
         "name": "艮",
         "pinyin": "Gèn",
         "en": "Mountain",
         "symbol": "☶"
+      },
+      "upper_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
       },
       "name_cn": "蹇",
       "pinyin": "Jiǎn",
@@ -1140,18 +1140,18 @@
       "binary": "001010",
       "binary_repr": "001/010",
       "lower_trigram": {
-        "bin": "001",
-        "name": "震",
-        "pinyin": "Zhèn",
-        "en": "Thunder",
-        "symbol": "☳"
-      },
-      "upper_trigram": {
         "bin": "010",
         "name": "坎",
         "pinyin": "Kǎn",
         "en": "Water",
         "symbol": "☵"
+      },
+      "upper_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
       },
       "name_cn": "解",
       "pinyin": "Xiè",
@@ -1169,18 +1169,18 @@
       "binary": "100011",
       "binary_repr": "100/011",
       "lower_trigram": {
-        "bin": "100",
-        "name": "艮",
-        "pinyin": "Gèn",
-        "en": "Mountain",
-        "symbol": "☶"
-      },
-      "upper_trigram": {
         "bin": "011",
         "name": "兌",
         "pinyin": "Duì",
         "en": "Lake",
         "symbol": "☱"
+      },
+      "upper_trigram": {
+        "bin": "100",
+        "name": "艮",
+        "pinyin": "Gèn",
+        "en": "Mountain",
+        "symbol": "☶"
       },
       "name_cn": "損",
       "pinyin": "Sǔn",
@@ -1198,18 +1198,18 @@
       "binary": "110001",
       "binary_repr": "110/001",
       "lower_trigram": {
-        "bin": "110",
-        "name": "巽",
-        "pinyin": "Xùn",
-        "en": "Wind",
-        "symbol": "☴"
-      },
-      "upper_trigram": {
         "bin": "001",
         "name": "震",
         "pinyin": "Zhèn",
         "en": "Thunder",
         "symbol": "☳"
+      },
+      "upper_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
       },
       "name_cn": "益",
       "pinyin": "Yì",
@@ -1227,18 +1227,18 @@
       "binary": "011111",
       "binary_repr": "011/111",
       "lower_trigram": {
-        "bin": "011",
-        "name": "兌",
-        "pinyin": "Duì",
-        "en": "Lake",
-        "symbol": "☱"
-      },
-      "upper_trigram": {
         "bin": "111",
         "name": "乾",
         "pinyin": "Qián",
         "en": "Heaven",
         "symbol": "☰"
+      },
+      "upper_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
       },
       "name_cn": "夬",
       "pinyin": "Guài",
@@ -1256,18 +1256,18 @@
       "binary": "111110",
       "binary_repr": "111/110",
       "lower_trigram": {
-        "bin": "111",
-        "name": "乾",
-        "pinyin": "Qián",
-        "en": "Heaven",
-        "symbol": "☰"
-      },
-      "upper_trigram": {
         "bin": "110",
         "name": "巽",
         "pinyin": "Xùn",
         "en": "Wind",
         "symbol": "☴"
+      },
+      "upper_trigram": {
+        "bin": "111",
+        "name": "乾",
+        "pinyin": "Qián",
+        "en": "Heaven",
+        "symbol": "☰"
       },
       "name_cn": "姤",
       "pinyin": "Gòu",
@@ -1285,18 +1285,18 @@
       "binary": "011000",
       "binary_repr": "011/000",
       "lower_trigram": {
-        "bin": "011",
-        "name": "兌",
-        "pinyin": "Duì",
-        "en": "Lake",
-        "symbol": "☱"
-      },
-      "upper_trigram": {
         "bin": "000",
         "name": "坤",
         "pinyin": "Kūn",
         "en": "Earth",
         "symbol": "☷"
+      },
+      "upper_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
       },
       "name_cn": "萃",
       "pinyin": "Cuì",
@@ -1314,18 +1314,18 @@
       "binary": "000110",
       "binary_repr": "000/110",
       "lower_trigram": {
-        "bin": "000",
-        "name": "坤",
-        "pinyin": "Kūn",
-        "en": "Earth",
-        "symbol": "☷"
-      },
-      "upper_trigram": {
         "bin": "110",
         "name": "巽",
         "pinyin": "Xùn",
         "en": "Wind",
         "symbol": "☴"
+      },
+      "upper_trigram": {
+        "bin": "000",
+        "name": "坤",
+        "pinyin": "Kūn",
+        "en": "Earth",
+        "symbol": "☷"
       },
       "name_cn": "升",
       "pinyin": "Shēng",
@@ -1343,18 +1343,18 @@
       "binary": "011010",
       "binary_repr": "011/010",
       "lower_trigram": {
-        "bin": "011",
-        "name": "兌",
-        "pinyin": "Duì",
-        "en": "Lake",
-        "symbol": "☱"
-      },
-      "upper_trigram": {
         "bin": "010",
         "name": "坎",
         "pinyin": "Kǎn",
         "en": "Water",
         "symbol": "☵"
+      },
+      "upper_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
       },
       "name_cn": "困",
       "pinyin": "Kùn",
@@ -1372,18 +1372,18 @@
       "binary": "010110",
       "binary_repr": "010/110",
       "lower_trigram": {
-        "bin": "010",
-        "name": "坎",
-        "pinyin": "Kǎn",
-        "en": "Water",
-        "symbol": "☵"
-      },
-      "upper_trigram": {
         "bin": "110",
         "name": "巽",
         "pinyin": "Xùn",
         "en": "Wind",
         "symbol": "☴"
+      },
+      "upper_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
       },
       "name_cn": "井",
       "pinyin": "Jǐng",
@@ -1401,18 +1401,18 @@
       "binary": "011101",
       "binary_repr": "011/101",
       "lower_trigram": {
-        "bin": "011",
-        "name": "兌",
-        "pinyin": "Duì",
-        "en": "Lake",
-        "symbol": "☱"
-      },
-      "upper_trigram": {
         "bin": "101",
         "name": "離",
         "pinyin": "Lí",
         "en": "Fire",
         "symbol": "☲"
+      },
+      "upper_trigram": {
+        "bin": "011",
+        "name": "兌",
+        "pinyin": "Duì",
+        "en": "Lake",
+        "symbol": "☱"
       },
       "name_cn": "革",
       "pinyin": "Gé",
@@ -1430,18 +1430,18 @@
       "binary": "101110",
       "binary_repr": "101/110",
       "lower_trigram": {
-        "bin": "101",
-        "name": "離",
-        "pinyin": "Lí",
-        "en": "Fire",
-        "symbol": "☲"
-      },
-      "upper_trigram": {
         "bin": "110",
         "name": "巽",
         "pinyin": "Xùn",
         "en": "Wind",
         "symbol": "☴"
+      },
+      "upper_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
       },
       "name_cn": "鼎",
       "pinyin": "Dǐng",
@@ -1517,18 +1517,18 @@
       "binary": "110100",
       "binary_repr": "110/100",
       "lower_trigram": {
-        "bin": "110",
-        "name": "巽",
-        "pinyin": "Xùn",
-        "en": "Wind",
-        "symbol": "☴"
-      },
-      "upper_trigram": {
         "bin": "100",
         "name": "艮",
         "pinyin": "Gèn",
         "en": "Mountain",
         "symbol": "☶"
+      },
+      "upper_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
       },
       "name_cn": "漸",
       "pinyin": "Jiàn",
@@ -1546,18 +1546,18 @@
       "binary": "001011",
       "binary_repr": "001/011",
       "lower_trigram": {
-        "bin": "001",
-        "name": "震",
-        "pinyin": "Zhèn",
-        "en": "Thunder",
-        "symbol": "☳"
-      },
-      "upper_trigram": {
         "bin": "011",
         "name": "兌",
         "pinyin": "Duì",
         "en": "Lake",
         "symbol": "☱"
+      },
+      "upper_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
       },
       "name_cn": "歸妹",
       "pinyin": "Guī Mèi",
@@ -1575,18 +1575,18 @@
       "binary": "001101",
       "binary_repr": "001/101",
       "lower_trigram": {
-        "bin": "001",
-        "name": "震",
-        "pinyin": "Zhèn",
-        "en": "Thunder",
-        "symbol": "☳"
-      },
-      "upper_trigram": {
         "bin": "101",
         "name": "離",
         "pinyin": "Lí",
         "en": "Fire",
         "symbol": "☲"
+      },
+      "upper_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
       },
       "name_cn": "豐",
       "pinyin": "Fēng",
@@ -1604,18 +1604,18 @@
       "binary": "101100",
       "binary_repr": "101/100",
       "lower_trigram": {
-        "bin": "101",
-        "name": "離",
-        "pinyin": "Lí",
-        "en": "Fire",
-        "symbol": "☲"
-      },
-      "upper_trigram": {
         "bin": "100",
         "name": "艮",
         "pinyin": "Gèn",
         "en": "Mountain",
         "symbol": "☶"
+      },
+      "upper_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
       },
       "name_cn": "旅",
       "pinyin": "Lǚ",
@@ -1691,18 +1691,18 @@
       "binary": "110010",
       "binary_repr": "110/010",
       "lower_trigram": {
-        "bin": "110",
-        "name": "巽",
-        "pinyin": "Xùn",
-        "en": "Wind",
-        "symbol": "☴"
-      },
-      "upper_trigram": {
         "bin": "010",
         "name": "坎",
         "pinyin": "Kǎn",
         "en": "Water",
         "symbol": "☵"
+      },
+      "upper_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
       },
       "name_cn": "渙",
       "pinyin": "Huàn",
@@ -1720,18 +1720,18 @@
       "binary": "010011",
       "binary_repr": "010/011",
       "lower_trigram": {
-        "bin": "010",
-        "name": "坎",
-        "pinyin": "Kǎn",
-        "en": "Water",
-        "symbol": "☵"
-      },
-      "upper_trigram": {
         "bin": "011",
         "name": "兌",
         "pinyin": "Duì",
         "en": "Lake",
         "symbol": "☱"
+      },
+      "upper_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
       },
       "name_cn": "節",
       "pinyin": "Jié",
@@ -1749,18 +1749,18 @@
       "binary": "110011",
       "binary_repr": "110/011",
       "lower_trigram": {
-        "bin": "110",
-        "name": "巽",
-        "pinyin": "Xùn",
-        "en": "Wind",
-        "symbol": "☴"
-      },
-      "upper_trigram": {
         "bin": "011",
         "name": "兌",
         "pinyin": "Duì",
         "en": "Lake",
         "symbol": "☱"
+      },
+      "upper_trigram": {
+        "bin": "110",
+        "name": "巽",
+        "pinyin": "Xùn",
+        "en": "Wind",
+        "symbol": "☴"
       },
       "name_cn": "中孚",
       "pinyin": "Zhōng Fú",
@@ -1778,18 +1778,18 @@
       "binary": "001100",
       "binary_repr": "001/100",
       "lower_trigram": {
-        "bin": "001",
-        "name": "震",
-        "pinyin": "Zhèn",
-        "en": "Thunder",
-        "symbol": "☳"
-      },
-      "upper_trigram": {
         "bin": "100",
         "name": "艮",
         "pinyin": "Gèn",
         "en": "Mountain",
         "symbol": "☶"
+      },
+      "upper_trigram": {
+        "bin": "001",
+        "name": "震",
+        "pinyin": "Zhèn",
+        "en": "Thunder",
+        "symbol": "☳"
       },
       "name_cn": "小過",
       "pinyin": "Xiǎo Guò",
@@ -1807,18 +1807,18 @@
       "binary": "010101",
       "binary_repr": "010/101",
       "lower_trigram": {
-        "bin": "010",
-        "name": "坎",
-        "pinyin": "Kǎn",
-        "en": "Water",
-        "symbol": "☵"
-      },
-      "upper_trigram": {
         "bin": "101",
         "name": "離",
         "pinyin": "Lí",
         "en": "Fire",
         "symbol": "☲"
+      },
+      "upper_trigram": {
+        "bin": "010",
+        "name": "坎",
+        "pinyin": "Kǎn",
+        "en": "Water",
+        "symbol": "☵"
       },
       "name_cn": "既濟",
       "pinyin": "Jì Jì",
@@ -1836,18 +1836,18 @@
       "binary": "101010",
       "binary_repr": "101/010",
       "lower_trigram": {
-        "bin": "101",
-        "name": "離",
-        "pinyin": "Lí",
-        "en": "Fire",
-        "symbol": "☲"
-      },
-      "upper_trigram": {
         "bin": "010",
         "name": "坎",
         "pinyin": "Kǎn",
         "en": "Water",
         "symbol": "☵"
+      },
+      "upper_trigram": {
+        "bin": "101",
+        "name": "離",
+        "pinyin": "Lí",
+        "en": "Fire",
+        "symbol": "☲"
       },
       "name_cn": "未濟",
       "pinyin": "Wèi Jì",
@@ -1911,5 +1911,8 @@
     }
   },
   "zone_method": "canonical_dr: 1 + (KW-1) % 9",
-  "encoding": "lower_3bits + upper_3bits"
+  "encoding": "upper_3bits + lower_3bits: lines read top to bottom, 1 = yang (trigram bits likewise top to bottom, so Zhen = 001)",
+  "errata": [
+    "fix_corpus.py: upper/lower trigram labels swapped back to King Wen order (56 hexagrams); 'binary' unchanged (already top-to-bottom); 'encoding' note corrected."
+  ]
 }
