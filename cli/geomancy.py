@@ -15,9 +15,14 @@ Usage:
   python3 geomancy.py --seed 7 --json | --unicode | --plain | --full
   python3 geomancy.py --figures               # reference table
   python3 geomancy.py --census [--zone-map dr|dr-line|points]
+  python3 geomancy.py --seed 7 --svg shield.svg   # shield drawn like the user's blank template
 Options:
-  --scheme golden-dawn|agrippa|gerard   zodiac + attributed element (default golden-dawn)
-  --houses sequential|astrological      shield → house placement (default sequential)
+  --scheme golden-dawn|greer|agrippa|gerard   zodiac + attributed element (default golden-dawn)
+  --houses sequential|astrological|angular|agrippa   shield → house placement (default sequential)
+  --halt-rule gd|skinner|skinner-strict|greer|greer-stranger|digital-ambler|agrippa|gerard|none
+                                        "not to be judged" rule (default gd); all are reported in --json
+  --pof-rule gd|greer|index|agrippa     Part of Fortune / Index rule (default gd; agrippa needs --dots)
+  --aspects                             Greer's favourable aspects count as perfection; lists bad ones
   --gate-rule dr|mod                    base-16 gate: digital root mod 15 (default) | T mod 16
   --zone-map dr|dr-line|points          SPECULATIVE figure → decimal zone map (default dr)
   --abano                               houses 12 and 1 are not adjacent (Peter of Abano)
@@ -30,7 +35,11 @@ Conventions
 - Shield (Digital Ambler, "Geomantic Mathematics", 2013; Greer, Art and Practice of Geomancy):
   Daughters = Mothers transposed; Nieces = M1+M2, M3+M4, D1+D2, D3+D4; Right Witness = N1+N2;
   Left Witness = N3+N4; Judge = RW+LW; Sentence = Judge + M1 ("+" = per-line parity = XOR).
-  The Golden Dawn "Reconciler" is Judge + the figure in the quesited house (GD Geomancy paper).
+  Greer and Skinner call J + first-house figure the Reconciler (same as the Sentence with sequential
+  houses); the Golden Dawn "Reconciler" is Judge + the figure in the quesited house (GD paper).
+- Halting: the GD paper and Skinner destroy a chart with Rubeus or Cauda Draconis in house 1; Greer
+  reads the same figures as warnings about the querent instead. See HALT_RULES.
+- "What to do" (remediation) text is our own interpretive wording, marked as such in the output.
 - Perfection (Moderately Quick Silver 2023; Digital Ambler 2014): occupation, conjunction,
   mutation, translation; otherwise denial. Company of houses: pairs 1-2, 3-4, … 11-12; simple,
   demi-simple, compound, capitular (Greer, Caduceus 2:3; Digital Ambler 2015).
@@ -59,6 +68,15 @@ URL_GREER_COMPANY = "https://hermetic.com/caduceus/articles/2/3/medieval-methods
 URL_GD = "https://www.tarrdaniel.com/documents/Thelemagick/gd/publication/english/Geomancy.html"
 URL_AGRIPPA = "http://www.princeton.edu/~ezb/geomancy/agrippa.html"
 DA_POST = "https://digitalambler.wordpress.com/"
+# Printed books checked from the user's copies (page = printed page). Paraphrase only.
+BOOKS = {
+    "greer2009": "J. M. Greer, The Art and Practice of Geomancy (Weiser, 2009)",
+    "greer1999": "J. M. Greer, Earth Divination, Earth Magic (Llewellyn, 1999)",
+    "skinner1980": "S. Skinner, Terrestrial Astrology: Divination by Geomancy (Routledge & Kegan Paul, 1980)",
+    "agrippa1655": "pseudo-Agrippa, Of Geomancy (Fourth Book, tr. Turner 1655; Peterson ed.)",
+    "gerard1655": "Gerard of Cremona, Of Astronomical Geomancy (tr. Turner 1655; Peterson ed.)",
+    "gd": "Golden Dawn, Geomancy (knowledge-lecture text)",
+}
 
 # ─── THE SIXTEEN FIGURES ───
 # bits = (fire, air, water, earth). Per-figure text is paraphrased from Digital Ambler's
@@ -222,15 +240,36 @@ SCHEMES: Dict[str, Dict[str, Any]] = {
                   "air": ["Albus", "Puella", "Tristitia", "Fortuna Minor"],
                   "water": ["Populus", "Rubeus", "Laetitia", "Via"],
                   "earth": ["Amissio", "Conjunctio", "Carcer", "Caput Draconis"]}),
-    "agrippa": dict(source=URL_AGRIPPA, note="Puer → Aries is an editorial reading of the 1655 text", signs={
+    "agrippa": dict(source=URL_AGRIPPA, note="Puer → Aries: the 1655 text prints 'Puella and Rubeus … Scorpio'; "
+                    "Peterson's edition (footnote 1) reads Puer", signs={
         "Puer": "Aries", "Puella": "Taurus", "Albus": "Gemini", "Populus": "Cancer", "Via": "Cancer",
         "Fortuna Major": "Leo", "Fortuna Minor": "Leo", "Conjunctio": "Virgo", "Amissio": "Libra",
         "Rubeus": "Scorpio", "Cauda Draconis": "Scorpio", "Laetitia": "Sagittarius", "Carcer": "Capricorn",
         "Caput Draconis": "Capricorn", "Tristitia": "Aquarius", "Acquisitio": "Pisces"},
-        elements={"fire": ["Puer", "Fortuna Major", "Fortuna Minor", "Laetitia"],
-                  "earth": ["Puella", "Conjunctio", "Carcer", "Caput Draconis"],
-                  "air": ["Albus", "Amissio", "Tristitia"],
-                  "water": ["Via", "Populus", "Rubeus", "Cauda Draconis", "Acquisitio"]}),
+        # Agrippa gives three element lists and says the one "according to the natures of the Planets,
+        # and the Figures themselves" is "rather to be observed" (Of Geomancy, PDF p.3). That one is used;
+        # the sign-triplicity list and the "vulgar" list are kept for reference.
+        elements={"fire": ["Fortuna Major", "Rubeus", "Puer", "Amissio"],
+                  "air": ["Fortuna Minor", "Puella", "Laetitia", "Conjunctio"],
+                  "water": ["Acquisitio", "Cauda Draconis", "Via", "Populus"],
+                  "earth": ["Carcer", "Tristitia", "Albus", "Caput Draconis"]},
+        elements_by_sign={"fire": ["Puer", "Fortuna Major", "Fortuna Minor", "Laetitia"],
+                          "earth": ["Puella", "Conjunctio", "Carcer", "Caput Draconis"],
+                          "air": ["Albus", "Amissio", "Tristitia"],
+                          "water": ["Via", "Populus", "Rubeus", "Cauda Draconis", "Acquisitio"]},
+        elements_vulgar={"fire": ["Cauda Draconis", "Fortuna Minor", "Amissio", "Rubeus"],
+                         "air": ["Acquisitio", "Laetitia", "Puer", "Conjunctio"],
+                         "water": ["Populus", "Via", "Albus", "Puella"],
+                         "earth": ["Caput Draconis", "Fortuna Major", "Carcer", "Tristitia"]}),
+    # greer: Greer 2009 pp.36-37 — the GD signs, plus Caput = Virgo and Cauda = Sagittarius; elements =
+    # Greer's "outer" element (= the GD list).
+    "greer": dict(source=BOOKS["greer2009"] + ", pp.36-37, 39-62", signs={
+        "Puer": "Aries", "Amissio": "Taurus", "Albus": "Gemini", "Populus": "Cancer", "Via": "Cancer",
+        "Fortuna Major": "Leo", "Fortuna Minor": "Leo", "Conjunctio": "Virgo", "Caput Draconis": "Virgo",
+        "Puella": "Libra", "Rubeus": "Scorpio", "Acquisitio": "Sagittarius", "Cauda Draconis": "Sagittarius",
+        "Carcer": "Capricorn", "Tristitia": "Aquarius", "Laetitia": "Pisces"}, elements="golden-dawn"),
+    # gerard: the sign Gerard puts on the Ascendant for each figure (Of Astronomical Geomancy, p.1);
+    # Gerard's own method uses no shield, Witnesses or Judge.
     "gerard": dict(source=URL_DA_ZODIAC, note="elements derived from the sign", signs={
         "Acquisitio": "Aries", "Fortuna Minor": "Taurus", "Laetitia": "Taurus", "Puer": "Gemini",
         "Rubeus": "Gemini", "Albus": "Cancer", "Via": "Leo", "Caput Draconis": "Virgo", "Conjunctio": "Virgo",
@@ -274,6 +313,28 @@ for _f in FIGURES:
     for _n in [_f["name"], _f["english"]] + _f["alt"][:1]:
         _BY_NAME[_n.lower()] = _f
 BY_VALUE = {f["value"]: f for f in FIGURES}
+
+# Greer 2009, ch. 3 (pp.39-62): one-word keyword and anatomy per figure (facts, not prose). Where the
+# anatomy differs from Digital Ambler's posts both are kept (`body` = DA, `greer_anatomy`).
+GREER_FIG = {
+    "Puer": ("Energy", "head", 39), "Amissio": ("Loss", "neck and throat", 41),
+    "Albus": ("Peace", "shoulders and lungs", 43), "Populus": ("Stability", "breasts and midriff", 44),
+    "Fortuna Major": ("Power", "heart and chest", 46), "Conjunctio": ("Interaction", "intestines and belly", 48),
+    "Puella": ("Harmony", "kidneys and lower back", 49), "Rubeus": ("Passion", "genitals", 51),
+    "Acquisitio": ("Gain", "hips and thighs", 52), "Carcer": ("Isolation", "knees and lower legs", 54),
+    "Tristitia": ("Sorrow", "ankles", 55), "Laetitia": ("Joy", "feet", 57),
+    "Cauda Draconis": ("Ending", "left arm", 58), "Caput Draconis": ("Beginning", "right arm", 60),
+    "Fortuna Minor": ("Swiftness", "spine", 61), "Via": ("Change", "stomach", 62),
+}
+for _f in FIGURES:
+    _f["greer_keyword"], _f["greer_anatomy"], _f["greer_page"] = GREER_FIG[_f["name"]]
+# Planets for company demi-simple: Greer 2009 Table 6-2 (p.122) counts the nodes with both their planets.
+PLANETS_FOR_COMPANY = {"Caput Draconis": {"Jupiter", "Venus"}, "Cauda Draconis": {"Saturn", "Mars"}}
+
+
+def planets(x: Any) -> set:
+    f = figure(x)
+    return PLANETS_FOR_COMPANY.get(f["name"], {f["planet"]})
 
 
 def figure(x: Any) -> Dict[str, Any]:
@@ -328,8 +389,11 @@ def opposite(a: Any) -> Dict[str, Any]:
 def attributions(x: Any, scheme: str = "golden-dawn") -> Dict[str, Any]:
     f, sc = figure(x), SCHEMES[scheme]
     sign = sc["signs"].get(f["name"])
-    if sc["elements"]:
-        elem = next((e for e, ns in sc["elements"].items() if f["name"] in ns), None)
+    els = sc["elements"]
+    if isinstance(els, str):
+        els = SCHEMES[els]["elements"]
+    if els:
+        elem = next((e for e, ns in els.items() if f["name"] in ns), None)
     else:
         elem = SIGN_ELEMENT.get(sign)
     return {"scheme": scheme, "sign": sign, "element": elem, "source": sc["source"],
@@ -480,7 +544,20 @@ def via_puncti(shield: Dict[str, Any]) -> Dict[str, Any]:
 # sequential: houses 1–12 = M1–M4, D1–D4, N1–N4 (Greer; Digital Ambler).
 # astrological: the GD paper (and pseudo-Agrippa): figure 1 → house 10, 2 → 1, 3 → 4, 4 → 7,
 #   5 → 11, 6 → 2, 7 → 5, 8 → 8, 9 → 12, 10 → 3, 11 → 6, 12 → 9.
+# angular: Skinner 1980 App. III (p.238): Mothers angular (I→1, II→4, III→7, IV→10), Daughters
+#   succedent (V→2, VIII→5, VII→8, VI→11), Nieces cadent (IX→3, XII→6, XI→9, X→12).
+# agrippa: pseudo-Agrippa's "true figure" (Of Geomancy, PDF p.5): Mothers → houses 1, 10, 7, 4;
+#   Daughters → 2, 11, 8, 5; cadent houses are *re-computed* by triplicity: 9 = 1+5, 6 = 10+2,
+#   3 = 7+11, 12 = 4+8 (Peterson's footnote corrects the printed "fourth" to "first").
 ASTRO_PLACEMENT = [10, 1, 4, 7, 11, 2, 5, 8, 12, 3, 6, 9]
+ANGULAR_PLACEMENT = [1, 4, 7, 10, 2, 11, 8, 5, 3, 12, 9, 6]
+AGRIPPA_PLACEMENT = [1, 10, 7, 4, 2, 11, 8, 5]
+HOUSE_METHODS = {
+    "sequential": "Mothers, Daughters, Nieces → houses 1-12 in order (Greer; Digital Ambler)",
+    "astrological": "GD paper: figure 1 → house 10, 2 → 1, 3 → 4, 4 → 7, 5 → 11 … 12 → 9",
+    "angular": "Skinner 1980 App. III p.238: Mothers angular 1/4/7/10, Daughters succedent, Nieces cadent",
+    "agrippa": "Agrippa's 'true figure': Mothers 1/10/7/4, Daughters 2/11/8/5, cadents by triplicity",
+}
 
 
 def house_chart(shield: Dict[str, Any], method: str = "sequential") -> Dict[int, Dict[str, Any]]:
@@ -489,7 +566,14 @@ def house_chart(shield: Dict[str, Any], method: str = "sequential") -> Dict[int,
         return {h + 1: first12[h] for h in range(12)}
     if method == "astrological":
         return {ASTRO_PLACEMENT[i]: first12[i] for i in range(12)}
-    raise ValueError("houses: sequential|astrological")
+    if method == "angular":
+        return {ANGULAR_PLACEMENT[i]: first12[i] for i in range(12)}
+    if method == "agrippa":
+        H = {AGRIPPA_PLACEMENT[i]: first12[i] for i in range(8)}
+        for h, (a, b) in {9: (1, 5), 6: (10, 2), 3: (7, 11), 12: (4, 8)}.items():
+            H[h] = add(H[a], H[b])
+        return dict(sorted(H.items()))
+    raise ValueError("houses: " + "|".join(HOUSE_METHODS))
 
 
 def _adjacent(h: int, abano: bool = False) -> List[int]:
@@ -499,8 +583,28 @@ def _adjacent(h: int, abano: bool = False) -> List[int]:
     return out
 
 
+def aspects(houses: Dict[int, Any], querent: int = 1, quesited: int = 7) -> List[Dict[str, Any]]:
+    """Greer 2009 pp.119-124: aspects between the significators' figures wherever they appear, but
+    never between the two significator houses themselves (at least one figure must have passed).
+    One house between = sextile, two = square, three = trine, five = opposition."""
+    H = {h: figure(f) for h, f in houses.items()}
+    q, s = H[querent], H[quesited]
+    kinds = {2: ("sextile", True), 3: ("square", False), 4: ("trine", True), 6: ("opposition", False)}
+    out = []
+    for a in [h for h in H if H[h] is q]:
+        for b in [h for h in H if H[h] is s]:
+            if (a, b) == (querent, quesited) or a == b:
+                continue
+            d = min((b - a) % 12, (a - b) % 12)
+            if d in kinds:
+                k, good = kinds[d]
+                out.append({"aspect": k, "favourable": good, "houses": [a, b],
+                            "dexter": (a - b) % 12 == d})
+    return out
+
+
 def perfection(houses: Dict[int, Any], querent: int = 1, quesited: int = 7,
-               abano: bool = False) -> Dict[str, Any]:
+               abano: bool = False, use_aspects: bool = False) -> Dict[str, Any]:
     """The four modes (MQS 2023; Digital Ambler 2014):
     occupation — the same figure in both significator houses;
     conjunction — either significator's figure also in a house next to the other's house;
@@ -515,11 +619,13 @@ def perfection(houses: Dict[int, Any], querent: int = 1, quesited: int = 7,
         for h in _adjacent(quesited, abano):
             if h not in (querent, quesited) and H[h] is q:
                 found.append({"mode": "conjunction", "detail": f"querent's {q['name']} passes to house {h}, "
-                              f"next to house {quesited}", "moves": "querent"})
+                              f"next to house {quesited}", "moves": "querent",
+                              "note": "querent gets it but must work for it (Greer 2009 p.116)"})
         for h in _adjacent(querent, abano):
             if h not in (querent, quesited) and H[h] is s:
                 found.append({"mode": "conjunction", "detail": f"quesited's {s['name']} passes to house {h}, "
-                              f"next to house {querent}", "moves": "quesited"})
+                              f"next to house {querent}", "moves": "quesited",
+                              "note": "no effort needed from the querent (Greer 2009 p.116)"})
         for a in range(1, 13):
             for b in _adjacent(a, abano):
                 if {a, b} & {querent, quesited}:
@@ -535,22 +641,33 @@ def perfection(houses: Dict[int, Any], querent: int = 1, quesited: int = 7,
             if near_q and near_s:
                 found.append({"mode": "translation", "detail": f"{f['name']} in house(s) "
                               f"{sorted(set(near_q + near_s))} bridges houses {querent} and {quesited}"})
-    order = ["occupation", "conjunction", "mutation", "translation"]
+    asp = aspects(H, querent, quesited) if use_aspects else []
+    if use_aspects:
+        for a in asp:
+            if a["favourable"]:
+                found.append({"mode": "favourable aspect", "detail": f"{a['aspect']} between houses "
+                              f"{a['houses'][0]} and {a['houses'][1]}"
+                              + (" (dexter, stronger)" if a["dexter"] else "")})
+    order = ["occupation", "conjunction", "mutation", "translation", "favourable aspect"]
     modes = sorted({x["mode"] for x in found}, key=order.index)
-    return {"querent": {"house": querent, "figure": q["name"]},
-            "quesited": {"house": quesited, "figure": s["name"]},
-            "perfects": bool(found), "modes": modes or ["denial"], "details": found,
-            "abano_adjacency": abano, "sources": [URL_MQS_PERFECTION]}
+    out = {"querent": {"house": querent, "figure": q["name"]},
+           "quesited": {"house": quesited, "figure": s["name"]},
+           "perfects": bool(found), "modes": modes or ["denial"], "details": found,
+           "abano_adjacency": abano, "sources": [URL_MQS_PERFECTION, BOOKS["greer2009"] + ", pp.114-124"]}
+    if use_aspects:
+        out["unfavourable_aspects"] = [a for a in asp if not a["favourable"]]
+    return out
 
 
 def company(houses: Dict[int, Any], house: int) -> Dict[str, Any]:
-    """Company of houses (pairs 1-2 … 11-12): simple (same figure), demi-simple (same planet),
-    compound (opposite figures), capitular (same Fire line) — Greer, Caduceus 2:3; DA 2015."""
+    """Company of houses (pairs 1-2 … 11-12): simple (same figure), demi-simple (same planet; the
+    nodes count with both their planets, Greer 2009 Table 6-2 p.122), compound (opposite figures),
+    capitular (same Fire line; Greer 1999 p.103 says this one "has no traditional name")."""
     partner = house + 1 if house % 2 else house - 1
     a, b = figure(houses[house]), figure(houses[partner])
     if a is b:
         kind = "simple"
-    elif a["planet"] == b["planet"]:
+    elif planets(a) & planets(b):
         kind = "demi-simple"
     elif opposite(a) is b:
         kind = "compound"
@@ -562,23 +679,205 @@ def company(houses: Dict[int, Any], house: int) -> Dict[str, Any]:
             "combined": name(add(a, b)) if kind else None, "sources": [URL_GREER_COMPANY, URL_DA_COMPANY]}
 
 
-def part_of_fortune(shield: Dict[str, Any], method: str = "sequential") -> Dict[str, Any]:
-    """GD paper: total points of the first twelve figures ÷ 12; the remainder (0 → 12) names the
-    figure, which then sits in its house."""
+POF_RULES = {
+    "gd": "GD paper: all points of figures 1-12 mod 12 (0 → 12) → that figure, in whatever house it sits",
+    "greer": "Greer 2009 p.128: all points of the twelve house figures mod 12 → that house",
+    "index": "Greer 2009 p.128 / 1999 p.102 'projection of points' (Index): single points only → house",
+    "agrippa": "Agrippa PDF p.7: every point projected in casting (the 16 raw dot counts) mod 12 → house",
+}
+
+
+def part_of_fortune(shield: Dict[str, Any], method: str = "sequential", rule: str = "gd",
+                    dots: Optional[Sequence[int]] = None) -> Dict[str, Any]:
+    """Part of Fortune / Index by one of POF_RULES. Note: the singles in figures 1-12 are always
+    even (census), so 'gd', 'greer' and 'index' can only land on even counts."""
+    if rule not in POF_RULES:
+        raise ValueError("pof rule: " + "|".join(POF_RULES))
     first12 = [figure(shield[p]) for p in POSITIONS[:12]]
-    total = sum(f["points"] for f in first12)
-    idx = total % 12 or 12
-    house = idx if method == "sequential" else ASTRO_PLACEMENT[idx - 1]
-    return {"points": total, "figure_number": idx, "house": house, "figure": first12[idx - 1]["name"],
-            "source": URL_GD}
+    H = house_chart(shield, method)
+    src = {"gd": URL_GD, "greer": BOOKS["greer2009"] + ", p.128", "index": BOOKS["greer2009"] + ", p.128",
+           "agrippa": URL_AGRIPPA}[rule]
+    if rule == "gd":
+        total = sum(f["points"] for f in first12)
+        idx = total % 12 or 12
+        house = {"sequential": idx, "astrological": ASTRO_PLACEMENT[idx - 1],
+                 "angular": ANGULAR_PLACEMENT[idx - 1]}.get(method)
+        if house is None:   # agrippa placement: figure idx may not be in the chart; fall back to house idx
+            house = AGRIPPA_PLACEMENT[idx - 1] if idx <= 8 else idx
+        return {"rule": rule, "points": total, "figure_number": idx, "house": house,
+                "figure": H[house]["name"], "source": src}
+    if rule == "agrippa":
+        if dots is None:
+            return {"rule": rule, "available": False, "note": "needs the raw dot counts (--dots)", "source": src}
+        total = sum(int(c) for c in dots)
+    elif rule == "greer":
+        total = sum(H[h]["points"] for h in range(1, 13))
+    elif rule == "index":
+        total = sum(sum(H[h]["bits"]) for h in range(1, 13))
+    else:
+        raise ValueError("pof rule: " + "|".join(POF_RULES))
+    house = total % 12 or 12
+    return {"rule": rule, "points": total, "house": house, "figure": H[house]["name"], "source": src}
 
 
 def impediment(houses: Dict[int, Any]) -> Optional[str]:
-    """GD paper: 'If Rubeus or Cauda Draconis in Ascendant destroy the figure.'"""
+    """GD paper: 'If Rubeus or Cauda Draconis in Ascendant destroy the figure.' (= halting('gd'))."""
     f = figure(houses[1])["name"]
     if f in ("Rubeus", "Cauda Draconis"):
         return f"{f} in house 1: the GD paper says the chart is unfit for judgement (re-cast)"
     return None
+
+
+# ─── HALTED CHARTS (per-source variants) ───
+HALT_RULES: Dict[str, Dict[str, Any]] = {
+    "gd": dict(figures=("Rubeus", "Cauda Draconis"), halts=True, source=URL_GD,
+               rule="Rubeus or Cauda Draconis in the Ascendant: destroy the figure; it 'makes the "
+                    "judgment worthless' (summary of stages, step 1; house tables)."),
+    "skinner": dict(figures=("Rubeus", "Cauda Draconis"), halts=True,
+                    source=BOOKS["skinner1980"] + ", pp.211-212, 217",
+                    rule="Rubeus or Cauda in the first house: not fit for judgement, destroy it, and do not "
+                         "ask again for a couple of hours, preferably a day. Reason given: both mean a short "
+                         "life or ill fortune for the querent, and judging it would be tempting fate."),
+    "skinner-strict": dict(figures=("Rubeus", "Cauda Draconis", "Carcer"), halts=True,
+                           source=BOOKS["skinner1980"] + ", pp.192-193, 211-212",
+                           rule="As 'skinner', plus Carcer: his figure chapter says Carcer in the first house "
+                                "means discontinue, destroy, and wait some hours."),
+    "greer": dict(figures=(), halts=False, source=BOOKS["greer2009"] + ", pp.101-102, 166-168",
+                  rule="No halt: the old warning figures say something about the querent (see warnings); "
+                       "mention it, or for yourself ask whether you are being honest."),
+    "greer-stranger": dict(figures=(), halts=True, source=BOOKS["greer2009"] + ", p.168",
+                           rule="Reading for a stranger: if a deceptive-question pattern appears, end the "
+                                "reading, return any fee, and say the question cannot be answered."),
+    "digital-ambler": dict(figures=(), halts=False,
+                           source=DA_POST + "2013/01/15/de-geomanteia-cauda-draconis-he-ceased-his-fearless-roar/",
+                           rule="No halt: Cauda in the first house usually means the querent's mind is made up, "
+                                "so the reading is worthless rather than sinister."),
+    "agrippa": dict(figures=(), halts=False, source=URL_AGRIPPA,
+                    rule="No halting rule in Of Geomancy; Rubeus in the first house is read (short life, "
+                         "evil end; PDF p.16)."),
+    "gerard": dict(figures=(), halts=False, source=BOOKS["gerard1655"] + ", p.2",
+                   rule="No figure-based halt. Preconditions only: not in rainy, cloudy or very windy weather, "
+                        "not when angry or preoccupied, not for tempters or mockers, never repeat a question."),
+    "none": dict(figures=(), halts=False, source=None, rule="never halt"),
+}
+
+
+def querent_warnings(houses: Dict[int, Any], quesited: int = 7) -> List[Dict[str, str]]:
+    """Greer 2009 pp.101-102 and 166-168: first-house figures that warn about the querent.
+    (The 7th-house checks apply when the geomancer reads for someone else.)"""
+    H = {h: figure(f)["name"] for h, f in houses.items()}
+    q = H[1]
+    src = BOOKS["greer2009"]
+    w = []
+    if q == "Rubeus":
+        w.append({"pattern": "Rubeus in 1", "meaning": "hidden motives: the querent may not be honest with the "
+                  "geomancer, or with themself", "source": src + ", pp.101-102, 167"})
+        if quesited != 1 and H[quesited] == "Rubeus":
+            w.append({"pattern": "Rubeus occupation", "meaning": "the querent is probably lying deliberately",
+                      "source": src + ", p.167"})
+    if q == "Amissio":
+        w.append({"pattern": "Amissio in 1", "meaning": "the querent is withholding information the reading "
+                  "needs", "source": src + ", p.167"})
+    if q == "Populus":
+        w.append({"pattern": "Populus in 1", "meaning": "the question asked is not what the querent really "
+                  "wants to know", "source": src + ", p.167"})
+        if H[11] == "Rubeus":
+            w.append({"pattern": "Populus in 1 + Rubeus in 11", "meaning": "a fake question, set to trick the "
+                      "geomancer", "source": src + ", pp.101-102, 167"})
+    if q == "Cauda Draconis":
+        w.append({"pattern": "Cauda Draconis in 1", "meaning": "the querent has already decided and is shopping "
+                  "for agreement", "source": src + ", pp.101-102, 167"})
+    passes = [h for h in H if H[h] == q and h != 1]
+    seventh = [h for h in H if H[h] == H[7] and h != 7]
+    sq = any(min((a - b) % 12, (b - a) % 12) in (3, 6) for a in passes for b in seventh)
+    if any(h in (4, 10) for h in passes) or sq:
+        w.append({"pattern": "querent squares/opposes the 7th (the geomancer)",
+                  "meaning": "the querent will not take the geomancer's advice"
+                  + ("; with Populus, the reading is a waste of time" if q == "Populus" else ""),
+                  "source": src + ", pp.167-168", "for_other": "yes"})
+    return w
+
+
+def halting(houses: Dict[int, Any], rule: str = "gd", quesited: int = 7,
+            shield: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    """Is the chart 'halted' (not to be judged) under one source's rule? Checks the figure in house 1
+    of the chart actually used (with sequential houses that is the First Mother)."""
+    r = HALT_RULES[rule]
+    f1 = figure(houses[1])["name"]
+    warnings = querent_warnings(houses, quesited)
+    if rule == "greer-stranger":
+        halted = bool(warnings)
+        fired = [w["pattern"] for w in warnings]
+    elif rule == "digital-ambler":
+        halted, fired = False, (["Cauda Draconis in 1"] if f1 == "Cauda Draconis" else [])
+    elif rule == "agrippa":
+        halted, fired = False, []
+    else:
+        fired = [f"{f1} in 1"] if f1 in r["figures"] else []
+        halted = bool(fired) and r["halts"]
+    out = {"rule": rule, "halted": halted, "fired": fired, "house1": f1, "explanation": r["rule"],
+           "source": r["source"], "warnings": warnings}
+    if shield is not None:
+        out["first_mother"] = figure(shield["M1"])["name"]
+    return out
+
+
+def all_halting(houses: Dict[int, Any], quesited: int = 7) -> Dict[str, bool]:
+    return {r: halting(houses, r, quesited)["halted"] for r in HALT_RULES}
+
+
+# ─── WHAT TO DO (interpretive; our own wording) ───
+# Approach after Alexander Cummins (figure-led remediation, house by house; see geomancy-notes);
+# the figure tendencies behind each line are the sourced meanings above. Not traditional text.
+REMEDY = {
+    "Populus": "gather support and wait; let the situation show its direction; work through groups and routine",
+    "Via": "keep moving: change the routine, travel, let go of what holds you in place rather than fixing it",
+    "Albus": "slow down and think; take advice, plan on paper, keep the peace; don't force or rush",
+    "Conjunctio": "arrange the meeting or call and bring the right people together; check who you join with",
+    "Puella": "lead with courtesy and harmony; mend relationships, but secure anything that must last",
+    "Amissio": "release what is already going: cut losses, settle debts, give freely; don't chase gain now",
+    "Fortuna Major": "commit for the long haul and act from your own strength; persistence pays",
+    "Fortuna Minor": "act quickly while outside help lasts; plan an exit rather than a siege",
+    "Puer": "act directly and decisively, but channel the force; avoid picking fights",
+    "Rubeus": "cool down before acting; name the passion or anger behind the question; be honest about motives",
+    "Acquisitio": "ask, apply, invest, collect what is owed: take in while the tide is in",
+    "Laetitia": "raise your sights and enjoy it; don't promise permanence or rely on secrecy",
+    "Tristitia": "work on foundations (money, body, property); accept slow work and rest where needed",
+    "Carcer": "consolidate and protect; set boundaries, use the delay; don't force the door",
+    "Caput Draconis": "begin: take the first step and choose good company for it",
+    "Cauda Draconis": "end it cleanly: finish, close and let go; don't start anything new now",
+}
+HOUSE_FOCUS = {
+    1: "your own health, outlook and presentation", 2: "money and possessions", 3: "messages, paperwork, "
+    "siblings and neighbours, short trips", 4: "home, family, property, and how the matter ends",
+    5: "pleasure, creativity, children, risks taken for enjoyment", 6: "daily work, health routines, dependants",
+    7: "partners, contracts and open rivals", 8: "shared money, debts, inheritance, fears",
+    9: "study, long journeys, belief, expert advice", 10: "career, reputation, people in authority",
+    11: "friends, allies, hopes and plans", 12: "hidden matters, retreat, secret opposition, self-sabotage"}
+
+
+def remedy_for(x: Any, house: int) -> Dict[str, Any]:
+    f = figure(x)
+    gd = f["gd_houses"][house - 1]
+    return {"house": house, "figure": f["name"], "focus": HOUSE_FOCUS[house], "do": REMEDY[f["name"]],
+            "gd_verdict": gd, "text": f"In {HOUSE_FOCUS[house]}: {REMEDY[f['name']]}.", "interpretive": True}
+
+
+def remediation(houses: Dict[int, Any], querent: int, quesited: int, judge: Any,
+                halt: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    items = [dict(remedy_for(houses[querent], querent), role="querent"),
+             dict(remedy_for(houses[quesited], quesited), role="quesited")]
+    j = figure(judge)
+    items.append({"role": "judge", "figure": j["name"], "do": REMEDY[j["name"]], "interpretive": True,
+                  "text": f"Overall: {REMEDY[j['name']]}."})
+    out = {"interpretive": True, "items": items,
+           "basis": "own wording; figure-led remediation by house after A. Cummins; meanings as sourced above"}
+    if halt and halt.get("halted"):
+        out["halted"] = ("Set the chart aside. Reword the question so it is one you really want answered, "
+                         "be candid about what you already know or want, and cast again later (Skinner: hours "
+                         "to a day). Cummins treats a halted shield as something to clear ritually before "
+                         "divining again (from his Nazarth description; not checked against the book).")
+    return out
 
 
 def house_for_topic(text: str) -> Optional[int]:
@@ -648,6 +947,7 @@ def census(zone_map: str = "dr", method: str = "sequential", gate_rule: str = "d
     judge, judge_zone, all_zone, house_zone = Counter(), Counter(), Counter(), Counter()
     vp, pof, unique15, impeded, perfect17 = Counter(), Counter(), 0, 0, 0
     odd_total = {12: 0, 15: 0, 16: 0}
+    halts, warn = Counter(), Counter()
     for bits16 in range(65536):
         sh = shield_from_mothers(mothers_from_bits(bits16))
         figs = [sh[p] for p in POSITIONS]
@@ -668,6 +968,10 @@ def census(zone_map: str = "dr", method: str = "sequential", gate_rule: str = "d
                 odd_total[n] += 1
         if impediment(H):
             impeded += 1
+        for r, v in all_halting(H).items():
+            halts[r] += v
+        for w in querent_warnings(H):
+            warn[w["pattern"]] += 1
         if perfection(H, 1, 7)["perfects"]:
             perfect17 += 1
     zsum = sorted({(dr9(f["value"]) + dr9(15 - f["value"])) % 9 for f in FIGURES})
@@ -680,6 +984,7 @@ def census(zone_map: str = "dr", method: str = "sequential", gate_rule: str = "d
             "charts_with_15_unique_figures": unique15,
             "odd_total_single_points": {f"first_{n}": c for n, c in odd_total.items()},
             "impeded_charts": impeded, "perfects_1_7": perfect17,
+            "halted_by_rule": {r: halts[r] for r in HALT_RULES}, "greer_warnings": dict(sorted(warn.items())),
             "dr_of_syzygy_pair_sums_mod9": zsum}
 
 
@@ -694,11 +999,15 @@ def _brief(f: Dict[str, Any], scheme: str, zone_map: str) -> Dict[str, Any]:
 def cast_geomancy(seed: Optional[int] = None, hardware: bool = False, dots: Optional[Sequence[int]] = None,
                   mothers: Optional[Sequence[Any]] = None, quesited: int = 7, querent: int = 1,
                   scheme: str = "golden-dawn", houses: str = "sequential", zone_map: str = "dr",
-                  gate_rule: str = "dr", abano: bool = False, question: Optional[str] = None
+                  gate_rule: str = "dr", abano: bool = False, question: Optional[str] = None,
+                  halt_rule: str = "gd", pof_rule: str = "gd", use_aspects: bool = False
                   ) -> Dict[str, Any]:
     """One complete reading as a JSON-safe dict (the shape a future /geomancy endpoint returns)."""
     if scheme not in SCHEMES:
         raise ValueError(f"scheme: {'|'.join(SCHEMES)}")
+    if halt_rule not in HALT_RULES or pof_rule not in POF_RULES or houses not in HOUSE_METHODS:
+        raise ValueError("halt rule: " + "|".join(HALT_RULES) + "; pof rule: " + "|".join(POF_RULES)
+                         + "; houses: " + "|".join(HOUSE_METHODS))
     if not (1 <= quesited <= 12 and 1 <= querent <= 12) or quesited == querent:
         raise ValueError("querent and quesited must be different houses 1–12")
     ms, source = cast_mothers(seed=seed, hardware=hardware, dots=dots, mothers=mothers)
@@ -706,22 +1015,28 @@ def cast_geomancy(seed: Optional[int] = None, hardware: bool = False, dots: Opti
     H = house_chart(sh, houses)
     reconciler = add(sh["J"], H[quesited])
     j = sh["J"]
+    halt = halting(H, halt_rule, quesited, sh)
     return {
         "system": "geomancy", "source": source, "question": question,
         "options": {"scheme": scheme, "houses": houses, "zone_map": zone_map, "gate_rule": gate_rule,
-                    "querent": querent, "quesited": quesited, "abano": abano},
+                    "querent": querent, "quesited": quesited, "abano": abano, "halt_rule": halt_rule,
+                    "pof_rule": pof_rule, "aspects": use_aspects},
         "shield": {p: _brief(sh[p], scheme, zone_map) for p in POSITIONS},
         "houses": {str(h): dict(_brief(H[h], scheme, zone_map), meaning=HOUSE_MEANINGS[h],
                                 gd=H[h]["gd_houses"][h - 1]) for h in range(1, 13)},
         "judge": {"name": j["name"], "gd_general": j["gd_general"], "favourable": j["favourable"],
                   "unfavourable": j["unfavourable"], "source": j["da"]},
         "sentence": sh["S"]["name"], "reconciler_gd": reconciler["name"],
+        "reconciler_greer": add(sh["J"], H[1])["name"],
         "validation": validate(sh),
         "via_puncti": via_puncti(sh),
-        "perfection": perfection(H, querent, quesited, abano),
+        "perfection": perfection(H, querent, quesited, abano, use_aspects),
         "company": [company(H, h) for h in (querent, quesited)],
-        "part_of_fortune": part_of_fortune(sh, houses),
+        "part_of_fortune": part_of_fortune(sh, houses, pof_rule, dots),
+        "index_greer": part_of_fortune(sh, houses, "index"),
         "impediment": impediment(H),
+        "halting": halt, "halting_all_rules": all_halting(H, quesited),
+        "remediation": remediation(H, querent, quesited, j, halt),
         "numogram": {
             "speculative": True,
             "zone_map": zone_map, "zone_map_meaning": ZONE_MAPS[zone_map],
@@ -741,22 +1056,43 @@ SHORT = {"Fortuna Major": "Fort.Maj", "Fortuna Minor": "Fort.Min", "Caput Dracon
          "Cauda Draconis": "Cauda Dr", "Acquisitio": "Acquisit", "Conjunctio": "Conjunct"}
 
 
+# Latin cell labels of the user's blank shield template (traditional house names; position i of the
+# shield = house i, i.e. the sequential placement). Element marks: the i-th Mother/Daughter/Niece cell
+# carries the element of line i (Fire, Air, Water, Earth), as the template's triangles do.
+LATIN_HOUSE = {1: "Vita", 2: "Lucrum", 3: "Fratres", 4: "Genitor", 5: "Nati", 6: "Valetudo", 7: "Uxor",
+               8: "Mors", 9: "Iter", 10: "Regnum", 11: "Benefacta", 12: "Carcer"}
+POS_HOUSE = {p: i + 1 for i, p in enumerate(POSITIONS[:12])}
+ELEMENT_MARK = {"unicode": {"fire": "🜂", "air": "🜁", "water": "🜄", "earth": "🜃"},
+                "plain": {"fire": "F", "air": "A", "water": "W", "earth": "E"}}
+
+
+def position_element(pos: str) -> Optional[str]:
+    return LINES[int(pos[1]) - 1] if pos[0] in "MDN" and len(pos) == 2 else None
+
+
 def format_shield(data: Dict[str, Any], style: str = "unicode") -> List[str]:
     sh = data["shield"]
+    marks = ELEMENT_MARK["plain" if style == "plain" else "unicode"]
 
-    def row(keys: Sequence[str], width: int) -> List[str]:
+    def row(keys: Sequence[str], width: int, labels: bool = True) -> List[str]:
         cols = [render(sh[k]["bits"], style) for k in keys]
-        out = ["".join(c[i].center(width) for c in cols) for i in range(4)]
+        out = []
+        if labels:
+            out.append("".join((marks.get(position_element(k) or "", "") + " " + str(POS_HOUSE.get(k, ""))
+                                ).strip().center(width) for k in keys))
+        out += ["".join(c[i].center(width) for c in cols) for i in range(4)]
         out.append("".join((sh[k]["name"] if width > 10 else SHORT.get(sh[k]["name"], sh[k]["name"]))
                            .center(width) for k in keys))
+        lab = [LATIN_HOUSE.get(POS_HOUSE.get(k, 0)) or POSITION_NAMES.get(k, k) for k in keys]
+        out.append("".join(("[" + x + "]").center(width) for x in lab))
         return out
 
     lines: List[str] = []
-    # Traditional layout reads right to left: M1 is the rightmost figure on the top row.
+    # Template layout, read right to left: Vita (First Mother) is the rightmost top cell.
     lines += row(["D4", "D3", "D2", "D1", "M4", "M3", "M2", "M1"], 9)
     lines += [""] + row(["N4", "N3", "N2", "N1"], 18)
-    lines += [""] + row(["LW", "RW"], 36)
-    lines += [""] + row(["J"], 72)
+    lines += [""] + row(["LW", "RW"], 36, labels=False)
+    lines += [""] + row(["J"], 72, labels=False)
     return lines
 
 
@@ -764,7 +1100,7 @@ def format_geomancy(data: Dict[str, Any], style: str = "unicode", full: bool = F
     o = data["options"]
     sep = "══════════════════════════════════════════════════════════════════════"
     out = [sep, "  GEOMANCY — SHIELD CHART", f"  Source: {data['source']}   scheme: {o['scheme']}   "
-           f"houses: {o['houses']}", sep]
+           f"houses: {o['houses']}   halt rule: {o['halt_rule']}", sep]
     if data.get("question"):
         out.append(f"  Question: {data['question']}")
     out += format_shield(data, style)
@@ -772,8 +1108,17 @@ def format_geomancy(data: Dict[str, Any], style: str = "unicode", full: bool = F
     out += ["", f"  Judge: {j['name']} — {j['gd_general']}",
             f"    favourable: {j['favourable']}", f"    unfavourable: {j['unfavourable']}",
             f"  Witnesses: right {data['shield']['RW']['name']}, left {data['shield']['LW']['name']}"
-            f"   Sentence (J+M1): {data['sentence']}   GD Reconciler (J+house {o['quesited']}): "
+            f"   Sentence/Reconciler (J+M1): {data['sentence']}   GD Reconciler (J+house {o['quesited']}): "
             f"{data['reconciler_gd']}"]
+    hl = data["halting"]
+    if hl["halted"]:
+        out.insert(4, f"  ⛔ HALTED ({hl['rule']}): {', '.join(hl['fired'])} — {hl['explanation']}")
+        out.insert(5, f"     source: {hl['source']}")
+    other = [r for r, v in data["halting_all_rules"].items() if v and r != hl["rule"]]
+    if other:
+        out.append(f"  Would halt under: {', '.join(other)} (--halt-rule)")
+    for w in hl.get("warnings", []):
+        out.append(f"  ⚠ {w['pattern']}: {w['meaning']} ({w['source']})")
     v = data["validation"]
     out.append(f"  Checks: judge even {'✓' if v['judge_even'] else '✗'}, repeat {'✓' if v['repeat_in_16'] else '✗'}, "
                f"inseparables {'✓' if v['inseparables']['ok'] else '✗'} "
@@ -798,11 +1143,18 @@ def format_geomancy(data: Dict[str, Any], style: str = "unicode", full: bool = F
     for c in data["company"]:
         if c["company"]:
             out.append(f"  Company {c['house']}–{c['partner']}: {c['company']} ({' + '.join(c['figures'])})")
+    for a in p.get("unfavourable_aspects", [])[:3]:
+        out.append(f"    unfavourable aspect: {a['aspect']} between houses {a['houses'][0]} and {a['houses'][1]}")
     pf = data["part_of_fortune"]
-    out.append(f"  Part of Fortune: {pf['points']} points → figure {pf['figure_number']}, house {pf['house']} "
-               f"({pf['figure']})")
-    if data["impediment"]:
-        out.append(f"  ⚠ {data['impediment']}")
+    if pf.get("available", True):
+        out.append(f"  Part of Fortune ({pf['rule']}): {pf['points']} points → house {pf['house']} ({pf['figure']})"
+                   f"   Index (singles): house {data['index_greer']['house']} ({data['index_greer']['figure']})")
+    rm = data["remediation"]
+    out += ["", "  What to do [interpretive — our wording, not traditional text]:"]
+    if rm.get("halted"):
+        out.append(f"    {rm['halted']}")
+    for it in rm["items"]:
+        out.append(f"    {it['role']} ({it['figure']}): {it['text']}")
     n = data["numogram"]
     b = n["base16_judge"]
     out += ["", "  [speculative numogram hooks — not traditional geomancy]",
@@ -853,7 +1205,10 @@ def main(argv: Optional[List[str]] = None) -> int:
     houses = _opt(args, "--houses", "sequential")
     zone_map = _opt(args, "--zone-map", "dr")
     gate_rule = _opt(args, "--gate-rule", "dr")
-    for flag, val, ok in (("--scheme", scheme, SCHEMES), ("--houses", houses, ("sequential", "astrological")),
+    halt_rule = _opt(args, "--halt-rule", "gd")
+    pof_rule = _opt(args, "--pof-rule", "gd")
+    for flag, val, ok in (("--scheme", scheme, SCHEMES), ("--houses", houses, HOUSE_METHODS),
+                          ("--halt-rule", halt_rule, HALT_RULES), ("--pof-rule", pof_rule, POF_RULES),
                           ("--zone-map", zone_map, ZONE_MAPS), ("--gate-rule", gate_rule, ("dr", "mod"))):
         if val not in ok:
             print(f"{flag} must be one of {', '.join(ok)}"); return 2
@@ -895,9 +1250,17 @@ def main(argv: Optional[List[str]] = None) -> int:
         data = cast_geomancy(seed=seed, hardware="--hardware" in args, dots=dots, mothers=mothers,
                              quesited=quesited, querent=querent, scheme=scheme, houses=houses,
                              zone_map=zone_map, gate_rule=gate_rule, abano="--abano" in args,
-                             question=question)
+                             question=question, halt_rule=halt_rule, pof_rule=pof_rule,
+                             use_aspects="--aspects" in args)
     except ValueError as e:
         print(f"geomancy: {e}"); return 2
+    if "--svg" in args:
+        path = _opt(args, "--svg")
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import geomancy_svg
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.write(geomancy_svg.shield_svg(data))
+        print(f"wrote {path}", file=sys.stderr)
     if "--json" in args:
         print(json.dumps(data, indent=2, ensure_ascii=False))
     else:

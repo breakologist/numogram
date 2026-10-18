@@ -236,3 +236,130 @@ class CLI(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+ALL12 = ["Puer", "Via", "Albus", "Carcer", "Laetitia", "Populus", "Puella", "Amissio", "Tristitia",
+         "Conjunctio", "Acquisitio", "Fortuna Major"]
+
+
+class RoundTwo(unittest.TestCase):
+    """Halting, placements, Part of Fortune rules, aspects, remediation, SVG (round 2)."""
+
+    def test_halting_variants(self):
+        H = chart("Rubeus", *ALL12[1:])
+        a = G.all_halting(H)
+        self.assertTrue(a["gd"] and a["skinner"] and a["skinner-strict"] and a["greer-stranger"])
+        self.assertFalse(a["greer"] or a["digital-ambler"] or a["agrippa"] or a["gerard"] or a["none"])
+        h = G.halting(H, "gd")
+        self.assertEqual(h["fired"], ["Rubeus in 1"])
+        self.assertIn("worthless", h["explanation"])
+        C = chart("Carcer", *ALL12[1:])
+        self.assertTrue(G.halting(C, "skinner-strict")["halted"])
+        self.assertFalse(G.halting(C, "skinner")["halted"])
+        D = chart("Cauda Draconis", *ALL12[1:])
+        self.assertEqual(G.halting(D, "digital-ambler")["fired"], ["Cauda Draconis in 1"])
+        self.assertFalse(G.halting(D, "digital-ambler")["halted"])
+
+    def test_greer_warnings(self):
+        names = ["Populus"] + ALL12[1:]
+        names[10] = "Rubeus"                      # house 11
+        pats = [w["pattern"] for w in G.querent_warnings(chart(*names))]
+        self.assertIn("Populus in 1", pats)
+        self.assertIn("Populus in 1 + Rubeus in 11", pats)
+        names = ["Rubeus"] + ALL12[1:]
+        names[6] = "Rubeus"
+        self.assertIn("Rubeus occupation", [w["pattern"] for w in G.querent_warnings(chart(*names))])
+        self.assertIn("Amissio in 1", [w["pattern"] for w in G.querent_warnings(chart("Amissio", *ALL12[1:]))])
+        names = list(ALL12)
+        names[3] = "Puer"                         # querent's figure passes to house 4
+        self.assertTrue(any("7th" in w["pattern"] for w in G.querent_warnings(chart(*names))))
+        self.assertEqual(G.querent_warnings(chart(*ALL12)), [])
+
+    def test_placements_new(self):
+        sh = G.shield_from_mothers(["Puer", "Via", "Albus", "Carcer"])
+        first12 = [sh[p]["name"] for p in G.POSITIONS[:12]]
+        ang = G.house_chart(sh, "angular")
+        self.assertEqual([ang[h]["name"] for h in (1, 4, 7, 10)], first12[:4])
+        ag = G.house_chart(sh, "agrippa")
+        self.assertEqual([ag[h]["name"] for h in (1, 10, 7, 4)], first12[:4])
+        self.assertEqual(ag[9]["name"], G.add(ag[1], ag[5])["name"])
+        self.assertEqual(ag[12]["name"], G.add(ag[4], ag[8])["name"])
+        self.assertEqual(sorted(ag), list(range(1, 13)))
+
+    def test_pof_rules(self):
+        sh = G.shield_from_mothers(["Puer", "Via", "Albus", "Carcer"])
+        for r in ("gd", "greer", "index"):
+            p = G.part_of_fortune(sh, rule=r)
+            self.assertTrue(1 <= p["house"] <= 12)
+            self.assertEqual(p["house"], p["points"] % 12 or 12)
+        self.assertFalse(G.part_of_fortune(sh, rule="agrippa")["available"])
+        self.assertEqual(G.part_of_fortune(sh, rule="agrippa", dots=[1] * 16)["house"], 4)   # 16 mod 12
+        with self.assertRaises(ValueError):
+            G.part_of_fortune(sh, rule="nope")
+
+    def test_aspects_greer(self):
+        names = list(ALL12)
+        names[2] = "Puer"                         # querent's Puer passes to 3; 3→7 is four houses on = trine
+        H = chart(*names)
+        asp = G.aspects(H, 1, 7)
+        self.assertTrue(any(a["aspect"] == "trine" and a["houses"] == [3, 7] for a in asp))
+        self.assertFalse(any(a["houses"] == [1, 7] for a in asp))
+        p = G.perfection(H, 1, 7, use_aspects=True)
+        self.assertIn("favourable aspect", p["modes"])
+
+    def test_remediation_interpretive(self):
+        d = G.cast_geomancy(seed=5)
+        rm = d["remediation"]
+        self.assertTrue(rm["interpretive"])
+        self.assertEqual([i["role"] for i in rm["items"]], ["querent", "quesited", "judge"])
+        self.assertEqual(set(G.REMEDY), {f["name"] for f in G.FIGURES})
+        self.assertEqual(set(G.HOUSE_FOCUS), set(range(1, 13)))
+        self.assertIn("interpretive", G.format_geomancy(d))
+
+    def test_cast_keys_and_halt_flag(self):
+        d = G.cast_geomancy(mothers=["Rubeus", "Via", "Albus", "Carcer"])
+        self.assertTrue(d["halting"]["halted"])
+        self.assertIn("halted", d["remediation"])
+        self.assertEqual(d["halting"]["first_mother"], "Rubeus")
+        self.assertIn("HALTED", G.format_geomancy(d))
+        self.assertFalse(G.cast_geomancy(mothers=["Rubeus", "Via", "Albus", "Carcer"],
+                                         halt_rule="greer")["halting"]["halted"])
+        for k in ("reconciler_greer", "halting_all_rules", "index_greer"):
+            self.assertIn(k, d)
+
+    def test_census_halts(self):
+        c = G.census()
+        self.assertEqual(c["halted_by_rule"]["gd"], 8192)        # 2 of 16 figures in house 1
+        self.assertEqual(c["halted_by_rule"]["skinner-strict"], 12288)
+        self.assertEqual(c["halted_by_rule"]["none"], 0)
+        self.assertEqual(c["greer_warnings"]["Rubeus in 1"], 4096)
+
+    def test_text_template_labels(self):
+        txt = "\n".join(G.format_shield(G.cast_geomancy(seed=1), "plain"))
+        for lab in ("[Vita]", "[Mors]", "[Iter]", "[Carcer]", "[Judge]"):
+            self.assertIn(lab, txt)
+        self.assertLess(txt.index("[Mors]"), txt.index("[Vita]"))   # right-to-left top row
+
+    def test_svg(self):
+        import xml.etree.ElementTree as ET
+        import geomancy_svg
+        svg = geomancy_svg.shield_svg(G.cast_geomancy(seed=192855))
+        root = ET.fromstring(svg)
+        self.assertTrue(root.tag.endswith("svg"))
+        txt = "".join(root.itertext())
+        for lab in ("Vita", "Benefacta", "Left Witness", "Judge", "Amissio"):
+            self.assertIn(lab, txt)
+        circles = [e for e in root.iter() if e.tag.endswith("circle")]
+        sh = G.cast_geomancy(seed=192855)["shield"]
+        self.assertEqual(len(circles), sum(G.figure(sh[p]["name"])["points"] for p in G.POSITIONS[:15]))
+
+    def test_cli_round_two(self):
+        with tempfile.TemporaryDirectory() as t:
+            out = os.path.join(t, "s.svg")
+            r = run("geomancy.py", "--seed", "4", "--halt-rule", "skinner", "--pof-rule", "index",
+                    "--houses", "angular", "--aspects", "--scheme", "greer", "--svg", out)
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertTrue(os.path.getsize(out) > 1000)
+        self.assertEqual(run("geomancy.py", "--halt-rule", "bogus").returncode, 2)
+        j = json.loads(run("geomancy.py", "--seed", "4", "--json", "--houses", "agrippa").stdout)
+        self.assertEqual(j["options"]["houses"], "agrippa")
