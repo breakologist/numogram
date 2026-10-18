@@ -85,3 +85,13 @@ The power-of-2 cycle resets through Zone 1 every six doublings — the point whe
 - [[zone]] — overview
 - [[numogram-calculator]] — ZONE_DATA
 - [[pandemonium-matrix-45-demons]] — demon assignments
+
+## Note on current names (2026-10-17)
+
+Three naming sets are in use; only the first is CCRU's ([glossary](http://www.ccru.net/id%28entity%29/glossary.htm)):
+
+- **CCRU current fed by Zone 1** (its syzygy 1::8): **Surge**.
+- **Current received** (Zone 1 as tractor zone): Sink (4::5 → 1).
+- **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Surge". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
+
+Statements on this page such as "Current: …" may use either of the first two senses.

@@ -103,3 +103,13 @@ Zone 4's character — a cleavage that operates at the boundary between two stat
 
 
 **Pentagram coordinate:** **Outer ring down‑right** (45° vertex)
+
+## Note on current names (2026-10-17)
+
+Three naming sets are in use; only the first is CCRU's ([glossary](http://www.ccru.net/id%28entity%29/glossary.htm)):
+
+- **CCRU current fed by Zone 4** (its syzygy 4::5): **Sink**.
+- **Current received** (Zone 4 as tractor zone): none.
+- **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Sink". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
+
+Statements on this page such as "Current: …" may use either of the first two senses.

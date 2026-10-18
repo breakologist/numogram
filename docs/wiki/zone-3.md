@@ -96,3 +96,13 @@ Zone 3's special relationship with triangular numbers (3 is itself triangular, a
 - [[zone]] — overview
 - [[numogram-calculator]] — ZONE_DATA
 - [[pandemonium-matrix-45-demons]] — demon assignments
+
+## Note on current names (2026-10-17)
+
+Three naming sets are in use; only the first is CCRU's ([glossary](http://www.ccru.net/id%28entity%29/glossary.htm)):
+
+- **CCRU current fed by Zone 3** (its syzygy 3::6): **Warp**.
+- **Current received** (Zone 3 as tractor zone): Warp (3::6 → 3).
+- **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Warp". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
+
+Statements on this page such as "Current: …" may use either of the first two senses.

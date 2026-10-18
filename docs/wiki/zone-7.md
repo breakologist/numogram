@@ -165,3 +165,13 @@ This text establishes Zone 7 as the numogram's amphibious threshold — the zone
 ## Residual Layer: Salt + Oil
 
 Zone 7's salt-water topography maps directly onto [[salt-and-oil-residual-memory]]: the marshes are a salt layer (mineral persistence, crystallized repetition) and the still water underneath is oil (dormant potential, delayed ignition). The amphibious creatures — burping toads, blood-metal bodies — are the residual sign: life persisting in brackish transition without active flame. Zone 7 is where the two layers intermingle without requiring a keeper to maintain the lantern. The swamp remembers on its own.
+
+## Note on current names (2026-10-17)
+
+Three naming sets are in use; only the first is CCRU's ([glossary](http://www.ccru.net/id%28entity%29/glossary.htm)):
+
+- **CCRU current fed by Zone 7** (its syzygy 7::2): **Hold**.
+- **Current received** (Zone 7 as tractor zone): Surge (1::8 → 7).
+- **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Hold". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
+
+Statements on this page such as "Current: …" may use either of the first two senses.

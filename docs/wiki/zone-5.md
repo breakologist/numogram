@@ -131,3 +131,13 @@ Additional: `raw/www.ccru.net/occultures/mesh.htm` (Mesh-Notes commentary).
 Pentagram coordinate: **Inner ring apex / Valley zone 5** (90° inner vertex)
 
 [^1]: Snapshot taken during 2026-06 CCRU raw ingestion run.
+
+## Note on current names (2026-10-17)
+
+Three naming sets are in use; only the first is CCRU's ([glossary](http://www.ccru.net/id%28entity%29/glossary.htm)):
+
+- **CCRU current fed by Zone 5** (its syzygy 5::4): **Sink**.
+- **Current received** (Zone 5 as tractor zone): Hold (2::7 → 5).
+- **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Hinge". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
+
+Statements on this page such as "Current: …" may use either of the first two senses.

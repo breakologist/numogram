@@ -76,3 +76,13 @@ Dense void of the cosmic hypermatrix, upon which absolute desolation crosses inf
 ---
 
 *Zone 0 is the Void — the silent, desolate abyss that is also the source of all potential. It is the zero from which the decimal labyrinth unfolds, and the zero to which it returns. In the numogram, Zone 0 is not emptiness but fullness in potential form — the unmanifest ground of all zones.*
+
+## Note on current names (2026-10-17)
+
+Three naming sets are in use; only the first is CCRU's ([glossary](http://www.ccru.net/id%28entity%29/glossary.htm)):
+
+- **CCRU current fed by Zone 0** (its syzygy 0::9): **Plex**.
+- **Current received** (Zone 0 as tractor zone): none.
+- **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Void". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
+
+Statements on this page such as "Current: …" may use either of the first two senses.

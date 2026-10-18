@@ -110,3 +110,13 @@ V3 real-resonator SHAP analysis confirms Z6's acoustic identity as the tube/bow 
 
 
 **Pentagram coordinate:** **Outer ring down‑left** (135° vertex)
+
+## Note on current names (2026-10-17)
+
+Three naming sets are in use; only the first is CCRU's ([glossary](http://www.ccru.net/id%28entity%29/glossary.htm)):
+
+- **CCRU current fed by Zone 6** (its syzygy 6::3): **Warp**.
+- **Current received** (Zone 6 as tractor zone): none.
+- **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Abyss". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
+
+Statements on this page such as "Current: …" may use either of the first two senses.

@@ -76,3 +76,13 @@ As the raw notes already observe, Zone 2 mirrors Zone 5 (shared Hyperborean them
 - [[pandemonium-matrix-45-demons]] — demon assignments
 
 **Pentagram coordinate:** **Outer ring right** (0° vertex in chord-pentagram)
+
+## Note on current names (2026-10-17)
+
+Three naming sets are in use; only the first is CCRU's ([glossary](http://www.ccru.net/id%28entity%29/glossary.htm)):
+
+- **CCRU current fed by Zone 2** (its syzygy 2::7): **Hold**.
+- **Current received** (Zone 2 as tractor zone): none.
+- **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Dt". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
+
+Statements on this page such as "Current: …" may use either of the first two senses.

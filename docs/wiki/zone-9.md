@@ -159,3 +159,13 @@ The figure 9 is zygospirally related to 6 and quasisymmetric with the sign for P
 - [[yuggoth]] — Lovecraft's Pluto
 - [[zone-9-plex-portrait]] — Visual portrait
 - [[triangular-numbers]] — T₉=45 → Gt-45
+
+## Note on current names (2026-10-17)
+
+Three naming sets are in use; only the first is CCRU's ([glossary](http://www.ccru.net/id%28entity%29/glossary.htm)):
+
+- **CCRU current fed by Zone 9** (its syzygy 9::0): **Plex**.
+- **Current received** (Zone 9 as tractor zone): Plex (0::9 → 9).
+- **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Plex". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
+
+Statements on this page such as "Current: …" may use either of the first two senses.
