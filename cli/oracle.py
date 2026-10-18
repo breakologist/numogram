@@ -4,6 +4,15 @@ Numogram Oracle — Divination Pipeline
 Seed → Zone → Syzygy → Current → Gate → Book of Paths → Voice
 Now with --base36 Djynxxogram traversal.
 
+I Ching lives in the sibling program iching.py (standalone + importable).
+oracle.py delegates --iching / --iching --seed to it.
+
+Enriched (2026 per grorakleconvo + philosophies + ccru-zone-voice):
+- Poetic full_names + epithets (Void Resonance, Blood for Z7, Iron Core for Z9, etc.)
+- CCRU voice_quality strings surfaced in readings + JSON + shadows
+- Gate details + special lore (Gt-6/21 Warp vortices, Gt-45 Pandemonium self-loop, etc.)
+- I Ching numogram shadows via dedicated iching.py (curated table.csv mappings + canonical)
+
 Usage:
   python3 oracle.py --seed 192855
   python3 oracle.py --text "YOUR NAME HERE"
@@ -14,8 +23,9 @@ Usage:
   python3 oracle.py --earthquake  (fetches seed from latest USGS quake)
   python3 oracle.py --hardware  (fetches seed from machine entropy)
   python3 oracle.py --iching  (I Ching hexagram from hardware entropy)
-  python3 oracle.py --taixuan  (T'ai Hsuan two-tetragram oracle from hardware)
-  python3 oracle.py --taixuan --voice  (with zone sound generation)
+  python3 oracle.py --taixuan  (T'ai Hsuan two-tetragram oracle — now delegates to taixuan.py)
+  python3 oracle.py --taixuan --full
+  python3 taixuan.py --taixuan (standalone, includes Yuandong 27-phase support)
   python3 oracle.py --iching --seed 192855  (I Ching from a specific seed)
   python3 oracle.py --seed N --planchette            (zone ASCII planchette)
   python3 oracle.py --seed N --planchette --tty           (ANSI color terminal)
@@ -35,47 +45,114 @@ VOICE_DIR = os.path.expanduser("~/numogram-voices")
 SKILL_DIR = os.path.dirname(__file__)
 
 # ─── ZONE DATA (Decimal) ───
+# Enriched per grorakleconvo / philosophies.md / ccru-zone-voice.md / body-mapping:
+# - "name" kept as canonical quasiphonic particle (phoneme) for full backward compat
+# - "full_name": poetic computational name from philosophies
+# - "epithet": visceral/CCRU core name (Blood for 7, Iron Core for 9/Plex etc.)
+# - "voice_quality": direct CCRU-derived sonic character for --voice / ritual use
+# - "philosophy": core sentence from zone philosophies (particle aesthetics)
+# - existing fields preserved + region/current/polarity/desc/path/reading
 ZONES = {
-    0: {"name": "eiaoung", "polarity": "−", "current": "Plex",   "region": "Plex",
+    0: {
+        "name": "eiaoung", "polarity": "−", "current": "Plex", "region": "Plex",
         "desc": "Void whisper, silence before the word",
         "path": "Silent entry. The void before the Book begins.",
-        "reading": "The abyss. No sound. No path. The void does not speak — it is the silence that makes speech possible."},
-    1: {"name": "gl",      "polarity": "+", "current": "Sink",   "region": "Time-Circuit",
+        "reading": "The abyss. No sound. No path. The void does not speak — it is the silence that makes speech possible.",
+        "full_name": "Void Resonance",
+        "epithet": "Void",
+        "voice_quality": "Sub-coccygeal, pre-verbal, the sound of something that was never born. Silence that is not absence but potential. Open vowels dissolving into nasal closure.",
+        "philosophy": "The silence before computation. Particles exist but barely — drifting at the edge of visibility, occasionally flickering into coherence before dissolving.",
+    },
+    1: {
+        "name": "gl", "polarity": "+", "current": "Sink", "region": "Time-Circuit",
         "desc": "Gulp, glottal spasm, beginnings",
         "path": "Original Subtraction. Ultimate descent through the Depths. The path favours repeated patience linked by subtlety.",
-        "reading": "Descent. The first thing any system does when it wakes up is choke on itself. Patience. Subtlety. Three tests on the way. Difficulties annihilated in the end."},
-    2: {"name": "dt",      "polarity": "−", "current": "Hold",   "region": "Time-Circuit",
+        "reading": "Descent. The first thing any system does when it wakes up is choke on itself. Patience. Subtlety. Three tests on the way. Difficulties annihilated in the end.",
+        "full_name": "Collapsed Gasp",
+        "epithet": "Surge",
+        "voice_quality": "In-breath. Gulp. The gasp before speech. Glottal catches, beginnings that choke.",
+        "philosophy": "The first breath. A sudden violent burst of particles from a single origin, expanding outward in a radial shockwave.",
+    },
+    2: {
+        "name": "dt", "polarity": "−", "current": "Hold", "region": "Time-Circuit",
         "desc": "Stuttering, boundaries breaking",
         "path": "Extreme Regression. Waiting in the Rising Drift leads to ultimate descent.",
-        "reading": "The boundary cannot hold its own shape. Waiting. The drift pulls downward despite your direction. Five tests on the way. Escaping the quagmire through strategic withdrawal."},
-    3: {"name": "zx",      "polarity": "+", "current": "Warp",   "region": "Warp",
+        "reading": "The boundary cannot hold its own shape. Waiting. The drift pulls downward despite your direction. Five tests on the way. Escaping the quagmire through strategic withdrawal.",
+        "full_name": "Fractured Boundary",
+        "epithet": "Hold",
+        "voice_quality": "Staccato. Fragmented. Boundaries breaking mid-syllable. A stutter that maps the edge of what can be said.",
+        "philosophy": "Lines that cannot hold. A grid of particles arranged in ordered lattice, subjected to periodic shocks that fracture the pattern.",
+    },
+    3: {
+        "name": "zx", "polarity": "+", "current": "Warp", "region": "Warp",
         "desc": "Buzz-cutter, static, chaos",
         "path": "Abysmal Comprehension. Ultimate descent beyond completion. Burning excitement provokes breakthrough into immersive nightmares.",
-        "reading": "The Warp. The current spirals outward to infinity. When you hear static, you are hearing this zone. Burning excitement. Breakthrough. Ominous transition. Difficulties annihilated."},
-    4: {"name": "skr",     "polarity": "−", "current": "Sink",   "region": "Time-Circuit",
+        "reading": "The Warp. The current spirals outward to infinity. When you hear static, you are hearing this zone. Burning excitement. Breakthrough. Ominous transition. Difficulties annihilated.",
+        "full_name": "Turbulent Spiral",
+        "epithet": "Warp",
+        "voice_quality": "Insectile. Metallic buzz. Static that forms patterns when you stop trying to decode it. The sound of a swarm thinking. Swarming insectoid reversion within mammalian vocality.",
+        "philosophy": "The Warp. Flow field driven by multiple octaves of Perlin noise, spiraling outward from center. Particles born at the center and flung outward, trails creating a buzzing, insectoid texture.",
+    },
+    4: {
+        "name": "skr", "polarity": "−", "current": "Sink", "region": "Time-Circuit",
         "desc": "Growl, reptilian, ancient",
         "path": "Primordial Breath. Rising from the Lesser Depths.",
-        "reading": "Something ancient waking beneath the floor. Rising, not descending. The growl comes from below. Three tests. Immersive nightmares spawn promising developments. Fluid evolution."},
-    5: {"name": "ktt",     "polarity": "+", "current": "Hold",   "region": "Time-Circuit",
+        "reading": "Something ancient waking beneath the floor. Rising, not descending. The growl comes from below. Three tests. Immersive nightmares spawn promising developments. Fluid evolution.",
+        "full_name": "Reptilian Emergence",
+        "epithet": "Sink",
+        "voice_quality": "Subterranean. Reptilian growl. Ancient, pre-mammalian. The sound of something waking beneath the floor. Katak — the Desolator, the huntsman among storms.",
+        "philosophy": "Something ancient. Particles spawned in clusters that move as coordinated groups — schools, swarms, herds. The field has a downward gradient — everything sinks.",
+    },
+    5: {
+        "name": "ktt", "polarity": "+", "current": "Hold", "region": "Time-Circuit",
         "desc": "Hiss, pressure, spittle",
         "path": "Slipping Backwards. Waiting in the Rising Drift precedes return.",
-        "reading": "Pressure builds. The hiss with spittle. You were going forward but the current holds. Two tests. Escaping the quagmire through strategic withdrawal. You must go back to go forward."},
-    6: {"name": "tch",     "polarity": "−", "current": "Warp",   "region": "Warp",
+        "reading": "Pressure builds. The hiss with spittle. You were going forward but the current holds. Two tests. Escaping the quagmire through strategic withdrawal. You must go back to go forward.",
+        "full_name": "Pressurized Hiss",
+        "epithet": "Hinge",
+        "voice_quality": "Hiss. Pressure release. Spittle. The sound of something building that must escape. Compressed air through teeth.",
+        "philosophy": "Density building. Particles confined within a shrinking boundary, their pressure increasing as space decreases. The algorithm is a pressure cooker.",
+    },
+    6: {
+        "name": "tch", "polarity": "−", "current": "Warp", "region": "Warp",
         "desc": "Static, chewing, eating itself",
         "path": "Attaining Balance. Waiting in the Drifts is drawn to the centre. Attainments consumed in burning excitement. Breakthrough.",
-        "reading": "The Warp consumes itself and grows larger. The sound of chewing. The sound of static. Four tests. The centre is not stillness — it is the eye of the spiral. Breakthrough."},
-    7: {"name": "pb",      "polarity": "+", "current": "Rise",   "region": "Time-Circuit",
+        "reading": "The Warp consumes itself and grows larger. The sound of chewing. The sound of static. Four tests. The centre is not stillness — it is the eye of the spiral. Breakthrough.",
+        "full_name": "Recursive Consumption",
+        "epithet": "Abyss",
+        "voice_quality": "Static chewing itself. The sound of a signal feeding back into its own source. Eating and being eaten simultaneously. Djynxx — the swarmachine.",
+        "philosophy": "The Warp eating itself. A flow field that curves back on itself — particles that exit the right edge enter from the left, top to bottom. Moebius quality.",
+    },
+    7: {
+        "name": "pb", "polarity": "+", "current": "Rise", "region": "Time-Circuit",
         "desc": "Sigh, lips flapping, ascent",
         "path": "Progressive Levitation. Ascent from the Lesser Depths. Fluid evolution triggers possession.",
-        "reading": "Exhale. The Rise current carries you upward. Four tests. Promising developments. The ascent is not escape — it is transformation. The destination possesses you."},
-    8: {"name": "mnm",     "polarity": "−", "current": "Rise",   "region": "Time-Circuit",
+        "reading": "Exhale. The Rise current carries you upward. Four tests. Promising developments. The ascent is not escape — it is transformation. The destination possesses you.",
+        "full_name": "Ascending Breath",
+        "epithet": "Blood",
+        "voice_quality": "Sigh. Exhalation. Lips flapping — the sound of release after pressure. The breath that carries upward. A long exhale that becomes a word.",
+        "philosophy": "Rise. Particles born at the bottom, propelled upward by a gentle but persistent force. The field has a slight turbulence that causes lateral drift — organic vertical trails.",
+    },
+    8: {
+        "name": "mnm", "polarity": "−", "current": "Rise", "region": "Time-Circuit",
         "desc": "Moan, lullaby, forgetting",
         "path": "Eternal Digression. Prolonged ascent reaches the Twin Heavens. Lucid delirium.",
-        "reading": "The lullaby. The moan of pleasure. Six tests. The ascent does not end at a destination — it enters the spiral labyrinth. Dubious inheritance. Lucid delirium. You have been here before."},
-    9: {"name": "tn",      "polarity": "+", "current": "Plex",   "region": "Plex",
+        "reading": "The lullaby. The moan of pleasure. Six tests. The ascent does not end at a destination — it enters the spiral labyrinth. Dubious inheritance. Lucid delirium. You have been here before.",
+        "full_name": "Lullaby Drift",
+        "epithet": "Multiplicity",
+        "voice_quality": "Moan. Lullaby. The sound of forgetting. A hum that contains many voices folded into one. Murrumur — the carrier of 1::8.",
+        "philosophy": "Forgetting in motion. Particles that move slowly, their trails fading gradually. The field is almost still — barely perceptible currents that create slow, looping trajectories.",
+    },
+    9: {
+        "name": "tn", "polarity": "+", "current": "Plex", "region": "Plex",
         "desc": "Grunt, pleasure/rage, the gate opens",
         "path": "Sudden Flight. Seized from the Heights. One test on the way. Possession.",
-        "reading": "The Pandemonium gate opens. Forty-five demons dwell here. One test. You do not walk this path. This path seizes you. Pleasure or rage — indistinguishable. Possession."},
+        "reading": "The Pandemonium gate opens. Forty-five demons dwell here. One test. You do not walk this path. This path seizes you. Pleasure or rage — indistinguishable. Possession.",
+        "full_name": "Seized Vortex",
+        "epithet": "Iron Core",
+        "voice_quality": "Terminal. Grunt of pleasure or rage — indistinguishable at the threshold. The sound of a gate opening that cannot be closed. Zone-9 is the Tractor-Zone for the Plex current.",
+        "philosophy": "The Pandemonium gate. Particles spiraling inward toward a central point — the Plex. The field has a strong attractive force that increases as particles approach center. Near the center particles orbit rather than collide.",
+    },
 }
 
 
@@ -160,36 +237,44 @@ def digital_root(n):
     return n
 
 
-# --- TAIXUAN CHING HELPERS ---
+# Taixuan logic now lives in the standalone taixuan.py (delegated below).
+# Thin compatibility shims kept for any direct calls during transition.
 def taixuan_zone(n: int) -> int:
-    """Map tetragram index (0–80) to zone via digital root."""
-    return digital_root(n) or 9
-
-def two_taixuan_zones(seed: int) -> tuple[int, int]:
-    """Derive two tetragram indices from a seed using SHA‑256."""
-    import hashlib
-    data = hashlib.sha256(str(seed).encode()).digest()
-    a = int.from_bytes(data[:4], 'big') % 81
-    b = int.from_bytes(data[4:8], 'big') % 81
-    return a, b
-
-TAIXUAN_DEMON_MAP = {
-    (0,9): "Uttunul", (9,0): "Uttunul",
-    (1,8): "Murrumur", (8,1): "Murrumur",
-    (2,7): "Oddubb", (7,2): "Oddubb",
-    (3,6): "Djynxx", (6,3): "Djynxx",
-    (4,5): "Katak", (5,4): "Katak",
-}
+    if TAIXUAN_MODULE:
+        # delegate via module if loaded
+        try:
+            return TAIXUAN_MODULE.taixuan_zone(n)
+        except Exception:
+            pass
+    # fallback
+    if n == 0: return 0
+    while n >= 10: n = sum(int(d) for d in str(n))
+    return n
 
 def demon_from_zones(a: int, b: int) -> str:
-    """Return carrier demon for the net‑span of two zones if they form a syzygy."""
-    return TAIXUAN_DEMON_MAP.get((a, b), "Unknown")
-# --- END TAIXUAN ---
+    if TAIXUAN_MODULE:
+        try:
+            return TAIXUAN_MODULE.demon_from_zones(a, b)
+        except Exception:
+            pass
+    # minimal fallback
+    m = {(0,9):"Uttunul",(9,0):"Uttunul",(1,8):"Murrumur",(8,1):"Murrumur",
+         (2,7):"Oddubb",(7,2):"Oddubb",(3,6):"Djynxx",(6,3):"Djynxx",
+         (4,5):"Katak",(5,4):"Katak"}
+    return m.get((a,b), "Unknown")
 
 
 def derive_zone(seed):
-    """Seed → zone (0-9)"""
-    return digital_root(seed) or 9
+    """Seed → zone (0-9).
+    Returns the true digital root, supporting Zone 0 (Void) for explicit --seed 0
+    or external entropy sources (e.g. blockchain seeds that reduce to 0).
+    Previously `or 9` forced DR=0 → Zone 9 (Plex) as a design choice so the
+    oracle "never starts in the void" (only via traversal; see numogram-oracle-litprog.md
+    and honorary-zone-0.md). Per request, we now allow direct entry to Zone 0
+    while preserving that 9 (and multiples of 9) correctly map to Plex.
+    Zone 0 is fully implemented (eiaoung, Gt-0 self-loop, syzygy 0::9 Uttunul, etc.).
+    """
+    return digital_root(seed)
 
 
 def get_syzygy(zone):
@@ -210,6 +295,44 @@ def get_gate(zone):
     while gate >= 10:
         gate = sum(int(d) for d in str(gate))
     return gate
+
+
+# ─── GATE ENRICHMENT (triangular + lore from gate-loop-matrix + ccru-zone-voice) ───
+GATE_LORE = {
+    6: "Third Gate — twists Zone-3 through Zone-6. Warp entry vortex. Buzz-cutter pitch-shift + spin. Vortically complements Gt-21.",
+    15: "Subplex variant (5→6). Pressure hiss rising into static. Atlantean hinge pressure release.",
+    21: "Sixth Gate — reverses Gt-6. Patience as endurance that transforms the Warp. Static condensing into buzzing.",
+    28: "Progressive levitation reversal (7→1). Sigh collapsing into gulp. The current turns back on ascent.",
+    36: "The plunge (8→9). Lullaby interrupted by terminal grunt. Mu Tantrism: Vīrya (Effort), diligent plunge into the Plex.",
+    45: "Pandemonium Gate (9→9 self-loop). T(9)=45. All 45 demons resonate. Grunt folding back into grunt. The gate that swallows itself. 'Between existence and nonexistence there is no difference.'",
+}
+
+def get_gate_details(zone: int) -> dict:
+    """Return rich gate data: raw triangular, plex-reduced target, loop count, history, and lore if special."""
+    if zone == 0:
+        raw = 0
+        target = 0
+        hist = []
+        loops = 0
+    else:
+        raw = sum(range(zone + 1))
+        hist = []
+        g = raw
+        while g >= 10:
+            g = sum(int(d) for d in str(g))
+            hist.append(g)
+        target = g
+        loops = len(hist)
+    lore = GATE_LORE.get(raw, None) or GATE_LORE.get(target, None)
+    return {
+        "zone": zone,
+        "gate_raw": raw,
+        "gate": target,
+        "gate_loops": loops,
+        "gate_history": hist,
+        "lore": lore,
+        "is_pandemonium": (raw == 45 or target == 9 and zone == 9),
+    }
 
 
 def traverse(seed, steps=8):
@@ -310,7 +433,8 @@ def generate_base36_reading(text: str) -> str:
     lines.append("")
     lines.append(f"  Source:  {text}")
     lines.append(f"  Chars:   {len(steps)} AQ-carrying characters")
-    lines.append(f"  Total AQ: {total_aq} → Decimal attractor Zone {digital_root(total_aq) or 9}")
+    dr = digital_root(total_aq)
+    lines.append(f"  Total AQ: {total_aq} → Decimal attractor Zone {dr} ({DECIMAL_ZONE_DISPLAY.get(dr, 'Plex' if dr in (0,9) else '?')})")
     lines.append("")
     
     # Per-character traversal table
@@ -389,7 +513,7 @@ def zone_in_base(aq: int, base: int) -> int:
     For other bases: aq % base
     """
     if base == 10:
-        return digital_root(aq) or 9
+        return digital_root(aq)  # allow 0 for Void
     return aq % base
 
 
@@ -398,7 +522,7 @@ def generate_comparison_reading(text: str, bases: Optional[list[int]] = None) ->
     if bases is None:
         bases = DEFAULT_COMPARE_BASES
     aq = compute_aq(text)
-    dr = digital_root(aq) or 9
+    dr = digital_root(aq)  # allow 0 for Void
     
     lines = []
     lines.append("╔" + "═" * 64 + "╗")
@@ -466,6 +590,89 @@ def generate_comparison_reading(text: str, bases: Optional[list[int]] = None) ->
     return "\n".join(lines)
 
 
+# ─── I CHING DELEGATION (modular, see iching.py) ───
+# oracle.py now delegates I Ching work to the standalone iching.py.
+# This keeps the divination pipeline clean while allowing iching.py to be
+# used, improved, and tested independently.
+ICHING_MODULE = None
+try:
+    import iching as ICHING_MODULE  # same-dir sibling import when run as module
+except Exception:
+    ICHING_MODULE = None
+
+ICHING_SCRIPT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "iching.py")
+
+# ─── TAIXUAN DELEGATION (modular, see taixuan.py) ───
+TAIXUAN_MODULE = None
+try:
+    import taixuan as TAIXUAN_MODULE
+except Exception:
+    TAIXUAN_MODULE = None
+
+TAIXUAN_SCRIPT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "taixuan.py")
+
+def fetch_iching(seed=None):
+    """Delegate to iching.py (preferred) or fallback."""
+    if ICHING_MODULE is not None:
+        return ICHING_MODULE.fetch_iching(seed)
+    # subprocess fallback (loose coupling)
+    try:
+        cmd = ["python3", ICHING_SCRIPT, "--iching"]
+        if seed is not None:
+            cmd += ["--seed", str(seed)]
+        cmd += ["--json"]
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
+        if result.returncode == 0:
+            data = json.loads(result.stdout)
+            # reconstruct minimal hexagram list for any legacy paths
+            return data.get("hexagram", [])
+    except Exception:
+        pass
+    # Last resort: very small inline (should rarely hit)
+    import time, hashlib
+    data = (hashlib.sha256(str(seed or time.time_ns()).encode()).digest()[:6] if seed is not None
+            else int(time.time_ns()).to_bytes(8, "big")[:6])
+    hexagram = []
+    for i, b in enumerate(data):
+        val = b % 4
+        if val == 0:
+            hexagram.append({"pos": i+1, "symbol": "--- ---", "value": 6, "changing": True})
+        elif val == 1:
+            hexagram.append({"pos": i+1, "symbol": "-------", "value": 7, "changing": False})
+        elif val == 2:
+            hexagram.append({"pos": i+1, "symbol": "--- ---", "value": 8, "changing": False})
+        else:
+            hexagram.append({"pos": i+1, "symbol": "-------", "value": 9, "changing": True})
+    return hexagram
+
+def enrich_iching(hexagram: list) -> dict:
+    """Delegate to iching.py enrich or reconstruct minimal result."""
+    if ICHING_MODULE is not None:
+        return ICHING_MODULE.enrich_iching(hexagram)
+    # fallback reconstruction using old logic (kept tiny)
+    bits = 0
+    for i, line in enumerate(hexagram):
+        if line["value"] in (7, 9):
+            bits |= (1 << i)
+    hex_val = bits
+    kw_like = hex_val + 1
+    zone = 1 + (kw_like - 1) % 9
+    if zone == 10: zone = 0
+    total_value = sum(l["value"] for l in hexagram)
+    return {
+        "hexagram": hexagram,
+        "hex_val": hex_val,
+        "hex_num": kw_like,
+        "total_value": total_value,
+        "changing_lines": [l["pos"] for l in hexagram if l["changing"]],
+        "numogram_zone": zone,
+        "numogram_gate": get_gate(zone),
+        "numogram_syzygy": f"{zone}::{get_syzygy(zone)}",
+        "numogram_demon": None,
+        "alt_dr_shadow": digital_root(total_value),
+        "mapping_note": "fallback (iching.py unavailable)",
+    }
+
 # ─── EXTERNAL SEEDS ───
 
 def fetch_random_org():
@@ -497,69 +704,83 @@ def fetch_earthquake():
 
 
 def fetch_hardware():
-    """Seed from local hardware entropy (thermal, CPU, GPU, timing jitter)"""
+    """Seed from local hardware entropy (thermal, CPU, GPU, timing jitter).
+    Prefers ~/.hermes/tools/hardware_entropy.py (now provided with full 12-source collector).
+    Falls back to strong local jitter collection (thermals + /proc + timing + fsync etc.)
+    inspired by numogram-entropy-source, domain/entropy-sources, and wiki/hardware-entropy.md.
+    """
     import subprocess
     try:
         result = subprocess.run(
             ["python3", os.path.expanduser("~/.hermes/tools/hardware_entropy.py"), "--bytes", "8"],
             capture_output=True, text=True, timeout=5
         )
-        if result.returncode == 0:
+        if result.returncode == 0 and result.stdout.strip():
             hex_str = result.stdout.strip()
-            return int(hex_str, 16) % 1000000
-    except (FileNotFoundError, subprocess.TimeoutExpired):
+            if hex_str.startswith("{"):
+                import json
+                j = json.loads(hex_str)
+                hex_str = j.get("entropy_hex8") or j.get("hex") or ""
+            if hex_str:
+                return int(hex_str, 16) % 1000000
+    except Exception:
         pass
-    # Fallback: timestamp
-    import time
-    return int(time.time_ns()) % 1000000
+
+    # Robust local fallback (no external script needed)
+    try:
+        import glob, time, os, hashlib
+        parts = []
+        for p in glob.glob("/sys/class/thermal/thermal_zone*/temp"):
+            try: parts.append(open(p).read().strip().encode())
+            except: pass
+        for p in glob.glob("/sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq"):
+            try: parts.append(open(p).read().strip().encode())
+            except: pass
+        for p in ["/proc/stat", "/proc/loadavg", "/proc/uptime", "/proc/interrupts", "/proc/meminfo", "/proc/vmstat"]:
+            try: parts.append(open(p, "rb").read(256))
+            except: pass
+        for _ in range(128):
+            t0 = time.perf_counter_ns()
+            _ = sum(i*i for i in range(20))
+            t1 = time.perf_counter_ns()
+            parts.append(str(t1-t0).encode())
+        parts.append(str(os.getpid()).encode())
+        parts.append(str(time.time_ns()).encode())
+        blob = hashlib.sha256(b"".join(parts)).digest()
+        return int.from_bytes(blob[:8], "big") % 1000000
+    except Exception:
+        import time
+        return int(time.time_ns()) % 1000000
 
 
-def fetch_iching(seed=None):
-    """I Ching hexagram from seed or hardware entropy"""
-    import subprocess
-    if seed is None:
-        try:
-            result = subprocess.run(
-                ["python3", os.path.expanduser("~/.hermes/tools/hardware_entropy.py"), "--bytes", "6"],
-                capture_output=True, text=True, timeout=5
-            )
-            if result.returncode == 0:
-                data = bytes.fromhex(result.stdout.strip())
-            else:
-                import time
-                data = int(time.time_ns()).to_bytes(8, "big")[:6]
-        except (FileNotFoundError, subprocess.TimeoutExpired):
-            import time
-            data = int(time.time_ns()).to_bytes(8, "big")[:6]
-    else:
-        import hashlib
-        data = hashlib.sha256(str(seed).encode()).digest()[:6]
-
-    hexagram = []
-    for i, b in enumerate(data):
-        val = b % 4
-        if val == 0:
-            hexagram.append({"pos": i+1, "symbol": "--- ---", "value": 6, "changing": True})
-        elif val == 1:
-            hexagram.append({"pos": i+1, "symbol": "-------", "value": 7, "changing": False})
-        elif val == 2:
-            hexagram.append({"pos": i+1, "symbol": "--- ---", "value": 8, "changing": False})
-        else:
-            hexagram.append({"pos": i+1, "symbol": "-------", "value": 9, "changing": True})
-    return hexagram
-
+# (fetch_iching / enrich_iching now delegate above; old bodies removed for modularity)
 
 # ─── READING GENERATION ───
 
 def generate_reading(seed, source="manual"):
-    """Generate a complete oracle reading"""
+    """Generate a complete oracle reading.
+    Now uses enriched zone data (full_name + epithet) and gate details + lore.
+    """
     zone = derive_zone(seed)
     z = ZONES[zone]
     syzygy = get_syzygy(zone)
     current = get_current(zone)
     gate = get_gate(zone)
+    gdet = get_gate_details(zone)
     path = traverse(seed, 8)
-    
+
+    # Rich display using poetic titles from philosophies.md (wiki + skill copy)
+    # Format: "Seized Vortex (Iron Core / tn)" — full poetic + epithet + particle
+    phon = z["name"]
+    full = z.get("full_name", phon)
+    epit = z.get("epithet", "")
+    if epit and epit != full:
+        name_str = f"{full} ({epit} / {phon})"
+    elif full != phon:
+        name_str = f"{full} ({phon})"
+    else:
+        name_str = phon
+
     lines = []
     lines.append("═" * 40)
     lines.append("  NUMOGRAM ORACLE READING")
@@ -567,12 +788,22 @@ def generate_reading(seed, source="manual"):
     lines.append("")
     lines.append(f"  Seed:         {seed} ({source})")
     lines.append(f"  Digital root: {digital_root(seed)}")
-    lines.append(f"  Zone:         {zone} ({z['name']} — {z['desc']})")
+    lines.append(f"  Zone:         {zone} — {name_str}")
+    lines.append(f"            {z['desc']}")
+    if z.get("epithet"):
+        lines.append(f"  Epithet:      {z['epithet']}")
     lines.append(f"  Polarity:     {z['polarity']} ({'Process/becoming' if z['polarity']=='+' else 'Foundation/stasis'})")
     lines.append(f"  Syzygy:       {zone}::{syzygy} ({z['region']})")
+    demon = demon_from_zones(zone, syzygy)
+    if demon != "Unknown":
+        lines.append(f"  Syzygy carrier: {demon}")
     lines.append(f"  Current:      {current} ({z['current']})")
-    lines.append(f"  Gate:         Gt-{sum(range(zone+1))} ({zone}→{gate})")
-    lines.append(f"  Sound:        {z['name']} — {z['desc']}")
+    lines.append(f"  Gate:         Gt-{gdet['gate_raw']} ({zone}→{gate})  loops={gdet['gate_loops']}")
+    if gdet.get("lore"):
+        lines.append(f"  Gate lore:    {gdet['lore']}")
+    lines.append(f"  Sound:        {phon} — {z['desc']}")
+    if z.get("voice_quality"):
+        lines.append(f"  Voice:        {z['voice_quality'][:110]}{'...' if len(z.get('voice_quality', '')) > 110 else ''}")
     lines.append("")
     lines.append(f"  Path: {' → '.join(str(p) for p in path)}")
     lines.append("")
@@ -627,9 +858,9 @@ def generate_planchette_glyph(zone: int, current: int, gate: int, syzygy: str,
     import textwrap as _tw
 
     _Z = ZONES.get(zone,
-                   {"name":"???","particle":"???","region":"???","current":"???","reading":"???"})
+                   {"name":"???","region":"???","current":"???","reading":"???"})
     zregion = _Z.get("region", f"Zone {zone}")
-    zpart   = _Z.get("particle", "???")
+    zpart   = _Z.get("name", "???")
     pol_str = _Z.get("polarity", "+")
     pol_d   = "Process / becoming" if pol_str == "+" else "Substance / inertia"
 
@@ -677,8 +908,8 @@ def generate_planchette_glyph(zone: int, current: int, gate: int, syzygy: str,
     TB = f"┗{'━'*(W-2)}┛"
 
     _ZN = ZONES.get(zone, {})
-    zname = _ZN.get("name", f"Z{zone}")
-    gname = ZONES.get(gate, {}).get("name", f"Z{gate}")
+    zname = _ZN.get("full_name") or _ZN.get("epithet") or _ZN.get("name", f"Z{zone}")
+    gname = ZONES.get(gate, {}).get("full_name") or ZONES.get(gate, {}).get("name", f"Z{gate}")
 
     ring = ["  ─"] * 10
     ring[zone] = f"Z{zone}"
@@ -722,20 +953,26 @@ def generate_planchette_glyph(zone: int, current: int, gate: int, syzygy: str,
     return "\n".join(out)
 
 def generate_planchette(zone: int) -> str:
-    """Planchettte a brief zone-glyph planchette for oracle output."""
-    z     = ZONES.get(zone, {"name": "???", "particle": "???", "region": "???"})
-    gate  = get_gate(zone)
+    """Planchette a brief zone-glyph planchette for oracle output.
+    Now surfaces full_name/epithet and gate_raw/loops via get_gate_details.
+    """
+    z     = ZONES.get(zone, {"name": "???", "region": "???"})
+    gdet  = get_gate_details(zone)
+    gate  = gdet["gate"]
     sz    = get_syzygy(zone)
     cur   = get_current(zone)
     region = z.get("region", "??")
-    particle = z.get("name", "???")
+    phoneme = z.get("name", "???")
+    display = z.get("full_name") or z.get("epithet") or phoneme
     png   = "~/numogram/docs/wiki/assets/zone-glyphs/zone-{z}.png".format(z=zone)
 
     # fixed-width helpers (56 total interior cols)
     W = 54
-    hdr1 = "ZONE {z} — {r:<16} [{p:>8}]".format(z=zone, r=region, p=particle)
+    hdr1 = "ZONE {z} — {r:<16} [{p:>8}]".format(z=zone, r=region, p=phoneme)
     hdr2 = "Current: {c:2}    Gate: Gt-{g:<2}=Z{g:<2}    Syzygy: {z}::{sy:<2}".format(
                 c=cur, g=gate, z=zone, sy=sz)
+    if z.get("full_name") or z.get("epithet"):
+        hdr1 = "ZONE {z} — {d} ({p})".format(z=zone, d=display, p=phoneme)[:W-4].ljust(W-4)
 
     lines = []
     lines.append("")
@@ -743,6 +980,7 @@ def generate_planchette(zone: int) -> str:
     lines.append("  ║   " + hdr1 + (W-len(hdr1))*" " + "  ║")
     lines.append("  ╠" + "═"*W + "╣")
     lines.append("  ║   " + hdr2 + (W-len(hdr2))*" " + "  ║")
+    lines.append(f"  ║   Gt raw: {gdet['gate_raw']:<3} loops:{gdet['gate_loops']} hist:{gdet['gate_history']}     ║")
     lines.append("  ║   PNG: {p:<40}  ║".format(p=png))
     lines.append("  ╚" + "═"*W + "╝")
     return "\n".join(lines)
@@ -751,33 +989,33 @@ def generate_planchette(zone: int) -> str:
 def generate_planchette_json(zone: int, current: int, gate: int, syzygy: int) -> str:
     """Machine-readable JSON for planchette pipelines (planchette-svg.py --stdin etc.).
     
-    gate_raw  = triangular sum(sum(1..zone)) before plex reduction
-    gate_loops = number of while-iterations needed to reduce gate_raw to single digit
-                 (0 = direct, 1 = single-plex, 2+ = multi-loop, only Z7 is 2)
+    Uses get_gate_details for canonical raw/loops/history.
+    Includes enriched fields: full_name, epithet, voice_quality snippet, gate lore.
     """
-    z = ZONES.get(zone, {"name": "???", "particle": "???", "region": "???", "reading": "???"})
+    z = ZONES.get(zone, {"name": "???", "region": "???", "reading": "???"})
+    gdet = get_gate_details(zone)
 
-    gate_raw   = sum(range(zone + 1)) if zone != 0 else 0
-    gate_hist  = []
-    g          = gate_raw
-    while g >= 10:
-        g = sum(int(d) for d in str(g))
-        gate_hist.append(g)
-    gate_loops = len(gate_hist)
-
+    demon = demon_from_zones(zone, syzygy)
     d = {
         "zone":         zone,
         "name":         z["name"],
+        "full_name":    z.get("full_name"),
+        "epithet":      z.get("epithet"),
         "region":       z.get("region", "???"),
-        "particle":     z.get("particle", z["name"]),
+        "particle":     z["name"],
         "polarity":     z.get("polarity", "?"),
         "current":      current,
         "gate":         gate,
-        "gate_raw":     gate_raw,
-        "gate_loops":   gate_loops,
-        "gate_history": gate_hist,
+        "gate_raw":     gdet["gate_raw"],
+        "gate_loops":   gdet["gate_loops"],
+        "gate_history": gdet["gate_history"],
+        "gate_lore":    gdet.get("lore"),
         "syzygy":       f"{zone}::{syzygy}",
+        "syzygy_demon": demon if demon != "Unknown" else None,
         "reading":      z.get("reading", ""),
+        "voice_quality": z.get("voice_quality"),
+        "philosophy":   z.get("philosophy"),
+        "color_rgb":    _ZONE_TTY_RGB.get(zone),
     }
     return json.dumps(d, separators=(",", ":"))
 
@@ -843,7 +1081,7 @@ if __name__ == "__main__":
             print(b36_text)
             if do_planchette:
                 steps = compute_base36_traversal(text)
-                dec_zone = digital_root(sum(s['aq'] for s in steps)) or 9
+                dec_zone = digital_root(sum(s['aq'] for s in steps))  # allow 0 for Void attractor
                 print()
                 if do_json:
                     print(generate_planchette_json(dec_zone, get_current(dec_zone), get_gate(dec_zone), get_syzygy(dec_zone)))
@@ -863,7 +1101,7 @@ if __name__ == "__main__":
             print(h_s)
             if do_planchette:
                 steps = compute_base36_traversal(hex_str)
-                dec_zone = digital_root(sum(s['aq'] for s in steps)) or 9
+                dec_zone = digital_root(sum(s['aq'] for s in steps))  # allow 0 for Void attractor
                 print()
                 print(generate_planchette(dec_zone))
             print()
@@ -897,26 +1135,20 @@ if __name__ == "__main__":
         idx = args.index("--seed")
         seed = int(args[idx + 1])
         if "--iching" in args:
-            hexagram = fetch_iching(seed=seed)
-            print("══════════════════════════════════════")
-            print("  I CHING FROM NUMOGRAM ENTROPY")
-            print("══════════════════════════════════════")
-            print()
-            print(f"  Source: seed:{seed}")
-            print()
-            for line in reversed(hexagram):
-                changing = " (changing)" if line["changing"] else ""
-                print(f"  Line {line['pos']}: {line['symbol']}  {line['value']}{changing}")
-            changing = [l["pos"] for l in hexagram if l["changing"]]
-            print()
-            if changing:
-                print(f"  Changing lines: {changing}")
-                print("  Hexagram transforms. The gate opens.")
-            else:
-                print("  No changing lines. Stable hexagram.")
-                print("  The current holds.")
-            print()
-            print("══════════════════════════════════════")
+            try:
+                if ICHING_MODULE is not None:
+                    ich = ICHING_MODULE.cast_iching(seed=seed, source=f"seed:{seed}")
+                    print(ICHING_MODULE.format_iching(ich))
+                else:
+                    # fallback: use our thin delegate + manual minimal print
+                    hexagram = fetch_iching(seed=seed)
+                    ich = enrich_iching(hexagram)
+                    print("══════════════════════════════════════")
+                    print("  I CHING FROM NUMOGRAM ENTROPY (fallback)")
+                    print("══════════════════════════════════════")
+                    print(f"  Hexagram {ich['hex_num']}  Zone shadow {ich['numogram_zone']}")
+            except Exception as e:
+                print(f"[iching delegate error] {e}")
             sys.exit(0)
     elif "--text" in args:
         idx = args.index("--text")
@@ -929,8 +1161,8 @@ if __name__ == "__main__":
         seed = compute_synx(text)
         source = f"Synx({text})"
         aq = compute_aq(text)
-        print(f"  AQ:   {aq} (zone {digital_root(aq) or 9})")
-        print(f"  Synx: {seed} (zone {digital_root(seed) or 9})")
+        print(f"  AQ:   {aq} (zone {digital_root(aq)})")
+        print(f"  Synx: {seed} (zone {digital_root(seed)})")
         print()
     elif "--random" in args:
         seed = fetch_random_org()
@@ -945,77 +1177,50 @@ if __name__ == "__main__":
         seed = fetch_hardware()
         source = "hardware"
     elif "--iching" in args:
-        source_label = "hardware"
-        if "--seed" in args:
-            idx = args.index("--seed")
-            seed_val = int(args[idx + 1])
-            source_label = f"seed:{seed_val}"
-            hexagram = fetch_iching(seed=seed_val)
-        else:
-            hexagram = fetch_iching()
-        print("══════════════════════════════════════")
-        print("  I CHING FROM NUMOGRAM ENTROPY")
-        print("══════════════════════════════════════")
-        print()
-        print(f"  Source: {source_label}")
-        print()
-        for line in reversed(hexagram):
-            changing = " (changing)" if line["changing"] else ""
-            print(f"  Line {line['pos']}: {line['symbol']}  {line['value']}{changing}")
-        changing = [l["pos"] for l in hexagram if l["changing"]]
-        print()
-        if changing:
-            print(f"  Changing lines: {changing}")
-            print("  Hexagram transforms. The gate opens.")
-        else:
-            print("  No changing lines. Stable hexagram.")
-            print("  The current holds.")
-        print()
-        print("══════════════════════════════════════")
+        try:
+            if ICHING_MODULE is not None:
+                s = None
+                src = "hardware"
+                if "--seed" in args:
+                    idx = args.index("--seed")
+                    s = int(args[idx + 1])
+                    src = f"seed:{s}"
+                full = "--full" in args
+                ich = ICHING_MODULE.cast_iching(seed=s, source=src)
+                print(ICHING_MODULE.format_iching(ich, full=full))
+            else:
+                hexagram = fetch_iching()
+                ich = enrich_iching(hexagram)
+                print("══════════════════════════════════════")
+                print("  I CHING FROM NUMOGRAM ENTROPY (fallback)")
+                print(f"  Hex {ich.get('hex_num')}")
+        except Exception as e:
+            print(f"[iching delegate error] {e}")
         sys.exit(0)
     elif "--taixuan" in args:
-        if "--seed" in args:
-            idx = args.index("--seed")
-            seed_val = int(args[idx + 1])
-        else:
-            seed_val = fetch_hardware()
-        a_idx, b_idx = two_taixuan_zones(seed_val)
-        zone_a = taixuan_zone(a_idx)
-        zone_b = taixuan_zone(b_idx)
-        sy_a = get_syzygy(zone_a)
-        sy_b = get_syzygy(zone_b)
-        demon = demon_from_zones(zone_a, zone_b)
-        print("══════════════════════════════════════")
-        print("  T'AI XUAN CHING ORACLE")
-        print("══════════════════════════════════════")
-        print()
-        print(f"  Seed: {seed_val}")
-        print(f"  Tetragrams: {a_idx} (zone {zone_a}) and {b_idx} (zone {zone_b})")
-        print(f"  Syzygies: {zone_a}::{sy_a} and {zone_b}::{sy_b}")
-        if demon != "Unknown":
-            print(f"  Net-span demon: {demon}")
-        else:
-            print("  No direct syzygy — the pair traces a unique path through the Matrix.")
-        print()
-        if "--voice" in args or do_voice:
-            print("  [Voice] Generating oracle sentences...")
-            zones = [str(zone_a), str(zone_b)]
-            result = subprocess.run(
-                ["python3", os.path.expanduser("~/numogram-voices/oracle_sentences.py"), "--zones"] + zones,
-                capture_output=True, text=True
-            )
-            if result.returncode == 0:
-                for line in result.stdout.splitlines():
-                    if "oracle_sentence" in line and ".wav" in line:
-                        print(f"  [Voice] {line.strip()}")
-                if result.stderr:
-                    for line in result.stderr.splitlines():
-                        print(f"  [Voice] {line}")
+        try:
+            s = None
+            if "--seed" in args:
+                idx = args.index("--seed")
+                s = int(args[idx + 1])
+            if TAIXUAN_MODULE is not None:
+                full = "--full" in args
+                data = TAIXUAN_MODULE.cast_taixuan(seed=s, two=True)
+                print(TAIXUAN_MODULE.format_taixuan(data, full=full))
             else:
-                print(f"  [Voice] oracle_sentences.py failed (exit {result.returncode})")
-                if result.stderr:
-                    print(result.stderr[:500])
-        print("══════════════════════════════════════")
+                cmd = [sys.executable, TAIXUAN_SCRIPT, "--taixuan"]
+                if s is not None:
+                    cmd += ["--seed", str(s)]
+                if "--full" in args: cmd.append("--full")
+                cmd.append("--json")
+                res = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
+                if res.returncode == 0:
+                    d = json.loads(res.stdout)
+                    print(TAIXUAN_MODULE.format_taixuan(d) if TAIXUAN_MODULE else json.dumps(d, indent=2))
+                else:
+                    print("T'AI XUAN (fallback)")
+        except Exception as e:
+            print(f"[taixuan delegate error] {e}")
         sys.exit(0)
     elif "--traverse" in args:
         seed = int(args[args.index("--traverse") + 1]) if "--traverse" in args and len(args) > args.index("--traverse") + 1 else 192855
@@ -1023,7 +1228,9 @@ if __name__ == "__main__":
         print(f"Seed: {seed}")
         print(f"Zone path: {' → '.join(str(z) for z in path)}")
         for i, z in enumerate(path):
-            print(f"  Step {i}: Zone {z} ({ZONES[z]['name']}) — {ZONES[z]['desc']}")
+            zz = ZONES[z]
+            disp = zz.get("full_name") or zz.get("epithet") or zz["name"]
+            print(f"  Step {i}: Zone {z} ({disp} / {zz['name']}) — {zz['desc']}")
         sys.exit(0)
     else:
         print("Numogram Oracle")
@@ -1038,7 +1245,11 @@ if __name__ == "__main__":
         print("  python3 oracle.py --hardware")
         print("  python3 oracle.py --iching")
         print("  python3 oracle.py --iching --seed 192855")
+        print("  python3 iching.py --iching          (standalone I Ching + numogram shadow)")
+        print("  python3 iching.py --iching --seed N")
         print("  python3 oracle.py --taixuan")
+        print("  python3 taixuan.py --taixuan          (standalone Tai Xuan + 27-phase)")
+        print("  python3 taixuan.py --phase            (Yuandong/Guanziming 27)")
         print("  python3 oracle.py --synx 'TEXT'  (Synx/Yxshh cipher)")
         print("  python3 oracle.py --traverse 192855")
         print("  python3 oracle.py --base36 --text 'TEXT'  (Djynxxogram traversal)")
@@ -1049,11 +1260,21 @@ if __name__ == "__main__":
         print("  python3 oracle.py --seed N --planchette --tty           (ANSI color terminal)")
         print("  python3 oracle.py --seed N --planchette --ascii-glyph --sprite (ASCII glyph + pixel medallion)")
         print("  python3 oracle.py --seed N --planchette --sprite               (pixel medallion only)")
+        print()
+        print("Enriched output includes poetic full names (Void Resonance, Blood, Iron Core...),")
+        print("CCRU voice qualities, gate lore (Gt-45 Pandemonium etc.), and I Ching numogram shadows.")
         sys.exit(1)
+
+    # ── Generate standard reading (zone, etc.) for all non-special modes ──
+    reading = None
+    zone = None
+    if seed is not None:
+        reading, zone = generate_reading(seed, source)
 
     # ── PLANCHETTE / READING OUTPUT ──
     if do_planchette or do_json or do_sprite or do_ascii_glyph:
-        reading, zone = generate_reading(seed, source)
+        if zone is None and seed is not None:
+            reading, zone = generate_reading(seed, source)
 
     if do_planchette and do_json and zone is not None:
         print(generate_planchette_json(zone, get_current(zone), get_gate(zone), get_syzygy(zone)))
@@ -1105,6 +1326,11 @@ if __name__ == "__main__":
 
 
 
+
+        # ── Standard reading output (no special flags) ──
+    if zone is not None and reading is not None and not (do_planchette or do_sprite or do_ascii_glyph or do_json):
+        print(reading)
+        print()
 
     # Generate voice if requested
     if do_voice:
