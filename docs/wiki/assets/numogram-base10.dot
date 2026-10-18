@@ -1,0 +1,34 @@
+digraph Numogram {
+  rankdir=LR;
+  node [shape=circle, style=filled];
+  "0" [label="0\n0", fillcolor="#000000", fontcolor="white"];
+  "1" [label="1\n1", fillcolor="#c86432", fontcolor="white"];
+  "2" [label="2\n2", fillcolor="#3296c8", fontcolor="white"];
+  "3" [label="3\n3", fillcolor="#64c864", fontcolor="white"];
+  "4" [label="4\n4", fillcolor="#965032", fontcolor="white"];
+  "5" [label="5\n5", fillcolor="#c83232", fontcolor="white"];
+  "6" [label="6\n6", fillcolor="#643296", fontcolor="white"];
+  "7" [label="7\n7", fillcolor="#326496", fontcolor="white"];
+  "8" [label="8\n8", fillcolor="#969632", fontcolor="white"];
+  "9" [label="9\n9", fillcolor="#c8c8c8", fontcolor="white"];
+  "0" -> "9" [color="red", style="dashed", label="Σ=9"];
+  "1" -> "8" [color="red", style="dashed", label="Σ=9"];
+  "2" -> "7" [color="red", style="dashed", label="Σ=9"];
+  "3" -> "6" [color="red", style="dashed", label="Σ=9"];
+  "4" -> "5" [color="red", style="dashed", label="Σ=9"];
+  "0" -> "9" [color="blue", style="bold", label="C=9"];
+  "1" -> "7" [color="blue", style="bold", label="C=7"];
+  "2" -> "5" [color="blue", style="bold", label="C=5"];
+  "4" -> "1" [color="blue", style="bold", label="C=1"];
+  "5" -> "1" [color="blue", style="bold", label="C=1"];
+  "6" -> "3" [color="blue", style="bold", label="C=3"];
+  "7" -> "5" [color="blue", style="bold", label="C=5"];
+  "8" -> "7" [color="blue", style="bold", label="C=7"];
+  "2" -> "3" [color="green", style="dotted", label="Gt-3"];
+  "3" -> "6" [color="green", style="dotted", label="Gt-6"];
+  "4" -> "1" [color="green", style="dotted", label="Gt-10"];
+  "5" -> "6" [color="green", style="dotted", label="Gt-15"];
+  "6" -> "3" [color="green", style="dotted", label="Gt-21"];
+  "7" -> "1" [color="green", style="dotted", label="Gt-28"];
+  "8" -> "9" [color="green", style="dotted", label="Gt-36"];
+}
