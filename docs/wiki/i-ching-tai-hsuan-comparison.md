@@ -62,7 +62,7 @@ The T'ai Hsuan Ching distributes more evenly (81 = 9 × 9). Its "King" numbers (
 
 ## The Em State
 
-The T'ai Hsuan Ching has a third state (Em, 夷) between yin and yang — a neutral/unresolved line state. The I Ching achieves a similar effect through **changing lines** — lines that are about to flip, caught in the moment of transition.
+The T'ai Hsuan Ching has a third state (Em, 夷; unsourced: character attribution not found in the classical sources; kept for possible future investigation) between yin and yang — a neutral/unresolved line state. The I Ching achieves a similar effect through **changing lines** — lines that are about to flip, caught in the moment of transition.
 
 The Em maps to Zone 5 (Pressure/hinge) in the numogram. When fully realized, it closes toward Zone 4 (Gate). See [[tai-hsuan-ching]] for the Em state analysis.
 
