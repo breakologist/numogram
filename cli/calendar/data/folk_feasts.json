@@ -1,0 +1,317 @@
+{
+ "title": "Folk saints and traditional feast days (curated, optional layer)",
+ "coverage": "Small hand-picked set: British/Irish/European folk days and popular (non-canonised) folk saints of Latin America. Every entry carries the Wikipedia page that states the date; where a page gives several dates, all are listed. Not exhaustive. Welsh folk/national days added 2026-10-17 (Calennig, Hen Galan, Dwynwen, Calan Mai, Glyndŵr Day, Calan Gaeaf, Mari Lwyd season).",
+ "retrieved": "2026-10-17",
+ "labels": {
+  "folk-saint": "popular devotion, not recognised by the Catholic Church",
+  "folk-day": "traditional/folk observance",
+  "saint-day": "saint's day kept as a national or folk festival"
+ },
+ "fixed": [
+  {
+   "month": 1,
+   "day": 1,
+   "name": "Calennig (New Year gifts)",
+   "kind": "folk-day",
+   "region": "Wales",
+   "note": "New Year's Day gift and house-visiting custom",
+   "source": "https://en.wikipedia.org/wiki/Calennig"
+  },
+  {
+   "month": 1,
+   "day": 5,
+   "name": "Twelfth Night (English reckoning)",
+   "kind": "folk-day",
+   "region": "England",
+   "note": "some traditions keep 6 January",
+   "source": "https://en.wikipedia.org/wiki/Twelfth_Night_(holiday)"
+  },
+  {
+   "month": 1,
+   "day": 13,
+   "name": "Hen Galan (Old New Year), Cwm Gwaun",
+   "kind": "folk-day",
+   "region": "Gwaun Valley, Pembrokeshire",
+   "note": "Julian New Year kept on 13 January; children sing for calennig",
+   "source": "https://en.wikipedia.org/wiki/Cwm_Gwaun"
+  },
+  {
+   "month": 1,
+   "day": 17,
+   "name": "Old Twelfth Night — orchard wassailing",
+   "kind": "folk-day",
+   "region": "Devon, Somerset",
+   "source": "https://en.wikipedia.org/wiki/Wassail"
+  },
+  {
+   "month": 1,
+   "day": 25,
+   "name": "Dydd Santes Dwynwen (St Dwynwen's Day)",
+   "kind": "saint-day",
+   "region": "Wales",
+   "note": "Welsh patron saint of lovers",
+   "source": "https://en.wikipedia.org/wiki/Dwynwen"
+  },
+  {
+   "month": 2,
+   "day": 1,
+   "name": "Imbolc / Saint Brigid's Day",
+   "kind": "folk-day",
+   "region": "Ireland, Scotland, Isle of Man",
+   "source": "https://en.wikipedia.org/wiki/Imbolc"
+  },
+  {
+   "month": 3,
+   "day": 1,
+   "name": "Saint David's Day (Dydd Gŵyl Dewi Sant)",
+   "kind": "saint-day",
+   "region": "Wales",
+   "source": "https://en.wikipedia.org/wiki/Saint_David%27s_Day"
+  },
+  {
+   "month": 4,
+   "day": 23,
+   "name": "Saint George's Day",
+   "kind": "saint-day",
+   "region": "England (and elsewhere)",
+   "source": "https://en.wikipedia.org/wiki/Saint_George%27s_Day"
+  },
+  {
+   "month": 4,
+   "day": 30,
+   "name": "Walpurgis Night (eve of 1 May)",
+   "kind": "folk-day",
+   "region": "Central and Northern Europe",
+   "source": "https://en.wikipedia.org/wiki/Walpurgis_Night"
+  },
+  {
+   "month": 4,
+   "day": 30,
+   "name": "Nos Galan Haf (May Eve, an ysbrydnos / spirit night)",
+   "kind": "folk-day",
+   "region": "Wales",
+   "source": "https://en.wikipedia.org/wiki/Calan_Mai"
+  },
+  {
+   "month": 5,
+   "day": 1,
+   "name": "Calan Mai / Calan Haf (first day of summer)",
+   "kind": "folk-day",
+   "region": "Wales",
+   "source": "https://en.wikipedia.org/wiki/Calan_Mai"
+  },
+  {
+   "month": 5,
+   "day": 3,
+   "name": "Jesús Malverde (anniversary of his death, 1909)",
+   "kind": "folk-saint",
+   "region": "Sinaloa, Mexico",
+   "source": "https://en.wikipedia.org/wiki/Jes%C3%BAs_Malverde"
+  },
+  {
+   "month": 6,
+   "day": 23,
+   "name": "Saint John's Eve / Midsummer Eve",
+   "kind": "folk-day",
+   "region": "Europe",
+   "source": "https://en.wikipedia.org/wiki/Saint_John%27s_Eve"
+  },
+  {
+   "month": 7,
+   "day": 15,
+   "name": "Saint Swithun's Day (weather lore)",
+   "kind": "saint-day",
+   "region": "England",
+   "source": "https://en.wikipedia.org/wiki/Swithun"
+  },
+  {
+   "month": 8,
+   "day": 1,
+   "name": "Lammas (loaf-mass)",
+   "kind": "folk-day",
+   "region": "England, Scotland",
+   "source": "https://en.wikipedia.org/wiki/Lammas"
+  },
+  {
+   "month": 8,
+   "day": 13,
+   "name": "San La Muerte (alternative date)",
+   "kind": "folk-saint",
+   "region": "Argentina, Paraguay",
+   "note": "date contested; 15 August more common",
+   "source": "https://en.wikipedia.org/wiki/San_La_Muerte"
+  },
+  {
+   "month": 8,
+   "day": 15,
+   "name": "San La Muerte",
+   "kind": "folk-saint",
+   "region": "Argentina, Paraguay",
+   "source": "https://en.wikipedia.org/wiki/San_La_Muerte"
+  },
+  {
+   "month": 8,
+   "day": 15,
+   "name": "Santa Muerte (one of her observed days)",
+   "kind": "folk-saint",
+   "region": "Mexico, USA",
+   "note": "no official feast; 1 Nov and 2 Nov also observed",
+   "source": "https://en.wikipedia.org/wiki/Santa_Muerte"
+  },
+  {
+   "month": 9,
+   "day": 16,
+   "name": "Owain Glyndŵr Day",
+   "kind": "folk-day",
+   "region": "Wales",
+   "note": "16 Sep 1400, Glyndŵr proclaimed Prince of Wales",
+   "source": "https://en.wikipedia.org/wiki/Owain_Glynd%C5%B5r_Day"
+  },
+  {
+   "month": 9,
+   "day": 29,
+   "name": "Michaelmas (quarter day)",
+   "kind": "folk-day",
+   "region": "Britain, Ireland",
+   "source": "https://en.wikipedia.org/wiki/Michaelmas"
+  },
+  {
+   "month": 10,
+   "day": 25,
+   "name": "Saint Crispin's Day",
+   "kind": "saint-day",
+   "region": "England (shoemakers)",
+   "note": "removed from the General Roman Calendar in 1969",
+   "source": "https://en.wikipedia.org/wiki/Saint_Crispin%27s_Day"
+  },
+  {
+   "month": 10,
+   "day": 28,
+   "name": "Maximón / San Simón",
+   "kind": "folk-saint",
+   "region": "Guatemala",
+   "note": "Wikipedia infobox gives 'October 28th'; main procession in Holy Week (see movable)",
+   "source": "https://en.wikipedia.org/wiki/Maxim%C3%B3n"
+  },
+  {
+   "month": 10,
+   "day": 31,
+   "name": "Nos Galan Gaeaf (eve of winter)",
+   "kind": "folk-day",
+   "region": "Wales",
+   "source": "https://en.wikipedia.org/wiki/Calan_Gaeaf"
+  },
+  {
+   "month": 11,
+   "day": 1,
+   "name": "Santa Muerte — Enriqueta Romero's Tepito shrine celebration",
+   "kind": "folk-saint",
+   "region": "Mexico City",
+   "source": "https://en.wikipedia.org/wiki/Santa_Muerte"
+  },
+  {
+   "month": 11,
+   "day": 1,
+   "name": "Calan Gaeaf (first day of winter)",
+   "kind": "folk-day",
+   "region": "Wales",
+   "source": "https://en.wikipedia.org/wiki/Calan_Gaeaf"
+  },
+  {
+   "month": 11,
+   "day": 2,
+   "name": "Día de Muertos (with Santa Muerte devotions)",
+   "kind": "folk-day",
+   "region": "Mexico",
+   "note": "festival runs 1–2 November",
+   "source": "https://en.wikipedia.org/wiki/Day_of_the_Dead"
+  },
+  {
+   "month": 11,
+   "day": 5,
+   "name": "Bonfire Night / Guy Fawkes Night",
+   "kind": "folk-day",
+   "region": "Great Britain",
+   "source": "https://en.wikipedia.org/wiki/Bonfire_Night"
+  },
+  {
+   "month": 11,
+   "day": 11,
+   "name": "Martinmas (St Martin's Day lanterns)",
+   "kind": "saint-day",
+   "region": "Europe",
+   "source": "https://en.wikipedia.org/wiki/St._Martin%27s_Day"
+  },
+  {
+   "month": 11,
+   "day": 30,
+   "name": "Saint Andrew's Day",
+   "kind": "saint-day",
+   "region": "Scotland",
+   "source": "https://en.wikipedia.org/wiki/Saint_Andrew%27s_Day"
+  },
+  {
+   "month": 12,
+   "day": 13,
+   "name": "Saint Lucy's Day (Lucia)",
+   "kind": "saint-day",
+   "region": "Scandinavia, Italy",
+   "source": "https://en.wikipedia.org/wiki/Saint_Lucy%27s_Day"
+  },
+  {
+   "month": 12,
+   "day": 26,
+   "name": "Wren Day (Saint Stephen's Day)",
+   "kind": "folk-day",
+   "region": "Ireland, Isle of Man",
+   "source": "https://en.wikipedia.org/wiki/Wren_Day"
+  }
+ ],
+ "movable": [
+  {
+   "rule": "weekday_after",
+   "month": 1,
+   "day": 6,
+   "weekday": 0,
+   "name": "Plough Monday",
+   "kind": "folk-day",
+   "region": "England",
+   "note": "first Monday after Epiphany (6 January)",
+   "source": "https://en.wikipedia.org/wiki/Plough_Monday"
+  },
+  {
+   "rule": "easter",
+   "offset": -47,
+   "name": "Shrove Tuesday (Pancake Day)",
+   "kind": "folk-day",
+   "region": "Britain, Ireland",
+   "source": "https://en.wikipedia.org/wiki/Shrove_Tuesday"
+  },
+  {
+   "rule": "easter_range",
+   "start": -7,
+   "end": -1,
+   "name": "Maximón Holy Week procession",
+   "kind": "folk-saint",
+   "region": "Santiago Atitlán, Guatemala",
+   "source": "https://en.wikipedia.org/wiki/Maxim%C3%B3n"
+  }
+ ],
+ "ranges": [
+  {
+   "start": [
+    12,
+    25
+   ],
+   "end": [
+    1,
+    6
+   ],
+   "name": "Mari Lwyd season",
+   "kind": "folk-season",
+   "region": "South Wales",
+   "note": "historically toured 'from Christmas until after Twelfth Day' (Evans 1804, via Wikipedia); modern revivals vary and also appear at Hen Galan",
+   "source": "https://en.wikipedia.org/wiki/Mari_Lwyd"
+  }
+ ]
+}

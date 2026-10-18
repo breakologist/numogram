@@ -1,0 +1,674 @@
+{
+ "title": "National Proper Calendars for England and for Wales (Catholic Church in England and Wales)",
+ "coverage": "Complete transcription of the two National Calendar summary tables (24 Wales, 42 England celebrations) plus the E&W movable/transfer rules stated by the Liturgy Office. Diocesan propers (e.g. Cardiff-Menevia, Wrexham; English dioceses) are NOT included. 'Where no other indication is given the celebration is an optional memorial.'",
+ "retrieved": "2026-10-17",
+ "sources": [
+  {
+   "name": "Liturgy Office of the Bishops' Conference of England and Wales — National Calendar for Wales (summary table)",
+   "url": "https://www.liturgyoffice.org.uk/Calendar/National/Wales1.shtml"
+  },
+  {
+   "name": "Liturgy Office — National Calendar for Wales II (details per celebration; some ranks differ from the summary, kept as rank_variant)",
+   "url": "https://www.liturgyoffice.org.uk/Calendar/National/Wales2.shtml"
+  },
+  {
+   "name": "Liturgy Office — National Calendar for England (summary table, incl. 2010 and 2013 changes)",
+   "url": "https://www.liturgyoffice.org.uk/Calendar/National/England1.shtml"
+  },
+  {
+   "name": "Liturgy Office — National Calendar for England II (details)",
+   "url": "https://www.liturgyoffice.org.uk/Calendar/National/England2.shtml"
+  },
+  {
+   "name": "Liturgy Office — Liturgical Calendar introduction: Holydays of Obligation in England and Wales; Saturday/Monday holydays transferred to Sunday (1984); Body and Blood of the Lord on Sunday (since 2006)",
+   "url": "https://www.liturgyoffice.org.uk/Calendar/"
+  },
+  {
+   "name": "Liturgy Office — Calendar Notes 2024–2027 (PDF): Epiphany/Baptism, Eternal High Priest (Feast in England and Wales), St David 2 March 2026 (in Wales), St George 28 April 2025, All Souls 3 November 2025",
+   "url": "https://www.liturgyoffice.org.uk/Calendar/2026/Ordo-2026.pdf"
+  },
+  {
+   "name": "Liturgy Office — Table of Liturgical Days / Universal Norms no. 60 (impeded solemnities are transferred)",
+   "url": "https://www.liturgyoffice.org.uk/Calendar/Info/Days.shtml"
+  }
+ ],
+ "rules": {
+  "holyday_transfer": "Epiphany (6 Jan), Ss Peter & Paul (29 Jun), Assumption (15 Aug), All Saints (1 Nov): if on Saturday or Monday, celebrated on the adjacent Sunday",
+  "baptism": "if Epiphany is kept on Sunday 7 or 8 January, the Baptism of the Lord is on the Monday after (Calendar Notes 2024)",
+  "all_souls": "if All Saints is moved to Sunday 2 November, All Souls is on Monday 3 November (Calendar Notes 2025)",
+  "corpus_christi": "Body and Blood of the Lord on the Sunday after Trinity Sunday",
+  "ascension": "Thursday of the 6th week of Easter (since 2017)",
+  "national_solemnity": "a national solemnity on a Sunday of Advent/Lent/Easter moves to the Monday; in Holy Week or the Easter Octave to the Monday after the 2nd Sunday of Easter (UNLY 60; verified: St David 2026 → 2 Mar, St George 2025 → 28 Apr)",
+  "sunday": "national feasts and memorials falling on a Sunday are marked impeded (Table of Liturgical Days: Sundays outrank them)"
+ },
+ "wales": [
+  {
+   "month": 2,
+   "day": 9,
+   "name": "St Teilo, bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 2,
+   "day": 14,
+   "name": "St Cyril, monk, and St Methodius, bishop, patrons of Europe",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 2,
+     "day": 14,
+     "match": "Cyril"
+    }
+   ]
+  },
+  {
+   "month": 3,
+   "day": 1,
+   "name": "St David (Dewi Sant), bishop, patron of Wales",
+   "rank": "solemnity",
+   "rank_variant": "feast (Wales II detail page); the Calendar Notes 2026 transfer it to Monday 2 March 'in Wales', as for a solemnity",
+   "transfer_if_impeded": true
+  },
+  {
+   "month": 4,
+   "day": 20,
+   "name": "St Beuno, abbot",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 4,
+   "day": 29,
+   "name": "St Catherine of Siena, virgin and doctor of the Church, patron of Europe",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 4,
+     "day": 29,
+     "match": "Catherine of Siena"
+    }
+   ]
+  },
+  {
+   "month": 5,
+   "day": 5,
+   "name": "St Asaph, bishop",
+   "rank": "optional memorial",
+   "rank_variant": "memorial (Wales II detail page)"
+  },
+  {
+   "month": 6,
+   "day": 20,
+   "name": "St Alban, St Julius and St Aaron, martyrs",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 11,
+   "name": "St Benedict, abbot, patron of Europe",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 7,
+     "day": 11,
+     "match": "Benedict"
+    }
+   ]
+  },
+  {
+   "month": 7,
+   "day": 12,
+   "name": "St John Jones, martyr",
+   "rank": "optional memorial",
+   "rank_variant": "memorial (Wales II detail page)"
+  },
+  {
+   "month": 7,
+   "day": 23,
+   "name": "St Bridget, religious, patron of Europe",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 7,
+     "day": 23,
+     "match": "Bridget"
+    }
+   ]
+  },
+  {
+   "month": 7,
+   "day": 23,
+   "name": "St Philip Evans and St John Lloyd, martyrs",
+   "rank": "optional memorial",
+   "rank_variant": "memorial (Wales II detail page)"
+  },
+  {
+   "month": 8,
+   "day": 3,
+   "name": "St Germanus of Auxerre, bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 9,
+   "name": "St Teresa Benedicta of the Cross (Edith Stein), virgin, martyr, patron of Europe",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 8,
+     "day": 9,
+     "match": "Teresa Benedicta"
+    }
+   ]
+  },
+  {
+   "month": 8,
+   "day": 26,
+   "name": "St David Lewis, martyr",
+   "rank": "optional memorial",
+   "rank_variant": "memorial (Wales II detail page)"
+  },
+  {
+   "month": 9,
+   "day": 11,
+   "name": "St Deiniol, bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 9,
+   "name": "St John Henry Newman, priest",
+   "rank": "optional memorial",
+   "supersedes": [
+    {
+     "month": 10,
+     "day": 9,
+     "match": "Newman"
+    }
+   ],
+   "note": "summary table still reads 'Bl JOHN HENRY NEWMAN'; detail page 'St John Henry Newman'"
+  },
+  {
+   "month": 10,
+   "day": 16,
+   "name": "St Richard Gwyn, martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 22,
+   "name": "St John Paul II, pope",
+   "rank": "optional memorial",
+   "supersedes": [
+    {
+     "month": 10,
+     "day": 22,
+     "match": "John Paul II"
+    }
+   ]
+  },
+  {
+   "month": 10,
+   "day": 25,
+   "name": "Six Welsh Martyrs and their Companions",
+   "rank": "feast"
+  },
+  {
+   "month": 11,
+   "day": 3,
+   "name": "St Winefride, virgin",
+   "rank": "optional memorial",
+   "note": "spelled 'Winifride' in the summary table"
+  },
+  {
+   "month": 11,
+   "day": 6,
+   "name": "St Illtud, abbot",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 11,
+   "day": 8,
+   "name": "All Saints of Wales",
+   "rank": "feast"
+  },
+  {
+   "month": 11,
+   "day": 14,
+   "name": "St Dyfrig, bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 12,
+   "day": 10,
+   "name": "St John Roberts, martyr",
+   "rank": "optional memorial",
+   "rank_variant": "memorial (Wales II detail page)"
+  }
+ ],
+ "england": [
+  {
+   "month": 1,
+   "day": 12,
+   "name": "St Aelred of Rievaulx, abbot",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 1,
+   "day": 19,
+   "name": "St Wulstan, bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 2,
+   "day": 14,
+   "name": "St Cyril, monk, and St Methodius, bishop, patrons of Europe",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 2,
+     "day": 14,
+     "match": "Cyril"
+    }
+   ]
+  },
+  {
+   "month": 3,
+   "day": 1,
+   "name": "St David, bishop, patron of Wales",
+   "rank": "feast"
+  },
+  {
+   "month": 3,
+   "day": 17,
+   "name": "St Patrick, bishop, patron of Ireland",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 3,
+     "day": 17,
+     "match": "Patrick"
+    }
+   ]
+  },
+  {
+   "month": 4,
+   "day": 21,
+   "name": "St Anselm, bishop, doctor of the Church",
+   "rank": "optional memorial",
+   "supersedes": [
+    {
+     "month": 4,
+     "day": 21,
+     "match": "Anselm"
+    }
+   ]
+  },
+  {
+   "month": 4,
+   "day": 23,
+   "name": "St George, martyr, patron of England",
+   "rank": "solemnity",
+   "supersedes": [
+    {
+     "month": 4,
+     "day": 23,
+     "match": "George"
+    }
+   ],
+   "transfer_if_impeded": true
+  },
+  {
+   "month": 4,
+   "day": 24,
+   "name": "St Adalbert, bishop and martyr; St Fidelis of Sigmaringen, priest and martyr",
+   "rank": "optional memorial",
+   "supersedes": [
+    {
+     "month": 4,
+     "day": 23,
+     "match": "Adalbert"
+    },
+    {
+     "month": 4,
+     "day": 24,
+     "match": "Fidelis"
+    }
+   ]
+  },
+  {
+   "month": 4,
+   "day": 29,
+   "name": "St Catherine of Siena, virgin and doctor of the Church, patron of Europe",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 4,
+     "day": 29,
+     "match": "Catherine of Siena"
+    }
+   ]
+  },
+  {
+   "month": 5,
+   "day": 4,
+   "name": "The English Martyrs",
+   "rank": "feast",
+   "note": "the English men and women martyred for the Catholic Faith 1535–1680 and beatified or canonised"
+  },
+  {
+   "month": 5,
+   "day": 19,
+   "name": "St Dunstan, bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 5,
+   "day": 25,
+   "name": "St Bede the Venerable, priest, doctor of the Church",
+   "rank": "memorial",
+   "supersedes": [
+    {
+     "month": 5,
+     "day": 25,
+     "match": "Bede"
+    }
+   ]
+  },
+  {
+   "month": 5,
+   "day": 27,
+   "name": "St Augustine of Canterbury, bishop",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 5,
+     "day": 27,
+     "match": "Augustine of Canterbury"
+    }
+   ]
+  },
+  {
+   "month": 6,
+   "day": 5,
+   "name": "St Boniface, bishop, martyr",
+   "rank": "memorial",
+   "supersedes": [
+    {
+     "month": 6,
+     "day": 5,
+     "match": "Boniface"
+    }
+   ]
+  },
+  {
+   "month": 6,
+   "day": 9,
+   "name": "St Columba, abbot",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 6,
+   "day": 16,
+   "name": "St Richard of Chichester, bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 6,
+   "day": 20,
+   "name": "St Alban, martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 6,
+   "day": 22,
+   "name": "St John Fisher, bishop, and St Thomas More, martyrs",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 6,
+     "day": 22,
+     "match": "John Fisher"
+    }
+   ]
+  },
+  {
+   "month": 6,
+   "day": 23,
+   "name": "St Etheldreda (Audrey), abbess",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 1,
+   "name": "St Oliver Plunket, bishop, martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 11,
+   "name": "St Benedict, abbot, patron of Europe",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 7,
+     "day": 11,
+     "match": "Benedict"
+    }
+   ]
+  },
+  {
+   "month": 7,
+   "day": 23,
+   "name": "St Bridget, religious, patron of Europe",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 7,
+     "day": 23,
+     "match": "Bridget"
+    }
+   ]
+  },
+  {
+   "month": 8,
+   "day": 9,
+   "name": "St Teresa Benedicta of the Cross (Edith Stein), virgin, martyr, patron of Europe",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 8,
+     "day": 9,
+     "match": "Teresa Benedicta"
+    }
+   ]
+  },
+  {
+   "month": 8,
+   "day": 26,
+   "name": "Bl Dominic of the Mother of God Barberi, priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 30,
+   "name": "St Margaret Clitherow, St Anne Line and St Margaret Ward, virgin, martyrs",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 31,
+   "name": "St Aidan, bishop, and the Saints of Lindisfarne",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 9,
+   "day": 3,
+   "name": "St Gregory the Great, pope, doctor of the Church",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 9,
+     "day": 3,
+     "match": "Gregory the Great"
+    }
+   ]
+  },
+  {
+   "month": 9,
+   "day": 4,
+   "name": "St Cuthbert, bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 9,
+   "day": 19,
+   "name": "St Theodore of Canterbury, bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 9,
+   "day": 24,
+   "name": "Our Lady of Walsingham",
+   "rank": "feast"
+  },
+  {
+   "month": 10,
+   "day": 9,
+   "name": "St John Henry Newman, priest",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 10,
+     "day": 9,
+     "match": "Newman"
+    },
+    {
+     "month": 10,
+     "day": 9,
+     "match": "Denis"
+    },
+    {
+     "month": 10,
+     "day": 9,
+     "match": "John Leonardi"
+    }
+   ],
+   "note": "St Denis and Companions and St John Leonardi are transferred to 10 October in England"
+  },
+  {
+   "month": 10,
+   "day": 10,
+   "name": "St Paulinus of York, bishop (or St Denis and Companions, martyrs; St John Leonardi, priest — transferred from 9 October)",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 12,
+   "name": "St Wilfrid, bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 13,
+   "name": "St Edward the Confessor",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 22,
+   "name": "St John Paul II, pope",
+   "rank": "optional memorial",
+   "supersedes": [
+    {
+     "month": 10,
+     "day": 22,
+     "match": "John Paul II"
+    }
+   ],
+   "note": "added to the National Calendars for England and for Wales in 2013"
+  },
+  {
+   "month": 10,
+   "day": 26,
+   "name": "St Chad and St Cedd, bishops",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 11,
+   "day": 3,
+   "name": "St Winefride, virgin",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 11,
+   "day": 7,
+   "name": "St Willibrord, bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 11,
+   "day": 16,
+   "name": "St Edmund of Abingdon, bishop; St Margaret of Scotland",
+   "rank": "optional memorial",
+   "supersedes": [
+    {
+     "month": 11,
+     "day": 16,
+     "match": "Margaret of Scotland"
+    }
+   ]
+  },
+  {
+   "month": 11,
+   "day": 17,
+   "name": "St Hilda, abbess; St Hugh of Lincoln, bishop; St Elizabeth of Hungary, religious",
+   "rank": "optional memorial",
+   "supersedes": [
+    {
+     "month": 11,
+     "day": 17,
+     "match": "Elizabeth of Hungary"
+    }
+   ]
+  },
+  {
+   "month": 11,
+   "day": 30,
+   "name": "St Andrew, apostle, patron of Scotland",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 11,
+     "day": 30,
+     "match": "Andrew"
+    }
+   ]
+  },
+  {
+   "month": 12,
+   "day": 29,
+   "name": "St Thomas Becket, bishop, martyr",
+   "rank": "feast",
+   "supersedes": [
+    {
+     "month": 12,
+     "day": 29,
+     "match": "Thomas Becket"
+    }
+   ]
+  }
+ ],
+ "movable": [
+  {
+   "rule": "easter",
+   "offset": 53,
+   "name": "Our Lord Jesus Christ, the Eternal High Priest",
+   "rank": "feast",
+   "when": "Thursday after Pentecost",
+   "regions": [
+    "england",
+    "wales"
+   ]
+  }
+ ]
+}

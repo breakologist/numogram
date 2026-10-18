@@ -1,0 +1,2691 @@
+{
+ "title": "Calendrier 'Pataphysique — fêtes et saints",
+ "coverage": "377 entries = 13 months × 29 days (incl. the 29th of each month); names from jchr.be, ranks from icalendrier.fr; 2 days disagree between the two reproductions (stored as variant_icalendrier).",
+ "sources": [
+  {
+   "name": "jchr.be, Calendrier ’Pataphysique (names)",
+   "url": "http://jchr.be/langage/pataphysique.htm",
+   "archived": "https://web.archive.org/web/20241008002420/http://jchr.be/langage/pataphysique.htm"
+  },
+  {
+   "name": "icalendrier.fr, Le calendrier 'Pataphysique (ranks SPp/SPs/SS/ST/SQ/V)",
+   "url": "https://icalendrier.fr/calendriers-saga/calendriers/reforme-fixes/pataphysique"
+  },
+  {
+   "name": "fr.wikipedia, Calendrier pataphysique (spot-check examples, rank counts)",
+   "url": "https://fr.wikipedia.org/wiki/Calendrier_pataphysique"
+  }
+ ],
+ "notes": "Not the Collège's official edition (calenpat.pdf, not retrievable); editions differ. jchr.be marks retained vulgar-calendar saints with °. Rank counts from icalendrier (SPp 3, SPs 8, SS 22, ST 40, V 37) differ slightly from fr.wikipedia's (2, 8, 22, 41, 39).",
+ "retrieved": "2026-10-17",
+ "rank_codes": {
+  "SPp": "Fête Suprême Première première",
+  "SPs": "Fête Suprême Première seconde",
+  "SS": "Fête Suprême Seconde",
+  "ST": "Fête Suprême Tierce",
+  "SQ": "Fête Suprême Quarte",
+  "V": "Vacuation"
+ },
+ "entries": [
+  {
+   "month": "Absolu",
+   "day": 1,
+   "name": "NATIVITÉ d'ALFRED JARRY",
+   "rank": "SPp",
+   "rank_label": "Fête Suprême Première première"
+  },
+  {
+   "month": "Absolu",
+   "day": 2,
+   "name": "St Ptyx, silentiaire (Abolition de)",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 3,
+   "name": "St Phénix, solipsiste et St Hyx, factotum",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 4,
+   "name": "St Lucien de Samosate, voyageur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 5,
+   "name": "St Bardamu, voyageur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 6,
+   "name": "Ste Vérola, assistante sociale",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 7,
+   "name": "St Alambic, abstracteur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 8,
+   "name": "ABSINTHE, ci-devant °St Alfred",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Absolu",
+   "day": 9,
+   "name": "Descente du st Esprit (de Vin)",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 10,
+   "name": "Dilution",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Absolu",
+   "day": 11,
+   "name": "Ste Purée, sportswoman",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 12,
+   "name": "Vide",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Absolu",
+   "day": 13,
+   "name": "St Canterel, l'illuminateur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 14,
+   "name": "St Sophrotatos l'Arménien, pataphysicien",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 15,
+   "name": "ÉTHERNITÉ",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Absolu",
+   "day": 16,
+   "name": "St Ibicrate le Géomètre, pataphysicien",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 17,
+   "name": "Céphalorgie",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Absolu",
+   "day": 18,
+   "name": "Flûtes de Pan",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Absolu",
+   "day": 19,
+   "name": "Stes Grues, ophiophiles",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 20,
+   "name": "Ste Mélusine, souillarde de cuisine",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 21,
+   "name": "°St Venceslas, duc",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 22,
+   "name": "EMMANUEL DIEU",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Absolu",
+   "day": 23,
+   "name": "Ste Varia-Miriam, amphibie",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 24,
+   "name": "Sts Rakirs et Rastrons, porte-côtelettes",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 25,
+   "name": "Nativité de Sa Magnificence Opach",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 26,
+   "name": "St Joseb, notaire à la mode de Bretagne",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 27,
+   "name": "Stes Gigolette et Gaufrette, dogaresses",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Absolu",
+   "day": 28,
+   "name": "Xylostomie",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Absolu",
+   "day": 29,
+   "name": "Le Jet Musical",
+   "rank": "V",
+   "rank_label": "Vacuation",
+   "imaginary": true
+  },
+  {
+   "month": "Haha",
+   "day": 1,
+   "name": "L'ÂGE DU Dr FAUSTROLL",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Haha",
+   "day": 2,
+   "name": "Dissolution d'E. Poe, dinomythurge",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 3,
+   "name": "St Gibus, franc-maçon",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 4,
+   "name": "Ste Berthe de Courrière, égérie",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 5,
+   "name": "Ste Belgique, nourrice",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 6,
+   "name": "Ste Tourte, lyrique et ste Bévue, sociologue",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 7,
+   "name": "St Prout, abbé",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 8,
+   "name": "FÊTE DU HAHA",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Haha",
+   "day": 9,
+   "name": "Tautologie",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Haha",
+   "day": 10,
+   "name": "St Panmuphle, huissier",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 11,
+   "name": "Sortie de st L. Cranach, apocalypticien",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 12,
+   "name": "St Cosinus, savant",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 13,
+   "name": "Bse Fenouillard, sainte famille",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 14,
+   "name": "Exhibition de la Daromphe",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 15,
+   "name": "NATIVITÉ DE L'OESTRE, artificier",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Haha",
+   "day": 16,
+   "name": "Ste Vadrouille, emblème",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 17,
+   "name": "St Homais d'Aquin, prudhomme",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 18,
+   "name": "Nativité de Sa Magnificence le baron Mollet (°St Pipe)",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 19,
+   "name": "°St Raphaël, apéritif et philistin",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 20,
+   "name": "STRANGULATION DE BOSSE-DE-NAGE",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Haha",
+   "day": 21,
+   "name": "ZIMZOUM DE BOSSE-DE-NAGE",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Haha",
+   "day": 22,
+   "name": "RÉSURRECTION DE BOSSE-DE-NAGE",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Haha",
+   "day": 23,
+   "name": "CHAPEAU DE BOSSE-DE-NAGE",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Haha",
+   "day": 24,
+   "name": "St Cl. Terrasse, musicien des Phynances",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 25,
+   "name": "St J.-P. Brisset, philologue, prince des penseurs",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 26,
+   "name": "Commémoration du Cure-dent",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 27,
+   "name": "OCCULTATION D'ALFRED JARRY",
+   "rank": "SPs",
+   "rank_label": "Fête Suprême Première seconde"
+  },
+  {
+   "month": "Haha",
+   "day": 28,
+   "name": "Fuite d'Ablou",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Haha",
+   "day": 29,
+   "name": "Marée Terrestre",
+   "rank": "V",
+   "rank_label": "Vacuation",
+   "imaginary": true
+  },
+  {
+   "month": "As",
+   "day": 1,
+   "name": "NATIVITÉ DE PANTAGRUEL",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "As",
+   "day": 2,
+   "name": "Ste Rrose Sélavy, héroïne",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 3,
+   "name": "Couronnement de Lord Patchogue, miroitier",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 4,
+   "name": "St Cravan, boxeur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 5,
+   "name": "St Van Meegeren, faussaire",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 6,
+   "name": "St Omnibus, satyre",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 7,
+   "name": "St Cyrano de Bergerac, explorateur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 8,
+   "name": "St RIMBE, OISIF",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "As",
+   "day": 9,
+   "name": "Équarrissage pour tous",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "As",
+   "day": 10,
+   "name": "St Abstrait, bourreau",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 11,
+   "name": "St Ossian, barde postiche",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 12,
+   "name": "DISPUTE DU SIGNE + ET DU SIGNE -",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "As",
+   "day": 13,
+   "name": "MOUSTACHES DU Dr FAUSTROLL",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "As",
+   "day": 14,
+   "name": "St P. Bonnard, peintre des Phynances",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 15,
+   "name": "NAVIGATION DU Dr FAUSTROLL",
+   "rank": "SPs",
+   "rank_label": "Fête Suprême Première seconde"
+  },
+  {
+   "month": "As",
+   "day": 16,
+   "name": "St Cap, captain",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 17,
+   "name": "St Pangloss, humoriste passif",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 18,
+   "name": "St Chambernac, pauvriseur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 19,
+   "name": "St Courtial des Péreires, aérostier et inventeur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 20,
+   "name": "St Olibrius, augure",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 21,
+   "name": "St Possible, schizophrène",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 22,
+   "name": "St LAUTRÉAMONT",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "As",
+   "day": 23,
+   "name": "St Quincey, critique d'art",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 24,
+   "name": "St Berbiguier, martyr",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 25,
+   "name": "St Lewis Carroll, professeur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 26,
+   "name": "St Mensonger, évêque",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 27,
+   "name": "Ste Visité, fille du précédent",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 28,
+   "name": "Nativité de st Swift, chanoine",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "As",
+   "day": 29,
+   "name": "Traversée du Miroir",
+   "rank": "V",
+   "rank_label": "Vacuation",
+   "imaginary": true
+  },
+  {
+   "month": "Sable",
+   "day": 1,
+   "name": "NOCES DE BALKIS ET DE SALOMON",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Sable",
+   "day": 2,
+   "name": "St Doublemain, idéologue",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 3,
+   "name": "St Phlegmon, doctrinaire",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 4,
+   "name": "°Ste Barbe (femme à), femme-canon",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 5,
+   "name": "Ste Savate, avocate",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 6,
+   "name": "St Navet et ste Perruque, humanistes",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 7,
+   "name": "St Birbe, juge",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 8,
+   "name": "CONCEPTION DU P. UBU (A. J.)",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Sable",
+   "day": 9,
+   "name": "St Sagouin, homme d'État",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 10,
+   "name": "EXALTATION D'UBU ROI (Ubu d'hiver)",
+   "rank": "SPs",
+   "rank_label": "Fête Suprême Première seconde"
+  },
+  {
+   "month": "Sable",
+   "day": 11,
+   "name": "Nativité de st Grabbe, scherziste",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 12,
+   "name": "Ste Choupe, mère de famille",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 13,
+   "name": "°St Flaive, concierge",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 14,
+   "name": "Don Quichotte, champion du monde",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 15,
+   "name": "KHURMOOKUM DU Dr FAUSTROLL",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Sable",
+   "day": 16,
+   "name": "St Nul, exempt",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 17,
+   "name": "St Moyen, français",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 18,
+   "name": "Ste Lurette, joconde",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 19,
+   "name": "GRAVIDITÉ DE MÈRE UBU",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Sable",
+   "day": 20,
+   "name": "St Sabre, allopathe",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 21,
+   "name": "Ste Tape, pompette",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 22,
+   "name": "CÉSAR - ANTECHRIST",
+   "rank": "SPs",
+   "rank_label": "Fête Suprême Première seconde"
+  },
+  {
+   "month": "Sable",
+   "day": 23,
+   "name": "°Ste Viole, vierge et martyre",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 24,
+   "name": "Ste Pochetée, gouvernante",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 25,
+   "name": "NATIVITÉ DE L'ARCHÉOPTÉRYX",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Sable",
+   "day": 26,
+   "name": "Monsieur Sisyphe",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 27,
+   "name": "St Tic, conjoint",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 28,
+   "name": "St Cervelas, penseur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Sable",
+   "day": 29,
+   "name": "Aleph",
+   "rank": "V",
+   "rank_label": "Vacuation",
+   "imaginary": true
+  },
+  {
+   "month": "Décervelage",
+   "day": 1,
+   "name": "St ALAODINE, virtuose",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Décervelage",
+   "day": 2,
+   "name": "Sts Hassassins, praticiens",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 3,
+   "name": "Astu",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Décervelage",
+   "day": 4,
+   "name": "DÉCERVELAGE",
+   "rank": "SPs",
+   "rank_label": "Fête Suprême Première seconde"
+  },
+  {
+   "month": "Décervelage",
+   "day": 5,
+   "name": "Sts Giron, Pile et Cotice, palotins",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 6,
+   "name": "Sts Polonais, prolétaires",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 7,
+   "name": "Sts Forçats, poliorcètes",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 8,
+   "name": "St BORDURE, CAPITAINE",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Décervelage",
+   "day": 9,
+   "name": "Dormition de Jacques Vaché, interprète",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 10,
+   "name": "Drapaud (érection du)",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Décervelage",
+   "day": 11,
+   "name": "°St Eustache, libérateur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 12,
+   "name": "St Landru, gynécologue",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 13,
+   "name": "St Guillotin, médecin",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 14,
+   "name": "Sts 4 Sans-Cou, enchanteurs",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 15,
+   "name": "CONSCIENCE D'UBU",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Décervelage",
+   "day": 16,
+   "name": "St Mauvais, sujet",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 17,
+   "name": "St Mandrin, poète et philosophe",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 18,
+   "name": "Sts Pirates et Flibustiers, thaumaturges",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 19,
+   "name": "St et ste Cartouche, vétérinaires",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 20,
+   "name": "St Outlaw, aristocrate",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 21,
+   "name": "CHAIRE DU Dr FAUSTROLL",
+   "rank": "SPs",
+   "rank_label": "Fête Suprême Première seconde"
+  },
+  {
+   "month": "Décervelage",
+   "day": 22,
+   "name": "OSTENTION DU BÂTON À PHYSIQUE",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Décervelage",
+   "day": 23,
+   "name": "St Tank, animal",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 24,
+   "name": "St Weidman, patriarche",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 25,
+   "name": "St Petiot, expert",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 26,
+   "name": "Escrime",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Décervelage",
+   "day": 27,
+   "name": "Sts Chemins de fer, assassins",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Décervelage",
+   "day": 28,
+   "name": "Repopulation",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Décervelage",
+   "day": 29,
+   "name": "Lit de Procruste",
+   "rank": "V",
+   "rank_label": "Vacuation",
+   "imaginary": true
+  },
+  {
+   "month": "Gueules",
+   "day": 1,
+   "name": "DÉPUCELAGE DE MÈRE UBU",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Gueules",
+   "day": 2,
+   "name": "St Sigisbée, eunuque",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 3,
+   "name": "St Anthropoïde, policier",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 4,
+   "name": "°Ste Goule ou Gudule, institutrice",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 5,
+   "name": "Ste Gale, abbesse",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 6,
+   "name": "Ste Touche, postulante",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 7,
+   "name": "St Gueule, abbé",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 8,
+   "name": "FÊTE DE LA CHANDELLE VERTE",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Gueules",
+   "day": 9,
+   "name": "Ste Crêpe, laïque",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 10,
+   "name": "St Préservatif, bedeau",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 11,
+   "name": "St Baobab, célibataire",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 12,
+   "name": "St Membre, compilateur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 13,
+   "name": "Copulation",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Gueules",
+   "day": 14,
+   "name": "Nativité de st J. Verne, globe-trotter en chambre",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 15,
+   "name": "ALICE AU PAYS DES MERVEILLES",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Gueules",
+   "day": 16,
+   "name": "St Münchhausen, baron",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 17,
+   "name": "Le Bétrou, théurge",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 18,
+   "name": "Nativité de st Deibler, prestidigitateur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 19,
+   "name": "St Sade ès liens",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 20,
+   "name": "St Lafleur, valet",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 21,
+   "name": "Lavement",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Gueules",
+   "day": 22,
+   "name": "St SEXE, STYLITE",
+   "rank": "SPs",
+   "rank_label": "Fête Suprême Première seconde"
+  },
+  {
+   "month": "Gueules",
+   "day": 23,
+   "name": "Occultation de st J. Torma, euphoriste",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 24,
+   "name": "Conversion de st Matorel, bateleur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 25,
+   "name": "Ste Marmelade, inspirée",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 26,
+   "name": "L'AMOUR ABSOLU, deliquium",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Gueules",
+   "day": 27,
+   "name": "Ste Tabagie, cosmogène",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 28,
+   "name": "Sts Hylactor et Pamphagus",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gueules",
+   "day": 29,
+   "name": "Mouvement Perpétuel (hunyadi gras tous les quatre ans)",
+   "rank": "V",
+   "rank_label": "Vacuation",
+   "variant_icalendrier": "hunyadi ou *hunyadi gras* selon que l'an est ou non bissextile- Mouvement Perpétuel",
+   "rank_uncertain": true,
+   "imaginary": false
+  },
+  {
+   "month": "Pédale",
+   "day": 1,
+   "name": "ÉRECTION DU SURMÂLE",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Pédale",
+   "day": 2,
+   "name": "St André Marcueil, ascète cycliste",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 3,
+   "name": "St Ellen, hile",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 4,
+   "name": "St Michet, idéaliste",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 5,
+   "name": "St Ouducul, trouvère",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 6,
+   "name": "Vers Belges",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 7,
+   "name": "St Gavroche, forain",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 8,
+   "name": "LA MACHINE À INSPIRER L'AMOUR",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Pédale",
+   "day": 9,
+   "name": "°St Remezy, évêque in partibus",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 10,
+   "name": "Nativité de st Tancrède, jeune homme",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 11,
+   "name": "Testament de P. Uccello, le mal illuminé",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 12,
+   "name": "St Hari Seldon, psychohistorien galactique",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 13,
+   "name": "°Ste Valburge, succube",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 14,
+   "name": "Sabbat",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Pédale",
+   "day": 15,
+   "name": "Sts ADELPHES, ÉSOTÉRISTES",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Pédale",
+   "day": 16,
+   "name": "Sts Templiers, adeptes",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 17,
+   "name": "St Dricarpe, prosélyte",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 18,
+   "name": "St Nosocome, carabin",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 19,
+   "name": "Ste Goutte, fête militaire",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 20,
+   "name": "Ste Cuisse, dame patronnesse",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 21,
+   "name": "St Inscrit, Converti",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 22,
+   "name": "St SENGLE, DÉSERTEUR",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Pédale",
+   "day": 23,
+   "name": "St Masquarade, uniforme",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 24,
+   "name": "Nativité de st Stéphane, faune",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 25,
+   "name": "St Poligraf Poligrafovitch, chien",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 26,
+   "name": "St Pâle, mineur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Pédale",
+   "day": 27,
+   "name": "St VALENS, FRÈRE ONIRIQUE",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Pédale",
+   "day": 28,
+   "name": "Dédicace du Tripode",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Pédale",
+   "day": 29,
+   "name": "Bse Escampette, dynamiteuse",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte",
+   "imaginary": true
+  },
+  {
+   "month": "Clinamen",
+   "day": 1,
+   "name": "St ABLOU, PAGE et st HALDERN, DUC",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Clinamen",
+   "day": 2,
+   "name": "Sts Hiboux, maîtres-chanteurs",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 3,
+   "name": "La Mandragore, solanée androïde",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 4,
+   "name": "St Pagne, confident",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 5,
+   "name": "Sts Aster et Vulpian, violateurs du Néant",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 6,
+   "name": "St Ganymède, professionnel",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 7,
+   "name": "La Main de Gloire",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Clinamen",
+   "day": 8,
+   "name": "LA MACHINE À PEINDRE",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Clinamen",
+   "day": 9,
+   "name": "Ste Trique, lunatique",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 10,
+   "name": "Rémission des Poissons",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 11,
+   "name": "St Maquereau, intercesseur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 12,
+   "name": "St Georges Dazet, poulpe au regard de soie",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 13,
+   "name": "Nativité de Maldoror, corsaire aux cheveux d'or",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 14,
+   "name": "Sortie d'A. Dürer, hermétiste",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 15,
+   "name": "INVENTION de la ’PATAPHYSIQUE",
+   "rank": "SPp",
+   "rank_label": "Fête Suprême Première première"
+  },
+  {
+   "month": "Clinamen",
+   "day": 16,
+   "name": "Exit st Domenico Theotocopouli, el Greco",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 17,
+   "name": "St Hiéronymus Bosch, démonarque",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 18,
+   "name": "Les 27 Êtres Issus des Livres Pairs",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Clinamen",
+   "day": 19,
+   "name": "St Barbeau, procureur et ste Morue, juste",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 20,
+   "name": "Capture du Fourneau",
+   "rank": "V",
+   "rank_label": "Vacuation",
+   "variant_icalendrier": "Nativité de Saint Patrice MONNET, algebrateur",
+   "rank_uncertain": true
+  },
+  {
+   "month": "Clinamen",
+   "day": 21,
+   "name": "St Docteur Moreau, insulaire",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 22,
+   "name": "FÊTE DES POLYÈDRES",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Clinamen",
+   "day": 23,
+   "name": "Locus Solus",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Clinamen",
+   "day": 24,
+   "name": "°St Tupetu de Tupetu, organisateur de loteries",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 25,
+   "name": "Exit st Goya, alchimiste",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 26,
+   "name": "St Escargot, sybarite",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 27,
+   "name": "Ste Hure de Chasteté, pénitente",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 28,
+   "name": "St Turgescent, iconoclaste",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Clinamen",
+   "day": 29,
+   "name": "Cymbalum Mundi",
+   "rank": "V",
+   "rank_label": "Vacuation",
+   "imaginary": true
+  },
+  {
+   "month": "Palotin",
+   "day": 1,
+   "name": "Sts CROCODILES, CROCODILES",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Palotin",
+   "day": 2,
+   "name": "Fête des Écluses",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 3,
+   "name": "Sts Trolls, pantins",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 4,
+   "name": "Ste Susan Calvin, docteur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 5,
+   "name": "Ste Poignée, veuve et ste Jutte, recluse",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 6,
+   "name": "Ste Oneille, gourgandine",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 7,
+   "name": "St Fénéon ès Liens",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 8,
+   "name": "St BOUGRELAS, PRINCE",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Palotin",
+   "day": 9,
+   "name": "Sts Boleslas et Ladislas, polonais",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 10,
+   "name": "St Forficule, Barnabite",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 11,
+   "name": "Explosion du Palotin",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Palotin",
+   "day": 12,
+   "name": "Réprobation du Travail",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Palotin",
+   "day": 13,
+   "name": "Esquive de st Léonard (de Vinci), illusionniste",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 14,
+   "name": "St Équivoque, sans-culotte",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 15,
+   "name": "ADORATION DU PAL",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce",
+   "variant_icalendrier": "Capture du Fourneau",
+   "rank_uncertain": true
+  },
+  {
+   "month": "Palotin",
+   "day": 16,
+   "name": "Déploration de st Achras, éleveur de Polyèdres",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 17,
+   "name": "St Macrotatoure, caudataire",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 18,
+   "name": "Canotage",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Palotin",
+   "day": 19,
+   "name": "Occultation de st Gauguin, océanide",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 20,
+   "name": "St Ti Belot, séide",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 21,
+   "name": "Occultation de Sa Magnificence le Dr Sandomir",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 22,
+   "name": "Sts PALOTINS des PHYNANCES",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Palotin",
+   "day": 23,
+   "name": "Sts Quatrezoneilles, Herdanpo, Mousched-Gogh, palotins",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 24,
+   "name": "Ste Lumelle, écuyère",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 25,
+   "name": "Sts Potassons, acolythes",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 26,
+   "name": "Ste Prétentaine, rosière",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 27,
+   "name": "St Foin, coryphée",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 28,
+   "name": "Nativité de st Satie, Grand Parcier de l'Église d'Art",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Palotin",
+   "day": 29,
+   "name": "Erratum",
+   "rank": "V",
+   "rank_label": "Vacuation",
+   "imaginary": true
+  },
+  {
+   "month": "Merdre",
+   "day": 1,
+   "name": "ACCOUCHEMENT DE ste JEANNE, PAPESSE",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Merdre",
+   "day": 2,
+   "name": "Le Moutardier du Pape",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Merdre",
+   "day": 3,
+   "name": "St Siège, sous-pape",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 4,
+   "name": "Nativité de st H. Rousseau, douanier",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 5,
+   "name": "St Crouducul, troupier",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 6,
+   "name": "°St Cucufat, mécène",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 7,
+   "name": "Nativité de M. Plume, propriétaire",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 8,
+   "name": "COCUAGE DE M. LE P. UBU",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Merdre",
+   "day": 9,
+   "name": "Vidange",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Merdre",
+   "day": 10,
+   "name": "St Barbapoux, amant",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 11,
+   "name": "St Memnon, vidangeur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 12,
+   "name": "Stes Miches, catéchumènes",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 13,
+   "name": "Ste Lunette, solitaire",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 14,
+   "name": "St Sphincter, profès",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 15,
+   "name": "Sts SERPENTS D'AIRAIN 1er juin",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Merdre",
+   "day": 16,
+   "name": "Nativité de °St Donatien A. François",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 17,
+   "name": "St Woland, professeur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 18,
+   "name": "St Anal, cordelier et ste Foire, anagogue",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 19,
+   "name": "Ste Fétatoire, super",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 20,
+   "name": "Ste Colombine, expurgée",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 21,
+   "name": "Ste Pyrotechnie, illuminée",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 22,
+   "name": "ONTOGÉNIE PATAPHYSIQUE",
+   "rank": "SPp",
+   "rank_label": "Fête Suprême Première première"
+  },
+  {
+   "month": "Merdre",
+   "day": 23,
+   "name": "INTERPRÉTATION DE L'UMOUR",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Merdre",
+   "day": 24,
+   "name": "Ste Purge, sage-femme",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 25,
+   "name": "APPARITION D'UBU ROI",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Merdre",
+   "day": 26,
+   "name": "Ste Barbaque, naïade",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 27,
+   "name": "Sts Courts et Longs, gendarmes",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 28,
+   "name": "St Raca, cagot",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Merdre",
+   "day": 29,
+   "name": "Défaite du Mufle",
+   "rank": "V",
+   "rank_label": "Vacuation",
+   "imaginary": true
+  },
+  {
+   "month": "Gidouille",
+   "day": 1,
+   "name": "Ste BOUZINE, ESPRIT",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Gidouille",
+   "day": 2,
+   "name": "St Lucullus, amateur (Bloomsday)",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 3,
+   "name": "Ste Dondon, amazone",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 4,
+   "name": "Ste Tripe, républicaine",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 5,
+   "name": "St Ugolin, mansuet",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 6,
+   "name": "St Dieu, retraité",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 7,
+   "name": "St Bébé Toutout, évangéliste",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 8,
+   "name": "Ste BOUDOUILLE, BAYADÈRE",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Gidouille",
+   "day": 9,
+   "name": "Ste Outre, psychiatre",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 10,
+   "name": "St Boudin, recteur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 11,
+   "name": "Sacre de Talou VII, empereur du Ponukélé",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 12,
+   "name": "Ste Confiture, dévote et ste Cliche, donatrice",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 13,
+   "name": "Sts Instintestins, conseillers intimes",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 14,
+   "name": "St Colon, artilleur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 15,
+   "name": "Ste GIBORGNE, VÉNÉRABLE",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Gidouille",
+   "day": 16,
+   "name": "St Inventaire, poète",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 17,
+   "name": "Ste Femelle, technicienne",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 18,
+   "name": "VISITATION DE MÈRE UBU",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Gidouille",
+   "day": 19,
+   "name": "St Sein, tautologue",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 20,
+   "name": "St Périnée, zélateur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 21,
+   "name": "St Spéculum, confesseur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 22,
+   "name": "FÊTE DE GIDOUILLE",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Gidouille",
+   "day": 23,
+   "name": "St Ombilic, gymnosophiste",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 24,
+   "name": "St Gris-gris, ventre",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 25,
+   "name": "St Bouffre, pontife",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 26,
+   "name": "Ste Goulache, odalisque",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 27,
+   "name": "Ste Gandouse, hygiéniste",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Gidouille",
+   "day": 28,
+   "name": "Poche du Père Ubu",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Gidouille",
+   "day": 29,
+   "name": "NOM D'UBU (hunyadi gras)",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde",
+   "imaginary": false
+  },
+  {
+   "month": "Tatane",
+   "day": 1,
+   "name": "FÊTE DU P. UBU (Ubu d'été)",
+   "rank": "SPs",
+   "rank_label": "Fête Suprême Première seconde"
+  },
+  {
+   "month": "Tatane",
+   "day": 2,
+   "name": "Commémoration du P. Ébé",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 3,
+   "name": "Ste Crapule, puriste et st Fantomas, archange",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 4,
+   "name": "Ascension du Mouchard, statisticien, psychiatre et policier",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 5,
+   "name": "St Arsouille, patricien",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 6,
+   "name": "Sts Robot et Cornard, citoyens",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 7,
+   "name": "St Biribi, taulier",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 8,
+   "name": "SUSCEPTION DU CROC À MERDRE",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Tatane",
+   "day": 9,
+   "name": "Sts Écrase-Merdre, sectateurs",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 10,
+   "name": "Sts Pieds Nickelés, trinité",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 11,
+   "name": "Stes Canicule et Canule, jouvencelles",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 12,
+   "name": "Sts Cannibales, philanthropes",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 13,
+   "name": "St Dada, prophète",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 14,
+   "name": "Ste Anne, pèlerine, énergumène",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 15,
+   "name": "PROCESSION AUX PHYNANCES",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Tatane",
+   "day": 16,
+   "name": "Transfiguration de st V. van Gogh, transmutateur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 17,
+   "name": "Ste Flamberge, voyante",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 18,
+   "name": "St Trou, chauffeur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 19,
+   "name": "Ste Taloche, matrone",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 20,
+   "name": "St Tiberge, frère quêteur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 21,
+   "name": "Sts Catoblepas, lord et Anoblepas, amiral",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 22,
+   "name": "UBU ÈS LIENS",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Tatane",
+   "day": 23,
+   "name": "St Pissembock, oncle",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 24,
+   "name": "St Pissedoux, caporal des hommes libres",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 25,
+   "name": "St Panurge, moraliste",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 26,
+   "name": "St Glé, neurologue-aliéniste",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 27,
+   "name": "St Pistolet à Merdre, jubilaire",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 28,
+   "name": "Nativité de st Bruggle",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Tatane",
+   "day": 29,
+   "name": "Le soleil solide froid",
+   "rank": "V",
+   "rank_label": "Vacuation",
+   "imaginary": true
+  },
+  {
+   "month": "Phalle",
+   "day": 1,
+   "name": "St CHIBRE, PLANTON",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Phalle",
+   "day": 2,
+   "name": "°Ste Ruth, zélatrice",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 3,
+   "name": "St Zebb, passe-partout",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 4,
+   "name": "St Mnester, confesseur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 5,
+   "name": "ASSOMPTION DE ste MESSALINE",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Phalle",
+   "day": 6,
+   "name": "Penis Angelicus",
+   "rank": "V",
+   "rank_label": "Vacuation"
+  },
+  {
+   "month": "Phalle",
+   "day": 7,
+   "name": "°St Patrobas, pompier",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 8,
+   "name": "Ste LÉDA, AJUSTEUSE",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Phalle",
+   "day": 9,
+   "name": "St Godemiché, économe",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 10,
+   "name": "Ste Nitouche, orante",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 11,
+   "name": "Ste Lèchefrite, botteuse",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 12,
+   "name": "Ste Andouille, amphibologue",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 13,
+   "name": "Ste Bitre, ouvreuse et st Étalon, couvreur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 14,
+   "name": "BATAILLE DE MORSANG",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Phalle",
+   "day": 15,
+   "name": "MORT DE DIONYSOS, SURHOMME",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Phalle",
+   "day": 16,
+   "name": "Nativité de st Vibescu, pohète et Commémoration de ste Cuculine d'Ancône",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte",
+   "variant_icalendrier": "Nativité de Vibescu, prophète"
+  },
+  {
+   "month": "Phalle",
+   "day": 17,
+   "name": "Ste Gallinacée, cocotte",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 18,
+   "name": "St Lingam, bouche-trou",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte",
+   "variant_icalendrier": "Lingam"
+  },
+  {
+   "month": "Phalle",
+   "day": 19,
+   "name": "St Prélote, capucin",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 20,
+   "name": "°St Pie VIII, navigant",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 21,
+   "name": "St ERBRAND, POLYTECHNICIEN",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Phalle",
+   "day": 22,
+   "name": "Ste DRAGONNE, PYROPHAGE",
+   "rank": "SS",
+   "rank_label": "Fête Suprême Seconde"
+  },
+  {
+   "month": "Phalle",
+   "day": 23,
+   "name": "°St Lazare, gare",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 24,
+   "name": "Ste Orchidée, aumonière",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 25,
+   "name": "Nativité apparente d'Artaud le Momo",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 26,
+   "name": "Disparition de l'Ancien Breughel, incendiaire",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 27,
+   "name": "°St Priape, franc-tireur",
+   "rank": "SQ",
+   "rank_label": "Fête Suprême Quarte"
+  },
+  {
+   "month": "Phalle",
+   "day": 28,
+   "name": "TRANSFIXION DE ste MESSALINE",
+   "rank": "ST",
+   "rank_label": "Fête Suprême Tierce"
+  },
+  {
+   "month": "Phalle",
+   "day": 29,
+   "name": "Le Termès",
+   "rank": "V",
+   "rank_label": "Vacuation",
+   "imaginary": true
+  }
+ ]
+}

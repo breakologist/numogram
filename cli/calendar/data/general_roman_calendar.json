@@ -1,0 +1,1450 @@
+{
+ "title": "General Roman Calendar — celebrations inscribed (current, post-1969)",
+ "coverage": "221 fixed-date celebrations + 8 movable; plus 8 Proper-of-Time anchors. No precedence/transfer rules applied.",
+ "sources": [
+  {
+   "name": "Wikipedia, General Roman Calendar — List of celebrations inscribed in the GRC (from Calendarium Romanum Generale, Missale Romanum 2008, with later decrees)",
+   "url": "https://en.wikipedia.org/wiki/General_Roman_Calendar"
+  },
+  {
+   "name": "Wikipedia, Moveable feast (Proper-of-Time offsets from Easter)",
+   "url": "https://en.wikipedia.org/wiki/Moveable_feast"
+  }
+ ],
+ "retrieved": "2026-10-17",
+ "fixed": [
+  {
+   "month": 1,
+   "day": 1,
+   "name": "Solemnity of Mary, the Holy Mother of God",
+   "rank": "solemnity"
+  },
+  {
+   "month": 1,
+   "day": 2,
+   "name": "Saints Basil the Great and Gregory Nazianzen, Bishops and Doctors of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 1,
+   "day": 3,
+   "name": "The Most Holy Name of Jesus",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 1,
+   "day": 6,
+   "name": "The Epiphany of the Lord",
+   "rank": "solemnity"
+  },
+  {
+   "month": 1,
+   "day": 7,
+   "name": "Saint Raymond of Penyafort, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 1,
+   "day": 13,
+   "name": "Saint Hilary, Bishop and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 1,
+   "day": 17,
+   "name": "Saint Anthony, Abbot",
+   "rank": "memorial"
+  },
+  {
+   "month": 1,
+   "day": 20,
+   "name": "Saint Fabian, Pope and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 1,
+   "day": 20,
+   "name": "Saint Sebastian, Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 1,
+   "day": 21,
+   "name": "Saint Agnes, Virgin and Martyr",
+   "rank": "memorial"
+  },
+  {
+   "month": 1,
+   "day": 22,
+   "name": "Saint Vincent, Deacon and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 1,
+   "day": 24,
+   "name": "Saint Francis de Sales, Bishop and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 1,
+   "day": 25,
+   "name": "The Conversion of Saint Paul the Apostle",
+   "rank": "feast"
+  },
+  {
+   "month": 1,
+   "day": 26,
+   "name": "Saints Timothy and Titus, Bishops",
+   "rank": "memorial"
+  },
+  {
+   "month": 1,
+   "day": 27,
+   "name": "Saint Angela Merici, Virgin",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 1,
+   "day": 28,
+   "name": "Saint Thomas Aquinas, Priest and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 1,
+   "day": 31,
+   "name": "Saint John Bosco, Priest",
+   "rank": "memorial"
+  },
+  {
+   "month": 2,
+   "day": 2,
+   "name": "The Presentation of the Lord",
+   "rank": "feast"
+  },
+  {
+   "month": 2,
+   "day": 3,
+   "name": "Saint Blaise, Bishop and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 2,
+   "day": 3,
+   "name": "Saint Ansgar, Bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 2,
+   "day": 5,
+   "name": "Saint Agatha, Virgin and Martyr",
+   "rank": "memorial"
+  },
+  {
+   "month": 2,
+   "day": 6,
+   "name": "Saints Paul Miki and Companions, Martyrs",
+   "rank": "memorial"
+  },
+  {
+   "month": 2,
+   "day": 8,
+   "name": "Saint Jerome Emiliani, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 2,
+   "day": 8,
+   "name": "Saint Josephine Bakhita, Virgin",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 2,
+   "day": 10,
+   "name": "Saint Scholastica, Virgin",
+   "rank": "memorial"
+  },
+  {
+   "month": 2,
+   "day": 11,
+   "name": "Our Lady of Lourdes",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 2,
+   "day": 14,
+   "name": "Saints Cyril, Monk, and Methodius, Bishop",
+   "rank": "memorial"
+  },
+  {
+   "month": 2,
+   "day": 17,
+   "name": "The Seven Holy Founders of the Servite Order",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 2,
+   "day": 21,
+   "name": "Saint Peter Damian, Bishop and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 2,
+   "day": 22,
+   "name": "The Chair of Saint Peter the Apostle",
+   "rank": "feast"
+  },
+  {
+   "month": 2,
+   "day": 23,
+   "name": "Saint Polycarp, Bishop and Martyr",
+   "rank": "memorial"
+  },
+  {
+   "month": 2,
+   "day": 27,
+   "name": "Saint Gregory of Narek, Abbot and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 3,
+   "day": 4,
+   "name": "Saint Casimir",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 3,
+   "day": 7,
+   "name": "Saints Perpetua and Felicity, Martyrs",
+   "rank": "memorial"
+  },
+  {
+   "month": 3,
+   "day": 8,
+   "name": "Saint John of God, Religious",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 3,
+   "day": 9,
+   "name": "Saint Frances of Rome, Religious",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 3,
+   "day": 17,
+   "name": "Saint Patrick, Bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 3,
+   "day": 18,
+   "name": "Saint Cyril of Jerusalem, Bishop and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 3,
+   "day": 19,
+   "name": "Saint Joseph, Spouse of the Blessed Virgin Mary",
+   "rank": "solemnity"
+  },
+  {
+   "month": 3,
+   "day": 23,
+   "name": "Saint Turibius of Mongrovejo, Bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 3,
+   "day": 25,
+   "name": "The Annunciation of the Lord",
+   "rank": "solemnity"
+  },
+  {
+   "month": 4,
+   "day": 2,
+   "name": "Saint Francis of Paola, Hermit",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 4,
+   "day": 4,
+   "name": "Saint Isidore, Bishop and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 4,
+   "day": 5,
+   "name": "Saint Vincent Ferrer, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 4,
+   "day": 7,
+   "name": "Saint John Baptist de la Salle, Priest",
+   "rank": "memorial"
+  },
+  {
+   "month": 4,
+   "day": 11,
+   "name": "Saint Stanislaus, Bishop and Martyr",
+   "rank": "memorial"
+  },
+  {
+   "month": 4,
+   "day": 13,
+   "name": "Saint Martin I, Pope and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 4,
+   "day": 21,
+   "name": "Saint Anselm, Bishop and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 4,
+   "day": 23,
+   "name": "Saint George, Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 4,
+   "day": 23,
+   "name": "Saint Adalbert, Bishop and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 4,
+   "day": 24,
+   "name": "Saint Fidelis of Sigmaringen, Priest and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 4,
+   "day": 25,
+   "name": "Saint Mark, Evangelist",
+   "rank": "feast"
+  },
+  {
+   "month": 4,
+   "day": 28,
+   "name": "Saint Peter Chanel, Priest and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 4,
+   "day": 28,
+   "name": "Saint Louis Grignon de Montfort, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 4,
+   "day": 29,
+   "name": "Saint Catherine of Siena, Virgin and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 4,
+   "day": 30,
+   "name": "Saint Pius V, Pope",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 5,
+   "day": 1,
+   "name": "Saint Joseph the Worker",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 5,
+   "day": 2,
+   "name": "Saint Athanasius, Bishop and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 5,
+   "day": 3,
+   "name": "Saints Philip and James, Apostles",
+   "rank": "feast"
+  },
+  {
+   "month": 5,
+   "day": 12,
+   "name": "Saints Nereus and Achilleus, Martyrs",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 5,
+   "day": 12,
+   "name": "Saint Pancras, Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 5,
+   "day": 13,
+   "name": "Our Lady of Fatima",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 5,
+   "day": 14,
+   "name": "Saint Matthias, Apostle",
+   "rank": "feast"
+  },
+  {
+   "month": 5,
+   "day": 18,
+   "name": "Saint John I, Pope and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 5,
+   "day": 20,
+   "name": "Saint Bernardine of Siena, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 5,
+   "day": 21,
+   "name": "Saint Christopher Magallanes, Priest, and Companions, Martyrs",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 5,
+   "day": 22,
+   "name": "Saint Rita of Cascia, Religious",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 5,
+   "day": 25,
+   "name": "Saint Bede the Venerable, Priest and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 5,
+   "day": 25,
+   "name": "Saint Gregory VII, Pope",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 5,
+   "day": 25,
+   "name": "Saint Mary Magdalene de’ Pazzi, Virgin",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 5,
+   "day": 26,
+   "name": "Saint Philip Neri, Priest",
+   "rank": "memorial"
+  },
+  {
+   "month": 5,
+   "day": 27,
+   "name": "Saint Augustine of Canterbury, Bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 5,
+   "day": 29,
+   "name": "Saint Paul VI, Pope",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 5,
+   "day": 31,
+   "name": "The Visitation of the Blessed Virgin Mary",
+   "rank": "feast"
+  },
+  {
+   "month": 6,
+   "day": 1,
+   "name": "Saint Justin, Martyr",
+   "rank": "memorial"
+  },
+  {
+   "month": 6,
+   "day": 2,
+   "name": "Saints Marcellinus and Peter, Martyrs",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 6,
+   "day": 3,
+   "name": "Saints Charles Lwanga and Companions, Martyrs",
+   "rank": "memorial"
+  },
+  {
+   "month": 6,
+   "day": 5,
+   "name": "Saint Boniface, Bishop and Martyr",
+   "rank": "memorial"
+  },
+  {
+   "month": 6,
+   "day": 6,
+   "name": "Saint Norbert, Bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 6,
+   "day": 9,
+   "name": "Saint Ephrem, Deacon and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 6,
+   "day": 11,
+   "name": "Saint Barnabas, Apostle",
+   "rank": "memorial"
+  },
+  {
+   "month": 6,
+   "day": 13,
+   "name": "Saint Anthony of Padua, Priest and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 6,
+   "day": 19,
+   "name": "Saint Romuald, Abbot",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 6,
+   "day": 21,
+   "name": "Saint Aloysius Gonzaga, Religious",
+   "rank": "memorial"
+  },
+  {
+   "month": 6,
+   "day": 22,
+   "name": "Saint Paulinus of Nola, Bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 6,
+   "day": 22,
+   "name": "Saints John Fisher, Bishop, and Thomas More, Martyrs",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 6,
+   "day": 24,
+   "name": "The Nativity of Saint John the Baptist",
+   "rank": "solemnity"
+  },
+  {
+   "month": 6,
+   "day": 27,
+   "name": "Saint Cyril of Alexandria, Bishop and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 6,
+   "day": 28,
+   "name": "Saint Irenaeus, Bishop, Martyr and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 6,
+   "day": 29,
+   "name": "Saints Peter and Paul, Apostles",
+   "rank": "solemnity"
+  },
+  {
+   "month": 6,
+   "day": 30,
+   "name": "The First Martyrs of Holy Roman Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 3,
+   "name": "Saint Thomas, Apostle",
+   "rank": "feast"
+  },
+  {
+   "month": 7,
+   "day": 4,
+   "name": "Saint Elizabeth of Portugal",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 5,
+   "name": "Saint Anthony Zaccaria, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 6,
+   "name": "Saint Maria Goretti, Virgin and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 9,
+   "name": "Saint Augustine Zhao Rong, Priest, and Companions, Martyrs",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 11,
+   "name": "Saint Benedict, Abbot",
+   "rank": "memorial"
+  },
+  {
+   "month": 7,
+   "day": 13,
+   "name": "Saint Henry",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 14,
+   "name": "Saint Camillus de Lellis, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 15,
+   "name": "Saint Bonaventure, Bishop and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 7,
+   "day": 16,
+   "name": "Our Lady of Mount Carmel",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 20,
+   "name": "Saint Apollinaris, Bishop and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 21,
+   "name": "Saint Lawrence of Brindisi, Priest and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 22,
+   "name": "Saint Mary Magdalene",
+   "rank": "feast"
+  },
+  {
+   "month": 7,
+   "day": 23,
+   "name": "Saint Bridget, Religious",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 24,
+   "name": "Saint Sharbel Makhluf, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 25,
+   "name": "Saint James, Apostle",
+   "rank": "feast"
+  },
+  {
+   "month": 7,
+   "day": 26,
+   "name": "Saints Joachim and Anne, Parents of the Blessed Virgin Mary",
+   "rank": "memorial"
+  },
+  {
+   "month": 7,
+   "day": 29,
+   "name": "Saints Martha, Mary and Lazarus",
+   "rank": "memorial"
+  },
+  {
+   "month": 7,
+   "day": 30,
+   "name": "Saint Peter Chrysologus, Bishop and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 7,
+   "day": 31,
+   "name": "Saint Ignatius of Loyola, Priest",
+   "rank": "memorial"
+  },
+  {
+   "month": 8,
+   "day": 1,
+   "name": "Saint Alphonsus Liguori, Bishop and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 8,
+   "day": 2,
+   "name": "Saint Eusebius of Vercelli, Bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 2,
+   "name": "Saint Peter Julian Eymard, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 4,
+   "name": "Saint Jean Vianney, Priest",
+   "rank": "memorial"
+  },
+  {
+   "month": 8,
+   "day": 5,
+   "name": "The Dedication of the Basilica of Saint Mary Major",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 6,
+   "name": "The Transfiguration of the Lord",
+   "rank": "feast"
+  },
+  {
+   "month": 8,
+   "day": 7,
+   "name": "Saint Sixtus II, Pope, and Companions, Martyrs",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 7,
+   "name": "Saint Cajetan, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 8,
+   "name": "Saint Dominic, Priest",
+   "rank": "memorial"
+  },
+  {
+   "month": 8,
+   "day": 9,
+   "name": "Saint Teresa Benedicta of the Cross, Virgin and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 10,
+   "name": "Saint Lawrence, Deacon and Martyr",
+   "rank": "feast"
+  },
+  {
+   "month": 8,
+   "day": 11,
+   "name": "Saint Clare, Virgin",
+   "rank": "memorial"
+  },
+  {
+   "month": 8,
+   "day": 12,
+   "name": "Saint Jane Frances de Chantal, Religious",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 13,
+   "name": "Saints Pontian, Pope, and Hippolytus, Priest, Martyrs",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 14,
+   "name": "Saint Maximilian Kolbe, Priest and Martyr",
+   "rank": "memorial"
+  },
+  {
+   "month": 8,
+   "day": 15,
+   "name": "The Assumption of the Blessed Virgin Mary",
+   "rank": "solemnity"
+  },
+  {
+   "month": 8,
+   "day": 16,
+   "name": "Saint Stephen of Hungary",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 19,
+   "name": "Saint John Eudes, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 20,
+   "name": "Saint Bernard, Abbot and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 8,
+   "day": 21,
+   "name": "Saint Pius X, Pope",
+   "rank": "memorial"
+  },
+  {
+   "month": 8,
+   "day": 22,
+   "name": "The Queenship of the Blessed Virgin Mary",
+   "rank": "memorial"
+  },
+  {
+   "month": 8,
+   "day": 23,
+   "name": "Saint Rose of Lima, Virgin",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 24,
+   "name": "Saint Bartholomew, Apostle",
+   "rank": "feast"
+  },
+  {
+   "month": 8,
+   "day": 25,
+   "name": "Saint Louis",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 25,
+   "name": "Saint Joseph Calasanz, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 8,
+   "day": 27,
+   "name": "Saint Monica",
+   "rank": "memorial"
+  },
+  {
+   "month": 8,
+   "day": 28,
+   "name": "Saint Augustine of Hippo, Bishop and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 8,
+   "day": 29,
+   "name": "The Passion of Saint John the Baptist, Martyr",
+   "rank": "memorial"
+  },
+  {
+   "month": 9,
+   "day": 3,
+   "name": "Saint Gregory the Great, Pope and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 9,
+   "day": 5,
+   "name": "Saint Teresa of Calcutta, Virgin",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 9,
+   "day": 8,
+   "name": "The Nativity of the Blessed Virgin Mary",
+   "rank": "feast"
+  },
+  {
+   "month": 9,
+   "day": 9,
+   "name": "Saint Peter Claver, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 9,
+   "day": 12,
+   "name": "The Most Holy Name of Mary",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 9,
+   "day": 13,
+   "name": "Saint John Chrysostom, Bishop and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 9,
+   "day": 14,
+   "name": "The Exaltation of the Holy Cross",
+   "rank": "feast"
+  },
+  {
+   "month": 9,
+   "day": 15,
+   "name": "Our Lady of Sorrows",
+   "rank": "memorial"
+  },
+  {
+   "month": 9,
+   "day": 16,
+   "name": "Saints Cornelius, Pope, and Cyprian, Bishop, Martyrs",
+   "rank": "memorial"
+  },
+  {
+   "month": 9,
+   "day": 17,
+   "name": "Saint Robert Bellarmine, Bishop and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 9,
+   "day": 17,
+   "name": "Saint Hildegard of Bingen, Virgin and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 9,
+   "day": 19,
+   "name": "Saint Januarius, Bishop and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 9,
+   "day": 20,
+   "name": "Saints Andrew Kim Tae-gon, Priest, Paul Chong Ha-sang, and Companions, Martyrs",
+   "rank": "memorial"
+  },
+  {
+   "month": 9,
+   "day": 21,
+   "name": "Saint Matthew, Apostle and Evangelist",
+   "rank": "feast"
+  },
+  {
+   "month": 9,
+   "day": 23,
+   "name": "Saint Pius of Pietrelcina, Priest",
+   "rank": "memorial"
+  },
+  {
+   "month": 9,
+   "day": 26,
+   "name": "Saints Cosmas and Damian, Martyrs",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 9,
+   "day": 27,
+   "name": "Saint Vincent de Paul, Priest",
+   "rank": "memorial"
+  },
+  {
+   "month": 9,
+   "day": 28,
+   "name": "Saint Wenceslaus, Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 9,
+   "day": 28,
+   "name": "Saint Lawrence Ruiz and Companions, Martyrs",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 9,
+   "day": 29,
+   "name": "Saints Michael, Gabriel and Raphael, Archangels",
+   "rank": "feast"
+  },
+  {
+   "month": 9,
+   "day": 30,
+   "name": "Saint Jerome, Priest and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 10,
+   "day": 1,
+   "name": "Saint Thérèse of the Child Jesus, Virgin and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 10,
+   "day": 2,
+   "name": "The Holy Guardian Angels",
+   "rank": "memorial"
+  },
+  {
+   "month": 10,
+   "day": 4,
+   "name": "Saint Francis of Assisi",
+   "rank": "memorial"
+  },
+  {
+   "month": 10,
+   "day": 5,
+   "name": "Saint Faustina Kowalska, Virgin",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 6,
+   "name": "Saint Bruno, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 7,
+   "name": "Our Lady of the Rosary",
+   "rank": "memorial"
+  },
+  {
+   "month": 10,
+   "day": 9,
+   "name": "Saint Denis, Bishop, and Companions, Martyrs",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 9,
+   "name": "Saint John Leonardi, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 9,
+   "name": "Saint John Henry Newman, Priest and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 11,
+   "name": "Saint John XXIII, Pope",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 14,
+   "name": "Saint Callistus I, Pope and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 15,
+   "name": "Saint Teresa of Jesus, Virgin and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 10,
+   "day": 16,
+   "name": "Saint Hedwig, Religious",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 16,
+   "name": "Saint Margaret Mary Alacoque, Virgin",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 17,
+   "name": "Saint Ignatius of Antioch, Bishop and Martyr",
+   "rank": "memorial"
+  },
+  {
+   "month": 10,
+   "day": 18,
+   "name": "Saint Luke, Evangelist",
+   "rank": "feast"
+  },
+  {
+   "month": 10,
+   "day": 19,
+   "name": "Saints John de Brébeuf, Isaac Jogues, Priests, and Companions, Martyrs",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 19,
+   "name": "Saint Paul of the Cross, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 22,
+   "name": "Saint John Paul II, Pope",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 23,
+   "name": "Saint John of Capistrano, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 24,
+   "name": "Saint Anthony Mary Claret, Bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 10,
+   "day": 28,
+   "name": "Saints Simon and Jude, Apostles",
+   "rank": "feast"
+  },
+  {
+   "month": 11,
+   "day": 1,
+   "name": "All Saints",
+   "rank": "solemnity"
+  },
+  {
+   "month": 11,
+   "day": 2,
+   "name": "The Commemoration of All the Faithful Departed",
+   "rank": "ranked with solemnities"
+  },
+  {
+   "month": 11,
+   "day": 3,
+   "name": "Saint Martin de Porres, Religious",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 11,
+   "day": 4,
+   "name": "Saint Charles Borromeo, Bishop",
+   "rank": "memorial"
+  },
+  {
+   "month": 11,
+   "day": 9,
+   "name": "The Dedication of the Lateran Basilica",
+   "rank": "feast"
+  },
+  {
+   "month": 11,
+   "day": 10,
+   "name": "Saint Leo the Great, Pope and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 11,
+   "day": 11,
+   "name": "Saint Martin of Tours, Bishop",
+   "rank": "memorial"
+  },
+  {
+   "month": 11,
+   "day": 12,
+   "name": "Saint Josaphat, Bishop and Martyr",
+   "rank": "memorial"
+  },
+  {
+   "month": 11,
+   "day": 15,
+   "name": "Saint Albert the Great, Bishop and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 11,
+   "day": 16,
+   "name": "Saint Margaret of Scotland",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 11,
+   "day": 16,
+   "name": "Saint Gertrude, Virgin",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 11,
+   "day": 17,
+   "name": "Saint Elizabeth of Hungary, Religious",
+   "rank": "memorial"
+  },
+  {
+   "month": 11,
+   "day": 18,
+   "name": "The Dedication of the Basilicas of Saints Peter and Paul, Apostles",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 11,
+   "day": 21,
+   "name": "The Presentation of the Blessed Virgin Mary",
+   "rank": "memorial"
+  },
+  {
+   "month": 11,
+   "day": 22,
+   "name": "Saint Cecilia, Virgin and Martyr",
+   "rank": "memorial"
+  },
+  {
+   "month": 11,
+   "day": 23,
+   "name": "Saint Clement I, Pope and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 11,
+   "day": 23,
+   "name": "Saint Columban, Abbot",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 11,
+   "day": 24,
+   "name": "Saints Andrew Dung-Lac, Priest, and Companions, Martyrs",
+   "rank": "memorial"
+  },
+  {
+   "month": 11,
+   "day": 25,
+   "name": "Saint Catherine of Alexandria, Virgin and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 11,
+   "day": 30,
+   "name": "Saint Andrew, Apostle",
+   "rank": "feast"
+  },
+  {
+   "month": 12,
+   "day": 3,
+   "name": "Saint Francis Xavier, Priest",
+   "rank": "memorial"
+  },
+  {
+   "month": 12,
+   "day": 4,
+   "name": "Saint John Damascene, Priest and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 12,
+   "day": 6,
+   "name": "Saint Nicholas, Bishop",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 12,
+   "day": 7,
+   "name": "Saint Ambrose, Bishop and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 12,
+   "day": 8,
+   "name": "The Immaculate Conception of the Blessed Virgin Mary",
+   "rank": "solemnity"
+  },
+  {
+   "month": 12,
+   "day": 9,
+   "name": "Saint Juan Diego Cuauhtlatoatzin",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 12,
+   "day": 10,
+   "name": "Our Lady of Loreto",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 12,
+   "day": 11,
+   "name": "Saint Damasus I, Pope",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 12,
+   "day": 12,
+   "name": "Our Lady of Guadalupe",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 12,
+   "day": 13,
+   "name": "Saint Lucy, Virgin and Martyr",
+   "rank": "memorial"
+  },
+  {
+   "month": 12,
+   "day": 14,
+   "name": "Saint John of the Cross, Priest and Doctor of the Church",
+   "rank": "memorial"
+  },
+  {
+   "month": 12,
+   "day": 21,
+   "name": "Saint Peter Canisius, Priest and Doctor of the Church",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 12,
+   "day": 23,
+   "name": "Saint John of Kanty, Priest",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 12,
+   "day": 25,
+   "name": "Nativity of the Lord",
+   "rank": "solemnity"
+  },
+  {
+   "month": 12,
+   "day": 26,
+   "name": "Saint Stephen, the First Martyr",
+   "rank": "feast"
+  },
+  {
+   "month": 12,
+   "day": 27,
+   "name": "Saint John, Apostle and Evangelist",
+   "rank": "feast"
+  },
+  {
+   "month": 12,
+   "day": 28,
+   "name": "The Holy Innocents, Martyrs",
+   "rank": "feast"
+  },
+  {
+   "month": 12,
+   "day": 29,
+   "name": "Saint Thomas Becket, Bishop and Martyr",
+   "rank": "optional memorial"
+  },
+  {
+   "month": 12,
+   "day": 31,
+   "name": "Saint Sylvester I, Pope",
+   "rank": "optional memorial"
+  }
+ ],
+ "movable": [
+  {
+   "rule": "weekday_after",
+   "month": 1,
+   "day": 6,
+   "weekday": 6,
+   "when": "Sunday after 6 January",
+   "name": "The Baptism of the Lord",
+   "rank": "feast"
+  },
+  {
+   "rule": "easter",
+   "offset": 50,
+   "when": "Monday after Pentecost",
+   "name": "Blessed Virgin Mary, Mother of the Church",
+   "rank": "memorial"
+  },
+  {
+   "rule": "easter",
+   "offset": 56,
+   "when": "First Sunday after Pentecost",
+   "name": "The Most Holy Trinity",
+   "rank": "solemnity"
+  },
+  {
+   "rule": "easter",
+   "offset": 60,
+   "when": "Thursday after Holy Trinity",
+   "name": "The Most Holy Body and Blood of Christ",
+   "rank": "solemnity"
+  },
+  {
+   "rule": "easter",
+   "offset": 68,
+   "when": "Friday after the Second Sunday after Pentecost",
+   "name": "The Most Sacred Heart of Jesus",
+   "rank": "solemnity"
+  },
+  {
+   "rule": "easter",
+   "offset": 69,
+   "when": "Saturday after the Second Sunday after Pentecost",
+   "name": "The Immaculate Heart of the Blessed Virgin Mary",
+   "rank": "memorial"
+  },
+  {
+   "rule": "advent",
+   "offset": -7,
+   "when": "Last Sunday in Ordinary Time",
+   "name": "Our Lord Jesus Christ, King of the Universe",
+   "rank": "solemnity"
+  },
+  {
+   "rule": "holy_family",
+   "when": "Sunday within the Octave of Christmas, or, if there is no such Sunday, 30 December",
+   "name": "The Holy Family of Jesus, Mary and Joseph",
+   "rank": "feast"
+  },
+  {
+   "rule": "easter",
+   "offset": -46,
+   "name": "Ash Wednesday",
+   "rank": "(Proper of Time)"
+  },
+  {
+   "rule": "easter",
+   "offset": -7,
+   "name": "Palm Sunday of the Passion of the Lord",
+   "rank": "(Proper of Time)"
+  },
+  {
+   "rule": "easter",
+   "offset": -3,
+   "name": "Holy Thursday",
+   "rank": "(Proper of Time)"
+  },
+  {
+   "rule": "easter",
+   "offset": -2,
+   "name": "Good Friday of the Passion of the Lord",
+   "rank": "(Proper of Time)"
+  },
+  {
+   "rule": "easter",
+   "offset": 0,
+   "name": "Easter Sunday of the Resurrection of the Lord",
+   "rank": "solemnity (Proper of Time)"
+  },
+  {
+   "rule": "easter",
+   "offset": 39,
+   "name": "The Ascension of the Lord",
+   "rank": "solemnity (Proper of Time; Sunday in some countries)"
+  },
+  {
+   "rule": "easter",
+   "offset": 49,
+   "name": "Pentecost Sunday",
+   "rank": "solemnity (Proper of Time)"
+  },
+  {
+   "rule": "advent",
+   "offset": 0,
+   "name": "First Sunday of Advent",
+   "rank": "(Proper of Time)"
+  }
+ ]
+}

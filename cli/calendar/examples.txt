@@ -1,0 +1,130 @@
+$ python3 calendar.py --daily --date 2026-10-17
+∴ Saturday 17 October 2026 · BST · England & Wales
+☉♎ Libra III 24° · ♃ Jupiter · 🜁 Air · 🂤 4 of Swords · zone 3
+  🃫 XI Justice ♎ (trad. VIII) · 🃪 X Wheel of Fortune ♃ · 🂾 Prince of Cups 20°♎–20°♏
+Nma A-290 101201 · zone 1 · 𝌦 Closeness /2
+Tai Xuan 𝍈 67 Darkening · 次七 · zone 4
+Gua qi ䷣ 明夷 Darkening of the Light (KW 36) · 寒露 · ☱ 兌 2
+✠ St Ignatius of Antioch (memorial)
+⛤ 'Pata: jeudi 12 Haha 154 E.P. · St Cosinus, savant
+⁂ Prompt: Trace a thread from XI Justice (Libra) to the hexagram 'Darkening of the Light': does anything in the life or cult of St Ignatius of Antioch sit on that thread?
+
+$ python3 calendar.py --daily --date 2026-03-01
+∴ Sunday 1 March 2026 · GMT · England & Wales
+☉♓ Pisces II 11° · ♃ Jupiter · 🜄 Water · 🂹 9 of Cups · zone 8
+  🃲 XVIII The Moon ♓ · 🃪 X Wheel of Fortune ♃ · 🂼 Knight of Cups 20°♒–20°♓
+Nma A-60 002012 · zone 5 · 𝌌 Ascent /6
+Tai Xuan 𝌕 16 Contact · 次六 · zone 7
+Gua qi ䷊ 泰 Peace (KW 11) · 雨水 · ☵ 坎 5
+✠ 2nd Sunday of Lent · St David (Dewi Sant) (solemnity; → Mon 2 Mar) [W]; St David (feast; impeded: Sunday) [E]
+⛤ 'Pata: samedi 7 Pédale 153 E.P. · St Gavroche, forain
+☘ Folk: Saint David's Day (Dydd Gŵyl Dewi Sant)
+⁂ Prompt: Trace a thread from XVIII The Moon (Pisces) to the hexagram 'Peace': does anything in the life or cult of St David (Dewi Sant) sit on that thread?
+
+$ python3 calendar.py --daily --date 2026-03-02 --region wales
+∴ Monday 2 March 2026 · GMT · Wales
+☉♓ Pisces II 12° · ♃ Jupiter · 🜄 Water · 🂹 9 of Cups · zone 8
+  🃲 XVIII The Moon ♓ · 🃪 X Wheel of Fortune ♃ · 🂼 Knight of Cups 20°♒–20°♓
+Nma A-61 002020 · zone 6 · 𝌌 Ascent /7
+Tai Xuan 𝌕 16 Contact · 次八 · zone 7
+Gua qi ䷊ 泰 Peace (KW 11) · 雨水 · ☵ 坎 5
+✠ St David (Dewi Sant) (solemnity; from 1 Mar) [W]
+⛤ 'Pata: dimanche 8 Pédale 153 E.P. · LA MACHINE À INSPIRER L'AMOUR
+⁂ Prompt: Set the 9 of Cups beside tetragram 16 'Contact': where do 9 and 16 meet on the numogram (zones 8 and 7)?
+
+$ python3 calendar.py --daily --date 2026-10-17 --plain
+Saturday 17 October 2026 · BST · England & Wales
+Libra III 24° · Jupiter · Air · 4 of Swords · zone 3
+  XI Justice (Libra) (trad. VIII) · X Wheel of Fortune (Jupiter) · Prince of Cups (20° Libra – 20° Scorpio)
+Nma A-290 101201 · zone 1 · Closeness /2
+Tai Xuan 67 Darkening · 次七 · zone 4
+Gua qi 明夷 Darkening of the Light (KW 36) · 寒露 · 兌 2
+St Ignatius of Antioch (memorial)
+'Pata: jeudi 12 Haha 154 E.P. · St Cosinus, savant
+Prompt: Trace a thread from XI Justice (Libra) to the hexagram 'Darkening of the Light': does anything in the life or cult of St Ignatius of Antioch sit on that thread?
+
+$ python3 calendar.py --daily --date 2026-10-17 --ascii
+Saturday 17 October 2026 | BST | England & Wales
+Libra III 24 deg | Jupiter | Air | 4 of Swords | zone 3
+XI Justice (Libra) (trad. VIII) | X Wheel of Fortune (Jupiter) | Prince of Cups (20 deg Libra - 20 deg Scorpio)
+Nma A-290 101201 | zone 1 | Closeness /2
+Tai Xuan 67 Darkening | /7 | zone 4
+Gua qi Darkening of the Light (KW 36) | Cold Dew | Dui 2
+St Ignatius of Antioch (memorial)
+'Pata: jeudi 12 Haha 154 E.P. | St Cosinus, savant
+Prompt: Trace a thread from XI Justice (Libra) to the hexagram 'Darkening of the Light': does anything in the life or cult of St Ignatius of Antioch sit on that thread?
+
+$ python3 calendar.py --date 2026-10-17
+NUMOGRAM CALENDAR — 2026-10-17 12:00 Europe/London (BST) = 2026-10-17 11:00 UTC
+─── Nma zygotriadic  (epoch 1970-01-01) ───
+  Cycle A day 290/729 · trits 101201 · zone 1 [spec]
+  Tetragram address 𝌦 33 Closeness · appraisal 2 [spec]
+  epoch: epoch used by the xeno.cx zygotriadic calendar (Lillian Patch), a modern reconstruction; not CCRU [conv]
+─── Tai Xuan  (solstice 2025-12-21 15:00 UTC) ───
+  Head 𝍈 67 Darkening (lines 3221) · 次七 · 晝 day · zone 4 [spec]
+  day 300 since solstice [approx]
+─── Gua qi  (Meng Xi 六日七分) ───
+  ䷣ 明夷 Darkening of the Light (KW 36) #50/60 · 卿 minister · day 1.55 of 6.09 · zone 9
+  Solar term 寒露 Cold Dew → ☱ 兌 line 2 [approx]
+─── Decan  (☉ λ = 204.093°) ───
+  ♎ Libra III (decan 21/36) · 🜁 Air · ruler ♃ Jupiter · 🂤 4 of Swords · zone 3 [spec]
+  Majors: sign 🃫 XI Justice · ruler 🃪 X Wheel of Fortune  [gd]
+  Court: 🂾 Prince of Cups (20° Libra – 20° Scorpio) [Book T]
+─── 'Pataphysical ───
+  jeudi 12 Haha 154 E.P.
+─── 'Pataphysical feast ───
+  St Cosinus, savant (Fête Suprême Quarte)
+─── Catholic calendar: England & Wales  (Easter 2026-04-05) ───
+  Saint Ignatius of Antioch, Bishop and Martyr — memorial
+─── Folk / popular (unofficial) ───
+  —
+─── Research prompt (generated, not a claim) ───
+  ⁂ Trace a thread from XI Justice (Libra) to the hexagram 'Darkening of the Light': does anything in the life or cult of St Ignatius of Antioch sit on that thread?
+
+$ python3 calendar.py --saints --folk --date 2026-11-06 --region wales
+NUMOGRAM CALENDAR — 2026-11-06 12:00 Europe/London (GMT) = 2026-11-06 12:00 UTC
+─── Catholic calendar: Wales  (Easter 2026-04-05) ───
+  ✠ St Illtud, abbot (optional memorial) [W]
+─── Folk / popular (unofficial) ───
+  —
+
+$ python3 calendar.py --saints --date 2025-04-28 --region england
+NUMOGRAM CALENDAR — 2025-04-28 12:00 Europe/London (BST) = 2025-04-28 11:00 UTC
+─── Catholic calendar: England  (Easter 2025-04-20) ───
+  ✠ St George, martyr, patron of England (solemnity; from 23 Apr) [E]
+  Saint Peter Chanel, Priest and Martyr — optional memorial
+  Saint Louis Grignon de Montfort, Priest — optional memorial
+
+$ python3 calendar.py --saints --pata-saints --folk --date 2026-06-07
+NUMOGRAM CALENDAR — 2026-06-07 12:00 Europe/London (BST) = 2026-06-07 11:00 UTC
+─── 'Pataphysical feast ───
+  Ste Pyrotechnie, illuminée (Fête Suprême Quarte)
+─── Catholic calendar: England & Wales  (Easter 2026-04-05) ───
+  The Most Holy Body and Blood of Christ — solemnity (from 2026-06-04)
+─── Folk / popular (unofficial) ───
+  —
+
+$ python3 calendar.py --saints --date 2026-06-04 --region general
+NUMOGRAM CALENDAR — 2026-06-04 12:00 Europe/London (BST) = 2026-06-04 11:00 UTC
+─── Catholic calendar: General Roman Calendar  (Easter 2026-04-05) ───
+  The Most Holy Body and Blood of Christ — solemnity
+
+$ python3 calendar.py --decan --trumps trad --date 2026-08-01
+NUMOGRAM CALENDAR — 2026-08-01 12:00 Europe/London (BST) = 2026-08-01 11:00 UTC
+─── Decan  (☉ λ = 129.23°) ───
+  ♌ Leo I (decan 13/36) · 🜂 Fire · ruler ♄ Saturn · 🃕 5 of Wands · zone 4 [spec]
+  Majors: sign 🃫 XI Strength · ruler 🃵 XXI The World  [trad]
+  Court: 🃞 Prince of Wands (20° Cancer – 20° Leo) [Book T]
+
+$ python3 calendar.py --daily --date 2026-01-25
+∴ Sunday 25 January 2026 · GMT · England & Wales
+☉♒ Aquarius I 6° · ♀ Venus · 🜁 Air · 🂥 5 of Swords · zone 4
+  🃱 XVII The Star ♒ · 🃣 III The Empress ♀ · 🂮 Prince of Swords 20°♑–20°♒
+Nma A-25 000220 · zone 6 · 𝌈 Mired /7
+Tai Xuan 𝌍 8 Opposition · 次八 · zone 8
+Gua qi ䷭ 升 Pushing Upward (KW 46) · 大寒 · ☵ 坎 3
+✠ 3rd Sunday in Ordinary Time · The Conversion of St Paul the Apostle (feast)
+⛤ 'Pata: samedi 28 Décervelage 153 E.P. · Repopulation
+☘ Folk: Dydd Santes Dwynwen (St Dwynwen's Day)
+⁂ Prompt: Trace a thread from XVII The Star (Aquarius) to the hexagram 'Pushing Upward': does anything in the life or cult of The Conversion of St Paul the Apostle sit on that thread?
+
