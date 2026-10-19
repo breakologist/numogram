@@ -463,6 +463,25 @@ class GuaQi(unittest.TestCase):
         self.assertIn("tetragram zone 3 by lines, zone 4 by number", p["research_prompt"]["text"])
 
 
+class SaintNames(unittest.TestCase):
+    def test_short_saint_keeps_co_saints(self):
+        # regression: names were cut at the first comma, dropping Isaac Jogues and companions
+        self.assertEqual(nc.short_saint("Saints John de Brébeuf, Isaac Jogues, Priests, and Companions, Martyrs"),
+                         "Ss John de Brébeuf, Isaac Jogues and Companions")
+        self.assertEqual(nc.short_saint("Saints Cornelius, Pope, and Cyprian, Bishop, Martyrs"),
+                         "Ss Cornelius and Cyprian")
+        self.assertEqual(nc.short_saint("Saint Luke, Evangelist"), "St Luke")
+        self.assertEqual(nc.short_saint("Saint Paul of the Cross, Priest"), "St Paul of the Cross")
+        self.assertEqual(nc.short_saint("St Cyril, monk, and St Methodius, bishop, patrons of Europe"),
+                         "St Cyril and St Methodius")
+
+    def test_daily_shows_full_memorial(self):
+        r = nc.run(nc.build_context("2026-10-19"), [n for n, o in nc.OVERLAYS.items() if o["enabled"]])
+        txt = nc.format_daily(r)
+        self.assertIn("Ss John de Brébeuf, Isaac Jogues and Companions (opt. mem.)", txt)
+        self.assertIn("St Paul of the Cross (opt. mem.)", txt)
+
+
 class Registry(unittest.TestCase):
     def test_lunation_stub_and_providers(self):
         self.assertFalse(nc.OVERLAYS["lunation"]["enabled"])

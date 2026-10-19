@@ -864,8 +864,33 @@ PROMPT_TEMPLATES = [
 ]
 
 
+# First words of comma-separated title segments to drop from a saint's name
+# ("Priest", "Bishop and Doctor of the Church", "patron of Wales", "the First Martyr" …).
+SAINT_TITLE_WORDS = {
+    "abbot", "abbess", "apostle", "apostles", "archangels", "bishop", "bishops", "deacon",
+    "doctor", "evangelist", "hermit", "king", "martyr", "martyrs", "monk", "mother", "parents",
+    "patron", "patrons", "pope", "priest", "priests", "religious", "spouse", "the", "virgin",
+    "incl.", "kept", "with",
+}
+
+
 def short_saint(name: str) -> str:
-    return name.split(",")[0].replace("Saint ", "St ").replace("Saints ", "Ss ")
+    """Drop title segments but keep every name: 'Saints John de Brébeuf, Isaac Jogues,
+    Priests, and Companions, Martyrs' -> 'Ss John de Brébeuf, Isaac Jogues and Companions'.
+    (Formerly cut at the first comma, which lost co-saints.)"""
+    parts = [p.strip() for p in name.split(",")]
+    out = [parts[0]]
+    for seg in parts[1:]:
+        if not seg or any(c in seg for c in ";(—") or any(c.isdigit() for c in seg):
+            break
+        first = seg.split()[0].lower()
+        if first in SAINT_TITLE_WORDS:
+            continue
+        if first == "and":
+            out[-1] += " " + seg
+        else:
+            out.append(seg)
+    return ", ".join(out).replace("Saint ", "St ").replace("Saints ", "Ss ")
 
 
 def research_prompt(r) -> dict:
