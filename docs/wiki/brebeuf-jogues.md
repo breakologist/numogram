@@ -57,6 +57,7 @@ tags: ["saints", "north-american-martyrs", "brebeuf", "jogues", "jesuit-relation
 
 ## See also
 
+- [[brebeuf-jogues-folk]] (living customs, relics, pilgrimage, Indigenous perspectives)
 - [[reading-2026-10-19]]
 - [[reading-2026-10-19-addendum]]
 - [[reading-2026-10-18]]
