@@ -70,4 +70,4 @@ Today's pair is therefore 4 | 5, a syzygy (4 + 5 = 9). Yesterday's 3 | 4 is not.
 
 ## See also
 
-[[reading-2026-10-19]] · [[reading-2026-10-18]] · [[zone-4]] · [[zone-5]] · [[syzygy]] · [[hexagram-zone-mapping]]
+[[brebeuf-jogues]] · [[reading-2026-10-19]] · [[reading-2026-10-18]] · [[zone-4]] · [[zone-5]] · [[syzygy]] · [[hexagram-zone-mapping]]
