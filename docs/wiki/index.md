@@ -370,6 +370,7 @@
 - [[em-state-analysis]] — The third line state. Neither yin nor yang. Maps to Zone 5 (hinge) but fully realized closes to Zone 4.
 - [[de-re-numogram-structural-rules]] — Base-N generalisation: Warp condition, Torque regions, fractal torque structure, demons as zodiac decans, angels, Lurgo's Rite, zone-planetary correspondence
 - [[reading-2026-10-18]] — Dated reading for St Luke's Day 2026: tetragram 67 Darkening (zone 3 by lines, 4 by number; Em line invisible mod 9), hexagram 36 Ming Yi (5 | 9), no gate to 4, Libra III / 4 of Swords, Nma zone 2
+- [[reading-2026-10-19]] — Dated reading for 19 Oct 2026: Prince of Cups (Book T, Crowley), hexagram 36 Ming Yi (Legge: King Wen, the count of Kî), St John de Brébeuf (Catholic Encyclopedia, Jesuit Relations, Huron Carol); tetragram 68 Dimming (4 by lines, 5 by number)
 - [[st-luke-golden-legend]] — St Luke in the Golden Legend (Caxton/Ellis, Temple Classics 1900): light etymology, four faces, the ox, Antioch vision; speculative numogram threads
    354|   354|   354|   354|   354|   354|
    355|   355|   355|   355|   355|   355|## Research
