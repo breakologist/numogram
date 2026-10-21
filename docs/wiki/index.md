@@ -372,6 +372,7 @@
 - [[reading-2026-10-18]] — Dated reading for St Luke's Day 2026: tetragram 67 Darkening (zone 3 by lines, 4 by number; Em line invisible mod 9), hexagram 36 Ming Yi (5 | 9), no gate to 4, Libra III / 4 of Swords, Nma zone 2
 - [[reading-2026-10-19]] — Dated reading for 19 Oct 2026: Prince of Cups (Book T, Crowley), hexagram 36 Ming Yi (Legge: King Wen, the count of Kî), St John de Brébeuf (Catholic Encyclopedia, Jesuit Relations, Huron Carol); tetragram 68 Dimming (4 by lines, 5 by number)
 - [[reading-2026-10-19-addendum]] — Companion to the 19 Oct reading: Crowley's court-card hexagrams (Prince of Cups = 61 Zhong Fu, wind over lake; full table), St Isaac Jogues and the North American Martyrs, tetragram 68 at 4::5 (Katak)
+- [[reading-2026-10-20]] — Dated reading for 20 Oct 2026 (feria): the Wheel of Fortune as a Ferris wheel gathering Cold Dew (寒露); the user's image and doubt; tetragram 68 at 4::5, Nma zone 4, no gate back to 4
 - [[brebeuf-jogues]] — St Jean de Brébeuf and St Isaac Jogues: sourced facts (DCB, Jesuit Relations, Catholic Encyclopedia) and claims that did not check out
 - [[brebeuf-jogues-folk]] — Living customs and contested memory around the North American Martyrs: Huron Carol at Wendake, relics and the 2024–26 tour, Auriesville, Kateri, Wendat and Mohawk perspectives
 - [[st-luke-golden-legend]] — St Luke in the Golden Legend (Caxton/Ellis, Temple Classics 1900): light etymology, four faces, the ox, Antioch vision; speculative numogram threads
