@@ -375,6 +375,7 @@
 - [[reading-2026-10-20]] — Dated reading for 20 Oct 2026 (feria): the Wheel of Fortune as a Ferris wheel gathering Cold Dew (寒露); the user's image and doubt; tetragram 68 at 4::5, Nma zone 4, no gate back to 4
 - [[brebeuf-jogues]] — St Jean de Brébeuf and St Isaac Jogues: sourced facts (DCB, Jesuit Relations, Catholic Encyclopedia) and claims that did not check out
 - [[brebeuf-jogues-folk]] — Living customs and contested memory around the North American Martyrs: Huron Carol at Wendake, relics and the 2024–26 tour, Auriesville, Kateri, Wendat and Mohawk perspectives
+- [[john-paul-ii]] — St John Paul II (feast 22 Oct): occupation years, Rhapsodic Theatre, 1979 Warsaw homily, 1981 shooting and Fatima bullet, Laborem Exercens / Salvifici Doloris, blood relics, criticisms (McCarrick, Maciel, Poland 2023); speculative Justice / hexagram 47 reading
 - [[st-luke-golden-legend]] — St Luke in the Golden Legend (Caxton/Ellis, Temple Classics 1900): light etymology, four faces, the ox, Antioch vision; speculative numogram threads
    354|   354|   354|   354|   354|   354|
    355|   355|   355|   355|   355|   355|## Research
