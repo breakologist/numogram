@@ -136,7 +136,7 @@ The Behenian stars are Agrippa's list in II.31, given with his degrees of c. 151
 
 **Today, Scorpio I** (Mars; the 5 of Cups): "a woman of good face and habit, and two men striking her; the operations of these are for comliness, beauty, and for strifes, treacheries, deceits, detractations, and perditions."
 
-**Picatrix II.11** gives a different set of 36 face images. They are now compared, with Purdue's Agrippa, on [[decans-lore]], using the user's PDFs of Greer–Warnock and Attrell–Porreca. Short quotes only, the rest summarised. The calendar shows Em's one-line paraphrase.
+**Picatrix II.11** gives a different set of 36 face images. They are now compared, with Purdue's Agrippa and the Arabic translation by Atallah, on [[decans-lore]], using the user's PDFs of Greer–Warnock and Attrell–Porreca. Short quotes only, the rest summarised. The calendar shows Em's one-line paraphrase.
 
 ## Today, 24 Oct 2026 (18:30 BST)
 

@@ -2,7 +2,7 @@
 title: "Decan images and lunar mansions across translations: Agrippa (1651, Purdue) and Picatrix (Greer–Warnock, Attrell–Porreca)"
 created: 2026-10-24
 last_updated: 2026-10-24
-source_count: 4
+source_count: 6
 status: draft
 tags: ["decans", "faces", "lunar-mansions", "manazil", "agrippa", "picatrix", "translation", "calendar"]
 ---
@@ -18,11 +18,14 @@ This page compares four texts. The user supplied the three modern editions as PD
 | **1651** | Agrippa, *Three Books of Occult Philosophy*, tr. "J.F." (London 1651), via esotericarchives.com (ed. J. H. Peterson) | public domain |
 | **Purdue** | Agrippa, *Three Books of Occult Philosophy*, tr. Eric Purdue (Inner Traditions, 2021), translated from the 1533 Latin; foreword by Christopher Warnock | ©; PDF supplied by the user |
 | **G–W** | *The Picatrix*, Liber Rubeus Edition, tr. and annotated by John Michael Greer and Christopher Warnock (Adocentyn Press, © 2010–11), from the Latin | ©; PDF supplied by the user |
+| **Atallah** | *Picatrix (Ghayat al-Hakim): The Goal of the Wise*, vol. I, translated **from the Arabic** by Hashem Atallah, ed. William Kiesel (Ouroboros Press, Seattle; first English edition 2002, © 2000). The title page and copyright page were checked by OCR. | ©; image-only PDF supplied by the user, OCR'd by Em |
+| **Misc.** | *A Picatrix Miscellany*, "Underground Edition", 2007. The PDF metadata gives the author as "Various" and the file names no editor or publisher. It contains, among other things, a Latin-based mansions translation by **Robert Thomas** (§V), a piece by Christopher Warnock, the mansion images (§XI) and essays on the decans and tarot | anthology; PDF supplied by the user; used as commentary only |
+| **G–W 2008–9** | An earlier, separate Greer–Warnock Picatrix volume (© 2008–9, Renaissance Astrology Press, ISBN 978-0-557-12899-0), 76 scanned pages. Identified by OCR of its title and copyright pages; not otherwise used | ©; supplied by the user |
 | **A–P** | *Picatrix: A Medieval Treatise on Astral Magic*, tr. Dan Attrell and David Porreca (Penn State UP, Magic in History, 2019), from the Latin (Pingree's edition) | ©; PDF supplied by the user |
 
 The page numbers below are the **PDF page numbers** of the supplied files. Printed page numbers are given where the PDF shows them.
 
-Two other supplied PDFs could not be identified. `91245bbf…` (76 pages) and `8b5b6ad9…` (42.5 MB) are image-only or too large for this session's PDF reader, so they are not used here. All four texts compared are **Latin-tradition**. No Arabic *Ghāyat al-Ḥakīm* translation, such as Ritter and Plessner's 1962 German, was available, so an Arabic-versus-Latin comparison is not possible yet. The only Arabic forms here are the mansion names given in the G–W footnotes and on Peterson's 1651 page.
+Atallah's translation is from the **Arabic** *Ghāyat al-Ḥakīm*, so the Arabic and Latin traditions can now be compared; see below. The two scanned PDFs were OCR'd with tesseract. OCR errors are possible in the Atallah quotes, especially where the astrological glyphs came through as letters.
 
 ## Decans (faces)
 
@@ -97,6 +100,39 @@ Purdue is at PDF pp. 308–310.
 
 The full 1651 list of mansion attributes is on [[mansions-lore]].
 
+
+## Arabic (Atallah) against Latin (G–W, A–P, Thomas)
+
+All Atallah page numbers below are the printed pages as read by OCR.
+
+### Today's decan, Scorpio I
+
+The Arabic image is different again. Atallah (p. ~147) has **"a man with an arrow in his right hand and an arrow in his left hand"**, in the face of Mars, "complete in form and nature". Its meaning is positive: honour, glory, cunning and triumph.
+
+The Latin Picatrix has instead a man with a lance who holds a severed head, and gives the face sadness, ill will and enmity. So the Latin translators, working via the 1256 Spanish, changed both the image and its valence here. Atallah's chapter does have a man raising a sword with "the head of a man in his left hand", but as a *planetary* (Mars) image elsewhere (p. ~145), not as the Scorpio I face. That suggests the Latin borrowed or conflated it. *That is Em's inference.*
+
+The other Scorpio faces largely agree:
+- **Scorpio II:** in Atallah a man riding a camel with a scorpion, whose face indicates "disgrace, scandal, tragedy and anger". The Latin has knowledge and modesty.
+- **Scorpio III:** in Atallah a horse and a *snake*; the Latin has a horse and a *hare*.
+
+### Today's mansion 28, al-Risha' (Batn al-Ḥūt)
+
+- **Atallah (p. ~27):** talismans "for a successful trade, productive crops, treatment of diseases and **destroying trusts**", for the safety of a traveller, for restoring relations between spouses, for restraining and harming prisoners, and for hurting someone at sea.
+- **The disputed Latin phrase.** G–W's "to get rid of things and to destroy an area" and A–P's "to balance things, to ruin jokes" both correspond to Atallah's **"destroying trusts"**, plausibly Arabic *amānāt* (deposits, things held in trust). The Latin seems to have garbled this, and the two English translators then rendered the garble differently. *Em's inference; the Arabic was not consulted directly.*
+- **Other differences.** The Arabic includes "treatment of diseases", which the Latin lists lack. Thomas's Latin-based version (Misc. §V) abridges mansion 28 to trade, peace between man and wife, and strengthening captivity.
+- **Mansion images (Misc. §XI, "according to the second Pliny"):** the 28th, Arrexe, is for "bringing fish together in one place". The image is a brass seal of a fish, thrown into the water. This matches Albotham "the fishes" in the Miscellany's own tables.
+
+### Mansion 1, al-Sharaṭain (Alnath)
+
+- **Atallah (pp. 18–19):** when the Moon is here, the Indians travel and use "laxative medicines". The Latin has "take medicines".
+- **Uses:** talismans for a traveller's safety, for discord between spouses or friends, for a slave's escape, and for sabotaging a partnership, "because it is a fiery evil".
+- **Agreement:** the Latin lists match this closely.
+- **Image (Misc. §XI):** the first mansion is "for destruction and depopulation", with the image of a black man holding a lance, set in an iron ring.
+
+### Commentary (Misc.)
+
+Essay §VI in the Miscellany discusses the competing starting points: whether the mansions are tropical or sidereal, and which mansion comes first. In the older Indian and Arabic order the round can begin with al-Sharaṭain (Sheratan, β Ari) or with Batn al-Ḥūt. This bears on the calendar's choice between sidereal and tropical; see [[mansions-lore]].
+
 ## Today, 24 Oct 2026, across the translations
 
 - **Decan, Scorpio I:**
@@ -106,6 +142,7 @@ The full 1651 list of mansion attributes is on [[mansions-lore]].
 - **Mansion, sidereal 28:**
   - Agrippa 1651 and Purdue: harvests, trade, safe travel, marriage joy; prisons strengthened, treasure lost.
   - Picatrix: much the same list, with the phrase G–W renders "get rid of things / destroy an area" and A–P renders "balance things / ruin jokes".
+- **Arabic (Atallah):** Scorpio I is a man with two arrows (honour, triumph). In mansion 28 the disputed phrase reads "destroying trusts".
 - **Mansion, zodiacal 1:** Alnath, journeys and discord, in every version.
 - **Chinese xiu:** 壁 Bi, Wall. It is not in these sources; see [[mansions-lore]].
 
@@ -117,7 +154,8 @@ The full 1651 list of mansion attributes is on [[mansions-lore]].
 
 - Page numbers are PDF page numbers, apart from the A–P printed pages shown. Check them against print before citing formally.
 - The proposed Latin readings (*populatio*, *maritatorum*, *surda*/*mortuus*) are **Em's guesses** and have not been checked against Pingree or the 1533 Latin.
-- Two of the supplied PDFs are unidentified (image-only, or too large to read here).
+- The Atallah and 2008–9 G–W texts are OCR'd scans, so check the quotes against the pages.
+- *A Picatrix Miscellany* names no editor or publisher in the file.
 - The Picatrix summaries in the calendar are Em's paraphrases, not quotations.
 
 ## Sources
@@ -125,6 +163,8 @@ The full 1651 list of mansion attributes is on [[mansions-lore]].
 - Agrippa, *Three Books*, II.33 and II.37, tr. J.F. (1651): https://www.esotericarchives.com/agrippa/agripp2c.htm
 - Agrippa, *Three Books of Occult Philosophy*, tr. Eric Purdue (Inner Traditions 2021), II.33 (PDF pp. 308–310) and II.37 (PDF pp. 314–316). PDF supplied by the user.
 - *The Picatrix*, Liber Rubeus Edition, tr. Greer and Warnock (Adocentyn 2010–11), I.4 (PDF pp. 33–38) and II.11 (PDF pp. 114–118). PDF supplied by the user.
+- *Picatrix (Ghayat al-Hakim): The Goal of the Wise*, vol. I, tr. Hashem Atallah, ed. William Kiesel (Ouroboros Press 2002), Book I ch. 4 (pp. ~18–27) and the faces (pp. ~145–148). Scan supplied by the user.
+- *A Picatrix Miscellany*, Underground Edition (2007), §§V, VI, XI. PDF supplied by the user.
 - *Picatrix: A Medieval Treatise on Astral Magic*, tr. Attrell and Porreca (Penn State UP 2019), I.4 (printed pp. 49–51) and II.11 (printed pp. 116–119). PDF supplied by the user.
 
 ---
