@@ -13,7 +13,7 @@ This is a reading list made from the book's Contents, List of Illustrations and 
 
 ## Calendar / gua qi ([[reading-2026-10-18]] onwards; `cli/calendar/numogram_calendar.py`)
 
-- **Ch. 3, "Gua Qi: Theoretical Study of Yin and Yang", p. 45**. This is the main lead for our Meng Xi gua qi overlay.
+- **Ch. 3, "Gua Qi: Theoretical Study of Yin and Yang", p. 45** (now summarised and checked: [[gua-qi-wen]]). This is the main lead for our Meng Xi gua qi overlay.
 - Table 3.1 *The Twelve Hexagrams of the Son of Heaven 天子卦 (Tiānzǐ Guà)*. These are the 12 sovereign (消息) hexagrams; compare Bastian's "Sovereign Hexagrams" 24, 19, 11, 34, 43, 1, 44, 33, 12, 20, 23, 2 ([[bastian-before-completion]]).
 - Table 3.2 *The Four Perfected Hexagrams (四正卦, Sì Zhèng Guà) and the Twenty-Four Solar Terms*. These correspond to our `CARDINAL` 坎震離兌, one line per solar term.
 - Table 3.3 *Gua Qi Diagram Attributed to Confucius*. Fig. 3.6 *Gua Qi yin and yang fluctuations*.

@@ -379,6 +379,7 @@
 - [[hexagram-47-translations]] — Living side-by-side comparison of hexagram 47 困 Kun translations: Legge, Benebell Wen (Blockade), Wilhelm slot; divergences (臀, vermilion sash/knee-covers, title); speculative Jupiter / Carcer / Tai Xuan 69 links
 - [[bastian-before-completion]] — Simon Bastian, *Before Completion* (2022) pp. 19–32: court-card hexagram arrangement (verified; Crowley column confirms ours), geomancy → nuclear hexagrams, intelligences, Sovereign hexagrams, circle walk, bibliography
 - [[wen-oracle-leads]] — Reading leads from Benebell Wen's *I Ching, the Oracle* (contents, figures, tables) grouped by thread: gua qi, Tai Xuan/phantom ninth trigram, Crowley tarot, Lo Shu, DNA, shamanism
+- [[gua-qi-wen]] — Wen's gua qi chapter (pp. 45–57): Meng Xi, Jing Fang, sovereign hexagrams, Four Perfected Hexagrams and 24 solar terms, Confucius diagram, her thaumaturgical trigrams; checked against our calendar code
 - [[john-of-capistrano]] — St John of Capistrano (feast 23 Oct): Perugia jurist, Belgrade 1456, Breslau 1453 persecution, Capistrano swallows; speculative calendar links
 - [[anthony-mary-claret]] — St Anthony Mary Claret (feast 24 Oct): weaver, Librería Religiosa, Holguín razor attack, Cuban mixed marriages, Eucharistic claim, exile at Fontfroide; speculative Prince of Cups / hexagram 47 notes
 - [[st-luke-golden-legend]] — St Luke in the Golden Legend (Caxton/Ellis, Temple Classics 1900): light etymology, four faces, the ox, Antioch vision; speculative numogram threads

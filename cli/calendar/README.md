@@ -167,3 +167,6 @@ All data lives in `data/` as JSON, each file with its source URLs and retrieval 
   - The Collège's official 'Pataphysical feast list, to replace the jchr.be/icalendrier list.
   - Full liturgical precedence for GRC entries, and the Welsh and English diocesan propers.
   - Lunar nodes ☊☋ and Moon glyphs, once a Moon provider exists.
+
+
+See also `docs/wiki/gua-qi-wen.md` (Wen's gua qi chapter, checked against this overlay).
