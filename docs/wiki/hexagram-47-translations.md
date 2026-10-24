@@ -2,7 +2,7 @@
 title: "Hexagram 47 困 Kun: translations side by side"
 created: 2026-10-24
 last_updated: 2026-10-24
-source_count: 6
+source_count: 7
 status: living
 tags: ["i-ching", "hexagram-47", "kun", "translations", "comparison", "research"]
 ---
@@ -19,7 +19,7 @@ This is a living comparison of translations of hexagram 47, ䷮ 困 Kun (Dui 兑
 | **Wen** | Benebell Wen, *I Ching, the Oracle*, pp. ~638–643 | from the user's photographs |
 | **Wilhelm** | Richard Wilhelm / Cary F. Baynes | *slot*: printed text to add; not in hand; the only phrases so far are second-hand, via James DeKorne's comparison page |
 | **Huang** | Alfred Huang, *The Complete I Ching*, "47 Kun · Exhausting" (Lower Canon), pp. 374–381 | from the user's photographs |
-| Karcher | Stephen Karcher, *Total I Ching* | to add, from the user's copies |
+| **Karcher** | Stephen Karcher, *Total I Ching*, "47 Confining / Oppression KUN", pp. 340–345 (incl. "47 and 48: The Paradigm"), contents pp. v–viii | from the user's photographs |
 | **D'Aoust** | Maja D'Aoust, *The Occult I Ching* (running head "The Serpent Oracle"), pp. 303–307 | from the user's photographs; interpretive, not a translation |
 | **Bastian** | Simon Bastian, *Before Completion: I Ching and its Correspondences in Western Occultism* (Hadean Press, Guides to the Underworld, 2022, ISBN 978-1-914166-55-6) | from the user's photographs; one-line interpretations, no line texts |
 
@@ -27,6 +27,7 @@ This is a living comparison of translations of hexagram 47, ䷮ 困 Kun (Dui 兑
 
 | | Chinese | Legge | Wen | Wilhelm (slot) | Others (slots) |
 |---|---|---|---|---|---|
+| Title (Karcher) | "Confining / Oppression" KUN; Response: "If there are words, don't trust them" | | | | |
 | Title (Huang) | "Kun · Exhausting" | | | | |
 | Title (Bastian) | "K'un. Oppression." | | | | |
 | Title (D'Aoust) | "The Secret Garden", Kun; keywords "Circumscribed" / Happiness in Slavery / Oppression | | | | |
@@ -40,12 +41,12 @@ This is a living comparison of translations of hexagram 47, ䷮ 困 Kun (Dui 兑
 
 | Line | Chinese (as printed in Wen) | Legge | Wen | Wilhelm (slot) | Others (slots) |
 |---|---|---|---|---|---|
-| 1 (六) | 初六：臀困于株木，入于幽谷，三歲不覿 | "with bare buttocks straitened under the stump of a tree. He enters a dark valley, and for three years has no prospect (of deliverance)." | "Caned on the backside." Besieged, sitting under "a barren tree"; enters the darkness, a river valley between two mountains; "Nothing is seen and unseen for three years." | (sits / "bare tree", second-hand only) | Huang: "Buttocks, exhausted, on the stump of a tree. Entering into a gloomy valley. Three years, one does not appear." |
-| 2 (九) | 九二：困于酒食，朱紱方來，利用享祀，征凶，無咎 | "straitened amidst his wine and viands. There come to him anon the red knee-covers (of the ruler) … as in sacrificing. Active operations … will lead to evil, but he will be free from blame." | "Satiated by food and wine. Excess." A "vermillion sash wearer arrives". Sacrificial offering brings good fortune, "Advancing brings adversity." | — | Huang: "Exhausted with wine and food. A pair of scarlet kneecaps has just arrived." Offerings favourable; "Moving forward: misfortune. No fault." |
-| 3 (六) | 六三：困於石，據於蒺藜，入於其宮，不見其妻，凶 | "straitened before a (frowning) rock. He lays hold of thorns. He enters his palace, and does not see his wife. There will be evil." | "Trapped among the high rocks", surrounded by thorns and thistles; comes home to his palace "but cannot find his wife. It is foreboding." | — | Huang: "Exhausted with rocks. Resting on thorns and thistles." Entering his house, "Seeing not his wife: misfortune." |
-| 4 (九) | 九四：來徐徐，困於金車，吝，有終 | "proceeding very slowly … straitened by the carriage adorned with metal … regret, but the end will be good." | "Slow passage homeward. Trapped in a golden carriage." Adversity, but it will end. | — | Huang: "Coming, slowly, slowly. Exhausted in a golden carriage. Humiliation. There is an end." |
-| 5 (九) | 九五：劓刖，困於赤紱，乃徐有說，利用祭祀 | "with his nose and feet cut off. He is straitened by (his ministers in their) scarlet aprons. He is leisurely … and is satisfied … as in sacrificing (to spiritual beings)." | "Cutting off the nose. Cutting off the feet. Bound by the vermilion sash." Speak calmly, in a quiet tone, and things will move; "Favors granted after the ceremonial offering." | "Joy comes softly" *(via DeKorne)* | Huang: "Nose and feet are cut off. Exhausted with scarlet kneecaps. Gradually and slowly, there is joy." Offerings favourable. |
-| 6 (六) | 上六：困於葛藟，於臲卼，曰動悔有悔，征吉 | "as if bound with creepers; or in a high and dangerous position … 'If I move, I shall repent it.' If he do repent … good fortune in his going forward." | "Entangled by creeping vines", trapped in wild grass; moves uncertainly, voices regret, shows remorse; "Gains from undertaking the expedition." | — | Huang: "Exhausted with creeping vines, / And also danger and perplexity." "Moving: regret"; repenting, "Then moving forward: good fortune." |
+| 1 (六) | 初六：臀困于株木，入于幽谷，三歲不覿 | "with bare buttocks straitened under the stump of a tree. He enters a dark valley, and for three years has no prospect (of deliverance)." | "Caned on the backside." Besieged, sitting under "a barren tree"; enters the darkness, a river valley between two mountains; "Nothing is seen and unseen for three years." | (sits / "bare tree", second-hand only) | Huang: "Buttocks, exhausted, on the stump of a tree. Entering into a gloomy valley. Three years, one does not appear."<br>Karcher: "Buttocks punished with a wooden rod. If you enter the shadowy gully, You will encounter no one for three years." |
+| 2 (九) | 九二：困于酒食，朱紱方來，利用享祀，征凶，無咎 | "straitened amidst his wine and viands. There come to him anon the red knee-covers (of the ruler) … as in sacrificing. Active operations … will lead to evil, but he will be free from blame." | "Satiated by food and wine. Excess." A "vermillion sash wearer arrives". Sacrificial offering brings good fortune, "Advancing brings adversity." | — | Huang: "Exhausted with wine and food. A pair of scarlet kneecaps has just arrived." Offerings favourable; "Moving forward: misfortune. No fault."<br>Karcher: "at food and drink. Scarlet sashes are coming on all sides." Presentations to spirits and ancestors; "Chastising closes the Way." |
+| 3 (六) | 六三：困於石，據於蒺藜，入於其宮，不見其妻，凶 | "straitened before a (frowning) rock. He lays hold of thorns. He enters his palace, and does not see his wife. There will be evil." | "Trapped among the high rocks", surrounded by thorns and thistles; comes home to his palace "but cannot find his wife. It is foreboding." | — | Huang: "Exhausted with rocks. Resting on thorns and thistles." Entering his house, "Seeing not his wife: misfortune."<br>Karcher: "by stones, he grasps at thorn-vines. You enter your palace and do not see your consort. Trap! The Way closes." |
+| 4 (九) | 九四：來徐徐，困於金車，吝，有終 | "proceeding very slowly … straitened by the carriage adorned with metal … regret, but the end will be good." | "Slow passage homeward. Trapped in a golden carriage." Adversity, but it will end. | — | Huang: "Coming, slowly, slowly. Exhausted in a golden carriage. Humiliation. There is an end."<br>Karcher: "in a bronze war-chariot. It comes slowly, slowly. Distress. There will be completion." |
+| 5 (九) | 九五：劓刖，困於赤紱，乃徐有說，利用祭祀 | "with his nose and feet cut off. He is straitened by (his ministers in their) scarlet aprons. He is leisurely … and is satisfied … as in sacrificing (to spiritual beings)." | "Cutting off the nose. Cutting off the feet. Bound by the vermilion sash." Speak calmly, in a quiet tone, and things will move; "Favors granted after the ceremonial offering." | "Joy comes softly" *(via DeKorne)* | Huang: "Nose and feet are cut off. Exhausted with scarlet kneecaps. Gradually and slowly, there is joy." Offerings favourable.<br>Karcher: "His nose cut, his feet cut, Oppressed by the crimson sashes. Slowly he will be loosened." |
+| 6 (六) | 上六：困於葛藟，於臲卼，曰動悔有悔，征吉 | "as if bound with creepers; or in a high and dangerous position … 'If I move, I shall repent it.' If he do repent … good fortune in his going forward." | "Entangled by creeping vines", trapped in wild grass; moves uncertainly, voices regret, shows remorse; "Gains from undertaking the expedition." | — | Huang: "Exhausted with creeping vines, / And also danger and perplexity." "Moving: regret"; repenting, "Then moving forward: good fortune."<br>Karcher: "by trailing creepers, he trips on tree stumps." "If we stir up the causes of sorrow, then there will be sorrowing." "Chastising opens the Way." |
 
 Chinese is transcribed from the user's clearer close-up photographs of each box (p. 638 and the six line boxes; columns read right to left). Punctuation (，) is added here; Wen prints only the colon after the line label. Wen uses 于 in lines 1–2 but 於 in lines 3–6, and 無 (not 无). Variant glyph shapes are normalised to standard forms; see Flags.
 
@@ -132,6 +133,34 @@ His line texts are in the per-line table above, under "Others". Short quotes onl
 - **Month and calendar.** Our `cli/calendar/numogram_calendar.py` Han gua qi overlay (Meng Xi 六日七分) gives 困 47 as hexagram #51/60 (公 duke) from **22 to 27 October 2026**, between 36 Ming Yi (to 21 Oct) and 23 Bo (from 28 Oct). The 9th lunar month of 2026 runs roughly from 10 Oct to 8 Nov (lunation dates approximate, not checked in code). So Huang's "ninth month … or October" **agrees** with our assignment, and 47 is the gua qi hexagram for today.
 - Element Metal agrees with Wen (Metal/Water).
 
+## Karcher, *Total I Ching* (pp. 340–345)
+
+His line texts are in the per-line table above, after Huang's. Each line opens "Confined and Oppressed…". Short quotes only; the rest is summarised.
+
+- **Glyph.** "KUN shows a tree MU (1) in an enclosure WEI (2) or old house": 木 inside 囗 (*wei*, "enclosure"), not 口 (*kou*, "mouth"). The gloss calls it "a big mouth or ramshackle house that threatens to engulf it". His long list of senses runs from enclosed and persecuted through penal codes and prison to "at the end of your resources".
+- **Punishments as offering.** The text "mentions several of the major punishments": nose-cutting, foot-cutting, branding, castration, imprisonment, exile and death, "becoming an 'offering to the ancestors'". It also suggests the war duties owed to a feudal lord: a noble exiled and oppressed under a tyrant. Philosophically this oppression teaches *de*, "power and virtue", and "the futility of anger and hatred".
+- **The Response.** "Make an offering and you will succeed. Wise Words! Trial: the Great Person opens the Way." The words are read as untrustworthy: "If there are words, don't trust them", "Words are not to be trusted".
+- **The Scholar Speaks.** Outer relations are cut off from the inner flow: "The mists are outside the stream." Ascending without stopping (46) brought on Confining. Hidden in it is "the possibility of meeting unexpected help".
+- **The Shaman Speaks.** "Mists outside the Stream." "Spirit rewards those who suffer in the Pit." Joyous Dancer (Dui) works with the Ghost River (Kan). "This is Metal over Water"; the spirit "dissolves and flows on". "Hold the heart fast and take the risk."
+- **Line commentary, briefly.** Line 1: you are your own worst enemy, don't retreat into melancholy. Line 2: the Noble One in exile, "help is on its way". Line 3: "riding a strong line"; you can't even see the friend eager to help. Line 4: "allies will come", slowly. Line 5: "Acquiesce in the blessing"; as bitter feelings loosen "you will be set free". Line 6: "Stop indulging yourself!"; groaning brings only lamentation.
+
+### 47 and 48: The Paradigm (p. 340)
+
+"The Oppressed Noble returns to the Common Source." The pair offers "secret connections made in a time of oppression that open to a common source of strength", a "Tiger Transformation and Great Transition" where one "confronts the Ghost River and the shades of the past". Its sub-heading closes: "Confined means mutual meeting. The Well means interconnecting through the source."
+
+| Karcher's relation | Pairs | Em's check |
+|---|---|---|
+| The Pair | 47:48 | ✓ 48 is 47 turned upside down (Huang's "Inverse") |
+| Hidden Possibilities | 37:38 > 64:63 | ✓ The mutual (nuclear) hexagram of 47 is 37 (= Huang's "Mutual"), and of 48 is 38. Their mutuals are 64 and 63. |
+| Centre and threshold lines | 28 29 (underlined), 39:40, 45:46 | ✓ Changing the threshold lines 3/4 gives 28, 29 from 47 and 29, 28 from 48. Changing the centre lines 2/5 gives 45, 40 from 47 and 39, 46 from 48. So 28/29/45/40 are our own changing-line targets, and 39/46 come from the Well. |
+| Echoes and exchanges | 57:58 | Not derived. A plausible link: 47 has Dui above and 48 has Xun above, and 57/58 double those trigrams. |
+| Motivated by | 5:6 | Not derived. Both are Kan + Qian, the water trigram the pair shares, set against heaven. |
+| Shadow site | 17:18 | Not derived by a simple line rule. This is his own system of paired figures; see "The Mirror World" in his contents. |
+
+**Links.** 39 (Difficulties) is Bastian's Carcer hexagram, so Karcher puts the geomantic prison in 47's own Paradigm, through the Well's 2nd line. 29 is "the zone of transformation" and also Bastian's Queen of Cups. 28 is Crowley's Queen of Swords.
+
+**Contents, for later.** From the contents photos, these sections look worth photographing: *The Two Powers and the River-Mountain Festivals* (p. 23), *Guishen: the Souls and Spirits* (18), *The Mirror World: the Dynamics of the Pair* (53), *The Decades and the Symbolic Life* (56), *Paradigms of Creative Transformation* (58), and *Times of Change* (443). The page numbers are read from the photo and roughly aligned.
+
 ## Notable divergences
 
 1. **臀 tún, line 1.** Legge has "bare buttocks" and adds that the symbolism "is rather a favourite with the duke of Kâu;—'chacun à son goût.'" He reads it as sitting on a stump. Wen makes it a punishment: "Caned on the backside". The usual modern reading (Wilhelm, as quoted) is that one *sits* under a bare tree. Wen's reading ties line 1 to the corporal punishments of line 5, so the six lines become one story of judicial ordeal.
@@ -146,6 +175,10 @@ His line texts are in the per-line table above, under "Others". Short quotes onl
 10. **紱 fu resolved.** Huang gives both senses: a seal-ribbon (Wen's "sash") *and* a knee-covering ceremonial robe (Legge's "knee-covers", his own "kneecaps"). The sash vs knee-covers divergence (item 2) is two halves of one word.
 11. **臀 again.** Huang, like Legge, has "Buttocks", and explains why: the bottom line is usually the toes, but here the subject is sitting. He thus stands with the "sits" reading against Wen's "caned". He also softens 三歲 to "not necessarily three years", where Wen reads it as Jupiter-years.
 12. **Line 5's exhaustion.** Wen reads the punishments as a sentence passed. Legge has ministers in scarlet aprons. Huang has a ruler hemmed in by yin officials: exhaustion that is neither lack nor excess, but an aspiration blocked.
+13. **The carriage.** 金車 is Legge's "carriage adorned with metal", Wen's and Huang's "golden carriage", and Karcher's "**bronze war-chariot**". 金 means metal or gold. Karcher's reading uses the Bronze Age meaning and fits his feudal war-duty frame. Huang's goes the other way: the prince's carriage going to greet the bride.
+14. **囗 or 口.** Huang reads the enclosure as 口 *kou*, "big mouth". Karcher reads it as 囗 *wei*, enclosure or old house. Both keep the "big mouth" image. 困 is in fact written with 囗.
+15. **Line 6's ending.** Legge and Huang say moving forward brings good fortune, and Wen says "Gains from undertaking the expedition". Karcher has "Chastising opens the Way", which reverses line 2's "Chastising closes the Way". The pair 2/6 frames the hexagram as a way that closes and then opens.
+16. **紱 again.** Karcher has scarlet (line 2) and **crimson** (line 5) *sashes*. That keeps Legge's colour distinction (朱 vs 赤) together with Wen's "sash".
 
 ## Speculative links to this week's readings
 
@@ -157,6 +190,8 @@ His line texts are in the per-line table above, under "Others". Short quotes onl
 - **The unicorn is the glyph.** *(Speculative.)* In *The Unicorn in Captivity* the unicorn is tied to a tree (木) inside a round fence (口). The tapestry is almost a picture of 困, which D'Aoust shows as a branching figure inside a "Magic Circle". Her personal example, a plant in an indoor enclosure, is the same picture.
 - **Magic circle or blockade.** *(Speculative.)* In Wen, 47 is used in baneful magic to *blockade* someone, and the enclosure is a hostile working. In D'Aoust it is a "Magic Circle", which in Western ritual magic is the operator's own protective boundary. The same box is read from the inside (sanctuary, "secret garden") and from the outside (binding).
 
+- **Karcher's Paradigm and this site.** *(Speculative.)* In Karcher's system, the four enclosure figures on these pages (困, Carcer → 39, 28, 29) all lie on the 47:48 Paradigm grid. His two closing lines ("mutual meeting" and "interconnecting through the source") read like a gloss on the syzygy itself: two zones that meet through a shared current.
+
 ## Flags
 
 - The Chinese was checked against the clearer photographs (24 Oct). Still uncertain, all variant-form questions: 臀 in line 1 (the printed form may be a variant such as 臋); 歲 in line 1 (it may be printed as 歳); 藜 in line 3 (it may be printed as 蔾); 藟 in line 6 (the printed form looks like a variant, perhaps 蘲 or a 蘽-type form, not 蘘); 臲 in line 6 (an unusual printed form, not 尼). Line 6 also has a stray dot beside 有, under 吉. It is probably a print speck or a reading mark, not a character.
@@ -167,6 +202,7 @@ His line texts are in the per-line table above, under "Others". Short quotes onl
 
 - Legge, *The I Ching* (SBE XVI, 1882), hexagram XLVII: https://www.sacred-texts.com/ich/ic47.htm
 - Maja D'Aoust, *The Occult I Ching* ("The Serpent Oracle" running head), hexagram 47, pp. 303–307. The photographs are courtesy of the user.
+- Stephen Karcher, *Total I Ching*, hexagram 47, pp. 340–345, and contents pp. v–viii. The photographs are courtesy of the user.
 - Alfred Huang, *The Complete I Ching*, hexagram 47, pp. 374–381. The photographs are courtesy of the user.
 - Simon Bastian, *Before Completion* (Hadean Press, 2022), Interpretations pp. 16–18, contents and blurb. The photographs are courtesy of the user.
 - Benebell Wen, *I Ching, the Oracle*, hexagram 47 "Kùn. Blockade", pp. ~638–643. The photographs are courtesy of the user.
