@@ -51,6 +51,20 @@ This page summarises Wen's chapter section "Gua Qi: Theoretical Study of Yin and
 
 *Interpretation only.* Today, 24 Oct 2026, is the first full day of **霜降 First Frost**, which falls on **58 Dui line 3**. The day-level gua qi hexagram is **47 Kun**. Changing line 1 of 47 gives 58 (see [[hexagram-47-translations]], D'Aoust's Shadow 58.1 and Huang's "alternates to Joyful (58)"). So the solar-term hexagram is the first step out of the day's hexagram: the empty lake (47) becomes the doubled lake (58) when the lowest line, the buttocks on the stump, moves. In Wen's Table 3.2, Dui line 3 is also the first Scorpio term, which matches this week's turn from Libra into Scorpio (5 of Cups, Scorpio I).
 
+## Flags
+
+- p. 57 places Caodaism in "thirteenth-century Vietnam" (Trần dynasty). Caodaism is usually dated to its founding in 1926, so this is probably an error or a compression of older roots.
+- Table 3.1 prints 卯 Rabbit as **Water**, and the close-up confirms it is printed that way. 卯 is conventionally **Wood**.
+- p. 48: "one minute" per line should be about one day (see check d).
+
+## Figure check (close-ups)
+
+Em checked every drawn figure against its printed number from the user's close-up photos of Tables 3.1, 3.3 and 3.4, reading the bottom bar as line 1. **There are no mismatches.**
+
+- Table 3.1: all 12 match (24, 19, 11, 34, 43, 1 / 44, 33, 12, 20, 23, 2). The waxing and waning of yang is drawn correctly.
+- Table 3.3: 57, 30, 2 / 51, 58 / 52, 29, 1 all match. The branches round the edge read 巳 and 辰 by 57, 午 by 30, 未 and 申 by 2, 卯 by 51, 酉 by 58, 寅 and 丑 by 52, 子 by 29, and 亥 and 戌 by 1.
+- Table 3.4: all eight trigrams match their names (Xun, Li, Kun / Zhen, Dui / Gen, Kan, Qian).
+
 ## Sources
 
 - Benebell Wen, *I Ching, the Oracle*, ch. 3, pp. 45–57 (Tables 3.1–3.4, Fig. 3.6, Practicum 3.1). The photographs are courtesy of the user.
