@@ -27,9 +27,9 @@ This is a living comparison of translations of hexagram 47, ䷮ 困 Kun (Dui 兑
 
 | | Chinese | Legge | Wen | Wilhelm (slot) | Others (slots) |
 |---|---|---|---|---|---|
-| Title | 困 | "Khwăn", glossed "straitened and distressed" | "Blockade" | "Oppression (Exhaustion)" *(second-hand)* | — |
-| Judgment | 困亨貞大人吉无咎有言不信 | "there may (yet be) progress and success … the (really) great man, there will be good fortune … If he make speeches, his words cannot be made good." | Paraphrase: triumph over hardship forecast, "Auspicious for the eminent one". She reads 有言不信 as a riddle: "There is a message, but it is not a message." | "When one has something to say, it is not believed" *(via DeKorne)* | — |
-| Image | 澤無水困君子以致命遂志 | (Appendix II, not fetched) | Paraphrase: destiny is "leavened by free will" but also "written into the annals" | "There is no water in the lake … stakes his life on following his will" *(via DeKorne)* | — |
+| Title | 第四十七卦：困 · 澤水困 · 兌上坎下 | "Khwăn", glossed "straitened and distressed" | "Blockade" | "Oppression (Exhaustion)" *(second-hand)* | — |
+| Judgment | 困：亨貞大人吉無咎有言不信 | "there may (yet be) progress and success … the (really) great man, there will be good fortune … If he make speeches, his words cannot be made good." | Paraphrase: triumph over hardship forecast, "Auspicious for the eminent one". She reads 有言不信 as a riddle: "There is a message, but it is not a message." | "When one has something to say, it is not believed" *(via DeKorne)* | — |
+| Image | 象曰：澤無水困君子以致命遂志 | (Appendix II, not fetched) | Paraphrase: destiny is "leavened by free will" but also "written into the annals" | "There is no water in the lake … stakes his life on following his will" *(via DeKorne)* | — |
 
 **Wen's framing notes.** The trigrams are Lake and Water, and the elements Metal 金 and Water 水. The character 困 is Wood 木 "boxed in and surrounded 口". When 47 comes up, "increase Wood *qi* in your surroundings". The Thunder trigram is used against the blockade: changing the fifth line from yang to yin turns the upper Lake into Thunder and gives hexagram 40 解 Jie, release, untying the knots. She also says 47 "was traditionally used in baneful magic to blockade someone" and keep them from prospering.
 
@@ -38,13 +38,13 @@ This is a living comparison of translations of hexagram 47, ䷮ 困 Kun (Dui 兑
 | Line | Chinese (as printed in Wen) | Legge | Wen | Wilhelm (slot) | Others (slots) |
 |---|---|---|---|---|---|
 | 1 (六) | 初六：臀困于株木，入于幽谷，三歲不覿 | "with bare buttocks straitened under the stump of a tree. He enters a dark valley, and for three years has no prospect (of deliverance)." | "Caned on the backside." Besieged, sitting under "a barren tree"; enters the darkness, a river valley between two mountains; "Nothing is seen and unseen for three years." | (sits / "bare tree", second-hand only) | — |
-| 2 (九) | 九二：困于酒食，朱紱方來，利用享祀，征凶，无咎 | "straitened amidst his wine and viands. There come to him anon the red knee-covers (of the ruler) … as in sacrificing. Active operations … will lead to evil, but he will be free from blame." | "Satiated by food and wine. Excess." A "vermillion sash wearer arrives". Sacrificial offering brings good fortune, "Advancing brings adversity." | — | — |
-| 3 (六) | 六三：困于石，據于蒺藜，入于其宮，不見其妻，凶 | "straitened before a (frowning) rock. He lays hold of thorns. He enters his palace, and does not see his wife. There will be evil." | "Trapped among the high rocks", surrounded by thorns and thistles; comes home to his palace "but cannot find his wife. It is foreboding." | — | — |
-| 4 (九) | 九四：來徐徐，困于金車，吝，有終 | "proceeding very slowly … straitened by the carriage adorned with metal … regret, but the end will be good." | "Slow passage homeward. Trapped in a golden carriage." Adversity, but it will end. | — | — |
-| 5 (九) | 九五：劓刖，困于赤紱，乃徐有說，利用祭祀 | "with his nose and feet cut off. He is straitened by (his ministers in their) scarlet aprons. He is leisurely … and is satisfied … as in sacrificing (to spiritual beings)." | "Cutting off the nose. Cutting off the feet. Bound by the vermilion sash." Speak calmly, in a quiet tone, and things will move; "Favors granted after the ceremonial offering." | "Joy comes softly" *(via DeKorne)* | — |
-| 6 (六) | 上六：困于葛藟，于臲卼，曰動悔有悔，征吉 | "as if bound with creepers; or in a high and dangerous position … 'If I move, I shall repent it.' If he do repent … good fortune in his going forward." | "Entangled by creeping vines", trapped in wild grass; moves uncertainly, voices regret, shows remorse; "Gains from undertaking the expedition." | — | — |
+| 2 (九) | 九二：困于酒食，朱紱方來，利用享祀，征凶，無咎 | "straitened amidst his wine and viands. There come to him anon the red knee-covers (of the ruler) … as in sacrificing. Active operations … will lead to evil, but he will be free from blame." | "Satiated by food and wine. Excess." A "vermillion sash wearer arrives". Sacrificial offering brings good fortune, "Advancing brings adversity." | — | — |
+| 3 (六) | 六三：困於石，據於蒺藜，入於其宮，不見其妻，凶 | "straitened before a (frowning) rock. He lays hold of thorns. He enters his palace, and does not see his wife. There will be evil." | "Trapped among the high rocks", surrounded by thorns and thistles; comes home to his palace "but cannot find his wife. It is foreboding." | — | — |
+| 4 (九) | 九四：來徐徐，困於金車，吝，有終 | "proceeding very slowly … straitened by the carriage adorned with metal … regret, but the end will be good." | "Slow passage homeward. Trapped in a golden carriage." Adversity, but it will end. | — | — |
+| 5 (九) | 九五：劓刖，困於赤紱，乃徐有說，利用祭祀 | "with his nose and feet cut off. He is straitened by (his ministers in their) scarlet aprons. He is leisurely … and is satisfied … as in sacrificing (to spiritual beings)." | "Cutting off the nose. Cutting off the feet. Bound by the vermilion sash." Speak calmly, in a quiet tone, and things will move; "Favors granted after the ceremonial offering." | "Joy comes softly" *(via DeKorne)* | — |
+| 6 (六) | 上六：困於葛藟，於臲卼，曰動悔有悔，征吉 | "as if bound with creepers; or in a high and dangerous position … 'If I move, I shall repent it.' If he do repent … good fortune in his going forward." | "Entangled by creeping vines", trapped in wild grass; moves uncertainly, voices regret, shows remorse; "Gains from undertaking the expedition." | — | — |
 
-In the line-1 cell, Wen prints 歲 and Legge's base text uses 歳; they are the same character. Wen's Chinese is transcribed from the user's photographs, so check it against the page.
+Chinese is transcribed from the user's clearer close-up photographs of each box (p. 638 and the six line boxes; columns read right to left). Punctuation (，) is added here; Wen prints only the colon after the line label. Wen uses 于 in lines 1–2 but 於 in lines 3–6, and 無 (not 无). Variant glyph shapes are normalised to standard forms; see Flags.
 
 ### Wen's glosses (summarised)
 
@@ -75,7 +75,7 @@ In the line-1 cell, Wen prints 歲 and Legge's base text uses 歳; they are the 
 
 ## Flags
 
-- Wen's line texts and Chinese are transcribed from photographs. Some text near the shadowed parts of the pages was hard to read, so check the characters against the book.
+- The Chinese was checked against the clearer photographs (24 Oct). Still uncertain, all variant-form questions: 臀 in line 1 (the printed form may be a variant such as 臋); 歲 in line 1 (it may be printed as 歳); 藜 in line 3 (it may be printed as 蔾); 藟 in line 6 (the printed form looks like a variant, perhaps 蘲 or a 蘽-type form, not 蘘); 臲 in line 6 (an unusual printed form, not 尼). Line 6 also has a stray dot beside 有, under 吉. It is probably a print speck or a reading mark, not a character.
 - The Wilhelm phrases are second-hand (DeKorne) until the printed text is checked.
 - Legge's Appendix II (the image) was not fetched.
 
