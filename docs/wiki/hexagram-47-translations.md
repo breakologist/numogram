@@ -16,7 +16,7 @@ This is a living comparison of translations of hexagram 47, ䷮ 困 Kun (Dui 兑
 | Key | Book | Status |
 |---|---|---|
 | **Legge** | James Legge, *The Yî King* (SBE XVI, 1882), via sacred-texts.com/ich/ic47.htm | fetched, quoted |
-| **Wen** | Benebell Wen, *I Ching, the Oracle*, pp. ~638–643 | from the user's photographs |
+| **Wen** | Benebell Wen, *I Ching, the Oracle*, "Hexagram 47: Kùn. Blockade", pp. 637–643 (reading leads: [[wen-oracle-leads]]) | from the user's photographs |
 | **Wilhelm** | Richard Wilhelm / Cary F. Baynes | *slot*: printed text to add; not in hand; the only phrases so far are second-hand, via James DeKorne's comparison page |
 | **Huang** | Alfred Huang, *The Complete I Ching*, "47 Kun · Exhausting" (Lower Canon), pp. 374–381 | from the user's photographs |
 | **Karcher** | Stephen Karcher, *Total I Ching*, "47 Confining / Oppression KUN", pp. 340–345 (incl. "47 and 48: The Paradigm"), contents pp. v–viii | from the user's photographs |
