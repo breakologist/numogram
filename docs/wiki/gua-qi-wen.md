@@ -45,7 +45,7 @@ This page summarises Wen's chapter section "Gua Qi: Theoretical Study of Yin and
 
 **(d) "Each line ≈ one minute of the year": likely a slip.** 6 d 7 min ÷ 6 lines ≈ **1 day per line** (≈ 1.0146 d). It is not one minute. The "seven minutes" also looks off: 365.25/60 = 6.0875 d = 6 d 2 h 6 min, which is the classical "6 days 7/80" (六日七分). Wen seems to read the 7/80 of a day as "seven minutes". Note also that **360 = 60 × 6** lines (one per day of a 360-day year), while **4 × 6 = 24** lines carry the solar terms.
 
-**Proposed small addition (not implemented).** Add a `--sovereign` overlay that returns Table 3.1's hexagram, branch and animal for the current *lunar* month (month 11 = the month containing the winter solstice). This needs new-moon times, which the code does not yet compute. A simpler proxy is to use the solar month between principal terms (中氣), which is how the 辟卦 are often assigned. The overlay should report both readings and flag the proxy as [approx].
+**Built (24 Oct 2026): `--sovereign`.** This was proposed above and, with the user's approval, is now built. The overlay looks up Table 3.1 by the *real* Chinese lunar month: new moons from Meeus ch. 49, months begun on the Beijing date of the new moon, month 11 holding 冬至, and the leap-month rule. For 24 Oct 2026 it gives lunar month 9, day 15, which is **䷖ 23 剝 Bo, 戌 Dog, Earth**. That agrees with Wen's month 9 and replaces the 6-day 辟 slot in the gua qi cycle as the month-level reading. Month 9 runs from 10 Oct to 8 Nov 2026, and month 10 (2 Kun) begins on 9 Nov. Details and checks are in [[lunation-and-mansions]].
 
 ## Speculative (Em, not Wen)
 

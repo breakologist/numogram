@@ -20,6 +20,7 @@ Usage:
   python3 calendar.py --region wales|england|england-wales|general   (default england-wales)
   python3 calendar.py --trumps gd|trad     (Strength VIII/Justice XI [gd, default] or XI/VIII)
   python3 calendar.py --daily --plain      (no pictographic glyphs; --ascii = 7-bit only)
+  python3 calendar.py --lunar --sovereign --mansion  (moon phase, Chinese month, 辟卦, mansions)
 
 Every output field carries a status tag:
   [src]    rule taken from a cited source
@@ -148,7 +149,7 @@ def _not_yet(body):
     return fn
 
 
-for _b in ("moon", "mercury", "venus", "mars", "jupiter", "saturn"):
+for _b in ("mercury", "venus", "mars", "jupiter", "saturn"):
     PROVIDERS[_b] = _not_yet(_b)
 
 
@@ -395,6 +396,371 @@ def guaqi_overlay(ctx):
         "cardinal_line": q % 6 + 1,
         "notes": "solstice = true astronomical instant; solar terms by true longitude "
                  "(定氣, 15° steps) rather than Han mean terms (平氣) [approx]",
+    }
+
+
+# ─── 3b. LUNATION, CHINESE LUNISOLAR MONTH, SOVEREIGN HEXAGRAMS, LUNAR MANSIONS ───
+# Moon phases: Meeus, *Astronomical Algorithms* (2nd ed.) ch. 49 (true phases with
+# periodic and planetary corrections; quoted accuracy a few seconds against ELP,
+# about a minute in practice). Moon position: Meeus ch. 47, main terms of ΣL and ΣB
+# (truncated, so about 0.05°). Geocentric; no parallax.
+
+def jde_to_utc(jde: float) -> dt.datetime:
+    t = J2000_UTC + dt.timedelta(days=jde - 2451545.0)
+    return t - dt.timedelta(seconds=delta_t_seconds(t.year))
+
+
+J2000_UTC = dt.datetime(2000, 1, 1, 12, tzinfo=dt.timezone.utc)
+
+_NEW = [(-0.40720, 0, 0, 1, 0, 0), (0.17241, 1, 1, 0, 0, 0), (0.01608, 0, 0, 2, 0, 0),
+        (0.01039, 0, 0, 0, 2, 0), (0.00739, 1, -1, 1, 0, 0), (-0.00514, 1, 1, 1, 0, 0),
+        (0.00208, 2, 2, 0, 0, 0), (-0.00111, 0, 0, 1, -2, 0), (-0.00057, 0, 0, 1, 2, 0),
+        (0.00056, 1, 1, 2, 0, 0), (-0.00042, 0, 0, 3, 0, 0), (0.00042, 1, 1, 0, 2, 0),
+        (0.00038, 1, 1, 0, -2, 0), (-0.00024, 1, -1, 2, 0, 0), (-0.00017, 0, 0, 0, 0, 1),
+        (-0.00007, 0, 2, 1, 0, 0), (0.00004, 0, 0, 2, -2, 0), (0.00004, 0, 3, 0, 0, 0),
+        (0.00003, 0, 1, 1, -2, 0), (0.00003, 0, 0, 2, 2, 0), (-0.00003, 0, 1, 1, 2, 0),
+        (0.00003, 0, -1, 1, 2, 0), (-0.00002, 0, -1, 1, -2, 0), (-0.00002, 0, 1, 3, 0, 0),
+        (0.00002, 0, 0, 4, 0, 0)]
+# (coef, E-power, M, M', F, Ω)
+_FULL = [(-0.40614,) + _NEW[0][1:], (0.17302,) + _NEW[1][1:], (0.01614,) + _NEW[2][1:],
+         (0.01043,) + _NEW[3][1:], (0.00734,) + _NEW[4][1:], (-0.00515,) + _NEW[5][1:],
+         (0.00209,) + _NEW[6][1:]] + _NEW[7:]
+_QUARTER = [(-0.62801, 0, 0, 1, 0, 0), (0.17172, 1, 1, 0, 0, 0), (-0.01183, 1, 1, 1, 0, 0),
+            (0.00862, 0, 0, 2, 0, 0), (0.00804, 0, 0, 0, 2, 0), (0.00454, 1, -1, 1, 0, 0),
+            (0.00204, 2, 2, 0, 0, 0), (-0.00180, 0, 0, 1, -2, 0), (-0.00070, 0, 0, 1, 2, 0),
+            (-0.00040, 0, 0, 3, 0, 0), (-0.00034, 1, -1, 2, 0, 0), (0.00032, 1, 1, 0, 2, 0),
+            (0.00032, 1, 1, 0, -2, 0), (-0.00028, 2, 2, 1, 0, 0), (0.00027, 1, 1, 2, 0, 0),
+            (-0.00017, 0, 0, 0, 0, 1), (-0.00005, 0, -1, 1, -2, 0), (0.00004, 0, 0, 2, 2, 0),
+            (-0.00004, 0, 1, 1, 2, 0), (0.00004, 0, -2, 1, 0, 0), (0.00003, 0, 1, 1, -2, 0),
+            (0.00003, 0, 3, 0, 0, 0), (0.00002, 0, 0, 2, -2, 0), (0.00002, 0, -1, 1, 2, 0),
+            (-0.00002, 0, 1, 3, 0, 0)]
+_PLANET = [(325, 299.77, 0.107408), (165, 251.88, 0.016321), (164, 251.83, 26.651886),
+           (126, 349.42, 36.412478), (110, 84.66, 18.206239), (62, 141.74, 53.303771),
+           (60, 207.14, 2.453732), (56, 154.84, 7.306860), (47, 34.52, 27.261239),
+           (42, 207.19, 0.121824), (40, 291.34, 1.844379), (37, 161.72, 24.198154),
+           (35, 239.56, 25.513099), (23, 331.55, 3.592518)]
+PHASE_NAMES = ["New Moon", "First Quarter", "Full Moon", "Last Quarter"]
+
+
+def moon_phase_utc(k: float) -> dt.datetime:
+    """Meeus ch. 49: k integer = new moon, +.25 first quarter, +.5 full, +.75 last."""
+    T = k / 1236.85
+    jde = (2451550.09766 + 29.530588861 * k + 0.00015437 * T ** 2
+           - 0.000000150 * T ** 3 + 0.00000000073 * T ** 4)
+    E = 1 - 0.002516 * T - 0.0000074 * T ** 2
+    r = math.radians
+    M = r(2.5534 + 29.10535670 * k - 0.0000014 * T ** 2 - 0.00000011 * T ** 3)
+    Mp = r(201.5643 + 385.81693528 * k + 0.0107582 * T ** 2 + 0.00001238 * T ** 3
+           - 0.000000058 * T ** 4)
+    F = r(160.7108 + 390.67050284 * k - 0.0016118 * T ** 2 - 0.00000227 * T ** 3
+          + 0.000000011 * T ** 4)
+    Om = r(124.7746 - 1.56375588 * k + 0.0020672 * T ** 2 + 0.00000215 * T ** 3)
+    frac = round((k % 1) * 4) % 4
+    table = {0: _NEW, 2: _FULL}.get(frac, _QUARTER)
+    s = sum(c * E ** e * math.sin(a * M + b * Mp + f * F + o * Om) for c, e, a, b, f, o in table)
+    if frac in (1, 3):
+        W = (0.00306 - 0.00038 * E * math.cos(M) + 0.00026 * math.cos(Mp)
+             - 0.00002 * math.cos(Mp - M) + 0.00002 * math.cos(Mp + M) + 0.00002 * math.cos(2 * F))
+        s += W if frac == 1 else -W
+    A1 = r(299.77 + 0.107408 * k - 0.009173 * T ** 2)
+    s += sum(c * 1e-6 * math.sin(A1 if i == 0 else r(a0 + a1 * k))
+             for i, (c, a0, a1) in enumerate(_PLANET))
+    return jde_to_utc(jde + s)
+
+
+def lunar_phases_between(start: dt.datetime, end: dt.datetime):
+    """[(utc, phase_index 0..3, k)] for all principal phases in [start, end)."""
+    y = start.year + (start.timetuple().tm_yday - 1) / 365.25
+    k = math.floor((y - 2000) * 12.3685) - 2
+    out = []
+    while True:
+        for q in range(4):
+            t = moon_phase_utc(k + q / 4)
+            if t >= end:
+                return out
+            if t >= start:
+                out.append((t, q, k + q / 4))
+        k += 1
+
+
+def new_moons_between(start, end):
+    return [t for t, q, _ in lunar_phases_between(start, end) if q == 0]
+
+
+# Meeus ch. 47, main periodic terms (D, M, M', F, coefficient in 1e-6 °).
+_ML = [(0, 0, 1, 0, 6288774), (2, 0, -1, 0, 1274027), (2, 0, 0, 0, 658314), (0, 0, 2, 0, 213618),
+       (0, 1, 0, 0, -185116), (0, 0, 0, 2, -114332), (2, 0, -2, 0, 58793), (2, -1, -1, 0, 57066),
+       (2, 0, 1, 0, 53322), (2, -1, 0, 0, 45758), (0, 1, -1, 0, -40923), (1, 0, 0, 0, -34720),
+       (0, 1, 1, 0, -30383), (2, 0, 0, -2, 15327), (0, 0, 1, 2, -12528), (0, 0, 1, -2, 10980),
+       (4, 0, -1, 0, 10675), (0, 0, 3, 0, 10034), (4, 0, -2, 0, 8548), (2, 1, -1, 0, -7888),
+       (2, 1, 0, 0, -6766), (1, 0, -1, 0, -5163), (1, 1, 0, 0, 4987), (2, -1, 1, 0, 4036),
+       (2, 0, 2, 0, 3994), (4, 0, 0, 0, 3861), (2, 0, -3, 0, 3665), (0, 1, -2, 0, -2689),
+       (2, 0, -1, 2, -2602), (2, -1, -2, 0, 2390), (1, 0, 1, 0, -2348), (2, -2, 0, 0, 2236),
+       (0, 1, 2, 0, -2120), (0, 2, 0, 0, -2069), (2, -2, -1, 0, 2048), (2, 0, 1, -2, -1773),
+       (2, 0, 0, 2, -1595), (4, -1, -1, 0, 1215), (0, 0, 2, 2, -1110), (3, 0, -1, 0, -892),
+       (2, 1, 1, 0, -810), (4, -1, -2, 0, 759), (0, 2, -1, 0, -713), (2, 2, -1, 0, -700),
+       (2, 1, -2, 0, 691), (2, -1, 0, -2, 596), (4, 0, 1, 0, 549), (0, 0, 4, 0, 537),
+       (4, -1, 0, 0, 520), (1, 0, -2, 0, -487)]
+_MB = [(0, 0, 0, 1, 5128122), (0, 0, 1, 1, 280602), (0, 0, 1, -1, 277693), (2, 0, 0, -1, 173237),
+       (2, 0, -1, 1, 55413), (2, 0, -1, -1, 46271), (2, 0, 0, 1, 32573), (0, 0, 2, 1, 17198),
+       (2, 0, 1, -1, 9266), (0, 0, 2, -1, 8822), (2, -1, 0, -1, 8216), (2, 0, -2, -1, 4324),
+       (2, 0, 1, 1, 4200), (2, 1, 0, -1, -3359), (2, -1, -1, 1, 2463), (2, -1, 0, 1, 2211),
+       (2, -1, -1, -1, 2065), (0, 1, -1, -1, -1870), (4, 0, -1, -1, 1828), (0, 1, 0, 1, -1794)]
+
+
+def moon_position(t_utc: dt.datetime):
+    """(apparent ecliptic longitude, latitude) of date, degrees; Meeus ch. 47 truncated."""
+    jde = julian_day(t_utc) + delta_t_seconds(t_utc.year) / 86400.0
+    T = (jde - 2451545.0) / 36525.0
+    Lp = 218.3164477 + 481267.88123421 * T - 0.0015786 * T ** 2
+    D = 297.8501921 + 445267.1114034 * T - 0.0018819 * T ** 2
+    M = 357.5291092 + 35999.0502909 * T - 0.0001536 * T ** 2
+    Mp = 134.9633964 + 477198.8675055 * T + 0.0087414 * T ** 2
+    F = 93.2720950 + 483202.0175233 * T - 0.0036539 * T ** 2
+    E = 1 - 0.002516 * T - 0.0000074 * T ** 2
+    r = math.radians
+    A1, A2, A3 = r(119.75 + 131.849 * T), r(53.09 + 479264.290 * T), r(313.45 + 481266.484 * T)
+
+    def series(tab, fn):
+        return sum(c * E ** abs(m) * fn(r(d * D + m * M + mp * Mp + f * F))
+                   for d, m, mp, f, c in tab)
+    sl = series(_ML, math.sin) + 3958 * math.sin(A1) + 1962 * math.sin(r(Lp - F)) + 318 * math.sin(A2)
+    sb = (series(_MB, math.sin) - 2235 * math.sin(r(Lp)) + 382 * math.sin(A3)
+          + 175 * math.sin(A1 - r(F)) + 175 * math.sin(A1 + r(F))
+          + 127 * math.sin(r(Lp - Mp)) - 115 * math.sin(r(Lp + Mp)))
+    omega = r(125.04452 - 1934.136261 * T)
+    lam = Lp + sl / 1e6 - 0.00478 * math.sin(omega)          # + nutation in longitude (main term)
+    return lam % 360.0, sb / 1e6
+
+
+@provider("moon")
+def moon_longitude(t_utc: dt.datetime) -> float:
+    return moon_position(t_utc)[0]
+
+
+def obliquity(T: float) -> float:
+    return 23.4392911 - 0.0130042 * T
+
+
+def ecl_to_equ(lam, beta, T):
+    e, l, b = (math.radians(x) for x in (obliquity(T), lam, beta))
+    ra = math.atan2(math.sin(l) * math.cos(e) - math.tan(b) * math.sin(e), math.cos(l))
+    dec = math.asin(math.sin(b) * math.cos(e) + math.cos(b) * math.sin(e) * math.sin(l))
+    return math.degrees(ra) % 360.0, math.degrees(dec)
+
+
+def precess_j2000(ra, dec, T):
+    """Meeus 21.2/21.4 rigorous precession, J2000 mean → mean of date (no proper motion)."""
+    s = math.radians(1 / 3600)
+    zeta = (2306.2181 * T + 0.30188 * T ** 2 + 0.017998 * T ** 3) * s
+    z = (2306.2181 * T + 1.09468 * T ** 2 + 0.018203 * T ** 3) * s
+    th = (2004.3109 * T - 0.42665 * T ** 2 - 0.041833 * T ** 3) * s
+    a, d = math.radians(ra), math.radians(dec)
+    A = math.cos(d) * math.sin(a + zeta)
+    B = math.cos(th) * math.cos(d) * math.cos(a + zeta) - math.sin(th) * math.sin(d)
+    C = math.sin(th) * math.cos(d) * math.cos(a + zeta) + math.cos(th) * math.sin(d)
+    return (math.degrees(math.atan2(A, B) + z)) % 360.0, math.degrees(math.asin(C))
+
+
+# ── Chinese lunisolar month (modern rule, GB/T 33661-2017): a month begins on the
+# Beijing (UTC+8) civil date of the new moon; month 11 contains the winter solstice;
+# in a 13-month year (冬至 to 冬至) the first month with no principal term (中氣,
+# solar longitude a multiple of 30°) is the leap month 閏. Terms are true (定氣).
+BEIJING = dt.timezone(dt.timedelta(hours=8))
+CN_MONTHS = ["正", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"]
+
+
+def _bj(t):
+    return t.astimezone(BEIJING).date()
+
+
+def _month11_start(year: int) -> dt.date:
+    sol = december_solstice(year)
+    nms = new_moons_between(sol - dt.timedelta(days=35), sol + dt.timedelta(days=2))
+    return max(_bj(t) for t in nms if _bj(t) <= _bj(sol))
+
+
+def chinese_months(sui_year: int):
+    """Months from month 11 of `sui_year` up to (not incl.) month 11 of the next year:
+    [(start Beijing date, number 1–12, leap?)]."""
+    a, b = _month11_start(sui_year), _month11_start(sui_year + 1)
+    utc = dt.timezone.utc
+    nms = new_moons_between(dt.datetime(a.year, a.month, a.day, tzinfo=utc) - dt.timedelta(days=1),
+                            dt.datetime(b.year, b.month, b.day, tzinfo=utc) + dt.timedelta(days=1))
+    starts = sorted({_bj(t) for t in nms if a <= _bj(t) <= b})
+    s1, s2 = december_solstice(sui_year), december_solstice(sui_year + 1)
+    zq = [_bj(find_solar_longitude(L % 360, s1 + dt.timedelta(days=30 * i - 5),
+                                   s1 + dt.timedelta(days=30 * i + 40)))
+          for i, L in enumerate(range(270 + 30, 270 + 360, 30), start=1)]
+    zq = [_bj(s1)] + zq + [_bj(s2)]
+    months = []
+    leap_done = len(starts) - 1 == 12
+    num = 11
+    for i in range(len(starts) - 1):
+        st, nx = starts[i], starts[i + 1]
+        has_zq = any(st <= z < nx for z in zq)
+        if i == 0:
+            months.append((st, 11, False))
+            continue
+        if not leap_done and not has_zq:
+            months.append((st, num, True))
+            leap_done = True
+            continue
+        num = num % 12 + 1
+        months.append((st, num, False))
+    return months, b
+
+
+def chinese_date(d: dt.date):
+    y = d.year if d >= _month11_start(d.year) else d.year - 1
+    months, _ = chinese_months(y)
+    cur = [m for m in months if m[0] <= d][-1]
+    nxt = [m for m in months if m[0] > d]
+    nxt_start = nxt[0][0] if nxt else _month11_start(y + 1)
+    return {"month": cur[1], "leap": cur[2], "day": (d - cur[0]).days + 1,
+            "month_start": cur[0].isoformat(), "month_length": (nxt_start - cur[0]).days}
+
+
+@overlay("lunar", "--lunar", "Moon phase, lunation age, Chinese lunisolar month/day", needs=("sun", "moon"))
+def lunar_overlay(ctx):
+    t = ctx.utc
+    ph = lunar_phases_between(t - dt.timedelta(days=9), t + dt.timedelta(days=9))
+    prev = [p for p in ph if p[0] <= t][-1]
+    nxt = [p for p in ph if p[0] > t][0]
+    nm = [x for x in new_moons_between(t - dt.timedelta(days=31), t + dt.timedelta(seconds=1))][-1]
+    elong = (ctx.longitude("moon") - ctx.longitude("sun")) % 360
+    illum = (1 - math.cos(math.radians(elong))) / 2
+    octant = ["Waxing crescent", "Waxing gibbous", "Waning gibbous", "Waning crescent"][int(elong // 90)]
+    today = [p for p in ph if ctx.local_date_of(p[0]) == ctx.date]
+    if today:
+        octant = PHASE_NAMES[today[0][1]] + " today"
+    cd = chinese_date(ctx.date)
+    loc = lambda x: x.astimezone(ctx.tz).strftime("%Y-%m-%d %H:%M %Z")
+    return {
+        "phase": octant, "elongation": round(elong, 1), "illumination": round(illum * 100),
+        "age_days": round((t - nm).total_seconds() / 86400, 2),
+        "lunation": round((nm - moon_phase_utc(0)).total_seconds() / 86400 / 29.530588861) + 953,
+        "last_new_moon": loc(nm), "previous_phase": [PHASE_NAMES[prev[1]], loc(prev[0])],
+        "next_phase": [PHASE_NAMES[nxt[1]], loc(nxt[0])],
+        "chinese_month": cd["month"], "chinese_leap": cd["leap"], "chinese_day": cd["day"],
+        "chinese_month_name": ("閏" if cd["leap"] else "") + CN_MONTHS[cd["month"] - 1] + "月",
+        "chinese_month_start": cd["month_start"], "chinese_month_length": cd["month_length"],
+        "notes": "phases Meeus ch. 49 [src/approx ~1 min]; lunation number = Brown (1 = Jan 1923) "
+                 "[src]; Chinese month by the modern rule (Beijing new-moon date, 冬至 in month 11, "
+                 "first month without 中氣 is leap; GB/T 33661-2017) [src]; the Chinese day is "
+                 "counted on this civil date (London date treated as the Beijing date) [conv]",
+    }
+
+
+# ── Wen, *I Ching, the Oracle*, Table 3.1 (天子卦 / 辟卦), Jing Fang's attribution to the
+# lunar months. Element for 卯 printed as 'Water' in Wen; conventionally Wood.
+SOVEREIGN = {
+    11: (24, "復", "子", "Rat", "Water"), 12: (19, "臨", "丑", "Ox", "Earth"),
+    1: (11, "泰", "寅", "Tiger", "Wood"), 2: (34, "大壯", "卯", "Rabbit", "Water*"),
+    3: (43, "夬", "辰", "Dragon", "Earth"), 4: (1, "乾", "巳", "Snake", "Fire"),
+    5: (44, "姤", "午", "Horse", "Fire"), 6: (33, "遯", "未", "Goat", "Earth"),
+    7: (12, "否", "申", "Monkey", "Metal"), 8: (20, "觀", "酉", "Rooster", "Metal"),
+    9: (23, "剝", "戌", "Dog", "Earth"), 10: (2, "坤", "亥", "Boar", "Water"),
+}
+
+
+@overlay("sovereign", "--sovereign", "Sovereign (辟) hexagram of the lunar month (Wen Table 3.1)",
+         needs=("sun",))
+def sovereign_overlay(ctx):
+    cd = chinese_date(ctx.date)
+    kw, name, branch, animal, el = SOVEREIGN[cd["month"]]
+    return {"lunar_month": cd["month"], "leap": cd["leap"], "hexagram": name, "king_wen": kw,
+            "glyph": chr(0x4DC0 + kw - 1), "hexagram_en": hexagram_en(kw), "branch": branch,
+            "animal": animal, "element": el,
+            "notes": "Wen, I Ching, the Oracle, Table 3.1 [src]; element as printed by Wen — "
+                     "*卯 Rabbit is printed 'Water', conventionally Wood [flag]; a leap month "
+                     "takes its number's hexagram [conv]"}
+
+
+# ── Lunar mansions. Chinese 28 xiu: unequal, sidereal, measured in right ascension
+# (Chinese 宿度 are equatorial) from each determinative star 距星. Determinatives as listed
+# in Wikipedia 'Twenty-Eight Mansions' (after the IDP 'Chinese Sky' and Sun Xiaochun 1997);
+# J2000 coordinates from SIMBAD, precessed to date (no proper motion).
+XIU = [
+    ("角", "Jiao", "Horn", "alf Vir", 201.29825, -11.16132),
+    ("亢", "Kang", "Neck", "kap Vir", 213.22394, -10.27370),
+    ("氐", "Di", "Root", "alf02 Lib", 222.71964, -16.04178),
+    ("房", "Fang", "Room", "pi. Sco", 239.71297, -26.11411),
+    ("心", "Xin", "Heart", "sig Sco", 245.29715, -25.59279),
+    ("尾", "Wei", "Tail", "mu.01 Sco", 252.96762, -38.04740),
+    ("箕", "Ji", "Winnowing Basket", "gam02 Sgr", 271.45203, -30.42409),
+    ("斗", "Dou", "Dipper", "phi Sgr", 281.41412, -26.99078),
+    ("牛", "Niu", "Ox", "bet01 Cap", 305.25278, -14.78141),
+    ("女", "Nü", "Girl", "eps Aqr", 311.91896, -9.49578),
+    ("虛", "Xu", "Emptiness", "bet Aqr", 322.88972, -5.57117),
+    ("危", "Wei", "Rooftop", "alf Aqr", 331.44598, -0.31985),
+    ("室", "Shi", "Encampment", "alf Peg", 346.19022, 15.20527),
+    ("壁", "Bi", "Wall", "gam Peg", 3.30897, 15.18360),
+    ("奎", "Kui", "Legs", "eta And", 14.30167, 23.41765),
+    ("婁", "Lou", "Bond", "bet Ari", 28.66005, 20.80803),
+    ("胃", "Wei", "Stomach", "35 Ari", 40.86298, 27.70715),
+    ("昴", "Mao", "Hairy Head", "17 Tau", 56.21890, 24.11334),
+    ("畢", "Bi", "Net", "eps Tau", 67.15417, 19.18043),
+    ("觜", "Zi", "Turtle Beak", "lam Ori", 83.78449, 9.93416),
+    ("參", "Shen", "Three Stars", "zet Ori", 85.18969, -1.94257),
+    ("井", "Jing", "Well", "mu. Gem", 95.74011, 22.51358),
+    ("鬼", "Gui", "Ghost", "tet Cnc", 127.89887, 18.09442),
+    ("柳", "Liu", "Willow", "del Hya", 129.41403, 5.70379),
+    ("星", "Xing", "Star", "alf Hya", 141.89684, -8.65860),
+    ("張", "Zhang", "Extended Net", "ups01 Hya", 147.86948, -14.84663),
+    ("翼", "Yi", "Wings", "alf Crt", 164.94360, -18.29879),
+    ("軫", "Zhen", "Chariot", "gam Crv", 183.95155, -17.54193),
+]
+# Agrippa, *Three Books of Occult Philosophy* II.33: 28 mansions of 12°51'26" each, counted
+# from 0° Aries — read here as tropical [conv; others use sidereal starts].
+MANAZIL = ["Alnath", "Allothaim", "Achaomazon", "Aldebaram", "Alchatay", "Alhanna", "Aldimiach",
+           "Alnaza", "Archaam", "Algelioche", "Azobra", "Alzarpha", "Alhaire", "Achureth",
+           "Agrapha", "Azubene", "Alchil", "Alchas", "Allatha", "Abnahaya", "Abeda",
+           "Sadahacha", "Sadabath", "Sadalbracha", "Sadalachia", "Alpharg", "Alcharya", "Albotham"]
+NAKSHATRAS = ["Ashvini", "Bharani", "Krittika", "Rohini", "Mrigashira", "Ardra", "Punarvasu",
+              "Pushya", "Ashlesha", "Magha", "Purva Phalguni", "Uttara Phalguni", "Hasta",
+              "Chitra", "Swati", "Vishakha", "Anuradha", "Jyeshtha", "Mula", "Purva Ashadha",
+              "Uttara Ashadha", "Shravana", "Dhanishta", "Shatabhisha", "Purva Bhadrapada",
+              "Uttara Bhadrapada", "Revati"]
+
+
+def lahiri_ayanamsa(t_utc) -> float:
+    """Linear approximation: 23°51′11″ at J2000, + 50.29″ / year [approx, ~0.01°]."""
+    yrs = (julian_day(t_utc) - 2451545.0) / 365.25
+    return 23.85306 + 50.29 / 3600 * yrs
+
+
+def xiu_of_ra(ra: float, T: float):
+    bounds = [precess_j2000(x[4], x[5], T)[0] for x in XIU]
+    best = max(range(28), key=lambda i: -((ra - bounds[i]) % 360))
+    width = (bounds[(best + 1) % 28] - bounds[best]) % 360
+    return best, (ra - bounds[best]) % 360, width
+
+
+@overlay("mansion", "--mansion", "Lunar mansions: Chinese 28 宿, Arabic 28 manāzil, 27 nakshatras",
+         needs=("moon",))
+def mansion_overlay(ctx):
+    lam, beta = moon_position(ctx.utc)
+    T = (julian_day(ctx.utc) - 2451545.0) / 36525.0
+    ra, dec = ecl_to_equ(lam, beta, T)
+    i, into, width = xiu_of_ra(ra, T)
+    z, n, e, star = XIU[i][:4]
+    m = int(lam // (360 / 28))
+    sid = (lam - lahiri_ayanamsa(ctx.utc)) % 360
+    k = int(sid // (360 / 27))
+    return {
+        "moon_longitude": round(lam, 2), "moon_latitude": round(beta, 2), "moon_ra": round(ra, 2),
+        "xiu": {"number": i + 1, "name": z, "pinyin": n, "english": e, "determinative": star,
+                "degrees_in": round(into, 2), "width": round(width, 2),
+                "note": "sidereal, unequal; by right ascension of date from determinative stars "
+                        "(Wikipedia list; SIMBAD J2000, Meeus precession) [src/approx]"},
+        "manzil": {"number": m + 1, "name": MANAZIL[m], "degrees_in": round(lam % (360 / 28), 2),
+                   "note": "Agrippa II.33 names; equal 12°51′ from 0° Aries, tropical [conv]"},
+        "nakshatra": {"number": k + 1, "name": NAKSHATRAS[k], "pada": int((sid % (360 / 27)) // (360 / 108)) + 1,
+                      "sidereal_longitude": round(sid, 2),
+                      "note": "equal 13°20′, sidereal, Lahiri ayanamsa (linear approx.) [conv/approx]"},
+        "notes": "moon geocentric, Meeus ch. 47 truncated (≈0.05°); traditions disagree on "
+                 "starts, widths and zodiacs — conventions shown per field",
     }
 
 
@@ -836,16 +1202,6 @@ def folk_overlay(ctx):
     return {"observances": items, "label": "folk/popular — not official liturgy"}
 
 
-# ─── 6. LUNATION (stub) ───
-
-@overlay("lunation", "--lunation", "Lunation (not implemented: needs a Moon provider)",
-         needs=("sun", "moon"), enabled=False)
-def lunation_overlay(ctx):
-    # Future: elongation = λ☾ − λ☉ → phase / lunation number / tithi.
-    return {"status": "not implemented",
-            "note": "requires PROVIDERS['moon']; see README future work"}
-
-
 # ─── RESEARCH PROMPT (template-based, deterministic) ───
 # Combines the day's computed elements into a question. It states no facts: every
 # slot is filled from the overlays above, and the template is picked by date ordinal.
@@ -1051,6 +1407,31 @@ def format_text(r, style="glyph") -> str:
         card = g["cardinal"] if S.cjk else CARDINAL_PINYIN[g["cardinal"]]
         L.append(f"  Solar term {st} → {S.g(CARDINAL_GLYPH[g['cardinal']])}{card} line "
                  f"{g['cardinal_line']} [approx]")
+    if "lunar" in r and "phase" in r["lunar"]:
+        m = r["lunar"]
+        L.append(f"─── Moon  (lunation {m['lunation']}) ───")
+        L.append(f"  {m['phase']} · {m['illumination']}% lit · age {m['age_days']} d · "
+                 f"next {m['next_phase'][0]} {m['next_phase'][1]}")
+        cm = f"{m['chinese_month_name']}{m['chinese_day']}日 · " if S.cjk else ""
+        L.append(f"  Chinese {cm}month {'leap ' if m['chinese_leap'] else ''}{m['chinese_month']}, "
+                 f"day {m['chinese_day']}/{m['chinese_month_length']} [src/conv]")
+    if "sovereign" in r and "king_wen" in r["sovereign"]:
+        v = r["sovereign"]
+        hz = f"{v['hexagram']} " if S.cjk else ""
+        br = f"{v['branch']} " if S.cjk else ""
+        L.append("─── Sovereign hexagram  (Wen Table 3.1) ───")
+        L.append(f"  {S.g(v['glyph'])}{hz}{v['hexagram_en']} (KW {v['king_wen']}) · month "
+                 f"{v['lunar_month']} · {br}{v['animal']} · {v['element']} [src]")
+    if "mansion" in r and "xiu" in r["mansion"]:
+        x = r["mansion"]
+        xi = x["xiu"]
+        hz = f"{xi['name']} " if S.cjk else ""
+        L.append(f"─── Lunar mansions  ({S.g('☽')}λ = {x['moon_longitude']}°) ───")
+        L.append(f"  Xiu {xi['number']} {hz}{xi['pinyin']} {xi['english']} ({xi['degrees_in']}° of "
+                 f"{xi['width']}° RA) [src/approx]")
+        L.append(f"  Manzil {x['manzil']['number']} {x['manzil']['name']} (tropical) [conv] · "
+                 f"Nakshatra {x['nakshatra']['number']} {x['nakshatra']['name']} pada "
+                 f"{x['nakshatra']['pada']} (Lahiri) [conv]")
     if "decan" in r:
         d = r["decan"]
         L.append(f"─── Decan  ({S.g('☉')}λ = {d['sun_longitude']}°) ───")
@@ -1083,9 +1464,6 @@ def format_text(r, style="glyph") -> str:
         L.append("─── Folk / popular (unofficial) ───")
         for c in r["folk"]["observances"] or [{"name": "—"}]:
             L.append(f"  {c['name']}" + (f" [{c['region']}]" if c.get("region") else ""))
-    if "lunation" in r:
-        L.append("─── Lunation ───")
-        L.append(f"  {r['lunation']['note']}")
     if r.get("research_prompt"):
         L.append("─── Research prompt (generated, not a claim) ───")
         L.append(f"  {S.g('⁂')}{r['research_prompt']['text']}")
@@ -1134,6 +1512,18 @@ def format_daily(r, style="glyph") -> str:
         L.append(f"Gua qi {S.g(x['glyph'])}{hz}{x['hexagram_en']} (KW {x['king_wen']}) · {term} · "
                  f"{S.g(CARDINAL_GLYPH[x['cardinal']])}{card} {x['cardinal_line']} · "
                  f"{fmt_zones(x)}")
+    if "lunar" in r and "phase" in r["lunar"]:
+        m = r["lunar"]
+        cm = m["chinese_month_name"] + f"{m['chinese_day']}日" if S.cjk else \
+            f"M{'L' if m['chinese_leap'] else ''}{m['chinese_month']} d{m['chinese_day']}"
+        line = f"{S.g('☽')}Moon {m['phase']} {m['illumination']}% · age {m['age_days']:.1f} d · {cm}"
+        if "sovereign" in r and "king_wen" in r["sovereign"]:
+            v = r["sovereign"]
+            line += f" · {S.g(v['glyph'])}{v['king_wen']} {v['hexagram_en']}"
+        if "mansion" in r and "xiu" in r["mansion"]:
+            xi = r["mansion"]["xiu"]
+            line += f" · {xi['name'] + ' ' if S.cjk else ''}{xi['pinyin']}"
+        L.append(line)
     if "saints" in r:
         sa = r["saints"]
         parts = [fmt_national(n, S, short=True) for n in sa.get("national", [])]
@@ -1157,7 +1547,7 @@ def list_overlays() -> str:
     for n, o in OVERLAYS.items():
         L.append(f"  {o['flag']:<14} {o['help']}" + ("" if o["enabled"] else "  (stub)"))
     L.append("Ephemeris providers: " + ", ".join(
-        f"{b}{'' if b == 'sun' else ' (stub)'}" for b in PROVIDERS))
+        f"{b}{'' if b in ('sun', 'moon') else ' (stub)'}" for b in PROVIDERS))
     return "\n".join(L)
 
 
@@ -1178,6 +1568,7 @@ def main(argv=None):
     if "--list" in args:
         print(list_overlays())
         return 0
+    args = ["--lunar" if a == "--lunation" else a for a in args]     # legacy alias
     chosen = [n for n, o in OVERLAYS.items() if o["flag"] in args]
     if "--all" in args or "--daily" in args or not chosen:
         chosen = [n for n, o in OVERLAYS.items() if o["enabled"]]

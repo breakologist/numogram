@@ -96,7 +96,7 @@ Line by line: header (∴); ☉ with sign, decan, degree, ruler, element and the
 Glyphs come from the user's palette (`local-files/glyphs.md`): planets ☉☽☿♀♂♃♄, signs ♈…♓, alchemical elements 🜂🜃🜁🜄, trigrams ☰…☷ (shown for the gua qi cardinal hexagram: ☵ 坎, ☳ 震, ☲ 離, ☱ 兌), hexagrams (U+4DC0 block), Tai Xuan tetragrams (U+1D306 block), tarot trumps 🃠–🃵 and playing cards (U+1F0A0 block), and ∴ ✠ ⛤ ☘ ⁂ as line markers.
 - **Cards [conv]:** the Unicode trumps are the French tarot's trumps, so they are used by number only. Minor and court cards use the French suits usually equated with tarot suits (Swords ♠, Cups ♥, Pentacles ♦, Wands ♣), and a Book T Prince is drawn as the King card.
 - **`--plain`** drops every pictographic glyph but keeps CJK. **`--ascii`** prints 7-bit text only: Chinese is replaced by English hexagram names (from the Unicode character names), English solar-term names and pinyin for the cardinal trigrams, and accents are stripped.
-- **Not shown:** lunar nodes ☊☋ and lunar glyphs need a Moon provider (see Future work).
+- **Not shown:** lunar nodes ☊☋ (see Future work).
 
 ### Research prompt
 The `⁂ Prompt:` line is a question built from one of five fixed templates. The template is chosen by date ordinal mod 5, so the same date always gets the same prompt. The slots are filled only from the day's computed elements: decan ruler and its trump, sign trump, minor and court card, tetragram name and number, hexagram, solar term, zones, and the first saint listed (national, then GRC, then 'Pataphysical). It states no facts. JSON carries `research_prompt` with `"label": "generated prompt — a question to research, not a claim"`.
@@ -151,14 +151,29 @@ All data lives in `data/` as JSON, each file with its source URLs and retrieval 
 - **Folk (`data/folk_feasts.json`): 31 fixed, 3 movable and 1 seasonal-range entries, hand-curated.** Welsh days, each with the Wikipedia page that gives the date: Calennig 1 Jan; Hen Galan 13 Jan (Cwm Gwaun); Dydd Santes Dwynwen 25 Jan; Dydd Gŵyl Dewi 1 Mar; Nos Galan Haf 30 Apr; Calan Mai/Calan Haf 1 May; Owain Glyndŵr Day 16 Sep; Nos Galan Gaeaf 31 Oct; Calan Gaeaf 1 Nov; and the Mari Lwyd season, 25 Dec–6 Jan, from "Christmas until after Twelfth Day" (Evans 1804); modern revivals vary. Other entries: British/Irish/European days (Plough Monday, Shrove Tuesday, St David, St George, Walpurgis Night, Midsummer Eve, St Swithun, Lammas, Michaelmas, St Crispin, Bonfire Night, Martinmas, St Andrew, St Lucy, Wren Day …) and folk saints: Jesús Malverde (3 May), San La Muerte (15 Aug, alt. 13 Aug), Santa Muerte (15 Aug, 1 Nov, 2 Nov; no official feast), Maximón (28 Oct, and the Holy Week procession). Each entry has a `kind` label (folk-saint / folk-day / saint-day), a region and a Wikipedia URL stating the date.
   - **Gaps:** this is a small sample, not a survey. Folk-saint dates vary by community. Maximón's 28 Oct date rests only on a Wikipedia infobox, so treat it as weak.
 
+## Moon, Chinese month, sovereign hexagram, lunar mansions
+`python3 calendar.py --lunar --sovereign --mansion [--date YYYY-MM-DD --time HH:MM]` (`--lunation` is an alias for `--lunar`). These overlays are on by default and appear in `--daily` as one ☽ line.
+- **`--lunar` (phase, age, lunation, Chinese month and day):**
+  - Principal phases use Meeus, *Astronomical Algorithms*, ch. 49 (true phases with all periodic and planetary terms). Against timeanddate's published 2026 London times they agree to the minute; see the `Lunar` tests.
+  - The phase name comes from the Sun–Moon elongation; the principal phase is named on its own day.
+  - The lunation number is Brown's.
+  - Chinese month and day follow the modern rule (GB/T 33661-2017). Months begin on the Beijing (UTC+8) date of the new moon, and month 11 contains 冬至. In a 13-month year, the first month with no 中氣 is the leap month 閏. Tests cover the 2023 閏二月, the 2025 閏六月 and the 2033 閏十一月.
+  - [conv] The Chinese day is counted on the chosen civil date.
+- **`--sovereign`:** Wen, *I Ching, the Oracle*, Table 3.1 (Jing Fang's 辟卦), using the real lunar month. Month 11 → 24, …, 8 → 20, 9 → 23, 10 → 2. It also gives the branch, animal and Wu Xing as Wen prints them; her 卯 Rabbit "Water" is flagged, since it is conventionally Wood. [conv] A leap month takes the hexagram of its number.
+- **`--mansion`:** the Moon is geocentric, from Meeus ch. 47 truncated (≈0.05°). Traditions disagree, so every convention is labelled:
+  - **Chinese 28 宿:** sidereal and unequal, measured in *right ascension* of date from each determinative star 距星. The determinatives follow Wikipedia's "Twenty-Eight Mansions" (citing the IDP "Chinese Sky" and Sun Xiaochun 1997), with J2000 positions from SIMBAD precessed by Meeus ch. 21; no proper motion.
+  - **Arabic 28 manāzil:** Agrippa's names (*Three Books*, II.33), in equal 12°51′26″ divisions from tropical 0° Aries [conv].
+  - **27 nakshatras:** equal 13°20′, sidereal, using a linear Lahiri ayanamsa (23°51′11″ at J2000 + 50.29″/yr) [approx].
+- See `docs/wiki/lunation-and-mansions.md` and `docs/wiki/gua-qi-wen.md`.
+
 ## Design: overlays and providers
 - **Overlays are registered with a decorator:** `@overlay(name, flag, help, needs=(...), enabled=...)`. Each one is `fn(ctx) -> dict`.
 - **`Context`** carries local time, UTC time and the civil date, and offers lazy, cached `ctx.longitude(body)`.
-- **Providers are a separate registry** (`PROVIDERS[body](t_utc) -> apparent ecliptic longitude`). Only `sun` is implemented; `moon`, `mercury` … `saturn` are stubs that raise `NotImplementedError`.
+- **Providers are a separate registry** (`PROVIDERS[body](t_utc) -> apparent ecliptic longitude`). `sun` (Meeus ch. 25) and `moon` (Meeus ch. 47, truncated) are implemented; `mercury` … `saturn` are stubs that raise `NotImplementedError`.
 - **`needs`** declares which bodies an overlay reads, so one ephemeris provider can feed several overlays.
 
 ## Future work
-- **Lunation:** registered as `--lunation` with `enabled=False`. It needs the `moon` provider (for example Meeus ch. 47 low precision). Then: elongation λ☾ − λ☉ → phase, lunation number, tithi.
+- **Lunation:** tithi, and lunar nodes ☊☋.
 - **Planetary clock** (the user's idea): a multi-armed dial with the zodiac/decan ring, one arm per planet, and numogram zones on the rim. It would be another overlay with `needs=("sun", "moon", "mercury", …, "saturn")`, fed by the same provider registry as lunation, and could output JSON for an SVG renderer. It needs planet providers first (for example Meeus ch. 31–33 or VSOP87 truncated series).
 - **Smaller items:**
   - Jing Fang gua qi variant.
@@ -166,7 +181,7 @@ All data lives in `data/` as JSON, each file with its source URLs and retrieval 
   - Optional Chinese head names.
   - The Collège's official 'Pataphysical feast list, to replace the jchr.be/icalendrier list.
   - Full liturgical precedence for GRC entries, and the Welsh and English diocesan propers.
-  - Lunar nodes ☊☋ and Moon glyphs, once a Moon provider exists.
+  - Lunar nodes ☊☋.
 
 
 See also `docs/wiki/gua-qi-wen.md` (Wen's gua qi chapter, checked against this overlay).

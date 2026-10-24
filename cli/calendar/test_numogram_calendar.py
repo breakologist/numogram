@@ -483,11 +483,70 @@ class SaintNames(unittest.TestCase):
 
 
 class Registry(unittest.TestCase):
-    def test_lunation_stub_and_providers(self):
-        self.assertFalse(nc.OVERLAYS["lunation"]["enabled"])
-        self.assertIn("moon", nc.OVERLAYS["lunation"]["needs"])
-        with self.assertRaises(NotImplementedError):
-            nc.PROVIDERS["moon"](utc("2026-01-01 00:00:00"))
+    def test_moon_provider_registered(self):
+        self.assertIn("moon", nc.OVERLAYS["lunar"]["needs"])
+        self.assertTrue(0 <= nc.PROVIDERS["moon"](utc("2026-01-01 00:00:00")) < 360)
+
+
+class Lunar(unittest.TestCase):
+    """Phase times: timeanddate.com/moon/phases/uk/london?year=2026 (fetched 24 Oct 2026,
+    London local time, minute precision). Moon position: Meeus Example 47.a. Chinese
+    months: 2025 閏六月 from 25 Jul 2025; 2023 閏二月 from 22 Mar 2023; Spring Festival
+    17 Feb 2026 and 6 Feb 2027; 2033 閏十一月 from 22 Dec 2033 (the '2033 problem')."""
+    LON = nc.ZoneInfo("Europe/London")
+
+    def test_phase_times_2026(self):
+        ref = [(0, "2026-01-18 19:52"), (2, "2026-03-03 11:37"), (1, "2026-06-21 22:55"),
+               (3, "2026-08-06 03:21"), (0, "2026-10-10 16:50"), (2, "2026-10-26 04:11"),
+               (3, "2026-11-01 20:28"), (0, "2026-12-09 00:51"), (2, "2026-12-24 01:28")]
+        got = nc.lunar_phases_between(utc("2026-01-01 00:00:00"), utc("2027-01-01 00:00:00"))
+        for q, s in ref:
+            want = dt.datetime.fromisoformat(s).replace(tzinfo=self.LON)
+            best = min((abs((t - want).total_seconds()), qq) for t, qq, _ in got if qq == q)
+            self.assertLess(best[0], 120, s)
+
+    def test_meeus_47a(self):
+        t = utc("1992-04-12 00:00:00") - dt.timedelta(seconds=nc.delta_t_seconds(1992))
+        lam, beta = nc.moon_position(t)
+        self.assertAlmostEqual(lam, 133.162655, delta=0.02)
+        self.assertAlmostEqual(beta, -3.229126, delta=0.02)
+
+    def test_chinese_months(self):
+        cd = nc.chinese_date
+        self.assertEqual(cd(dt.date(2026, 2, 17))["month"], 1)
+        self.assertEqual(cd(dt.date(2026, 2, 17))["day"], 1)
+        self.assertEqual(cd(dt.date(2027, 2, 6))["day"], 1)
+        self.assertEqual((cd(dt.date(2025, 7, 25))["month"], cd(dt.date(2025, 7, 25))["leap"]), (6, True))
+        self.assertEqual((cd(dt.date(2023, 3, 22))["month"], cd(dt.date(2023, 3, 22))["leap"]), (2, True))
+        self.assertEqual((cd(dt.date(2033, 12, 22))["month"], cd(dt.date(2033, 12, 22))["leap"]), (11, True))
+        x = cd(dt.date(2026, 10, 24))
+        self.assertEqual((x["month"], x["day"], x["leap"]), (9, 15, False))
+
+    def test_sovereign_wen_table_3_1(self):
+        def sov(d):
+            return nc.sovereign_overlay(nc.build_context(d))
+        self.assertEqual(sov("2026-10-24")["king_wen"], 23)          # month 9
+        self.assertEqual(sov("2026-09-20")["king_wen"], 20)          # month 8
+        self.assertEqual(sov("2026-11-20")["king_wen"], 2)           # month 10
+        self.assertEqual(sov("2026-12-25")["king_wen"], 24)          # month 11, solstice month
+        self.assertEqual([nc.SOVEREIGN[m][0] for m in (11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)],
+                         [24, 19, 11, 34, 43, 1, 44, 33, 12, 20, 23, 2])
+
+    def test_mansions(self):
+        m = nc.mansion_overlay(nc.build_context("2026-10-24", "18:30"))
+        self.assertEqual(m["xiu"]["name"], "壁")
+        self.assertEqual(m["manzil"]["name"], "Alnath")
+        self.assertEqual(m["nakshatra"]["name"], "Revati")
+        T = 0.2682
+        widths = [nc.xiu_of_ra(nc.precess_j2000(x[4], x[5], T)[0] + 0.001, T)[2] for x in nc.XIU]
+        self.assertAlmostEqual(sum(widths), 360.0, places=6)
+        self.assertTrue(all(w > 0 for w in widths))
+
+    def test_lunar_overlay_today(self):
+        r = nc.lunar_overlay(nc.build_context("2026-10-24", "18:30"))
+        self.assertEqual(r["lunation"], 1284)
+        self.assertEqual(r["phase"], "Waxing gibbous")
+        self.assertEqual(r["next_phase"][0], "Full Moon")
 
     def test_no_stdlib_calendar_dependency(self):
         with open(nc.__file__, encoding="utf-8") as f:
@@ -498,7 +557,7 @@ class Registry(unittest.TestCase):
 
     def test_wrapper_cli(self):
         here = os.path.dirname(os.path.abspath(__file__))
-        for extra in ([], ["--json", "--date", "2012-11-10"], ["--lunation"], ["--list"],
+        for extra in ([], ["--json", "--date", "2012-11-10"], ["--lunation"], ["--lunar", "--sovereign", "--mansion"], ["--list"],
                       ["--daily", "--date", "2026-10-17"], ["--saints", "--pata-saints", "--folk"],
                       ["--daily", "--ascii", "--date", "2026-03-01"], ["--daily", "--plain"],
                       ["--saints", "--region", "general"], ["--saints", "--region", "wales"],

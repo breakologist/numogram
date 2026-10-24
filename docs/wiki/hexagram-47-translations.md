@@ -130,7 +130,7 @@ His line texts are in the per-line table above, under "Others". Short quotes onl
 **Checks (Em, computed).**
 - **Related hexagrams.** 47 bottom→top is 010110. Opposite (all lines flipped) = 101001 = Li below, Gen above = **22** ✓. Inverse (upside down) = 011010 = Xun below, Kan above = **48** ✓. Mutual (lines 2–4 / 3–5) = Li / Xun = **37** ✓.
 - **Changing-line targets.** Huang's headings, "Exhausting alternates to …", give Joyful (58), Bringing Together (45), Great Exceeding (28), Darkness (29), Relief (40), Contention (6). These are the same six as D'Aoust's Shadows, and match the single-line changes computed above ✓.
-- **Month and calendar.** Our `cli/calendar/numogram_calendar.py` Han gua qi overlay (Meng Xi 六日七分) gives 困 47 as hexagram #51/60 (公 duke) from **22 to 27 October 2026**, between 36 Ming Yi (to 21 Oct) and 23 Bo (from 28 Oct). The 9th lunar month of 2026 runs roughly from 10 Oct to 8 Nov (lunation dates approximate, not checked in code). So Huang's "ninth month … or October" **agrees** with our assignment, and 47 is the gua qi hexagram for today.
+- **Month and calendar.** Our `cli/calendar/numogram_calendar.py` Han gua qi overlay (Meng Xi 六日七分) gives 困 47 as hexagram #51/60 (公 duke) from **22 to 27 October 2026**, between 36 Ming Yi (to 21 Oct) and 23 Bo (from 28 Oct). The 9th lunar month of 2026 runs from 10 Oct to 8 Nov (now computed: `--lunar`, see [[lunation-and-mansions]]). So Huang's "ninth month … or October" **agrees** with our assignment, and 47 is the gua qi hexagram for today.
 - Element Metal agrees with Wen (Metal/Water).
 
 ## Karcher, *Total I Ching* (pp. 340–345)
