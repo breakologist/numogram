@@ -711,8 +711,9 @@ XIU = [
     ("翼", "Yi", "Wings", "alf Crt", 164.94360, -18.29879),
     ("軫", "Zhen", "Chariot", "gam Crv", 183.95155, -17.54193),
 ]
-# Agrippa, *Three Books of Occult Philosophy* II.33: 28 mansions of 12°51'26" each, counted
-# from 0° Aries — read here as tropical [conv; others use sidereal starts].
+# Agrippa, *Three Books of Occult Philosophy* II.33: 28 mansions of 12°51'26" each, "fixed in
+# the eight sphere", the first beginning "from the head of Aries of the eighth sphere" —
+# i.e. sidereal; Lahiri is used as the sidereal zero [conv]. Tropical also reported.
 MANAZIL = ["Alnath", "Allothaim", "Achaomazon", "Aldebaram", "Alchatay", "Alhanna", "Aldimiach",
            "Alnaza", "Archaam", "Algelioche", "Azobra", "Alzarpha", "Alhaire", "Achureth",
            "Agrapha", "Azubene", "Alchil", "Alchas", "Allatha", "Abnahaya", "Abeda",
@@ -745,8 +746,9 @@ def mansion_overlay(ctx):
     ra, dec = ecl_to_equ(lam, beta, T)
     i, into, width = xiu_of_ra(ra, T)
     z, n, e, star = XIU[i][:4]
-    m = int(lam // (360 / 28))
     sid = (lam - lahiri_ayanamsa(ctx.utc)) % 360
+    m = int(sid // (360 / 28))
+    mt = int(lam // (360 / 28))
     k = int(sid // (360 / 27))
     return {
         "moon_longitude": round(lam, 2), "moon_latitude": round(beta, 2), "moon_ra": round(ra, 2),
@@ -754,8 +756,11 @@ def mansion_overlay(ctx):
                 "degrees_in": round(into, 2), "width": round(width, 2),
                 "note": "sidereal, unequal; by right ascension of date from determinative stars "
                         "(Wikipedia list; SIMBAD J2000, Meeus precession) [src/approx]"},
-        "manzil": {"number": m + 1, "name": MANAZIL[m], "degrees_in": round(lam % (360 / 28), 2),
-                   "note": "Agrippa II.33 names; equal 12°51′ from 0° Aries, tropical [conv]"},
+        "manzil": {"number": m + 1, "name": MANAZIL[m], "degrees_in": round(sid % (360 / 28), 2),
+                   "tropical_number": mt + 1, "tropical_name": MANAZIL[mt],
+                   "note": "Agrippa II.33 names; equal 12°51′26″ from 'the head of Aries of the "
+                           "eighth sphere' (sidereal) — Lahiri used as the sidereal zero [conv]; "
+                           "tropical alternative also given [conv]"},
         "nakshatra": {"number": k + 1, "name": NAKSHATRAS[k], "pada": int((sid % (360 / 27)) // (360 / 108)) + 1,
                       "sidereal_longitude": round(sid, 2),
                       "note": "equal 13°20′, sidereal, Lahiri ayanamsa (linear approx.) [conv/approx]"},
@@ -886,6 +891,8 @@ def decan_overlay(ctx):
         "sources": "rulers, minor/major/court cards: Golden Dawn Book T [src]; longitude: "
                    "Meeus low-precision (~0.01°) [approx]",
     })
+    ag = load_data("agrippa_decans.json")
+    d["agrippa"] = dict(ag["decans"][d["decan"] - 1], source=ag["source"] + " [src]")
     return d
 
 
@@ -1429,7 +1436,8 @@ def format_text(r, style="glyph") -> str:
         L.append(f"─── Lunar mansions  ({S.g('☽')}λ = {x['moon_longitude']}°) ───")
         L.append(f"  Xiu {xi['number']} {hz}{xi['pinyin']} {xi['english']} ({xi['degrees_in']}° of "
                  f"{xi['width']}° RA) [src/approx]")
-        L.append(f"  Manzil {x['manzil']['number']} {x['manzil']['name']} (tropical) [conv] · "
+        L.append(f"  Manzil {x['manzil']['number']} {x['manzil']['name']} (sidereal; tropical "
+                 f"{x['manzil']['tropical_number']} {x['manzil']['tropical_name']}) [conv] · "
                  f"Nakshatra {x['nakshatra']['number']} {x['nakshatra']['name']} pada "
                  f"{x['nakshatra']['pada']} (Lahiri) [conv]")
     if "decan" in r:
@@ -1442,6 +1450,8 @@ def format_text(r, style="glyph") -> str:
                  f"{fmt_trump(d['ruler_trump'], S)}  [{d['trump_convention']}]")
         c = d["court"]
         L.append(f"  Court: {S.g(c['glyph'])}{c['card']} ({c['span']}) [Book T]")
+        if "agrippa" in d:
+            L.append(f"  Agrippa II.37: \"{d['agrippa']['image']}\" — {d['agrippa']['signifies']} [src]")
     if "pata" in r:
         p = r["pata"]
         L.append("─── 'Pataphysical ───")

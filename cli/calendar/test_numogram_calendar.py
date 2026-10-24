@@ -535,12 +535,19 @@ class Lunar(unittest.TestCase):
     def test_mansions(self):
         m = nc.mansion_overlay(nc.build_context("2026-10-24", "18:30"))
         self.assertEqual(m["xiu"]["name"], "壁")
-        self.assertEqual(m["manzil"]["name"], "Alnath")
+        self.assertEqual(m["manzil"]["name"], "Albotham")            # sidereal (eighth sphere)
+        self.assertEqual(m["manzil"]["tropical_name"], "Alnath")
         self.assertEqual(m["nakshatra"]["name"], "Revati")
         T = 0.2682
         widths = [nc.xiu_of_ra(nc.precess_j2000(x[4], x[5], T)[0] + 0.001, T)[2] for x in nc.XIU]
         self.assertAlmostEqual(sum(widths), 360.0, places=6)
         self.assertTrue(all(w > 0 for w in widths))
+
+    def test_agrippa_decans(self):
+        d = nc.decan_overlay(nc.build_context("2026-10-24"))
+        self.assertEqual(d["decan"], 22)                                # Scorpio I
+        self.assertIn("two men striking her", d["agrippa"]["image"])
+        self.assertEqual(len(nc.load_data("agrippa_decans.json")["decans"]), 36)
 
     def test_lunar_overlay_today(self):
         r = nc.lunar_overlay(nc.build_context("2026-10-24", "18:30"))

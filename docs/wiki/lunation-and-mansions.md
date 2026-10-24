@@ -9,7 +9,7 @@ tags: ["calendar", "moon", "lunation", "chinese-calendar", "sovereign-hexagrams"
 
 # Lunation and lunar mansions (`--lunar`, `--sovereign`, `--mansion`)
 
-This page records what the calendar now computes about the Moon, from which sources, and under which conventions. The code is `cli/calendar/numogram_calendar.py`; usage is in `cli/calendar/README.md`. For context see [[gua-qi-wen]].
+This page records what the calendar now computes about the Moon, from which sources, and under which conventions. The code is `cli/calendar/numogram_calendar.py`; usage is in `cli/calendar/README.md`. For context see [[gua-qi-wen]]. The traditions' attributes, the determinative stars and the Behenian stars are on [[mansions-lore]].
 
 ## Sourced methods
 
@@ -22,7 +22,7 @@ This page records what the calendar now computes about the Moon, from which sour
 
 ## Conventions (chosen, flagged in output)
 
-- **[conv]** The manāzil are counted from **tropical** 0° Aries, following Agrippa's usage. Arabic and modern sidereal practice would start them near the stars instead, roughly 24° later in 2026.
+- **[conv]** The manāzil are **sidereal**: Agrippa II.33 says they are "fixed in the eight sphere", starting "from the head of Aries of the eighth sphere". Lahiri is used as the sidereal zero. The tropical mansion (from 0° Aries of date) is also reported. *This was corrected on 24 Oct 2026; the first version was tropical.*
 - **[conv/approx]** The nakshatras use **sidereal Lahiri**, as a linear ayanamsa of 23°51′11″ at J2000 plus 50.29″ a year. It is good to about 0.01°.
 - **[conv]** The Chinese day is counted on the civil date asked for; the London date is treated as the Beijing date. A leap month takes the sovereign hexagram of its number.
 - **[approx]** The xiu use precession only, with no proper motion or nutation. The tiny 觜 and 鬼 and the huge 井 are real effects of where the determinatives sit, not bugs. Older catalogues and other determinative choices (for example δ Ori for 參) give different widths.
@@ -54,7 +54,7 @@ The Chinese calendar reproduces these known dates: Spring Festival 17 Feb 2026 a
 - **Sovereign hexagram:** ䷖ **23 剝 Bo**, 戌 Dog, Earth.
 - **Mansions:**
   - **Xiu 14 壁 Bi (Wall)**, 6.3° into 11.0°.
-  - **Manzil 1 Alnath** (tropical).
+  - **Manzil 28 Albotham** (sidereal). Tropical 1 Alnath.
   - **Nakshatra 27 Revati** (Lahiri). The Moon crosses into it during the day; at noon it is still in Uttara Bhadrapada.
 
 ## Speculative (Em, not sourced)
