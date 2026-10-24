@@ -136,7 +136,7 @@ The Behenian stars are Agrippa's list in II.31, given with his degrees of c. 151
 
 **Today, Scorpio I** (Mars; the 5 of Cups): "a woman of good face and habit, and two men striking her; the operations of these are for comliness, beauty, and for strifes, treacheries, deceits, detractations, and perditions."
 
-**Picatrix II.11** gives a parallel set of 36 decan images (*Ghayat al-Hakim*; Latin ed. Pingree 1986). The English translations by Greer and Warnock (2010/2011) and by Attrell and Porreca (2019) are in copyright. I did not have a verified text this session, so none is quoted or summarised here. That is left as a follow-up rather than reconstructed from memory.
+**Picatrix II.11** gives a different set of 36 face images. They are now compared, with Purdue's Agrippa, on [[decans-lore]], using the user's PDFs of Greer–Warnock and Attrell–Porreca. Short quotes only, the rest summarised. The calendar shows Em's one-line paraphrase.
 
 ## Today, 24 Oct 2026 (18:30 BST)
 
@@ -156,7 +156,7 @@ The Behenian stars are Agrippa's list in II.31, given with his degrees of c. 151
 - **Determinatives disagree** between en.wiki and zh.wiki (心, 奎, 觜, 參). The values the code uses are listed in the table.
 - **Almanac caveats:** the 吉/凶 verdicts are the common tongshu formula. Detailed do/avoid lists vary between almanacs and are quoted from one family of web transcriptions (sldtswh.com and yixiansheng.com), not a printed tongshu.
 - **Chinese star names** for the Behenian stars were not individually verified.
-- **Picatrix decan and mansion images** are not included because the English translations are copyrighted and no verified text was available.
+- Picatrix decans and mansions are now covered on [[decans-lore]]. The Picatrix *mansion images* (Book IV) are still not covered.
 
 ## Sources
 

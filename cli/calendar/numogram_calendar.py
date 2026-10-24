@@ -893,6 +893,9 @@ def decan_overlay(ctx):
     })
     ag = load_data("agrippa_decans.json")
     d["agrippa"] = dict(ag["decans"][d["decan"] - 1], source=ag["source"] + " [src]")
+    pc = load_data("picatrix_decans_summary.json")
+    d["picatrix"] = {"summary": pc["decans"][d["decan"] - 1]["summary"],
+                     "source": pc["source"] + " [src/paraphrase]"}
     return d
 
 
@@ -1452,6 +1455,8 @@ def format_text(r, style="glyph") -> str:
         L.append(f"  Court: {S.g(c['glyph'])}{c['card']} ({c['span']}) [Book T]")
         if "agrippa" in d:
             L.append(f"  Agrippa II.37: \"{d['agrippa']['image']}\" — {d['agrippa']['signifies']} [src]")
+        if "picatrix" in d:
+            L.append(f"  Picatrix II.11 (paraphrase): {d['picatrix']['summary']}")
     if "pata" in r:
         p = r["pata"]
         L.append("─── 'Pataphysical ───")

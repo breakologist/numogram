@@ -163,7 +163,7 @@ All data lives in `data/` as JSON, each file with its source URLs and retrieval 
 - **`--mansion`:** the Moon is geocentric, from Meeus ch. 47 truncated (≈0.05°). Traditions disagree, so every convention is labelled:
   - **Chinese 28 宿:** sidereal and unequal, measured in *right ascension* of date from each determinative star 距星. The determinatives follow Wikipedia's "Twenty-Eight Mansions" (citing the IDP "Chinese Sky" and Sun Xiaochun 1997), with J2000 positions from SIMBAD precessed by Meeus ch. 21; no proper motion.
   - **Arabic 28 manāzil:** Agrippa's names (*Three Books*, II.33), in equal 12°51′26″ divisions. They are **sidereal**, since Agrippa says "of the eighth sphere"; Lahiri is used as the zero. The tropical mansion is also reported [conv].
-- **`--decan`** also prints Agrippa's II.37 image and signification for the Sun's decan (1651 English, public domain; `data/agrippa_decans.json`).
+- **`--decan`** also prints Agrippa's II.37 image and signification for the Sun's decan (1651 English, public domain; `data/agrippa_decans.json`), plus Em's own one-line paraphrase of the Latin Picatrix II.11 image (`data/picatrix_decans_summary.json`; not translation text). See `docs/wiki/decans-lore.md`.
   - **27 nakshatras:** equal 13°20′, sidereal, using a linear Lahiri ayanamsa (23°51′11″ at J2000 + 50.29″/yr) [approx].
 - See `docs/wiki/lunation-and-mansions.md`, `docs/wiki/mansions-lore.md` and `docs/wiki/gua-qi-wen.md`.
 

@@ -548,6 +548,7 @@ class Lunar(unittest.TestCase):
         self.assertEqual(d["decan"], 22)                                # Scorpio I
         self.assertIn("two men striking her", d["agrippa"]["image"])
         self.assertEqual(len(nc.load_data("agrippa_decans.json")["decans"]), 36)
+        self.assertIn("man's head", d["picatrix"]["summary"])
 
     def test_lunar_overlay_today(self):
         r = nc.lunar_overlay(nc.build_context("2026-10-24", "18:30"))
