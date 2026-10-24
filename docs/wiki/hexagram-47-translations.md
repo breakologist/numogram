@@ -2,7 +2,7 @@
 title: "Hexagram 47 困 Kun: translations side by side"
 created: 2026-10-24
 last_updated: 2026-10-24
-source_count: 3
+source_count: 4
 status: living
 tags: ["i-ching", "hexagram-47", "kun", "translations", "comparison", "research"]
 ---
@@ -20,13 +20,14 @@ This is a living comparison of translations of hexagram 47, ䷮ 困 Kun (Dui 兑
 | **Wilhelm** | Richard Wilhelm / Cary F. Baynes | *slot*: not in hand; the only phrases so far are second-hand, via James DeKorne's comparison page |
 | Huang | Alfred Huang, *The Complete I Ching* | to add, from the user's copies |
 | Karcher | Stephen Karcher, *Total I Ching* | to add, from the user's copies |
-| D'Aoust | Maja D'Aoust, *The Occult I Ching* | to add, from the user's copies |
+| **D'Aoust** | Maja D'Aoust, *The Occult I Ching* (running head "The Serpent Oracle"), pp. 303–307 | from the user's photographs; interpretive, not a translation |
 | Bastian | Simon Bastian, *Before Completion* (booklet) | to add, from the user's copies |
 
 ## Title and judgment
 
 | | Chinese | Legge | Wen | Wilhelm (slot) | Others (slots) |
 |---|---|---|---|---|---|
+| Title (D'Aoust) | "The Secret Garden", Kun; keywords "Circumscribed" / Happiness in Slavery / Oppression | | | | |
 | Title | 第四十七卦：困 · 澤水困 · 兌上坎下 | "Khwăn", glossed "straitened and distressed" | "Blockade" | "Oppression (Exhaustion)" *(second-hand)* | — |
 | Judgment | 困：亨貞大人吉無咎有言不信 | "there may (yet be) progress and success … the (really) great man, there will be good fortune … If he make speeches, his words cannot be made good." | Paraphrase: triumph over hardship forecast, "Auspicious for the eminent one". She reads 有言不信 as a riddle: "There is a message, but it is not a message." | "When one has something to say, it is not believed" *(via DeKorne)* | — |
 | Image | 象曰：澤無水困君子以致命遂志 | (Appendix II, not fetched) | Paraphrase: destiny is "leavened by free will" but also "written into the annals" | "There is no water in the lake … stakes his life on following his will" *(via DeKorne)* | — |
@@ -56,6 +57,26 @@ Chinese is transcribed from the user's clearer close-up photographs of each box 
 - **Line 5**: she lists the Five Punishments 五刑: 墨 tattooing the face, 劓 cutting off the nose, 刖 cutting off the feet, 宮 castration, 大辟 execution. The nose stands for one's luck, and the feet were cut for theft, trespass, treason or sedition. In her narrative, the punishment that line 2 foreshadowed is carried out here. **祭 jì** is going before the altar with an offering; the glyph is an altar with a hand holding meat. **祀 sì** means both to sacrifice and to venerate.
 - **Line 6**: the "expedition" (征) suggests a strike with the aim of conquest, an ambitious undertaking, and it is auspicious.
 
+## D'Aoust, *The Occult I Ching* (pp. 303–307)
+
+D'Aoust does not translate the line texts. She gives her own reading of the hexagram and gives the six lines her own names (Self, Other, Union, Earth, Conflict, Heaven), so her section has no place in the per-line Chinese table above. It is summarised here, with short quotes.
+
+- **Header.** "Hexagram 47 / The Secret Garden / Kun". There is an oracle-script glyph labelled **"Magic Circle"**: a branching, tree-like figure inside a rounded rectangle, the 木 in 口 again. Keywords: **"Circumscribed"**, **Happiness in Slavery**, **Oppression**. **Tarot Card: Four of Cups.**
+- **Her thesis.** Most people read 47 as punishment or prison. After years with it, she thinks it is "making fun of" that view, "poking fun at the pity party". The attitude "is creating the prison". She compares it to Christ on the cross and to the South Netherlandish tapestry ***The Unicorn in Captivity***, "a unicorn tied to a tree and circled by a fence". In both cases the suffering lies in adopting "a woe-is-me attitude". She also cites Siddhartha under the Bodhi tree, who faced the world's evils without breaking. Her advice: seek justice, but don't fall into "a blame game", and rest in your own innate value.
+- **Illustration.** A white line drawing of a figure (or a doubled figure, with two heads) inside two overlapping circles, on a dark ground. The epigraph is from Odell Shepard, *The Lore of the Unicorn*: "The unconquerable nature of God is likened to that of a unicorn."
+- **Poem.** Lord Byron, "When Coldness Wraps This Suffering Clay", reprinted in full (public domain). It opens "When coldness wraps this suffering clay, / Ah! whither strays the immortal mind?"
+- **Guru.** The lesson is to be content in oneself whatever the circumstances. The adept makes "a secret safe place of peace inside the heart, her own Garden of Eden", a state of *samadhi* that no one can take away; "you can be defeated but you can never be conquered."
+- **Personal example.** A client asked only, "How about the business I just started?" She drew 47 and saw "a plant growing within an enclosure", an indoor or secret garden. She asked whether he was growing marijuana; he was, and "We both started to laugh."
+- **Changing lines.** Each ends "Transforms into Shadow":
+  1. *The Self.* Confinement shared with others, "Many hands make the burden lighter". → Shadow **58.1**
+  2. *The Other.* Seclusion imposed by an authority figure. Use the time constructively, and if the authority is corrupt, stop following that person. → **45.2**
+  3. *The Union.* Not seeing how valuable a supporting partner or friend is; don't "bite the hand that feeds you". → **28.3**
+  4. *The Earth.* Freed from oppression, let it go and "Lay your burden down by the riverside", like spring-cleaning. → **29.4**
+  5. *The Conflict.* Oppression's lessons; take pride in surviving hard times. → **40.5**
+  6. *Heaven.* The trap is self-imposed, "a mind box"; look inside it and "the walls simply disintegrate." → **6.6**
+  - *All lines changing → hexagram 22*: mercy. In the deepest despair, "the Mother of All sends the sweet grace of mercy"; to give mercy is to lift the lost "out of purgatory".
+- **The Shadow hexagrams are the single-line changes (checked).** Take 47 from bottom to top as ⚋⚊⚋⚊⚊⚋ (Kan below, Dui above). Flipping one line gives: line 1 → Dui/Dui = **58**; line 2 → Kun/Dui = **45**; line 3 → Xun/Dui = **28**; line 4 → Kan/Kan = **29**; line 5 → Kan/Zhen = **40**; line 6 → Kan/Qian = **6**. Flipping all six gives Li below, Gen above = **22**. All seven match her numbers, so "Shadow N.k" means "the hexagram reached by changing line k". (Wen's 5th-line change to 40 Jie agrees.)
+
 ## Notable divergences
 
 1. **臀 tún, line 1.** Legge has "bare buttocks" and adds that the symbolism "is rather a favourite with the duke of Kâu;—'chacun à son goût.'" He reads it as sitting on a stump. Wen makes it a punishment: "Caned on the backside". The usual modern reading (Wilhelm, as quoted) is that one *sits* under a bare tree. Wen's reading ties line 1 to the corporal punishments of line 5, so the six lines become one story of judicial ordeal.
@@ -64,6 +85,8 @@ Chinese is transcribed from the user's clearer close-up photographs of each box 
 4. **有言不信, the judgment.** Legge, following the Khang-hsî editors' change of one character, gives "his words cannot be made good": actions are needed, not speech. The literal reading, which Legge gives in his note and Wilhelm uses, is "will not be believed". Wen gives a paradox: "Words spoken, but there is no meaning."
 5. **Line 1, 三歲不覿.** Legge has "no prospect (of deliverance)" for a long time. Wen has "Nothing is seen and unseen", and adds a Jupiter/harvest gloss on 歲 that only she gives.
 6. **Line 6, 征吉.** Legge: good fortune in "going forward" after repenting. Wen: "Gains from undertaking the expedition", read as a military campaign.
+7. **Tarot.** D'Aoust assigns 47 the **Four of Cups**. This week's readings follow the Golden Dawn decans, where the 4 of Cups is Moon in Cancer III and the 5 of Cups is Mars in Scorpio I (the Scorpio I card that came up this week). Her tarot correspondences are her own and do not follow the decan scheme. Both cards are Cups: the 4 shows a seated figure refusing what is offered, the 5 mourns spilled cups. Both suit her "pity party" reading.
+8. **Prison or garden.** Legge, Wen and Wilhelm all treat 47 as real constraint. D'Aoust reverses it, reading the enclosure as a "Secret Garden" and the prison as self-made by one's attitude.
 
 ## Speculative links to this week's readings
 
@@ -72,16 +95,20 @@ Chinese is transcribed from the user's clearer close-up photographs of each box 
 - **歲 = Jupiter.** Wen glosses line 1's three 歲 as Jupiter-years and harvests. Jupiter rules the third decan of Libra in the Chaldean decan scheme. Tarot gives that decan to the 4 of Swords (see [[reading-2026-10-18]]), and major arcanum X, the Wheel of Fortune, is Jupiter's card ([[reading-2026-10-20]], 20 Oct; the 22 Oct Justice/47 reading is in [[john-paul-ii]]). So the "three years" in the dark valley could be read as Jupiter's turnings, a wheel that has to complete its cycles before the blockade lifts.
 - **A tree in an enclosure, and Carcer.** The geomantic figure **Carcer** ("Prison", Saturn) is drawn in `cli/geomancy.py` as bits (1,0,0,1), solid at both ends and open in the middle: an enclosure, like the 口 around 木. Its meanings in the CLI ("Delay, binding, bar, restriction") match Wen's "Blockade" closely.
 - **Tai Xuan 69 Exhaustion.** In `cli/taixuan.py`, `TETRAGRAM_NAMES[68]` = "Exhaustion" (tetragram 69, counting from 1), and `represent_tetragram(68)` = `[2, 1, 1, 2]`, i.e. bottom to top **Man, Earth, Earth, Man**. That is checked against the code. Man (the Em mediator line) frames two Earth lines, the same outer-holds-inner shape as Carcer and 困. Tetragram 69 has the same name as Wilhelm's subtitle for hexagram 47. Read as a picture, a doubled middle is boxed in by two mediating lines.
+- **The unicorn is the glyph.** *(Speculative.)* In *The Unicorn in Captivity* the unicorn is tied to a tree (木) inside a round fence (口). The tapestry is almost a picture of 困, which D'Aoust shows as a branching figure inside a "Magic Circle". Her personal example, a plant in an indoor enclosure, is the same picture.
+- **Magic circle or blockade.** *(Speculative.)* In Wen, 47 is used in baneful magic to *blockade* someone, and the enclosure is a hostile working. In D'Aoust it is a "Magic Circle", which in Western ritual magic is the operator's own protective boundary. The same box is read from the inside (sanctuary, "secret garden") and from the outside (binding).
 
 ## Flags
 
 - The Chinese was checked against the clearer photographs (24 Oct). Still uncertain, all variant-form questions: 臀 in line 1 (the printed form may be a variant such as 臋); 歲 in line 1 (it may be printed as 歳); 藜 in line 3 (it may be printed as 蔾); 藟 in line 6 (the printed form looks like a variant, perhaps 蘲 or a 蘽-type form, not 蘘); 臲 in line 6 (an unusual printed form, not 尼). Line 6 also has a stray dot beside 有, under 吉. It is probably a print speck or a reading mark, not a character.
 - The Wilhelm phrases are second-hand (DeKorne) until the printed text is checked.
+- D'Aoust p. 304 was not photographed. It is probably the unicorn illustration page, with the end of the 303 paragraph ("...can endure almost" / "anything"). The start of Line Four is partly cut off at the photo's edge; its gist is clear. Credit: the photographs are the user's.
 - Legge's Appendix II (the image) was not fetched.
 
 ## Sources
 
 - Legge, *The I Ching* (SBE XVI, 1882), hexagram XLVII: https://www.sacred-texts.com/ich/ic47.htm
+- Maja D'Aoust, *The Occult I Ching* ("The Serpent Oracle" running head), hexagram 47, pp. 303–307. The photographs are courtesy of the user.
 - Benebell Wen, *I Ching, the Oracle*, hexagram 47 "Kùn. Blockade", pp. ~638–643. The photographs are courtesy of the user.
 - James DeKorne's parallel-translation page, for the Wilhelm/Baynes phrases (second-hand).
 - Code: `cli/taixuan.py`, `cli/geomancy.py`.
