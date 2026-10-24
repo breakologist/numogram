@@ -377,6 +377,7 @@
 - [[brebeuf-jogues-folk]] — Living customs and contested memory around the North American Martyrs: Huron Carol at Wendake, relics and the 2024–26 tour, Auriesville, Kateri, Wendat and Mohawk perspectives
 - [[john-paul-ii]] — St John Paul II (feast 22 Oct): occupation years, Rhapsodic Theatre, 1979 Warsaw homily, 1981 shooting and Fatima bullet, Laborem Exercens / Salvifici Doloris, blood relics, criticisms (McCarrick, Maciel, Poland 2023); speculative Justice / hexagram 47 reading
 - [[hexagram-47-translations]] — Living side-by-side comparison of hexagram 47 困 Kun translations: Legge, Benebell Wen (Blockade), Wilhelm slot; divergences (臀, vermilion sash/knee-covers, title); speculative Jupiter / Carcer / Tai Xuan 69 links
+- [[bastian-before-completion]] — Simon Bastian, *Before Completion* (2022) pp. 19–32: court-card hexagram arrangement (verified; Crowley column confirms ours), geomancy → nuclear hexagrams, intelligences, Sovereign hexagrams, circle walk, bibliography
 - [[john-of-capistrano]] — St John of Capistrano (feast 23 Oct): Perugia jurist, Belgrade 1456, Breslau 1453 persecution, Capistrano swallows; speculative calendar links
 - [[anthony-mary-claret]] — St Anthony Mary Claret (feast 24 Oct): weaver, Librería Religiosa, Holguín razor attack, Cuban mixed marriages, Eucharistic claim, exile at Fontfroide; speculative Prince of Cups / hexagram 47 notes
 - [[st-luke-golden-legend]] — St Luke in the Golden Legend (Caxton/Ellis, Temple Classics 1900): light etymology, four faces, the ox, Antioch vision; speculative numogram threads

@@ -28,6 +28,8 @@ This is a companion page to [[reading-2026-10-19]], written by the same author a
 | Swords | 32 | 28 | 57 | 18 |
 | Disks | 62 | 31 | 53 | 52 |
 
+*Independently confirmed:* Simon Bastian's *Before Completion* (2022) prints the same sixteen Crowley numbers alongside his own elemental scheme. See [[bastian-before-completion]].
+
 **The rule behind it.** This is my inference, not Crowley's own statement. The upper trigram comes from the rank: Knight ☳ thunder, Queen ☱ lake, Prince ☴ wind, Princess ☶ mountain. The lower trigram comes from the suit, using the same four trigrams: Wands ☳, Cups ☱, Swords ☴, Disks ☶. Checked against `KW_BY_VALUE` in `cli/iching.py`, this rule reproduces all sixteen numbers. The other Princes, quoted: Wands "the 42nd Hexagram, Yi"; Swords "the airy part of Air is represented by the 5 7 th hexagram, Sun" (archive.org OCR, i.e. 57); Disks "the 53rd hexagram, Kien".
 
 **Hexagram 61 as a number.** The line value is 51, so zone 6 by lines, and KW 61 gives zone 7 by number. *(Speculative:* through the Prince of Cups, Crowley's hexagram for the day is 61, beside the gua qi's 36 Ming Yi.)

@@ -80,6 +80,8 @@ D'Aoust does not translate the line texts. She gives her own reading of the hexa
 
 ## Bastian, *Before Completion* (2022)
 
+See also [[bastian-before-completion]] (tarot court arrangement, geomancy, intelligences, circle).
+
 This is a short booklet. Its "Interpretations" section (pp. 16–18) gives one line for each hexagram, with Wade-Giles names, and has no line texts. His entry for 47, exactly as printed:
 
 > 47. *K'un*. Oppression. Exhaustion and a primary danger sign. The extremity of ill fortune can lead to renewed strength is the best that can be said.
