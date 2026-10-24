@@ -61,7 +61,7 @@ The heading is printed "THE TAROT COURT AN ARRANGEMENT OF 16", with no colon. He
 
 ## Imagery (p. 23–24, partial)
 
-The hexagram images (*xiang*) can be used for "conscious dreaming" and pathworking. His examples are 46 (wood pushing up through earth) and 60 (lake water held by a dam). The Hexagrams could be used as 16-day or longer journal exercises. The first part of p. 24 was cut off in the photo.
+The hexagram images (*xiang*) can be used for "conscious dreaming" and pathworking. His examples are 46 (wood pushing up through earth) and 60 (lake water held by a dam). The Imagery section closes on questions to put to an image, such as whether the boundaries in hexagram 60 are "unwelcome limitations" or a need you are willing to accept. Let the images "lead where they will", but keep "a slight detachment so you don't lead them". **Pathworking (p. 24).** In Tarot, the Major Arcana are used as "gates" for pathworking on the Tree of Life. The Court Cards can serve for free-association meditation or as "image-talismans" for taking on a card's qualities. The Hexagrams can be used the same way, for example as "a 16-day exercise, keeping a journal to assess your impressions". The 16 fits both the court and the nuclear hexagrams.
 
 ## Geomancy (p. 24)
 
@@ -86,7 +86,7 @@ He offers "a speculative order which can most likely invite reinterpretation" li
 | Fortuna Minor (Lesser Fortune) | 27 Nourishment | (1,1,0,0) |
 | Via (Way) | 64 Before Completion | (1,1,1,1) |
 
-He prints "Aquisitio", not Acquisitio. **Printed anomaly:** **28 appears twice** (Fortuna Major "Excessive Greatness" and Tristitia "Disunity"), and **38** (K'uei, Opposition, which his Interpretations list gives as "Neutrality and Disunity") is missing. Tristitia's entry is almost certainly meant to be **38 Disunity**, a misprint of the number. With 38 in place, the 16 are exactly the nuclear set.
+He prints "Aquisitio", not Acquisitio. **Printed anomaly:** **28 appears twice** (Fortuna Major "Excessive Greatness" and Tristitia "Disunity"), and **38** (K'uei, Opposition, which his Interpretations list gives as "Neutrality and Disunity") is missing. Tristitia's entry is almost certainly meant to be **38 Disunity**, a misprint of the number. *(The full p. 24 photo confirms the print reads "28 Disunity"; the user agrees it is a duplicate.)* With 38 in place, the 16 are exactly the nuclear set.
 
 - **Carcer → 39 Obstruction.** This fits the enclosure theme on [[hexagram-47-translations]]: Carcer, the boxed figure (1,0,0,1), 困 as tree-in-口, and Tai Xuan 69 Exhaustion (Man, Earth, Earth, Man). Hexagram 39 is water over mountain, a pass that is blocked.
 - **Rubeus → 54 The Marrying Maiden.** Rubeus is our halting figure: a chart with Rubeus in house 1 is destroyed (`cli/geomancy.py` notes). 54 is also Crowley's Knight of Cups.
@@ -99,6 +99,16 @@ He prints "Aquisitio", not Acquisitio. **Printed anomaly:** **28 appears twice**
 - **William Seabrook**, *Witchcraft*: a Russian noblewoman obtained **hexagram 49** and took on a werewolf persona.
 - **Stephen Karcher:** the oracle as a "field" between interpreter and personal demon, "an in-forming and regulating force". "'The Yi itself is not a demon. It is a maker of demons'." Approach it as a game and it will give frivolous answers.
 - **Framing questions:** ask with detachment, not anxiety. "Will I win the lottery" and "Will I be happy" are the wrong kind of question; ask about one's own aptitude and inclination. Don't lend out your coins or cards, so the "psychic link" stays personal.
+
+## Alchemy (p. 26)
+
+- **Congruent, but obscure.** Western and Chinese alchemy are "relatively congruent", although Taoist Inner Alchemical texts are "shrouded in obscurity". This is partly because of the material's depth, and partly because poetry and elusiveness are the natural medium for these teachings. Long before Jung, students were already receiving them "as fully realised psychospiritual symbolism".
+- **Neidan.** The texts are "initiatory simply through the reading of them". They teach through personal experience, and there is "no set methodology"; they are not instructions that lead to a defined result.
+- **One sentence.** From Chen Zhixu's (1290–1368) *Jindan dayao*, *Great Essentials of the Golden Elixir*: "Creation and transformation occur within the Furnace of the Two Eights". In outer alchemy (Waidan), the furnace refines raw materials, purging impurities and softening metal "whether coin or sword". In inner alchemy, it is an energetic centre for refining the self. Beyond that, the furnace is daily life itself: "There lies the Holy within the Mundane."
+- **His reading.** He admits it is not the usual one: the Two Eights are "walking the Figure Eight of two circles, each containing the Bagua". The page ends mid-sentence ("The Furnace used in Neidan alchemy is symbolic of an inner…"). p. 27 opens with "…Meditation in action", which may close that sentence, but the join was not photographed.
+- **Links.** This is the figure-of-eight from *Ritual and the Circle* below: two Baguazhang circles joined by the S-curve walk through the centre, which traces the Taiji line. Drawn as two touching or overlapping circles, it is also the Chalice Well **vesica** and D'Aoust's figure inside two overlapping circles ([[hexagram-47-translations]]).
+
+> **Speculative (Em, not Bastian).** Two Eights = **16**, the number of the court cards, the geomantic figures and the nuclear hexagrams on this page. It is also the **8 trigrams × 2** of the two Bagua circles. In Neidan the usual gloss is different: 二八 refers to two half-pounds of 8 ounces each (lead and mercury, yin and yang, 8 + 8 = 16 ounces = one *jin* 斤). The furnace weighs out a balanced pound. On the numogram side, 8 and its syzygy partner 1 make 9 (8::1). Two eights, 8 + 8 = 16, reduce digitally to 7. Whether that 7 means anything (the 7 of the Warp-adjacent Time-Circuit) is not established. The cleaner match is 16 = the 4×4 court grid, which both Crowley's and Bastian's tables fill.
 
 ## Astrology (p. 27)
 
@@ -128,7 +138,7 @@ He prints "Aquisitio", not Acquisitio. **Printed anomaly:** **28 appears twice**
 - **Louis T. Culling**, "The Yi King and Sex Magic", in *Sex Magic* (Llewellyn, 1971).
 - **Martin Schonberger**, *The I Ching and the Genetic Code* (1979). Also Johnson Yan, *DNA and the I Ching* (1991).
 - **Robin Armstrong**, as above. Also Bastian's own *The Way of Demons* (Hadean, 2020), Jake Stratton-Kent's *Geosophia*, and Wilhelm/Baynes (Routledge, 1968).
-- The first entries on p. 31 are cut off at the top of the photo. They are something on ritual and performance and the anthropology of the martial arts, published by Praeger, 2002.
+- p. 31 also lists: **David E. Jones**, ed., *Combat, Ritual and Performance: Anthropology of the Martial Arts* (Praeger, 2002); Michio Kaku, *Parallel Worlds* (Penguin, 2006); King and Skinner, *Techniques of High Magic* (Sphere, 1981); Bob Klein, *Movements of Magic* (Aquarian, 1984); Kwan Lau, *The I Ching Tarot* (as above); Saul P. Larner, *Astrological Assistance* (Tengu, 1996); Legge, *I Ching: Book of Changes* (Bantam, 1964); Da Liu, *T'ai Chi Ch'uan and I Ching* (Routledge & Kegan Paul, 1974); Roderick Main, "Magic and Science in the Modern Western Tradition of the I Ching", *Journal of Contemporary Religion* 14.2 (1999); Melinda Maxfield, "The Journey of the Drum" (1994), on I Ching drumming patterns; Harmen Mesker, "Yin, Yang & Quantum Mechanics", *The Oracle* 1.4 (1996/97); Dan Miller, "The Circle Walk Practice of Ba Gua Zhang" (2011); Park Bok Nam and Dan Miller, *The Fundamentals of Pa Kua Chang* (1999); Jana Riley, *Tarot Dictionary and Compendium* (Weiser, 1995); James Rioux, "Introduction to I Ching and Qabalah" (2001); Arthur Rosengarten, *Psychology and Tarot* (Paragon House, 2000); William Seabrook, *Witchcraft* (Harrap, 1941); M. Sector, "The I Ching and Non-Linear Mapping…" (continued on p. 32).
 
 ## Speculative (not in Bastian)
 
@@ -140,15 +150,14 @@ He prints "Aquisitio", not Acquisitio. **Printed anomaly:** **28 appears twice**
 
 ## Flags
 
-- p. 26 (Alchemy) was not photographed.
-- The tops of pp. 24 and 31 and the p. 27→28 join are partly cut off.
-- The geomancy duplicate 28 / missing 38 is in the print (or my reading of it); the Tristitia → 38 correction is my inference.
+- The p. 27→28 join and the p. 26→27 sentence join are partly cut off or unphotographed. (pp. 24, 26 and 31 are now complete, from the user's follow-up photos.)
+- The geomancy duplicate 28 / missing 38 is in the print (confirmed by the full p. 24 photo, and by the user). The Tristitia → 38 correction is our inference.
 - The rotated photos were read sideways; check any quote against the page before reusing it.
 - The photographs are courtesy of the user.
 
 ## Sources
 
-- Simon Bastian, *Before Completion: I Ching and its Correspondences in Western Occultism* (Hadean Press, 2022), pp. 19–32.
+- Simon Bastian, *Before Completion: I Ching and its Correspondences in Western Occultism* (Hadean Press, 2022), pp. 19–32 (now including pp. 24, 26 and 31 in full).
 - Code: `cli/geomancy.py` (figure bits); King Wen trigram table (as in `cli/iching.py`).
 - [[reading-2026-10-19-addendum]] (Crowley court table), [[hexagram-47-translations]].
 
