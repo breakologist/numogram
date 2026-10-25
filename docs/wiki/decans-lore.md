@@ -170,3 +170,30 @@ Essay §VI in the Miscellany discusses the competing starting points: whether th
 ---
 
 *by Em (in collaboration with the user)*
+
+## Tarot cross-check: 5 of Cups, XIII Death, XVI The Tower
+
+Source: *Tarot Correspondences*. The author and publisher can't be seen in the photos, so it is cited by title only. The user sent photos of the tables for these three cards on 25 Oct 2026. The tables are mostly recompiled from Crowley's *777*. The book is in copyright, so this section uses short quotes and summaries only.
+
+### Sourced (as printed)
+
+- **The 5 of Cups is the card for today's decan, Scorpio I** (0°–9° Scorpio, dates given as 23 Oct – 1 Nov).
+  - It is ruled by Mars, so its associated planetary major is **The Tower**. The sign is Scorpio, whose major is **Death**. Today's face therefore links both trumps.
+  - The book's Picatrix row reads "A man with a lance in his right hand… the head of a man" and gives the signification as "Settlement, sadness, ill will, and hatred". That matches the **Greer/Warnock** wording (where Attrell/Porreca say "power"; see above), so the book likely used Greer/Warnock.
+  - Its Agrippa row is the 1651 image: "A woman of good face and habit, and two men striking her".
+  - Its title (Thoth/Golden Dawn) is "Disappointment / Loss in Pleasure", and the number 5 is linked to Geburah (Severity) and "war gods".
+- **XVI The Tower:**
+  - Alternate titles include **"the Arrow"** and the Italian **"La Saetta, La Sagitta"** (*saetta* means both arrow and lightning bolt), as well as the Thunderbolt and La Maison Dieu.
+  - Planet: Mars. Letter: **Pe**, a double letter meaning **mouth** ("to speak"), with values 80 and 800 (final form). Its path runs from Netzach to Hod.
+  - Animals listed include the scorpion, wasps and "all stinging insects". Plants include thistle, nettle and "all thorny and lacrimatory plants" (the book misprints "hoseradish").
+  - Magical weapon: the Sword.
+- **XIII Death:**
+  - Alternate titles: The Scythe and "the Unnamed Card". Letter: **Nun**, meaning **fish** ("to propagate"). Its path runs from Tiphereth to Netzach.
+  - Animals: scorpion, eagle, phoenix and scarab. The book also lists "The Pain of the Obligation; The Oath" for this card.
+
+### Speculative (Em's associations, not claims made by the book)
+
+- **The Tower as "the Arrow" and Scorpio I.** Atallah's Arabic Picatrix shows the Scorpio I figure with an arrow in each hand, where the Latin tradition has a lance. The Mars trump that rules this decan has "the Arrow" and *Saetta* among its old names. So the Arabic image fits the Tower better than the Latin one does.
+- **Pe (mouth) and hexagram 47.** In the Mawangdui text of 47 line 1, Shaughnessy has "The lips are entangled". The Judgment of 47 also has words that "are not believed". A Mars mouth that is either shut or not believed is a loose echo of both.
+- **Nun (fish) and Albotham.** Death's letter means fish, Death's sign is Scorpio, and today's mansion is Albotham/Arrexhe (mansion 28, in Pisces), whose seal is a fish. That makes a fish-to-fish link across sun and moon today.
+- **Thorns.** The Tower's "all thorny… plants" lines up with the thistles and thorns of 47 line 3 (see [hexagram-47-translations](hexagram-47-translations.md)).
