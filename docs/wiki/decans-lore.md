@@ -219,7 +219,7 @@ Source: Robert Wang, *The Qabalistic Tarot*, pp. 83–85, plus the Five of Cups 
 
 ### Speculative (Em's associations, not claims made by Wang)
 
-- **The Spear and the lance.** Geburah's Spear, "swift and complete" destruction, matches the lance carried by the Picatrix Scorpio I figure. The Agrippa and Picatrix images (a woman struck, a man holding a severed head) also look like Geburah at work.
+- **The Spear and the lance.** Geburah's Spear, "swift and complete" destruction, matches the lance carried by the Picatrix Scorpio I figure. The Agrippa and Picatrix images (a woman struck, a man holding a severed head) also look like Geburah at work. The lance also turns up on the Chalice Well lid, which Bond said "represents the Bleeding Lance", and whose foliage is the Glastonbury Thorn. That makes a lance and thorns together, like 47 line 3 and the Tower's thorny plants (see [[bastian-before-completion]], noise/bias note).
 - **Lightning.** Elohim Gibor's "lightning and flame" fits the Tower, and its old name *La Saetta* (arrow or lightning bolt).
 - **Dried forest and Exhaustion.** Wang's blighted, dried forest echoes 47's alternate titles "Dried Up" and "Exhaustion", and its lake with no water.
 - **Pe in Pehilyah.** The photo shows פהליה, which does begin with **Pe** (פ), the Tower's letter, meaning "mouth".
