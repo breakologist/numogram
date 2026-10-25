@@ -217,6 +217,31 @@ Source: Robert Wang, *The Qabalistic Tarot*, pp. 83–85, plus the Five of Cups 
   - Crowley's inverted pentagram on the card means "the triumph of matter over spirit".
   - The page shows the card in four decks: Golden Dawn, Thoth, Waite and a Marseille-style deck.
 
+### Where do the angels-to-decans attributions come from?
+
+**Documented**
+- **The names.** All 72 come from Exodus 14:19–21. Each of the three verses has 72 letters. The verses are written one under another in boustrophedon (alternating direction), and each column of three letters gives one name. Adding -el or -yah to each makes the angel names.
+- **Agrippa, *Three Books* III.25 (1533).** Agrippa takes this extraction from Reuchlin's *De arte cabalistica* (1517). He says the 72 angels "are set over the seventy two Celestial quinaries, and so many Nations, and tongues, and joynts of mans body". A quinary is 5° of the zodiac, so 72 of them cover all 360°.
+  - So the zodiacal link is in print by 1533, but Agrippa gives no starting point and no table of degrees.
+  - His table includes Leuuiah לוויה and Pahaliah פהליה. Source: [esotericarchives III.25](https://www.esotericarchives.com/agrippa/agripp3b.htm).
+- **Lenain, *La Science cabalistique* (1823).** This is the first explicit table of dates that I could find attested. It assigns each genie 5° of the zodiac (with matching calendar days) plus a 20-minute period of the day.
+  - The table **starts at 0° Aries with Vehuiah**. Ambelain's *La Kabbale pratique* (1951) carried this version into popular use.
+  - In this scheme, Scorpio 0–10° falls to #43 Vevaliah and #44 Ielahiah.
+- **Golden Dawn (Book T; Crowley's *777*, 1909; Regardie).** This is the source Wang follows.
+  - The Golden Dawn zodiac starts at **0° Leo** (the "Regulus" start used for the decans in Book T), and #1 **Vehuiah takes Leo 0–5°**.
+  - Counting six angels per sign from there: Leo #1–6, Virgo #7–12, Libra #13–18, Scorpio #19–24. That puts **#19 Leuviah (לוויה) at Scorpio 0–5° and #20 Pahaliah (פהליה) at 5–10°**, which matches Wang's Five of Cups exactly.
+  - Each decan, and so each small card, gets two angels: one for day, one for night.
+  - A warning on online tables: many Aries-start tables also give Golden Dawn card names, so the angels and the decans in them don't always line up.
+
+**Not verified, or assumed**
+- **Ganell, *Summa sacre magice* (1346).** It has several chapters on the Shemhamphorash (I.1.10, II.2.5, II.2.7, II.3.3, IV.2.1–2), but its list of 72 names is a Latin and Greek string of divine names ("Theos, Onay, El…"), not the Exodus angels. I found no assignment to degrees or decans in the secondary summaries (Veenstra; Gehr's edition, *Summa sacre magice*, 2016–17).
+  - **Not checked in Gehr's edition itself**, so the gap may be in my sources rather than in the text.
+- **Kircher, *Oedipus Aegyptiacus* (1652–54).** It has diagrams of the 72 names paired with nations and divine names. I haven't confirmed that it gives degrees.
+- **Rudd, *Treatise on Angel Magic* (Harley 6482, c. 1700; ed. McLean).** It pairs the 72 angels with the 72 Goetic spirits. Linking those spirits to decans and quinances is Golden Dawn and later work, so I'm not counting it as Rudd's own scheme.
+- **Earlier Jewish Kabbalah** uses the 72-fold name (*shem ha-meforash*) in meditation and theurgy. As far as I can tell, the 5°-zodiac link is a Christian Renaissance addition.
+
+**Summary.** The zodiac link is attested in Agrippa (1533); Lenain (1823) gives dates from Aries; the Golden Dawn moves the start to Leo and ties the angels to the decan cards. Wang's Livoyah and Pehilyah for Scorpio I are the Golden Dawn assignment.
+
 ### Speculative (Em's associations, not claims made by Wang)
 
 - **The Spear and the lance.** Geburah's Spear, "swift and complete" destruction, matches the lance carried by the Picatrix Scorpio I figure. The Agrippa and Picatrix images (a woman struck, a man holding a severed head) also look like Geburah at work. The lance also turns up on the Chalice Well lid, which Bond said "represents the Bleeding Lance", and whose foliage is the Glastonbury Thorn. That makes a lance and thorns together, like 47 line 3 and the Tower's thorny plants (see [[bastian-before-completion]], noise/bias note).
