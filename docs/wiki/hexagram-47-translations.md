@@ -1,8 +1,8 @@
 ---
 title: "Hexagram 47 困 Kun: translations side by side"
 created: 2026-10-24
-last_updated: 2026-10-24
-source_count: 7
+last_updated: 2026-10-25
+source_count: 8
 status: living
 tags: ["i-ching", "hexagram-47", "kun", "translations", "comparison", "research"]
 ---
@@ -184,6 +184,35 @@ The text comes from https://thevalis.net/hexagrama/wilhelm-1924/47-kun/ ("Quelle
 - The colours: *scharlachrot* (line 2, 朱) and *purpurn* (line 5, 赤). Wilhelm keeps the two colours apart as Legge does, but with "purple" for 赤, which usually means red. *Kniebinden* (knee-bands) chooses the robe sense of 紱, against Wen's "sash" and Huang's dual gloss.
 - 金車 becomes *goldner Wagen* (golden carriage), as in Wen and Huang. 臲卼 becomes *unsicher* (unsteady), a psychological rendering where Legge has "a high and dangerous position". 葛藟 becomes just *Ranken* (tendrils), easily torn, which makes line 6 nearly benign.
 
+## *The Gnostic Book of Changes* ("Michael Servetus"): selected nuances
+
+This is an unpublished compilation that sets about a dozen translations side by side, with Jungian commentary from its editor. Hexagram 47 is at PDF pp. 730–741 of the 973-page file. The user supplied it on 25 Oct 2026. The compiler calls it a private study workbook, "not for publication or sale", because most of the translations quoted in it are still in copyright. So this section uses short attributed quotes only, citing each original translator *via* the compilation, and does not try to be complete.
+
+- **Shaughnessy (from the Mawangdui manuscript)** names the hexagram **"Entangled"**, and the silk text gives some different images:
+  - Line 1: "The lips are entangled in a columnar tree", where the received text has the buttocks on a stump.
+  - Line 3: "crying out in the thistles".
+  - Lines 2 and 5: the red sash becomes "scarlet kneepads" and "crimson kneepads", with "an aromatic grass sacrifice".
+  - Lines 5 and 6: "Doubled rafters", where the received text has the cutting off of nose and feet.
+- **The stump in line 1, as each translator sees it:**
+  - Blofeld: "dried branches entangling the lower part of his body". His note: whoever receives this line "must resign himself to failure".
+  - Liu: "the bare tree". His note says the line indicates "fear, sadness or mourning".
+  - Wu: "tree roots". His note: "It is all in his mind", that is, one is worrying about hardship before it comes.
+- **The Image.** The marsh without water is read as a call to spend one's life on one's purpose:
+  - Blofeld: the superior man "risks his life to carry out his will".
+  - Cleary: "use life to the full".
+  - Cleary's second version: "living out their destiny".
+  - Wu: the jun zi will "dedicate his life to fulfill his commitments".
+- **Line 2.** Cleary's two versions disagree. One has the subject "Hard up for wine and food"; the other has him "Exhausted, but with food and drink". So the line is either want or excess, and Blofeld's "indulgence in food and drink" sides with excess.
+- **Anthony reads the whole hexagram as *doubt*.** She writes that our trust in the ruling power "is shaken by doubt", and that "We often receive this hexagram when we feel tired". On line 1 she says we "must firmly resist doubt and hopelessness" and that the way out "will show itself at the right time".
+- **Wing and Siu** read the hexagram psychologically. Wing on line 1: a trap "of your own making" that comes from discouragement. Wing and Siu on line 3: being oppressed "by things that are not oppressive". Wing on line 2: adversity that comes from "boredom".
+- **Wu on line 6** makes the way out a gamble: if one will regret both acting and not acting, one "might as well do something".
+- **The editor's own readings** (the compiler's commentary, not a translation):
+  - Line 1 is a stalemate tinged with self-pity and illusion, where "things aren't as bad as they seem".
+  - Line 2 calls for a sacrifice of the ego to the Self.
+  - Line 3 reads the rocks and thorns as the thorn barrier of fairy tales that separates the hero from the sleeping maiden, "the feminine principle in its destructive aspect".
+  - Line 5 has the nose stand for intuition, with the feet cut off we "don't have a leg to stand on".
+  - Line 6 says the creepers hold only through the illusion that they can't be cast off.
+
 ## Notable divergences
 
 1. **臀 tún, line 1.** Legge has "bare buttocks" and adds that the symbolism "is rather a favourite with the duke of Kâu;—'chacun à son goût.'" He reads it as sitting on a stump. Wen makes it a punishment: "Caned on the backside". The usual modern reading (Wilhelm, as quoted) is that one *sits* under a bare tree. Wen's reading ties line 1 to the corporal punishments of line 5, so the six lines become one story of judicial ordeal.
@@ -207,6 +236,8 @@ The text comes from https://thevalis.net/hexagrama/wilhelm-1924/47-kun/ ("Quelle
 
 ## Speculative links to this week's readings
 
+- *(25 Oct, Em, speculative.)* Anthony's reading of 47 as doubt, and her line "We often receive this hexagram when we feel tired", happen to match the user's own remark that morning ("not sure about doubt"). Line 1 is also the line that turns 47 into 58, and Wu's gloss on it, "It is all in his mind", fits that.
+
 *Interpretation only. None of this is in the sources.*
 
 - **歲 = Jupiter.** Wen glosses line 1's three 歲 as Jupiter-years and harvests. Jupiter rules the third decan of Libra in the Chaldean decan scheme. Tarot gives that decan to the 4 of Swords (see [[reading-2026-10-18]]), and major arcanum X, the Wheel of Fortune, is Jupiter's card ([[reading-2026-10-20]], 20 Oct; the 22 Oct Justice/47 reading is in [[john-paul-ii]]). So the "three years" in the dark valley could be read as Jupiter's turnings, a wheel that has to complete its cycles before the blockade lifts.
@@ -224,6 +255,8 @@ The text comes from https://thevalis.net/hexagrama/wilhelm-1924/47-kun/ ("Quelle
 - Legge's Appendix II (the image) was not fetched.
 
 ## Sources
+
+- "Michael Servetus" (comp.), *The Gnostic Book of Changes: Studies in Crypto-Teleological Solipsism* (unpublished PDF workbook, n.d.), hexagram 47 at PDF pp. 730–741. It quotes Blofeld (1965), Da Liu (1975), Shaughnessy (Mawangdui, 1996), Cleary (two versions), Wu, Wing, Siu and Anthony. Supplied by the user.
 
 - Richard Wilhelm, *I Ging: Das Buch der Wandlungen* (Jena: Diederichs, 1924), hexagram 47, via https://thevalis.net/hexagrama/wilhelm-1924/47-kun/ (Urteil and Bild also at i-ching.eu and i-ging-orakel.net).
 - Legge, *The I Ching* (SBE XVI, 1882), hexagram XLVII: https://www.sacred-texts.com/ich/ic47.htm
