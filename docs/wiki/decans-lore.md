@@ -197,3 +197,30 @@ Source: *Tarot Correspondences*. The author and publisher can't be seen in the p
 - **Pe (mouth) and hexagram 47.** In the Mawangdui text of 47 line 1, Shaughnessy has "The lips are entangled". The Judgment of 47 also has words that "are not believed". A Mars mouth that is either shut or not believed is a loose echo of both.
 - **Nun (fish) and Albotham.** Death's letter means fish, Death's sign is Scorpio, and today's mansion is Albotham/Arrexhe (mansion 28, in Pisces), whose seal is a fish. That makes a fish-to-fish link across sun and moon today.
 - **Thorns.** The Tower's "all thorny… plants" lines up with the thistles and thorns of 47 line 3 (see [hexagram-47-translations](hexagram-47-translations.md)).
+
+## Wang, *The Qabalistic Tarot*: Geburah, the Fives, Five of Cups
+
+Source: Robert Wang, *The Qabalistic Tarot*, pp. 83–85, plus the Five of Cups page (its page number isn't visible in the photo). The user sent photos of these pages on 25 Oct 2026. The book is in copyright, so this section uses short quotes and summaries only.
+
+### Sourced
+
+- **Geburah (pp. 83–84).** Its symbols are the Pentagon, the five-petalled Tudor rose, the Sword, the Spear and the Scourge. Its planet is Mars and its colour red.
+  - Wang quotes a Golden Dawn passage. It names the planet Madim and the divine name Elohim Gibor, "at whose steps are lightning and flame". It also names the archangel Kamael, the order of angels the Seraphim, and Geburah's other title, Pachad (fear).
+  - Geburah tears away what is useless, which Wang likens to fire sweeping a blighted, dried forest.
+- **Rhythm (p. 84).** Wang quotes Dion Fortune: Christianity "ignores rhythm. It balances God with Devil instead of Vishnu with Siva". He uses this to describe the pull between Chesed and Geburah.
+- **Weapons (p. 85).** "The spear represents a destruction which may be swift and complete", while the scourge and chain stand for the continual application of great force, that is, discipline.
+- **The Fives (p. 85):** "Opposition, strife and struggle; war, obstacle to the thing in hand."
+- **Five of Cups:**
+  - Wang titles it "Lord of Loss in Pleasure (Mars in Scorpio)". He gives the angels of the decan as Livoyah (לוויה) and Pehilyah (פהליה), and places the card as Geburah in Briah, the Mental World.
+  - The watery nature of Scorpio is "totally disonsonant [sic]" with the fiery nature of Geburah.
+  - It is "one of the cards which can mean death" if the surrounding cards support that reading, possibly the death of someone loved rather than the querent.
+  - Crowley's inverted pentagram on the card means "the triumph of matter over spirit".
+  - The page shows the card in four decks: Golden Dawn, Thoth, Waite and a Marseille-style deck.
+
+### Speculative (Em's associations, not claims made by Wang)
+
+- **The Spear and the lance.** Geburah's Spear, "swift and complete" destruction, matches the lance carried by the Picatrix Scorpio I figure. The Agrippa and Picatrix images (a woman struck, a man holding a severed head) also look like Geburah at work.
+- **Lightning.** Elohim Gibor's "lightning and flame" fits the Tower, and its old name *La Saetta* (arrow or lightning bolt).
+- **Dried forest and Exhaustion.** Wang's blighted, dried forest echoes 47's alternate titles "Dried Up" and "Exhaustion", and its lake with no water.
+- **Pe in Pehilyah.** The photo shows פהליה, which does begin with **Pe** (פ), the Tower's letter, meaning "mouth".
+- **Livoyah and death.** Read as an ordinary Hebrew word, לוויה (*levayah*) means a funeral, or the act of escorting someone. That suits Wang's "can mean death", and Death is the decan's zodiacal major. The angel name is really formed from a verse of Exodus (the 72-angel Shem ha-Mephorash), so the match with the ordinary word is probably coincidence.
