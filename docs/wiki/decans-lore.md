@@ -249,3 +249,6 @@ Source: Robert Wang, *The Qabalistic Tarot*, pp. 83–85, plus the Five of Cups 
 - **Dried forest and Exhaustion.** Wang's blighted, dried forest echoes 47's alternate titles "Dried Up" and "Exhaustion", and its lake with no water.
 - **Pe in Pehilyah.** The photo shows פהליה, which does begin with **Pe** (פ), the Tower's letter, meaning "mouth".
 - **Livoyah and death.** Read as an ordinary Hebrew word, לוויה (*levayah*) means a funeral, or the act of escorting someone. That suits Wang's "can mean death", and Death is the decan's zodiacal major. The angel name is really formed from a verse of Exodus (the 72-angel Shem ha-Mephorash), so the match with the ordinary word is probably coincidence.
+
+
+See also: [[reading-2026-10-26]] (three mouths; Chad, Cedd and Bosse-de-Nage).

@@ -271,3 +271,6 @@ This is an unpublished compilation that sets about a dozen translations side by 
 ---
 
 *by Em (in collaboration with the user)*
+
+
+See also: [[reading-2026-10-26]] (three mouths; Chad, Cedd and Bosse-de-Nage).
