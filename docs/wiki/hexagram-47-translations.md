@@ -265,7 +265,19 @@ This is an unpublished compilation that sets about a dozen translations side by 
     - Line 5: Baynes's commentary says one should "turn to God", where we have "stand before God" from *vor Gott*.
     - Line 6: the bonds "can easily be broken", where we have "torn" from *zerreißen*, and the subject "moves uncertainly".
   - Neither difference changes the sense, so the column is unchanged.
-  - The commentary pages (Book III) are still to come from the user.
+  - **Book III commentary (pp. 623–628, from the user's photos):**
+    - **Structure:** the nuclear trigrams are Sun and Li. The rulers are the nine in the second place and the nine in the fifth: firm, central, and each enclosed by dark lines.
+    - **Sequence:** pushing upward without stopping meets oppression, which is why 47 follows 46.
+    - **Miscellaneous Notes:** Oppression "means an encounter", something that happens by chance.
+    - **Appended Judgements:** Oppression is the test of character. It leads through perplexity to success and teaches one to lessen one's rancour.
+    - **Commentary on the Decision:** "He who considers the mouth important falls into perplexity". Wilhelm's gloss is that Tui (the upper trigram) suggests speech, but one gets no hearing, because K'an (the lower trigram) means earache, hence a disinclination to listen.
+  - **Line notes (Book III):**
+    - Line 1 stands for the buttocks: one sits. The gloomy valley is the pit in the abyss, with K'an in the north, where gloom prevails.
+    - Line 2: K'an is wine and Tui is food. The two are in congruity, so the sacrifice is a supranatural one.
+    - Line 3 is a man holding the wrong office. The Appended Judgements allude to imminent death.
+    - Line 4: K'an is a carriage and Tui is metal, hence the golden carriage. The line is in the minister's place.
+    - Line 5: the nose is cut off by the dark line above it, and the feet by the six in the third place.
+    - Line 6: remorse is an auspicious change.
 - Legge's Appendix II (the image) was not fetched.
 
 ## Sources
