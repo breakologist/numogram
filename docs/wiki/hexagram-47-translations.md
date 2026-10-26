@@ -251,7 +251,21 @@ This is an unpublished compilation that sets about a dozen translations side by 
 ## Flags
 
 - The Chinese was checked against the clearer photographs (24 Oct). Still uncertain, all variant-form questions: 臀 in line 1 (the printed form may be a variant such as 臋); 歲 in line 1 (it may be printed as 歳); 藜 in line 3 (it may be printed as 蔾); 藟 in line 6 (the printed form looks like a variant, perhaps 蘲 or a 蘽-type form, not 蘘); 臲 in line 6 (an unusual printed form, not 尼). Line 6 also has a stray dot beside 有, under 吉. It is probably a print speck or a reading mark, not a character.
-- The Wilhelm column is from a single web transcription of the 1924 German (OCR slips corrected). Check it against a scan when one is available.
+- **Checked against print (26 Oct 2026).** This replaces the earlier note to check the Wilhelm column against a scan. The user received the printed Wilhelm/Baynes (Princeton, ISBN 0691284571), where hexagram 47 is on pp. 181–185, and sent photos of those pages. Only a few words are quoted from Baynes below. Our column stays as it is, because it is Em's own English from the 1924 German.
+  - **Confirmed in Baynes:**
+    - The title is "Oppression (Exhaustion)", with a footnote giving the literal sense, "exhausted".
+    - The Judgement has the words that are not believed and the cheerful strong man.
+    - Line 1 has the bare tree, the gloomy valley and an "inner delusion".
+    - Line 2 has scarlet knee bands, which princes wore.
+    - Line 3 has the stone, thorns and thistles, and Confucius's comment that the hour of death draws near.
+    - Line 4 has the golden carriage, the humiliation and a "great embarrassment".
+    - Line 5 has **purple** knee bands, which ministers wore. So the point that Wilhelm alone among our sources says purple (Notable divergences, item 18) still holds in English.
+    - Line 6 has the creeping vines.
+  - **Small wording differences from our column:**
+    - Line 5: Baynes's commentary says one should "turn to God", where we have "stand before God" from *vor Gott*.
+    - Line 6: the bonds "can easily be broken", where we have "torn" from *zerreißen*, and the subject "moves uncertainly".
+  - Neither difference changes the sense, so the column is unchanged.
+  - The commentary pages (Book III) are still to come from the user.
 - Legge's Appendix II (the image) was not fetched.
 
 ## Sources
