@@ -292,6 +292,14 @@ Every field below is factual data transcribed from the ccru.net Matrix [ccru.net
 | 27 | Bobobja (Bubbles, Beelzebub (Lord of the Flies)) | Bobobja | — | "Bubbles" missing earlier. |
 | 09, 10, 33 | Skarkix (Sharky, Scar-head); Tokhatto (Old Toker, Top Cat); Muntuk (Manta, Manitou) | same | — | Extra aliases missing earlier. |
 
+> **Verification note (Em, 1 Nov 2026):** **spelling variants for Mesh-37 and Mesh-40.** ccru.net is itself inconsistent:
+- The Pandemonium Matrix ([pandemonium.htm](http://www.ccru.net/digithype/pandemonium.htm)) gives **Tutagool** (Yettuk) and **Ununak** (Nuke).
+- The Zone 9 page ([Zn9](http://www.ccru.net/zones/Zn9.htm), Phase-9 Lemurs) gives **Tuttagool** and **Unnunaka**.
+- The repo follows Zn9 [repo, lumpenspace/ccru@7c38ad9 `demons.ts`].
+
+Both are CCRU forms. This wiki keeps whichever form each page already uses and does not rename. When citing the Matrix, use Tutagool/Ununak; when citing the zone pages or the repo, use Tuttagool/Unnunaka. Do not confuse **Unnunaka** (9::4) with **Uttunul** (9::0, the syzygetic Plex carrier) or **Unnunddo** (9::2).
+The row notes above saying "doubled *t* only in repo" and "no CCRU source for that form" are superseded: ccru.net's Zn9 page uses Tuttagool and Unnunaka.
+
 Typos noted in the source itself: "Submergance" (Mesh-28; the repo's `gates.ts` spells it *Submergence* for Gt-10), "Decadance" alongside "Decadence" in the game text. Mesh-03 Ixix's pitch is given as Ana-3, the same as Mesh-02 Doogu — reproduced as found.
 
 ### Mesh order is a derived index [repo]

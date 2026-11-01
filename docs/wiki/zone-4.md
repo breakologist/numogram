@@ -154,6 +154,8 @@ Types from `demons.ts` (`TC` = {1,2,4,5,7,8}: syzygy if digits sum to 9; chrono 
 | 8::4 | Numko | chrono | M#32 |
 | 9::4 | Unnunaka | amphi | M#40 |
 
+> **Verification note (Em, 1 Nov 2026):** Tuttagool/Unnunaka follow the Zone 9 page ([Zn9](http://www.ccru.net/zones/Zn9.htm)) and the repo. The Pandemonium Matrix ([pandemonium.htm](http://www.ccru.net/digithype/pandemonium.htm)) spells them **Tutagool** and **Ununak**. Both forms are CCRU; see [[pandemonium-matrix#name-and-spelling-variants]].
+
 - Door / first-degree imp: Fourth Door, the 'Time-Delta' ('the worst place in the world' of the Kurtz mythos): Krako (4::0) [ccru.net]
 - Nma location (Stillwell's ethno-topography): volcanic jungles of the Tak Nma; hydrocycle: riverine flow [ccru.net]
 - Totem animals: cats and dogs in predatory mode; among the Tak Nma, rabid animals [ccru.net]

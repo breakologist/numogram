@@ -14,7 +14,9 @@ status: curated
 > - The **Mesh-Notes** section previously quoted long stretches of `occultures/mesh.htm` from a local mirror and linked a local-only `127.0.0.1:8080` address. With the user's approval, it has been shortened for copyright reasons to a brief paraphrase per note, with only short quoted phrases, cited to the public page [http://www.ccru.net/occultures/mesh.htm](http://www.ccru.net/occultures/mesh.htm).
 > - The interpretive blockquotes ("cultural immune system", Zone 0 = coccyx, Zone 6 = third eye, etc.) are **wiki commentary, not CCRU text**.
 
-Canonical definitions curated from `raw/www.ccru.net/syzygy.htm` (CCRU master glossary) and `raw/www.ccru.net/occultures/mesh.htm` (Mesh-Notes). These pages function as the authoritative parent references for concepts that recur across the wiki.
+Canonical definitions curated from [ccru.net/syzygy.htm](http://www.ccru.net/syzygy.htm) (CCRU master glossary) and [ccru.net/occultures/mesh.htm](http://www.ccru.net/occultures/mesh.htm) (Mesh-Notes).
+
+> **Note (Em, 1 Nov 2026):** source links changed from local `raw/` mirror paths to the public ccru.net URLs. These pages function as the authoritative parent references for concepts that recur across the wiki.
 
 ---
 
@@ -249,4 +251,4 @@ A–Z glossary: decimal-alphabetic values A = 10 … Z = 35; AL = 31 agrees with
 
 *Not covered (deliberately):* the many fictional-world entries (AOE factions, K-Goth subculture, Sarkon, Y2K movements) are in the source but outside this page's scope.
 
-*Curated from: `raw/www.ccru.net/syzygy.htm`, `raw/www.ccru.net/occultures/mesh.htm`; verified A–Z section from `http://www.ccru.net/id(entity)/glossary.htm` (fetched 1 Nov 2026).*
+*Curated from: [ccru.net/syzygy.htm](http://www.ccru.net/syzygy.htm), [ccru.net/occultures/mesh.htm](http://www.ccru.net/occultures/mesh.htm); verified A–Z section from `http://www.ccru.net/id(entity)/glossary.htm` (fetched 1 Nov 2026).*

@@ -140,6 +140,8 @@ Types from `demons.ts` (`TC` = {1,2,4,5,7,8}: syzygy if digits sum to 9; chrono 
 | 8::1 | Murrumur | syzygy | M#29 |
 | 9::1 | Tuttagool | amphi | M#37 |
 
+> **Verification note (Em, 1 Nov 2026):** Tuttagool/Unnunaka follow the Zone 9 page ([Zn9](http://www.ccru.net/zones/Zn9.htm)) and the repo. The Pandemonium Matrix ([pandemonium.htm](http://www.ccru.net/digithype/pandemonium.htm)) spells them **Tutagool** and **Ununak**. Both forms are CCRU; see [[pandemonium-matrix#name-and-spelling-variants]].
+
 - Door / first-degree imp: First Door, the 'Door of Doors': Lurgo (1::0) 'the Initiator', widely related to Legba ("the first and last Loa to be invoked") [ccru.net]
 - Nma location (Stillwell's ethno-topography): coral atolls of the Mu Nma; hydrocycle: shallow seas [ccru.net]
 - Totem animals: armoured fish creatures (ichthyoid with crustacean/mollusc/gastropod traits) [ccru.net]

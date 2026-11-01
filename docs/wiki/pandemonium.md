@@ -110,3 +110,5 @@ In the roguelike, demons are spawned according to their net-span and zone affili
 ---
 
 *The Pandemonium Matrix is the 45-fold body of the Numogram. Every zone, every current, every gate carries its share. The labyrinth is not empty — it is Crowded.*
+
+> **Verification note (Em, 1 Nov 2026):** Tutagool/Ununak follow the Matrix; the variants Tuttagool/Unnunaka come from the Zone 9 page ([Zn9](http://www.ccru.net/zones/Zn9.htm)) and the repo. Both forms are CCRU; see [[pandemonium-matrix#name-and-spelling-variants]].

@@ -82,6 +82,8 @@ This maps directly to the Numogram's spinal level assignments:
 
 > **Verification note (Em, 1 Nov 2026):** **this table is not sourced and mostly disagrees with the sources.** *Barker Speaks* gives no zone→spine table. The zone-level Mu Tantrism assignments are: **0 Coccygeal, 1 Dorsal (Thoracic), 3 & 6 Third-eye plane, 8 Lumbar, 9 Sacral**. Zones 2, 4, 5 and 7 have no entry [repo, lumpenspace/ccru@7c38ad9 `zones.ts` `spinal`]. Zone 1 = Dorsal and Zone 6 = third-eye were also confirmed on ccru.net ([Zn1](http://www.ccru.net/zones/Zn1.htm), [Zn6](http://www.ccru.net/zones/Zn6.htm)). So zones 1, 2, 3, 4, 5, 6, 7 and 8 are wrong or unsourced as given above, and the "Sacrum = degenerated second skull (Goethe)" gloss was not found on the pages checked.
 
+> **Verification note (Em, 1 Nov 2026):** follow-up correction. The Goethe gloss **is** sourced. The Zone 9 page says the Sacrum ("sacred bone") has been identified, "by Goethe amongst others", as a degenerated second skull [ccru.net, [Zn9](http://www.ccru.net/zones/Zn9.htm)]. Zone 9 = Sacral is confirmed there too.
+
 
 The spinal ascent from Coccygeal (Zone-0) to Cavernous (Zone-8) traces a regression through geocosmic time. Zone-9 (Sacrum) is the "degenerated second skull" — a frozen cranial catastrophe compressed into the pelvis.
 

@@ -46,6 +46,8 @@ Cthellloid metallic ocean of the earth's iron core. The outermost reaches the in
 - 9::7 Nuttubab  
 - 9::8 Ummnu  
 
+> **Verification note (Em, 1 Nov 2026):** Tuttagool/Unnunaka follow the Zone 9 page ([Zn9](http://www.ccru.net/zones/Zn9.htm)) and the repo. The Pandemonium Matrix ([pandemonium.htm](http://www.ccru.net/digithype/pandemonium.htm)) spells them **Tutagool** and **Ununak**. Both forms are CCRU; see [[pandemonium-matrix#name-and-spelling-variants]].
+
 ## Coordinates (4 Layouts)
 
 - Original: (400, 770)  
