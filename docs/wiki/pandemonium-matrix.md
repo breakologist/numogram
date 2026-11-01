@@ -54,12 +54,17 @@ These are NOT syzygies (don't sum to 9) but share a structural kinship.
 
 | Pair | Family | Notes |
 |------|--------|-------|
-| 1::9 | Amphidemon | Surge reaches to Plex |
-| 2::8 | Amphidemon | Separation reaches to Multiplicity |
-| 3::7 | Amphidemon | Release reaches to Blood |
-| 4::6 | Amphidemon | Gate reaches to Abstraction |
+| 9::1 | Amphidemon (Tutagool, Mesh-37) | Surge reaches to Plex |
+| 8::2 | **Cyclic Chronodemon** (Nammamad, Mesh-30) | Separation reaches to Multiplicity |
+| 7::3 | Amphidemon (Pabbakis, Mesh-24) | Release reaches to Blood |
+| 6::4 | Amphidemon (Tchakki, Mesh-19) | Gate reaches to Abstraction |
 
-All four decadence pairs are amphidemons — they cross the circuit/outer boundary. The 5+5 Decadence pair is zone 5 connecting to itself (the phase-change discussed in the fiveness tetralogue).
+Three of the four demon-carried decadence pairs are amphidemons, which cross the circuit/outer boundary. 8::2 is a cyclic chronodemon inside the Time-Circuit. 5+5 is a Decadence pair only, with no demon.
+
+> **Verification note (Em, 1 Nov 2026):** corrected from "all four decadence pairs are amphidemons". In the Matrix [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm)]:
+> - 9::1 Tutagool, 7::3 Pabbakis and 6::4 Tchakki are **Amphidemons**.
+> - 8::2 Nammamad is a **Cyclic Chronodemon**: it stays inside the Time-Circuit and does not breach it.
+> - 5+5 is not a demon or net-span.
 
 ---
 

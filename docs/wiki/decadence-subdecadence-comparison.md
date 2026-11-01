@@ -26,7 +26,7 @@ These are not two separate systems — they are two registers of the same decima
 | **Syzygy relation** | **IS** the syzygy — the nine-sum is the numogram's connective tissue | NOT a syzygy — crosses the circuit/outer boundary as amphidemon pairs |
 | **Cards (reconstructed game)** | 1–9 in four suits = 36 cards; pair to 9 | 1–10 in four suits (royals stripped) = 40+?; pair to 10, 10→0 |
 | **Zero status** | 9 + 0 = 9 ≡ 0 (mod 9) — zero is saturated convergence, not void | 10 → 1 (wrap to beginning) — return to origin |
-| **Primary demon families** | Syzygetic Null Pitch demons (Katak, Djynxx, Oddubb, Mur Mur, Uttunul) | Amphidemon crossing-pairs (1::9, 2::8, 3::7, 4::6, 5+5) |
+| **Primary demon families** | Syzygetic Null Pitch demons (Katak, Djynxx, Oddubb, Mur Mur, Uttunul) | Amphidemons 9::1, 7::3, 6::4; Cyclic Chronodemon 8::2; 5+5 no demon *(corrected Em, 1 Nov 2026)* |
 | **Self-pair** | N/A (all pairs are distinct) | 5+5 — the only same-digit Decadence pair (not a demon or net-span) |
 
 > **Verification note (Em, 1 Nov 2026):** **factual corrections to the table** [ccru.net, [Pandemonium](http://www.ccru.net/digithype/pandemonium.htm)]:
