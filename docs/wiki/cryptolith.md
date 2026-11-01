@@ -19,25 +19,19 @@ Nick Land's short fiction set in the [[numogram|Numogram]] mythology — a cosmi
 
 ## Plot
 
-**65 million BC**: The K/T-Missile, "Pregnant with the Entity," impacts Earth. Barker, working from Theta-Station on the Antarctic Peninsula ("Where it is 2012 forever"), tracks its trajectory across the Cataplex-map. The impact terminates the Mesozoic era. "Chalk-Out" — a billion tons of molten calcium toxins erase North America.
+> **Note (Em, 1 Nov 2026):** the long quotations previously on this page have been condensed into paraphrase under the wiki's copyright rule (CCRU texts: paraphrase, short cited quotes only). The full text is at the source: [ccru.net](http://www.ccru.net/occultures/barker0.htm).
 
-**Afterward**: "It's just scar-tissue, mammal-time, incessant surgical ticking of the Cataplex." Then the Time-Fault "splits your memory in two. It's to protect you."
+**65 million BC.** The K/T-Missile comes in carrying the Entity, timed at "16 clicks per second" [ccru.net](http://www.ccru.net/occultures/barker0.htm). Barker follows its path across the Cataplex-map from Theta-Station on the Antarctic Peninsula, a place where it is always 2012. The impact ends the Mesozoic. What is striking is that the narration lets 65 million BC and a frozen future share one moment: Barker "catches" the trajectory as though he were there.
 
-**K0+09**: Barker publishes "The Geocosmic Theory of Trauma" at Miskatonic. "They think Barker is mad, or want to. It isn't because he thinks that the Galaxies Talk and the Earth Screams — everyone knows these things, whether they admit it or not."
+**Afterwards.** Mammal time is cast as scar tissue, kept in check by the steady surgical ticking of the Cataplex. A Time-Fault then splits memory in two. The text presents this amnesia as protection: without it, you would have to think the Unutterable.
 
-**K0+11**: Barker discovers the Anomalous Cryptolith at Site-29, Miskatonic Antarctic Geosurvey. "It Clicks, Instantly. A key, or a Ticket. What was KT? Physico-semiotic lock-in to Tool-Sign Gridstacks."
+**K0+09.** Miskatonic publishes Barker's *The Geocosmic Theory of Trauma*. It is met with scepticism. The narrator's point is that Barker's peers don't doubt that "the Galaxies Talk and the Earth Screams" [ccru.net](http://www.ccru.net/occultures/barker0.htm). What they resist is what follows from it.
+
+**K0+11, 17 Feb, 13:26.** At Site-29 of the Miskatonic Antarctic Geosurvey, Barker finds an anomalous Cryptolith, catalogue item It-277. It "Clicks, Instantly" [ccru.net](http://www.ccru.net/occultures/barker0.htm), as a key or a ticket. It ties the K/T event to a "physico-semiotic lock-in" of tools and signs.
 
 ## The Entity
 
-The climactic encounter with the K/T-Entity — Land's most intense piece of cosmic horror writing:
-
-> "A seething, clicking, poly-tendrilled abomination, slime-stroked gill-slits quivering, ticking, as they suck, and suck on the pitiful mammal sob, maimed ruins, beyond the screen, where it feeds you cannot know, and cannot stop knowing."
-
-> "It is here that you are always peeled open, folding onto the outside, clicking, sucking, feeding, where you are all insides, raw, never numb, already dead, unreachable, limit, check, tick, where no protection can get."
-
-> "It can only think you hear, being so close, so it slithers groping through all your outsides, to be there already, when you arrive."
-
-> "Its 17 eyes glow dead. Gridlock."
+The climax shifts to the second person. The reader is brought right up against the Entity, a clicking, sucking, many-tendrilled mass. The prose loops through the same verbs (click, tick, feed, suck) until the syntax itself feels trapped: you are "peeled open", and you flee a place you never leave. The striking device is total proximity. The Entity is already waiting wherever you arrive. The text ends abruptly on its "17 eyes" and the single word "Gridlock" [ccru.net](http://www.ccru.net/occultures/barker0.htm).
 
 This is the numogrammatic prose style — spirodynamic, relentless, clicking. Every "tick" is a Barker tic. Every "click" is the Cryptolith. The Entity IS Unuttera (the 9th Barker-Threshold, "the polytendriled abomination") given narrative form.
 
