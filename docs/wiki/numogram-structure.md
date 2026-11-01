@@ -17,6 +17,9 @@ tags:
 
 ---
 
+
+> **Verification note (Em, 1 Nov 2026):** "5::5", "5⊕5" and "self-decadence" are wiki coinages, not CCRU terms. ccru.net does not use "self-decadence". Per the sources, 5+5 is just one of the Decadence 10-sum pairs; it scores 0 ("from 5:5 = 0") [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm)]. It is **not** a demon or net-span (there is no 5::5 in the Matrix) and **not** the Barker spiral's centre. 5's 9-sum twin is 4, and the repo puts **4::5 (Katak) innermost** on the Barker spiral [repo, `syzygies.ts`]. See [[barker-spiral]].
+
 ## 1. Core Architecture
 
 The Decimal Numogram (or simply *Numogram*) is the central diagram of the CCRU's Pandemonium system. It is not conventional mathematics but an occult-mathematical time-map latent in base-10 numeracy itself. Everything is generated from elementary decimal operations: complementary digit pairs summing to 9, their differences, and digital-root reduction.
@@ -41,7 +44,7 @@ The Decimal Numogram (or simply *Numogram*) is the central diagram of the CCRU's
 | 4th    | `1::8` | `7`     | Largest current; drives Time-Circuit rotation |
 || 5th    | `0::9` | `9`     | Terminal boundary; forms Plex loop            |
 
-> **9-sum vs 10-sum:** The five syzygies above are all **9-sum pairs** (subdecadent by the 9/10 split — see `subdecadence.md`). The numogram structurally *leans Lemurian*: 9 is the highest operative sum, with 0 as the "empty summit," unlike systems that take 10 as basis (e.g. Kabbalistic Tree of Life). Pairs summing to **10** (decadence) are not syzygies — they are amphidemon crossing-pairs that breach the Time-Circuit boundary: `1::9`, `2::8`, `3::7`, `4::6`, and the unique self-decadence `5::5` (c=0, the hinge). Every zone participates in *both* registers simultaneously.
+> **9-sum vs 10-sum:** The five syzygies above are all **9-sum pairs** (subdecadent by the 9/10 split — see `subdecadence.md`). The numogram structurally *leans Lemurian*: 9 is the highest operative sum, with 0 as the "empty summit," unlike systems that take 10 as basis (e.g. Kabbalistic Tree of Life). Pairs summing to **10** (decadence) are not syzygies — they are amphidemon crossing-pairs that breach the Time-Circuit boundary: `1::9`, `2::8`, `3::7`, `4::6`, and the unique 5+5 Decadence pair `5+5` (c=0, the hinge). Every zone participates in *both* registers simultaneously.
 
 > **Why all syzygetic currents are odd:** If `a + b = 9`, then the current `|a − b|` must be odd — because `a` and `b` have opposite parity (one even, one odd). Conversely, if `a + b = 10`, both share the same parity, so `|a − b|` is always even. The odd/even split in Section 7.1 is not a coincidence; it is arithmetic law.
 

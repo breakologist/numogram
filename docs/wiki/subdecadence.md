@@ -16,6 +16,9 @@ A live playable implementation exists: [doomcrypt/subdecadence](https://doomcryp
 >
 > — Daniel Charles Barker, *Barker Speaks* (CCRU interview, Autumn 1998)
 
+
+> **Verification note (Em, 1 Nov 2026):** "5::5", "5⊕5" and "self-decadence" are wiki coinages, not CCRU terms. ccru.net does not use "self-decadence". Per the sources, 5+5 is just one of the Decadence 10-sum pairs; it scores 0 ("from 5:5 = 0") [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm)]. It is **not** a demon or net-span (there is no 5::5 in the Matrix) and **not** the Barker spiral's centre. 5's 9-sum twin is 4, and the repo puts **4::5 (Katak) innermost** on the Barker spiral [repo, `syzygies.ts`]. See [[barker-spiral]].
+
 ## Rules (Reconstructed)
 
 - Players: 2 or more
@@ -83,7 +86,7 @@ The **decadence pairs** (sum to 10) carry different currents derived by the same
 | 2::8 | 10 | 6 | Separation reaches Multiplicity |
 | 3::7 | 10 | 4 | Release reaches Blood |
 | 4::6 | 10 | 2 | Gate reaches Abstraction |
-| 5::5 | 10 | 0 | Self-decadence: the hinge. Zone 5 reaches the threshold without leaving itself. |
+| 5+5 | 10 | 0 | 5+5 Decadence pair: the hinge. Zone 5 reaches the threshold without leaving itself. |
 
 The 9/10 split maps the **decadence / subdecadence** distinction: subdecadence (9-sum = Lemurian, open-ended, "falls short" of the module by one) vs decadence (10-sum = Atlantean, closed, crosses the threshold). Zone 7 participates in both: its syzygy 7::2 is subdecadent (Hold current 5), while 7::3 is decadent (Release current).
 

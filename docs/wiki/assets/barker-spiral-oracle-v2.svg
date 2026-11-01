@@ -15,7 +15,7 @@
     <rect width="100%" height="100%" fill="#0f172a"/>
     <text x="450" y="35" class="title" text-anchor="middle">BARKER SPIRAL v2 (Oracle)</text>
     <circle cx="450" cy="320" r="8" class="center-dot"/>
-    <text x="470" y="324" class="label" fill="#fbbf24">5 ⊕ 5 = 10 (axis origin)</text>
+    <text x="470" y="324" class="label" fill="#fbbf24">4::5 innermost · 5+5=10 is Decadence only</text>
     <!-- Concentric circles -->
     <circle cx="450" cy="320" r="60" fill="none" stroke="#334155" stroke-width="0.5" stroke-dasharray="3 3"/>
     <circle cx="450" cy="320" r="110" fill="none" stroke="#334155" stroke-width="0.5" stroke-dasharray="3 3"/>

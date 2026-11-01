@@ -26,6 +26,9 @@ status: canonical
 
 > **Planet:** Jupiter (Sol-5) | **Spinal:** — | **Mesh Tag:** `0031` | **Phase Doors:** Tokhatto — the Hyperborean Door (32 phases)
 
+
+> **Verification note (Em, 1 Nov 2026):** "5::5", "5⊕5" and "self-decadence" are wiki coinages, not CCRU terms. ccru.net does not use "self-decadence". Per the sources, 5+5 is just one of the Decadence 10-sum pairs; it scores 0 ("from 5:5 = 0") [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm)]. It is **not** a demon or net-span (there is no 5::5 in the Matrix) and **not** the Barker spiral's centre. 5's 9-sum twin is 4, and the repo puts **4::5 (Katak) innermost** on the Barker spiral [repo, `syzygies.ts`]. See [[barker-spiral]].
+
 ## Description
 
 Hyperborean or Wendigo mythology. Missing time and alien abduction. Inner-eye of the Barker spiral.
@@ -91,7 +94,7 @@ The Roman **V** is not alphabetical but a numerical figure linking to pre-symbol
 
 ![Zone 5 glyph](assets/zone-glyphs/zone-5.png) { .zone-glyph }
 
-> Diamond constriction — two triangles pinching toward a gold pressure thread. The Atlantean Hinge, self-decadence, golden ratio compression.
+> Diamond constriction — two triangles pinching toward a gold pressure thread. The Atlantean Hinge, 5+5 Decadence pair, golden ratio compression.
 
 *Glyph: 32×32 PICO-8 pixel-art, generated from zone 5's DECOM particle and conceptual description. See [[zone-pixel-glyphs]] for the full set and generator notes.*
 

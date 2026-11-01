@@ -61,7 +61,7 @@
   <!-- 4::6 diameter -->
   <line x1="172" y1="256" x2="400" y2="480" stroke="#fbbf24" stroke-width="2" stroke-opacity="0.5"/>
   <!-- 0::9 decadence (0+9=9 is syzygy, but 0 and 9 are also decadence-adjacent in the numogram) -->
-  <!-- 5::5 self-decadence — no chord (point) -->
+  <!-- 5+5 Decadence pair (not a demon) — no chord (point) -->
 
   <!-- ═══ SYZYGY SPOKES (cyan — outer to inner, each pair) ═══ -->
   <!-- These connect each star point to its valley partner -->

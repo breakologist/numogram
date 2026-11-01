@@ -15,6 +15,9 @@ The Decimal Numogram (specifically its Time-Circuit) is explicitly linked by the
 
 > **Verification note (Em, 1 Nov 2026):** the paragraph above says the Time-Circuit is "positioned as a hypercultural successor" to the Yijing. The source is more modest: CCRU's Decimal Numogram page says the I Ching and the Nma numogram "share a hypercultural matrix" and lists immanent and historical evidence for that claim. It says nothing of succession [ccru.net, [declab](http://www.ccru.net/declab.htm)]. Read "successor" and the later "decimal completion" wording as wiki interpretation, not CCRU doctrine.
 
+
+> **Verification note (Em, 1 Nov 2026):** "5::5", "5⊕5" and "self-decadence" are wiki coinages, not CCRU terms. ccru.net does not use "self-decadence". Per the sources, 5+5 is just one of the Decadence 10-sum pairs; it scores 0 ("from 5:5 = 0") [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm)]. It is **not** a demon or net-span (there is no 5::5 in the Matrix) and **not** the Barker spiral's centre. 5's 9-sum twin is 4, and the repo puts **4::5 (Katak) innermost** on the Barker spiral [repo, `syzygies.ts`]. See [[barker-spiral]].
+
 ## Core Parallel: Time-Circuit as Hexagram Kernel
 
 The Time-Circuit is the Numogram's "I Ching hexagram" — a decimalized, 6-zone rotor that inherits the Yijing's function as a map of cyclic transformation, but twisted into base-10 currents, syzygetic twinning, and demonic flows.
@@ -232,7 +235,7 @@ Control cycle (Kè): Wood→Earth→Water→Fire→Metal→Wood = pentagram edge
 ## Subdecadence / Decadence Games
 
 - **Subdecadence:** pairs sum to 9 (syzygy), 40-card deck, Atlantean Cross spread
-- **Decadence:** pairs sum to 10, 36-card deck, 5+5 self-decadence grants zero bonus
+- **Decadence:** pairs sum to 10, 36-card deck, the 5+5 pair scores zero
 - **Mesh-serial** = negative game score that calls the demon
 
 > See [[subdecadence]] and [[decadence]] for full rules.

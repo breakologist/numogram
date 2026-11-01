@@ -23,6 +23,9 @@ status: canonical
 
 > **Planet:** Uranus (Sol-7) | **Spinal:** — | **Mesh Tag:** `0127` | **Phase Doors:** Puppo — Tracts of Dobo (128 phases) | **Current:** Hold (c=5)
 
+
+> **Verification note (Em, 1 Nov 2026):** "5::5", "5⊕5" and "self-decadence" are wiki coinages, not CCRU terms. ccru.net does not use "self-decadence". Per the sources, 5+5 is just one of the Decadence 10-sum pairs; it scores 0 ("from 5:5 = 0") [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm)]. It is **not** a demon or net-span (there is no 5::5 in the Matrix) and **not** the Barker spiral's centre. 5's 9-sum twin is 4, and the repo puts **4::5 (Katak) innermost** on the Barker spiral [repo, `syzygies.ts`]. See [[barker-spiral]].
+
 ## Numeral
 
 The figure **7** contains the only true **diagonal** among the single numerals — the decisive 'L' stroke that breaks the vertical/horizontal axis. It is ideographically a lightning-stroke cutting across the digital grid.
@@ -110,7 +113,7 @@ Zone 7 participates in two structurally distinct crossing-pairs:
 | 7::3 | 10 | **Decadence** | **Atlantean** — full crossing of the module threshold; closed 10-sum pair that completes a threshold. | Zone 3 (Release) | Amphidemon crossing the Time Circuit → Outer boundary; the gate that touches the Threshold. |
 
 > The 9/10 split maps the **decadence / subdecadence** distinction captured in the matrix: subdecadence (9-sum = Lemurian, openended) vs decadence (10-sum = Atlantean, closed).
-> Zone 5's self-decadence (5+5=10) is the hinge — the only zone that reaches the threshold without leaving itself. Zone 7's decadence partner is therefore **Zone 3** (7+3=10): Blood reaching Release through the amphibian gate. This is the circuit-crossing structure that marks Zone 7's outer contact.
+> Zone 5's 5+5 Decadence pair (5+5=10) is the hinge — the only zone that reaches the threshold without leaving itself. Zone 7's decadence partner is therefore **Zone 3** (7+3=10): Blood reaching Release through the amphibian gate. This is the circuit-crossing structure that marks Zone 7's outer contact.
 
 ## Related
 

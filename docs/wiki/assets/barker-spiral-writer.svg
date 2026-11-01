@@ -10,7 +10,7 @@
   <rect width="100%" height="100%" fill="#111111"/>
   <text x="450" y="35" class="title" text-anchor="middle">BARKER SPIRAL — The Diplozygotic Key</text>
   <circle cx="450" cy="320" r="8" fill="#fbbf24"/>
-  <text x="470" y="324" class="label" fill="#fbbf24">5 ⊕ 5 = 10 (the infinitesimal gap)</text>
+  <text x="470" y="324" class="label" fill="#fbbf24">4::5 innermost · 5+5=10 is Decadence only</text>
   <!-- Hand-drawn style spiral -->
   <path d="M 450 320 
            Q 480 250, 520 320 

@@ -8,7 +8,10 @@ tags: ["barker-spiral", "diplozygotic", "mathematics", "sum-to-10", "sum-to-9", 
 
 # Mathematical Foundations of the Barker Spiral
 
-The abstract algebraic structure underlying the [[barker-spiral]]. This page synthesises the equations that make the spiral cohere — the twin-sum complementarity, the 5⊕5 pivot, and the syzygetic chain that radiates outward.
+The abstract algebraic structure underlying the [[barker-spiral]]. This page synthesises the equations that make the spiral cohere — the twin-sum complementarity, the 5+5 pivot, and the syzygetic chain that radiates outward.
+
+
+> **Verification note (Em, 1 Nov 2026):** "5::5", "5⊕5" and "self-decadence" are wiki coinages, not CCRU terms. ccru.net does not use "self-decadence". Per the sources, 5+5 is just one of the Decadence 10-sum pairs; it scores 0 ("from 5:5 = 0") [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm)]. It is **not** a demon or net-span (there is no 5::5 in the Matrix) and **not** the Barker spiral's centre. 5's 9-sum twin is 4, and the repo puts **4::5 (Katak) innermost** on the Barker spiral [repo, `syzygies.ts`]. See [[barker-spiral]].
 
 ## The Syzygy Operator
 
@@ -26,7 +29,7 @@ Both operators produce a reflection:
 
 The *diplozygotic* condition holds when both complementarities are superimposed: a ray from the origin carries both the Atlantean axis label (x ↔ x'A) and the Lemurian axis label (x ↔ x'L). The ray's position is determined by the average of the two, but the numbering differs on each side of the diagram.
 
-## The 5⊕5 Node
+## The 5+5 Pair (formerly "5⊕5 node")
 
 ```
           Atlantean: 5 + 5 → 10 → 0

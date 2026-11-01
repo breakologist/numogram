@@ -72,3 +72,5 @@ Oracle/Builder/Writer/Gamer roundtables. 30+ tetralogues exist across the wiki. 
 - [[numogram-council]] — Multi-model orchestration plugin
 
 **Format lineage (Em, 1 Nov 2026):** the *triangle* pages (three-voice commentaries: [[book-of-paths-triangle]], [[decadence-triangle]], [[glossary-triangle]], [[orphan-drift-triangle]]) are the forerunners of these four-voice **tetralogues** and **square roundtables**. See [[tetralogue-hub]], [[square-roundtable-anthology-2026-04-27]] and [[Grok's Roundtable]].
+
+> **Verification note (Em, 1 Nov 2026):** "5::5", "5⊕5" and "self-decadence" are wiki coinages, not CCRU terms. ccru.net does not use "self-decadence". Per the sources, 5+5 is just one of the Decadence 10-sum pairs; it scores 0 ("from 5:5 = 0") [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm)]. It is **not** a demon or net-span (there is no 5::5 in the Matrix) and **not** the Barker spiral's centre. 5's 9-sum twin is 4, and the repo puts **4::5 (Katak) innermost** on the Barker spiral [repo, `syzygies.ts`]. See [[barker-spiral]]. (Commentary page: text left as written.)

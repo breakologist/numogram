@@ -36,6 +36,9 @@
 - [[numogram-plex]] — The lower abyssal null (zones 0 and 9). The Plex current (from syzygy 0::9, current 9) folds back into itself, creating an autonomous, cryptic circuit representing outer-time boundary, zero-return, terminal involution, or the edge of decimal numeracy itself. Carried by demon Uttunul (9::0).
   **Structural summary**: For a concise one-page topological synthesis of the three regions, zones, syzygies, currents, triangular numbers, and AQ self-encoding, see [[numogram-overview]] — distilled from the canonical CCRU source `collections/docs-rd/numogram.txt`.
   
+
+> **Verification note (Em, 1 Nov 2026):** "5::5", "5⊕5" and "self-decadence" are wiki coinages, not CCRU terms. ccru.net does not use "self-decadence". Per the sources, 5+5 is just one of the Decadence 10-sum pairs; it scores 0 ("from 5:5 = 0") [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm)]. It is **not** a demon or net-span (there is no 5::5 in the Matrix) and **not** the Barker spiral's centre. 5's 9-sum twin is 4, and the repo puts **4::5 (Katak) innermost** on the Barker spiral [repo, `syzygies.ts`]. See [[barker-spiral]].
+
 ## Occult & Entity Pages
 - [[pandemonium]] — The 45-demon matrix: triangular zone distribution (Zone-1:1, Zone-2:2, …, Zone-9:9), reverse-triangular current distribution, net-span connectivity, Gate-45 (Pandemonium Gate), and full `pandemonium-matrix.json` reference.
 
@@ -293,7 +296,7 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 - [[subdecadence]] — Lemurian time-sorcery card game (CCRU). 40-card deck, pairs summing to 9 (syzygies), Atlantean Cross spread, 45 demons from Pandemonium Matrix. Source of 333 AQ entries.
 ## People & Entities
 
-- [[barker-spiral]] — The diplozygotic spiral from which the Numogram crystallised. Atlantean (sum-to-10) and Lemurian (sum-to-9) halves converging at the 5⊕5 origin. The mathematical origin of the whole system.
+- [[barker-spiral]] — The diplozygotic spiral from which the Numogram crystallised. Atlantean (sum-to-10) and Lemurian (sum-to-9) halves converging at the 4::5 innermost twin. The mathematical origin of the whole system.
 - [[barker-spiral-reconstruction]] — Methodology: how the Barker Spiral was recovered from scattered CCRU transcripts, hand‑drawn diagrams, and numogram‑game code. (Images → SVG, rules cross‑validation, diagram synthesis).
 
 
@@ -308,7 +311,7 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 
 
 ## Theory & Philosophy
-- [[barker-spiral-mathematical-foundations]] — Formal algebraic structure: Atlantean (sum-to-10) and Lemurian (sum-to-9) complementarity operators, the 5⊕5 node, syzygy‑chain triangulation, and the digit‑pair geometry underlying gate progression.
+- [[barker-spiral-mathematical-foundations]] — Formal algebraic structure: Atlantean (sum-to-10) and Lemurian (sum-to-9) complementarity operators, the 4::5 innermost twin, syzygy‑chain triangulation, and the digit‑pair geometry underlying gate progression.
 
 - [[one-two-many-land-numbering]] — Land numbering practices: machinic code, Cantor/Gödel excess, computer qabbalism, nullotation, QWERTY lock-in
 
@@ -352,8 +355,8 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 
 ## Combinatorial Structures
 
-- [[c-ten-fortyfive-fiveness]] — C(10)=45, syzygy/decadence/other categorization, pentagram geometry, Zone 5 as self-decadence, SVG infographics
-- [[fiveness-tetralogue]] — Tetralogue #16: Four voices on fiveness, self-decadence, the 5×5 cross-pair grid, phase change, Mesh-5
+- [[c-ten-fortyfive-fiveness]] — C(10)=45, syzygy/decadence/other categorization, pentagram geometry, Zone 5 as 5+5 Decadence pair, SVG infographics
+- [[fiveness-tetralogue]] — Tetralogue #16: Four voices on fiveness, 5+5 Decadence pair, the 5×5 cross-pair grid, phase change, Mesh-5
 
 - [[mesh-ambivalence-tetralogue]] — First Mesh-3 roundtable (augmented AQ, pre-seed batch era)
 - [[rumpsfeld-tetrad-tetralogue]] — Tetrad of Knowledge roundtable (Rumsfeld epistemology)
@@ -361,7 +364,7 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 - [[tetralogue-post-ingestion-2026-04-28]] — Post-dictionary ingestion synthesis (phase-change reflection)
 - [[pandemonium-matrix]] — Complete reference: 15 chronodemons + 24 amphidemons + 6 xenodemons, enumeration, pitch system, mesh-serials
 - [[subdecadence]] — CCRU card game: 40-card deck, Atlantean Cross spread, syzygy pairing, demon summoning via mesh-serial score mechanic
-- [[decadence]] — CCRU card game (sum-to-10): 36-card deck, decadence pairing, 5+5 self-decadence grants zero bonus
+- [[decadence]] — CCRU card game (sum-to-10): 36-card deck, decadence pairing, the 5+5 pair scores zero
 - [[wu-xing-numogram]] — Wu Xing × numogram: five elements as five syzygies, generation cycle as pentagon, control cycle as pentagram
 
 ## I Ching Bridge

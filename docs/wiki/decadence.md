@@ -16,6 +16,9 @@ The Lemurian half of the [[barker-spiral]]: the occulted variation whose sum-to-
 > \"Subdecadence introduces zeroes, and nine-zero twins. It works by zygonovic numerism.\"
 > — Daniel Charles Barker, *Barker Speaks* (CCRU interview, Autumn 1998)
 
+
+> **Verification note (Em, 1 Nov 2026):** "5::5", "5⊕5" and "self-decadence" are wiki coinages, not CCRU terms. ccru.net does not use "self-decadence". Per the sources, 5+5 is just one of the Decadence 10-sum pairs; it scores 0 ("from 5:5 = 0") [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm)]. It is **not** a demon or net-span (there is no 5::5 in the Matrix) and **not** the Barker spiral's centre. 5's 9-sum twin is 4, and the repo puts **4::5 (Katak) innermost** on the Barker spiral [repo, `syzygies.ts`]. See [[barker-spiral]].
+
 ## Rules (Reconstructed)
 
 - **Players:** 2 or more
@@ -78,7 +81,7 @@ Subdecadence thus maps the **crypt of the decimal system**. If Decadence is the 
 
 > **Verification note (Em, 1 Nov 2026):** this older SVG has known defects (see [[barker-spiral]]). The sourced replacement is `assets/barker-spiral-sourced.svg`, which shows the 10-sum pairs below the line.
 
-*Shown: left‐hand (clockwise) Decadence bands. The central 5⊕5 pair sums to ten; arms radiate outward through 10‐sum complementarity.*
+*Shown: left‐hand (clockwise) Decadence bands. The central 5+5 pair sums to ten; arms radiate outward through 10‐sum complementarity.*
 
 ## Gameplay Summary
 

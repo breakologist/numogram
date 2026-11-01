@@ -13,6 +13,9 @@ These are not two separate systems — they are two registers of the same decima
 
 ---
 
+
+> **Verification note (Em, 1 Nov 2026):** "5::5", "5⊕5" and "self-decadence" are wiki coinages, not CCRU terms. ccru.net does not use "self-decadence". Per the sources, 5+5 is just one of the Decadence 10-sum pairs; it scores 0 ("from 5:5 = 0") [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm)]. It is **not** a demon or net-span (there is no 5::5 in the Matrix) and **not** the Barker spiral's centre. 5's 9-sum twin is 4, and the repo puts **4::5 (Katak) innermost** on the Barker spiral [repo, `syzygies.ts`]. See [[barker-spiral]].
+
 ## Structural Differences
 
 | Axis | Subdecadence | Decadence |
@@ -23,13 +26,13 @@ These are not two separate systems — they are two registers of the same decima
 | **Syzygy relation** | **IS** the syzygy — the nine-sum is the numogram's connective tissue | NOT a syzygy — crosses the circuit/outer boundary as amphidemon pairs |
 | **Cards (reconstructed game)** | 1–9 in four suits = 36 cards; pair to 9 | 1–10 in four suits (royals stripped) = 40+?; pair to 10, 10→0 |
 | **Zero status** | 9 + 0 = 9 ≡ 0 (mod 9) — zero is saturated convergence, not void | 10 → 1 (wrap to beginning) — return to origin |
-| **Primary demon families** | Syzygetic Null Pitch demons (Katak, Djynxx, Oddubb, Mur Mur, Uttunul) | Amphidemon crossing-pairs (1::9, 2::8, 3::7, 4::6, 5::5) |
-| **Self-pair** | N/A (all pairs are distinct) | 5::5 — the only self-decadence; Zone 5 connecting to itself |
+| **Primary demon families** | Syzygetic Null Pitch demons (Katak, Djynxx, Oddubb, Mur Mur, Uttunul) | Amphidemon crossing-pairs (1::9, 2::8, 3::7, 4::6, 5+5) |
+| **Self-pair** | N/A (all pairs are distinct) | 5+5 — the only same-digit Decadence pair (not a demon or net-span) |
 
 > **Verification note (Em, 1 Nov 2026):** **factual corrections to the table** [ccru.net, [Pandemonium](http://www.ccru.net/digithype/pandemonium.htm)]:
 - **Cards:** the columns are swapped and partly wrong. **Decadence** = royals, tens and jokers removed = **36 cards** (A–9 × 4), pairs sum to 10. **Subdecadence** = the Decadence pack **plus four Queens valued 0** = **40 cards**, pairs sum to 9. Neither game has "10 → 0" or a 1–10 deck.
 - **Scoring (both games):** each pair scores its difference; each unpaired Set-1 card scores minus its face value; an Aeon ends at the first negative result.
-- **Demon families:** the 10-sum net-spans are not all amphidemons. 9::1 Tutagool, 7::3 Pabbakis and 6::4 Tchakki are Amphidemons, but **8::2 Nammamad is a Cyclic Chronodemon**, and 5::5 is not a demon at all (net-spans are pairs of different zones).
+- **Demon families:** the 10-sum net-spans are not all amphidemons. 9::1 Tutagool, 7::3 Pabbakis and 6::4 Tchakki are Amphidemons, but **8::2 Nammamad is a Cyclic Chronodemon**, and 5+5 is not a demon at all (net-spans are pairs of different zones).
 
 
 ---
@@ -56,7 +59,7 @@ Both registers derive their **currents** by the same rule: absolute difference b
 | 2::8 | 6 | Separation reaches Multiplicity |
 | 3::7 | 4 | Release reaches Blood |
 | 4::6 | 2 | Gate reaches Abstraction |
-| 5::5 | 0 | Self-decadence — the hinge |
+| 5+5 | 0 | 5+5 Decadence pair — the hinge |
 
 > The odd/even split in currents mirrors the Lemurian/Atlantean split: **odd currents are syzygetic (move within the circuit); even currents are decadent (cross the boundary).**
 
@@ -80,7 +83,7 @@ Both registers derive their **currents** by the same rule: absolute difference b
 | 9 | 0 (Plex, c=9) | 1 (c=8) | Plex |
 | 0 | 9 (Plex, c=9) | N/A | Plex |
 
-Zone 5 is unique: its decadence partner is **itself**. This self-decadence (5+5=10, c=0) is the hinge — the only point in the system that reaches the Atlantean threshold without leaving its own position.
+Zone 5 is unique: its decadence partner is **itself**. This 5+5 Decadence pair (5+5=10, c=0) is the hinge — the only point in the system that reaches the Atlantean threshold without leaving its own position.
 
 ---
 

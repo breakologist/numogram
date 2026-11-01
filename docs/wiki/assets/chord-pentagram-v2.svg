@@ -70,7 +70,7 @@
   <line x1="259" y1="524" x2="400" y2="480" stroke="#fbbf24" stroke-width="2" stroke-opacity="0.5"/>
   <!-- 4↔6: (172,256)→(257,376) -->
   <line x1="172" y1="256" x2="257" y2="376" stroke="#fbbf24" stroke-width="2" stroke-opacity="0.5"/>
-  <!-- 5::5 self-decadence (just the node) -->
+  <!-- 5+5 Decadence pair (not a demon) (just the node) -->
 
   <!-- ═══ INNER PENTAGON ═══ -->
   <!-- Z9→Z8→Z7→Z6→Z5→Z9 -->

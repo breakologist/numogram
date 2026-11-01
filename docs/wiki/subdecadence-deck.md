@@ -10,6 +10,9 @@ tags: [subdecadence, deck, demon-cards, pandemonium, visual]
 
 > Project log / decision journal for a physical 45-card oracle deck derived from the Pandemonium Matrix and the existing demon-card / syzygy-card visual assets.
 
+
+> **Verification note (Em, 1 Nov 2026):** "5::5", "5⊕5" and "self-decadence" are wiki coinages, not CCRU terms. ccru.net does not use "self-decadence". Per the sources, 5+5 is just one of the Decadence 10-sum pairs; it scores 0 ("from 5:5 = 0") [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm)]. It is **not** a demon or net-span (there is no 5::5 in the Matrix) and **not** the Barker spiral's centre. 5's 9-sum twin is 4, and the repo puts **4::5 (Katak) innermost** on the Barker spiral [repo, `syzygies.ts`]. See [[barker-spiral]].
+
 ## Overview
 
 The numogram already has 45 fully rendered demon SVGs (`assets/demon-cards/`), 5 syzygy cards, zone-glyph sprites, and a completed Atlantean Cross spread diagram. The deck project is an **assembly and annotation layer** on top of those assets, with two differentiating ideas:
@@ -25,7 +28,7 @@ The numogram already has 45 fully rendered demon SVGs (`assets/demon-cards/`), 5
 
 ![Atlantean Cross v2](assets/subdecadence-atlantean-cross-v2.svg)
 
-*v2 (Em, 1 Nov 2026): the original is kept. The v2 maps the five Pylons to syzygies (1::8, 7::2, 5::4, 3::6, 9::0) from the repo's `zones.ts` centauri field and ccru.net zone pages. It drops the original's unsourced Tokhatto "current Hold" and 5::5 centre.*
+*v2 (Em, 1 Nov 2026): the original is kept. The v2 maps the five Pylons to syzygies (1::8, 7::2, 5::4, 3::6, 9::0) from the repo's `zones.ts` centauri field and ccru.net zone pages. It drops the original's unsourced Tokhatto "current Hold" and 5+5 centre.*
 
 - `assets/zone-glyphs/zone-N.png` — 10 zone sprites
 - `assets/zone-sprites/zone-N-sprite.png` — hardware-palette variants

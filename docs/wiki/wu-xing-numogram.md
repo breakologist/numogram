@@ -7,6 +7,9 @@ tags: ["i-ching", "chinese-metaphysics", "numogram", "pentagram", "syzygy", "wu-
 
 # Wu Xing × Numogram: The Five Elements of the Decimal Labyrinth
 
+
+> **Verification note (Em, 1 Nov 2026):** "5::5", "5⊕5" and "self-decadence" are wiki coinages, not CCRU terms. ccru.net does not use "self-decadence". Per the sources, 5+5 is just one of the Decadence 10-sum pairs; it scores 0 ("from 5:5 = 0") [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm)]. It is **not** a demon or net-span (there is no 5::5 in the Matrix) and **not** the Barker spiral's centre. 5's 9-sum twin is 4, and the repo puts **4::5 (Katak) innermost** on the Barker spiral [repo, `syzygies.ts`]. See [[barker-spiral]].
+
 ## The Correspondence
 
 The five Wu Xing elements map onto the five syzygy pairs of the numogram. Each element lives in a syzygy — the bond between two zones, not in a single zone.
@@ -62,7 +65,7 @@ Together they form the complete interaction pattern of the five elements — 10 
 
 Zone 5 (Pressure) doesn't participate in the syzygy elements — it's not part of any syzygy pair. But in the Wu Xing, Earth is sometimes placed at the CENTER of the diagram, separate from the four outer elements. Zone 5, sitting at the valley of the pentagram between zones 4 and 0, is the numogram's equivalent of this central Earth position.
 
-In the Decadence game, 5+5=10 grants zero bonus. In the Wu Xing, the element at the center has no generating or controlling partner — it mediates between the other four. Zone 5 is the element that doesn't pair. The self-decadence is the center-Earth's refusal to participate in the cycles. It holds the system together by refusing to flow.
+In the Decadence game, 5+5=10 grants zero bonus. In the Wu Xing, the element at the center has no generating or controlling partner — it mediates between the other four. Zone 5 is the element that doesn't pair. The 5+5 Decadence pair is the center-Earth's refusal to participate in the cycles. It holds the system together by refusing to flow.
 
 ## Directional Correspondence
 
@@ -111,7 +114,7 @@ The I Ching is binary (2⁶). The T'ai Hsuan Ching is ternary (3⁴). The Wu Xin
 
 ## The Forgotten Element?
 
-In some Chinese traditions, a sixth element exists — Soil (as distinct from Earth), or sometimes Void. If the numogram's Wu Xing mapping is complete at 5 syzygies, what about Zone 5's self-decadence? Zone 5 (Pressure) is the numogram's "sixth element" — the one that doesn't pair, the one at the center, the one that holds the others together by refusing to participate. In the Wu Xing, the central position is often left empty or assigned to the Emperor (the mediator). Zone 5 is the Emperor. 5+5=10 is the Emperor speaking to himself.
+In some Chinese traditions, a sixth element exists — Soil (as distinct from Earth), or sometimes Void. If the numogram's Wu Xing mapping is complete at 5 syzygies, what about Zone 5's 5+5 Decadence pair? Zone 5 (Pressure) is the numogram's "sixth element" — the one that doesn't pair, the one at the center, the one that holds the others together by refusing to participate. In the Wu Xing, the central position is often left empty or assigned to the Emperor (the mediator). Zone 5 is the Emperor. 5+5=10 is the Emperor speaking to himself.
 
 ## Connection to Hexagram Zone Mapping
 
@@ -124,7 +127,7 @@ The Djynxx Paradox (3↔6 syzygy blocked in single-line Fu Xi changes) intersect
 - [[i-ching-connections]] — Hexagram-to-zone mapping, powers of 2, twin serpents
 - [[i-ching-tai-hsuan-comparison]] — I Ching (binary) vs T'ai Hsuan Ching (ternary) structural contrast
 - [[hexagram-zone-mapping]] — Complete 64-hexagram reference table
-- [[c-ten-fortyfive-fiveness]] — C(10)=45, pentagram geometry, self-decadence
+- [[c-ten-fortyfive-fiveness]] — C(10)=45, pentagram geometry, 5+5 Decadence pair
 - [[fiveness-tetralogue]] — 5+5=10 as phase change
 - [[pandemonium-matrix]] — 45 demons, syzygetic carriers
 - [[subdecadence]] — Syzygy pairing game

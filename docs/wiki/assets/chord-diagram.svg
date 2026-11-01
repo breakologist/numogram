@@ -79,7 +79,7 @@
     <!-- 2::8 --> <line x1="566" y1="262" x2="134" y2="262"/>
     <!-- 3::7 --> <line x1="570" y1="418" x2="130" y2="418"/>
     <!-- 4::6 --> <line x1="488" y1="540" x2="212" y2="540"/>
-    <!-- 5::5 — self, no chord (diagonal) -->
+    <!-- 5+5 Decadence pair, no chord (diagonal) -->
   </g>
 
   <!-- SYZYGY CHORDS (cyan, bright, 5 chords — pentagram) -->

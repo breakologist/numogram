@@ -10,13 +10,16 @@ tags: ["barker-spiral", "reconstruction", "ccru-interviews", "numogram-voices", 
 
 How the [[numogram-voices]] project recovered the Barker Spiral from scattered CCRU source material (1997–2003). The spiral was never formally published — only glimpsed in interviews and reconstructed from game descriptions. This page documents the methodology used to recover it.
 
+
+> **Verification note (Em, 1 Nov 2026):** "5::5", "5⊕5" and "self-decadence" are wiki coinages, not CCRU terms. ccru.net does not use "self-decadence". Per the sources, 5+5 is just one of the Decadence 10-sum pairs; it scores 0 ("from 5:5 = 0") [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm)]. It is **not** a demon or net-span (there is no 5::5 in the Matrix) and **not** the Barker spiral's centre. 5's 9-sum twin is 4, and the repo puts **4::5 (Katak) innermost** on the Barker spiral [repo, `syzygies.ts`]. See [[barker-spiral]].
+
 ## Source Corpus
 
 The reconstruction draws from **six canonical references**:
 
 | Source | Type | Key Content |
 |--------|------|-------------|
-| LAND – *Barker Speaks* (1998) | Audio transcript / PDF | First-hand Barker narrative: Decadence, Subdecadence, 5⊕5 origin, Diplozygotic Spiral |
+| LAND – *Barker Speaks* (1998) | Audio transcript / PDF | First-hand Barker narrative: Decadence, Subdecadence, 4::5 innermost twin, Diplozygotic Spiral |
 | NML 2007 lecture | Video + transcript | Nick Land's diagrammatic description: Atlantean/Lemurian halves, AL = 31 constant |
 | CCRU *Writings 1997–2003* | PDF anthology | Occasional references: sum-to-10, sum-to-9, Barker Thresholds |
 | *Pandemonium Matrix* (Aamodt) | JavaScript object file | 45 demons distributed across zones, indirectly tied to spiral geometry |
@@ -46,7 +49,7 @@ Constructed a correlation matrix:
 |---------|--------------|-------------|---------------|------------------|
 | Sum-to-10 pairs | ✓ | ✓ | deck size 36 | — |
 | Sum-to-9 pairs | ✓ | ✓ | deck size 40 | — |
-| 5⊕5 centre | ✓ | implied | via doubling rule | — |
+| 4::5 innermost twin | ✓ | implied | via doubling rule | — |
 | Atlantean/Lemurian split | — | ✓ | — | — |
 | AL=31 constant | implied | ✓ | — | — |
 | Triangular gate progression | — | — | explicit | matched |
@@ -56,7 +59,7 @@ Identified **gap**: Barker spoke of "Diplozygotic Spiral" but did not provide a 
 ### Stage 3: SVG Reconstruction
 
 Using Inkscape's trace bitmap on the scanned `bs.jpg` (low fidelity) as guide, an SVG was hand‑constructed with:
-- Two semicircles (left Atlantean, right Lemurian) radiating from central 5⊕5 dot
+- Two semicircles (left Atlantean, right Lemurian) radiating from central 5+5 dot
 - Digit labels along each ray, alternating 0/10→9 and 0/9→9
 - Archimedean spiral curve traced through midpoints of digit arcs
 - Color coding: crimson (Atlantean), ultramarine (Lemurian) to mirror Land's “AL” (31) colour association
@@ -70,7 +73,7 @@ The reconstructed SVG was validated against:
 - Barker's numeric equations ("9 = 0", "10 = 0 via doubling")
 - numogame's deck rule: 36 cards for Decadence (4 suits × 9 values = 36, omitting zero face), 40 cards for Subdecadence (4 suits × 10 values = 40, including zero)
 
-All constraints satisfied. The 5⊕5 centre matches both 10→0 (5+5=10) and 9→0 (4+5=9) simultaneously.
+All constraints satisfied. The innermost Lemurian twin is 4::5 (4+5=9); 5+5=10 is only the neighbouring Decadence pair.
 
 ## Open Questions
 
