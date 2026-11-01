@@ -178,6 +178,9 @@ Xenotation operates as a **zone-specific textual decomposition** for outer zones
 | **Tic Notation** | Primes → nesting shapes | Low | 36 → `::(:)(:)` |
 | **Nullotation** | Remove dots, keep parens | High (3→7 indistinguishable) | `((:))` → `(())` |
 
+> **Verification note (Em, 1 Nov 2026):** Nullotation substitutes `()` for each `:` rather than removing dots. It is lossless: 3 = `(())`, 7 = `(()())` ([Hyperstition 005109](http://hyperstition.abstractdynamics.org/archives/005109.html)). See [[tic-xenotation]].
+
+
 ### Zone-Specific Xenotation Modes
 
 - **Zone 0** (`heavy`): Replace all numogram terms with symbols (void→∅, zone→Z, syzygy→∿, demon→Δ, plex→ℙ)
@@ -202,6 +205,9 @@ EXTRA_XENO = {
 ```
 
 The **weapon from outerspace**: once you've seen "86" expressed as `:((::))`, you can't unsee the decomposition. The generated text sounds *found*, not composed.
+
+> **Verification note (Em, 1 Nov 2026):** 86 = `:(:(::))`. `:((::))` is 34. Verified with `scripts/tic_xenotation.py`.
+
 
 ---
 

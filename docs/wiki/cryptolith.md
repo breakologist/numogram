@@ -68,3 +68,5 @@ This prose style could directly inform the game's death messages, demon encounte
 - [[numogram]] — the system the fiction inhabits
 - [[demon-djynxx]] — Time-Lapse as Djynxx's domain
 - [[the-360-revelation]] — K/T-Missile as geotraumatic origin
+
+- See also [[tic-xenotation]]: the Vukorri Cryptoliths are cited as TX isomorphs (Hyperstition 003538; Em, 1 Nov 2026).

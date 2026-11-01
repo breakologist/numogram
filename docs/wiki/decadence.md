@@ -250,3 +250,5 @@ Links checked with curl on 1 Nov 2026 (HTTP 200).
 - [occu.neocities.org](https://occu.neocities.org/): OCCU zine, step-by-step Subdecadence rules with Queens = 0. It ends an Aeon at "zero or negative", which is stricter than CCRU (found by search, not from InterestingSites.md).
 
 Not added: **qliphoth.systems** (listed in InterestingSites.md as a numogram/AQ toolkit) returned HTTP 402 on 1 Nov 2026.
+
+- [[tic-xenotation]] — Barker's numerics (Em, 1 Nov 2026)

@@ -172,3 +172,5 @@ Zone-1 is the terminus of three Torque channels, the 1st, 4th and 7th [ccru.net,
 ---
 
 *Created: 2026-05-30. Synthesises Land's Iron Law of Six derivation, I Ching isomorphism, median strip/extimacy, and Esoteric Tetractys placement from the Dangerous Maybe interview (raw/land-numogram.txt).*
+
+- [[tic-xenotation]] — Barker's prime notation; its 2-chains and the doubling cycle (speculative link; Em, 1 Nov 2026)

@@ -277,6 +277,9 @@ Gt-630 → 2 × 3² × 5 × 7 = K₃₆ edge count
 
 TX makes visible the prime-factor structure of gate numbers that decimal notation obscures.
 
+> **Verification note (Em, 1 Nov 2026):** **both TX lines above are wrong.** `[::] × [:] × [:]` = 16 and `[::] × [(:)] × [(:)]` = 36. Correct: **Gt-36 = `::(:)(:)`** (2² × 3²) and **Gt-45 = `(:)(:)((:))`** (3² × 5). Gt-630 = `:(:)(:)((:))(::)`. Verified with `scripts/tic_xenotation.py`; see [[tic-xenotation]].
+
+
 ### 4.4 Audio Implications
 
 The 36‑zone space has musical significance:

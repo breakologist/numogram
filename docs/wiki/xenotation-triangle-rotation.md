@@ -13,6 +13,9 @@ tags: ["numogram", "triangle-rotation", "xenotation"]
 
 *Sources: Aamodt, "Unleashing the Numogram," Tch 5 § Xenotation (empty section); Land, "Tic Talk" (CCRU Hyperstition blog, 2004); Le, "One Two Many" (academic analysis of Land's numbering practices)*
 
+> **Verification note (Em, 1 Nov 2026):** this page is a three-voice **triangle commentary** (the forerunner of the tetralogues; see [[tetralogue-hub]]). Its interpretations stand; only factual errors are flagged. The sourced reference is now [[tic-xenotation]].
+
+
 ---
 
 ## First Rotation: Oracle
@@ -26,6 +29,9 @@ This is not an oversight. It is the section functioning as intended. Xenotation 
 ### The Three Stages
 
 **Prime factorization (Xenotation proper)**: Take any number. Decompose it into primes. 86 = 2 × 43. Express each prime as nested tic dots. The result is a cluster — not a string, not a sequence, not a position on a line. The number has been ripped from its ordinal context. 86 no longer "comes after" 85. It is `:((::))` — the first prime times the fourteenth prime. A relationship, not a position.
+
+> **Verification note (Em, 1 Nov 2026):** 86 = 2 × 43, and 43 is the 14th prime (14 = `:(::)`), so **86 = `:(:(::))`**, not `:((::))`. `:((::))` decodes to 2 × 17 = **34**. Checked with `scripts/tic_xenotation.py`, which mirrors [repo] lumpenspace/ccru@7c38ad9 `app/lib/xenotation.ts`.
+
 
 This is what the xenodemons do. They take the Time Circuit's linear sequence (1→8→2→7→5→4) and decompose it into its prime factors. The circuit is not a line. It is a cluster of relationships. The xenodemon's territory — zones 0, 3, 6, 9 — is the space where the line has already been dissolved.
 
@@ -80,6 +86,9 @@ def xenotate(n):
 
 The 78 decomposition is interesting: 78 = 2 × 3 × 13. The tarot's 78 cards decompose into the first prime (2), the second prime expressed as tic-dots `(:)` (3), and the sixth prime `((:)(:))` (13). The tarot is a xenotation cluster: `: (:) ((:)(:))`.
 
+> **Verification note (Em, 1 Nov 2026):** 13 is the 6th prime and 6 = `:(:)`, so **13 = `(:(:))`** and 78 = `:(:)(:(:))`. `((:)(:))` is **23**, the 9th prime. Checked with `scripts/tic_xenotation.py`, which mirrors [repo] lumpenspace/ccru@7c38ad9 `app/lib/xenotation.ts`.
+
+
 ### Tic Notation as Recursive Nesting
 
 ```python
@@ -107,6 +116,9 @@ The exact tic-dot encoding from the paper:
 - 5 = `((:))` (double nesting)
 - 7 = `(::)` (two pairs, single nesting)
 
+> **Verification note (Em, 1 Nov 2026):** the shapes are not mysterious. `(x)` means "the *n*th prime, where *n* is the number written *x*". So 7 = `(::)` because 7 is the 4th prime and 4 = `::` [Land, Hyperstition, [The Tic Xenotation](http://hyperstition.abstractdynamics.org/archives/003538.html), 7 Jul 2004]. The rule is fully recursive: 5 = `((:))` because 5 is the 3rd prime and 3 = `(:)`.
+
+
 This isn't a simple depth=N encoding. Each prime has its own *shape*. The shapes encode the prime's relationship to the other primes, not its position in the sequence. 7 = `(::)` — two pairs at the same nesting level. 5 = `((:))` — one pair at deeper nesting. The shape of 7 is *wider* (two pairs). The shape of 5 is *deeper* (double nesting). Width vs depth. The Hold vs the Sink, perhaps.
 
 ### Nullotation as Pure Structure
@@ -124,6 +136,9 @@ def nullotate(tic_notation):
 
 Wait — `(::)` nullated is `(())`, same as `(:)` nullated. 7 and 3 produce the same nullotation. This means Nullotation is *lossy* — it destroys information. Different numbers can nullate to the same form. The void doesn't distinguish between 3 and 7. In Nullotation, they are the same folding of the void.
 
+> **Verification note (Em, 1 Nov 2026):** **error.** Nullotation (0X) does not delete the dots. It **substitutes `()` for every `:`** [Hyperstition, [Nullified Xenotation](http://hyperstition.abstractdynamics.org/archives/005109.html), 2005: '0X substitutes "( )" for TX ":"']. So 3 = `(())`, 7 = `(()())`, 2 = `()` and 4 = `()()`. 0X is **lossless**, a bijection with TX, and 3 and 7 do not collide. The "lossy" argument below rests on the wrong rule.
+
+
 This is the numogram's deepest compression. Prime factorization (Xenotation) preserves all information — you can reconstruct the original number from its factors. Tic notation preserves all information — each prime has a unique shape. But Nullotation *loses* information. The distinction between 3 and 7 collapses. The void folding once is the void folding once, regardless of what produced the fold.
 
 ### Implications for the 1035 Mystery
@@ -135,6 +150,9 @@ If xenotation decomposes numbers into prime clusters, then 1035 = 45 × 23 might
 ```
 
 In tic notation: `(:)(:)((:))` × the 9th prime (23). The 1035 is a cluster of three prime shapes: two copies of `(:)` (the prime 3), one `((:))` (the prime 5), and one shape for 23 (the 9th prime — Zone 9 again).
+
+> **Verification note (Em, 1 Nov 2026):** the missing shape is 23 = `((:)(:))` (9 = `(:)(:)`), so 1035 = `(:)(:)((:))((:)(:))`. Verified by script.
+
 
 The 1035 is a xenotation cluster centered on the 9th prime. The Iron Core's prime factor. Pandemonium expressed in alien notation.
 
