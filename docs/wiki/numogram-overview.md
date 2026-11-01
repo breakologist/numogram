@@ -45,10 +45,9 @@ Formed by the **three central syzygies** whose currents interlock into a closed,
 - 4::5 → current 1
 
 These three currents mutually compose, yielding the **6-zone rotor**:  
-**1 → 8 → 2 → 7 → 5 → 4 → (back to 1)**.
+**1 → 2 → 4 → 8 → 7 → 5 → (back to 1)**.
 
-> **Verification note (Em, 1 Nov 2026):** `1 → 8 → 2 → 7 → 5 → 4` lists the three Time-Circuit **syzygies** (1::8, 2::7, 5::4). It is **not** the path of the currents, which run **Surge 8→7, Hold 2→5, Sink 4→1** (current = difference, flowing to the tractor zone) [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. Each pair is linked by twinning, not by flow (see [[time-circuit]], [[syzygy]]).
-
+> **Verification note (Em, 1 Nov 2026):** this page previously gave the Time-Circuit sequence as `1 → 8 → 2 → 7 → 5 → 4`. That only lists the three syzygies in order (1::8, 2::7, 5::4); it is not a route. It has been replaced with the doubling cycle **1 → 2 → 4 → 8 → 7 → 5 (→ 1)**, the digital roots of the powers of 2 [ccru.net, [declab](http://www.ccru.net/declab.htm)]. The currents themselves run **Surge 8→7, Hold 2→5, Sink 4→1** [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. See [[time-circuit]] and [[syzygy]].
 
 This is the "normal" time loop — human-scale cyclic reality, the domain of chronodemons (demons whose net-spans remain inside the circuit), and the primary site of Lemurian sorcery.
 
@@ -79,7 +78,6 @@ Warp and Plex are both **cryptic** and **outer-time**, but opposite in dynamics:
 The Time-Circuit is explicitly positioned by the CCRU as the Numogram's answer to the I Ching (Yijing). The alignment is **kernel-level**, not a fixed hexagram-to-zone lookup.
 
 > **Verification note (Em, 1 Nov 2026):** CCRU does not call the Time-Circuit an "answer" to the I Ching. It says the two "share a hypercultural matrix" [ccru.net, [declab](http://www.ccru.net/declab.htm)]. The hexagram-line and digital-root mappings below are wiki/post-CCRU constructions (**speculation** unless tagged). Under this page's binary-value method, hexagram 2 (all-yin, value 0) does fall in Zone 0; under a King Wen-number digital root it does not.
-
 
 ### Binodecimal 6-Cycle
 

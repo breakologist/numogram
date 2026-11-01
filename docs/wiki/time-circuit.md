@@ -46,10 +46,9 @@ The cycle is **1, 2, 4, 8, 7, 5** — six digits, forever, no matter how large t
 
 > *"This is the iron law of six that counts forever. However big your number gets — two to the quintillion — it's still going to be one of these six numbers. You can have the exponent as high as you want. Doesn't make any difference."*
 
-These six digits ARE the Time Circuit zones: 1, 8, 2, 7, 5, 4 (when arranged anticlockwise as `1→8→2→7→5→4→1`). The Time Circuit is **not an arbitrary selection** of zones — it is the set of digits produced by binary exponentiation under Masonic arithmetic.
+These six digits ARE the Time Circuit zones: 1, 2, 4, 8, 7, 5 (when arranged anticlockwise as `1→2→4→8→7→5→1`). The Time Circuit is **not an arbitrary selection** of zones — it is the set of digits produced by binary exponentiation under Masonic arithmetic.
 
-> **Verification note (Em, 1 Nov 2026):** the sequence `1→8→2→7→5→4` is not a path the currents actually take. The sourced flows are three currents, one per syzygy: **Surge 8→7** (8−1 = 7), **Hold 2→5** (7−2 = 5) and **Sink 4→1** (5−4 = 1) [repo, `currents.ts`]. Zone 7 is the tractor zone of the 8-1 Surge current and zone 1 that of the 5-4 Sink current [ccru.net, [Zn7](http://www.ccru.net/zones/Zn7.htm), [Zn1](http://www.ccru.net/zones/Zn1.htm)]. CCRU states only that the three central currents "mutually compose a cycle, rotating in anticlockwise steps" [ccru.net, [declab](http://www.ccru.net/declab.htm)]. Read `1→8→2→7→5→4` as a listing of the syzygies 1::8, 2::7, 4::5 in order, not as a zone-to-zone route. The zone set {1, 2, 4, 5, 7, 8} is correct: it is the Torque region [repo, `zones.ts` `ZONE_REGION`; ccru.net Zn1 "first of the six Torque-region Zones"].
-
+> **Verification note (Em, 1 Nov 2026):** this page previously gave the Time-Circuit sequence as `1 → 8 → 2 → 7 → 5 → 4`. That only lists the three syzygies in order (1::8, 2::7, 5::4); it is not a route. It has been replaced with the doubling cycle **1 → 2 → 4 → 8 → 7 → 5 (→ 1)**, the digital roots of the powers of 2 [ccru.net, [declab](http://www.ccru.net/declab.htm)]. The currents themselves run **Surge 8→7, Hold 2→5, Sink 4→1** [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. See [[time-circuit]] and [[syzygy]]. The zone set {1, 2, 4, 5, 7, 8} is correct: it is the Torque region [repo `ZONE_REGION`; ccru.net Zn1].
 
 ---
 
@@ -58,7 +57,6 @@ These six digits ARE the Time Circuit zones: 1, 8, 2, 7, 5, 4 (when arranged ant
 The I Ching has exactly six lines per hexagram, and 64 hexagrams (2⁶). Land:
 
 > **Verification note (Em, 1 Nov 2026):** CCRU's own wording is independent of Land's 2026 interview: the steps 1, 2, 4, 8, 7, 5 "correspond to the lines of the hexagram, and to the time-circuit zones", and the line pairs follow 9-twinning (8:1, 7:2, 5:4) [ccru.net, declab]. The Zone 6 page adds that the six lines are the "six stages of change" of archaic Taoism [ccru.net, Zn6]. "Isomorphic" is Land's term, not CCRU's. See [[i-ching-connections]].
-
 
 > *"Why are there six lines? I think we've answered that just now. The iron law of six is being recognized in the I Ching. Could it be a coincidence? We know that when you do digital reduction on binary exponentiation we get the iron law of six. The I Ching by having hexagrams of six lines is implicitly cosmic and universal."*
 
@@ -78,10 +76,9 @@ This is the **same structure** — the Time Circuit is the Numogram's name for w
 
 ### Hexagram 24 (Fu/Return)
 
-The I Ching hexagram 24, Fu — Return — closes the "Amphibious Maidens" *Swarm 3* text on Zone 7 (Blood): *"On the seventh day comes return."* This is the principle of cycling through 6 to arrive at a new beginning on the symbolic seventh, which in the Time Circuit means the 1→8→2→7→5→4 cycle completes at 4 and feeds back into 1 via the 4::5→1 convergence (see [[zone-4]]).
+The I Ching hexagram 24, Fu — Return — closes the "Amphibious Maidens" *Swarm 3* text on Zone 7 (Blood): *"On the seventh day comes return."* This is the principle of cycling through 6 to arrive at a new beginning on the symbolic seventh, which in the Time Circuit means the 1→2→4→8→7→5 cycle completes at 4 and feeds back into 1 via the 4::5→1 convergence (see [[zone-4]]).
 
 > **Verification note (Em, 1 Nov 2026):** the Swarm 3 citation was not re-checked in this pass. The link from "seventh day" to the 4→1 Sink current is **speculation**. The 4→1 flow itself is sourced [repo, `currents.ts` Sink 4→1].
-
 
 ---
 
@@ -98,7 +95,6 @@ The six-cycle arranges itself into **two interlocking triangles**:
 - **Triangle 2 (descending):** 8, 7, 5 — the digital reductions of 2⁴, 2⁵, 2⁶
 
 > **Verification note (Em, 1 Nov 2026):** **error.** 8, 7, 5 are the digital roots of **2³, 2⁴, 2⁵** (8, 16→7, 32→5). 2⁶ = 64 → 1. The first triangle 1, 2, 4 is 2⁰, 2¹, 2² (or 2⁶, 2⁷, 2⁸). Also, the "Seal of Solomon" label and the Lacanian "extimacy" reading (attributed to Downs) are interpretation and do not appear in the CCRU sources. The pairing itself (8 opposite 1, 7 opposite 2, 5 opposite 4) is sourced [ccru.net, declab: "8:1, 7:2, 5:4"].
-
 
 This is the **Seal of Solomon** — two triangles, one upright, one inverted, interlocking at the median. Land:
 
@@ -150,7 +146,6 @@ Gt-28 (Z7's gate) feeds Z7 back to Z1 — a **counter-cyclic path** within the T
 | Gt-36 | 36 | 8→9 | Gate of Charon (Torque → Plex) | [repo] |
 
 Zone-1 is the terminus of three Torque channels, the 1st, 4th and 7th [ccru.net, Zn1].
-
 
 ---
 

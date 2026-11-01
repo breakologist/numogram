@@ -57,10 +57,9 @@ In numogram terms:
 1. **State-edit = Traversal step:** move from current zone `z` to next zone `z'` via `z' = (z * seed + 1) % 10` or via gate `Gt-n`. The zone is updated; the grammar (decimal rules) stays fixed.
 2. **Model-refactor = Syzygy learning:** after traversing a pair `a::b`, the system learns that `a + b = 9`. This is a grammar induction event — a new rule discovered about the decimal structure. The current (difference) is the residual that the new rule explains away.
 
-The alternating loop *is* the Time-Circuit: `1 → 8 → 2 → 7 → 5 → 4 → 1`. Each step edits the state (new zone). Each full rotation refactors the model (the hexagram kernel is re-learned).
+The alternating loop *is* the Time-Circuit: `1 → 2 → 4 → 8 → 7 → 5 → 1`. Each step edits the state (new zone). Each full rotation refactors the model (the hexagram kernel is re-learned).
 
-> **Verification note (Em, 1 Nov 2026):** `1 → 8 → 2 → 7 → 5 → 4` is a listing of the Time-Circuit syzygies, not the flow of the currents. The currents run Surge 8→7, Hold 2→5 and Sink 4→1 [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo]. See [[time-circuit]] and [[syzygy]].
-
+> **Verification note (Em, 1 Nov 2026):** this page previously gave the Time-Circuit sequence as `1 → 8 → 2 → 7 → 5 → 4`. That only lists the three syzygies in order (1::8, 2::7, 5::4); it is not a route. It has been replaced with the doubling cycle **1 → 2 → 4 → 8 → 7 → 5 (→ 1)**, the digital roots of the powers of 2 [ccru.net, [declab](http://www.ccru.net/declab.htm)]. The currents themselves run **Surge 8→7, Hold 2→5, Sink 4→1** [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. See [[time-circuit]] and [[syzygy]].
 
 ---
 

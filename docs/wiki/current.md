@@ -40,10 +40,9 @@ Each current has a **tractor zone** — the lower digit in the pair, towards whi
 - `3::6` → current **3** pulls toward Zone-3
 - `0::9` → current **9** pulls toward Zone-9
 
-In the Time-Circuit, the three currents interlock so that following them anticlockwise visits all six zones in order: `1 → 8 → 2 → 7 → 5 → 4 → 1`.
+In the Time-Circuit, the three currents interlock so that following them anticlockwise visits all six zones in order: `1 → 2 → 4 → 8 → 7 → 5 → 1`.
 
-> **Verification note (Em, 1 Nov 2026):** `1 → 8 → 2 → 7 → 5 → 4` is a listing of the Time-Circuit syzygies, not the flow of the currents. The currents run Surge 8→7, Hold 2→5 and Sink 4→1 [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo]. See [[time-circuit]] and [[syzygy]].
-
+> **Verification note (Em, 1 Nov 2026):** this page previously gave the Time-Circuit sequence as `1 → 8 → 2 → 7 → 5 → 4`. That only lists the three syzygies in order (1::8, 2::7, 5::4); it is not a route. It has been replaced with the doubling cycle **1 → 2 → 4 → 8 → 7 → 5 (→ 1)**, the digital roots of the powers of 2 [ccru.net, [declab](http://www.ccru.net/declab.htm)]. The currents themselves run **Surge 8→7, Hold 2→5, Sink 4→1** [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. See [[time-circuit]] and [[syzygy]].
 
 ## Currents as Game Mechanics
 

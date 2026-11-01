@@ -7,7 +7,6 @@ status: reviewed
 tags: ["numogram", "pandemonium", "zone"]
 ---
 
-
 The Decimal Numogram (also called the Numogram or Decimal Labyrinth) is the core diagram of the Pandemonium system developed by the CCRU (Cybernetic Culture Research Unit) in the late 1990s/early 2000s. It's a kind of occult-mathematical time-map used for "Lemurian time-sorcery," hyperstition, and demonic numerics. It is not standard mathematics but a constructed esoteric system built entirely from basic decimal (base-10) arithmetic — specifically additions that produce pairs summing to 9 and their resulting differences.
 
 **See also:** [[numogram-time-circuit]], [[numogram-warp]], [[numogram-plex]], [[i-ching-connections]], [[triangular-numbers]], [[Barker Spiral]]
@@ -42,10 +41,9 @@ Each syzygy produces a directed flow (current) equal to the absolute difference 
 ### Time-Circuit (central region)
 The most important loop. Formed by the interlocking currents of the middle syzygies, creating a rotating, anticlockwise ultra-cycle through zones 1–8. This is treated as the primary "time-map" — a cryptic temporal hyperobject or machine.
 
-The six zones form a closed 6-zone ultra-cycle: **1 → 8 → 2 → 7 → 5 → 4 → (back to 1)**.
+The six zones form a closed 6-zone ultra-cycle: **1 → 2 → 4 → 8 → 7 → 5 → (back to 1)**.
 
-> **Verification note (Em, 1 Nov 2026):** `1 → 8 → 2 → 7 → 5 → 4` lists the three Time-Circuit **syzygies** (1::8, 2::7, 5::4). It is **not** the path of the currents, which run **Surge 8→7, Hold 2→5, Sink 4→1** (current = difference, flowing to the tractor zone) [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. Each pair is linked by twinning, not by flow (see [[time-circuit]], [[syzygy]]).
-
+> **Verification note (Em, 1 Nov 2026):** this page previously gave the Time-Circuit sequence as `1 → 8 → 2 → 7 → 5 → 4`. That only lists the three syzygies in order (1::8, 2::7, 5::4); it is not a route. It has been replaced with the doubling cycle **1 → 2 → 4 → 8 → 7 → 5 (→ 1)**, the digital roots of the powers of 2 [ccru.net, [declab](http://www.ccru.net/declab.htm)]. The currents themselves run **Surge 8→7, Hold 2→5, Sink 4→1** [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. See [[time-circuit]] and [[syzygy]].
 
 This is where chronodemons live and operate (demons whose net-spans stay inside the circuit). Most human-scale time, history, and sorcery happens here — it's the "normal reality" loop we're usually trapped inside. Full rotations of the circuit are treated as complete "ticks" of Lemurian time — "as above, so below" in miniature and macro scales.
 
@@ -127,7 +125,6 @@ These are the carriers — they embody the syzygies themselves:
 - **Sink** (zones 5→4): Carried by Katak. "Nature red in tooth and claw."
 
 > **Verification note (Em, 1 Nov 2026):** the parenthesised pairs (8→1, 7→2, 5→4) in the table and list above are **net-spans**, not current directions. The currents flow **8→7** (Surge), **2→5** (Hold) and **4→1** (Sink) [ccru.net, Matrix; repo]. All five carriers have Null (neutral) pitch.
-
 
 ### Mesh-Notes (Ambient System Messages)
 

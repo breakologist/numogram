@@ -23,9 +23,9 @@ Everything here is optional and abridged. Full source: `collections/docs-rd/Numo
 - Understand the three major regions: Time-Circuit, Warp, Plex
 
 ### Phase 2: Time-Circuit & I Ching (2–3 days)
-- Study the central anticlockwise rotor path: **1 → 8 → 2 → 7 → 5 → 4**
+- Study the central anticlockwise rotor path: **1 → 2 → 4 → 8 → 7 → 5**
 
-> **Verification note (Em, 1 Nov 2026):** `1 → 8 → 2 → 7 → 5 → 4` is a listing of the Time-Circuit syzygies, not the flow of the currents. The currents run Surge 8→7, Hold 2→5 and Sink 4→1 [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo]. See [[time-circuit]] and [[syzygy]].
+> **Verification note (Em, 1 Nov 2026):** this page previously gave the Time-Circuit sequence as `1 → 8 → 2 → 7 → 5 → 4`. That only lists the three syzygies in order (1::8, 2::7, 5::4); it is not a route. It has been replaced with the doubling cycle **1 → 2 → 4 → 8 → 7 → 5 (→ 1)**, the digital roots of the powers of 2 [ccru.net, [declab](http://www.ccru.net/declab.htm)]. The currents themselves run **Surge 8→7, Hold 2→5, Sink 4→1** [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. See [[time-circuit]] and [[syzygy]].
 
 - Learn the binodecimal 6-cycle (1, 2, 4, 8, 7, 5)
 - Map a few I Ching hexagrams (e.g., 1, 2, 63, 64) onto the rotor using `[[i-ching-connections]]`
@@ -66,7 +66,7 @@ Everything here is optional and abridged. Full source: `collections/docs-rd/Numo
    Draw the Numogram. Write one word/phrase per zone that computes to that zone's digital root in AQ.
 
 2. **Time-Circuit Walk**  
-   Trace the anticlockwise path `1 → 8 → 2 → 7 → 5 → 4` with your finger while breathing. Note any sensations or thoughts at each zone.
+   Trace the anticlockwise path `1 → 2 → 4 → 8 → 7 → 5` with your finger while breathing. Note any sensations or thoughts at each zone.
 
 3. **Hexagram Mapping**  
    Take I Ching hexagram **64 (Before Completion)**. Map its six lines (bottom → top) onto the Time-Circuit zones. Any changing lines suggest gate punctures.

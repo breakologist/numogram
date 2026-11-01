@@ -7,12 +7,11 @@ status: reviewed
 tags: ["numogram", "time-circuit", "zone"]
 ---
 
-
 The Time-Circuit is the central, inner rotor of the entire Numogram — the primary "time-machine" where most everyday temporal reality (and Lemurian sorcery) actually happens. CCRU describe it in their own words like this:
 
 > "The arrangement of currents divides the Maze into three basic time-systems. Firstly, the currents of the three central syzygies mutually compose a cycle, rotating in anticlockwise steps. Lemurian sorcery calls this inner loop the Time-Circuit."
 
-The Barker Spiral's Lemurian half corresponds to the Time-Circuit: the sum-to-9 twin pairs that cycle through zones 1→8→2→7→5→4. The Spiral captures the 9↔10 gap from which this rotor emerges.
+The Barker Spiral's Lemurian half corresponds to the Time-Circuit: the sum-to-9 twin pairs that cycle through zones 1→2→4→8→7→5. The Spiral captures the 9↔10 gap from which this rotor emerges.
 
 See also: [[numogram]], [[numogram-warp]], [[numogram-plex]], [[i-ching-connections]], [[demon-djynxx]], [[demon-uttunul]], [[barker-spiral]]
 
@@ -29,9 +28,9 @@ Exactly these three central ones (the ones whose currents interlock to close the
 
 For comparison: the Warp loop is the single upper syzygy 3 :: 6 (current 3, which folds back into itself); the Plex is the lower syzygy 0 :: 9 (current 9, the abyssal outer boundary).
 
-These three currents (7 + 5 + 1) "mutually compose" — their directed flows cross and chain together in the diagram so that following them takes you in a continuous anticlockwise rotation through zones **1 → 8 → 2 → 7 → 5 → 4** (and back to 1). It's a closed 6-zone ultra-cycle that spins endlessly. This is the classic "time rotor" or "Domain of Chronos."
+These three currents (7 + 5 + 1) "mutually compose" — their directed flows cross and chain together in the diagram so that following them takes you in a continuous anticlockwise rotation through zones **1 → 2 → 4 → 8 → 7 → 5** (and back to 1). It's a closed 6-zone ultra-cycle that spins endlessly. This is the classic "time rotor" or "Domain of Chronos."
 
-> **Verification note (Em, 1 Nov 2026):** "1 → 8 → 2 → 7 → 5 → 4" is not the route of the currents. The sourced flows are Surge **8→7**, Hold **2→5** and Sink **4→1** [repo, lumpenspace/ccru@7c38ad9 `currents.ts`; ccru.net [Zn7](http://www.ccru.net/zones/Zn7.htm) and [Zn1](http://www.ccru.net/zones/Zn1.htm) name 7 and 1 as tractor zones of the Surge and Sink currents]. The sequence is best read as listing the syzygies in order. Also, the "three central syzygies" are central only to the circuit. The repo describes 4::5 (Katak) as "innermost" and 1::8 (Murrumur) as "deep" [repo, `syzygies.ts`].
+> **Verification note (Em, 1 Nov 2026):** this page previously gave the Time-Circuit sequence as `1 → 8 → 2 → 7 → 5 → 4`. That only lists the three syzygies in order (1::8, 2::7, 5::4); it is not a route. It has been replaced with the doubling cycle **1 → 2 → 4 → 8 → 7 → 5 (→ 1)**, the digital roots of the powers of 2 [ccru.net, [declab](http://www.ccru.net/declab.htm)]. The currents themselves run **Surge 8→7, Hold 2→5, Sink 4→1** [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. See [[time-circuit]] and [[syzygy]]. The "three central syzygies" are central only to the circuit: the repo calls 4::5 (Katak) "innermost" and 1::8 (Murrumur) "deep" [repo, `syzygies.ts`].
 
 ### Sourced data: the hydro-cycle (Em, 1 Nov 2026)
 

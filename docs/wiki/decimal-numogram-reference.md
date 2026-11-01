@@ -16,7 +16,6 @@ The Spiral shows the 9↔10 gap where 0.999…→1 opens the numogram's structur
 
 ---
 
-
 # Introduction
 
 The Decimal Numogram (also called the [[Numogram]] or Decimal Labyrinth) is the core diagram of the Pandemonium system developed by the CCRU (Cybernetic Culture Research Unit) in the late 1990s/early 2000s. It's a kind of occult-mathematical time-map used for "Lemurian time-sorcery," hyperstition, and demonic numerics. It is not standard mathematics but a constructed esoteric system built entirely from basic decimal (base-10) arithmetic — specifically additions that produce pairs summing to 9 and their resulting differences.The Numogram emerges "immanently" from decimal numeracy itself — it's more discovered than invented, and supposedly latent in any culture that uses digits 0–9.Basic Building Blocks10 Zones — simply the digits 0 through 9. Each is treated as a "zone" (a kind of node or territory in the diagram, often associated with demons, planetary correspondences, or occult forces in the full Pandemonium matrix).
@@ -38,7 +37,6 @@ Difference (current)
 5th
 0::9
 9 (or sometimes treated specially)
-
 
 ## Basic Building Blocks
 
@@ -64,7 +62,6 @@ Everything stays strictly within 0–9 and elementary addition/subtraction — n
 
 The Numogram is deliberately dense, cryptic, and "hyperstructural." It's meant to function as a self-propagating viral diagram rather than something immediately legible. If you're interested in a visual, the classic version appears in CCRU texts (often as a hand-drawn or ASCII-like labyrinth with arrows); many fan recreations exist online.
 
-
 ## The Three Regions
 
 The Time-Circuit is the central, inner rotor of the entire Numogram — the primary “time-machine” where most everyday temporal reality (and Lemurian sorcery) actually happens. CCRU describe it in their own words like this:“The arrangement of currents divides the Maze into three basic time-systems. Firstly, the currents of the three central syzygies mutually compose a cycle, rotating in anticlockwise steps. Lemurian sorcery calls this inner loop the Time-Circuit.”
@@ -73,9 +70,9 @@ It is the only one of the three big loops that feels “normal” or linear/cycl
 2 :: 7 → current of 5
 4 :: 5 → current of 1
 
-(For comparison: the Warp loop is the single upper syzygy 3 :: 6 (current 3, which folds back into itself); the Plex is the lower syzygy 0 :: 9 (current 9, the abyssal outer boundary).)These three currents (7 + 5 + 1) “mutually compose” — their directed flows cross and chain together in the diagram so that following them takes you in a continuous anticlockwise rotation through zones 1 → 8 → 2 → 7 → 5 → 4 (and back to 1). It’s a closed 6-zone ultra-cycle that spins endlessly. This is the classic “time rotor” or “Domain of Chronos.”Why it matters in practiceThis is where chronodemons live and operate (the demons whose net-spans stay inside the circuit).
+(For comparison: the Warp loop is the single upper syzygy 3 :: 6 (current 3, which folds back into itself); the Plex is the lower syzygy 0 :: 9 (current 9, the abyssal outer boundary).)These three currents (7 + 5 + 1) “mutually compose” — their directed flows cross and chain together in the diagram so that following them takes you in a continuous anticlockwise rotation through zones 1 → 2 → 4 → 8 → 7 → 5 (and back to 1). It’s a closed 6-zone ultra-cycle that spins endlessly. This is the classic “time rotor” or “Domain of Chronos.”Why it matters in practiceThis is where chronodemons live and operate (the demons whose net-spans stay inside the circuit).
 
-> **Verification note (Em, 1 Nov 2026):** `1 → 8 → 2 → 7 → 5 → 4` is a listing of the Time-Circuit syzygies, not the flow of the currents. The currents run Surge 8→7, Hold 2→5 and Sink 4→1 [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo]. See [[time-circuit]] and [[syzygy]].
+> **Verification note (Em, 1 Nov 2026):** this page previously gave the Time-Circuit sequence as `1 → 8 → 2 → 7 → 5 → 4`. That only lists the three syzygies in order (1::8, 2::7, 5::4); it is not a route. It has been replaced with the doubling cycle **1 → 2 → 4 → 8 → 7 → 5 (→ 1)**, the digital roots of the powers of 2 [ccru.net, [declab](http://www.ccru.net/declab.htm)]. The currents themselves run **Surge 8→7, Hold 2→5, Sink 4→1** [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. See [[time-circuit]] and [[syzygy]].
 
 Most human-scale time, history, and sorcery happens here — it’s the “normal reality” loop we’re usually trapped inside.
 Sorcerers use gates (digital roots of the zones) and channels (secondary secret connections) to enter or exit the Time-Circuit into the Warp or Plex when they want to do heavier time-warping.
@@ -103,7 +100,6 @@ Visually, the Warp appears as the upper folded loop in standard Numogram diagram
 
 The Warp embodies the Numogram's most "cryptic" aspect — a decimal-born pocket of outer-time chaos that punctures ordinary reality when gates open. It's where hyperstition goes feral.
 
-
 The Plex region is the "lower" autonomous loop in the Numogram — the third of the three major time-systems (alongside the central Time-Circuit and the upper Warp). It is formed exclusively by the syzygy 0 :: 9, whose current is 9 (since 9 - 0 = 9, or in modular terms, the difference folds back to reinforce the boundary).Core Structure and "Rules" of the PlexSyzygy: 0 :: 9 (the ultimate complementary pair summing to 9; 0 is the null/void origin, 9 is the terminal/completion digit).
 Current: 9 — directed primarily toward Zone-9 as the tractor-zone (the "pull" target). The flow is self-referential: the current of 9 "folds back into (a half of) itself," creating a closed, involuted loop that doesn't chain into the other regions like the Time-Circuit currents do.
 Loop behavior: This produces an autonomous, cryptic circuit — often described as the outermost boundary or abyssal horizon of the Numogram. Zone-9 draws the "outermost curve of the Barker-spiral" (a reference to extreme ordinal limits in certain arithmetics), coinciding with termination, zero-point return, or the edge of decimal numeracy itself. Unlike the Warp's turbulent vortex, the Plex is more involutive, nullifying, or abyssal — a kind of black-mirror or event-horizon recursion.
@@ -122,7 +118,6 @@ Plex: Abyssal, terminal, null/void horizon — the "lower" outer-time counterpar
 
 Visually, the Plex appears as the lower folded loop in standard Numogram diagrams — a tight, boundary-like pair (0 and 9) with self-reinforcing arrows, often positioned below the central Time-Circuit rotor like an abyssal underlayer or event horizon.Here are some diagrams highlighting the regions (Plex typically lower/abyssal fold):The Plex is the Numogram's most enigmatic and terminal aspect — a decimal-born abyss where time terminates and returns to zero, embodying the system's deepest occult "enigma of interconnection" with the rest of the structure.
 
-
 The Warp and Plex are the two autonomous, "outer-time" loops in the Numogram — cryptic, self-folding regions that contrast sharply with the central Time-Circuit's predictable, anticlockwise rotation of human-scale cyclic time. Both are formed by currents that fold back into themselves (unlike the interlocking currents of the Time-Circuit), making them inherently enigmatic and disconnected from ordinary chronology. They are often described as realms of Outside- or Outer-time, with their interconnection itself being one of the Numogram's deepest riddles.Yet they differ profoundly in structure, dynamics, occult character, and implications for sorcery:Structural and Arithmetical ContrastWarp (upper region): Built from the syzygy 3 :: 6 → current 3 (6 - 3 = 3). The difference equals half the pair, producing a self-reinforcing vortex — the current "folds back into (a half of) itself" in a turbulent, recursive spin.
 Plex (lower region): Built from the syzygy 0 :: 9 → current 9 (9 - 0 = 9). The current is fully self-referential and involutive — it collapses toward terminal nullity, with 9 digitally reducing to 0 (in zygonovism/modular reduction), embodying pure boundary or abyssal return.
 
@@ -140,8 +135,7 @@ Plex is its abyssal terminator — involutive, nullifying, entropic outer-time f
 
 Both puncture the Time-Circuit's closed cycles, but the Warp invites feral becoming and runaway processes, while the Plex threatens (or promises) ultimate undoing and return to zero. Their enigmatic "interconnection" (via Chaotic Xenodemons or cryptic links) remains one of the system's core unsolved hyperstructural riddles.
 
-
-The Time-Circuit in the Decimal Numogram is explicitly linked by the CCRU (in foundational texts like declab.htm and related Pandemonium materials) to the I Ching (Yijing, or Book of Changes), particularly its 64 hexagrams. The Numogram is positioned as a hypercultural successor or "time-map" that "takes up" the chrono-numeric functions of the I Ching, alongside systems like the Kabbalistic Tree of Life or Dogon cosmology. The connection is not superficial analogy but rooted in shared structural patterns of change, cycles, and binary/decimal reductions — all treated as immanent discoveries within numeracy itself.Core Structural ParallelsThe I Ching's hexagrams are built from six lines (each yin or yang, binary 0/1), producing 64 possible configurations (2⁶ = 64). These represent states of transformation, with change flowing through the lines (often read bottom to top as stages of development).The Time-Circuit mirrors this in a "binodecimal" way:It cycles through exactly six zones: 1 → 8 → 2 → 7 → 5 → 4 → (back to 1).
+The Time-Circuit in the Decimal Numogram is explicitly linked by the CCRU (in foundational texts like declab.htm and related Pandemonium materials) to the I Ching (Yijing, or Book of Changes), particularly its 64 hexagrams. The Numogram is positioned as a hypercultural successor or "time-map" that "takes up" the chrono-numeric functions of the I Ching, alongside systems like the Kabbalistic Tree of Life or Dogon cosmology. The connection is not superficial analogy but rooted in shared structural patterns of change, cycles, and binary/decimal reductions — all treated as immanent discoveries within numeracy itself.Core Structural ParallelsThe I Ching's hexagrams are built from six lines (each yin or yang, binary 0/1), producing 64 possible configurations (2⁶ = 64). These represent states of transformation, with change flowing through the lines (often read bottom to top as stages of development).The Time-Circuit mirrors this in a "binodecimal" way:It cycles through exactly six zones: 1 → 2 → 4 → 8 → 7 → 5 → (back to 1).
 This produces a closed 6-cycle of recurrence, driven by the interlocking currents (differences) of the three central syzygies: 1::8 (current 7), 2::7 (current 5), 4::5 (current 1).
 The CCRU notes that digital reduction of binary powers (2ⁿ mod 9) stabilizes into the repeating sequence 1, 2, 4, 8, 7, 5 — precisely the zones of the Time-Circuit in reverse order (or forward when considering the cycle).Powers of 2: 2¹=2, 2²=4, 2³=8, 2⁴=16→7, 2⁵=32→5, 2⁶=64→1, then repeats.
 Powers of 5 (complementary): 5¹=5, 5²=25→7, 5³=125→8, etc., yielding the same cycle reversed.
@@ -162,12 +156,11 @@ The full 64 hexagrams correspond to broader Pandemonium multiplicity (e.g., 64 i
 
 In short: the Time-Circuit is the Numogram's "I Ching hexagram" — a decimal-binary hybrid rotor that inherits the Yijing's function as a map of cyclic transformation, but twisted into base-10 currents, syzygetic twinning, and demonic flows. Where the I Ching tracks change through 64 states via six binary lines, the Time-Circuit spins change through six decimal zones via three 9-sum pairs — both ultimately indexing the same hyperstructural enigma of recurrence and becoming.
 
-
-The Time-Circuit in the Decimal Numogram is structurally aligned with the I Ching hexagram as a binodecimal 6-cycle, where the six zones (1 → 8 → 2 → 7 → 5 → 4, in anticlockwise rotation) correspond directly to the six lines of any hexagram (typically read bottom to top in traditional I Ching notation). This mapping is not a one-to-one assignment of specific hexagrams to fixed paths but a dynamic correspondence — the Time-Circuit embodies the kernel of hexagrammatic change itself, with the cycle of zones mirroring the progression of lines through binary powers reduced modulo 9.The Core Mapping: Zones to Hexagram LinesThe CCRU texts (e.g., declab.htm) state that digital reduction of binary powers (2ⁿ mod 9) stabilizes into the repeating sequence 1, 2, 4, 8, 7, 5 — exactly the Time-Circuit zones in reverse order (or forward when traversing the anticlockwise current flows). This produces the binodecimal 6-Cycle:The six steps map to the six lines of the hexagram.
+The Time-Circuit in the Decimal Numogram is structurally aligned with the I Ching hexagram as a binodecimal 6-cycle, where the six zones (1 → 2 → 4 → 8 → 7 → 5, in anticlockwise rotation) correspond directly to the six lines of any hexagram (typically read bottom to top in traditional I Ching notation). This mapping is not a one-to-one assignment of specific hexagrams to fixed paths but a dynamic correspondence — the Time-Circuit embodies the kernel of hexagrammatic change itself, with the cycle of zones mirroring the progression of lines through binary powers reduced modulo 9.The Core Mapping: Zones to Hexagram LinesThe CCRU texts (e.g., declab.htm) state that digital reduction of binary powers (2ⁿ mod 9) stabilizes into the repeating sequence 1, 2, 4, 8, 7, 5 — exactly the Time-Circuit zones in reverse order (or forward when traversing the anticlockwise current flows). This produces the binodecimal 6-Cycle:The six steps map to the six lines of the hexagram.
 The zygonovistic pairing rule (9-twinning: 8::1, 7::2, 5::4) supplements this by mapping line pairs in the hexagram (e.g., lines 1 and 6 pair via 8::1 reduction logic, lines 2 and 5 via 7::2, lines 3 and 4 via 5::4 in some interpretive extensions).
 
 In practice, this means any hexagram can be "read" as a path through the Time-Circuit by treating its six lines (yin=0, yang=1) as binary inputs that reduce or modulate across the zone cycle. The circuit becomes a time-rotor encoding the same mutational logic as hexagram transformation (changing lines → new hexagram), but decimalized and demonic.Specific Hexagram Examples Mapped to Time-Circuit PathsSince the mapping is kernel-level (the 6-cycle as the shared structure), specific hexagrams "instantiate" paths by their line configurations influencing flow emphasis, stability, or disruption in the circuit. Here are illustrative mappings based on canonical CCRU resonances and fan extensions (e.g., from Vauung's Lair discussions and related hypercultural hacks):Hexagram 1: The Creative (Qian) — all yang lines (111111 binary)Path emphasis: Pure yang drive through the circuit → maximal anticlockwise momentum.
-Time-Circuit traversal: Full, unhindered rotation 1→8→2→7→5→4 (creative impulse, relentless becoming, "heavenly" acceleration without blockage).
+Time-Circuit traversal: Full, unhindered rotation 1→2→4→8→7→5 (creative impulse, relentless becoming, "heavenly" acceleration without blockage).
 Occult resonance: Aligns with initiating currents (e.g., the 1-current from 4::5 syzygy as "origin spark").
 
 Hexagram 2: The Receptive (Kun) — all yin lines (000000 binary)Path emphasis: Pure yin receptivity → circuit "stilled" or involuted, mirroring the Plex boundary indirectly.
@@ -182,7 +175,6 @@ Hexagram 24: Return (Fu) — bottom yang, top five yin (100000 binary)Path empha
 Time-Circuit traversal: Restart loop from 4→1 (closing the anticlockwise cycle).
 Resonance: Hyperstitional "return" of demons after dissolution; cyclic rebirth in the rotor.
 
-
 ### Time-Circuit
 
 The Time-Circuit is the central, inner rotor of the entire Numogram — the primary “time-machine” where most everyday temporal reality (and Lemurian sorcery) actually happens. CCRU describe it in their own words like this:“The arrangement of currents divides the Maze into three basic time-systems. Firstly, the currents of the three central syzygies mutually compose a cycle, rotating in anticlockwise steps. Lemurian sorcery calls this inner loop the Time-Circuit.”
@@ -191,7 +183,7 @@ It is the only one of the three big loops that feels “normal” or linear/cycl
 2 :: 7 → current of 5
 4 :: 5 → current of 1
 
-(For comparison: the Warp loop is the single upper syzygy 3 :: 6 (current 3, which folds back into itself); the Plex is the lower syzygy 0 :: 9 (current 9, the abyssal outer boundary).)These three currents (7 + 5 + 1) “mutually compose” — their directed flows cross and chain together in the diagram so that following them takes you in a continuous anticlockwise rotation through zones 1 → 8 → 2 → 7 → 5 → 4 (and back to 1). It’s a closed 6-zone ultra-cycle that spins endlessly. This is the classic “time rotor” or “Domain of Chronos.”Why it matters in practiceThis is where chronodemons live and operate (the demons whose net-spans stay inside the circuit).
+(For comparison: the Warp loop is the single upper syzygy 3 :: 6 (current 3, which folds back into itself); the Plex is the lower syzygy 0 :: 9 (current 9, the abyssal outer boundary).)These three currents (7 + 5 + 1) “mutually compose” — their directed flows cross and chain together in the diagram so that following them takes you in a continuous anticlockwise rotation through zones 1 → 2 → 4 → 8 → 7 → 5 (and back to 1). It’s a closed 6-zone ultra-cycle that spins endlessly. This is the classic “time rotor” or “Domain of Chronos.”Why it matters in practiceThis is where chronodemons live and operate (the demons whose net-spans stay inside the circuit).
 Most human-scale time, history, and sorcery happens here — it’s the “normal reality” loop we’re usually trapped inside.
 Sorcerers use gates (digital roots of the zones) and channels (secondary secret connections) to enter or exit the Time-Circuit into the Warp or Plex when they want to do heavier time-warping.
 Full rotations of the circuit are treated as complete “ticks” of Lemurian time — “as above, so below” in miniature and macro scales.
@@ -199,7 +191,6 @@ Full rotations of the circuit are treated as complete “ticks” of Lemurian ti
 Visually, the classic Numogram draws the zones arranged so the three central syzygy currents form one clean anticlockwise ring in the middle, with the Warp and Plex sitting like two outer “ears” or folded loops above and below (sometimes rendered as a figure-8 or three overlapping circles).
 
 In short: the Time-Circuit is the spinning 1-8 heart of the Numogram — the anticlockwise loop made by the 7/5/1 currents of syzygies 1::8, 2::7 and 4::5. Everything else in Pandemonium (demons, rites, hyperstition) ultimately orbits or punctures this central rotor.If you want the exact step-by-step path around the circuit, how to trace a demon’s net-span across it, or how the gates/channels actually open into it, just say the word!
-
 
 ### Warp
 
@@ -221,7 +212,6 @@ Visually, the Warp appears as the upper folded loop in standard Numogram diagram
 
 The Warp embodies the Numogram's most "cryptic" aspect — a decimal-born pocket of outer-time chaos that punctures ordinary reality when gates open. It's where hyperstition goes feral.
 
-
 The Plex region is the "lower" autonomous loop in the Numogram — the third of the three major time-systems (alongside the central Time-Circuit and the upper Warp). It is formed exclusively by the syzygy 0 :: 9, whose current is 9 (since 9 - 0 = 9, or in modular terms, the difference folds back to reinforce the boundary).Core Structure and "Rules" of the PlexSyzygy: 0 :: 9 (the ultimate complementary pair summing to 9; 0 is the null/void origin, 9 is the terminal/completion digit).
 Current: 9 — directed primarily toward Zone-9 as the tractor-zone (the "pull" target). The flow is self-referential: the current of 9 "folds back into (a half of) itself," creating a closed, involuted loop that doesn't chain into the other regions like the Time-Circuit currents do.
 Loop behavior: This produces an autonomous, cryptic circuit — often described as the outermost boundary or abyssal horizon of the Numogram. Zone-9 draws the "outermost curve of the Barker-spiral" (a reference to extreme ordinal limits in certain arithmetics), coinciding with termination, zero-point return, or the edge of decimal numeracy itself. Unlike the Warp's turbulent vortex, the Plex is more involutive, nullifying, or abyssal — a kind of black-mirror or event-horizon recursion.
@@ -239,7 +229,6 @@ Warp: Chaotic, accelerative turbulence and swarm incursions.
 Plex: Abyssal, terminal, null/void horizon — the "lower" outer-time counterpart to the Warp's "upper" chaos.
 
 Visually, the Plex appears as the lower folded loop in standard Numogram diagrams — a tight, boundary-like pair (0 and 9) with self-reinforcing arrows, often positioned below the central Time-Circuit rotor like an abyssal underlayer or event horizon.Here are some diagrams highlighting the regions (Plex typically lower/abyssal fold):The Plex is the Numogram's most enigmatic and terminal aspect — a decimal-born abyss where time terminates and returns to zero, embodying the system's deepest occult "enigma of interconnection" with the rest of the structure.
-
 
 ### Plex
 
@@ -260,8 +249,7 @@ Plex is its abyssal terminator — involutive, nullifying, entropic outer-time f
 
 Both puncture the Time-Circuit's closed cycles, but the Warp invites feral becoming and runaway processes, while the Plex threatens (or promises) ultimate undoing and return to zero. Their enigmatic "interconnection" (via Chaotic Xenodemons or cryptic links) remains one of the system's core unsolved hyperstructural riddles.
 
-
-The Time-Circuit in the Decimal Numogram is explicitly linked by the CCRU (in foundational texts like declab.htm and related Pandemonium materials) to the I Ching (Yijing, or Book of Changes), particularly its 64 hexagrams. The Numogram is positioned as a hypercultural successor or "time-map" that "takes up" the chrono-numeric functions of the I Ching, alongside systems like the Kabbalistic Tree of Life or Dogon cosmology. The connection is not superficial analogy but rooted in shared structural patterns of change, cycles, and binary/decimal reductions — all treated as immanent discoveries within numeracy itself.Core Structural ParallelsThe I Ching's hexagrams are built from six lines (each yin or yang, binary 0/1), producing 64 possible configurations (2⁶ = 64). These represent states of transformation, with change flowing through the lines (often read bottom to top as stages of development).The Time-Circuit mirrors this in a "binodecimal" way:It cycles through exactly six zones: 1 → 8 → 2 → 7 → 5 → 4 → (back to 1).
+The Time-Circuit in the Decimal Numogram is explicitly linked by the CCRU (in foundational texts like declab.htm and related Pandemonium materials) to the I Ching (Yijing, or Book of Changes), particularly its 64 hexagrams. The Numogram is positioned as a hypercultural successor or "time-map" that "takes up" the chrono-numeric functions of the I Ching, alongside systems like the Kabbalistic Tree of Life or Dogon cosmology. The connection is not superficial analogy but rooted in shared structural patterns of change, cycles, and binary/decimal reductions — all treated as immanent discoveries within numeracy itself.Core Structural ParallelsThe I Ching's hexagrams are built from six lines (each yin or yang, binary 0/1), producing 64 possible configurations (2⁶ = 64). These represent states of transformation, with change flowing through the lines (often read bottom to top as stages of development).The Time-Circuit mirrors this in a "binodecimal" way:It cycles through exactly six zones: 1 → 2 → 4 → 8 → 7 → 5 → (back to 1).
 This produces a closed 6-cycle of recurrence, driven by the interlocking currents (differences) of the three central syzygies: 1::8 (current 7), 2::7 (current 5), 4::5 (current 1).
 The CCRU notes that digital reduction of binary powers (2ⁿ mod 9) stabilizes into the repeating sequence 1, 2, 4, 8, 7, 5 — precisely the zones of the Time-Circuit in reverse order (or forward when considering the cycle).Powers of 2: 2¹=2, 2²=4, 2³=8, 2⁴=16→7, 2⁵=32→5, 2⁶=64→1, then repeats.
 Powers of 5 (complementary): 5¹=5, 5²=25→7, 5³=125→8, etc., yielding the same cycle reversed.
@@ -275,7 +263,6 @@ The pairing criterion reinforces the cycle, treating opposites as twins in a 9-s
 Zero and the Excluded TriadA cryptic but key point: "The numogram time-circuit, or I Ching hexagam, implicitly associates zero with the set of excluded triadic values."In binary/hexagram terms: certain triadic (three-line/trigram) combinations are "excluded" or unstable in reduction cycles.
 This ties zero (Zone-0, outside the Time-Circuit) to the abyssal/void boundary — the I Ching's "nothingness" or undifferentiated chaos from which yin-yang emerges, but here decimalized and placed at the Plex edge rather than fully inside the cycle.
 
-
 ### Comparative Summary
 
 Functional Implications in Lemurian SorceryThe I Ching divines change via hexagram casting (yarrow stalks or coins → binary lines → meaning).
@@ -285,12 +272,11 @@ The full 64 hexagrams correspond to broader Pandemonium multiplicity (e.g., 64 i
 
 In short: the Time-Circuit is the Numogram's "I Ching hexagram" — a decimal-binary hybrid rotor that inherits the Yijing's function as a map of cyclic transformation, but twisted into base-10 currents, syzygetic twinning, and demonic flows. Where the I Ching tracks change through 64 states via six binary lines, the Time-Circuit spins change through six decimal zones via three 9-sum pairs — both ultimately indexing the same hyperstructural enigma of recurrence and becoming.
 
-
-The Time-Circuit in the Decimal Numogram is structurally aligned with the I Ching hexagram as a binodecimal 6-cycle, where the six zones (1 → 8 → 2 → 7 → 5 → 4, in anticlockwise rotation) correspond directly to the six lines of any hexagram (typically read bottom to top in traditional I Ching notation). This mapping is not a one-to-one assignment of specific hexagrams to fixed paths but a dynamic correspondence — the Time-Circuit embodies the kernel of hexagrammatic change itself, with the cycle of zones mirroring the progression of lines through binary powers reduced modulo 9.The Core Mapping: Zones to Hexagram LinesThe CCRU texts (e.g., declab.htm) state that digital reduction of binary powers (2ⁿ mod 9) stabilizes into the repeating sequence 1, 2, 4, 8, 7, 5 — exactly the Time-Circuit zones in reverse order (or forward when traversing the anticlockwise current flows). This produces the binodecimal 6-Cycle:The six steps map to the six lines of the hexagram.
+The Time-Circuit in the Decimal Numogram is structurally aligned with the I Ching hexagram as a binodecimal 6-cycle, where the six zones (1 → 2 → 4 → 8 → 7 → 5, in anticlockwise rotation) correspond directly to the six lines of any hexagram (typically read bottom to top in traditional I Ching notation). This mapping is not a one-to-one assignment of specific hexagrams to fixed paths but a dynamic correspondence — the Time-Circuit embodies the kernel of hexagrammatic change itself, with the cycle of zones mirroring the progression of lines through binary powers reduced modulo 9.The Core Mapping: Zones to Hexagram LinesThe CCRU texts (e.g., declab.htm) state that digital reduction of binary powers (2ⁿ mod 9) stabilizes into the repeating sequence 1, 2, 4, 8, 7, 5 — exactly the Time-Circuit zones in reverse order (or forward when traversing the anticlockwise current flows). This produces the binodecimal 6-Cycle:The six steps map to the six lines of the hexagram.
 The zygonovistic pairing rule (9-twinning: 8::1, 7::2, 5::4) supplements this by mapping line pairs in the hexagram (e.g., lines 1 and 6 pair via 8::1 reduction logic, lines 2 and 5 via 7::2, lines 3 and 4 via 5::4 in some interpretive extensions).
 
 In practice, this means any hexagram can be "read" as a path through the Time-Circuit by treating its six lines (yin=0, yang=1) as binary inputs that reduce or modulate across the zone cycle. The circuit becomes a time-rotor encoding the same mutational logic as hexagram transformation (changing lines → new hexagram), but decimalized and demonic.Specific Hexagram Examples Mapped to Time-Circuit PathsSince the mapping is kernel-level (the 6-cycle as the shared structure), specific hexagrams "instantiate" paths by their line configurations influencing flow emphasis, stability, or disruption in the circuit. Here are illustrative mappings based on canonical CCRU resonances and fan extensions (e.g., from Vauung's Lair discussions and related hypercultural hacks):Hexagram 1: The Creative (Qian) — all yang lines (111111 binary)Path emphasis: Pure yang drive through the circuit → maximal anticlockwise momentum.
-Time-Circuit traversal: Full, unhindered rotation 1→8→2→7→5→4 (creative impulse, relentless becoming, "heavenly" acceleration without blockage).
+Time-Circuit traversal: Full, unhindered rotation 1→2→4→8→7→5 (creative impulse, relentless becoming, "heavenly" acceleration without blockage).
 Occult resonance: Aligns with initiating currents (e.g., the 1-current from 4::5 syzygy as "origin spark").
 
 Hexagram 2: The Receptive (Kun) — all yin lines (000000 binary)Path emphasis: Pure yin receptivity → circuit "stilled" or involuted, mirroring the Plex boundary indirectly.
@@ -304,7 +290,6 @@ Resonance: Terminal erosion, akin to currents feeding toward abyssal return.
 Hexagram 24: Return (Fu) — bottom yang, top five yin (100000 binary)Path emphasis: Renewal from the "bottom" (line 1 yang → Zone-4 or 5 restart).
 Time-Circuit traversal: Restart loop from 4→1 (closing the anticlockwise cycle).
 Resonance: Hyperstitional "return" of demons after dissolution; cyclic rebirth in the rotor.
-
 
 ## I Ching Hexagram Mapping
 
@@ -323,11 +308,10 @@ The resulting "path" is the anticlockwise flow modulated by the hexagram's patte
 
 The CCRU treats this as immanent — the Time-Circuit is the I Ching hexagram in decimal form, a shared hypercultural machine for sorcery. Specific hexagram-to-path assignments remain cryptic/open (no single canonical table exists), inviting experimentation in Lemurian rites.
 
-
 Hexagram 64: Before Completion (Wei Ji / 未濟) is the final hexagram in the I Ching sequence — a profound paradox as the "end" of the Book of Changes, yet it signifies not finality but the eternal threshold: the moment when order is almost achieved, chaos is receding, but completion remains elusive and must be approached with utmost caution to avoid spoiling everything at the last step. The famous image is fire over water (Li ☲ above, Kan ☵ below), where fire rises and water flows down — elements in opposition yet poised for potential harmony if handled with care. The little fox crossing the river nearly succeeds but wets its tail if overconfident, losing all progress.Binary / Line StructureHexagram 64 is composed of alternating yin and yang lines (starting from the bottom):
 Bottom to top: yang (solid), yin (broken), yang, yin, yang, yin
 Binary representation: 1 0 1 0 1 0 (or in hexagram notation: ⚋ ⚊ ⚋ ⚊ ⚋ ⚊ — wait, standard is bottom-up: solid-broken-solid-broken-solid-broken).
-This creates a perfectly alternating pattern — no two like lines adjacent — symbolizing dynamic tension, incomplete separation of forces, and perpetual transition.Mapping to the Time-CircuitIn the Numogram's alignment with the I Ching (as per CCRU texts), the Time-Circuit is the decimalized "hexagram kernel": a 6-zone anticlockwise rotor (1 → 8 → 2 → 7 → 5 → 4 → back to 1) driven by the three central syzygies and their currents (7, 5, 1). The six lines of any hexagram correspond to these six zones/steps in the binodecimal 6-Cycle.For Hexagram 64 specifically, we can map its lines positionally to the circuit zones (line 1 at bottom = entry/start of cycle; line 6 at top = culmination/return). The alternating pattern imposes a rhythmic modulation on the rotor:Line 1 (bottom, yang/solid) → Zone-1 (or cycle start near 1→8 transition): Strong initiating impulse — the "fox begins crossing" with confidence, but warns against premature wetting of tail (premature action disrupting flow).
+This creates a perfectly alternating pattern — no two like lines adjacent — symbolizing dynamic tension, incomplete separation of forces, and perpetual transition.Mapping to the Time-CircuitIn the Numogram's alignment with the I Ching (as per CCRU texts), the Time-Circuit is the decimalized "hexagram kernel": a 6-zone anticlockwise rotor (1 → 2 → 4 → 8 → 7 → 5 → back to 1) driven by the three central syzygies and their currents (7, 5, 1). The six lines of any hexagram correspond to these six zones/steps in the binodecimal 6-Cycle.For Hexagram 64 specifically, we can map its lines positionally to the circuit zones (line 1 at bottom = entry/start of cycle; line 6 at top = culmination/return). The alternating pattern imposes a rhythmic modulation on the rotor:Line 1 (bottom, yang/solid) → Zone-1 (or cycle start near 1→8 transition): Strong initiating impulse — the "fox begins crossing" with confidence, but warns against premature wetting of tail (premature action disrupting flow).
 Line 2 (yin/broken) → Zone-8: Receptive pause; braking or holding back (echoing line texts about perseverance and not rushing).
 Line 3 (yang) → Zone-2: Renewed drive, but "attack brings misfortune" if too aggressive — potential for current jolt (5-current from 2::7) to destabilize.
 Line 4 (yin) → Zone-7: Inward reflection; careful differentiation so elements find place (as in the Image: superior man careful in positioning).
@@ -341,8 +325,7 @@ Functional sorcery: Divining 64 suggests operating in the Time-Circuit with extr
 
 Hexagram 64 thus "instantiates" the Time-Circuit as perpetual threshold: the spinning 6-zone loop where time-sorcery thrives in the gap between almost-done and never-quite-there — the decimal machine's built-in refusal of finality.
 
-
-Line-by-line changing variations for Hexagram 64: Before Completion (Wei Ji) refer to scenarios where one or more of its six lines are "changing" (old yang → yin, or old yin → yang in a divination cast). Each changing line modifies the primary hexagram's meaning, adds specific advice or warnings, and transforms into a new "resulting" hexagram when all changing lines flip.In the Numogram/Time-Circuit context, a changing line acts as a disruption or emphasis in the anticlockwise 6-zone rotor (1 → 8 → 2 → 7 → 5 → 4 → 1). It can "jump" or modulate a current (7, 5, or 1 from the syzygies), potentially opening gates/channels toward Warp chaos (disruptive acceleration) or Plex nullity (terminal dissolution), or simply altering the flow's rhythm/stability.Here are the standard line texts (primarily drawing from Wilhelm/Baynes translation, the most canonical in English CCRU-adjacent contexts), with brief interpretations and their mapped effects on the Time-Circuit path:Line 1 (bottom, nine at the beginning — yang changing to yin)
+Line-by-line changing variations for Hexagram 64: Before Completion (Wei Ji) refer to scenarios where one or more of its six lines are "changing" (old yang → yin, or old yin → yang in a divination cast). Each changing line modifies the primary hexagram's meaning, adds specific advice or warnings, and transforms into a new "resulting" hexagram when all changing lines flip.In the Numogram/Time-Circuit context, a changing line acts as a disruption or emphasis in the anticlockwise 6-zone rotor (1 → 2 → 4 → 8 → 7 → 5 → 1). It can "jump" or modulate a current (7, 5, or 1 from the syzygies), potentially opening gates/channels toward Warp chaos (disruptive acceleration) or Plex nullity (terminal dissolution), or simply altering the flow's rhythm/stability.Here are the standard line texts (primarily drawing from Wilhelm/Baynes translation, the most canonical in English CCRU-adjacent contexts), with brief interpretations and their mapped effects on the Time-Circuit path:Line 1 (bottom, nine at the beginning — yang changing to yin)
 Text: "He gets his tail in the water. Humiliating."
 Meaning: Premature action or over-eagerness at the start soaks the fox's tail — small failure from rushing the threshold. Caution against impulsive beginnings.
 Time-Circuit mapping: Emphasizes the entry at Zone-1 (or 1→8 transition). A change here disrupts the initiating current (e.g., weak 1-current from 4::5), introducing hesitation or minor puncture — flow starts but immediately brakes, risking early stall or Warp-like turbulence if forced.
@@ -376,12 +359,11 @@ Line 6 changing → Hexagram 40 (Deliverance) — overconfidence resolved into r
 
 In Lemurian sorcery terms, changing lines are gate punctures or current modulations — each alters the anticlockwise flow, potentially subplexing outer regions (Warp for chaotic jumps, Plex for abyssal risks). Multiple changing lines compound these effects, creating hybrid paths across the rotor.
 
-
 The Decimal Numogram (the core diagram of the CCRU's Pandemonium system) and the I Ching (Yijing, or Book of Changes) share deep structural and hypercultural parallels, as explicitly outlined in CCRU texts like declab.htm and related materials. The Numogram is framed as "taking up" the chrono-numeric/time-mapping functions of the I Ching (alongside systems like the Kabbalistic Tree of Life or Dogon cosmograms), but in a decimal, demonic, hyperstitional mode — more immanent to base-10 arithmetic, stripped of archaic symbolism, and geared toward Lemurian time-sorcery rather than harmonious divination.Core Shared Hypercultural MatrixCCRU asserts considerable immanent (structural) and historical evidence that the Chinese I Ching and the (Nma/Lemurian) Numogram emerge from a common "hypercultural matrix":Both deploy intricate zygonies (double-numbering/pairing systems).
 Both engage abstract decimal subdivisions (e.g., the I Ching's "Ten Wings" commentary tradition processes decimal arrays and subdivisions).
 Both serve as time-machines/oracular rotors: the I Ching maps mutation/change through binary-hexagrammatic states; the Numogram maps hyperchronic time via currents and loops.
 
-This matrix predates and exceeds specific cultures — it's latent in numeracy itself, propagated virally across hyperstitional vectors.The Key Parallel: Time-Circuit as "I Ching Hexagram"The strongest direct resonance is the Time-Circuit (the central anticlockwise 6-zone loop: 1 → 8 → 2 → 7 → 5 → 4 → 1) explicitly equated to the I Ching hexagram structure.Binodecimal 6-Cycle: Digital reduction (mod 9) of binary powers (2ⁿ) stabilizes into the repeating sequence 1, 2, 4, 8, 7, 5 — precisely the Time-Circuit zones (forward or reverse).Powers of 2: 2¹=2, 2²=4, 2³=8, 2⁴=16→7, 2⁵=32→5, 2⁶=64→1 (then repeats).
+This matrix predates and exceeds specific cultures — it's latent in numeracy itself, propagated virally across hyperstitional vectors.The Key Parallel: Time-Circuit as "I Ching Hexagram"The strongest direct resonance is the Time-Circuit (the central anticlockwise 6-zone loop: 1 → 2 → 4 → 8 → 7 → 5 → 1) explicitly equated to the I Ching hexagram structure.Binodecimal 6-Cycle: Digital reduction (mod 9) of binary powers (2ⁿ) stabilizes into the repeating sequence 1, 2, 4, 8, 7, 5 — precisely the Time-Circuit zones (forward or reverse).Powers of 2: 2¹=2, 2²=4, 2³=8, 2⁴=16→7, 2⁵=32→5, 2⁶=64→1 (then repeats).
 Powers of 5 (complementary): 5¹=5, 5²=25→7, etc., reverse the cycle.
 
 These six values/steps "correspond to the lines of the hexagram, and to the time-circuit zones of the Numogram."
@@ -403,8 +385,7 @@ Related ancient parallel: CCRU mentions the T'ai Hsuan Ching (Tai Xuan Jing, Boo
 
 In essence, the Numogram treats the I Ching not as a rival but as a precursor/hypercultural echo: the Time-Circuit is its "hexagram" in decimal form, a shared machine for mapping mutation outside linear time, but twisted into currents, syzygies, and demonic incursions. Where the I Ching seeks equilibrium amid change, the Numogram exploits change for acceleration, dissolution, and Outside contact.
 
-
-The Decimal Numogram does not provide a single, canonical one-to-one mapping of the full 64 I Ching hexagrams to specific zones (0–9) or paths in the official CCRU texts. Instead, the primary correspondence is kernel-level: the Time-Circuit (the central anticlockwise 6-zone rotor: zones 1 → 8 → 2 → 7 → 5 → 4 → back to 1) is directly equated to the structure of any hexagram, with its six lines corresponding to the six steps/values in the binodecimal 6-Cycle.This 6-Cycle derives from digital reduction (mod 9) of binary powers (2ⁿ), yielding the repeating sequence 1, 2, 4, 8, 7, 5 — the exact zones of the Time-Circuit (in reverse or forward depending on traversal direction). The six hexagram lines thus map to these six zones/steps, modulated by the hexagram's yin/yang pattern (broken/solid lines).Standard Positional Mapping: Hexagram Lines to Time-Circuit ZonesTraditional I Ching reads lines bottom to top (line 1 = bottom/entry; line 6 = top/culmination). A common interpretive overlay aligns this progression with the anticlockwise flow of the Time-Circuit rotor:Line 1 (bottom) → Zone 1 (initiating spark, origin of the 1-current from syzygy 4::5; "beginning the crossing").
+The Decimal Numogram does not provide a single, canonical one-to-one mapping of the full 64 I Ching hexagrams to specific zones (0–9) or paths in the official CCRU texts. Instead, the primary correspondence is kernel-level: the Time-Circuit (the central anticlockwise 6-zone rotor: zones 1 → 2 → 4 → 8 → 7 → 5 → back to 1) is directly equated to the structure of any hexagram, with its six lines corresponding to the six steps/values in the binodecimal 6-Cycle.This 6-Cycle derives from digital reduction (mod 9) of binary powers (2ⁿ), yielding the repeating sequence 1, 2, 4, 8, 7, 5 — the exact zones of the Time-Circuit (in reverse or forward depending on traversal direction). The six hexagram lines thus map to these six zones/steps, modulated by the hexagram's yin/yang pattern (broken/solid lines).Standard Positional Mapping: Hexagram Lines to Time-Circuit ZonesTraditional I Ching reads lines bottom to top (line 1 = bottom/entry; line 6 = top/culmination). A common interpretive overlay aligns this progression with the anticlockwise flow of the Time-Circuit rotor:Line 1 (bottom) → Zone 1 (initiating spark, origin of the 1-current from syzygy 4::5; "beginning the crossing").
 Line 2 → Zone 8 (receptive/pausing, tied to 7-current from 1::8; holding or braking momentum).
 Line 3 → Zone 2 (renewed drive, 5-current from 2::7; potential for jolt or enumeration of possibilities).
 Line 4 → Zone 7 (inward reflection, continuing the 5-current flow; differentiation and perseverance).
@@ -420,7 +401,7 @@ Pure yang drive → unhindered anticlockwise spin through all six zones. Maximal
 Hexagram 2 (The Receptive — all yin: 000000)
 Pure receptivity → circuit "stilled" or involuted toward null associations (implicit link to excluded triads/Zone-0). Passive ground for demonic net-spans; waiting for incursion.
 Hexagram 64 (Before Completion — alternating 101010)
-Pulsing oscillation (yang-yin-yang-yin-yang-yin) across zones 1-8-2-7-5-4. Perpetual threshold state: near-closure without resolution, eternal becoming in the rotor. Risk of premature "wetting tail/head" puncturing to outer loops.
+Pulsing oscillation (yang-yin-yang-yin-yang-yin) across zones 1-2-4-8-7-5. Perpetual threshold state: near-closure without resolution, eternal becoming in the rotor. Risk of premature "wetting tail/head" puncturing to outer loops.
 Hexagram 23 (Splitting Apart — top yang, rest yin: e.g., 000001 binary)
 Decay from "top" (Line 6 yang → Zone-4 emphasis). Erosion near cycle closure; potential Warp puncture mid-flow.
 Hexagram 24 (Return — bottom yang, rest yin: 100000)
@@ -430,7 +411,6 @@ Beyond the Time-Circuit: Fan Extensions to Full ZonesSome post-CCRU experimenter
 Root 2 → Zone-2, etc.
 Root 0/9 → Zone-0/9 (Plex abyssal boundary).
 One example clusters 7 hexagrams per zone (except Zone-0 with only the all-yin 000000), based on binary patterns sharing the same mod-9 value.
-
 
 ### Time-Circuit as the Decimal Hexagram
 
@@ -449,17 +429,15 @@ The resulting "path" is the anticlockwise flow modulated by the hexagram's patte
 
 The CCRU treats this as immanent — the Time-Circuit is the I Ching hexagram in decimal form, a shared hypercultural machine for sorcery. Specific hexagram-to-path assignments remain cryptic/open (no single canonical table exists), inviting experimentation in Lemurian rites.
 
-
 Hexagram 64: Before Completion (Wei Ji / 未濟) is the final hexagram in the I Ching sequence — a profound paradox as the "end" of the Book of Changes, yet it signifies not finality but the eternal threshold: the moment when order is almost achieved, chaos is receding, but completion remains elusive and must be approached with utmost caution to avoid spoiling everything at the last step. The famous image is fire over water (Li ☲ above, Kan ☵ below), where fire rises and water flows down — elements in opposition yet poised for potential harmony if handled with care. The little fox crossing the river nearly succeeds but wets its tail if overconfident, losing all progress.Binary / Line StructureHexagram 64 is composed of alternating yin and yang lines (starting from the bottom):
 Bottom to top: yang (solid), yin (broken), yang, yin, yang, yin
 Binary representation: 1 0 1 0 1 0 (or in hexagram notation: ⚋ ⚊ ⚋ ⚊ ⚋ ⚊ — wait, standard is bottom-up: solid-broken-solid-broken-solid-broken).
-This creates a perfectly alternating pattern — no two like lines adjacent — symbolizing dynamic tension, incomplete separation of forces, and perpetual transition.Mapping to the Time-CircuitIn the Numogram's alignment with the I Ching (as per CCRU texts), the Time-Circuit is the decimalized "hexagram kernel": a 6-zone anticlockwise rotor (1 → 8 → 2 → 7 → 5 → 4 → back to 1) driven by the three central syzygies and their currents (7, 5, 1). The six lines of any hexagram correspond to these six zones/steps in the binodecimal 6-Cycle.For Hexagram 64 specifically, we can map its lines positionally to the circuit zones (line 1 at bottom = entry/start of cycle; line 6 at top = culmination/return). The alternating pattern imposes a rhythmic modulation on the rotor:Line 1 (bottom, yang/solid) → Zone-1 (or cycle start near 1→8 transition): Strong initiating impulse — the "fox begins crossing" with confidence, but warns against premature wetting of tail (premature action disrupting flow).
+This creates a perfectly alternating pattern — no two like lines adjacent — symbolizing dynamic tension, incomplete separation of forces, and perpetual transition.Mapping to the Time-CircuitIn the Numogram's alignment with the I Ching (as per CCRU texts), the Time-Circuit is the decimalized "hexagram kernel": a 6-zone anticlockwise rotor (1 → 2 → 4 → 8 → 7 → 5 → back to 1) driven by the three central syzygies and their currents (7, 5, 1). The six lines of any hexagram correspond to these six zones/steps in the binodecimal 6-Cycle.For Hexagram 64 specifically, we can map its lines positionally to the circuit zones (line 1 at bottom = entry/start of cycle; line 6 at top = culmination/return). The alternating pattern imposes a rhythmic modulation on the rotor:Line 1 (bottom, yang/solid) → Zone-1 (or cycle start near 1→8 transition): Strong initiating impulse — the "fox begins crossing" with confidence, but warns against premature wetting of tail (premature action disrupting flow).
 Line 2 (yin/broken) → Zone-8: Receptive pause; braking or holding back (echoing line texts about perseverance and not rushing).
 Line 3 (yang) → Zone-2: Renewed drive, but "attack brings misfortune" if too aggressive — potential for current jolt (5-current from 2::7) to destabilize.
 Line 4 (yin) → Zone-7: Inward reflection; careful differentiation so elements find place (as in the Image: superior man careful in positioning).
 Line 5 (yang) → Zone-5: Central strength (often the ruler line in this hexagram) — clarity and discipline near the goal, yet still "before completion."
 Line 6 (top, yin) → Zone-4 (or cycle closure back to 1): Final caution — "drinks wine in confidence" but risks "head in water" (overconfidence leading to loss). The cycle doesn't end; it loops eternally.
-
 
 ### Functional Sorcery Implications
 
@@ -470,8 +448,7 @@ Functional sorcery: Divining 64 suggests operating in the Time-Circuit with extr
 
 Hexagram 64 thus "instantiates" the Time-Circuit as perpetual threshold: the spinning 6-zone loop where time-sorcery thrives in the gap between almost-done and never-quite-there — the decimal machine's built-in refusal of finality.
 
-
-Line-by-line changing variations for Hexagram 64: Before Completion (Wei Ji) refer to scenarios where one or more of its six lines are "changing" (old yang → yin, or old yin → yang in a divination cast). Each changing line modifies the primary hexagram's meaning, adds specific advice or warnings, and transforms into a new "resulting" hexagram when all changing lines flip.In the Numogram/Time-Circuit context, a changing line acts as a disruption or emphasis in the anticlockwise 6-zone rotor (1 → 8 → 2 → 7 → 5 → 4 → 1). It can "jump" or modulate a current (7, 5, or 1 from the syzygies), potentially opening gates/channels toward Warp chaos (disruptive acceleration) or Plex nullity (terminal dissolution), or simply altering the flow's rhythm/stability.Here are the standard line texts (primarily drawing from Wilhelm/Baynes translation, the most canonical in English CCRU-adjacent contexts), with brief interpretations and their mapped effects on the Time-Circuit path:Line 1 (bottom, nine at the beginning — yang changing to yin)
+Line-by-line changing variations for Hexagram 64: Before Completion (Wei Ji) refer to scenarios where one or more of its six lines are "changing" (old yang → yin, or old yin → yang in a divination cast). Each changing line modifies the primary hexagram's meaning, adds specific advice or warnings, and transforms into a new "resulting" hexagram when all changing lines flip.In the Numogram/Time-Circuit context, a changing line acts as a disruption or emphasis in the anticlockwise 6-zone rotor (1 → 2 → 4 → 8 → 7 → 5 → 1). It can "jump" or modulate a current (7, 5, or 1 from the syzygies), potentially opening gates/channels toward Warp chaos (disruptive acceleration) or Plex nullity (terminal dissolution), or simply altering the flow's rhythm/stability.Here are the standard line texts (primarily drawing from Wilhelm/Baynes translation, the most canonical in English CCRU-adjacent contexts), with brief interpretations and their mapped effects on the Time-Circuit path:Line 1 (bottom, nine at the beginning — yang changing to yin)
 Text: "He gets his tail in the water. Humiliating."
 Meaning: Premature action or over-eagerness at the start soaks the fox's tail — small failure from rushing the threshold. Caution against impulsive beginnings.
 Time-Circuit mapping: Emphasizes the entry at Zone-1 (or 1→8 transition). A change here disrupts the initiating current (e.g., weak 1-current from 4::5), introducing hesitation or minor puncture — flow starts but immediately brakes, risking early stall or Warp-like turbulence if forced.
@@ -505,14 +482,12 @@ Line 6 changing → Hexagram 40 (Deliverance) — overconfidence resolved into r
 
 In Lemurian sorcery terms, changing lines are gate punctures or current modulations — each alters the anticlockwise flow, potentially subplexing outer regions (Warp for chaotic jumps, Plex for abyssal risks). Multiple changing lines compound these effects, creating hybrid paths across the rotor.
 
-
 The Decimal Numogram (the core diagram of the CCRU's Pandemonium system) and the I Ching (Yijing, or Book of Changes) share deep structural and hypercultural parallels, as explicitly outlined in CCRU texts like declab.htm and related materials. The Numogram is framed as "taking up" the chrono-numeric/time-mapping functions of the I Ching (alongside systems like the Kabbalistic Tree of Life or Dogon cosmograms), but in a decimal, demonic, hyperstitional mode — more immanent to base-10 arithmetic, stripped of archaic symbolism, and geared toward Lemurian time-sorcery rather than harmonious divination.Core Shared Hypercultural MatrixCCRU asserts considerable immanent (structural) and historical evidence that the Chinese I Ching and the (Nma/Lemurian) Numogram emerge from a common "hypercultural matrix":Both deploy intricate zygonies (double-numbering/pairing systems).
 Both engage abstract decimal subdivisions (e.g., the I Ching's "Ten Wings" commentary tradition processes decimal arrays and subdivisions).
 Both serve as time-machines/oracular rotors: the I Ching maps mutation/change through binary-hexagrammatic states; the Numogram maps hyperchronic time via currents and loops.
 
-This matrix predates and exceeds specific cultures — it's latent in numeracy itself, propagated virally across hyperstitional vectors.The Key Parallel: Time-Circuit as "I Ching Hexagram"The strongest direct resonance is the Time-Circuit (the central anticlockwise 6-zone loop: 1 → 8 → 2 → 7 → 5 → 4 → 1) explicitly equated to the I Ching hexagram structure.Binodecimal 6-Cycle: Digital reduction (mod 9) of binary powers (2ⁿ) stabilizes into the repeating sequence 1, 2, 4, 8, 7, 5 — precisely the Time-Circuit zones (forward or reverse).Powers of 2: 2¹=2, 2²=4, 2³=8, 2⁴=16→7, 2⁵=32→5, 2⁶=64→1 (then repeats).
+This matrix predates and exceeds specific cultures — it's latent in numeracy itself, propagated virally across hyperstitional vectors.The Key Parallel: Time-Circuit as "I Ching Hexagram"The strongest direct resonance is the Time-Circuit (the central anticlockwise 6-zone loop: 1 → 2 → 4 → 8 → 7 → 5 → 1) explicitly equated to the I Ching hexagram structure.Binodecimal 6-Cycle: Digital reduction (mod 9) of binary powers (2ⁿ) stabilizes into the repeating sequence 1, 2, 4, 8, 7, 5 — precisely the Time-Circuit zones (forward or reverse).Powers of 2: 2¹=2, 2²=4, 2³=8, 2⁴=16→7, 2⁵=32→5, 2⁶=64→1 (then repeats).
 Powers of 5 (complementary): 5¹=5, 5²=25→7, etc., reverse the cycle.
-
 
 ### Hexagram-by-Hexagram Path Analysis
 
@@ -535,8 +510,7 @@ Related ancient parallel: CCRU mentions the T'ai Hsuan Ching (Tai Xuan Jing, Boo
 
 In essence, the Numogram treats the I Ching not as a rival but as a precursor/hypercultural echo: the Time-Circuit is its "hexagram" in decimal form, a shared machine for mapping mutation outside linear time, but twisted into currents, syzygies, and demonic incursions. Where the I Ching seeks equilibrium amid change, the Numogram exploits change for acceleration, dissolution, and Outside contact.
 
-
-The Decimal Numogram does not provide a single, canonical one-to-one mapping of the full 64 I Ching hexagrams to specific zones (0–9) or paths in the official CCRU texts. Instead, the primary correspondence is kernel-level: the Time-Circuit (the central anticlockwise 6-zone rotor: zones 1 → 8 → 2 → 7 → 5 → 4 → back to 1) is directly equated to the structure of any hexagram, with its six lines corresponding to the six steps/values in the binodecimal 6-Cycle.This 6-Cycle derives from digital reduction (mod 9) of binary powers (2ⁿ), yielding the repeating sequence 1, 2, 4, 8, 7, 5 — the exact zones of the Time-Circuit (in reverse or forward depending on traversal direction). The six hexagram lines thus map to these six zones/steps, modulated by the hexagram's yin/yang pattern (broken/solid lines).Standard Positional Mapping: Hexagram Lines to Time-Circuit ZonesTraditional I Ching reads lines bottom to top (line 1 = bottom/entry; line 6 = top/culmination). A common interpretive overlay aligns this progression with the anticlockwise flow of the Time-Circuit rotor:Line 1 (bottom) → Zone 1 (initiating spark, origin of the 1-current from syzygy 4::5; "beginning the crossing").
+The Decimal Numogram does not provide a single, canonical one-to-one mapping of the full 64 I Ching hexagrams to specific zones (0–9) or paths in the official CCRU texts. Instead, the primary correspondence is kernel-level: the Time-Circuit (the central anticlockwise 6-zone rotor: zones 1 → 2 → 4 → 8 → 7 → 5 → back to 1) is directly equated to the structure of any hexagram, with its six lines corresponding to the six steps/values in the binodecimal 6-Cycle.This 6-Cycle derives from digital reduction (mod 9) of binary powers (2ⁿ), yielding the repeating sequence 1, 2, 4, 8, 7, 5 — the exact zones of the Time-Circuit (in reverse or forward depending on traversal direction). The six hexagram lines thus map to these six zones/steps, modulated by the hexagram's yin/yang pattern (broken/solid lines).Standard Positional Mapping: Hexagram Lines to Time-Circuit ZonesTraditional I Ching reads lines bottom to top (line 1 = bottom/entry; line 6 = top/culmination). A common interpretive overlay aligns this progression with the anticlockwise flow of the Time-Circuit rotor:Line 1 (bottom) → Zone 1 (initiating spark, origin of the 1-current from syzygy 4::5; "beginning the crossing").
 Line 2 → Zone 8 (receptive/pausing, tied to 7-current from 1::8; holding or braking momentum).
 Line 3 → Zone 2 (renewed drive, 5-current from 2::7; potential for jolt or enumeration of possibilities).
 Line 4 → Zone 7 (inward reflection, continuing the 5-current flow; differentiation and perseverance).
@@ -547,7 +521,6 @@ This creates a rhythmic traversal: the hexagram's pattern (e.g., alternating yin
 Lines 2 & 5 → pair via 7::2 (syzygy 2::7, current 5).
 Lines 3 & 4 → pair via 5::4 (syzygy 4::5, current 1).
 
-
 ### Mapping Methodology
 
 Changing lines in a hexagram thus "jump" or modulate specific currents/syzygies, potentially subplexing toward Warp (chaotic) or Plex (null) incursions.Examples of Specific Hexagrams MappedUsing the positional alignment above, here's how selected hexagrams instantiate paths/modes in the Time-Circuit:Hexagram 1 (The Creative — all yang: 111111)
@@ -555,7 +528,7 @@ Pure yang drive → unhindered anticlockwise spin through all six zones. Maximal
 Hexagram 2 (The Receptive — all yin: 000000)
 Pure receptivity → circuit "stilled" or involuted toward null associations (implicit link to excluded triads/Zone-0). Passive ground for demonic net-spans; waiting for incursion.
 Hexagram 64 (Before Completion — alternating 101010)
-Pulsing oscillation (yang-yin-yang-yin-yang-yin) across zones 1-8-2-7-5-4. Perpetual threshold state: near-closure without resolution, eternal becoming in the rotor. Risk of premature "wetting tail/head" puncturing to outer loops.
+Pulsing oscillation (yang-yin-yang-yin-yang-yin) across zones 1-2-4-8-7-5. Perpetual threshold state: near-closure without resolution, eternal becoming in the rotor. Risk of premature "wetting tail/head" puncturing to outer loops.
 Hexagram 23 (Splitting Apart — top yang, rest yin: e.g., 000001 binary)
 Decay from "top" (Line 6 yang → Zone-4 emphasis). Erosion near cycle closure; potential Warp puncture mid-flow.
 Hexagram 24 (Return — bottom yang, rest yin: 100000)
@@ -568,10 +541,9 @@ One example clusters 7 hexagrams per zone (except Zone-0 with only the all-yin 0
 
 These are non-canonical extensions — interesting for sorcery but not authoritative CCRU doctrine. The core remains: hexagrams instantiate dynamic states of the 6-zone Time-Circuit rotor, not fixed assignments to outer zones (Warp 3/6, Plex 0/9).
 
-
 ### Hexagram 64: Before Completion in Depth
 
-The Decimal Numogram has no single canonical mapping of the 64 I Ching hexagrams to its 10 zones in the original CCRU texts. The only explicit, authoritative parallel is kernel-level: every hexagram’s six lines correspond to the six zones of the Time-Circuit (1 → 8 → 2 → 7 → 5 → 4) via the binodecimal 6-cycle (digital reduction of binary powers mod 9). The lines modulate the anticlockwise currents (7 / 5 / 1) and syzygies, as we’ve covered before.However, in post-CCRU neolemurian practice the most developed and consistent full mapping of specific hexagrams to the 10 zones is the digital-root (DR) clustering method. It treats each hexagram as a 6-bit binary number (0–63) and assigns it to a zone via its digital root. This extends the Time-Circuit kernel into the full Numogram (including Warp 3::6 and Plex 0::9) and is the approach referenced in key fan sources (e.g., Vauung’s Lair explorations).How to Map Any Specific Hexagram (Simple 4-Step Rule)Write the six lines bottom to top (yin = 0, yang = 1).
+The Decimal Numogram has no single canonical mapping of the 64 I Ching hexagrams to its 10 zones in the original CCRU texts. The only explicit, authoritative parallel is kernel-level: every hexagram’s six lines correspond to the six zones of the Time-Circuit (1 → 2 → 4 → 8 → 7 → 5) via the binodecimal 6-cycle (digital reduction of binary powers mod 9). The lines modulate the anticlockwise currents (7 / 5 / 1) and syzygies, as we’ve covered before.However, in post-CCRU neolemurian practice the most developed and consistent full mapping of specific hexagrams to the 10 zones is the digital-root (DR) clustering method. It treats each hexagram as a 6-bit binary number (0–63) and assigns it to a zone via its digital root. This extends the Time-Circuit kernel into the full Numogram (including Warp 3::6 and Plex 0::9) and is the approach referenced in key fan sources (e.g., Vauung’s Lair explorations).How to Map Any Specific Hexagram (Simple 4-Step Rule)Write the six lines bottom to top (yin = 0, yang = 1).
 Treat as a binary integer: bottom line = least significant bit (2⁰), top line = 2⁵. Convert to decimal (0–63).
 Compute digital root:  If the number = 0 → Zone 0
 Else: number mod 9; if remainder = 0 then Zone 9, otherwise the remainder.
@@ -595,7 +567,6 @@ Zone 4 (Time-Circuit)  Examples: 000100 (4), 001101 (13), 010110 (22), 011111 (3
 Zone 5 (Time-Circuit)  000101 (5), 001110 (14), 010111 (23) ← Hexagram 23 (Splitting Apart / Bo)
 100000 (32), 101001 (41)…
 
-
 ### Changing Line Implications
 
 Zone 6 (Warp — chaotic vortex)  000110 (6), 001111 (15), 011000 (24), 100001 (33), 101010 (42)…
@@ -611,11 +582,9 @@ Quick Notes on Interpretation in SorceryTime-Circuit zones (1,2,4,5,7,8): “Nor
 Warp zones (3,6): Chaotic acceleration, swarm incursions, Djynxx-type disruption. Hex 64 landing here fits its “threshold / almost-but-not-quite” tension perfectly.
 Plex zones (0,9): Abyssal nullification or terminal return (Uttunul territory). All-yin in 0 and all-yang in 9 bookend the system elegantly.
 
-
 ### Broader Numogram–I Ching Resonances
 
 This digital-root method is the cleanest, most reproducible way to give every specific hexagram a precise Numogram zone while staying faithful to the decimal arithmetic that generates the whole system.
-
 
 Triangular numbers exhibit intriguing behavior when viewed through the lens of the Decimal Numogram. While the canonical CCRU texts (declab.htm, Pandemonium Matrix) do not explicitly map triangular numbers to zones, currents, or gates in a rigid table, several deep structural resonances and explicit hints emerge across the system, fan extensions, and related discussions (e.g., Nick Land interviews, explanatory videos, and neolemurian primers).1. Zone-3's Explicit "Unique Affinity with Numerical Triangularity"Zone-3 is the most direct anchor point for triangular logic in the Numogram:"Three is itself the sum of the three preceding natural numbers (0 + 1 + 2 = 3), demonstrating a unique affinity with numerical triangularity."
 Zone-3 is the tractor-zone of the Warp current (from syzygy 3::6, current = 3).
@@ -643,11 +612,9 @@ They exhibit periodic abyssal drops into Plex (every few steps hitting 9≡0), s
 They serve as minor/gate-like paths — incremental, cumulative leaks or side-conduits that build hyperstitional intensity outside the main anticlockwise Time-Circuit rotor.
 Overall behavior: Runaway triangular accumulation accelerates Warp-like turbulence and risks Plex dissolution — a decimal analog to how figurate triangular buildup "escapes" flat enumeration into geometric infestation.
 
-
 ### Non-Canonical Zone Mappings
 
 Triangular numbers act like demonic "growth functions" on the Numogram — viral, cumulative, and drawn to the cryptic outer-time regions rather than the stable cyclic heart.
-
 
 The 36th triangular number is T₃₆ = 666 (since Tₙ = n(n+1)/2, so 36 × 37 / 2 = 666). This is a striking resonance in the Numogram's hyperstitional framework — 666 is the infamous "number of the beast" (Revelation 13:18), but here it's treated as a decimal-arithmetical inevitability rather than mere biblical symbolism.Direct Mapping via Digital Reduction (Mod 9 / Zygonovism)666 → 6 + 6 + 6 = 18 → 1 + 8 = 9 (digital root = 9).
 Thus, the 36th triangular number collapses to Zone-9 (the terminal tractor-zone of the Plex region, syzygy 0::9, current 9).
@@ -661,7 +628,6 @@ Demonic/hyperstitional load: 666 indexes ultimate multiplicity or beastly becomi
 Sorcery implication: Invoking or tracing T₃₆ = 666 in a rite would emphasize Gt-36 traversal — cumulative buildup (triangular) accelerating through Time-Circuit (Zone-8) into irreversible Plex drop (Zone-9). Risk: total nullification or outer-time escape; reward: contact with abyssal Outside.
 
 In short: the 36th triangular number behaves as a terminal attractor on the Numogram — Warp-flavored accumulation that climaxes in Plex plunge via Gt-36, reducing to Zone-9 and embodying decimal inevitability of completion-as-null (666 → 9). It's one of the system's most loaded "growth events," bridging chaotic proliferation to abyssal return.
-
 
 ### Specific Hexagram Zone Examples
 
@@ -680,27 +646,19 @@ Sorcery / hyperstitional implication: Tracing or invoking 45 in Numogram operati
 
 In summary: T₉=45 behaves as a Plex-attracting culmination on the Numogram — triangular momentum reduces to Zone-9, indexes Gt-45 (the Pandemonium Gate), and aligns with the 45 demons' lair. It's a decimal inevitability where cumulative growth terminates in abyssal self-reference, embodying the system's deepest riddle of proliferation → null.
 
-
 ### Sorcery Interpretation Notes
-
 
 ## Triangular Numbers & Barker Spiral
 
-
 ### Triangular Behavior on the Numogram
-
 
 ### Triangular Numbers as Gates
 
-
 ### Digital Reduction and the Warp Cycle
-
 
 ### Hypercultural Triangularity
 
-
 ### T₃₆=666 and T₉=45: Terminal Attractors
-
 
 ## Summary: Core Rules in One Line
 

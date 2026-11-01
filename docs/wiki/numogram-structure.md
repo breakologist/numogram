@@ -58,10 +58,9 @@ The principal rotor: an anticlockwise 6-zone continuous loop formed by the *inte
 **Syzygies involved:** `1::8` (c=7), `2::7` (c=5), `4::5` (c=1).
 
 **Path (anticlockwise):**  
-`1 → 8 → 2 → 7 → 5 → 4 → (back to 1)`
+`1 → 2 → 4 → 8 → 7 → 5 → (back to 1)`
 
-> **Verification note (Em, 1 Nov 2026):** `1 → 8 → 2 → 7 → 5 → 4` lists the three Time-Circuit **syzygies** (1::8, 2::7, 5::4). It is **not** the path of the currents, which run **Surge 8→7, Hold 2→5, Sink 4→1** (current = difference, flowing to the tractor zone) [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. Each pair is linked by twinning, not by flow (see [[time-circuit]], [[syzygy]]).
-
+> **Verification note (Em, 1 Nov 2026):** this page previously gave the Time-Circuit sequence as `1 → 8 → 2 → 7 → 5 → 4`. That only lists the three syzygies in order (1::8, 2::7, 5::4); it is not a route. It has been replaced with the doubling cycle **1 → 2 → 4 → 8 → 7 → 5 (→ 1)**, the digital roots of the powers of 2 [ccru.net, [declab](http://www.ccru.net/declab.htm)]. The currents themselves run **Surge 8→7, Hold 2→5, Sink 4→1** [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. See [[time-circuit]] and [[syzygy]].
 
 **Key properties:**
 
@@ -126,7 +125,7 @@ The Time-Circuit is explicitly linked by the CCRU to the I Ching — the Numogra
 
 ### 3.1 Kernel Equivalence: 6-Cycle ⇔ 6-Line Hexagram
 
-The Time-Circuit's six zones (`1 → 8 → 2 → 7 → 5 → 4`) are the decimal imprint of binary-yang dynamics reduced modulo 9.
+The Time-Circuit's six zones (`1 → 2 → 4 → 8 → 7 → 5`) are the decimal imprint of binary-yang dynamics reduced modulo 9.
 
 **Derivation:** Powers of two modulo 9 cycle 1, 2, 4, 8, 7, 5 — precisely the Time-Circuit zones (forward or reversed). Each step corresponds to one line of a hexagram (6 lines total). The *I Ching* hexagram's pattern of yin/yang lines modulates the rotor.
 
@@ -160,7 +159,6 @@ Changing lines in a hexagram thus act as "gate punctures" that locally modulate 
 While the CCRU does not provide a canonical 64-hexagram → 10-zone lookup table, the most coherent *post-CCRU* extension (found in neolemurian practice and Vauung's Lair explorations) maps each of the 64 hexagrams to a zone by digital root:
 
 > **Verification note (Em, 1 Nov 2026):** agreed: CCRU gives no such table. CCRU's position is a "shared hypercultural matrix", with the 1-2-4-8-7-5 cycle and 9-twinning of line pairs [ccru.net, declab]. Everything in §3.2–3.4 beyond that is **speculation**.
-
 
 1. Treat the six lines (bottom→top) as a 6-bit binary number (range 0–63).
 2. Compute digital root: `dr = n % 9; if dr==0 then 9` (except `n==0 → Zone 0`).
@@ -250,7 +248,6 @@ These can:
 | **Gt-15** | 15 | Subplex linking | Variants exist for Warp↔Time-Circuit traffic. |
 
 > **Verification note (Em, 1 Nov 2026):** Gt-15 = Zone 5 → Zone 6 (15 → 6), ciphered by Tukkamu and haunted by Tchattuk [ccru.net, Matrix].
-
 
 ### 5.3 Gate Activation in Sorcery
 
