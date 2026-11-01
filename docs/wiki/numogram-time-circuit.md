@@ -1,7 +1,7 @@
 ---
 title: The Time-Circuit
 created: 2026-04-08
-last_updated: 2026-04-08
+last_updated: 2026-11-01
 source_count: 1
 status: reviewed
 tags: ["numogram", "time-circuit", "zone"]
@@ -30,6 +30,12 @@ Exactly these three central ones (the ones whose currents interlock to close the
 For comparison: the Warp loop is the single upper syzygy 3 :: 6 (current 3, which folds back into itself); the Plex is the lower syzygy 0 :: 9 (current 9, the abyssal outer boundary).
 
 These three currents (7 + 5 + 1) "mutually compose" — their directed flows cross and chain together in the diagram so that following them takes you in a continuous anticlockwise rotation through zones **1 → 8 → 2 → 7 → 5 → 4** (and back to 1). It's a closed 6-zone ultra-cycle that spins endlessly. This is the classic "time rotor" or "Domain of Chronos."
+
+> **Verification note (Em, 1 Nov 2026):** "1 → 8 → 2 → 7 → 5 → 4" is not the route of the currents. The sourced flows are Surge **8→7**, Hold **2→5** and Sink **4→1** [repo, lumpenspace/ccru@7c38ad9 `currents.ts`; ccru.net [Zn7](http://www.ccru.net/zones/Zn7.htm) and [Zn1](http://www.ccru.net/zones/Zn1.htm) name 7 and 1 as tractor zones of the Surge and Sink currents]. The sequence is best read as listing the syzygies in order. Also, the "three central syzygies" are central only to the circuit. The repo describes 4::5 (Katak) as "innermost" and 1::8 (Murrumur) as "deep" [repo, `syzygies.ts`].
+
+### Sourced data: the hydro-cycle (Em, 1 Nov 2026)
+
+In Nma ritual the time-circuit is concretised as a **hydro-cycle** in three stages: undivided oceanic waters (Mur Mur), evaporation/cloud-building (Oddubb), and downpour/river-flow (Katak). The cycle closes with a return to the abysmal waters, which links recurrence to cataclysm "prior to any opposition of cyclic and apocalyptic time" [ccru.net, [declab](http://www.ccru.net/declab.htm) § 3]. In the same section, Nma marriage cycles identify each woman with a numogram current (Tak → Mu → Dib → Tak).
 
 ## Why It Matters in Practice
 
@@ -94,5 +100,7 @@ From the Pandemonium Matrix:
 - Zone-1 is the "First Door" — the initiation point into the Time-Circuit.
 - Its Sarkonian Mesh-Tag is **0001** (matching the "primordial click of Tzikvik cipher-sorcery").
 - Mu Tantrism plots Zone-1 onto the **Lumbar** spinal level.
+
+> **Verification note (Em, 1 Nov 2026):** **error.** The Zone 1 page says Mu Tantrism plots Zone-1 onto the **Dorsal (or Thoracic)** level of the spine, the domain of lunged creatures [ccru.net, [Zn1](http://www.ccru.net/zones/Zn1.htm)]. Zone-1 is also the terminus of the 1st, 4th and 7th Torque channels, and the First Phase holds 2 entities [ccru.net, Zn1].
 
 > "Zone-1 has a particularly powerful and manifest initiatory dimension. The First Gate (Gt-01) connects Zone-1 to itself, and its corresponding channel provides a reduced involutionary escape from the time-circuit." [Source: CCRU Writings 1997-2003]
