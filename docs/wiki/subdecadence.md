@@ -1,7 +1,7 @@
 ---
 title: Subdecadence (Lemurian Game)
 created: 2026-04-27
-last_updated: 2026-04-27
+last_updated: 2026-11-01
 status: draft
 tags: ["subdecadence", "lemurian", "barker-spiral", "sum-to-9", "game", "numerology", "ccru", "geotraumatics"]
 ---
@@ -22,6 +22,9 @@ A live playable implementation exists: [doomcrypt/subdecadence](https://doomcryp
 - Equipment: Two standard decks of cards
 - Objective: Form pairs whose values sum to **9**
 - Scoring: Zero is sovereign (9 wraps to 0 via 9‐sum complementarity)
+
+> **Verification note (Em, 1 Nov 2026):** CCRU's rule is **one** pack cut to 40 cards: A–9 × 4 suits plus the four **Queens = 0**. Tens, Jacks, Kings and jokers are removed [ccru.net, [Pandemonium](http://www.ccru.net/digithype/pandemonium.htm)]. "Ace = 1 through 10 = 0" follows the doomcrypt implementation, not CCRU. Each pair scores its difference (5:4 = 1 up to 9:0 = 9), each unpaired Set-1 card scores minus its value, and an Aeon ends at the first negative result. See [[decadence#sourced-rules-and-context-em-1-nov-2026]].
+
 
 Each card maps to a digit (Ace = 1 through 10 = 0). Pairs sum to nine: 0+9, 1+8, 2+7, 3+6, 4+5. The twist: zero is *not* a void but a *saturated convergence* — since 9 wraps to 0 in decimal reduction, the nine‐sum becomes the zero‐sum.
 
@@ -70,6 +73,9 @@ In any syzygy, the **current** is the absolute difference between the paired num
 All five syzygies share the same 9-sum complementarity. The current varies: **1, 3, 5, 7, 9** — the odd numbers only. The middle current (5) governs the span between Zones 2 and 7, the Hold current that resists forward motion and enables the amphibious doubling of Oddubb.
 
 The **decadence pairs** (sum to 10) carry different currents derived by the same difference rule:
+
+> **Verification note (Em, 1 Nov 2026):** **speculation.** CCRU defines currents only for the five syzygies [ccru.net, Pandemonium; repo `currents.ts`]. In Decadence the 10-sum differences are *scores*, not currents.
+
 
 | Pair | Sum | Current | Character |
 |---|---|---|---|
@@ -152,3 +158,9 @@ Your final round score maps to one of **45 Lemurian entities**; the implementer�
 - [[gates-and-plexing]] — gate protocols and plexing mechanics
 - [[numogram-plex]] — Zone-9 territory and the Plex terminus
 - [[pandemonium-matrix]] — the 45-demon set that resolves your final negative score
+
+## Implementations (Em, 1 Nov 2026)
+- [github.com/doomcrypt/subdecadence](https://github.com/doomcrypt/subdecadence): source repo for the live game (HTTP 200, 1 Nov 2026; from InterestingSites.md).
+- See also [[decadence#implementations-em-1-nov-2026]].
+
+Cross-links: [[book-of-paths]] · [[barker-spiral]] · [[zone]] · [[pandemonium]] · [[pandemonium-matrix]]
