@@ -95,6 +95,9 @@ Three legitimate moves on the numogram:
 
 Total unique paths: **89**.
 
+> **Verification note (Em, 1 Nov 2026):** Land's "Book of Paths" (89 paths from three moves, and the Beast Pulse epic) is **his own current project**, as summarised from the Episode 3 transcript. It should not be confused with the CCRU *Book of Paths* (84 paths, the Horowitz "B Manuscript", [ccru.net](http://www.ccru.net/occultures/bookofpaths.htm)). See [[book-of-paths]]. The raw transcript (`raw/nick land how to use the numogram.txt`) is not in this repo snapshot, so the 89 count and the "terminal vector" wording were not re-checked against it. The three-moves passage quoted above is the only verbatim Land text on paths in the wiki.
+
+
 **89 is how you pass from inside to outside** — through Gate 36 (Z8→Z9, the plunge). The 36th triangular number is 666. Land calls this "the terminal vector."
 
 ### Connection to Zone-Over-Time

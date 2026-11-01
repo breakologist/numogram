@@ -140,6 +140,9 @@ The **Book of Paths** is the canonical 47-entry Alphanumeric Qabbala dictionary 
 
 *This page consolidates the AQ dictionary into ceremonial format. The raw phrases are canonical; the ceremonial framing (paths, gates, rituals) is derived from Aamodt’s editorial method in* Unleashing the Numogram. *Entries are expected to acquire expanded glosses over time.*
 
+> **Verification note (Em, 1 Nov 2026):** the 47-entry AQ list above is a **wiki/Aamodt construction** and is not the CCRU *Book of Paths*. The CCRU text ([ccru.net](http://www.ccru.net/occultures/bookofpaths.htm)) has 84 numbered paths with no AQ values, and it never mentions AQ, Decadence, gates or zones. Treat the "Paths (47 entries)" and "Ritual uses" sections as derived practice. Land's separate "Book of Paths / Beast Pulse" project with "89 paths" (see [[land-decimal-intelligence]]) is a third, distinct thing.
+
+
 ---
 
 ## Primary Source: The 84-Path Book of Paths
@@ -149,6 +152,9 @@ The 47-entry AQ dictionary above is one layer of the Book of Paths. The **primar
 **Provenance:** The Ccru received the complete text in 2003 from the Vysparov estate, as a photocopy of Chaim Horowitz's February 1949 English translation from the Tibetan ("B Manuscript"). Horowitz's letter to Peter Vysparov accompanies it. The text was considered "profoundly archaic" by Tang-era sources — possibly predating the I Ching. See also: `[[barkerspeaks]]` for Stillwell's Lemurian context and `[[vault-of-murmurs]]` for the Cthulhu Club discovery narrative.
 
 **Live source:** `http://127.0.0.1:8080/occultures/bookofpaths.htm`
+
+> **Verification note (Em, 1 Nov 2026):** that is a local mirror. The public source is [ccru.net](http://www.ccru.net/occultures/bookofpaths.htm), reproduced in *Ccru: Writings 1997–2003* (Urbanomic) under Part 8, Pandemonium. One correction to the provenance line above: Stillwell traced the book to the **Warring States** period, when it was already "profoundly archaic". By the **early Tang** it was thought erased, one of the *yaoshu* ("devilish books") burned under Qin Shi Huang. Tang sources do not call it archaic. The suggestion that it predates the I Ching is attributed to "more than one 'dark school'" and is not asserted by Horowitz [ccru.net].
+
 
 **Sample paths (first 14 — verified):**
 
@@ -174,6 +180,15 @@ The 47-entry AQ dictionary above is one layer of the Book of Paths. The **primar
 
 **Manual observations only — full tabulated extraction pending verified parser.**
 
+> **Verification note (Em, 1 Nov 2026):** checked against every entry in the source [ccru.net](http://www.ccru.net/occultures/bookofpaths.htm). Corrections:
+- "Difficulties annihilated in the end" ends paths **1, 2, 3, 11, 12, 23, 43, 44, 58**. Path 76 does **not** have it; it ends on "an ominous transition". Path 23 was missing. Path 75 has the variant "Between annihilation and the end".
+- The exact phrase "Fluid evolution triggers possession" is in paths **7, 19, 21, 32, 39, 49, 56, 63, 70**, not just four. Since it occurs right across the book, calling it a "Warp-current signature" is **speculation**.
+- "Superior subtlety leads nowhere" is in **13** paths: 7, 9, 16, 26, 30, 35, 40, 42, 48, 49, 53, 55, 57.
+- There are more than four subtlety modes: first hidden road; three hidden roads (1, 2, 3, 11, 12, 23, 43, 44); first two hidden roads (77–83); second hidden road (84); spiral labyrinth; first road + spiral labyrinth; two abysmal roads (58, 75); higher abysmal road (76); leads nowhere.
+- "Pure compliance" is at 14, 25, 46 and "Pure resistance" at 9, 34, 40, 42, 76, 84. All are one- or two-test paths, but they are not confined to a "terminal" cluster.
+- In 77–83, "Ominous transition" is the **final** line, not the penultimate one.
+
+
 **See also:** `[[barkerspeaks]]` for Stillwell's Lemurian context and `[[vault-of-murmurs]]` for the Cthulhu Club discovery narrative.
 
 Wiki cross-references:
@@ -184,3 +199,38 @@ Wiki cross-references:
 - [[subdecadence]] — 9-sum pattern
 - [[decadence-subdecadence-comparison]] — odd/even structural split
 - [[numogram-structure]] — syzygy/current parity
+
+## Sourced Structure of the CCRU *Book of Paths* (Em, 1 Nov 2026)
+
+All points are paraphrased from [ccru.net](http://www.ccru.net/occultures/bookofpaths.htm); only brief phrases are quoted.
+
+**Frame (Editor's Introduction, dated May 2004 in its footnotes).**
+- The Kaye Materials (Ccru, January 2000) call the book "the definitive confirmation of Stillwell's basic insight". Early searches came to nothing.
+- In 2003 the Vysparov estate sent an untitled photocopy, identified as the **'B Manuscript'**: one of three type-copies of Chaim Horowitz's first English translation "from the Tibetan". A one-page letter from Horowitz to Peter Vysparov (February 1949) came with it.
+- In the letter: the copy was taken from "the place". Kaye placed this source of the Mu Archives in a sub-basement of the Potala, Lhasa.
+- Echidna Stillwell (met in Rangoon, spring 1949) suspected the book had served as an oracle for the **Shu** culture about 5,000 years ago, and she relayed rumours of **84 bronze tablets** taken from the Shu excavation site.
+- The oracular method eluded both Horowitz and Stillwell. They hoped Madame Centauri could supply it.
+- Horowitz expected the book to bear on Vysparov's **'Pandemonium System'**. Ccru adds that, as of 2004, no such relevance had been confirmed. The 'invitation' is linked to the first meeting of the **Cthulhu Club** (autumn 1949).
+
+**Form of each entry (84 paths).** Each entry follows the same template:
+1. Name.
+2. Trajectory through a fixed set of places: Depths (Lesser/Greater), Rising/Falling Drift, the Drifts, Sunken Track, Heights, Twin Heavens, "completion".
+3. Methods favoured: patience, activity, subtlety, sometimes "until all methods entwine".
+4. What "superior subtlety" opens.
+5. Optional "Fate marks the Sunken Track".
+6. Verdict: compliance or resistance prevails; or *pure* compliance/resistance; or "Poised entanglement".
+7. A number of tests (1–7), or "Twinned tests make the way".
+8. A chain of outcomes drawn from a small vocabulary: immersive nightmares, fluid evolution, possession, captivation, lucid delirium, burning excitement, arid tension, quagmire, sublime dreams, swirling confusion, ominous transition, annihilation.
+
+**Notable features (counted from source).**
+- **Five "poised" paths** have no verdict and are "between" two states: 30 (Coiled Fervour), 36 (Vortical Coincidence), 48 (Perpetual Bubbling), 59 (Self-Swallowing Somnolence), 75 (Seething Nullity: "Between annihilation and the end").
+- **The book ends in a descending cluster.** 75–76 open the abysmal roads, 77–83 all open "the first two hidden roads" under resistance and end in "Ominous transition", and 84, *Compressed Termination*, is a single-test descent.
+- **No numbers, zones or gates appear in the entries.** Any numogram mapping is interpretation.
+
+**Speculation (labelled, Em).**
+- 84 = C(9,3) = the 7th tetrahedral number, and 84 = 2 × 42. None of these is stated in the source.
+- The places (Depths / Drift / Heights / Twin Heavens) could be read against Plex / Time-Circuit / Warp. This is unsourced.
+- "Twinned tests" invites a syzygy reading.
+- Decadence: the source makes **no** connection to the Decadence card games. The wiki links ([[decadence-triangle]]) are wiki constructions.
+
+**Cross-links.** [[zone]] · [[zone-hub]] · [[pandemonium]] · [[pandemonium-matrix]] · [[pandemonium-glossary]] · [[daniel-barker]] (Stillwell, Barker Speaks) · [[barker-spiral]] · [[decadence]] · [[time-circuit]] · [[i-ching-connections]] (the "preceded the I Ching" rumour) · [[land-decimal-intelligence]] (Land's distinct 89-path project)

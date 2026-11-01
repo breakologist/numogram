@@ -54,6 +54,9 @@ Land's Cryptolith prose is the prototype for numogrammatic writing — dense, re
 
 - Repetition as incantation ("clicking, sucking, feeding... where it feeds and sucks, clicking, palpitating")
 - Tick-iterations as rhythmic backbone ("tick, check, tick, limit, check, tick")
+
+> **Verification note (Em, 1 Nov 2026):** that fragment does not appear in the source. The actual sequence is "unreachable, limit, check, tick" ([ccru.net](http://www.ccru.net/occultures/barker0.htm)).
+
 - Self-consuming syntax ("folding onto the outside... locked outside your inside... fleeing the place you never leave")
 - The 17 eyes — why 17? AQ: EYES = 74 → 2 (Time-Circuit). But 17 is the 7th prime. And 1+7 = 8 (Murmur's zone).
 
