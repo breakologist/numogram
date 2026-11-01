@@ -2,7 +2,7 @@
 zone: 5
 name: Pressure
 region: torque
-syzygy: katak
+syzygy: "4::5 Katak"
 particle: ktt
 spinal: —
 meshTag: 0031
@@ -16,7 +16,10 @@ lemurs:
   - "5::2 Kuttadid"
   - "5::3 Tikkitix"
   - "5::4 Katak"
-source: qliphoth.systems zones.ts (2026-04-30); raw/www.ccru.net/zones/Zn5.htm
+source: lumpenspace/ccru@7c38ad9 app/data/zones.ts; http://www.ccru.net/zones/Zn5.htm
+sourceNote: "earlier: qliphoth.systems zones.ts (2026-04-30); raw/www.ccru.net/zones/Zn5.htm"
+colour: "#ee8833"
+planetSymbol: "♃"
 status: canonical
 ---
 # Zone 5 — Pressure (Torque)
@@ -141,3 +144,53 @@ Three naming sets are in use; only the first is CCRU's ([glossary](http://www.cc
 - **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Hinge". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
 
 Statements on this page such as "Current: …" may use either of the first two senses.
+
+## Sourced data (Em, 1 Nov 2026)
+
+Tags: **[repo]** = [lumpenspace/ccru @ `7c38ad9`](https://github.com/lumpenspace/ccru/blob/7c38ad910410c3f5744b961eb97adf58ff00d41f/app/data/) (`zones.ts`, `gates.ts`, `currents.ts`, `demons.ts`, `syzygies.ts`); **[ccru.net]** = [Zone 5 page](http://www.ccru.net/zones/Zn5.htm) (Occultures › Lemurian Pandemonium; mirror [ccru-ii.neocities.org](https://ccru-ii.neocities.org/)) and the [Pandemonium Matrix](http://www.ccru.net/digithype/pandemonium.htm). CCRU text is paraphrased; short quotations are marked.
+
+### Identity
+
+- Colour `ZONE_CLR[5]`: **`#ee8833`** [repo]
+- Planet glyph `PLANET_SYMBOL[5]`: **♃** (U+2643) for Jupiter [repo]
+- Syzygy: **4::5 Katak** [repo `syzygies.ts`]
+- Region position: "sixth of the six" Torque zones (sic on ccru.net) [ccru.net]
+- Spinal level: none on the zone page (Pandemonium Matrix: Tokhatto's door Cervical) [ccru.net]
+
+### Gates
+
+- **Gt-15** 'Fifth Gate': 5 → 6, cumulation 15 (out of this zone) [repo]
+- Channels terminating here: none listed [ccru.net]
+
+### Currents
+
+- **Sink** (5−4=1; repo draws 4→1): produced by this zone's syzygy [repo]
+- **Hold** (7−2=5; repo draws 2→5): this is the tractor zone [repo]
+- Tractor-Zone of the 7-2 ('Hold') Current [ccru.net]
+
+### Demons (net-spans touching this zone)
+
+Types from `demons.ts` (`TC` = {1,2,4,5,7,8}: syzygy if digits sum to 9; chrono if both in TC; xeno if neither; otherwise amphi). M# = Pandemonium Matrix mesh serial. [repo][ccru.net]
+
+| Net-span | Demon | Type | Mesh |
+|---|---|---|---|
+| 5::0 | Tokhatto | amphi | M#10 |
+| 5::1 | Tukkamu | chrono | M#11 |
+| 5::2 | Kuttadid | chrono | M#12 |
+| 5::3 | Tikkitix | amphi | M#13 |
+| 5::4 | Katak | syzygy | M#14 |
+| 6::5 | Tchattuk | amphi | M#20 |
+| 7::5 | Papatakoo | chrono | M#26 |
+| 8::5 | Muntuk | chrono | M#33 |
+| 9::5 | Tukutu | amphi | M#41 |
+
+- Door / first-degree imp: Fifth (Hyperborean) Door: Tokhatto (5::0), reverenced in the AOE as Angel of the Decadence Pack / Archangel Meteka [ccru.net]
+- Nma location (Stillwell's ethno-topography): upland rain forests of the Tak Nma; hydrocycle: the monsoon [ccru.net]
+- Totem animals: hybrid bird-reptile forms — Curtis: 'a flapping howling chaos of flying worms, bat-monsters and barking snakes' [ccru.net]
+- Katak (5::4) draws the innermost curve of the Barker spiral, with Zone 5 its 'inner-eye'. [ccru.net]
+
+## Verification note (Em, 1 Nov 2026)
+
+- Frontmatter `syzygy: katak` standardised to `4::5 Katak`.
+- The 'Numeral' section's mention of **coccygeal** comes from ccru.net's general list of five spinal levels (coccygeal, sacral, lumbar, dorsal, cervical); it is not Zone 5's spinal attribution. The repo gives **Coccygeal to Zone 0**; Zone 5's `spinal` is blank in the repo, and the Pandemonium Matrix places Tokhatto's door at Cervical. The text is left in place.
+- ccru.net calls Zone 5 'the sixth of the six Torque-region Zones' — reproduced as written.

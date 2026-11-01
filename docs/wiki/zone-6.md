@@ -2,7 +2,7 @@
 zone: 6
 name: Abstraction
 region: warp
-syzygy: djynxx
+syzygy: "3::6 Djynxx"
 particle: tch
 spinal: Third-eye plane
 meshTag: 0063
@@ -11,7 +11,10 @@ planetFull: Saturn (Sol-6)
 door: Tchu — gate of Undu
 phaseCount: 64
 lemurs: ["6::0 Tchu", "6::1 Djungo", "6::2 Djuddha", "6::3 Djynxx", "6::4 Tchakki", "6::5 Tchattuk"]
-source: qliphoth.systems zones.ts (2026-04-30)
+source: lumpenspace/ccru@7c38ad9 app/data/zones.ts; http://www.ccru.net/zones/Zn6.htm
+sourceNote: "earlier: qliphoth.systems zones.ts (2026-04-30)"
+colour: "#ddcc33"
+planetSymbol: "♄"
 status: canonical
 ---
 
@@ -120,3 +123,51 @@ Three naming sets are in use; only the first is CCRU's ([glossary](http://www.cc
 - **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Abyss". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
 
 Statements on this page such as "Current: …" may use either of the first two senses.
+
+## Sourced data (Em, 1 Nov 2026)
+
+Tags: **[repo]** = [lumpenspace/ccru @ `7c38ad9`](https://github.com/lumpenspace/ccru/blob/7c38ad910410c3f5744b961eb97adf58ff00d41f/app/data/) (`zones.ts`, `gates.ts`, `currents.ts`, `demons.ts`, `syzygies.ts`); **[ccru.net]** = [Zone 6 page](http://www.ccru.net/zones/Zn6.htm) (Occultures › Lemurian Pandemonium; mirror [ccru-ii.neocities.org](https://ccru-ii.neocities.org/)) and the [Pandemonium Matrix](http://www.ccru.net/digithype/pandemonium.htm). CCRU text is paraphrased; short quotations are marked.
+
+### Identity
+
+- Colour `ZONE_CLR[6]`: **`#ddcc33`** [repo]
+- Planet glyph `PLANET_SYMBOL[6]`: **♄** (U+2644) for Saturn [repo]
+- Syzygy: **3::6 Djynxx** [repo `syzygies.ts`]
+- Region position: second of two Warp-region zones [ccru.net]
+- Spinal level: plane of the third-eye (Warp region) [ccru.net]
+
+### Gates
+
+- **Gt-06** 'Gate to the Swirl': 3 → 6, cumulation 6 (into this zone) [repo]
+- **Gt-15** 'Fifth Gate': 5 → 6, cumulation 15 (into this zone) [repo]
+- **Gt-21** 'Sixth Gate': 6 → 3, cumulation 21 (out of this zone) [repo]
+- Channels terminating here: two channels: from the Torque (5th, Gt-15) and the Warp (3rd, Gt-06) [ccru.net]
+
+### Currents
+
+- **Warp** (6−3=3; repo draws 6→3): produced by this zone's syzygy; drawn from this zone in the repo [repo]
+
+### Demons (net-spans touching this zone)
+
+Types from `demons.ts` (`TC` = {1,2,4,5,7,8}: syzygy if digits sum to 9; chrono if both in TC; xeno if neither; otherwise amphi). M# = Pandemonium Matrix mesh serial. [repo][ccru.net]
+
+| Net-span | Demon | Type | Mesh |
+|---|---|---|---|
+| 6::0 | Tchu | xeno | M#15 |
+| 6::1 | Djungo | amphi | M#16 |
+| 6::2 | Djuddha | amphi | M#17 |
+| 6::3 | Djynxx | syzygy | M#18 |
+| 6::4 | Tchakki | amphi | M#19 |
+| 6::5 | Tchattuk | amphi | M#20 |
+| 7::6 | Bobobja | amphi | M#27 |
+| 8::6 | Mommoljo | amphi | M#34 |
+| 9::6 | Unnutchi | xeno | M#42 |
+
+- Door / first-degree imp: Sixth Door, named Undu: Tchu (6::0), chaotic xenodemon 'primordially associated with shocking disappearances' [ccru.net]
+- Nma location / totem animals: not given on the ccru.net zone page [ccru.net]
+- Horovitz relates the 64-strong phase to the I Ching hexagrams. Mesh-tag 0063 is 'of obvious importance' to Tzikvik cipher-shamanism. [ccru.net]
+
+## Verification note (Em, 1 Nov 2026)
+
+- Frontmatter `syzygy: djynxx` standardised to `3::6 Djynxx`.
+- The '#000000…' on this page is not a colour: it is part of the Amiga-style error code `Guru Meditation #00000004.0000AAC0` in the OP ART reconstruction section. Zone 6's actual colour in the repo is **`#ddcc33`**. Nothing removed.
