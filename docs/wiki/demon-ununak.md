@@ -30,3 +30,5 @@ tags:
 Auto‑generated from raw: `numogame-canonical-crosswalk.json`, zone 40, mesh 40.
 
 <!-- End stub for Ununak (Nuke) -->
+
+> **Verification note (Em, 1 Nov 2026):** spelling variants. The Pandemonium Matrix ([pandemonium.htm](http://www.ccru.net/digithype/pandemonium.htm)) has **Ununak**. The Zone 9 page ([Zn9](http://www.ccru.net/zones/Zn9.htm)) and the repo (`demons.ts`) have **Unnunaka**. Both forms are CCRU; this page keeps Ununak. See [[pandemonium-matrix#name-and-spelling-variants]].

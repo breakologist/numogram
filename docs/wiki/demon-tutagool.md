@@ -30,3 +30,5 @@ tags:
 Auto‑generated from raw: `numogame-canonical-crosswalk.json`, zone 37, mesh 37.
 
 <!-- End stub for Tutagool (Yettuk) -->
+
+> **Verification note (Em, 1 Nov 2026):** spelling variants. The Pandemonium Matrix ([pandemonium.htm](http://www.ccru.net/digithype/pandemonium.htm)) has **Tutagool**. The Zone 9 page ([Zn9](http://www.ccru.net/zones/Zn9.htm)) and the repo (`demons.ts`) have **Tuttagool**. Both forms are CCRU; this page keeps Tutagool. See [[pandemonium-matrix#name-and-spelling-variants]].
