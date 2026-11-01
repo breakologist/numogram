@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" font-family="DejaVu Sans Mono,monospace">
+<rect width="900" height="720" fill="#0f172a"/>
+<text x="450.0" y="34" fill="#f8fafc" font-size="19" font-weight="bold" text-anchor="middle">Barker Spiral — 9-sum twins (above) and 10-sum pairs (below)</text>
+<text x="450.0" y="56" fill="#94a3b8" font-size="12" text-anchor="middle">Spiral path 0→9→1→8→2→7→3→6→4→5 · reconstruction; see barker-spiral.md</text>
+<path d="M180,360 A270.0,270.0 0 0 1 720,360" fill="none" stroke="#a78bfa" stroke-width="3"/>
+<text x="450.0" y="84.0" fill="#c4b5fd" font-size="12" text-anchor="middle">0::9 Uttunul</text>
+<path d="M720,360 A240.0,240.0 0 0 1 240,360" fill="none" stroke="#fbbf24" stroke-width="3"/>
+<text x="480.0" y="616.0" fill="#fcd34d" font-size="11" text-anchor="middle">9+1=10</text>
+<path d="M240,360 A210.0,210.0 0 0 1 660,360" fill="none" stroke="#a78bfa" stroke-width="3"/>
+<text x="450.0" y="144.0" fill="#c4b5fd" font-size="12" text-anchor="middle">1::8 Murrumur</text>
+<path d="M660,360 A180.0,180.0 0 0 1 300,360" fill="none" stroke="#fbbf24" stroke-width="3"/>
+<text x="480.0" y="556.0" fill="#fcd34d" font-size="11" text-anchor="middle">8+2=10</text>
+<path d="M300,360 A150.0,150.0 0 0 1 600,360" fill="none" stroke="#a78bfa" stroke-width="3"/>
+<text x="450.0" y="204.0" fill="#c4b5fd" font-size="12" text-anchor="middle">2::7 Oddubb</text>
+<path d="M600,360 A120.0,120.0 0 0 1 360,360" fill="none" stroke="#fbbf24" stroke-width="3"/>
+<text x="480.0" y="496.0" fill="#fcd34d" font-size="11" text-anchor="middle">7+3=10</text>
+<path d="M360,360 A90.0,90.0 0 0 1 540,360" fill="none" stroke="#a78bfa" stroke-width="3"/>
+<text x="450.0" y="264.0" fill="#c4b5fd" font-size="12" text-anchor="middle">3::6 Djynxx</text>
+<path d="M540,360 A60.0,60.0 0 0 1 420,360" fill="none" stroke="#fbbf24" stroke-width="3"/>
+<text x="480.0" y="436.0" fill="#fcd34d" font-size="11" text-anchor="middle">6+4=10</text>
+<path d="M420,360 A30.0,30.0 0 0 1 480,360" fill="none" stroke="#a78bfa" stroke-width="3"/>
+<text x="450.0" y="324.0" fill="#c4b5fd" font-size="12" text-anchor="middle">4::5 Katak</text>
+<circle cx="480" cy="374" r="12" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="3 2"/>
+<text x="494" y="394" fill="#fcd34d" font-size="10">5+5</text>
+<circle cx="180" cy="360" r="15" fill="#1e293b" stroke="#f472b6" stroke-width="2"/>
+<text x="180" y="365" fill="#f8fafc" font-size="15" font-weight="bold" text-anchor="middle">0</text>
+<circle cx="240" cy="360" r="15" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
+<text x="240" y="365" fill="#f8fafc" font-size="15" font-weight="bold" text-anchor="middle">1</text>
+<circle cx="300" cy="360" r="15" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
+<text x="300" y="365" fill="#f8fafc" font-size="15" font-weight="bold" text-anchor="middle">2</text>
+<circle cx="360" cy="360" r="15" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+<text x="360" y="365" fill="#f8fafc" font-size="15" font-weight="bold" text-anchor="middle">3</text>
+<circle cx="420" cy="360" r="15" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
+<text x="420" y="365" fill="#f8fafc" font-size="15" font-weight="bold" text-anchor="middle">4</text>
+<circle cx="480" cy="360" r="15" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
+<text x="480" y="365" fill="#f8fafc" font-size="15" font-weight="bold" text-anchor="middle">5</text>
+<circle cx="540" cy="360" r="15" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+<text x="540" y="365" fill="#f8fafc" font-size="15" font-weight="bold" text-anchor="middle">6</text>
+<circle cx="600" cy="360" r="15" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
+<text x="600" y="365" fill="#f8fafc" font-size="15" font-weight="bold" text-anchor="middle">7</text>
+<circle cx="660" cy="360" r="15" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
+<text x="660" y="365" fill="#f8fafc" font-size="15" font-weight="bold" text-anchor="middle">8</text>
+<circle cx="720" cy="360" r="15" fill="#1e293b" stroke="#f472b6" stroke-width="2"/>
+<text x="720" y="365" fill="#f8fafc" font-size="15" font-weight="bold" text-anchor="middle">9</text>
+<text x="20" y="640" fill="#64748b" font-size="11">0 has no 10-sum partner among 0–9 (pairs with 10)</text>
+<rect x="60" y="661" width="12" height="10" fill="#a78bfa"/><text x="78" y="670" fill="#cbd5e1" font-size="11">9-sum twin / syzygy (Lemurian, Subdecadence)</text>
+<rect x="60" y="677" width="12" height="10" fill="#fbbf24"/><text x="78" y="686" fill="#cbd5e1" font-size="11">10-sum pair (Atlantean, Decadence)</text>
+<rect x="60" y="693" width="12" height="10" fill="#60a5fa"/><text x="78" y="702" fill="#cbd5e1" font-size="11">Torque zone</text>
+<rect x="520" y="661" width="12" height="10" fill="#34d399"/><text x="538" y="670" fill="#cbd5e1" font-size="11">Warp zone</text>
+<rect x="520" y="677" width="12" height="10" fill="#f472b6"/><text x="538" y="686" fill="#cbd5e1" font-size="11">Plex zone</text>
+<text x="890" y="712" fill="#475569" font-size="9" text-anchor="end">Sources: ccru.net Barker Speaks; lumpenspace/ccru@7c38ad9 syzygies.ts, zones.ts · generated by scripts/barker_spiral_svg.py</text>
+</svg>
