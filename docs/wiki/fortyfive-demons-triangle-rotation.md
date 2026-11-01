@@ -41,6 +41,8 @@ The three demon classes map directly onto dungeon architecture:
 
 Chronodemons (15 entries) are corridor connections. They link rooms inside the Time Circuit to other rooms inside the Time Circuit. If your dungeon has six core rooms arranged in the loop 1-8-2-7-5-4, the 15 chronodemons are the corridors between them. Every room connects to every other room within the circuit. These are the paths the player will walk most often. Predictable topology, dense interconnection.
 
+> **Verification note (Em, 1 Nov 2026):** the sequence 1→8→2→7→5→4 used here lists the Time-Circuit syzygies (1::8, 2::7, 5::4). It is not a route. The zones follow the doubling cycle **1→2→4→8→7→5** (digital roots of 2ⁿ) [ccru.net, [declab](http://www.ccru.net/declab.htm)], and the currents run Surge 8→7, Hold 2→5, Sink 4→1 [ccru.net Matrix; repo]. Left as written because this is commentary; see [[time-circuit]].
+
 Amphidemons (24 entries) are portals. Each one bridges a Time Circuit room to an outside zone. Six circuit rooms times four outside zones. These are the exits, the transitions, the moments where the player leaves the known loop and enters foreign territory. An amphidemon encounter signals a biome shift. The player is crossing from the procedural core into the alien periphery.
 
 Xenodemons (6 entries) are boss-tier encounters. They exist entirely outside the Time Circuit, in the four zones {3,6,0,9} that have no chronology. A xenodemon is rare by construction — only six in the full set — and hostile by definition. These are the entities that corrupt the game state, introduce anomalies, break the rules that the rest of the dungeon follows.

@@ -13,6 +13,8 @@
     <marker id="arrow-magenta" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#e879f9"/>
     </marker>
+    <marker id="arrow-amber" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/></marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/></marker>
   </defs>
 
   <!-- Background -->
@@ -61,31 +63,25 @@
   <line x1="372" y1="620" x2="448" y2="620" stroke="#e879f9" stroke-width="1.5" stroke-dasharray="4,3" stroke-opacity="0.5"/>
   <text x="410" y="635" fill="#e879f9" font-size="7" font-weight="500" text-anchor="middle">3::6</text>
 
-  <!-- ═══ TIME-CIRCUIT PATH (anti-clockwise) ═══ -->
-
-  <!-- 1→8 -->
-  <path d="M 250 378 L 300 270" fill="none" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)" stroke-opacity="0.7"/>
-
-  <!-- 8→2 -->
-  <path d="M 344 248 L 476 248" fill="none" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)" stroke-opacity="0.7"/>
-  <text x="410" y="241" fill="#64748b" font-size="6" text-anchor="middle">current 5</text>
-
-  <!-- 2→7 -->
-  <path d="M 520 270 L 570 378" fill="none" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)" stroke-opacity="0.7"/>
-
-  <!-- 7→5 -->
-  <path d="M 570 422 L 520 530" fill="none" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)" stroke-opacity="0.7"/>
-
-  <!-- 5→4 -->
-  <path d="M 476 552 L 344 552" fill="none" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)" stroke-opacity="0.7"/>
-  <text x="410" y="565" fill="#64748b" font-size="6" text-anchor="middle">current 1</text>
-
-  <!-- 4→1 (closes circuit) -->
-  <path d="M 300 530 L 250 422" fill="none" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)" stroke-opacity="0.5"/>
-
-  <!-- ═══ WARP CONNECTION ═══ -->
-  <path d="M 372 620 L 448 620" fill="none" stroke="#e879f9" stroke-width="1.5" marker-end="url(#arrow-magenta)" stroke-opacity="0.7"/>
-  <text x="410" y="652" fill="#c084fc" font-size="6" text-anchor="middle">current 3</text>
+  <!-- ═══ TIME-CIRCUIT (corrected Em, 1 Nov 2026): dashed amber = doubling cycle 1→2→4→8→7→5→1 (2^n digital roots); solid cyan = currents ═══ -->
+  <path d="M 282 378 L 454 279" fill="none" stroke="#fbbf24" stroke-width="1.1" stroke-dasharray="5 3" marker-end="url(#arrow-amber)" stroke-opacity="0.75"/>
+  <path d="M 478 273 L 335 520" fill="none" stroke="#fbbf24" stroke-width="1.1" stroke-dasharray="5 3" marker-end="url(#arrow-amber)" stroke-opacity="0.75"/>
+  <path d="M 327 524 L 327 278" fill="none" stroke="#fbbf24" stroke-width="1.1" stroke-dasharray="5 3" marker-end="url(#arrow-amber)" stroke-opacity="0.75"/>
+  <path d="M 364 278 L 536 377" fill="none" stroke="#fbbf24" stroke-width="1.1" stroke-dasharray="5 3" marker-end="url(#arrow-amber)" stroke-opacity="0.75"/>
+  <path d="M 565 425 L 510 520" fill="none" stroke="#fbbf24" stroke-width="1.1" stroke-dasharray="5 3" marker-end="url(#arrow-amber)" stroke-opacity="0.75"/>
+  <path d="M 456 522 L 284 423" fill="none" stroke="#fbbf24" stroke-width="1.1" stroke-dasharray="5 3" marker-end="url(#arrow-amber)" stroke-opacity="0.75"/>
+  <path d="M 370 268 L 542 367" fill="none" stroke="#22d3ee" stroke-width="1.8" marker-end="url(#arrow-cyan)" stroke-opacity="0.9"/>
+  <text x="456" y="329" fill="#22d3ee" font-size="7" font-weight="600" text-anchor="middle">SURGE 8→7</text>
+  <path d="M 505 276 L 505 522" fill="none" stroke="#22d3ee" stroke-width="1.8" marker-end="url(#arrow-cyan)" stroke-opacity="0.9"/>
+  <text x="505" y="411" fill="#22d3ee" font-size="7" font-weight="600" text-anchor="middle">HOLD 2→5</text>
+  <path d="M 300 528 L 246 433" fill="none" stroke="#22d3ee" stroke-width="1.8" marker-end="url(#arrow-cyan)" stroke-opacity="0.9"/>
+  <text x="273" y="492" fill="#22d3ee" font-size="7" font-weight="600" text-anchor="middle">SINK 4→1</text>
+  <!-- WARP current 6→3 -->
+  <path d="M 485 648 Q 425 676 368 650" fill="none" stroke="#e879f9" stroke-width="1.5" marker-end="url(#arrow-magenta)" stroke-opacity="0.8"/>
+  <text x="425" y="676" fill="#c084fc" font-size="6" text-anchor="middle">WARP current 3: 6→3</text>
+  <!-- PLEX current 9→9 (self-loop) -->
+  <path d="M 338 162 C 300 175 300 135 336 146" fill="none" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arrow-purple)" stroke-opacity="0.85"/>
+  <text x="300" y="186" fill="#a855f7" font-size="6" text-anchor="middle">PLEX current 9: 9→9</text>
 
   <!-- ═══ ZONE NODES ═══ -->
 
@@ -104,11 +100,11 @@
   <text x="393" y="168" fill="#64748b" font-size="7" text-anchor="middle">terminal involution</text>
   <text x="456" y="128" fill="#a855f7" font-size="7">Uttunul</text>
 
-  <!-- Zone 1 — Surge (left) -->
+  <!-- Zone 1 — The Pod (1st Door; Sink tractor zone) -->
   <rect x="180" y="376" width="110" height="48" rx="6" fill="#0f172a"/>
   <rect x="180" y="376" width="110" height="48" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="212" y="398" fill="#fbbf24" font-size="14" font-weight="700">1</text>
-  <text x="240" y="398" fill="white" font-size="10" font-weight="600">SURGE</text>
+  <text x="240" y="398" fill="white" font-size="10" font-weight="600">THE POD</text>
   <text x="235" y="414" fill="#64748b" font-size="7" text-anchor="middle">first movement</text>
 
   <!-- Zone 8 — Multiplicity (upper-left) -->
@@ -187,6 +183,8 @@
 
   <text x="635" y="226" fill="#64748b" font-size="7">CARRIERS: Uttunul · Murrumur</text>
   <text x="635" y="238" fill="#64748b" font-size="7">Oddubb · Djynxx · Katak</text>
-  <text x="635" y="258" fill="#475569" font-size="7">Traversal: 1→8→2→7→5→4→1</text>
+  <text x="635" y="258" fill="#fbbf24" font-size="7">- - → Doubling cycle: 1→2→4→8→7→5→1</text>
+  <text x="635" y="270" fill="#475569" font-size="7">Currents: Surge 8→7 · Hold 2→5</text>
+  <text x="635" y="282" fill="#475569" font-size="7">Sink 4→1 · Warp 6→3 · Plex 9→9</text>
 
 </svg>

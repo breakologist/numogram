@@ -79,6 +79,8 @@ enumeration formula.
 > the gaps between arms are moments of silence — the **currents** that carry
 > the signal without being signal themselves."*
 
+> **Verification note (Em, 1 Nov 2026):** CCRU does not call the Time-Circuit the I Ching's answer, successor or heir. It says only that the two "share a hypercultural matrix" [ccru.net, [declab](http://www.ccru.net/declab.htm)]. See [[i-ching-connections]].
+
 **Lore tie‑ins:**
 - Barker = Geoff Barker / CCRU member who first articulated the spiral
   grouping; the diagram is sometimes called the *Barker Spiral* or *45‑Demon

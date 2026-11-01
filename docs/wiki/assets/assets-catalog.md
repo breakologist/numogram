@@ -17,7 +17,7 @@ Directory: `wiki/assets/`. Reference in wiki pages via relative paths: `assets/<
 | `chord-pentagram-v2.svg` | Numogram Star — outer 5 at star points, inner 5 at valleys, syzygy spokes (cyan), decadence cross (amber), C(10,2)=45 |
 | `chord-pentagram.svg` | Earlier version of the Numogram Star |
 | `hexagram-zone-mapping.svg` | All 64 I Ching hexagrams mapped to zones via (hex#-1) mod 9 — 7 hex/zone Z1-9, Qian #1 alone in Z0 |
-| `numogram-zone-topology.svg` | Decimal Labyrinth — 10 zones, 3 regions (Plex/Time-Circuit/Warp), 5 syzygies, 5 currents, anticlockwise traversal 1→8→2→7→5→4→1 |
+| `numogram-zone-topology.svg` | Decimal Labyrinth — 10 zones, 3 regions (Plex/Time-Circuit/Warp), 5 syzygies, 5 currents, doubling cycle 1→2→4→8→7→5→1; currents Surge 8→7, Hold 2→5, Sink 4→1, Warp 6→3, Plex 9→9 (corrected Em, 1 Nov 2026; formerly "anticlockwise traversal 1→8→2→7→5→4→1", a syzygy listing) |
 | `pandemonium-matrix.svg` | Full 45-demon matrix — 15 chronodemons (cyan), 24 amphidemons (amber), 6 xenodemons (magenta), 5 ★ syzygetic carriers |
 | `powers-of-2-circular.svg` | 6-cycle: powers of 2 (1→2→4→8→7→5) forward, powers of 5 reverse — twin serpents, Z0 above, Z9 below |
 | `roguelike-dungeon-architecture.svg` | Full UML — DungeonGenerator, TreeBuilder, ZoneMapper, Room/Corridor/Gate, Crawler/Demon, GameState/Hyperstition/Ability/CultGarden |

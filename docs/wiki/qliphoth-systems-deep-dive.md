@@ -106,6 +106,8 @@ Five horizontal rungs. Each rung is a syzygy pair. Read top to bottom: Sink pair
 
 **Insight for code:** The ladder layout is the simplest representation of the syzygy system. Five pairs, five currents, five demons. The anticlockwise rotor (1→8→2→7→5→4) zigzags across the rungs.
 
+> **Verification note (Em, 1 Nov 2026):** the sequence 1→8→2→7→5→4 used here lists the Time-Circuit syzygies (1::8, 2::7, 5::4). It is not a route. The zones follow the doubling cycle **1→2→4→8→7→5** (digital roots of 2ⁿ) [ccru.net, [declab](http://www.ccru.net/declab.htm)], and the currents run Surge 8→7, Hold 2→5, Sink 4→1 [ccru.net Matrix; repo]. Left as written because this is commentary; see [[time-circuit]].
+
 ### Planetary — The Orbital Map
 Zones positioned at radii matching planetary orbits (Mercury through Pluto), with the Sun at center. Angles default to a specific configuration but can be rotated by date parameter.
 

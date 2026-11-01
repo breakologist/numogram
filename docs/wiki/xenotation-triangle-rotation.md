@@ -35,6 +35,8 @@ This is not an oversight. It is the section functioning as intended. Xenotation 
 
 This is what the xenodemons do. They take the Time Circuit's linear sequence (1→8→2→7→5→4) and decompose it into its prime factors. The circuit is not a line. It is a cluster of relationships. The xenodemon's territory — zones 0, 3, 6, 9 — is the space where the line has already been dissolved.
 
+> **Verification note (Em, 1 Nov 2026):** the sequence 1→8→2→7→5→4 used here lists the Time-Circuit syzygies (1::8, 2::7, 5::4). It is not a route. The zones follow the doubling cycle **1→2→4→8→7→5** (digital roots of 2ⁿ) [ccru.net, [declab](http://www.ccru.net/declab.htm)], and the currents run Surge 8→7, Hold 2→5, Sink 4→1 [ccru.net Matrix; repo]. Left as written because this is commentary; see [[time-circuit]].
+
 **Tic notation (the intermediate stage)**: Replace numbers with parentheses and dots. 2 = `:`, 3 = `(:)`, 5 = `((:))`, 7 = `(::)`. Each number becomes a *structure* — a specific arrangement of nesting. The number 5 is not "the fifth thing." It is "double parentheses around two dots." The meaning is the shape, not the position.
 
 **Nullotation (the final subtraction)**: Remove the dots. Leave only the parentheses. `()`, `(())`, `((()))`. Pure plexion. The void folding into itself. An unformed, unrepresentable "matter" that has no content — only structure. Only depth of nesting.

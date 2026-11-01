@@ -21,6 +21,8 @@ tags: ["demon", "numogram", "triangle-rotation"]
 
 The Time Circuit runs 1→8→2→7→5→4. Six zones, five bonds, one current flowing through all of them. But within this circuit, two syzygies define the engine: 5::4 (Katak, Sink current) and 7::2 (Oddubb, Hold current). They are the Time Circuit's opposing forces — the centripetal and the centrifugal, the involutionary and the orbital, the masculine and the feminine.
 
+> **Verification note (Em, 1 Nov 2026):** the sequence 1→8→2→7→5→4 used here lists the Time-Circuit syzygies (1::8, 2::7, 5::4). It is not a route. The zones follow the doubling cycle **1→2→4→8→7→5** (digital roots of 2ⁿ) [ccru.net, [declab](http://www.ccru.net/declab.htm)], and the currents run Surge 8→7, Hold 2→5, Sink 4→1 [ccru.net Matrix; repo]. Left as written because this is commentary; see [[time-circuit]].
+
 Aamodt's key images:
 - **5::4**: "two arrows swirling toward a center." The moment before the eye of the storm. Orgasm, apocalypse, narrative climax. The collapse into unity.
 - **7::2**: "two arrows forming a circle." The Gemini symbol. The salt symbol. Stable orbit. Neither centripetal nor centrifugal. Eternal circling without loss of energy.

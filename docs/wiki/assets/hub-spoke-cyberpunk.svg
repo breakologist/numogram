@@ -74,11 +74,11 @@
   <text x="450" y="322" fill="white" font-size="8" font-weight="600" text-anchor="middle">VOID · PLEX</text>
   <text x="450" y="334" fill="#64748b" font-size="6" text-anchor="middle">Uttunul 9::0</text>
 
-  <!-- Zone 1 — SURGE (upper-left) -->
+  <!-- Zone 1 — THE POD (1st Door; Sink tractor zone) -->
   <circle cx="310" cy="250" r="32" fill="#0a0a0a" stroke="#fbbf24" stroke-width="1.5" filter="url(#neon-cyan)"/>
   <circle cx="310" cy="250" r="29" fill="rgba(120,53,15,0.15)"/>
   <text x="310" y="248" fill="#fbbf24" font-size="16" font-weight="700" text-anchor="middle">1</text>
-  <text x="310" y="262" fill="white" font-size="7" font-weight="600" text-anchor="middle">SURGE</text>
+  <text x="310" y="262" fill="white" font-size="7" font-weight="600" text-anchor="middle">THE POD</text>
   <text x="310" y="224" fill="#c084fc" font-size="6" text-anchor="middle">Murrumur</text>
 
   <!-- Zone 2 — SEPARATION (upper-right) -->

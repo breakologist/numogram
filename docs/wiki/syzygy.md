@@ -149,7 +149,7 @@ Syzygies are **pairwise demonic carriers**. Each is carried by a named entity (K
 | 0::9 | Uttunul (36) | Syzygetic Xenodemon | Plex 9 (9→9) | Plex | — |
 
 - All five have **Null** (neutral) pitch.
-- The Time-Circuit order of currents is 8→7, 2→5, 4→1. It is not a "1→8→2→7→5→4" route (see [[time-circuit]]).
+- The Time-Circuit zones follow the doubling cycle 1→2→4→8→7→5 (digital roots of 2ⁿ); the currents run 8→7, 2→5, 4→1 (see [[time-circuit]]). *(Note, Em, 1 Nov 2026: this replaces the older "1→8→2→7→5→4", which only lists the syzygies.)*
 - Barker spiral: 4::5 is innermost and 0::9 outermost (see [[barker-spiral]]).
 - Decadence 10-sum pairs are not syzygies (see [[decadence-subdecadence-comparison]]).
 - Per-carrier pages: [[demon-katak]] · [[demon-djynxx]] · [[demon-oddubb]] · [[demon-mur-mur]] · [[demon-uttunul]]

@@ -82,6 +82,8 @@ This is a clean pipeline. The visualizations simply step through it with graphic
 
 The Digestion visualization also begins with raw hex, but it draws the full numogram circle: Time-Circuit at the rim, Warp above, Plex below. A particle travels the circuit anticlockwise (1→8→2→7→5→4), its color bright at the start and fading toward the attractors. The message is: *even pure hardware noise contains the numogram's topology*.
 
+> **Verification note (Em, 1 Nov 2026):** the sequence 1→8→2→7→5→4 used here lists the Time-Circuit syzygies (1::8, 2::7, 5::4). It is not a route. The zones follow the doubling cycle **1→2→4→8→7→5** (digital roots of 2ⁿ) [ccru.net, [declab](http://www.ccru.net/declab.htm)], and the currents run Surge 8→7, Hold 2→5, Sink 4→1 [ccru.net Matrix; repo]. Left as written because this is commentary; see [[time-circuit]].
+
 Both scripts share the same zone palette:
 ```
 0: #444444 (Void gray)

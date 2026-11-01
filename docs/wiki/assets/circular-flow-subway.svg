@@ -5,6 +5,10 @@
   </style>
   <defs>
     <marker id="dot" markerWidth="6" markerHeight="6" refX="3" refY="3"><circle cx="3" cy="3" r="2.5" fill="white"/></marker>
+    <marker id="ar-amb" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 9 3.5, 0 7" fill="#f59e0b"/></marker>
+    <marker id="ar-blk" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 9 3.5, 0 7" fill="#111"/></marker>
+    <marker id="ar-wrp" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 9 3.5, 0 7" fill="#e91e63"/></marker>
+    <marker id="ar-plx" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 9 3.5, 0 7" fill="#7c3aed"/></marker>
   </defs>
 
   <!-- Background -->
@@ -33,14 +37,22 @@
   <!-- 2→1 (horizontal left) -->
   <line x1="550" y1="150" x2="250" y2="150" stroke="#00bcd4" stroke-width="6" stroke-linecap="round"/>
 
-  <!-- Direction arrows on line -->
-  <polygon points="248,200 252,210 244,210" fill="white"/>
-  <polygon points="248,340 252,350 244,350" fill="white"/>
-  <polygon points="380,408 390,412 380,416" fill="white"/>
-  <polygon points="552,350 548,340 556,340" fill="white"/>
-  <polygon points="552,210 548,200 556,200" fill="white"/>
-  <polygon points="420,148 410,152 420,156" fill="white"/>
-
+  <!-- Corrected Em, 1 Nov 2026: the ring is track only (no direction). Solid dark arrows = currents; dashed amber = doubling cycle 1→2→4→8→7→5→1 -->
+  <path d="M 268 158 L 532 158" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#ar-amb)"/>
+  <path d="M 538 166 L 262 396" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#ar-amb)"/>
+  <path d="M 242 392 L 242 300" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#ar-amb)"/>
+  <path d="M 270 262 L 378 262 M 422 262 L 530 262" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <path d="M 520 262 L 530 262" fill="none" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#ar-amb)"/>
+  <path d="M 558 298 L 558 390" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#ar-amb)"/>
+  <path d="M 538 396 L 262 166" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#ar-amb)"/>
+  <!-- currents -->
+  <path d="M 270 300 L 378 300 M 422 300 L 528 300" fill="none" stroke="#111" stroke-width="2.2"/>
+  <path d="M 520 300 L 530 300" fill="none" stroke="#111" stroke-width="2.2" marker-end="url(#ar-blk)"/>
+  <text x="470" y="314" fill="#111" font-size="8" font-weight="700" text-anchor="middle">SURGE 8→7</text>
+  <path d="M 588 160 L 588 400" fill="none" stroke="#111" stroke-width="2.2" marker-end="url(#ar-blk)"/>
+  <text x="596" y="345" fill="#111" font-size="8" font-weight="700">HOLD 2→5</text>
+  <path d="M 212 400 L 212 160" fill="none" stroke="#111" stroke-width="2.2" marker-end="url(#ar-blk)"/>
+  <text x="206" y="345" fill="#111" font-size="8" font-weight="700" text-anchor="end">SINK 4→1</text>
   <!-- ═══ WARP LINE (magenta) ═══ -->
   <!-- 3 (below 4) — diagonal to — 6 (below 5) -->
   <line x1="250" y1="460" x2="550" y2="460" stroke="#e91e63" stroke-width="6" stroke-linecap="round"/>
@@ -52,6 +64,10 @@
   <!-- 9 continues down -->
   <line x1="400" y1="280" x2="400" y2="340" stroke="#7c3aed" stroke-width="6" stroke-linecap="round"/>
 
+  <path d="M 530 482 L 272 482" fill="none" stroke="#e91e63" stroke-width="2" marker-end="url(#ar-wrp)"/>
+  <text x="400" y="496" fill="#e91e63" font-size="8" font-weight="700" text-anchor="middle">WARP 6→3</text>
+  <path d="M 420 296 C 462 330 470 270 424 268" fill="none" stroke="#7c3aed" stroke-width="2" marker-end="url(#ar-plx)"/>
+  <text x="468" y="336" fill="#7c3aed" font-size="8" font-weight="700">PLEX 9→9</text>
   <!-- ═══ STATION CIRCLES ═══ -->
 
   <!-- Zone 0 — VOID (Plex, top) -->
@@ -67,12 +83,12 @@
   <text x="428" y="275" fill="#333" font-size="9" font-weight="600">PLEX</text>
   <text x="428" y="287" fill="#999" font-size="7">Terminal involution</text>
 
-  <!-- Zone 1 — SURGE (top-left, interchange with Plex) -->
+  <!-- Zone 1 — THE POD (1st Door; Sink tractor zone) -->
   <circle cx="250" cy="150" r="20" fill="white" stroke="#00bcd4" stroke-width="3"/>
   <circle cx="250" cy="150" r="16" fill="#f59e0b"/>
   <text x="250" y="155" fill="white" font-size="14" font-weight="700" text-anchor="middle">1</text>
-  <text x="190" y="145" fill="#333" font-size="9" font-weight="600">SURGE</text>
-  <text x="190" y="157" fill="#999" font-size="7">Lumbar · c.7</text>
+  <text x="190" y="145" fill="#333" font-size="9" font-weight="600">THE POD</text>
+  <text x="190" y="157" fill="#999" font-size="7">Dorsal · c.7</text>
   <!-- Interchange marker -->
   <circle cx="230" cy="135" r="5" fill="#7c3aed" stroke="white" stroke-width="1.5"/>
   <text x="218" y="130" fill="#7c3aed" font-size="6">0::1</text>
@@ -82,14 +98,14 @@
   <circle cx="550" cy="150" r="16" fill="#10b981"/>
   <text x="550" y="155" fill="white" font-size="14" font-weight="700" text-anchor="middle">2</text>
   <text x="575" y="145" fill="#333" font-size="9" font-weight="600">SEPARATION</text>
-  <text x="575" y="157" fill="#999" font-size="7">Lumbar · c.5</text>
+  <text x="575" y="157" fill="#999" font-size="7">Crypt · c.5</text>
 
   <!-- Zone 8 — MULTIPLICITY (mid-left) -->
   <circle cx="250" cy="280" r="20" fill="white" stroke="#00bcd4" stroke-width="3"/>
   <circle cx="250" cy="280" r="16" fill="#8b5cf6"/>
   <text x="250" y="285" fill="white" font-size="14" font-weight="700" text-anchor="middle">8</text>
   <text x="190" y="275" fill="#333" font-size="9" font-weight="600">MULTIPLICITY</text>
-  <text x="190" y="287" fill="#999" font-size="7">Cavernous · c.7</text>
+  <text x="190" y="287" fill="#999" font-size="7">Lumbar · c.7</text>
 
   <!-- Zone 7 — BLOOD (mid-right) -->
   <circle cx="550" cy="280" r="20" fill="white" stroke="#00bcd4" stroke-width="3"/>
@@ -157,7 +173,7 @@
   <text x="550" y="537" fill="#666" font-size="8">Zones 0,9</text>
 
   <!-- ═══ LEGEND ═══ -->
-  <rect x="660" y="80" width="210" height="250" rx="6" fill="white" stroke="#e5e5e5" stroke-width="1"/>
+  <rect x="660" y="80" width="210" height="268" rx="6" fill="white" stroke="#e5e5e5" stroke-width="1"/>
   <text x="675" y="100" fill="#333" font-size="9" font-weight="600">LEGEND</text>
 
   <circle cx="680" cy="120" r="6" fill="#00bcd4"/>
@@ -182,7 +198,9 @@
   <text x="675" y="282" fill="#999" font-size="7">Uttunul · Murrumur · Oddubb</text>
   <text x="675" y="294" fill="#999" font-size="7">Djynxx · Katak</text>
 
-  <text x="675" y="318" fill="#666" font-size="7" font-weight="500">TRAVERSAL</text>
-  <text x="675" y="330" fill="#999" font-size="7">Anti-clockwise: 1→8→2→7→5→4→1</text>
+  <text x="675" y="306" fill="#666" font-size="7" font-weight="500">DOUBLING CYCLE (dashed)</text>
+  <text x="675" y="316" fill="#999" font-size="7">1→2→4→8→7→5→1</text>
+  <text x="675" y="326" fill="#999" font-size="7">Currents: Surge 8→7 · Hold 2→5 ·</text>
+  <text x="675" y="336" fill="#999" font-size="7">Sink 4→1 · Warp 6→3 · Plex 9→9</text>
 
 </svg>

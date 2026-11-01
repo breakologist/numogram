@@ -39,6 +39,8 @@
 ## Occult & Entity Pages
 - [[pandemonium]] — The 45-demon matrix: triangular zone distribution (Zone-1:1, Zone-2:2, …, Zone-9:9), reverse-triangular current distribution, net-span connectivity, Gate-45 (Pandemonium Gate), and full `pandemonium-matrix.json` reference.
 
+> **Verification note (Em, 1 Nov 2026):** CCRU does not call the Time-Circuit the I Ching's answer, successor or heir. It says only that the two "share a hypercultural matrix" [ccru.net, [declab](http://www.ccru.net/declab.htm)]. See [[i-ching-connections]].
+
 
 - [[demon]] — Entity hu
 ## Demons
@@ -68,6 +70,8 @@ b: 45-demon Pandemonium Matrix, five carrier demons, zone/current distribution, 
 - [[neolemurianism]] — Core neolemurian philosophy: the Outside (diagonalization, abduction, hyperstition); lemurs/demons as becomings; 45‑lemur Mesh; zones as accumulations; syzygies and currents; gate construction from cumulation (triangular numbers) and conduits (prime tunnels); time‑sorcery as alliance with time; hyperstitional history (Nma, Cthulhu Club, Barker, K‑gothic, Black Atlantis, 0d). The philosophy that makes the Numogram speak.
 
 - [[i-ching-connections]] — Detailed mappings between the I Ching (hexagrams) and Numogram zones. The Time-Circuit is the Numogram's "hexagram kernel" — a decimalized, 6‑zone rotor that inherits the Yijing's function as a map of cyclic transformation. Specific hexagram‑to‑zone mappings via digital root method. **Updated April 18:** Hardware entropy casting — zones 4 (Sink/Closure) and 6 (Warp) dominate from physical noise. Just‑in‑time hexagram casting.
+
+> **Verification note (Em, 1 Nov 2026):** CCRU does not call the Time-Circuit the I Ching's answer, successor or heir. It says only that the two "share a hypercultural matrix" [ccru.net, [declab](http://www.ccru.net/declab.htm)]. See [[i-ching-connections]].
 
 - [[triangular-numbers]] — How triangular numbers behave on the Numogram. Triangular numbers heavily orbit Warp (3/6 zones) in their mod-9 cycle (1-3-6 repeating), but at T₃₆=666 and T₉=45 they climax in Plex plunges via Gt-36 and Gt-45 gates. T₃₆=666 reduces to Zone-9 (terminal tractor of the Plex), embodying "growth events" that bridge chaotic proliferation to abyssal return.
 

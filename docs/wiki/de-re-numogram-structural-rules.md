@@ -39,6 +39,8 @@ The number of Torque regions = M (from N = 3^M + 1):
 - **Base-28:** 2 Time-Circuits (Torque-A and Torque-B, largely independent)
 - **Base-244:** 5 Time-Circuits
 
+> **Verification note (Em, 1 Nov 2026):** the sequence 1→8→2→7→5→4 used here lists the Time-Circuit syzygies (1::8, 2::7, 5::4). It is not a route. The zones follow the doubling cycle **1→2→4→8→7→5** (digital roots of 2ⁿ) [ccru.net, [declab](http://www.ccru.net/declab.htm)], and the currents run Surge 8→7, Hold 2→5, Sink 4→1 [ccru.net Matrix; repo]. Left as written because this is commentary; see [[time-circuit]].
+
 ## Triangular Number Rule
 
 **Total demon count = T(N-1)** where T(k) = k(k+1)/2:

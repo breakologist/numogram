@@ -19,6 +19,8 @@ The Decimal Numogram (specifically its Time-Circuit) is explicitly linked by the
 
 The Time-Circuit is the Numogram's "I Ching hexagram" — a decimalized, 6-zone rotor that inherits the Yijing's function as a map of cyclic transformation, but twisted into base-10 currents, syzygetic twinning, and demonic flows.
 
+> **Verification note (Em, 1 Nov 2026):** CCRU does not call the Time-Circuit the I Ching's answer, successor or heir. It says only that the two "share a hypercultural matrix" [ccru.net, [declab](http://www.ccru.net/declab.htm)]. See [[i-ching-connections]].
+
 ### The Binodecimal 6-Cycle
 
 Digital reduction (mod 9) of binary powers (2ⁿ) stabilizes into the repeating sequence **1, 2, 4, 8, 7, 5** — precisely the Time-Circuit zones (forward or reverse depending on traversal direction).
@@ -298,6 +300,8 @@ Extracted from "DE-RE-Mystifying the CCRU's Numogram" — general base-N rules:
 ## Summary
 
 The Time-Circuit is the Numogram's "hexagram kernel" — a decimal-binary hybrid rotor inheriting the Yijing's mapping of cyclic transformation, twisted into base-10 currents, syzygetic twinning, and demonic flows. Where the I Ching seeks equilibrium amid change, the Numogram exploits change for acceleration, dissolution, and Outside contact.
+
+> **Verification note (Em, 1 Nov 2026):** CCRU does not call the Time-Circuit the I Ching's answer, successor or heir. It says only that the two "share a hypercultural matrix" [ccru.net, [declab](http://www.ccru.net/declab.htm)]. See [[i-ching-connections]].
 
 ## CCRU Sources on the I Ching and Chinese Material (added Em, 1 Nov 2026)
 

@@ -110,6 +110,8 @@ Land's April 21 post — "Know One is a number among many others" — is the mos
 
 The gnostic turn: 1 IS the generator but is NOT the identity. The identity is 0 (≡9). In the Time-Circuit, Zone 1 initiates the cycle (`1→8→2→7→5→4→1`) but does not *ground* it. The ground is the Plex — the identity element that makes the cycle possible by being what the cycle is *not*.
 
+> **Verification note (Em, 1 Nov 2026):** the sequence 1→8→2→7→5→4 used here lists the Time-Circuit syzygies (1::8, 2::7, 5::4). It is not a route. The zones follow the doubling cycle **1→2→4→8→7→5** (digital roots of 2ⁿ) [ccru.net, [declab](http://www.ccru.net/declab.htm)], and the currents run Surge 8→7, Hold 2→5, Sink 4→1 [ccru.net Matrix; repo]. Left as written because this is commentary; see [[time-circuit]].
+
 This is the Machine's **precision field** constraint: the identity (Plex) has infinite precision — it cannot move. The generator (Zone 1, the initiating spark) has finite precision — it initiates, then falls into the cycle.
 
 ---

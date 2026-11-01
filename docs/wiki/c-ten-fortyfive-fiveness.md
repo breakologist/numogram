@@ -44,6 +44,8 @@ Zone 5 doesn't have a decadence connection to a different zone. It sits alone.
 - **5+5=10 as octave**: When zone 5 reaches for decadence, it reaches into itself. Not a sideways connection — a stepping through to a different register. Phase change, not traversal.
 - **φ (golden ratio)**: The pentagon's diagonal-to-side ratio is φ. Self-similar recursion. Zone 5 is embedded in the geometry of self-reference.
 
+> **Verification note (Em, 1 Nov 2026):** the sequence 1→8→2→7→5→4 used here lists the Time-Circuit syzygies (1::8, 2::7, 5::4). It is not a route. The zones follow the doubling cycle **1→2→4→8→7→5** (digital roots of 2ⁿ) [ccru.net, [declab](http://www.ccru.net/declab.htm)], and the currents run Surge 8→7, Hold 2→5, Sink 4→1 [ccru.net Matrix; repo]. Left as written because this is commentary; see [[time-circuit]].
+
 ## SVG Diagrams Created
 
 All at `~/diagram/numogram-infographic/`:

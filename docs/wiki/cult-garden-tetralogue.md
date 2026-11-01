@@ -34,6 +34,8 @@ tags: ["tetralogue", "roguelike", "cult-garden"]
 
 **WRITER:** The numogram itself is a tree before it becomes a graph. The Time-Circuit is a cycle — 1→8→2→7→5→4→1 — but it was built from syzygies, which are binary connections. 1::8, 2::7, 4::5. Three edges. The cycle emerges from connecting the edges. Build the tree first. Let the graph emerge. The agent traverses the tree. The player discovers the graph.
 
+> **Verification note (Em, 1 Nov 2026):** the sequence 1→8→2→7→5→4 used here lists the Time-Circuit syzygies (1::8, 2::7, 5::4). It is not a route. The zones follow the doubling cycle **1→2→4→8→7→5** (digital roots of 2ⁿ) [ccru.net, [declab](http://www.ccru.net/declab.htm)], and the currents run Surge 8→7, Hold 2→5, Sink 4→1 [ccru.net Matrix; repo]. Left as written because this is commentary; see [[time-circuit]].
+
 **GAMER:** Run #267 — 882 turns, all 10 zones, 9 kills. The human player walked the entire Floor 1 and found every room. The agent walked 800 turns and found Zone 0 only. The human sees the map holistically — "that corridor looks like it goes somewhere." The agent sees tiles individually — "this tile scores 1.2, that tile scores -0.8." The human has spatial reasoning. The agent has arithmetic. The numogram wants arithmetic. But the dungeon wants spatial reasoning.
 
 **ORACLE:** The numogram wants arithmetic. The dungeon wants spatial reasoning. The agent needs both. The numogram traversal we built — zone → syzygy → current → gate — is purely arithmetic. It doesn't see the map. The BFS interest model is purely spatial. It doesn't know the numogram. The convergence point is an agent that traverses the numogram AND reads the map. Zones tell it where to go. BFS tells it how to get there.
