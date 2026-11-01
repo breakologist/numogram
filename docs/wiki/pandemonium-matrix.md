@@ -8,6 +8,14 @@ source: Reconstructed from "Unleashing the Numogram" (Aamodt), CCRU writings, an
 
 # The Pandemonium Matrix
 
+> **Verification note (Em, 1 Nov 2026).** Checked against the ccru.net *Pandemonium Matrix (Extracts from the Lemurian Necronomicon)* [ccru.net] and `lumpenspace/ccru@7c38ad9` `app/data/demons.ts` / `gates.ts` [repo]. Corrections to earlier content on this page (earlier text left in place below):
+> - **Five Syzygetic Demons table — mesh numbers wrong.** Correct values [ccru.net]: Katak **Mesh-14** (not 00; Mesh-00 is Lurgo), Djynxx **Mesh-18** (not 12), Oddubb **Mesh-23** (not 20), Mur Mur/Murrumur **Mesh-29** (not 28), Uttunul **Mesh-36** (correct). Also in "Related": Djynxx is Mesh-18.
+> - **"Four Decadence Pairs" — not all amphidemons.** The four *Decademons* (net-span digits sum to ten) are Tchakki 6::4 (1st), Pabbakis 7::3 (2nd), Nammamad 8::2 (3rd), Tutagool 9::1 (4th) [ccru.net]. Nammamad (8::2) is a **Cyclic Chronodemon** (both poles in the Time-Circuit), so the claim that all four cross the circuit boundary is false. The glossary associates the Decademons with the four Zoas of Revelation [ccru.net].
+> - **"From Zone 2 to outer" list** includes a stray line "2::8 — already in chronodemons"; 2::8 is not an amphidemon and does not belong in that list.
+> - **Pitch System table** — the claim that pitch tracks zone distance (Ana-7 = far-apart zones, Cth-7 = close zones) is *not* stated by the CCRU and does not fit the data: the two extremes, Skarkix (4::3, Ana-7) and Tchattuk (6::5, Cth-7), both span adjacent numerals. Treat that table as **unsourced speculation**. What the source does say: pitch runs from Ana-7 (highest) to Cth-7 (lowest), all syzygetic demons are Null, and the glossary counts fifteen tones [ccru.net]. (The table is also corrupted by a stray "unleashing-the-numogram-source" line pasted into its header.)
+> - **Five-type counts** (24 / 12 / 3 / 4 / 2) are confirmed by the glossary entries for Amphidemon, Chronodemon and Chaotic Xenodemon [ccru.net], and the repo's classifier (`TC = {1,2,4,5,7,8}`) reproduces the same split [repo].
+> - In the earlier mesh table, epithets in the "Attrs" column are the CCRU's own titles and rite themes, abridged; see the verified table below for door, gates, Decadence card and rite routes.
+
 ## See also
 
 - [[demon-encyclopedia]] — individual 45-demon stub pages
@@ -211,6 +219,126 @@ Each demon "clicks" a gate-number (Gt-N) and has a pitch (Ana-N descending to Ct
 - Chronodemons: mostly low-pitch (zones are close on the Time Circuit)
 - Amphidemons: mostly high-pitch (cross-circuit, maximum distance)
 - Xenodemons: mixed/atonal (outer zones are inconsistently distant)
+
+---
+
+## Verified Matrix Table (Em, 1 Nov 2026)
+
+Every field below is factual data transcribed from the ccru.net Matrix [ccru.net]; the last column is the name used in `demons.ts` at `lumpenspace/ccru@7c38ad9` [repo] (⚠ = spelling differs). Rite routes give only the zone sequence (e.g. `Rt-1 [1890]`); the CCRU's omen/power descriptions are omitted here — see the earlier table for short paraphrases, and the source for the text. "+n sub" = the source's "[+n sub-Rt]". C/tp = Decadology cluster type; Mj/Mn = major/minor rite; card in brackets (H/C/D/S suit, from the pitch polarity × major/minor; Katak is the Joker). Zone links go to the [[zone-hub]] pages.
+
+**Reading keys [ccru.net, glossary]:** *Door* = net-span #::0, opening a phase; *Phase-limit* = final demon of a phase; *Clicks* = exact ordered match of a mesh number with a gate; *Ciphers* = same digits in any order; *Haunts* = polar coincidence with a channel; *Feeds* a current = the syzygetic demon that produces it; *Prowls* = poles are one side of a syzygy plus its tractor zone; *Shadows* = one side of a syzygy plus the twin of its tractor zone.
+
+| Mesh | Name [ccru.net] | Aliases | Epithet | Net-span | Zones | Type | Pitch | Door / limit / decademon | Gates & currents | Decadence C/tp (card) | Rites | Repo name [repo] |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 00 | Lurgo | Legba | (Terminal) Initiator | 1::0 | [[zone-1]] · [[zone-0]] | Amphidemon | Ana-1 | 1st Door (The Pod) [Mercury], Dorsal; 1st Phase-limit | Clicks Gt-00; ciphers Gt-01, Gt-10 | #7 Mj+ [7C] | Rt-1 [1890] | Lurgo |
+| 01 | Duoddod | — | Duplicitous Redoubler | 2::0 | [[zone-2]] · [[zone-0]] | Amphidemon | Ana-2 | 2nd Door (The Crypt) [Venus], Cervical | Clicks Gt-01 | #8 Mj+ [8C] | Rt-1 [271890]; Rt-2 [27541890]; +1 sub | Duoddod |
+| 02 | Doogu | The Blob | Original-Schism | 2::1 | [[zone-2]] · [[zone-1]] | Cyclic Chronodemon | Ana-3 | 2nd Phase-limit | Ciphers Gt-21; shadows Surge | #1 Mn+ [1H] | Rt-1 [1872]; Rt-2 [271]; Rt-3 [27541]; +1 sub | Doogu |
+| 03 | Ixix | Yix | Abductor | 3::0 | [[zone-3]] · [[zone-0]] | Chaotic Xenodemon | Ana-3 | 3rd Door (The Swirl) [Earth], Cranial | Clicks Gt-03; ciphers Gt-03 | — | Rt-0 [?] | Ixix |
+| 04 | Ixigool | Djinn of the Magi | Over-Ghoul | 3::1 | [[zone-3]] · [[zone-1]] | Amphidemon | Ana-4 | — | — | #4 Mn+ [4H] | Rt-1 [18723]; Rt-2 [1872563]; +1 sub | Ixigool |
+| 05 | Ixidod | King Sid | The Zombie-Maker | 3::2 | [[zone-3]] · [[zone-2]] | Amphidemon | Ana-5 | 3rd Phase-limit | Haunts Gt-03 | #5 Mn+ [5H] | Rt-1 [23]; Rt-2 [27563]; +1 sub | Ixidod |
+| 06 | Krako | Kru, Karak-oa | The Croaking Curse | 4::0 | [[zone-4]] · [[zone-0]] | Amphidemon | Ana-4 | 4th Door (Delta) [Mars], Cervical | — | #9 Mj+ [9C] | Rt-1 [41890]; +1 sub | Krako |
+| 07 | Sukugool | Old Skug | The Sucking-Ghoul | 4::1 | [[zone-4]] · [[zone-1]] | Cyclic Chronodemon | Ana-5 | — | Prowls Sink; haunts Gt-10 | #3 Mj+ [3C] | Rt-1 [187254]; Rt-2 [41]; +1 sub | Sukugool |
+| 08 | Skoodu | Li'l Scud | The Fashioner | 4::2 | [[zone-4]] · [[zone-2]] | Cyclic Chronodemon | Ana-6 | — | Shadows Hold | #2 Mn+ [2H] | Rt-1 [2754]; Rt-2 [41872]; Rt-3 [451872] | Skoodu |
+| 09 | Skarkix | Sharky, Scar-head | Buzz-Cutter | 4::3 | [[zone-4]] · [[zone-3]] | Amphidemon | Ana-7 (uppermost) | 4th Phase-limit | — | #6 Mj+ [6C] | Rt-1 [418723]; Rt-2 [4518723]; Rt-3 [4563]; +1 sub | Skarkix |
+| 10 | Tokhatto | Old Toker, Top Cat | Decimal Camouflage | 5::0 | [[zone-5]] · [[zone-0]] | Amphidemon | Cth-4 | 5th Door (Hyperborea) [Jupiter], Cervical; 'Angel of the Cards' | — | #9 Mj- [9S] | Rt-1 [541890]; +1 sub | Tokhatto |
+| 11 | Tukkamu | — | Occulturation | 5::1 | [[zone-5]] · [[zone-1]] | Cyclic Chronodemon | Cth-3 | — | Ciphers Gt-15; prowls Sink | #3 Mj- [3S] | Rt-1 [18725]; Rt-2 [541]; +1 sub | Tukkamu |
+| 12 | Kuttadid | Kitty | Ticking Machines | 5::2 | [[zone-5]] · [[zone-2]] | Cyclic Chronodemon | Cth-2 | — | Prowls Hold | #2 Mn- [2D] | Rt-1 [275]; Rt-2 [541872]; +1 sub | Kuttadid |
+| 13 | Tikkitix | Tickler | Clicking Menaces | 5::3 | [[zone-5]] · [[zone-3]] | Amphidemon | Cth-1 | — | — | #6 Mj- [6S] | Rt-1 [5418723]; Rt-2 [563]; +1 sub each | Tikkitix |
+| 14 | Katak | — | Desolator | 5::4 | [[zone-5]] · [[zone-4]] | Syzygetic Chronodemon | Null | 5th Phase-limit | Feeds Sink; ciphers Gt-45 | #0 [Joker] | Rt-0 [X]; Rt-1 [418725] | Katak |
+| 15 | Tchu | Tchanul | Source of Subnothingness | 6::0 | [[zone-6]] · [[zone-0]] | Chaotic Xenodemon | Cth-3 | 6th Door (Undu) [Saturn], Cranial | — | — | Rt-0 [?] | Tchu |
+| 16 | Djungo | — | Infiltrator | 6::1 | [[zone-6]] · [[zone-1]] | Amphidemon | Cth-2 | — | — | #4 Mn- [4D] | Rt-1 [187236]; Rt-2 [187256]; +1 sub | Djungo |
+| 17 | Djuddha | Judd Dread | Decentred Threat | 6::2 | [[zone-6]] · [[zone-2]] | Amphidemon | Cth-2 | — | — | #5 Mn- [5D] | Rt-1 [236]; Rt-2 [256]; +1 sub | Djuddha |
+| 18 | Djynxx | Ching, The Jinn | Child Stealer | 6::3 | [[zone-6]] · [[zone-3]] | Syzygetic Xenodemon | Null | — | Feeds & prowls Warp; ciphers Gt-36; haunts Gt-06, Gt-21 | — | Rt-0 [X]; +2 sub | Djynxx |
+| 19 | Tchakki | Chuckles | Bag of Tricks | 6::4 | [[zone-6]] · [[zone-4]] | Amphidemon | Ana-1 | 1st Decademon | — | #6 Mn+ [6H] | Rt-1 [4187236]; Rt-2 [45187236]; Rt-3 [456]; +sub | Tchakki |
+| 20 | Tchattuk | One Eyed Jack, Djatka | Pseudo-Basis | 6::5 | [[zone-6]] · [[zone-5]] | Amphidemon | Cth-7 (lowermost) | 6th Phase-limit | Haunts Gt-15 | #6 Mn- [6D] | Rt-1 [54187236]; Rt-2 [56]; +2 sub | Tchattuk |
+| 21 | Puppo | The Pup | Break-Outs | 7::0 | [[zone-7]] · [[zone-0]] | Amphidemon | Cth-2 | 7th Door (Akasha) [Uranus], Cervical | — | #8 Mj- [8S] | Rt-1 [71890]; Rt-2 [72541890]; +1 sub | Puppo |
+| 22 | Bubbamu | Bubs | After Babylon | 7::1 | [[zone-7]] · [[zone-1]] | Cyclic Chronodemon | Cth-1 | — | Prowls Surge; haunts Gt-28 | #1 Mn- [1D] | Rt-1 [187]; Rt-2 [71]; Rt-3 [72541] | Bubbamu |
+| 23 | Oddubb | Odba | Broken Mirror | 7::2 | [[zone-7]] · [[zone-2]] | Syzygetic Chronodemon | Null | — | Feeds Hold | — | Rt-0 [X] | Oddubb |
+| 24 | Pabbakis | Pabzix | Dabbler | 7::3 | [[zone-7]] · [[zone-3]] | Amphidemon | Ana-1 | 2nd Decademon | — | #5 Mj+ [5C] | Rt-1 [723]; Rt-2 [72563]; +1 sub | Pabbakis |
+| 25 | Ababbatok | Abracadabra | Regenerator | 7::4 | [[zone-7]] · [[zone-4]] | Cyclic Chronodemon | Ana-2 | — | Shadows Hold | #2 Mj+ [2C] | Rt-1 [4187]; Rt-2 [45187]; Rt-3 [7254] | Ababbatok |
+| 26 | Papatakoo | Pataku | Upholder | 7::5 | [[zone-7]] · [[zone-5]] | Cyclic Chronodemon | Cth-6 | — | Prowls Hold | #2 Mj- [2S] | Rt-1 [54187]; Rt-2 [725]; +1 sub | Papatakoo |
+| 27 | Bobobja | Bubbles, Beelzebub | Heavy Atmosphere | 7::6 | [[zone-7]] · [[zone-6]] | Amphidemon | Cth-5 | 7th Phase-limit | — | #5 Mj- [5S] | Rt-1 [7236]; Rt-2 [7256]; +1 sub | Bobobja |
+| 28 | Minommo | — | Webmaker | 8::0 | [[zone-8]] · [[zone-0]] | Amphidemon | Cth-1 | 8th Door (Limbo) [Neptune], Lumbar | — | #7 Mj- [7S] | Rt-1 [890] | Minommo |
+| 29 | Mur Mur | Murrumur, Mu(mu) | Dream-Serpent | 8::1 | [[zone-8]] · [[zone-1]] | Syzygetic Chronodemon | Null | — | Feeds Surge | — | Rt-0 [X] | **Murrumur** ⚠ |
+| 30 | Nammamad | — | Mirroracle | 8::2 | [[zone-8]] · [[zone-2]] | Cyclic Chronodemon | Ana-1 | 3rd Decademon | Shadows Surge; ciphers Gt-28 | #1 Mj+ [1C] | Rt-1 [2718]; Rt-2 [275418]; Rt-3 [8172]; +1 sub | Nammamad |
+| 31 | Mummumix | Mix-Up | The Mist-Crawler | 8::3 | [[zone-8]] · [[zone-3]] | Amphidemon | Ana-2 | — | — | #4 Mj+ [4C] | Rt-1 [81723]; Rt-2 [8172563]; +1 sub | Mummumix |
+| 32 | Numko | Old Nuk | Keeper of Old Terrors | 8::4 | [[zone-8]] · [[zone-4]] | Cyclic Chronodemon | Ana-3 | — | Prowls Sink | #3 Mn+ [3H] | Rt-1 [418]; Rt-2 [4518]; Rt-3 [817254] | Numko |
+| 33 | Muntuk | Manta, Manitou | Desert Swimmer | 8::5 | [[zone-8]] · [[zone-5]] | Cyclic Chronodemon | Cth-5 | — | Shadows Sink | #3 Mn- [3D] | Rt-1 [5418]; Rt-2 [81725]; +1 sub | Muntuk |
+| 34 | Mommoljo | Mama Jo | Alien Mother | 8::6 | [[zone-8]] · [[zone-6]] | Amphidemon | Cth-4 | — | — | #4 Mj- [4S] | Rt-1 [817236]; Rt-2 [817256]; +1 sub | Mommoljo |
+| 35 | Mombbo | — | Tentacle Face (Fishy-princess) | 8::7 | [[zone-8]] · [[zone-7]] | Cyclic Chronodemon | Cth-3 | 8th Phase-limit | Prowls Surge | #1 Mj- [1S] | Rt-1 [718]; Rt-2 [725418]; Rt-3 [817]; +1 sub | Mombbo |
+| 36 | Uttunul | — | Seething Void | 9::0 | [[zone-9]] · [[zone-0]] | Syzygetic Xenodemon | Null | 9th Door (Cthelll) [Pluto], Sacrum | Clicks Gt-36; feeds & prowls Plex; haunts Gt-45 | — | Rt-0 [X] | Uttunul |
+| 37 | Tutagool | Yettuk | The Tattered Ghoul | 9::1 | [[zone-9]] · [[zone-1]] | Amphidemon | Ana-1 | 4th Decademon | — | #7 Mn+ [7H] | Rt-1 [189] | **Tuttagool** ⚠ |
+| 38 | Unnunddo | The False Nun | Double-Undoing | 9::2 | [[zone-9]] · [[zone-2]] | Amphidemon | Ana-2 | — | — | #8 Mn+ [8H] | Rt-1 [27189]; Rt-2 [2754189]; +1 sub | Unnunddo |
+| 39 | Ununuttix | Tick-Tock | Particle Clocks | 9::3 | [[zone-9]] · [[zone-3]] | Chaotic Xenodemon | Ana-3 | — | — | — | Rt-0 [?] | Ununuttix |
+| 40 | Ununak | Nuke | Blind Catastrophe | 9::4 | [[zone-9]] · [[zone-4]] | Amphidemon | Ana-4 | — | — | #9 Mn+ [9H] | Rt-1 [4189]; Rt-2 [45189] | **Unnunaka** ⚠ |
+| 41 | Tukutu | Killer-Kate | Cosmotraumatics | 9::5 | [[zone-9]] · [[zone-5]] | Amphidemon | Cth-4 | — | — | #9 Mn- [9D] | Rt-1 [54189]; +1 sub | Tukutu |
+| 42 | Unnutchi | Outch, T'ai Chi | Tachyonic immobility | 9::6 | [[zone-9]] · [[zone-6]] | Chaotic Xenodemon | Cth-3 | — | — | — | Rt-0 [?] | Unnutchi |
+| 43 | Nuttubab | Nut-Cracker | Mimetic Anorganism | 9::7 | [[zone-9]] · [[zone-7]] | Amphidemon | Cth-2 | — | — | #8 Mn- [8D] | Rt-1 [7189]; Rt-2 [7254189]; +1 sub | Nuttubab |
+| 44 | Ummnu | Om, Omni, Amen, Omen | Ultimate Inconsequence | 9::8 | [[zone-9]] · [[zone-8]] | Amphidemon | Cth-1 | 9th Phase-limit | Haunts Gt-36 | #7 Mn- [7D] | Rt-0 [89] | Ummnu |
+
+
+### Name and spelling variants
+
+| Mesh | ccru.net Matrix | Repo `demons.ts` | Other forms seen | Note |
+|---|---|---|---|---|
+| 29 | Mur Mur (Murrumur, Mu(mu)) | Murrumur | "Murmur" (CD track "vault of murmurs") | Glossary uses **Murrumur** (Surge Current entry) [ccru.net]; repo follows that. |
+| 37 | Tutagool (Yettuk) | **Tuttagool** | — | Doubled *t* only in repo. Glossary lists *Yettuk* separately as a Y2K entity [ccru.net]. |
+| 40 | Ununak (Nuke) | **Unnunaka** | — | Repo adds *n* and final *-a*; no CCRU source for that form found. |
+| 24 | Pabbakis (Pabzix) | Pabbakis | "Pabz" | Earlier table on this page gives alias "Pabz"; Matrix says **Pabzix**. |
+| 18 | Djynxx (Ching, The Jinn) | Djynxx | — | Alias "Ching" missing from earlier table. |
+| 20 | Tchattuk (One Eyed Jack, Djatka) | Tchattuk | — | Alias "Djatka" missing earlier. |
+| 42 | Unnutchi (Outch, T'ai Chi) | Unnutchi | — | Alias "Outch" missing earlier. |
+| 44 | Ummnu (Om, Omni, Amen, Omen) | Ummnu | — | "Omni" missing earlier. |
+| 27 | Bobobja (Bubbles, Beelzebub (Lord of the Flies)) | Bobobja | — | "Bubbles" missing earlier. |
+| 09, 10, 33 | Skarkix (Sharky, Scar-head); Tokhatto (Old Toker, Top Cat); Muntuk (Manta, Manitou) | same | — | Extra aliases missing earlier. |
+
+Typos noted in the source itself: "Submergance" (Mesh-28; the repo's `gates.ts` spells it *Submergence* for Gt-10), "Decadance" alongside "Decadence" in the game text. Mesh-03 Ixix's pitch is given as Ana-3, the same as Mesh-02 Doogu — reproduced as found.
+
+### Mesh order is a derived index [repo]
+
+The repo stores no mesh numbers, but its generator loop (`for i in 1..9, for j in 0..i-1`) emits demons in exactly mesh order: 1::0 → 00, 2::0 → 01, 2::1 → 02 … 9::8 → 44. So mesh-serial = position in the descending net-span enumeration, i.e. mesh = i(i−1)/2 + j. Checked for all 45 rows. The repo collapses the five types into four kinds (`syzygy`, `chrono`, `amphi`, `xeno`), so Cyclic vs Syzygetic Chronodemons and Chaotic vs Syzygetic Xenodemons are distinguished only via `syzygy`.
+
+### Gates in the repo vs the Matrix [repo]/[ccru.net]
+
+`gates.ts` lists ten gates, Gt-00 to Gt-45 (cumulation of zone n = n(n+1)/2), each with a source zone and channel target: Gt-00 0→0, Gt-01 1→1, Gt-03 2→3, Gt-06 3→6, Gt-10 4→1, Gt-15 5→6, Gt-21 6→3, Gt-28 7→1, Gt-36 8→9, Gt-45 9→9. These agree with every gate cited in the Matrix (clicks/ciphers/haunts). The repo's gate titles (e.g. "Gate of Charon" for Gt-36, "Gate of Pandemonium" for Gt-45) come from other CCRU texts and were not checked against the Matrix page, which does not name gates apart from Gt-45 as "Utterminus of Cthelll".
+
+### Doors and phases [ccru.net]
+
+| Phase | Door (mesh) | Door name | Planet | Spinal level | Phase-limit (mesh) |
+|---|---|---|---|---|---|
+| 1 | Lurgo (00) | The Pod | Mercury | Dorsal | Lurgo (00) |
+| 2 | Duoddod (01) | The Crypt | Venus | Cervical | Doogu (02) |
+| 3 | Ixix (03) | The Swirl | Earth | Cranial | Ixidod (05) |
+| 4 | Krako (06) | Delta | Mars | Cervical | Skarkix (09) |
+| 5 | Tokhatto (10) | Hyperborea | Jupiter | Cervical | Katak (14) |
+| 6 | Tchu (15) | Undu | Saturn | Cranial | Tchattuk (20) |
+| 7 | Puppo (21) | Akasha | Uranus | Cervical | Bobobja (27) |
+| 8 | Minommo (28) | Limbo | Neptune | Lumbar | Mombbo (35) |
+| 9 | Uttunul (36) | Cthelll | Pluto | Sacrum | Ummnu (44) |
+
+### Decadology cluster types [ccru.net]
+
+Nine cluster types (C/tp-#1 to #9), four demons each, covering the 24 Amphidemons + 12 Cyclic Chronodemons = 36 = the Decadence pack. The five syzygetic demons and four Chaotic Xenodemons are outside Decadology (Katak is marked #0 Joker). In Subdecadence the four added zero-valued Queens correspond to the Chaotic Xenodemons [ccru.net glossary].
+
+| C/tp | Demons (mesh) |
+|---|---|
+| #1 | Doogu 02 [1H], Bubbamu 22 [1D], Nammamad 30 [1C], Mombbo 35 [1S] |
+| #2 | Skoodu 08 [2H], Kuttadid 12 [2D], Ababbatok 25 [2C], Papatakoo 26 [2S] |
+| #3 | Sukugool 07 [3C], Tukkamu 11 [3S], Numko 32 [3H], Muntuk 33 [3D] |
+| #4 | Ixigool 04 [4H], Djungo 16 [4D], Mummumix 31 [4C], Mommoljo 34 [4S] |
+| #5 | Ixidod 05 [5H], Djuddha 17 [5D], Pabbakis 24 [5C], Bobobja 27 [5S] |
+| #6 | Skarkix 09 [6C], Tikkitix 13 [6S], Tchakki 19 [6H], Tchattuk 20 [6D] |
+| #7 | Lurgo 00 [7C], Minommo 28 [7S], Tutagool 37 [7H], Ummnu 44 [7D] |
+| #8 | Duoddod 01 [8C], Puppo 21 [8S], Unnunddo 38 [8H], Nuttubab 43 [8D] |
+| #9 | Krako 06 [9C], Tokhatto 10 [9S], Ununak 40 [9H], Tukutu 41 [9D] |
+
+Pattern (observation, Em): Ana pitches take H (minor) or C (major); Cth pitches take D (minor) or S (major), matching the glossary's "pitch polarity (corresponding to decadence suits)" [ccru.net].
+
+### The game, briefly [ccru.net]
+
+Decadence uses a 36-card pack (no court cards, tens or jokers); pairs sum to ten; a round (*Aeon*) runs until the first negative result, and a negative score from 0 to −44 calls the demon of that mesh number. Lurgo (00) alone ends an Aeon without loss. Subdecadence adds four zero-valued Queens and pairs to nine (the syzygies). See [[subdecadence-deck]].
+
+*Speculation (Em, labelled):* the cluster-type of each demon appears to be determined by its rite shape; whether it can be computed purely from net-span is untested here.
 
 ## Related
 
