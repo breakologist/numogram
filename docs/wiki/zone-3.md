@@ -2,7 +2,7 @@
 zone: 3
 name: Release
 region: warp
-syzygy: 3↔6
+syzygy: "3::6 Djynxx"
 particle: zx
 spinal: Third-eye plane
 meshTag: 0007
@@ -11,7 +11,10 @@ planetFull: Earth (Sol-3)
 door: Ixix — opens onto the Swirl
 phaseCount: 8
 lemurs: ["3::0 Ixix", "3::1 Ixigool", "3::2 Ixidod"]
-source: qliphoth.systems zones.ts (2026-04-30)
+source: lumpenspace/ccru@7c38ad9 app/data/zones.ts; http://www.ccru.net/zones/Zn3.htm
+sourceNote: "earlier: qliphoth.systems zones.ts (2026-04-30)"
+colour: "#44cc77"
+planetSymbol: "♁"
 status: canonical
 ---
 
@@ -106,3 +109,51 @@ Three naming sets are in use; only the first is CCRU's ([glossary](http://www.cc
 - **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Warp". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
 
 Statements on this page such as "Current: …" may use either of the first two senses.
+
+## Sourced data (Em, 1 Nov 2026)
+
+Tags: **[repo]** = [lumpenspace/ccru @ `7c38ad9`](https://github.com/lumpenspace/ccru/blob/7c38ad910410c3f5744b961eb97adf58ff00d41f/app/data/) (`zones.ts`, `gates.ts`, `currents.ts`, `demons.ts`, `syzygies.ts`); **[ccru.net]** = [Zone 3 page](http://www.ccru.net/zones/Zn3.htm) (Occultures › Lemurian Pandemonium; mirror [ccru-ii.neocities.org](https://ccru-ii.neocities.org/)) and the [Pandemonium Matrix](http://www.ccru.net/digithype/pandemonium.htm). CCRU text is paraphrased; short quotations are marked.
+
+### Identity
+
+- Colour `ZONE_CLR[3]`: **`#44cc77`** [repo]
+- Planet glyph `PLANET_SYMBOL[3]`: **♁** (U+2641) for Earth [repo]
+- Syzygy: **3::6 Djynxx** [repo `syzygies.ts`]
+- Region position: first of two Warp-region zones [ccru.net]
+- Spinal level: plane of the third-eye (Warp region) [ccru.net]
+
+### Gates
+
+- **Gt-03** 'Lo-Way to the Crypt': 2 → 3, cumulation 3 (into this zone) [repo]
+- **Gt-06** 'Gate to the Swirl': 3 → 6, cumulation 6 (out of this zone) [repo]
+- **Gt-21** 'Sixth Gate': 6 → 3, cumulation 21 (into this zone) [repo]
+- Channels terminating here: two channels: from the Torque (2nd, Gt-03) and the Warp (6th, Gt-21) [ccru.net]
+
+### Currents
+
+- **Warp** (6−3=3; repo draws 6→3): produced by this zone's syzygy; this is the tractor zone [repo]
+- Tractor-Zone of the 6-3 ('Warp') Current [ccru.net]
+
+### Demons (net-spans touching this zone)
+
+Types from `demons.ts` (`TC` = {1,2,4,5,7,8}: syzygy if digits sum to 9; chrono if both in TC; xeno if neither; otherwise amphi). M# = Pandemonium Matrix mesh serial. [repo][ccru.net]
+
+| Net-span | Demon | Type | Mesh |
+|---|---|---|---|
+| 3::0 | Ixix | xeno | M#03 |
+| 3::1 | Ixigool | amphi | M#04 |
+| 3::2 | Ixidod | amphi | M#05 |
+| 4::3 | Skarkix | amphi | M#09 |
+| 5::3 | Tikkitix | amphi | M#13 |
+| 6::3 | Djynxx | syzygy | M#18 |
+| 7::3 | Pabbakis | amphi | M#24 |
+| 8::3 | Mummumix | amphi | M#31 |
+| 9::3 | Ununuttix | xeno | M#39 |
+
+- Door / first-degree imp: Third Door, opening onto the Swirl: Ixix (3::0), chaotic xenodemon [ccru.net]
+- Nma location / totem animals: not given on the ccru.net zone page [ccru.net]
+- Horovitz: Zone 3's cumulation (6) equals its syzygetic double, accounting for 'the compact tension of the Warp system'. [ccru.net]
+
+## Verification note (Em, 1 Nov 2026)
+
+- Frontmatter `syzygy` standardised to `3::6 Djynxx`. ccru.net prints this zone's serials as 'M#-03' etc.; the Matrix gives 'Mesh-03', so the hyphen is read as typography, not a negative.

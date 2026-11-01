@@ -2,7 +2,7 @@
 zone: 1
 name: Stability
 region: torque
-syzygy: 
+syzygy: "1::8 Murrumur"
 particle: gl
 spinal: Dorsal (Thoracic)
 meshTag: 0001
@@ -11,7 +11,10 @@ planetFull: Mercury (Sol-1)
 door: Lurgo — the Initiator (Door of Doors)
 phaseCount: 2
 lemurs: ["1::0 Lurgo"]
-source: qliphoth.systems zones.ts (2026-04-30)
+source: lumpenspace/ccru@7c38ad9 app/data/zones.ts; http://www.ccru.net/zones/Zn1.htm
+sourceNote: "earlier: qliphoth.systems zones.ts (2026-04-30)"
+colour: "#ee44ee"
+planetSymbol: "☿"
 status: canonical
 ---
 
@@ -95,3 +98,53 @@ Three naming sets are in use; only the first is CCRU's ([glossary](http://www.cc
 - **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Surge". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
 
 Statements on this page such as "Current: …" may use either of the first two senses.
+
+## Sourced data (Em, 1 Nov 2026)
+
+Tags: **[repo]** = [lumpenspace/ccru @ `7c38ad9`](https://github.com/lumpenspace/ccru/blob/7c38ad910410c3f5744b961eb97adf58ff00d41f/app/data/) (`zones.ts`, `gates.ts`, `currents.ts`, `demons.ts`, `syzygies.ts`); **[ccru.net]** = [Zone 1 page](http://www.ccru.net/zones/Zn1.htm) (Occultures › Lemurian Pandemonium; mirror [ccru-ii.neocities.org](https://ccru-ii.neocities.org/)) and the [Pandemonium Matrix](http://www.ccru.net/digithype/pandemonium.htm). CCRU text is paraphrased; short quotations are marked.
+
+### Identity
+
+- Colour `ZONE_CLR[1]`: **`#ee44ee`** [repo]
+- Planet glyph `PLANET_SYMBOL[1]`: **☿** (U+263F) for Mercury [repo]
+- Syzygy: **1::8 Murrumur** [repo `syzygies.ts`]
+- Region position: first of six Torque zones [ccru.net]
+- Spinal level: Dorsal (Thoracic) [ccru.net]
+
+### Gates
+
+- **Gt-01** 'First Gate': 1 → 1, cumulation 1 (self-loop) [repo]
+- **Gt-10** 'Gate of Submergence': 4 → 1, cumulation 10 (into this zone) [repo]
+- **Gt-28** 'Gate of Relapse': 7 → 1, cumulation 28 (into this zone) [repo]
+- Channels terminating here: three Torque channels (1st, 4th, 7th — i.e. Gt-01, Gt-10, Gt-28) [ccru.net]
+
+### Currents
+
+- **Sink** (5−4=1; repo draws 4→1): this is the tractor zone [repo]
+- **Surge** (8−1=7; repo draws 8→7): produced by this zone's syzygy [repo]
+- Tractor-Zone of the 5-4 ('Sink') Current [ccru.net]
+
+### Demons (net-spans touching this zone)
+
+Types from `demons.ts` (`TC` = {1,2,4,5,7,8}: syzygy if digits sum to 9; chrono if both in TC; xeno if neither; otherwise amphi). M# = Pandemonium Matrix mesh serial. [repo][ccru.net]
+
+| Net-span | Demon | Type | Mesh |
+|---|---|---|---|
+| 1::0 | Lurgo | amphi | M#00 |
+| 2::1 | Doogu | chrono | M#02 |
+| 3::1 | Ixigool | amphi | M#04 |
+| 4::1 | Sukugool | chrono | M#07 |
+| 5::1 | Tukkamu | chrono | M#11 |
+| 6::1 | Djungo | amphi | M#16 |
+| 7::1 | Bubbamu | chrono | M#22 |
+| 8::1 | Murrumur | syzygy | M#29 |
+| 9::1 | Tuttagool | amphi | M#37 |
+
+- Door / first-degree imp: First Door, the 'Door of Doors': Lurgo (1::0) 'the Initiator', widely related to Legba ("the first and last Loa to be invoked") [ccru.net]
+- Nma location (Stillwell's ethno-topography): coral atolls of the Mu Nma; hydrocycle: shallow seas [ccru.net]
+- Totem animals: armoured fish creatures (ichthyoid with crustacean/mollusc/gastropod traits) [ccru.net]
+- Mesh-tag 0001 'matching the primordial click of Tzikvik cipher-shamanism'. Gt-01 linked to all variants of the Bubble-Pod mythos. [ccru.net]
+
+## Verification note (Em, 1 Nov 2026)
+
+- Frontmatter `syzygy` was empty; set to `1::8 Murrumur`. Spelling: repo and ccru.net lemur lists give **Murrumur**; the ccru.net Zone 1/8 system notes say **Murmur**; the Pandemonium Matrix gives 'Mur Mur (Murrumur, Mu(mu))'. All refer to 8::1.

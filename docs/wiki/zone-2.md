@@ -2,7 +2,7 @@
 zone: 2
 name: Separation
 region: torque
-syzygy: 2↔7
+syzygy: "2::7 Oddubb"
 particle: dt
 spinal: —
 meshTag: 0003
@@ -11,7 +11,10 @@ planetFull: Venus (Sol-2)
 door: Duoddod — Main Lo-Way into the Crypt
 phaseCount: 4
 lemurs: ["2::0 Duoddod", "2::1 Doogu"]
-source: qliphoth.systems zones.ts (2026-04-30)
+source: lumpenspace/ccru@7c38ad9 app/data/zones.ts; http://www.ccru.net/zones/Zn2.htm
+sourceNote: "earlier: qliphoth.systems zones.ts (2026-04-30)"
+colour: "#4488ff"
+planetSymbol: "♀"
 status: canonical
 ---
 
@@ -86,3 +89,49 @@ Three naming sets are in use; only the first is CCRU's ([glossary](http://www.cc
 - **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Dt". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
 
 Statements on this page such as "Current: …" may use either of the first two senses.
+
+## Sourced data (Em, 1 Nov 2026)
+
+Tags: **[repo]** = [lumpenspace/ccru @ `7c38ad9`](https://github.com/lumpenspace/ccru/blob/7c38ad910410c3f5744b961eb97adf58ff00d41f/app/data/) (`zones.ts`, `gates.ts`, `currents.ts`, `demons.ts`, `syzygies.ts`); **[ccru.net]** = [Zone 2 page](http://www.ccru.net/zones/Zn2.htm) (Occultures › Lemurian Pandemonium; mirror [ccru-ii.neocities.org](https://ccru-ii.neocities.org/)) and the [Pandemonium Matrix](http://www.ccru.net/digithype/pandemonium.htm). CCRU text is paraphrased; short quotations are marked.
+
+### Identity
+
+- Colour `ZONE_CLR[2]`: **`#4488ff`** [repo]
+- Planet glyph `PLANET_SYMBOL[2]`: **♀** (U+2640) for Venus [repo]
+- Syzygy: **2::7 Oddubb** [repo `syzygies.ts`]
+- Region position: second of six Torque zones [ccru.net]
+- Spinal level: none on the zone page (repo blank; Pandemonium Matrix gives Duoddod's door Cervical) [ccru.net]
+
+### Gates
+
+- **Gt-03** 'Lo-Way to the Crypt': 2 → 3, cumulation 3 (out of this zone) [repo]
+- Channels terminating here: none listed [ccru.net]
+
+### Currents
+
+- **Hold** (7−2=5; repo draws 2→5): produced by this zone's syzygy; drawn from this zone in the repo [repo]
+
+### Demons (net-spans touching this zone)
+
+Types from `demons.ts` (`TC` = {1,2,4,5,7,8}: syzygy if digits sum to 9; chrono if both in TC; xeno if neither; otherwise amphi). M# = Pandemonium Matrix mesh serial. [repo][ccru.net]
+
+| Net-span | Demon | Type | Mesh |
+|---|---|---|---|
+| 2::0 | Duoddod | amphi | M#01 |
+| 2::1 | Doogu | chrono | M#02 |
+| 3::2 | Ixidod | amphi | M#05 |
+| 4::2 | Skoodu | chrono | M#08 |
+| 5::2 | Kuttadid | chrono | M#12 |
+| 6::2 | Djuddha | amphi | M#17 |
+| 7::2 | Oddubb | syzygy | M#23 |
+| 8::2 | Nammamad | chrono | M#30 |
+| 9::2 | Unnunddo | amphi | M#38 |
+
+- Door / first-degree imp: Second Door, the 'Main Lo-Way' into the Crypt (K-goth): Duoddod (2::0) [ccru.net]
+- Nma location (Stillwell's ethno-topography): interior marshlands of the Dib Nma; hydrocycle: mist, vaporisation, hazing [ccru.net]
+- Totem animals: metamorphic insects — moths, butterflies, dragonflies, dibboma flashbugs [ccru.net]
+- Gt-03 (written 'Gt-3' on ccru.net) is honoured and feared by Tzikvik shamanism as the opening to the 'way of the Storm-Worm'. [ccru.net]
+
+## Verification note (Em, 1 Nov 2026)
+
+- Frontmatter `syzygy` standardised to `2::7 Oddubb`. ccru.net writes the gate as 'Gt-3'; repo pads it as 'Gt-03' (same gate).
