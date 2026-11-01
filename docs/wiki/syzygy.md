@@ -30,6 +30,9 @@ The current is always `abs(high − low)`.
 
 The nine-sum pairing rule is called **zygonovism**. It is the Numogram's "supplementary rule of pairing" inherited from the I Ching's line-pairing and the Pythagorean tetractys. Under zygonovism:
 
+> **Verification note (Em, 1 Nov 2026):** CCRU does not say the rule is *inherited*. It says the I Ching and the Numogram "share a hypercultural matrix", and that both follow "a supplementary rule of pairing" by 9-twinning (8:1, 7:2, 5:4 mapping the hexagram line pairs) [ccru.net, [declab](http://www.ccru.net/declab.htm)]. The Pythagorean tetractys is **not** mentioned there.
+
+
 - Every zone (except the self-paired 0/9 edge case) has exactly one twin.
 - The current is always odd: 1, 3, 5, 7, or 9.
 - The middle three syzygies (`1::8`, `2::7`, `4::5`) interlock to form the **Time-Circuit**; their currents (7, 5, 1) mutually compose the anticlockwise rotor.
@@ -132,3 +135,21 @@ Syzygies are **pairwise demonic carriers**. Each is carried by a named entity (K
 ---
 
 *See also:* `current`, `zone`, `warp`, `plex`, `demon`, `pandemonium-matrix`, `numogram-calculator`, [[syzygy-arithmetic]], [[pandemonium-glossary]]
+
+## Sourced carrier table (Em, 1 Nov 2026)
+
+[ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo lumpenspace/ccru@7c38ad9 `syzygies.ts`, `currents.ts`, `ZONE_REGION`]
+
+| Syzygy | Carrier (Mesh) | Type | Current (flow) | Region | Card |
+|---|---|---|---|---|---|
+| 4::5 | Katak (14) | Syzygetic Chronodemon | Sink 1 (4→1) | Torque | Joker |
+| 3::6 | Djynxx (18) | Syzygetic Xenodemon | Warp 3 (6→3) | Warp | — |
+| 2::7 | Oddubb (23) | Syzygetic Chronodemon | Hold 5 (2→5) | Torque | — |
+| 1::8 | Mur Mur / Murrumur (29) | Syzygetic Chronodemon | Surge 7 (8→7) | Torque | — |
+| 0::9 | Uttunul (36) | Syzygetic Xenodemon | Plex 9 (9→9) | Plex | — |
+
+- All five have **Null** (neutral) pitch.
+- The Time-Circuit order of currents is 8→7, 2→5, 4→1. It is not a "1→8→2→7→5→4" route (see [[time-circuit]]).
+- Barker spiral: 4::5 is innermost and 0::9 outermost (see [[barker-spiral]]).
+- Decadence 10-sum pairs are not syzygies (see [[decadence-subdecadence-comparison]]).
+- Per-carrier pages: [[demon-katak]] · [[demon-djynxx]] · [[demon-oddubb]] · [[demon-mur-mur]] · [[demon-uttunul]]

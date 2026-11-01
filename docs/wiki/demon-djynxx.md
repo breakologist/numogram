@@ -15,6 +15,9 @@ tags: ["demon", "numogram", "syzygy", "xenodemon"]
 **Current:** 3 (from 6 to 3)  
 **Net-Span:** 3 (stays entirely within the Warp loop)
 
+> **Verification note (Em, 1 Nov 2026):** the net-span is **6::3** (a zone pair); **3** is the current (6−3), which flows 6→3 [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. Djynxx is **in** the Pandemonium classification as Mesh-18, a Syzygetic Xenodemon, so the claim below that it "exists outside the standard Pandemonium classification" is an error.
+
+
 **See also:** [[numogram]], [[numogram-warp]], [[demon-uttunul]], [[i-ching-connections]], [[apoc-apocalypse-been-in-effect]]
 
 ## Description
@@ -55,6 +58,9 @@ The Warp region itself is turbulent and self-reinforcing; Djynxx's chaotic, vort
 - [[numogram-warp]] — the Warp region
 - [[demon-uttunul]] — the Plex carrier demon
 - [[i-ching-connections]] — hexagram mappings (Hexagram 64/21 maps to Warp Zone 3)
+
+> **Verification note (Em, 1 Nov 2026):** under the wiki's digital-root mapping, hexagram 21 → zone 3 ✓, but **64 → zone 1** (6+4 = 10 → 1), not 3. These mappings are wiki constructions, not CCRU (see [[i-ching-connections]]).
+
 - [[syzygy]] 
 ---
 
@@ -69,8 +75,14 @@ From the Pentazygon (`apoc.htm`): **Djynxx is the "changeling figure" — sudden
 - **Aliases:** Ching, The Jinn — connecting to Arabic/Islamic jinn mythology (genies as liminal entities)
 - **Type:** Syzygetic Xenodemon — simultaneously a syzygy carrier AND a xenodemon (link to Outside)
 - **Pitch:** Null — the highest pitch, shared with the four other syzygetic carriers
+
+> **Verification note (Em, 1 Nov 2026):** Null is the **neutral** pitch, not the highest. The range runs from Ana-7 (highest; Skarkix) to Cth-7 (lowest; Tchattuk), and "all syzygetic demons have a neutral (or Null) pitch" [ccru.net, Matrix].
+
 - **Net-Span:** 6::3 — the Warp loop, autonomous and self-reinforcing
 - **Ciphers:** Gt-36 (clicks it — the plunge from Time-Circuit to Plex)
+
+> **Verification note (Em, 1 Nov 2026):** the Matrix says Djynxx **ciphers** Gt-36. It does not *click* it; Uttunul is the demon that "clicks Gt-36" [ccru.net, Matrix].
+
 - **Haunts:** Gt-06 (Warp twist), Gt-21 (Warp reverse) — Djynxx patrols the gates between Warp zones
 - **Route:** Rt-0:[X] — "Abstract cyclones, dust spirals (nomad war-machine)" — uncharted, with 2 sub-routes
 
@@ -179,3 +191,5 @@ The `powers-of-2-circular.svg` visualization already showed this geometrically: 
 - [[hexagram-zone-mapping]] — Complete 64 hexagram → 10 zone mapping
 - [[powers-of-2-circular]] — The hexagram kernel visualization (the 6-cycle with excluded 3, 6)
 - [[changing-lines-network]] — The 6D hypercube with 192 edges, all crossing zone boundaries
+
+Cross-links: [[syzygy]] · [[time-circuit]] · [[numogram-time-circuit]] · [[pandemonium-matrix]] · [[decadence]] · [[barker-spiral]] · [[zone]]

@@ -15,6 +15,9 @@ tags: ["demon", "numogram", "syzygy"]
 **Current:** 9 (from 9 to 0, the terminal abyssal flow)  
 **Net-Span:** 9 (stays entirely within the Plex loop)
 
+> **Verification note (Em, 1 Nov 2026):** the net-span is **9::0**. 9 is the current (9−0), which folds back into Zone 9 (Plex current 9→9 in the repo, `currents.ts`).
+
+
 **See also:** [[numogram]], [[numogram-plex]], [[demon-djynxx]], [[i-ching-connections]], [[apoc-apocalypse-been-in-effect]]
 
 ## Description
@@ -56,6 +59,9 @@ The Plex region itself is abyssal and self-reinforcing; Uttunul's nullifying, in
 - [[demon-djynxx]] — the Warp carrier demon
 - [[i-ching-connections]] — hexagram mappings (Hexagram 2, the all-yin hexagram, maps to Plex Zone 0)
 
+> **Verification note (Em, 1 Nov 2026):** under neither wiki mapping does hexagram 2 reach zone 0. The digital root gives **zone 2**; the (N−1) % 9 method gives **zone 1**. The errata on [[i-ching-connections]] note that no hexagram reaches Zone 0 under a DR mapping.
+
+
 ---
 
 ## Pandemonium Matrix Entry (Full)
@@ -69,6 +75,9 @@ The Plex region itself is abyssal and self-reinforcing; Uttunul's nullifying, in
 - **Mesh number:** 36 (which is T(8), the 8th triangular number — connecting to Gt-36)
 - **Type:** Syzygetic Xenodemon — one of only five syzygetic carriers
 - **Pitch:** Null — the highest pitch category, shared only with Katak, Djynxx, Oddubb, and Mur Mur
+
+> **Verification note (Em, 1 Nov 2026):** Null is the **neutral** pitch, not the highest (that is Ana-7). The five-member list is correct [ccru.net, Matrix].
+
 - **Net-Span:** 9::0 — loops entirely within the Plex, never touching the Time-Circuit or Warp
 - **Ciphers:** Gt-36 (clicks it), Gt-45 (haunts it)
 - **Door:** 9th Door — Cthelll (the iron core of the Earth), associated with Pluto
@@ -107,8 +116,12 @@ Uttunul appears by name in CCRU hyperfiction, notably in **"Zerok un Holes"** by
 
 > *"Endless unraveling towards the body of Uttunul Which never comes. But it's close... Just... Outside... Always... Turning itself on... Sucking... Feeding..."*
 
-The text (at `raw/www.ccru.net/syzygy/zerok.htm`) presents Uttunul as an asymptotic horizon — a body that is approached but never arrived at, a zero-point of differentiation that the text's own "wheel turning round and around" perpetually gestures toward. This is the Plex carrier rendered as literary affect rather than structural node: the abyssal terminus as erotic-intellectual horizon, ceaselessly deferred.
+The text (at [ccru.net/syzygy/zerok.htm](http://www.ccru.net/syzygy/zerok.htm)) presents Uttunul as an asymptotic horizon — a body that is approached but never arrived at, a zero-point of differentiation that the text's own "wheel turning round and around" perpetually gestures toward. This is the Plex carrier rendered as literary affect rather than structural node: the abyssal terminus as erotic-intellectual horizon, ceaselessly deferred.
 
 The same hyperfiction embeds a surge/hold/sink table (8:1-7:2, 7:2-5:4, 5:4-8:1) with demon name variants (murmerge, overdoublings, odd dub, kataclysm) alongside the Uttunul passage — grounding the Plex's terminal figure within the same syzygy network that the wiki treats structurally.
 
 Also referenced: **"Amphibious Maidens"** (S. Livingstone, L. Parisi, A. Greenspan, *Swarm 3*) closes with I Ching hexagram 24 (Fu/Return) on the seventh day — the seventh day as return maps onto the 7::2 syzygy's folding-back dynamic, complementary to Uttunul's terminal closure. Together the two texts bracket the numogram's outer limits: the amphibious return (Zone 7 :: 2) and the abyssal approach (Zone 9 :: 0).
+
+> **Verification note (Em, 1 Nov 2026):** Uttunul draws "the outermost curve of the Barker-spiral" [ccru.net, [Zn9](http://www.ccru.net/zones/Zn9.htm)], consistent with [[barker-spiral]]'s sourced diagram. Its 9th Door is Cthelll, Sacrum [ccru.net, Matrix]. The "Amphibious Maidens"/hexagram 24 claim above was not re-checked: the Swarm 3 page returned no content to curl.
+
+Cross-links: [[syzygy]] · [[time-circuit]] · [[numogram-time-circuit]] · [[pandemonium-matrix]] · [[decadence]] · [[barker-spiral]] · [[zone]]
