@@ -1,7 +1,7 @@
 ---
 title: Daniel Charles Barker
 created: 2026-04-08
-last_updated: 2026-04-08
+last_updated: 2026-11-01
 source_count: 3
 status: draft
 tags: ["barker", "ccru", "geotraumatics", "theory"]
@@ -13,6 +13,9 @@ tags: ["barker", "ccru", "geotraumatics", "theory"]
 The cryptographic genius behind the [[numogram]]'s mathematical foundation. Professor of Anorganic Semiotics at Kingsport College (MVU, Mass.). Trained as a cryptographer at MIT in the early 1970s, Barker spent his life decoding ancient scripts, quasibiotic residues, and anomalous mineral patterns. His work with Echidna Stillwell produced the Numogram's theoretical framework: geotraumatics, spinal catastrophism, palate-tectonics, and the Barker-Spiral.
 
 [Source: LAND -- Barker Speaks.pdf (CCRU interview, Autumn 1998)]
+
+> **Verification note (Em, 1 Nov 2026):** the ccru.net text ([digithype/barkerspeaks.htm](http://www.ccru.net/digithype/barkerspeaks.htm)) is credited to **Ccru**, not Land. It is listed under "digital hyperstition" as "Ccru – Barker Speaks". Its intro gives: Professor of Anorganic Semiotics at Kingsport College (MVU, Mass.) **since 1992**; trained as a cryptographer in the early 1970s; interviewed in his MVU office in late autumn 1998. In the interview Barker says he "started out at MIT" in the information sciences. The research then moved to MVU, and he later worked for a NASA-related SETI organisation [ccru.net]. The MIT training is therefore Barker's own account, not the intro's.
+
 
 ## Tic-Systems
 
@@ -76,6 +79,9 @@ This maps directly to the Numogram's spinal level assignments:
 | 7 | Pharyngeal | — |
 | 8 | Cavernous | — |
 | 9 | Sacrum | "Sacred bone" — degenerated second skull (Goethe) |
+
+> **Verification note (Em, 1 Nov 2026):** **this table is not sourced and mostly disagrees with the sources.** *Barker Speaks* gives no zone→spine table. The zone-level Mu Tantrism assignments are: **0 Coccygeal, 1 Dorsal (Thoracic), 3 & 6 Third-eye plane, 8 Lumbar, 9 Sacral**. Zones 2, 4, 5 and 7 have no entry [repo, lumpenspace/ccru@7c38ad9 `zones.ts` `spinal`]. Zone 1 = Dorsal and Zone 6 = third-eye were also confirmed on ccru.net ([Zn1](http://www.ccru.net/zones/Zn1.htm), [Zn6](http://www.ccru.net/zones/Zn6.htm)). So zones 1, 2, 3, 4, 5, 6, 7 and 8 are wrong or unsourced as given above, and the "Sacrum = degenerated second skull (Goethe)" gloss was not found on the pages checked.
+
 
 The spinal ascent from Coccygeal (Zone-0) to Cavernous (Zone-8) traces a regression through geocosmic time. Zone-9 (Sacrum) is the "degenerated second skull" — a frozen cranial catastrophe compressed into the pelvis.
 
@@ -196,6 +202,9 @@ The CCRU's intensity scale, named after Barker:
 
 One of Barker's publications directly connects palate-tectonics to political control:
 
+> **Verification note (Em, 1 Nov 2026):** **misattribution.** The quotation below comes from the "Palate-Tectonics" section of the 1998 interview, not from the 1994 paper *Vowels: A Biopolitical Strategy*. Only that paper's title appears on ccru.net [ccru.net, Barker Speaks].
+
+
 > "It's a twin-axial system, howls and clicks, reciprocally articulated as a vowel-consonant phonetic palette, rigidly intersegmented to repress staccato-hiss continuous variation and its attendant becomings-animal."
 
 The vowel-consonant division is not natural but *political* — a "rigid intersegmentation" that represses the continuous variation of animal vocalization. Stammerings, vocal tics, and electrodigital voice synthesis threaten to "bypass the anthropostructural head-smash that establishes our identity with logos, escaping in the direction of numbers."
@@ -203,6 +212,9 @@ The vowel-consonant division is not natural but *political* — a "rigid interse
 ## Publications
 
 Barker's complete publication list from Plutonics journal:
+
+> **Verification note (Em, 1 Nov 2026):** full citations as given [ccru.net, Barker Speaks]: *Plutonics* X/6 (Fall 1990); X/9 (Fall 1991); X/10 (Spring 1992); "Volume 10", No. 12 (Fall 1992); X/18 (Fall 1994); *What Counts as Human* (Kingsport College Press, 1997). The last is not in *Plutonics*. *Fei Ch'ien Rinse Out*, note 36, also cites it for "the schizotectonics of digital reduction" [ccru.net, archive/rinse.htm]. These are fictional (hyperstitional) publications.
+
 
 | Year | Title |
 |------|-------|
@@ -220,3 +232,36 @@ The progression is telling: from tic-systems (1990) through geotraumatics and th
 > "Eventually a machinic solution was provided by the Tick-Distributor, but that came later..."
 
 Barker mentions the "Tick-Distributor" — a machine that solved the problem of "how to quantify disorganized multiplicities." This is the hardware side of Barker's numbering: a device that counts tics (suborganizational micro-events) at the speed they actually occur. It is never described in detail, but its existence implies that Barker's numbering was not merely theoretical but had a physical implementation — a seismograph for the body.
+
+## Sourced Additions (Em, 1 Nov 2026)
+
+### Barker Speaks: points not covered above [ccru.net, [barkerspeaks](http://www.ccru.net/digithype/barkerspeaks.htm)]
+- **Sequence vs order:** Barker separates *sequence* from *order*. Order is a "sequenced sequence", a redundant doubling. Decoded number escapes progressive time, and tick multitudes converge "by infolding, involution, or implex".
+- **Digital twinning:** the tic-density scale was first made numerically rigorous as 9-sum twinning ("zygonovize"). Its key is **9 = 0**. Nine is "positive (or full-body) zero", tied to 1 = 0.999… and to $99.99 pricing.
+- **Stillwell and Freud:** Echidna Stillwell led Barker to read Freud's *Beyond the Pleasure Principle* "from the other side", as a map of the Geocosmic Unconscious.
+- **Spine:** the spine is treated as a fossil record. This follows Ballard rather than Haeckel's recapitulation thesis, and draws on Elaine Morgan's Aquatic Ape Theory. The stages are swimming, crawling and walking.
+- **Decadence:** five pairs with itself to make ten and scores zero. Subdecadence "introduces zeroes, and nine-zero twins".
+
+### Tick Delirium [ccru.net, [occultures/barker1.htm](http://www.ccru.net/occultures/barker1.htm); in *Ccru: Writings 1997–2003*, Urbanomic, pp. 151–3]
+- Fictional narrative. **Project-Scar**, southern Borneo, November 1980: Barker decodes SETI "tick-talk" tapes, "dot-clusters and factor-strings", as **xenotation** clicks together.
+- NASA's reaction to his report and a breakdown follow. The official version (no contact, no tick-disease, no flight into the jungle) is set against a tick-borne "tick-delirium". The jungle name for the phenomenon is **Ummnu**.
+- It opens with Thomas Gold's *Deep Hot Biosphere* (abiogenic hydrocarbons) as a model of descent "out of the solar-system".
+- It closes on Pandemonium's problem of how the end can be "already in the middle of the beginning", and on Cthelll "forever turning into itself" (compare Horovitz on Zone-1 in [[numogram-time-circuit]]).
+
+### Cryptolith [ccru.net, [occultures/barker0.htm](http://www.ccru.net/occultures/barker0.htm)]
+See [[cryptolith]]. The ccru.net page carries no author name.
+
+### Tic Xenotation (TX) [Land, "Tic-Talk", *Fanged Noumena* (Urbanomic); Hyperstition blog [003538](http://hyperstition.abstractdynamics.org/archives/003538.html), not ccru.net]
+- TX was devised for Project Scar as culture-free numerals. It is a compression of the naturals ≥ 2 with no modulus.
+- `:` = 2 (or ×2), so `::` = 4 and `:::` = 8. `(n)` = the *n*th prime ("implexion"): `(:)` = 3, `((:))` = 5, `(((:)))` = 11, `((((:))))` = 31, `(((((:)))))` = 127.
+- Numbers are written as factor strings, e.g. 55 = `((:))(((:)))` (checked: 5 × 11).
+- Zero and one need a "deplex" operation, `(-P)`.
+- The source claims isomorphs on the (fictional) Tablets of Jheg Selem and the Vukorri Cryptoliths.
+- See [[xenotation-triangle-rotation]] and [[lemurian-times-nexus]].
+
+### Repo data on the Barker Spiral [repo, `syzygies.ts`, `zones.ts`]
+- 4::5 (Katak) is the "innermost curve", and 0::9 (Uttunul) the "outermost curve, coinciding with the limit ordinal-span in Barkerian arithmetic".
+- Zone 5 is the "inner-eye of the Barker spiral".
+
+### Cross-links
+[[barker-spiral]] · [[cryptolith]] · [[time-circuit]] · [[numogram-time-circuit]] · [[zone]] · [[zone-5]] · [[zone-9]] · [[pandemonium]] · [[pandemonium-matrix]] · [[pandemonium-glossary]] · [[decadence]] · [[i-ching-connections]]

@@ -38,6 +38,8 @@ Only when *both* halves are held together does the diplozygotic spiral appear. N
 
 At the origin sits the **5⊕5 node**: the point where 5 pairs with itself, producing zero in Decadence (doubling) and nine in Subdecadence (twinning). This is the infinitesimal pivot — the place where 0.999… collapses into 1.
 
+> **Verification note (Em, 1 Nov 2026):** **error.** 5+5 = 10 is a Decadence pairing that scores zero [ccru.net, Barker Speaks]. It is not a Subdecadence pair, because under nine-sum twinning 5 pairs with **4**. The repo puts 4::5 (Katak) at the "innermost curve" of the spiral and Zone 5 at its "inner-eye" [repo, lumpenspace/ccru@7c38ad9 `syzygies.ts`, `zones.ts`]. So the Lemurian centre is 4::5, not 5⊕5. The clockwise/counterclockwise labels in the table above were not found in the sources checked. See [[daniel-barker#sourced-additions-em-1-nov-2026]].
+
 ```
         10 (Atlantean sovereign zero)
          ↓

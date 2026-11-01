@@ -14,6 +14,9 @@ Nick Land's short fiction set in the [[numogram|Numogram]] mythology — a cosmi
 
 [Source: LAND -- Cryptolith.pdf]
 
+> **Verification note (Em, 1 Nov 2026):** the ccru.net page ([occultures/barker0.htm](http://www.ccru.net/occultures/barker0.htm)) and Urbanomic's *Ccru: Writings 1997–2003* both present this as a **Ccru** text with no named author. Credit to Land is attribution, not sourced fact. Content checked against ccru.net: K/T-Missile (65 million BC, "16 clicks per second"), Theta-Station, publication at Miskatonic on 25 Nov K0+09, and Site-29 on 17 Feb K0+11 at 13:26, item **It-277**. All of this matches. The long block quotations on this page go beyond "short cited quotes" and should be cut down in a future edit. The "Cataplex-map = Numogram applied to geology" and "Entity IS Unuttera" glosses are **interpretation**. The 17 = 7th prime arithmetic is correct.
+
+
 ## Plot
 
 **65 million BC**: The K/T-Missile, "Pregnant with the Entity," impacts Earth. Barker, working from Theta-Station on the Antarctic Peninsula ("Where it is 2012 forever"), tracks its trajectory across the Cataplex-map. The impact terminates the Mesozoic era. "Chalk-Out" — a billion tons of molten calcium toxins erase North America.
