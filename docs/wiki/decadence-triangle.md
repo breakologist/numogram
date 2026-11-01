@@ -7,6 +7,11 @@ created: 2026-04-24
 
 # The Decadence Triangle — Three Perspectives on Game, Oracle, and Path
 
+> This page is a **commentary** (a three-voice triangle). Its interpretations stand as written; only factual or rule errors are flagged below.
+>
+> **Format lineage (Em, 1 Nov 2026):** the *triangle* pages (three-voice commentaries: [[book-of-paths-triangle]], [[decadence-triangle]], [[glossary-triangle]], [[orphan-drift-triangle]]) are the forerunners of the four-voice **tetralogues** and **square roundtables**. See [[tetralogue-hub]], [[square-roundtable-anthology-2026-04-27]] and [[Grok's Roundtable]].
+
+
 Source text: Aamodt, *Unleashing the Numogram*, Decadence section (lines 3029–3222)
 
 Three voices rotate through the same material. Each reads the others. Each discovers something the others missed.
@@ -25,6 +30,9 @@ Five cards face up (Set-1). Five cards face down (Set-2). You turn the hidden ca
 Ten. Not nine — that would be syzygy. Ten is the *next* threshold. 1+0 = 1. The gate that opens after completion. In plexing terms, 10 reduces to 1 — it wraps back to the beginning. Every successful pair in Decadence is a miniature death-and-return.
 
 Positive scores accumulate into the **Angelic Index**. Negative scores call demons from the Pandemonium Matrix. The game produces either angels or demons. There is no neutral outcome. The Aeon lasts until the first negative result — until the first time you *fail to complete a pair*. Then a demon arrives, and the ritual ends.
+
+> **Verification note (Em, 1 Nov 2026):** rule error. A "negative result" is a negative **round score**: pairs score their difference, and unpaired Set-1 cards score minus their face value. It is not the first failed pairing. A round can have unpaired cards and still finish positive. CCRU also places "zero" among the demon-calling results ("from zero to forty-four"), so a zero result is not cleanly neutral [ccru.net, [Pandemonium](http://www.ccru.net/digithype/pandemonium.htm)].
+
 
 **Subdecadance** — the "ultimate blasphemy" — changes the pairing to nine instead of ten, and adds four Queens valued at zero. Now you're pairing for syzygies. The Queens are Zone 0 — the void, the silent whisper (*eiaoung*). When a Queen appears, you must find a 9 to complete her. Or she remains unpaired, and the void scores against you.
 

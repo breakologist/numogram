@@ -35,3 +35,5 @@ Four tetralogue runs using **precomputed syzygy chains** from local seeds. Each 
 ## Context-only control
 
 A control run with seed 7 and `--no-precompute` (no local chains computed) produced fingerprint `context-only`. The council still produced a similar synthesis, confirming the tetralogue's stability across data-depth variations.
+
+**Format lineage (Em, 1 Nov 2026):** the *triangle* pages (three-voice commentaries: [[book-of-paths-triangle]], [[decadence-triangle]], [[glossary-triangle]], [[orphan-drift-triangle]]) are the forerunners of these four-voice **tetralogues** and **square roundtables**. See [[tetralogue-hub]], [[square-roundtable-anthology-2026-04-27]] and [[Grok's Roundtable]].

@@ -70,3 +70,5 @@ Oracle/Builder/Writer/Gamer roundtables. 30+ tetralogues exist across the wiki. 
 ## Related
 - [[index]] — Full wiki index (350+ pages)
 - [[numogram-council]] — Multi-model orchestration plugin
+
+**Format lineage (Em, 1 Nov 2026):** the *triangle* pages (three-voice commentaries: [[book-of-paths-triangle]], [[decadence-triangle]], [[glossary-triangle]], [[orphan-drift-triangle]]) are the forerunners of these four-voice **tetralogues** and **square roundtables**. See [[tetralogue-hub]], [[square-roundtable-anthology-2026-04-27]] and [[Grok's Roundtable]].

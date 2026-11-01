@@ -26,6 +26,12 @@ These are not two separate systems — they are two registers of the same decima
 | **Primary demon families** | Syzygetic Null Pitch demons (Katak, Djynxx, Oddubb, Mur Mur, Uttunul) | Amphidemon crossing-pairs (1::9, 2::8, 3::7, 4::6, 5::5) |
 | **Self-pair** | N/A (all pairs are distinct) | 5::5 — the only self-decadence; Zone 5 connecting to itself |
 
+> **Verification note (Em, 1 Nov 2026):** **factual corrections to the table** [ccru.net, [Pandemonium](http://www.ccru.net/digithype/pandemonium.htm)]:
+- **Cards:** the columns are swapped and partly wrong. **Decadence** = royals, tens and jokers removed = **36 cards** (A–9 × 4), pairs sum to 10. **Subdecadence** = the Decadence pack **plus four Queens valued 0** = **40 cards**, pairs sum to 9. Neither game has "10 → 0" or a 1–10 deck.
+- **Scoring (both games):** each pair scores its difference; each unpaired Set-1 card scores minus its face value; an Aeon ends at the first negative result.
+- **Demon families:** the 10-sum net-spans are not all amphidemons. 9::1 Tutagool, 7::3 Pabbakis and 6::4 Tchakki are Amphidemons, but **8::2 Nammamad is a Cyclic Chronodemon**, and 5::5 is not a demon at all (net-spans are pairs of different zones).
+
+
 ---
 
 ## Current Derivation
@@ -53,6 +59,9 @@ Both registers derive their **currents** by the same rule: absolute difference b
 | 5::5 | 0 | Self-decadence — the hinge |
 
 > The odd/even split in currents mirrors the Lemurian/Atlantean split: **odd currents are syzygetic (move within the circuit); even currents are decadent (cross the boundary).**
+
+> **Verification note (Em, 1 Nov 2026):** "Decadence currents" are a **wiki extension (speculation)**. CCRU defines currents only for the five syzygies; in the game, 10-sum differences are scores. The claim that they "cross the boundary" is also false for **2::8**, which lies wholly inside the Time-Circuit/Torque [repo, lumpenspace/ccru@7c38ad9 `ZONE_REGION`].
+
 
 ---
 
@@ -84,6 +93,9 @@ The numogram does not resolve the tension between 9 and 10. It *depends* on it:
 
 > "The spiral does not emerge until both registers are held simultaneously." — CCRU / Barker
 
+> **Verification note (Em, 1 Nov 2026):** this is **not** a CCRU or Barker quotation. It paraphrases wiki text from [[subdecadence]]. Barker's own account says the spiral "clicked" on "seeing the two together — or seeing between them" [ccru.net, [Barker Speaks](http://www.ccru.net/digithype/barkerspeaks.htm)]. The claim that Decadence pairs connect the Time-Circuit to the Warp and Plex is also only partly true (see the note above on 2::8).
+
+
 The Barker Spiral's full geometry requires both halves. The "Lemurian" 9-sum and the "Atlantean" 10-sum are not competitors — they are the two faces of decimal dizziness.
 
 ---
@@ -97,3 +109,4 @@ The Barker Spiral's full geometry requires both halves. The "Lemurian" 9-sum and
 - [[syzygy-arithmetic]] — Cross-addition and current generation
 - [[pandemonium-matrix]] — 45 demons from T₉ = subdecadence cumulation
 - [[barker-spiral]] — The diagram
+- [[book-of-paths]] · [[pandemonium]] · [[zone]] — sourced context (Em, 1 Nov 2026)

@@ -39,6 +39,15 @@ Reuse `demon-cards/*.svg` with three small additions:
 ### B — 40-card play deck + 5 governor tokens
 Drop the 5 carrier demons (Katak, Djynxx, Oddubb, Mur Mur, Uttunul) into token form; remaining 40 map cleanly to four suits x 0-9. Tokhatto as M#10 sits outside play as the rules token.
 
+> **Verification note (Em, 1 Nov 2026):** the CCRU mapping is different [ccru.net, [Pandemonium](http://www.ccru.net/digithype/pandemonium.htm)]:
+- Decadology assigns cards only to the **36 Amphidemons and Cyclic Chronodemons**: 9 cluster types × 4, matching the **36-card Decadence pack (A–9)**. The matrix codes map Mj+ to Clubs, Mn+ to Hearts, Mj− to Spades and Mn− to Diamonds.
+- **Katak** is the one syzygetic demon with a card, the Joker.
+- The four **chaotic xenodemons** (Ixix 3::0, Tchu 6::0, Ununuttix 9::3, Unnutchi 9::6) have **no** card.
+- The four Subdecadence **Queens (= 0)** have no CCRU demon assignment. The Vexsys "Lessons in Time Sorcery" PDF assigns the xenodemons to them by inference; that is fan reconstruction.
+
+So "the remaining 40 map cleanly to four suits × 0–9" is a **design choice, not CCRU**. Tokhatto (Mesh-10) is not outside play in the source: it has the card **[9S]** and is titled "Angel of the Cards".
+
+
 ### C — Reversible bifacial
 Face = demon SVG; back = value card (9-sum complement printed in zone color). Manufacture via acetate sleeve or a double-sided PDF. Highest material complexity, highest gameplay density.
 
@@ -56,6 +65,9 @@ Pitch system (from `unleashing-the-numogram-source` — may need updating):
 - **Ana-N** (highest) → far-apart zones, screaming register
 - **Cth-N** (lowest) → close zones, rumbling register
 - **Null** → syzygetic / carrier demons, silence
+
+> **Verification note (Em, 1 Nov 2026):** pitch is **not** ordered by zone distance. Examples: 4::3 Skarkix (span 1) is **Ana-7**, the uppermost pitch; 6::5 Tchattuk (span 1) is **Cth-7**, the lowermost; 1::0 Lurgo is Ana-1. The null-pitch list is exhaustive: "All syzygetic demons have a neutral (or Null) pitch", and only the five syzygetic demons are Null in the matrix [ccru.net, Pandemonium].
+
 
 Possible card embedding:
 - Micro-ledger gains a `Pitch:Cth-4` slot
@@ -82,3 +94,5 @@ SVG visual inspection via browser + vision:
 - `browser_vision` then returns an annotated description + screenshot even when CLI renderers fail on namespace errors
 - Works despite inline `xlink:href` namespace issues that block `rsvg-convert` and ImageMagick
 - Confirmed usable on `syzygy-4-5.svg` 2026-06-02
+
+Cross-links (Em, 1 Nov 2026): [[decadence]] · [[subdecadence]] · [[pandemonium]] · [[pandemonium-matrix]]
