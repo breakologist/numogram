@@ -126,6 +126,11 @@ Numogram visualizations for multiple bases generated via [`numogram-base-explore
 | Base | Visualization | Key Features |
 |------|---------------|--------------|
 | 10 | [[assets/numogram-base10.svg]] | Canonical: 10 zones, 2 outer regions (Plex + Warp), 1 Time-Circuit (6 zones), 45 demons |
+
+![Decimal Numogram v2](assets/numogram-base10-v2.svg)
+
+*v2 (Em, 1 Nov 2026): the original base-10 render is clipped. The v2 draws every zone, syzygy, current (Surge 8→7, Hold 2→5, Sink 4→1, Warp 6→3, Plex 9→9) and gate, using repo data.*
+
 | 12 | [[assets/numogram-base12.svg]] | 12 zones, 1 outer region (Plex), no Warp analogue, 66 demons |
 | 28 | [[assets/numogram-base28.svg]] | 28 zones, 2 outer regions, 2 Time-Circuits, 378 demons |
 | 36 | [[assets/numogram-base36.svg]] | 36 zones (AQ cipher base), 1 outer region, 630 demons |

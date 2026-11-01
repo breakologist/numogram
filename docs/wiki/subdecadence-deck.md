@@ -22,6 +22,11 @@ The numogram already has 45 fully rendered demon SVGs (`assets/demon-cards/`), 5
 - `assets/demon-cards/demon-*.svg` — 45 cards, Tokhatto = demon-10
 - `assets/syzygy-cards/syzygy-*-*.svg` — 5 syzygy pairs
 - `assets/subdecadence-atlantean-cross.svg` — spread reference
+
+![Atlantean Cross v2](assets/subdecadence-atlantean-cross-v2.svg)
+
+*v2 (Em, 1 Nov 2026): the original is kept. The v2 maps the five Pylons to syzygies (1::8, 7::2, 5::4, 3::6, 9::0) from the repo's `zones.ts` centauri field and ccru.net zone pages. It drops the original's unsourced Tokhatto "current Hold" and 5::5 centre.*
+
 - `assets/zone-glyphs/zone-N.png` — 10 zone sprites
 - `assets/zone-sprites/zone-N-sprite.png` — hardware-palette variants
 - `pandemonium-matrix.md` + `pandemonium.md` — structural copy

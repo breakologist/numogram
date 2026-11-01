@@ -55,6 +55,9 @@ All at `~/diagram/numogram-infographic/`:
 - `chord-pentagram-v2.svg` — proper pentagram geometry with correct inner coordinates
 - `hub-spoke-cyberpunk.svg` — numogram as hub-spoke infographic
 - `circular-flow-subway.svg` — numogram as transit map
+  - v2: `circular-flow-subway-v2.svg`. It runs the Torque line along the doubling cycle 1→2→4→8→7→5, with the currents as spurs (Em, 1 Nov 2026).
+
+![Transit map v2](assets/circular-flow-subway-v2.svg)
 - `periodic-table-schematic.svg` — numogram as periodic table
 
 ## Source Discussion

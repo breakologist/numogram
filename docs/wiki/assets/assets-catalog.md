@@ -57,3 +57,6 @@ Directory: `wiki/assets/`. Reference in wiki pages via relative paths: `assets/<
 - `~/diagram/` — master authoring workspace
 - `~/numogram/visualizer/` — auto-generated visualizer output
 - `~/.hermes/obsidian/hermetic/raw/` — scanned source diagrams
+| `numogram-base10-v2.svg` | v2 (Em, 1 Nov 2026): full Decimal Numogram with currents and gates, from repo data (`scripts/svg_v2.py`) |
+| `subdecadence-atlantean-cross-v2.svg` | v2: Atlantean Cross Pylons ↔ syzygies (repo `zones.ts` centauri) |
+| `circular-flow-subway-v2.svg` | v2: transit map; Torque line = doubling cycle, current spurs |
