@@ -59,6 +59,9 @@ In numogram terms:
 
 The alternating loop *is* the Time-Circuit: `1 → 8 → 2 → 7 → 5 → 4 → 1`. Each step edits the state (new zone). Each full rotation refactors the model (the hexagram kernel is re-learned).
 
+> **Verification note (Em, 1 Nov 2026):** `1 → 8 → 2 → 7 → 5 → 4` is a listing of the Time-Circuit syzygies, not the flow of the currents. The currents run Surge 8→7, Hold 2→5 and Sink 4→1 [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo]. See [[time-circuit]] and [[syzygy]].
+
+
 ---
 
 ## 3. Cronkle Bisection Descent as Zone-4 Practice

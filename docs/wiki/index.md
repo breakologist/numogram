@@ -226,6 +226,9 @@
    209|   209|   209|   209|   209|   209|| 4 :: 5 | 1 | Sink | 4 → 5 |
    210|   210|   210|   210|   210|   210|| 3 :: 6 | 3 | Warp | 6 → 3 (self-fold) |
    211|   211|   211|   211|   211|   211|| 0 :: 9 | 9 | Plex | 9 → 0 (self-fold) |
+
+> **Verification note (Em, 1 Nov 2026):** the Direction column above is wrong. The currents flow **Surge 8→7** (the name is Surge, not "Rise"), **Hold 2→5**, **Sink 4→1**, **Warp 6→3** and **Plex 9→9** [ccru.net, Matrix; repo `currents.ts`]. "1 → 8 → 2 → 7 → 5 → 4" below is a syzygy listing, not a flow. **Gt-15** is 5→6, not "Zone-7 ↔ Zone-5". The "5⊕5 origin" in the barker-spiral blurbs is corrected on [[barker-spiral]]: 5+5 is Decadence, and the Lemurian innermost syzygy is 4::5. See [[syzygy]] for the sourced table.
+
    212|   212|   212|   212|   212|   212|
    213|   213|   213|   213|   213|   213|### Time-Circuit Sequence
    214|   214|   214|   214|   214|   214|**1 → 8 → 2 → 7 → 5 → 4 → (back to 1)**

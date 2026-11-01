@@ -47,6 +47,9 @@ Formed by the **three central syzygies** whose currents interlock into a closed,
 These three currents mutually compose, yielding the **6-zone rotor**:  
 **1 → 8 → 2 → 7 → 5 → 4 → (back to 1)**.
 
+> **Verification note (Em, 1 Nov 2026):** `1 → 8 → 2 → 7 → 5 → 4` lists the three Time-Circuit **syzygies** (1::8, 2::7, 5::4). It is **not** the path of the currents, which run **Surge 8→7, Hold 2→5, Sink 4→1** (current = difference, flowing to the tractor zone) [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. Each pair is linked by twinning, not by flow (see [[time-circuit]], [[syzygy]]).
+
+
 This is the "normal" time loop — human-scale cyclic reality, the domain of chronodemons (demons whose net-spans remain inside the circuit), and the primary site of Lemurian sorcery.
 
 ### 2. Warp (Upper Autonomous Loop)
@@ -74,6 +77,9 @@ Warp and Plex are both **cryptic** and **outer-time**, but opposite in dynamics:
 ## I Ching Connection — The Hexagram Kernel
 
 The Time-Circuit is explicitly positioned by the CCRU as the Numogram's answer to the I Ching (Yijing). The alignment is **kernel-level**, not a fixed hexagram-to-zone lookup.
+
+> **Verification note (Em, 1 Nov 2026):** CCRU does not call the Time-Circuit an "answer" to the I Ching. It says the two "share a hypercultural matrix" [ccru.net, [declab](http://www.ccru.net/declab.htm)]. The hexagram-line and digital-root mappings below are wiki/post-CCRU constructions (**speculation** unless tagged). Under this page's binary-value method, hexagram 2 (all-yin, value 0) does fall in Zone 0; under a King Wen-number digital root it does not.
+
 
 ### Binodecimal 6-Cycle
 
@@ -192,6 +198,9 @@ The calculator (AQ) maps *itself* onto the Numogram's terminal zones. "The syste
 | **Phenomenology** | Time-lapse abduction, swarm-mesh, jinking cuts, strobing black-mass, child-stealing, machine-memory psychosis | Outermost curve of the Barker-spiral, fatal termination, cosmic death, zero-point return, underworld rivers, apocalyptic completion |
 | **Carrier Demon** | Djynxx (6::3) — Child-Stealer, Xenodemon of Time-Lapse | Uttunul (9::0) — Terminal Demon, Abyssal Horizon |
 | **Gates** | Gt-06, Gt-21, Gt-36 (plunge routes) | Gt-09 (self-loop), 0th channel terminus |
+
+> **Verification note (Em, 1 Nov 2026):** there is no "Gt-09". Gates are digital cumulations: Zone 9 cumulates to **45**, so its self-loop is **Gt-45**. Zone 0's gate is **Gt-00**. Gt-36 (from Zone 8) is the Torque→Plex channel [ccru.net, [Zn9](http://www.ccru.net/zones/Zn9.htm), Matrix].
+
 | **Planetary Link** | Mercury (quicksilver volatility) | Pluto (underworld) + quasisymmetric to Sun |
 | **Sorcery Risk** | Irreversible chaotic infection, feral becoming, hyperstitional swarm proliferation | Total nullification, irreversible zeroing, plunge into pure Outside |
 | **Zone Affinity** | Triangular numbers orbit here (DR cycle 1→3→6) | Terminal triangular events (T₈=36→9, T₉=45→9) |
@@ -245,3 +254,5 @@ Time-Circuit (Central Rotor, anticlockwise)
 ## Source Credit
 
 This overview condenses the canonical exposition from `collections/docs-rd/numogram.txt` (CCRU, ~389 lines), which remains the definitive textual source for the Decimal Numogram's structure and rules.
+
+Sourced references: [[syzygy]] (carrier table) · [[time-circuit]] · [[pandemonium-matrix]] · [[decadence]] · [[barker-spiral]] · [[tic-xenotation]] · [[lemurian-time-war]] · [[book-of-paths]] · [[i-ching-connections]]

@@ -74,6 +74,9 @@ It is the only one of the three big loops that feels “normal” or linear/cycl
 4 :: 5 → current of 1
 
 (For comparison: the Warp loop is the single upper syzygy 3 :: 6 (current 3, which folds back into itself); the Plex is the lower syzygy 0 :: 9 (current 9, the abyssal outer boundary).)These three currents (7 + 5 + 1) “mutually compose” — their directed flows cross and chain together in the diagram so that following them takes you in a continuous anticlockwise rotation through zones 1 → 8 → 2 → 7 → 5 → 4 (and back to 1). It’s a closed 6-zone ultra-cycle that spins endlessly. This is the classic “time rotor” or “Domain of Chronos.”Why it matters in practiceThis is where chronodemons live and operate (the demons whose net-spans stay inside the circuit).
+
+> **Verification note (Em, 1 Nov 2026):** `1 → 8 → 2 → 7 → 5 → 4` is a listing of the Time-Circuit syzygies, not the flow of the currents. The currents run Surge 8→7, Hold 2→5 and Sink 4→1 [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo]. See [[time-circuit]] and [[syzygy]].
+
 Most human-scale time, history, and sorcery happens here — it’s the “normal reality” loop we’re usually trapped inside.
 Sorcerers use gates (digital roots of the zones) and channels (secondary secret connections) to enter or exit the Time-Circuit into the Warp or Plex when they want to do heavier time-warping.
 Full rotations of the circuit are treated as complete “ticks” of Lemurian time — “as above, so below” in miniature and macro scales.

@@ -44,6 +44,9 @@ The most important loop. Formed by the interlocking currents of the middle syzyg
 
 The six zones form a closed 6-zone ultra-cycle: **1 → 8 → 2 → 7 → 5 → 4 → (back to 1)**.
 
+> **Verification note (Em, 1 Nov 2026):** `1 → 8 → 2 → 7 → 5 → 4` lists the three Time-Circuit **syzygies** (1::8, 2::7, 5::4). It is **not** the path of the currents, which run **Surge 8→7, Hold 2→5, Sink 4→1** (current = difference, flowing to the tractor zone) [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. Each pair is linked by twinning, not by flow (see [[time-circuit]], [[syzygy]]).
+
+
 This is where chronodemons live and operate (demons whose net-spans stay inside the circuit). Most human-scale time, history, and sorcery happens here — it's the "normal reality" loop we're usually trapped inside. Full rotations of the circuit are treated as complete "ticks" of Lemurian time — "as above, so below" in miniature and macro scales.
 
 ### Warp (upper region)
@@ -122,6 +125,9 @@ These are the carriers — they embody the syzygies themselves:
 - **Surge** (zones 8→1): Carried by Mur Mur. "Oceanic sensation."
 - **Hold** (zones 7→2): Carried by Oddubb. "Time loops, glamour and glosses."
 - **Sink** (zones 5→4): Carried by Katak. "Nature red in tooth and claw."
+
+> **Verification note (Em, 1 Nov 2026):** the parenthesised pairs (8→1, 7→2, 5→4) in the table and list above are **net-spans**, not current directions. The currents flow **8→7** (Surge), **2→5** (Hold) and **4→1** (Sink) [ccru.net, Matrix; repo]. All five carriers have Null (neutral) pitch.
+
 
 ### Mesh-Notes (Ambient System Messages)
 
@@ -208,3 +214,5 @@ This is the retrochronic effect: "The internet was being built so the LLM could 
 - [[Barker Spiral]] (diagram: assets/barker-spiral.svg)
 
 - [[decimal-numogram-reference]] — Comprehensive system mechanics reference
+
+Sourced references: [[syzygy]] (carrier table) · [[time-circuit]] · [[pandemonium-matrix]] · [[decadence]] · [[barker-spiral]] · [[tic-xenotation]] · [[lemurian-time-war]] · [[book-of-paths]] · [[i-ching-connections]]

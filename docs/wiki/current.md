@@ -42,6 +42,9 @@ Each current has a **tractor zone** — the lower digit in the pair, towards whi
 
 In the Time-Circuit, the three currents interlock so that following them anticlockwise visits all six zones in order: `1 → 8 → 2 → 7 → 5 → 4 → 1`.
 
+> **Verification note (Em, 1 Nov 2026):** `1 → 8 → 2 → 7 → 5 → 4` is a listing of the Time-Circuit syzygies, not the flow of the currents. The currents run Surge 8→7, Hold 2→5 and Sink 4→1 [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo]. See [[time-circuit]] and [[syzygy]].
+
+
 ## Currents as Game Mechanics
 
 In the roguelike (`numogram_roguelike.py`), the current of the player's current zone determines:

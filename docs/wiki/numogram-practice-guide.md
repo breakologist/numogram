@@ -24,6 +24,9 @@ Everything here is optional and abridged. Full source: `collections/docs-rd/Numo
 
 ### Phase 2: Time-Circuit & I Ching (2–3 days)
 - Study the central anticlockwise rotor path: **1 → 8 → 2 → 7 → 5 → 4**
+
+> **Verification note (Em, 1 Nov 2026):** `1 → 8 → 2 → 7 → 5 → 4` is a listing of the Time-Circuit syzygies, not the flow of the currents. The currents run Surge 8→7, Hold 2→5 and Sink 4→1 [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo]. See [[time-circuit]] and [[syzygy]].
+
 - Learn the binodecimal 6-cycle (1, 2, 4, 8, 7, 5)
 - Map a few I Ching hexagrams (e.g., 1, 2, 63, 64) onto the rotor using `[[i-ching-connections]]`
 - Changing lines become potential gate punctures

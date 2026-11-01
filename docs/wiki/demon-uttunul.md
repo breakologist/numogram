@@ -59,7 +59,7 @@ The Plex region itself is abyssal and self-reinforcing; Uttunul's nullifying, in
 - [[demon-djynxx]] — the Warp carrier demon
 - [[i-ching-connections]] — hexagram mappings (Hexagram 2, the all-yin hexagram, maps to Plex Zone 0)
 
-> **Verification note (Em, 1 Nov 2026):** under neither wiki mapping does hexagram 2 reach zone 0. The digital root gives **zone 2**; the (N−1) % 9 method gives **zone 1**. The errata on [[i-ching-connections]] note that no hexagram reaches Zone 0 under a DR mapping.
+> **Verification note (Em, 1 Nov 2026):** under neither wiki mapping does hexagram 2 reach zone 0. *(Self-correction, same day: under the binary-value method used on [[numogram-overview]] / [[numogram-structure]], hexagram 2 (all-yin = 0) **does** map to Zone 0. The statement holds only for King Wen-number methods.)* The digital root gives **zone 2**; the (N−1) % 9 method gives **zone 1**. The errata on [[i-ching-connections]] note that no hexagram reaches Zone 0 under a DR mapping.
 
 
 ---

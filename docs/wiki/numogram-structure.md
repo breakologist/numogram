@@ -60,6 +60,9 @@ The principal rotor: an anticlockwise 6-zone continuous loop formed by the *inte
 **Path (anticlockwise):**  
 `1 → 8 → 2 → 7 → 5 → 4 → (back to 1)`
 
+> **Verification note (Em, 1 Nov 2026):** `1 → 8 → 2 → 7 → 5 → 4` lists the three Time-Circuit **syzygies** (1::8, 2::7, 5::4). It is **not** the path of the currents, which run **Surge 8→7, Hold 2→5, Sink 4→1** (current = difference, flowing to the tractor zone) [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo `currents.ts`]. Each pair is linked by twinning, not by flow (see [[time-circuit]], [[syzygy]]).
+
+
 **Key properties:**
 
 - Only region that feels "normal" or cyclic from inside it — the machine of human-scale time.
@@ -80,6 +83,9 @@ Formed by the single syzygy `3::6` (current = 3). The current folds back into it
 - **Demon:** Djynxx (6::3), xenodemon of swarm-machines, mesh incursions, disruptive multiplicity.
 - **Dynamics:** Self-folding; a whirlpool or ulterior vortex. Often imaged as swirling arrows above the central rotor.
 - **Access:** More traffickable than Plex — several gates (Gt-6, Gt-21, Gt-15/36 subplexing variants) allow entry/exit between Warp and Time-Circuit, though risk of infection/distortion is high.
+
+> **Verification note (Em, 1 Nov 2026):** Gt-15 is Zone 5's gate (1+…+5 = 15 → 6): a **Torque→Warp** channel, 5→6. It is not a subplex variant. The Warp's own gates are Gt-6 (3→6) and Gt-21 (6→3) [ccru.net, Matrix and zone pages].
+
 - **Correspondences:** Sometimes linked to Mercury/quicksilver energies; chaotic communication.
 
 ### 2.3 Plex (Lower Autonomous Loop)
@@ -102,6 +108,9 @@ Formed by the syzygy `0::9` (current = 9, which reduces to 0). The current invol
 |---|---|---|---|
 | Syzygy | `1::8`, `2::7`, `4::5` | `3::6` | `0::9` |
 | Currents | 7, 5, 1 (interlock) | 3 (self-folds) | 9 → 0 (involutes) |
+
+> **Verification note (Em, 1 Nov 2026):** the Plex current is **9**, and it folds back into Zone 9, its tractor zone (repo `currents.ts`: 9→9). It does not run 9→0. The Warp current 3 runs 6→3.
+
 | Topology | Closed 6-cycle (chain) | Autonomous 2-node vortex | Autonomous 2-node abyss |
 | Character | Cyclic/rotational | Chaotic/vortical | Terminal/nullifying |
 | Time-type | Human-scale cyclic | Outer-time (above) | Outer-time (below) |
@@ -149,6 +158,9 @@ Changing lines in a hexagram thus act as "gate punctures" that locally modulate 
 ### 3.4 Full-Zone Hexagram Clustering via Digital Root
 
 While the CCRU does not provide a canonical 64-hexagram → 10-zone lookup table, the most coherent *post-CCRU* extension (found in neolemurian practice and Vauung's Lair explorations) maps each of the 64 hexagrams to a zone by digital root:
+
+> **Verification note (Em, 1 Nov 2026):** agreed: CCRU gives no such table. CCRU's position is a "shared hypercultural matrix", with the 1-2-4-8-7-5 cycle and 9-twinning of line pairs [ccru.net, declab]. Everything in §3.2–3.4 beyond that is **speculation**.
+
 
 1. Treat the six lines (bottom→top) as a 6-bit binary number (range 0–63).
 2. Compute digital root: `dr = n % 9; if dr==0 then 9` (except `n==0 → Zone 0`).
@@ -236,6 +248,9 @@ These can:
 | **Gt-6** | 6 | Zone-3↔Zone-6 | Warp internal conduit. |
 | **Gt-21** | 21 | Zone-6→Zone-3 | Reverse Warp conduit. |
 | **Gt-15** | 15 | Subplex linking | Variants exist for Warp↔Time-Circuit traffic. |
+
+> **Verification note (Em, 1 Nov 2026):** Gt-15 = Zone 5 → Zone 6 (15 → 6), ciphered by Tukkamu and haunted by Tchattuk [ccru.net, Matrix].
+
 
 ### 5.3 Gate Activation in Sorcery
 
@@ -400,3 +415,5 @@ The three tales form a complete cycle:
 
 ---
 *Last updated: 2026‑05‑26 — raw-archive synthesis (Grok notes on the Numogram, 60 KB). Literary origin added from "The Vault of Murmurs" (Cthulhu Club, digithype).*
+
+Sourced references: [[syzygy]] (carrier table) · [[time-circuit]] · [[pandemonium-matrix]] · [[decadence]] · [[barker-spiral]] · [[tic-xenotation]] · [[lemurian-time-war]] · [[book-of-paths]] · [[i-ching-connections]]
