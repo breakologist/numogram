@@ -32,6 +32,8 @@ zone: 3
 
 **Our current coverage:** ~70% of data structures, ~30% of cipher implementations, ~0% of phrase dictionary (665K phrases not yet imported).
 
+> **Verification note (Em, 1 Nov 2026):** the "665K+ phrases / 14 ciphers" claim belongs to **ccru.cc**, not to **qliphoth.systems** — the archived qliphoth.systems /gematria page claims neither, and the lumpenspace/ccru repo defines 10 ciphers and no phrase corpus. The ~70% / ~30% coverage figures are **estimates with no stated method or source**; treat them as rough impressions, not measurements.
+
 **Gap priority:** Cipher completeness → Zone metadata enrichment → Demon classification audit → Phrase dictionary ingestion (massive).
 
 ---

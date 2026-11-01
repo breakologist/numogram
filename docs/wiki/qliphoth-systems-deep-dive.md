@@ -28,6 +28,8 @@ Interactive SVG visualization of the complete numogram. URL: `qliphoth.systems/n
 - `orbits=0` — hide orbital paths
 - `img=url` — embed preview image in OG tags
 
+> **Verification note (Em, 1 Nov 2026):** **[repo] verified** against [lumpenspace/ccru @ 7c38ad9](https://github.com/lumpenspace/ccru/blob/7c38ad910410c3f5744b961eb97adf58ff00d41f/) (`app/numogram/page.tsx`, `app/NumogramClient.tsx`): `layout` (default `labyrinth`), `layers`, `particles`, `tc` (`=== '1'`), `selected`, `date`, `orbits`, `region` and `img` (passed to OpenGraph/Twitter `images`) are all read. The `Layout` type is `'labyrinth' | 'ladder' | 'original' | 'planetary'`. The example value `date=2026-04-15` is illustrative, not from the repo.
+
 **Controls:** Click+drag to select zones, alt+drag to pan, scroll to zoom, ASDF to change view, digits 0-9 to toggle gates.
 
 ### 2. Gematria — Anglossic Qabbala Toolkit
@@ -44,7 +46,11 @@ AQ cipher calculator + Chrome extension for in-page overlays. URL: `qliphoth.sys
 | ALPHANUM_PRIMES | — | 1-149 | First 36 primes mapped to alphanum |
 | ALPHANUM_SYNX | — | 1-1260 | Accelerating CCRU progression |
 
+> **Verification note (Em, 1 Nov 2026):** **[repo] partly verified** (`app/cyphers/ccruCiphers.ts`). Rows 1–5 match the repo's `id`/`shortName`/`summary` text. Errors kept visible above: **`ALPHANUM_PRIMES` and `ALPHANUM_SYNX` are internal value arrays, not separate ciphers** — `ALPHANUM_SYNX` *is* the Synx cipher's values (1…1260, so Synx's range is 1–1260, not 0–35), and `ALPHANUM_PRIMES` (1, 2, 3, 5 … 149 — note it starts with 1, which is not prime) is shared by **Alphanumeric Primes** and **Numeric QWERTY Primes**. The table omits **Alphanumeric Squares** (n², 0–1225), **Alphanumeric Trigonal**, **Archaic Alphanumeric** and **Numeric QWERTY Primes**: the repo has ten ciphers in all. The Satanic row's "0-61" matches `rangeValues(62)`.
+
 **The `trigonal()` function** generates triangular number sequences: T(0)=0, T(1)=1, T(2)=3, T(3)=6, T(4)=10, T(5)=15, T(6)=21, T(7)=28, T(8)=36, T(9)=45. These ARE the gate cumulation values. The tetractys is baked into the cipher system.
+
+> **Verification note (Em, 1 Nov 2026):** `trigonal(size)` = `i(i+1)/2` exists in the repo and powers the **Alphanumeric Trigonal** cipher (`trigonal(36)`, 0…630) [repo]; T(1)…T(9) do equal the gate cumulations (Gt-01 … Gt-45) [archived site]. But "the tetractys is baked into the cipher system" is **interpretation**: the repo uses triangular numbers as one cipher among ten and does not name or invoke the tetractys.
 
 ### 3. Components — React/Tailwind UI Library
 Installable via `npm install github:lumpenspace/ccru`. Exported as `ccru/components`.
@@ -58,6 +64,8 @@ Components: CyberButton, CyberPanel, CypherHoverText (hover-to-calculate gematri
 Each layout arranges the 10 zones differently, revealing different structural truths:
 
 ### Original — The Tetractys Triangle
+
+> **Verification note (Em, 1 Nov 2026) — model reasoning artefact.** The diagram and paragraph below come from an earlier model pass and are left as written: zone 8 is drawn twice, and the text breaks off with "wait, 8 appears twice" before rationalising it. The repo does **not** have 8 twice: `P_ORIGINAL` in `app/data/positions.ts` places each zone once — 6 (250,85), 3 (420,115), 2 (560,275), 7 (580,400), 5 (250,370), 4 (178,480), 1 (400,550), **8 (400,660)**, 9 (400,770), 0 (400,875) [repo]. The repo calls this layout `original`, not "tetractys"; the "Tetractys Triangle" name and the "zones stack like Pythagorean dots" reading are **interpretation**. The site's own account of triangular numbers concerns *gates*, not layout: gates "track culminations (triangular sums), then reduce multi-digit values by summation" [archived site, /numogram] — e.g. zone 7 → T(7)=28 → 2+8=10 → 1+0=1, i.e. Gt-28 runs 7→1.
 ```
         6 (Warp)
        3 (Warp)
@@ -386,7 +394,7 @@ Hickman's essay is the closest thing yet to a **popular historical treatment** o
 ### Source 3: CCRU Decimal Labyrinth (Original)
 
 **URL:** http://www.ccru.net/declab.htm (may be dead/mirror-only)
-The canonical source. The /numogram layout and data model at qliphoth.systems is a **faithful interactive reimplementation** of this original CCRU diagram. The four layouts (tetractys, labyrinth, ladder, planetary) are interpretations/extensions beyond the original.
+The canonical source. The /numogram layout and data model at qliphoth.systems is a **faithful interactive reimplementation** of this original CCRU diagram. The four layouts (tetractys [*repo name: `original`* — Em, 1 Nov 2026], labyrinth, ladder, planetary) are interpretations/extensions beyond the original.
 
 ---
 
