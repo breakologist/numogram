@@ -2,7 +2,7 @@
 zone: 7
 name: Blood
 region: torque
-syzygy: oddubb
+syzygy: "2::7 Oddubb"
 current: hold-c5
 particle: pb
 spinal: —
@@ -12,7 +12,10 @@ planetFull: Uranus (Sol-7)
 door: Puppo — Tracts of Dobo
 phaseCount: 128
 lemurs: ["7::0 Puppo", "7::1 Bubbamu", "7::2 Oddubb", "7::3 Pabbakis", "7::4 Ababbatok", "7::5 Papatakoo", "7::6 Bobobja"]
-source: qliphoth.systems zones.ts (2026-04-30); raw/www.ccru.net/zones/Zn7.htm
+source: lumpenspace/ccru@7c38ad9 app/data/zones.ts; http://www.ccru.net/zones/Zn7.htm
+sourceNote: "earlier: qliphoth.systems zones.ts (2026-04-30); raw/www.ccru.net/zones/Zn7.htm"
+colour: "#7755cc"
+planetSymbol: "♅"
 status: canonical
 ---
 
@@ -175,3 +178,52 @@ Three naming sets are in use; only the first is CCRU's ([glossary](http://www.cc
 - **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Hold". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
 
 Statements on this page such as "Current: …" may use either of the first two senses.
+
+## Sourced data (Em, 1 Nov 2026)
+
+Tags: **[repo]** = [lumpenspace/ccru @ `7c38ad9`](https://github.com/lumpenspace/ccru/blob/7c38ad910410c3f5744b961eb97adf58ff00d41f/app/data/) (`zones.ts`, `gates.ts`, `currents.ts`, `demons.ts`, `syzygies.ts`); **[ccru.net]** = [Zone 7 page](http://www.ccru.net/zones/Zn7.htm) (Occultures › Lemurian Pandemonium; mirror [ccru-ii.neocities.org](https://ccru-ii.neocities.org/)) and the [Pandemonium Matrix](http://www.ccru.net/digithype/pandemonium.htm). CCRU text is paraphrased; short quotations are marked.
+
+### Identity
+
+- Colour `ZONE_CLR[7]`: **`#7755cc`** [repo]
+- Planet glyph `PLANET_SYMBOL[7]`: **♅** (U+2645) for Uranus [repo]
+- Syzygy: **2::7 Oddubb** [repo `syzygies.ts`]
+- Region position: fifth of six Torque zones [ccru.net]
+- Spinal level: none on the zone page (Pandemonium Matrix: Puppo's door Cervical) [ccru.net]
+
+### Gates
+
+- **Gt-28** 'Gate of Relapse': 7 → 1, cumulation 28 (out of this zone) [repo]
+- Channels terminating here: none listed [ccru.net]
+
+### Currents
+
+- **Hold** (7−2=5; repo draws 2→5): produced by this zone's syzygy [repo]
+- **Surge** (8−1=7; repo draws 8→7): this is the tractor zone [repo]
+- Tractor-Zone of the 8-1 ('Surge') Current [ccru.net]
+
+### Demons (net-spans touching this zone)
+
+Types from `demons.ts` (`TC` = {1,2,4,5,7,8}: syzygy if digits sum to 9; chrono if both in TC; xeno if neither; otherwise amphi). M# = Pandemonium Matrix mesh serial. [repo][ccru.net]
+
+| Net-span | Demon | Type | Mesh |
+|---|---|---|---|
+| 7::0 | Puppo | amphi | M#21 |
+| 7::1 | Bubbamu | chrono | M#22 |
+| 7::2 | Oddubb | syzygy | M#23 |
+| 7::3 | Pabbakis | amphi | M#24 |
+| 7::4 | Ababbatok | chrono | M#25 |
+| 7::5 | Papatakoo | chrono | M#26 |
+| 7::6 | Bobobja | amphi | M#27 |
+| 8::7 | Mombbo | chrono | M#35 |
+| 9::7 | Nuttubab | amphi | M#43 |
+
+- Door / first-degree imp: Seventh Door, onto the 'Tracts of Dobo' swamp-labyrinths: Puppo (7::0) [ccru.net]
+- Nma location (Stillwell's ethno-topography): coastal swamps of the Dib Nma; hydrocycle: salt-water marshes (the ccru.net sentence literally says "Zone-4" here — see note) [ccru.net]
+- Totem animals: chubby batrachian ("burping toad") types [ccru.net]
+- Gt-28's channel is 'the only counter-cyclic path within the Torque'; the aquassassins of Hyper-C fetishise it (Bubble Pod). [ccru.net]
+
+## Verification note (Em, 1 Nov 2026)
+
+- Frontmatter `syzygy: oddubb` standardised to `2::7 Oddubb`.
+- The ccru.net Zone 7 page says Stillwell 'allocates Zone-4 to the coastal swamps of the Dib Nma'. *Labelled speculation (Em):* this is probably a slip for Zone-7, since Zone 4 is allocated to the Tak Nma jungles on its own page.

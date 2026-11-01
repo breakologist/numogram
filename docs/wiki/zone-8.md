@@ -2,7 +2,7 @@
 zone: 8
 name: Multiplicity
 region: torque
-syzygy: 1
+syzygy: "1::8 Murrumur"
 particle: mnm
 spinal: Lumbar
 meshTag: 0255
@@ -11,7 +11,10 @@ planetFull: Neptune (Sol-8)
 door: Minommo — dream sorcery of the Mu Nma
 phaseCount: 256
 lemurs: ["8::0 Minommo", "8::1 Murrumur", "8::2 Nammamad", "8::3 Mummumix", "8::4 Numko", "8::5 Muntuk", "8::6 Mommoljo", "8::7 Mombbo"]
-source: qliphoth.systems zones.ts (2026-04-30)
+source: lumpenspace/ccru@7c38ad9 app/data/zones.ts; http://www.ccru.net/zones/Zn8.htm
+sourceNote: "earlier: qliphoth.systems zones.ts (2026-04-30)"
+colour: "#9944ee"
+planetSymbol: "♆"
 status: canonical
 ---
 
@@ -135,3 +138,49 @@ Three naming sets are in use; only the first is CCRU's ([glossary](http://www.cc
 - **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Rise". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
 
 Statements on this page such as "Current: …" may use either of the first two senses.
+
+## Sourced data (Em, 1 Nov 2026)
+
+Tags: **[repo]** = [lumpenspace/ccru @ `7c38ad9`](https://github.com/lumpenspace/ccru/blob/7c38ad910410c3f5744b961eb97adf58ff00d41f/app/data/) (`zones.ts`, `gates.ts`, `currents.ts`, `demons.ts`, `syzygies.ts`); **[ccru.net]** = [Zone 8 page](http://www.ccru.net/zones/Zn8.htm) (Occultures › Lemurian Pandemonium; mirror [ccru-ii.neocities.org](https://ccru-ii.neocities.org/)) and the [Pandemonium Matrix](http://www.ccru.net/digithype/pandemonium.htm). CCRU text is paraphrased; short quotations are marked.
+
+### Identity
+
+- Colour `ZONE_CLR[8]`: **`#9944ee`** [repo]
+- Planet glyph `PLANET_SYMBOL[8]`: **♆** (U+2646) for Neptune [repo]
+- Syzygy: **1::8 Murrumur** [repo `syzygies.ts`]
+- Region position: fourth of six Torque zones [ccru.net]
+- Spinal level: Lumbar [ccru.net]
+
+### Gates
+
+- **Gt-36** 'Gate of Charon': 8 → 9, cumulation 36 (out of this zone) [repo]
+- Channels terminating here: none listed [ccru.net]
+
+### Currents
+
+- **Surge** (8−1=7; repo draws 8→7): produced by this zone's syzygy; drawn from this zone in the repo [repo]
+
+### Demons (net-spans touching this zone)
+
+Types from `demons.ts` (`TC` = {1,2,4,5,7,8}: syzygy if digits sum to 9; chrono if both in TC; xeno if neither; otherwise amphi). M# = Pandemonium Matrix mesh serial. [repo][ccru.net]
+
+| Net-span | Demon | Type | Mesh |
+|---|---|---|---|
+| 8::0 | Minommo | amphi | M#28 |
+| 8::1 | Murrumur | syzygy | M#29 |
+| 8::2 | Nammamad | chrono | M#30 |
+| 8::3 | Mummumix | amphi | M#31 |
+| 8::4 | Numko | chrono | M#32 |
+| 8::5 | Muntuk | chrono | M#33 |
+| 8::6 | Mommoljo | amphi | M#34 |
+| 8::7 | Mombbo | chrono | M#35 |
+| 9::8 | Ummnu | amphi | M#44 |
+
+- Door / first-degree imp: Eighth Door: 'problematically identifiable' with Minommo (8::0), prominent in Mu Nma dream sorcery [ccru.net]
+- Nma location (Stillwell's ethno-topography): fabled submarine cities of the ancient Mu Nma; hydrocycle: the deep sea [ccru.net]
+- Totem animals: polytendrilled abominations [ccru.net]
+- Gt-36, 'Gate of Charon', is the sole escape from the Time-Circuit into the Plex; 36 cumulates to 666 (Seals of the Great Abyss / 36-card Decadence pack). Syzygy carrier spelt 'Murmur' on the zone page, 'Murrumur' in its lemur list. [ccru.net]
+
+## Verification note (Em, 1 Nov 2026)
+
+- Frontmatter `syzygy: 1` was incomplete; corrected to `1::8 Murrumur`. Spelling: repo `Murrumur`; ccru.net zone page 'Murmur'; Matrix 'Mur Mur (Murrumur, Mu(mu))'.

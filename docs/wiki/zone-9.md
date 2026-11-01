@@ -2,7 +2,7 @@
 zone: 9  
 name: Iron Core  
 region: plex  
-syzygy: uttunul  
+syzygy: "0::9 Uttunul"
 particle: tn  
 spinal: Sacral  
 meshTag: 0511  
@@ -11,7 +11,10 @@ planetFull: Pluto (Sol-9)
 door: Uttunul — the Ultimate Door  
 phaseCount: 512  
 lemurs: ["9::0 Uttunul", "9::1 Tuttagool", "9::2 Unnunddo", "9::3 Ununuttix", "9::4 Unnunaka", "9::5 Tukutu", "9::6 Unnutchi", "9::7 Nuttubab", "9::8 Ummnu"]  
-source: qliphoth.systems zones.ts (2026-04-30)  
+source: lumpenspace/ccru@7c38ad9 app/data/zones.ts; http://www.ccru.net/zones/Zn9.htm
+sourceNote: "earlier: qliphoth.systems zones.ts (2026-04-30)"
+colour: "#666666"
+planetSymbol: "♇"
 status: canonical  
 ---
 
@@ -169,3 +172,50 @@ Three naming sets are in use; only the first is CCRU's ([glossary](http://www.cc
 - **CLI zone label** (`cli/oracle.py` `DECIMAL_ZONE_DISPLAY`, iching/base-36 displays): "Plex". This is a zone epithet, not a current; it may reuse a current's name (e.g. Zone 7 "Hold" and Zone 8 "Rise", which is not a CCRU current).
 
 Statements on this page such as "Current: …" may use either of the first two senses.
+
+## Sourced data (Em, 1 Nov 2026)
+
+Tags: **[repo]** = [lumpenspace/ccru @ `7c38ad9`](https://github.com/lumpenspace/ccru/blob/7c38ad910410c3f5744b961eb97adf58ff00d41f/app/data/) (`zones.ts`, `gates.ts`, `currents.ts`, `demons.ts`, `syzygies.ts`); **[ccru.net]** = [Zone 9 page](http://www.ccru.net/zones/Zn9.htm) (Occultures › Lemurian Pandemonium; mirror [ccru-ii.neocities.org](https://ccru-ii.neocities.org/)) and the [Pandemonium Matrix](http://www.ccru.net/digithype/pandemonium.htm). CCRU text is paraphrased; short quotations are marked.
+
+### Identity
+
+- Colour `ZONE_CLR[9]`: **`#666666`** [repo]
+- Planet glyph `PLANET_SYMBOL[9]`: **♇** (U+2647) for Pluto [repo]
+- Syzygy: **0::9 Uttunul** [repo `syzygies.ts`]
+- Region position: second of two Plex-region zones [ccru.net]
+- Spinal level: Sacral [ccru.net]
+
+### Gates
+
+- **Gt-36** 'Gate of Charon': 8 → 9, cumulation 36 (into this zone) [repo]
+- **Gt-45** 'Gate of Pandemonium': 9 → 9, cumulation 45 (self-loop) [repo]
+- Channels terminating here: two channels: from the Torque (8th, Gt-36) and the Plex (9th, Gt-45) [ccru.net]
+
+### Currents
+
+- **Plex** (9−0=9; repo draws 9→9): produced by this zone's syzygy; this is the tractor zone [repo]
+- Tractor-Zone of the 9-0 ('Plex') Current [ccru.net]
+
+### Demons (net-spans touching this zone)
+
+Types from `demons.ts` (`TC` = {1,2,4,5,7,8}: syzygy if digits sum to 9; chrono if both in TC; xeno if neither; otherwise amphi). M# = Pandemonium Matrix mesh serial. [repo][ccru.net]
+
+| Net-span | Demon | Type | Mesh |
+|---|---|---|---|
+| 9::0 | Uttunul | syzygy | M#36 |
+| 9::1 | Tuttagool | amphi | M#37 |
+| 9::2 | Unnunddo | amphi | M#38 |
+| 9::3 | Ununuttix | xeno | M#39 |
+| 9::4 | Unnunaka | amphi | M#40 |
+| 9::5 | Tukutu | amphi | M#41 |
+| 9::6 | Unnutchi | xeno | M#42 |
+| 9::7 | Nuttubab | amphi | M#43 |
+| 9::8 | Ummnu | amphi | M#44 |
+
+- Door / first-degree imp: Ninth (Ultimate) Door: Uttunul (9::0), syzygetic xenodemon [ccru.net]
+- Nma location / totem animals: not given on the ccru.net zone page [ccru.net]
+- Gt-45 'Gate of Pandemonium' (45 = size of the Nma demonomy); Tzikvik link it to Tchukululok, City of the Worms, and call Katak 'Kattku'. Uttunul draws the outermost curve of the Barker spiral. [ccru.net]
+
+## Verification note (Em, 1 Nov 2026)
+
+- Frontmatter `syzygy: uttunul` standardised to `0::9 Uttunul`.
