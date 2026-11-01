@@ -50,6 +50,6 @@ EvoSkill is implemented in Python and designed to be modular. It can work with v
 
 ## See Also
 
-- [Interesting Sites#EvoSkill](Interesting%20Sites.md#evoskill)
+- [Interesting Sites#EvoSkill](InterestingSites.md#evoskill)
 - [Hermes Agent Skills](Hermes%20Agent.md#skills)
 - [Chad](chad.md) (another coding engine with verifier loop)

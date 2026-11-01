@@ -67,6 +67,6 @@ It can be installed via `go install` or from source, and runs on Linux, macOS, a
 
 ## See Also
 
-- [Interesting Sites#Chad](Interesting%20Sites.md#chad)
+- [Interesting Sites#Chad](InterestingSites.md#chad)
 - [EvoSkill](evoskill.md) - another skill-learning framework
 - [Hermes Agent Skills](Hermes%20Agent.md#skills)

@@ -10,6 +10,8 @@ tags:
   - Vedic
 ---
 
+> **Merge note (Em, 1 Nov 2026):** merged with the former `Interesting Sites.md` (all of its links were already present; its one extra note, on gematriaresearch, was added). That file has been removed.
+
 ## Interesting Sites - Add a small description to any that don't have one yet, link to any relevant articles in the wiki + append any interesting sites you find, write to new or append to old wiki articles, some of these might require a proper browser view to appreciate. Although something may be already described, repeated readings may lead to different takes depending on context.
 
 https://github.com/NousResearch/hermes-agent
@@ -80,7 +82,7 @@ https://codepen.io/DULA2025/pen/PwbKNJM
 https://github.com/arm64be/theia
 https://github.com/plntrprotocol/hermes-theia-codex-vision
 https://hermes-agent.nousresearch.com/docs/user-guide/features/codex-app-server-runtime
-https://gematriaresearch.blogspot.com/
+https://gematriaresearch.blogspot.com/ - v. interesting site
 https://oa.mg/ - An academic research engine
 https://cables.gl/ - Visual programming platform for creating interactive media, web applications, and generative art. Open source with web-based IDE, supports 3D, shaders, MIDI, and WebVR.
 https://tianmu.org/ - Anglican Church of Tianmu with the "Good Works Library" - a sacred texts archive translating Daoist, Buddhist, Vedic, Gnostic, Hermetic, Manichaean, and other traditions into plain modern English. Also features creative content like interviews and articles.
