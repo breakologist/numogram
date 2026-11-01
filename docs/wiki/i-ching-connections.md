@@ -1,7 +1,7 @@
 ---
 title: I Ching / Hexagram Connections
 created: 2026-04-08
-last_updated: 2026-05-13
+last_updated: 2026-11-01
 source_count: 1
 status: reviewed
 tags: ["i-ching", "numogram", "theory"]
@@ -12,6 +12,8 @@ tags: ["i-ching", "numogram", "theory"]
 > **Errata (2026-10-17):** line pairs are 1&4, 2&5, 3&6 (CCRU [declab](http://ccru.net/declab.htm); Wilhelm), weights 1+8, 2+16, 4+32 → 1::8, 2::7, 4::5. Single-line edges under King Wen DR: 1↔8 = 5, 2↔7 = 5 (were 7, 6). Zone pairs: 45, not 16. No hexagram reaches Zone 0 under a DR mapping, so at most 36 demons are reachable, not 45.
 
 The Decimal Numogram (specifically its Time-Circuit) is explicitly linked by the CCRU to the I Ching (Yijing, or Book of Changes). The Time-Circuit is positioned as a hypercultural successor to the Yijing's time-mapping functions, taking up the chrono-numeric roles in a decimal, demonic mode.
+
+> **Verification note (Em, 1 Nov 2026):** the paragraph above says the Time-Circuit is "positioned as a hypercultural successor" to the Yijing. The source is more modest: CCRU's Decimal Numogram page says the I Ching and the Nma numogram "share a hypercultural matrix" and lists immanent and historical evidence for that claim. It says nothing of succession [ccru.net, [declab](http://www.ccru.net/declab.htm)]. Read "successor" and the later "decimal completion" wording as wiki interpretation, not CCRU doctrine.
 
 ## Core Parallel: Time-Circuit as Hexagram Kernel
 
@@ -109,6 +111,8 @@ This means the I Ching hexagram structure is not merely a binary (powers of 2) b
 
 Traditional I Ching uses binary (yin=0, yang=1) to construct hexagrams. But Land's insight reveals that an equally valid "casting" method would use quinary (base-5) operations — producing the same 64 hexagrams but traversed in reverse order. The Numogram is thus not a *replacement* for the I Ching but its *decimal completion*: the system the I Ching always was, but couldn't see from inside its binary assumptions.
 
+> **Verification note (Em, 1 Nov 2026):** the claim that quinary casting produces "the same 64 hexagrams but traversed in reverse order" is **speculation**. CCRU says only that the 6-cycle "is also generated in reverse by quintuplicative numbering" [ccru.net, declab]. That is a statement about digital roots, 5ⁿ → 5, 7, 8, 4, 2, 1. It is not a casting method. The Land quotations on this page come from the 2026 *Dangerous Maybe* transcript (see [[nick-land-time-theory]]); they were not checked against ccru.net.
+
 ## AQ Self-Encoding: NUMEROLOGY = 235
 
 As Land notes in the transcript:
@@ -134,6 +138,8 @@ The T'ai Hsuan Ching's ternary basis (3) maps directly to the Warp (zones 3, 6) 
 
 > See [[i-ching-tai-hsuan-comparison]] for the full structural contrast — zone distribution, Djynxx paradox differences, Em state analysis.
 > See [[tai-hsuan-ching-demons]] for tetragram-to-demon casting.
+
+> **Verification note (Em, 1 Nov 2026):** the CCRU source here is one paragraph of declab. It calls the T'ai Hsuan Ching a "binotriadic parallel" of 81 tetragrams that reverses which numerical values are foregrounded and which are implicit. It also suggests that the Tao Te Ching's 81 sections show the same triadic/binary conflict was at work in early Taoism [ccru.net, declab]. The mapping of the ternary basis onto the Warp and Plex, and the "King multiples of 9" grid, are **wiki speculation**, not CCRU's.
 
 ## Trigram Pair Matrix
 
@@ -292,6 +298,57 @@ Extracted from "DE-RE-Mystifying the CCRU's Numogram" — general base-N rules:
 ## Summary
 
 The Time-Circuit is the Numogram's "hexagram kernel" — a decimal-binary hybrid rotor inheriting the Yijing's mapping of cyclic transformation, twisted into base-10 currents, syzygetic twinning, and demonic flows. Where the I Ching seeks equilibrium amid change, the Numogram exploits change for acceleration, dissolution, and Outside contact.
+
+## CCRU Sources on the I Ching and Chinese Material (added Em, 1 Nov 2026)
+
+These are sourced facts. Each is tagged with its source, and CCRU text is paraphrased, with only short quotations marked. Speculation is kept in its own labelled subsection below.
+
+### Decimal Numogram § 2, "Numogram and I Ching" [ccru.net, [declab](http://www.ccru.net/declab.htm)]
+
+- The I Ching and the Numogram are said to "share a hypercultural matrix". Both are described as **zygonomies** (double-numbering systems), and both treat subdivisions of decimal arrays, with the *Ten Wings* commentary cited as a hint of this.
+- The digital roots of binary powers settle into a six-step cycle **1, 2, 4, 8, 7, 5**. CCRU matches these steps to the **six lines of the hexagram** and to the **Time-Circuit zones**, and calls the result the **binodecimal 6-Cycle**. The same cycle is generated in reverse by powers of 5.
+- Line pairing follows the zygonovic (9-twin) rule **8:1, 7:2, 5:4**, which CCRU maps onto the traditional hexagram line pairs (1st/4th, 2nd/5th, 3rd/6th).
+- Zero and the triad: the time-circuit, or hexagram, implicitly links **zero with the excluded triadic values** (3, 6, 9). CCRU cites evidence of an early struggle between triadic and binary numbering in ancient China. It suggests that binary domination of decimal numbering leaves a triadic residue "consistent with nullity". The hexagram puts a triadic factor back in, because its reduced values sum to **27 = 3³** (1+2+4+8+7+5 = 27; checked).
+- The **T'ai Hsuan Ching** (81 tetragrams) is treated as a "binotriadic parallel", and the Tao Te Ching's 81 sections are read as a sign of the same numerical conflict.
+- § 3 of the same page describes a Nma ritual: the time-circuit as a three-stage **hydro-cycle** (ocean → evaporation → downpour), carried by Mur Mur, Oddubb and Katak, which CCRU compares with the Hindu Trimurti. This is not Chinese material, but it is the ritual form CCRU gives the circuit itself. See [[numogram-time-circuit]].
+
+### Zone 6 page: Horovitz, the 64 and the hexagrams [ccru.net, [Zn6](http://www.ccru.net/zones/Zn6.htm)]
+
+- Zone-6 initiates and envelops the **Sixth Phase of Pandemonium, which has 64 impulse-entities**. Chaim Horovitz "qabbalistically relates" this phase or 'Tone' to the **hexagrams of the I Ching** and to the **yantras of the Ur-Oriyan Yoginis**.
+- In the numeral notes on the same page, the six lines of the hexagram stand for the six stages of change found by archaic Taoism. These are numerically equivalent to the reduced binary powers 1, 2, 4, 8, 7, 5.
+- Arithmetic check [repo, `zones.ts` `phaseCount: 64` for zone 6]: phase *n* holds 2ⁿ entities. Zone 1 has 2 entities and zone 7 has 128 [ccru.net, Zn1/Zn7], so 2⁶ = 64 = the number of hexagrams. Zone 6 is a **Warp** zone [ccru.net, Zn6; repo `ZONE_REGION`]. The 64 therefore sits *outside* the Time-Circuit whose zones the hexagram lines correspond to. The hexagram count (zone 6) and the hexagram's line-values (Time-Circuit zones) belong to different regions.
+- See [[zone-6]] (which already notes the Horovitz link) and [[zone-6-hinge-portrait]].
+
+### "Fei Ch'ien Rinse Out: sino-futurist under-currency" [ccru.net, [archive/rinse.htm](http://www.ccru.net/archive/rinse.htm)]
+
+The CCRU archive lists the text as "a sino-futurist meditation". It was published by Steve Goodman (Kode9) in *Pli* (Warwick Journal of Philosophy) 7 (1998), pp. 155–72 [PhilPapers GOOFCR], and Wikipedia's *Sinofuturism* article credits it with coining the term. *Fei-ch'ien* ("flying money") is the Tang-dynasty remittance certificate, and the text uses it to frame underground banking and Triad numerology. How it relates to the I Ching:
+
+- **Form:** the 27 numbered sections count down in **binary**, from [11011] (= 27) to [1], followed by a final "[0] White out". The closing section notes that the Death of a Thousand Cuts "had taken exactly twenty-seven minutes". So the text's own structure is a binary countdown to zero through 27 = 3³, the same total the declab page gives for the hexagram's reduced line-values. (The structure is observed directly; any intent behind the shared 27 is **not** stated in the text.)
+- **§ 6 [10110]:** recounts the Leibniz–Bouvet exchange. Leibniz sent his binary arithmetic to the Jesuit Bouvet in China, and Bouvet answered with the I Ching. Goodman treats Leibniz's reading of it as a universalist, neo-Confucian capture of the yin-yang as a "binary machine". (Historical context: this is the well-known 1701–03 correspondence.)
+- **§ 7 [10101]:** "Shaolin takes the I Ching for software", with **3** as the encryption system's immobile motor. The section sets out the build: two kinds of line (rigid/yang, supple/yin), trigrams 2³ = 8, and 64 = 8² permutations. It argues that changing lines are "lines of becoming", so yin-yang cannot be read as a dialectic.
+- **Note 11** quotes Deleuze & Guattari (*What Is Philosophy?*) on hexagrams as projected "figures" rather than concepts. Goodman calls this valid against Confucianism but doubtful for a "yin-positive Taoism".
+- **§ 21 [111]** quotes Triad lore on 3 and 9 (digital reduction to 9) and the officer codes 489 / 438 / 426 / 415 / 432 / 49, with their digit sums (21, 15).
+
+### Other Chinese material on ccru.net
+
+- *Cyberhype-4: Chinese Whisper Markets* ([archive/cyberhype4.htm](http://www.ccru.net/archive/cyberhype4.htm), *Mute*, 10 Sep 2001): diaspora trading networks, guanxi, development from the periphery; the epigraph is attributed to a Taoist source. It contains no I Ching content [ccru.net, search summary].
+- *One or Many Chinas?* ([archive/onechina.htm](http://www.ccru.net/archive/onechina.htm)): a Deleuze–Guattari critique of state 'unity' applied to the One China principle. No I Ching content.
+- *Powers of Illusion* ([archive/illusionpower.htm](http://www.ccru.net/archive/illusionpower.htm)): the Forbidden City as introverted imperial staging. No I Ching content.
+- None of these mentions gua qi or the T'ai Hsuan beyond what is listed above. The archive search used site search results. These three pages were not read in full.
+
+### Speculation (labelled, Em)
+
+- *Speculation:* Rinse Out's binary countdown 27 → 0 can be read as a performance of declab's claim that binary numbering of decimal leaves a residue "consistent with nullity": the count ends in "[0] White out". Neither text cross-references the other.
+- *Speculation:* the zone-6 = 64 relation in this wiki's hexagram tables is the strongest CCRU-sourced link between hexagram *count* and a zone. The DR-of-King-Wen-number mappings ([[hexagram-zone-mapping]]) are wiki constructions, not CCRU.
+
+### Cross-links
+
+- [[hexagram-47-translations]] — Kun / Oppression across translations
+- [[reading-2026-10-26]], [[reading-2026-10-28]] — oracle readings using these mappings
+- [[zone-6]], [[zone-6-hinge-portrait]] — the 64-phase zone
+- [[tai-hsuan-ching]], [[tai-hsuan-ching-demons]], [[i-ching-tai-hsuan-comparison]] — the 81-tetragram parallel
+- [[gua-qi-wen]] — gua qi (hexagram–calendar) material
+- [[time-circuit]], [[numogram-time-circuit]] — the 6-cycle zones
 
 ## See Also
 
