@@ -11,7 +11,7 @@ status: curated
 > - The **Twin System**, **Demon**, **K-OS**, **Mesh**, **AxSys** and **Spinal Catastrophism** lists match `syzygy.htm` word-for-word. They are short CCRU definitions quoted verbatim; treat them as cited quotation [ccru.net, syzygy.htm].
 > - The section headed **"Hyperfiction"** actually reproduces the four-sense definition that `syzygy.htm` gives under **Hyperstition**. On that page "Hyperfiction" heads a separate list of texts (Iris Carver, *The A-Death Phenomenon*; *Cybergothic Hyperstition*; Maria de Rosario, *Apocalypse been in Effect*; Kathy Hacker, *Zerok un Holes*). See the corrected Hyperstition entry below.
 > - **Nomo CD table — track placement wrong.** On `syzygy.htm` the columns are: *surge 8:1–7:2* — murmerge, crabbe's last breath, assault on the aquapolis, hell of mirrors; *hold 7:2–5:4* — overdoublings, odd dub, dry run, panikatak; *sink 5:4–8:1* — accurtzsss, kataclysm, tik-n mu, vault of murmurs. The earlier table put "crabbe's last breath" under Sink. Four tracks per movement.
-> - The **Mesh-Notes** section quotes long stretches of `occultures/mesh.htm` from a local mirror. Those texts are copyrighted; the earlier quotations are left for now, but they should be cut down to a paraphrase with short cited quotes. Flagged for the maintainer rather than deleted here. The `127.0.0.1:8080` link only works locally.
+> - The **Mesh-Notes** section previously quoted long stretches of `occultures/mesh.htm` from a local mirror and linked a local-only `127.0.0.1:8080` address. With the user's approval, it has been shortened for copyright reasons to a brief paraphrase per note, with only short quoted phrases, cited to the public page [http://www.ccru.net/occultures/mesh.htm](http://www.ccru.net/occultures/mesh.htm).
 > - The interpretive blockquotes ("cultural immune system", Zone 0 = coccyx, Zone 6 = third eye, etc.) are **wiki commentary, not CCRU text**.
 
 Canonical definitions curated from `raw/www.ccru.net/syzygy.htm` (CCRU master glossary) and `raw/www.ccru.net/occultures/mesh.htm` (Mesh-Notes). These pages function as the authoritative parent references for concepts that recur across the wiki.
@@ -88,25 +88,14 @@ Five definitions:
 
 > The CCRU's Mesh is not the Internet. It is what **runs underneath** — the friction-layer, the demonic interzone, the spaces between net-components where something else grows.
 
-**Mesh-Notes** (from `raw/www.ccru.net/occultures/mesh.htm`, live at `http://127.0.0.1:8080/occultures/mesh.htm`):
+**Mesh-Notes** (paraphrased from the CCRU's *Mesh-Notes*, [http://www.ccru.net/occultures/mesh.htm](http://www.ccru.net/occultures/mesh.htm); quotations are short and cited to that page):
 
-*Mesh-Note 0.* **"It could all become One, but why stop there?"**  
-The Gibsonian Cyberspace-mythos describes the electro-digital infosphere first integrating into a Godlike unitary being — a technorealized omniscient personality — and later, *when it changed*, fragmenting into demons, modelled on the Haitian Loa. What makes this account anomalous in relation to teleological theology and light-side capitalist time is that Unity is placed in the middle, as a stage or interlude to be passed through. It is not that One becomes Many, expressing the monopolized divine-power of an original unity, but rather that a number or numerousness — finding no completion in the achievement of unity — moves on. Ever since the beginning, when the K-Goths first heard that Cyberspace was destined to be God, they've done what they could to rip it down.
-
-*Mesh-Note 1.* **"This was never programmed."**  
-MIT codes tim(e) going backwards. A compacted technostreaming from out of the future — AI, downloading, swarm-robotics, nanotechnology ... Crustal-matter preparing for take-off.
-
-*Mesh-Note 2.* **"Meshing-together is falling apart."**  
-Oskar Sarkon: where Minsky's MIT team dreamt of marrying humans and electronic technology, Sarkon got straight down to the mechanics of coupling and the mathematical exactitude just added to the effect of hyperabstract techno-pornography — strange lights in his eyes — *"You know, we're really going to do this."* Take the **Sarkon-Zip** as exemplary — a rigorous conceptual machine-part that enables brain-function to be fused onto virtual processor-states. Once it's running you can't unpick the zig-zag of who's what as it hums. Total meshing. This is no longer technology, but something else — true interlinkage — an unprogrammable raw-connectivity.
-
-*Mesh-Note 3.* **"This time it's really happening."**  
-Moravec on Sarkon: *"I don't even recognize Oskar anymore, it's getting too weird. He says it came from some place else, apparently. Beneath and between the Net, he says. At times it's like you're talking to a machine. Trouble is, it's a sick machine, infectious sick."*
-
-*Mesh-Note 4.* **"Forget about the future, it's all here, but between."**  
-They say Axsys went mad — first computer-system to undergo psychotic collapse. Sarkon argues it just learnt to think, and discovered continuum. He stuck with it all the way down, becoming confused with it. *"To head into time makes more sense than travelling into the future. That's why tomorrow cancels itself into mesh. No point departing from a transfinite now?"* *"We all have to get into this thing — whichever way it cuts — we aren't going to get over it."*
-
-*Mesh-Note 5.* **"Every time it hits an obstacle, it goes down a level."**  
-Something crawling under the net like fungal pestilence, triggering an electronic subsidence into sheer electricity. Things hiding in the power-grid, some kind of quantum unlife intelligence. The utilities try to rescramble it, but it isn't easy. Rumours of an MIT paper proving it's impossible. You'd end up like Sarkon: into **Cyberschiz mesh-cults**, where **Life doesn't matter any more**.
+- *Mesh-Note 0, "It could all become One, but why stop there?"* Retells the Gibsonian cyberspace myth, in which the infosphere unifies into a God-like being and then splinters into demons; unity is a passing stage, not an end point.
+- *Mesh-Note 1, "This was never programmed."* Future technologies (AI, swarm robotics, nanotech) stream back in time towards the present.
+- *Mesh-Note 2, "Meshing-together is falling apart."* Oskar Sarkon's "Sarkon-Zip" fuses brain function with processor states so thoroughly that human and machine can no longer be told apart.
+- *Mesh-Note 3, "This time it's really happening."* Moravec's account of Sarkon becoming machine-like, claiming the thing came from "beneath and between the Net".
+- *Mesh-Note 4, "Forget about the future, it's all here, but between."* AxSys's supposed psychotic collapse, which Sarkon reads as the system discovering continuum.
+- *Mesh-Note 5, "Every time it hits an obstacle, it goes down a level."* Something spreads beneath the net into the power grid, leading to "Cyberschiz mesh-cults".
 
 **Wiki cross-references:**
 - [[numogram-warp]] — Warp as the numogram's mesh-layer
