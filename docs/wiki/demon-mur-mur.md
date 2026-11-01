@@ -34,7 +34,7 @@ Auto‑generated from raw: `numogame-canonical-crosswalk.json`, zone 29, mesh 29
 **Sourced data** [ccru.net, [Matrix](http://www.ccru.net/digithype/pandemonium.htm); repo]:
 - Mesh-29, **Mur Mur** (Murrumur, Mu(mu)), "Dream-Serpent", net-span **8::1**, the Syzygetic Chronodemon of the Deep Ones, pitch **Null**.
 - **Feeds the Surge current** (8−1 = 7, flowing 8→7). Rt-0 [X]: oceanic sensation. No card.
-- The repo spells it **Murrumur**. The Zone 1 page writes "Murmur" [ccru.net, Zn1]. Zones 1 and 8 are **Torque**. In declab's hydro-cycle it is the great sea-beast, the undivided waters.
+- The repo spells it **Murrumur**. The Zone 1 page writes "Murmur" [ccru.net, Zn1]. Zones 1 and 8 are **Torque**.
 
 
 <!-- End stub for Mur Mur (Murrumur) -->
