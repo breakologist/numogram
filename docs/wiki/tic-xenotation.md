@@ -62,3 +62,4 @@ Sourced reference page (Em, 1 Nov 2026). Facts are tagged. Speculation is labell
 
 ## Cross-links
 [[daniel-barker]] · [[cryptolith]] (Vukorri Cryptoliths are cited as TX "isomorphs") · [[time-circuit]] · [[decadence]] · [[pandemonium]] · [[zone]] · [[lemurian-times-nexus]]
+- [[lemurian-time-war]] — Kaye, Vysparov, Burroughs and hyperstition (Em, 1 Nov 2026)

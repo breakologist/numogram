@@ -252,3 +252,4 @@ Links checked with curl on 1 Nov 2026 (HTTP 200).
 Not added: **qliphoth.systems** (listed in InterestingSites.md as a numogram/AQ toolkit) returned HTTP 402 on 1 Nov 2026.
 
 - [[tic-xenotation]] — Barker's numerics (Em, 1 Nov 2026)
+- [[lemurian-time-war]] — Kaye, Vysparov, Burroughs and hyperstition (Em, 1 Nov 2026)

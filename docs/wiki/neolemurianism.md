@@ -179,6 +179,8 @@ The following narrative is presented as **hyper‑fiction** — an illustrative,
 - **Echidna Stillwell** (anthropologist, 1925) received Numogram from a Mu Nma dream‑witch after inquiring about Cecil "Mad Dog" Curtis
 - **Peter Vysparov** (WWII officer, 1940s) lived among Dib Nma, witnessed their sorcery, later co‑founded the **Cthulhu Club** (1949) with Echidna, Chaim Horowitz (kabbalist), and Madame Centauri (medium)
 - **William Burroughs** (late 1950s) joined, introduced cut‑ups as resistance to linearity
+
+> **Verification note (Em, 1 Nov 2026):** per *Lemurian Time War* [ccru.net, [archive/burroughs.htm](http://www.ccru.net/archive/burroughs.htm)], Vysparov met Burroughs in Paris in summer 1958, and Kaye met him at Vysparov's New York library on 23 Dec 1958. Ccru found no evidence of a US trip. The text does not say Burroughs "joined" the Cthulhu Club. It credits Gysin's role in discovering the cut-ups, and Kaye reads them as "time-war tactics". The Cthulhu Club was convened in the "immediate postwar years", and the Book of Paths frame dates its inaugural meeting to autumn 1949. Vysparov's living "among Dib Nma" and Barker "joined 1980" were **not found** in the pages checked; Barker Speaks gives MVU professor since 1992. See [[lemurian-time-war]].
 - **Miskatonic Virtual University** (1970s) grew from the club — interdisciplinary, correspondence‑based research
 - **Daniel Charles Barker** (joined 1980) brought **Barker numbering** and geotraumatics — forged the link between lemurianism and the CCRU at Warwick
 

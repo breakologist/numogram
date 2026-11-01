@@ -70,3 +70,4 @@ This prose style could directly inform the game's death messages, demon encounte
 - [[the-360-revelation]] — K/T-Missile as geotraumatic origin
 
 - See also [[tic-xenotation]]: the Vukorri Cryptoliths are cited as TX isomorphs (Hyperstition 003538; Em, 1 Nov 2026).
+- [[lemurian-time-war]] — Kaye, Vysparov, Burroughs and hyperstition (Em, 1 Nov 2026)

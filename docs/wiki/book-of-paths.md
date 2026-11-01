@@ -234,3 +234,4 @@ All points are paraphrased from [ccru.net](http://www.ccru.net/occultures/bookof
 - Decadence: the source makes **no** connection to the Decadence card games. The wiki links ([[decadence-triangle]]) are wiki constructions.
 
 **Cross-links.** [[zone]] · [[zone-hub]] · [[pandemonium]] · [[pandemonium-matrix]] · [[pandemonium-glossary]] · [[daniel-barker]] (Stillwell, Barker Speaks) · [[barker-spiral]] · [[decadence]] · [[time-circuit]] · [[i-ching-connections]] (the "preceded the I Ching" rumour) · [[land-decimal-intelligence]] (Land's distinct 89-path project)
+- [[lemurian-time-war]] — Kaye, Vysparov, Burroughs and hyperstition (Em, 1 Nov 2026)
