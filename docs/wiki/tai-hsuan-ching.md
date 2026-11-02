@@ -26,6 +26,7 @@ The classical sources (for example Michael Nylan's translation of the *Taixuan j
 - [[numogram-81-tetragrams]] — Complete tetragram reference  
 - [[tai-hsuan-ching-demons/em-state-analysis]] — Em state and Zone 5 manifestation  
 - [[i-ching-tai-hsuan-comparison]] — Deep comparison of I Ching and T'ai Hsuan Ching  
+- [[tai-xuan-71-stoppage]] — Tetragram 71 Stoppage: Nylan correspondences, Chinese text, appraisals
 - [[numogram-81-tetragrams/em-state-mapping]] — Em state distribution across tetragrams  
 - [[taixuan-oracle-mode/algorithm]] — Implementation details of the T'ai Hsuan oracle  
 
