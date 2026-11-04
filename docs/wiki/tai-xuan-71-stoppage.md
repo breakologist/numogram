@@ -52,5 +52,6 @@ The head supports "stopping in time is good, being stuck is bad."
 - Severance → Stoppage → Hardness: cut, halt, set firm.
 
 ## See also
+- [Hexagram 52 Keeping Still](hexagram-52-keeping-still.md): the gua qi partner, Wilhelm and Wen compared
 
 - [[tai-hsuan-ching]] · [[numogram-81-tetragrams]] · [[zone-8]] · [[gate-mechanics]] · [[time-circuit]]
