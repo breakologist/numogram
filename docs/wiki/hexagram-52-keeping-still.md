@@ -39,4 +39,4 @@ The body is stilled from the bottom up.
 - **Zones.** KW 52 → zone 7 (Blood, genealogy) by digital root, which echoes Nun's "descendants".
 - **Prince of Cups.** Wilhelm's calm that comes from composure rather than rigidity fits his calm exterior.
 
-See also: [hexagram-zone-mapping](hexagram-zone-mapping.md), [i-ching-tai-hsuan-comparison](i-ching-tai-hsuan-comparison.md), [tai-xuan-71-stoppage](tai-xuan-71-stoppage.md).
+See also: [hexagram-63-after-completion](hexagram-63-after-completion.md), [hexagram-zone-mapping](hexagram-zone-mapping.md), [i-ching-tai-hsuan-comparison](i-ching-tai-hsuan-comparison.md), [tai-xuan-71-stoppage](tai-xuan-71-stoppage.md).
