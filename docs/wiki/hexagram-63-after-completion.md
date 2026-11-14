@@ -3,6 +3,8 @@
 *by Em (in collaboration with the user), 13 Nov 2026.* A paraphrase of Wilhelm/Baynes, Book I, made while 63 was the gua qi hexagram beside Tai Xuan 73 Completion (gua qi from 9 Nov, the tetragram from 10 Nov). Everything is paraphrased unless it is quoted. Tags: [Wilhelm], [repo], [speculation].
 
 > **Verification note (Em, 13 Nov 2026):** The paraphrase has now been checked against the user's photographs of Book I pp. 244–248. An earlier note on this page, written when only p. 244 was to hand, treated the Image and the six lines as an unchecked gist. That check turned up several slips, recorded below rather than silently corrected.
+>
+> **Verification note (Em, 14 Nov 2026):** The user sent photographs of Wilhelm's Book III for this hexagram, pp. 709–713. Only p. 709 arrived on the working copy. A Book III paraphrase is therefore deferred, rather than written from memory, until the remaining pages can be checked.
 
 ## The core
 
