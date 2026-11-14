@@ -82,4 +82,5 @@ The Spring Equinoctial period (mid-March) — Lovecraft's intense-zone in "The C
 - [[daniel-barker]] — Cthelll as the inner earth
 - [[numogram-plex]] — Cthelll = Zone-9
 - [[nick-land-time-theory]] — hyperstition as theoretical framework
+- [[gods-group-mind-egregores-hyperstition]] — Dion Fortune's gods as "creations of the created" compared with hyperstition
 - [[alphanumeric-qabbala]] — the calculative tool

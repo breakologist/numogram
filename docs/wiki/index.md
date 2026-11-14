@@ -266,6 +266,7 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 ## Nick Land & CCRU Theory
 
 - [[nick-land-time-theory]] — Land's theory of time: twin serpents (2,5), binodecimal 6-cycle reversibility, 3 as the number of Outside, Kantian schematism immanent in decimal numeracy.
+- [[gods-group-mind-egregores-hyperstition]] — Gods as emanations of the group mind: Dion Fortune (*Mystical Qabalah* XXI §§13–14) via Wang's Netzach, Case's reticence, CCRU/Land on hyperstition; Swinburne's "The Last Oracle"; speculative comparison of egregore (belief) and hyperstition (positive unbelief), and the numogram read that way
 
 ## Structural & Geometric
 
@@ -396,6 +397,7 @@ The anticlockwise 6-zone rotor carrying human-scale cyclic time.
 - [[lunation-and-mansions]] — calendar Moon overlays: Meeus phases (verified vs timeanddate 2026), Chinese lunar month with leap rule, Wen's sovereign hexagram by real lunar month, 28 xiu / manāzil / nakshatras
 - [[mansions-lore]] — lunar mansions lore: 28 xiu table (determinatives, Four Symbols, 禽星, almanac 吉/凶), Agrippa's 28 manāzil effects, Behenian stars, Sirius/Polaris/Orion, Agrippa decan images
 - [[decans-lore]] — decan images and lunar mansions compared across Agrippa 1651, Purdue's Agrippa, and Picatrix (Greer–Warnock, Attrell–Porreca); translation differences
+- [[doors-daleth-nun-vesica]] — Doors in the Scorpio III decan: Daleth (Empress) and Nun (Death, keeper of the gates) after Wang and Lionel ("birth and death open the same door"), Janus, the Uroboros, the user's vesica piscis as the fish between two worlds
 - [[john-of-capistrano]] — St John of Capistrano (feast 23 Oct): Perugia jurist, Belgrade 1456, Breslau 1453 persecution, Capistrano swallows; speculative calendar links
 - [[anthony-mary-claret]] — St Anthony Mary Claret (feast 24 Oct): weaver, Librería Religiosa, Holguín razor attack, Cuban mixed marriages, Eucharistic claim, exile at Fontfroide; speculative Prince of Cups / hexagram 47 notes
 - [[st-luke-golden-legend]] — St Luke in the Golden Legend (Caxton/Ellis, Temple Classics 1900): light etymology, four faces, the ox, Antioch vision; speculative numogram threads

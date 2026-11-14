@@ -252,3 +252,5 @@ Source: Robert Wang, *The Qabalistic Tarot*, pp. 83–85, plus the Five of Cups 
 
 
 See also: [[reading-2026-10-26]] (three mouths; Chad, Cedd and Bosse-de-Nage).
+
+See also (Scorpio III, 14 Nov 2026): [[gods-group-mind-egregores-hyperstition]] (Wang's Netzach gods traced to Fortune) · [[doors-daleth-nun-vesica]] (the Empress and Death as one door).

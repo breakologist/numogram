@@ -68,4 +68,4 @@ The text makes **no** mention of AxSys, Templars or the Numogram's zones. Its on
 - The 1/10/100 fold-in reads naturally as a decimal-magnitude jump in the spirit of [[tic-xenotation]] and [[decadence]]. That is interpretation.
 
 ## Cross-links
-[[book-of-paths]] (Kaye Materials, Vysparov, Cthulhu Club) · [[daniel-barker]] · [[cryptolith]] · [[tic-xenotation]] · [[decadence]] · [[neolemurianism]] · [[pandemonium-glossary]] · [[lemurian-times-nexus]] · [[hyperstition-loop-design]]
+[[book-of-paths]] (Kaye Materials, Vysparov, Cthulhu Club) · [[daniel-barker]] · [[cryptolith]] · [[tic-xenotation]] · [[decadence]] · [[neolemurianism]] · [[pandemonium-glossary]] · [[lemurian-times-nexus]] · [[hyperstition-loop-design]] · [[gods-group-mind-egregores-hyperstition]] (Fortune's group-mind gods beside hyperstition)
