@@ -35,6 +35,11 @@
 - [Wilhelm] Line 4 in Book III still has Wilhelm's own "finest clothes turn to rags," a yielding line entering K'an. Then "Chêng Tzŭ gives another explanation. He employs the image of a boat, and says: 'It has a leak, but there are rags for plugging it up.'" That is the commentarial reading the earlier, unchecked gist had followed.
 - [Wilhelm] Line 5 sets the neighbours in Earlier Heaven: the second line, in nuclear K'an, is the western neighbour, bringing the lesser offering of a pig at the right time; the fourth, in nuclear Li, is the eastern neighbour, bringing the ox but "not central." The nine in the fifth place presides over the sacrifice.
 
+## Karcher, briefly
+
+- [Karcher] Stephen Karcher, *Total I Ching: Myths for Change*, pp. [?]–429 (more pages to come), from the user's photographs. Karcher titles 63 "Already Crossing" and pairs it with 64 as "The Crossings: 'Burning Water'". The pair, he says, forms the "'gates' of Change". He reads *Ji*, "crossing", as a river ford and the souls' entry into the Great Stream, and notes that it is also the name of one of the four Great Rivers. His one-line summary: Already Crossing "means setting things right", while Not Yet Crossing means exhausting the masculine will. Like Wilhelm he stresses fire and water, but for him they become "cooking, transforming", and a stable vessel. The Small Fox and the campaign into the Demon country, he says, are common to both figures.
+- [repo] The river checks out: the 濟 Ji was one of the four *du* 四瀆 (Yangzi, Yellow, Huai, Ji) and vanished into the Yellow River's bed in 1855 (Teng Li, *Religions* 13 (2022) 507, [doi:10.3390/rel13060507](https://doi.org/10.3390/rel13060507)). The hexagram's name 既濟 contains the same character. The Great Commentary gives the title of "gates of the Changes" to Qian and Kun, 1 and 2, which are also the pair Karcher lists as 63:64's "shadow site".
+
 ## Cross-links [speculation]
 
 - [repo] Zhu Zhen's Song-dynasty chart pairs Tai Xuan 73 成 Completion with KW 63 (「成，既濟也」). 71 and 72 sit with 52; 78 On the Verge sits with 64.
