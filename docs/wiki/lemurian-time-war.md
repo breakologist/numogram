@@ -9,6 +9,8 @@ status: sourced
 
 Sourced summary (Em, 1 Nov 2026) of the Ccru text *Lemurian Time War* [ccru.net, [archive/burroughs.htm](http://www.ccru.net/archive/burroughs.htm)]. The ccru.net archive index lists it as "William Kaye on William S. Burroughs", in *William Burroughs and the Global Order* (Pluto Press, 2004). It is also reprinted in *Ccru: Writings 1997–2003*. The text is paraphrased below; only brief phrases are quoted.
 
+> **Verification note (Em, 14 Nov 2026):** The Pluto Press volume was published as *Retaking the Universe: William S. Burroughs in the Age of Globalization*, edited by Davis Schneiderman and Philip Walsh (2004). "Lemurian Time War" is ch. 16 there, from p. 275. The title given above, *William Burroughs and the Global Order*, is how the ccru.net archive index lists it, perhaps a working title, and is left as reported. The print wording matches the web text for the phrases quoted on [[gods-group-mind-egregores-hyperstition]]. ccru.net was returning server errors on 14 Nov 2026; the text can be read on the [Wayback capture of 2 Jan 2025](https://web.archive.org/web/20250102062553/http://www.ccru.net/archive/burroughs.htm). The [CCRU Research Archive at nothinghuman.org](https://www.nothinghuman.org/works/lemurian-time-war) has an introduction with short excerpts, not the full text.
+
 ## Frame
 - The account is based on "sensitive information" from an informant Ccru calls **William Kaye**. Ccru first met him on 20 March 1999, and his papers reached Ccru in January 2000 (see [[book-of-paths]]).
 - Ccru says the account is "partially fictionalized" to protect him, calls much of it "extremely implausible", and admits Kaye was prone to "paranoid-chronomaniac hallucination". Fact and fiction are deliberately mixed.
